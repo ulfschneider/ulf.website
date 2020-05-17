@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#00bbff"><link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-200.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-italic.woff2" as="font" type="font/woff2" crossorigin/><link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/compose.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/customize.css" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<title>
+    Ulf Schneider – Developer and Agile Coach
+</title>
+
+<script>
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/serviceworker.js')
+            .catch(error => {
+                console.error(error);
+            });
+        addEventListener("load", function () {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ "command": "trimCache" });
+            }
+        });
+    }
+</script>
+</head>
+
+<body><a id="top" tabindex="-1"></a>
+	<header class="mrb-3 bg-base-background x breakout-r z-1 pdy-d1 lh-4 small">
+	<nav><span class="inline-block mrr-d1">
+						<a href="/" class="no-deco meta">Ulf Schneider</a>
+					</span><ul class="reset inline-block mry-0"><li class="inline-block">
+							<a class="no-deco meta" href="/reading/">Reading</a>
+						</li><li class="inline-block meta heading-color bold">Articles</li><li class="inline-block">
+							<a class="no-deco meta" href="/tools/">Tools</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/journal/">Journal</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/search/">Search</a>
+						</li></ul>
+</nav>
+</header>
+
+	<main class="x indent word-wrap default"><div class="breakout-l mrb-1">
+			<div class="title no-indent"><h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">Articles</h1><aside class="lh-2 small meta mrt-d2"><time class="no-wrap">May 15, 2020</time></aside></div>
+		</div>
+<p>Essays about my experiences within the agile movement and the agile value system. Popular articles:</p>
+<ul>
+<li><a href="/articles/balanced-organization/">The balanced organization</a></li>
+<li><a href="/articles/art-in-work/">The art in our work</a></li>
+<li><a href="/articles/self-organization/">Self-organization</a></li>
+</ul>
+
+<div>
+    <!-- posts -->
+    <style>
+        article+article {
+            margin-top: var(--space-2);
+        }
+    </style></div></main>
+
+	<div class="x breakout-r">
+		<footer class="mrt-1 mrb-2 lh-4 small"><nav>
+		<ul class="mry-0 reset">
+			<li class="inline-block"><a href="/feed.xml/" class="small no-deco meta">RSS</a></li><li class="inline-block"><a href="/colophon/" class="small no-deco meta">Colophon</a></li><li class="inline-block"><a href="/ownership/" class="small no-deco meta">Ownership</a></li><li id="load-time" class="inline-block small meta"></li>
+		</ul>
+		<a href="#top" id="back-to-top" style="display:none" class="small no-deco meta">Back to top</a>
+<script>
+    function maintainBackToTopVisibility() {
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.body.clientHeight;
+        let backToTop = document.getElementById('back-to-top');
+
+        if (windowHeight * 1.5 < documentHeight) {
+            backToTop.style.display = 'inline';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    }
+
+    maintainBackToTopVisibility();
+    addEventListener('scroll', event => maintainBackToTopVisibility());
+    addEventListener('resize', event => maintainBackToTopVisibility());
+
+</script>
+	</nav>
+</footer>
+	</div>
+
+	<script src="/js/fit-vids.js"></script>
+	<script src="/js/measure-load-time.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+{%- if page.nometa != true and page.nostepnav != true and page.categories != empty -%}
+
+{%- assign posts = "" | split: "" -%}
+{%- for p in site.posts -%}
+{%- if p.layout != "gallery" and p.layout != "list" -%}
+{%- assign posts = posts | push: p -%}
+{%- endif -%}
+{%- endfor -%}
+
+{%- for post in posts -%}
+
+{%- if post.url == page.url -%}
+{%- assign current = post -%}
+{%- assign index = forloop.index -%}
+{%- endif -%}
+
+{%- if current -%}
+
+{%- unless prev -%}
+{%- for p in posts offset:index   -%}
+{%- unless prev -%}
+{%- if p.categories != empty and current.categories != empty and p.categories == current.categories -%}
+{%- assign prev = p -%}
+{%- endif -%}
+{%- endunless -%}
+{%- endfor -%}
+{%- endunless -%}
+
+{%- unless next -%}
+{%- for p in posts -%}
+{%- if p.categories != empty and current.categories != empty and p.categories == current.categories and forloop.index < index -%}
+{%- assign next = p -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endunless -%}
+
+{%- break -%}
+{%- endif -%}
+
+{%- endfor -%}
+{%- endif -%}
+{%- if prev or next -%}
+
+{%- if page.shortnav != nil -%}
+{%- assign shortnav = page.shortnav -%}
+{%- else -%}
+{%- assign shortnav = include.shortnav -%}
+{%- endif -%}
+
+{%- if shortnav != true -%}
+{%- assign topMargin = " mrt-1" -%}
+{%- endif -%}
+
+<nav class="clearfix step-navigation small lh-2{{topMargin}}">
+    {%- if next  -%}
+    <div class="float-left nowrap truncate">
+        <a class="no-deco meta" href="{{ site.url }}{{ next.url }}">
+            {%- if shortnav -%}
+            <div><span aria-hidden="true">&lt;&nbsp;</span>newer</div>
+            {%- else -%}
+            <div>Newer:</div>
+            <div>{%- if next.title != "notitle" && next.notitle != true -%}
+                {{ next.title }}{%- endif -%}</div>
+            {%- endif -%}
+        </a>
+    </div>
+    {%- endif -%}
+
+    {%- if prev  -%}
+    <div class="float-right mrl nowrap truncate right">
+        <a class="no-deco meta" href="{{ site.url }}{{ prev.url }}">
+            {%- if shortnav -%}
+            <div>older<span aria-hidden="true">&nbsp;&gt;</span></div>
+            {%- else -%}
+            <div>Older:</div>
+            <div>{%- if prev.title != "notitle" && prev.notitle != true -%}
+                {{ prev.title }}{%- endif -%}</div>
+            {%- endif -%}
+        </a>
+    </div>
+    {%- endif -%}
+</nav>
+{%- endif -%}

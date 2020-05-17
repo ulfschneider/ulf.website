@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include head.html %}
+</head>
+
+<body><a id="top" tabindex="-1"></a>
+	{% include header.html %}
+
+	<main class="x indent word-wrap default">
+		{%- unless title == "notitle" or title == nil or notitle == true  -%}
+		<div class="breakout-l mrb-1">
+			{% include title.html  %}
+		</div>
+		{%- endunless -%}		
+
+		{{ content }}
+
+		{%- if page.nometa != true and page.nostepnav != true and page.categories != empty -%}
+
+		{% include step-navigation.html %}
+
+		{%- endif -%}
+	</main>
+
+	<div class="x breakout-r">
+		{% include footer.html %}
+	</div>
+
+	{% include fit-vids.html %}
+	{% include measure-load-time.html %}
+</body>
+
+</html>

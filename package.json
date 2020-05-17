@@ -1,0 +1,21 @@
+{
+  "name": "11ty.ulf.codes",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ulf Schneider",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
+  },
+  "dependencies": {
+    "lunr": "^2.3.8",
+    "string-strip-html": "^4.4.4"
+  }
+}

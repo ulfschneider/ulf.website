@@ -1,0 +1,20 @@
+<footer class="mrt-1 mrb-2 lh-4 small">
+	{%- if include.mainnav -%}
+	{%- include main-navigation.html -%}
+	{%- endif -%}
+	<nav>
+		<ul class="mry-0 reset">
+			{%if site.rss -%}
+			<li class="inline-block"><a href="{{site.rss}}" class="small no-deco meta">RSS</a></li>
+			{%- endif -%}
+			{%if site.colophon and site.colophon != page.url -%}
+			<li class="inline-block"><a href="{{site.colophon}}" class="small no-deco meta">Colophon</a></li>
+			{%- endif -%}
+			{%- if site.ownership and site.ownership != page.url -%}
+			<li class="inline-block"><a href="{{site.ownership}}" class="small no-deco meta">Ownership</a></li>
+			{%- endif -%}
+			<li id="load-time" class="inline-block small meta"></li>
+		</ul>
+		{% include back-to-top.html %}
+	</nav>
+</footer>

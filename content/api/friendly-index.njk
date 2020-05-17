@@ -1,0 +1,6 @@
+---
+permalink: /friendly-index.json
+eleventyExcludeFromCollections: true
+layout: none
+---
+{{ collections.content | excerpt | dump | safe }}

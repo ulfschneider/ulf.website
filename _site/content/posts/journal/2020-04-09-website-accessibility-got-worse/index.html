@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#00bbff"><link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-200.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-italic.woff2" as="font" type="font/woff2" crossorigin/><link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/compose.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/customize.css" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<title>
+    Ulf Schneider – Developer and Agile Coach
+</title>
+
+<script>
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/serviceworker.js')
+            .catch(error => {
+                console.error(error);
+            });
+        addEventListener("load", function () {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ "command": "trimCache" });
+            }
+        });
+    }
+</script>
+</head>
+
+<body><a id="top" tabindex="-1"></a>
+	<header class="mrb-3 bg-base-background x breakout-r z-1 pdy-d1 lh-4 small">
+	<nav><span class="inline-block mrr-d1">
+						<a href="/" class="no-deco meta">Ulf Schneider</a>
+					</span><ul class="reset inline-block mry-0"><li class="inline-block">
+							<a class="no-deco meta" href="/reading/">Reading</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/articles/">Articles</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/tools/">Tools</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/journal/">Journal</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/search/">Search</a>
+						</li></ul>
+</nav>
+</header>
+
+	<main class="x indent word-wrap default"><div class="breakout-l mrb-1">
+			<div class="title no-indent"><h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">Website accessibility got worse</h1><aside class="lh-2 small meta mrt-d2"><time class="no-wrap">April  9, 2020</time></aside></div>
+		</div><p>Dave Rupert made me aware with his <a href="https://twitter.com/davatron5000/status/1247179071890640896">tweet</a>:</p>
+<blockquote>
+<p>The average website accessibility got worse during the last twelve months!</p>
+</blockquote>
+<p>This is according to the <a href="https://webaim.org/projects/million/">WebAIM annual accessibility analysis</a> of a list of one million homepages. <a href="https://webaim.org/about/">WebAIM</a>, which stands for Web Accessibility In Mind, is a non-profit organization based at the <a href="https://www.cpd.usu.edu/">Center for people with Disabilities</a> of the Utah State University.</p>
+<p>I quote some lowlights of the report as mentioned on their <a href="https://webaim.org/blog/webaim-million-one-year-update/">summary page</a>:</p>
+<ul>
+<li>Detectable WCAG failure rate rose from 97.8% to 98.1%.</li>
+<li>Average number of detectable errors per page was 60.9, a 2.1% increase from 2019.</li>
+<li>Home page complexity (number of elements per page) rose 10.4% in 12 months, from an average of 782 elements per page to 864.</li>
+<li>On average, home pages had 36 distinct instances of low-contrast text.</li>
+<li>31.3% of all home page images (12 per page on average) had missing alternative text.</li>
+<li>56% of the 3.4 million form inputs identified were unlabeled.</li>
+<li>There were significant differences in the number of errors based on the content category of home pages. News, weather, and information sites, for example, had twice as many errors as governmental sites.</li>
+</ul>
+<p>WebAIM provides a <a href="https://wave.webaim.org">Web Accessibility Evaluation Tool (WAVE)</a>, which is <em>&quot;… a suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities. WAVE can identify many accessibility and Web Content Accessibility Guideline (WCAG) errors, but also facilitates human evaluation of web content.&quot;</em></p>
+<p>I immediately <a href="https://wave.webaim.org/report#/https://ulf.codes/">checked my site</a> by using the tool and got hints for improvements.</p>
+<p>The accessibility situation also seems to resonate with others. For example, Ethan Marcotte explains his approach of writing an <a href="https://ethanmarcotte.com/wrote/an-accessibility-statement/">Accessibility Statement</a> for his site.</p>
+<p>I like the idea of writing an accessibility statement. I want to focus on accessibility. Writing the statement is an excellent way of making me conscious, and to set a level to reach.</p>
+</main>
+
+	<div class="x breakout-r">
+		<footer class="mrt-1 mrb-2 lh-4 small"><nav>
+		<ul class="mry-0 reset">
+			<li class="inline-block"><a href="/feed.xml/" class="small no-deco meta">RSS</a></li><li class="inline-block"><a href="/colophon/" class="small no-deco meta">Colophon</a></li><li class="inline-block"><a href="/ownership/" class="small no-deco meta">Ownership</a></li><li id="load-time" class="inline-block small meta"></li>
+		</ul>
+		<a href="#top" id="back-to-top" style="display:none" class="small no-deco meta">Back to top</a>
+<script>
+    function maintainBackToTopVisibility() {
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.body.clientHeight;
+        let backToTop = document.getElementById('back-to-top');
+
+        if (windowHeight * 1.5 < documentHeight) {
+            backToTop.style.display = 'inline';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    }
+
+    maintainBackToTopVisibility();
+    addEventListener('scroll', event => maintainBackToTopVisibility());
+    addEventListener('resize', event => maintainBackToTopVisibility());
+
+</script>
+	</nav>
+</footer>
+	</div>
+
+	<script src="/js/fit-vids.js"></script>
+	<script src="/js/measure-load-time.js"></script>
+</body>
+
+</html>

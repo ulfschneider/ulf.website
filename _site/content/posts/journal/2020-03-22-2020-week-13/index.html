@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#00bbff"><link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-200.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-italic.woff2" as="font" type="font/woff2" crossorigin/><link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/compose.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/customize.css" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<title>
+    Ulf Schneider – Developer and Agile Coach
+</title>
+
+<script>
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/serviceworker.js')
+            .catch(error => {
+                console.error(error);
+            });
+        addEventListener("load", function () {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ "command": "trimCache" });
+            }
+        });
+    }
+</script>
+</head>
+
+<body><a id="top" tabindex="-1"></a>
+	<header class="mrb-3 bg-base-background x breakout-r z-1 pdy-d1 lh-4 small">
+	<nav><span class="inline-block mrr-d1">
+						<a href="/" class="no-deco meta">Ulf Schneider</a>
+					</span><ul class="reset inline-block mry-0"><li class="inline-block">
+							<a class="no-deco meta" href="/reading/">Reading</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/articles/">Articles</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/tools/">Tools</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/journal/">Journal</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/search/">Search</a>
+						</li></ul>
+</nav>
+</header>
+
+	<main class="x indent word-wrap default"><div class="breakout-l mrb-1">
+			<div class="title no-indent"><h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">Weeknotes 13</h1><aside class="lh-2 small meta mrt-d2"><time class="no-wrap">March 22, 2020</time></aside></div>
+		</div><ul>
+<li>Write personal: &quot;<a href="https://matthiasott.com/articles/into-the-personal-website-verse">Into the Personal-Website-Verse</a>&quot; is a plea for personal websites from Matthias Ott. That gets a ★.</li>
+<li>&quot;<a href="https://airbagindustries.com/advice-from-ten-years-of-leading-remote-teams/">Advice from Ten Years of Leading Remote Teams</a>&quot; from Greg Storey.</li>
+<li>&quot;<a href="https://www.smashingmagazine.com/2019/02/complex-web-tables/">How to architect a complex web table</a>.&quot;</li>
+<li>This week a collection of the best <a href="https://www.rapha.cc/en/en/stories/the-best-of-rapha-films">Rapha films</a></li>
+<li>I created my own <a href="/journal/an-rss-feed-for-github-pages/">RSS feed generator</a> for GitHub pages.</li>
+<li>I changed the typeface of this site. Initially I was using <em><a href="https://rsms.me/inter/">Inter</a>,</em> which is a beautiful and elegant modern type that stays in the background. But I felt it is not ideal for longer text. At least, I thought a serif type would be more suitable. I came to <a href="https://www.ibm.com/plex/">IBM Plex Serif</a> and planned to use that for the reading text while keeping Inter for navigation and meta information. After a while I found the two types did not pair very well. Fortunately, Plex is a family with serif, sans-serif, and even mono fonts. The italic style variants, which exist even for the mono font, are remarkably expressive. Therefore I changed everything to Plex, and now, after some time looking at it, I think it´s going to work for me. The idea of combining humanity and technology in Plex can be noticed when comparing with Inter, which is elegant to an extent one could name antiseptic, but at least rationalized. Compared to that, here is what IBM is saying about their Plex: <em>When we set out to create a typeface that was unmistakably IBM, our own history was our greatest source of inspiration. IBM has always served as a medium between mankind and machine. Between the natural and the engineered. The emotional and rational. The classic and the cutting-edge. Our most important job is to help humanity and technology move forward together. IBM Plex® brings these relationships to life through letterforms.</em> Did it play I role that I was working 10 years for IBM? Maybe, but their typeface – which has been developed by <a href="https://www.boldmonday.com/custom/ibm/">Bold Monday</a> – can speak for itself.</li>
+<li>Came across <a href="https://bionic-reading.com/en/en-insight/">Bionic Reading</a> which is a concept to format text this way: <strong>Wi</strong>th <strong>Bi</strong>onic <strong>Read</strong>ing <strong>y</strong>ou <strong>r</strong>ead <strong>tex</strong>ts <strong>wi</strong>th <strong>mo</strong>re <strong>foc</strong>us, <strong>aware</strong>ness, <strong>a</strong>nd <strong>sustain</strong>ability. <em>&quot;Bionic Reading wants to revolutionize reading. Our mission is: “A higher dimension of reading.” The eye is guided through text much more effectively with the aid of typographic highlights – thus creating a completely new reading experience.&quot;</em> I´m only wondering, their landing page doesn´t use the bionic reading mode.</li>
+</ul>
+</main>
+
+	<div class="x breakout-r">
+		<footer class="mrt-1 mrb-2 lh-4 small"><nav>
+		<ul class="mry-0 reset">
+			<li class="inline-block"><a href="/feed.xml/" class="small no-deco meta">RSS</a></li><li class="inline-block"><a href="/colophon/" class="small no-deco meta">Colophon</a></li><li class="inline-block"><a href="/ownership/" class="small no-deco meta">Ownership</a></li><li id="load-time" class="inline-block small meta"></li>
+		</ul>
+		<a href="#top" id="back-to-top" style="display:none" class="small no-deco meta">Back to top</a>
+<script>
+    function maintainBackToTopVisibility() {
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.body.clientHeight;
+        let backToTop = document.getElementById('back-to-top');
+
+        if (windowHeight * 1.5 < documentHeight) {
+            backToTop.style.display = 'inline';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    }
+
+    maintainBackToTopVisibility();
+    addEventListener('scroll', event => maintainBackToTopVisibility());
+    addEventListener('resize', event => maintainBackToTopVisibility());
+
+</script>
+	</nav>
+</footer>
+	</div>
+
+	<script src="/js/fit-vids.js"></script>
+	<script src="/js/measure-load-time.js"></script>
+</body>
+
+</html>

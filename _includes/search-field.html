@@ -1,0 +1,29 @@
+{%- assign onsubmit = "submitQuery(event);"%}
+{%- if include.onsubmit -%}{%- assign onsubmit = include.onsubmit -%}{%- endif -%}
+{%- if include.focus -%}{%- assign autofocus = "autofocus" -%}{%- endif -%}
+
+<script>
+    function submitQuery(event) {
+        event.preventDefault();
+        let query = event.target['search-query'].value;
+        if (query && query.trim()) {
+            location.href = '{{site.search}}?query=' + encodeURIComponent(query.trim());
+        } else {
+            location.href = '{{site.search}}';
+        }
+    }
+    addEventListener('keydown', event => {
+        if (event.keyCode == 190) {
+            // . pressed
+            document.querySelector('#search-query').focus();
+            event.preventDefault();
+        }
+    });
+</script>
+<form class="mry" onsubmit="{{onsubmit}}">
+    <label for="search-query" class="small">Search <em>{{site.name}},</em> press . to focus:</label>
+    <div class="flex mxw-sm">
+        <input id="search-query" {{autofocus}} class="w-100" type="text"/>
+        <input type="submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="Search" />
+    </div>
+</form>

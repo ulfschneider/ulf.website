@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#00bbff"><link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-200.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-italic.woff2" as="font" type="font/woff2" crossorigin/><link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/compose.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/customize.css" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<title>
+    Ulf Schneider – Developer and Agile Coach
+</title>
+
+<script>
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/serviceworker.js')
+            .catch(error => {
+                console.error(error);
+            });
+        addEventListener("load", function () {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ "command": "trimCache" });
+            }
+        });
+    }
+</script>
+</head>
+
+<body><a id="top" tabindex="-1"></a>
+	<header class="mrb-3 bg-base-background x breakout-r z-1 pdy-d1 lh-4 small">
+	<nav><span class="inline-block mrr-d1">
+						<a href="/" class="no-deco meta">Ulf Schneider</a>
+					</span><ul class="reset inline-block mry-0"><li class="inline-block">
+							<a class="no-deco meta" href="/reading/">Reading</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/articles/">Articles</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/tools/">Tools</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/journal/">Journal</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/search/">Search</a>
+						</li></ul>
+</nav>
+</header>
+
+	<main class="x indent word-wrap default"><div class="breakout-l mrb-1">
+			<div class="title no-indent"><h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">Weeknotes 12</h1><aside class="lh-2 small meta mrt-d2"><time class="no-wrap">March 22, 2020</time></aside></div>
+		</div><ul>
+<li>Emil pictured the <a href="/emil-drawing/emil-pictured-the-coronavirus">virus</a>.</li>
+<li>I get the case counts from The Johns Hopkins <a href="https://coronavirus.jhu.edu">Coronavirus Resource Center</a>. At the end of this week we are counting 22.000 infected people in Germany, 84 people died. Worldwide, we have 307.000 people infected and 13.049 people died.</li>
+<li>The Washington Post: &quot;<a href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/">How outbreaks like Coronavirus spread exponentially, and how to flatten the curve</a>,&quot; by Harry Stevens. A very good explanation with comprehensive simulations.</li>
+<li><a href="http://gabgoh.github.io/COVID/index.html">Epidemic Calculator</a>.</li>
+<li>A set of free <a href="https://www.iconfinder.com/p/coronavirus-awareness-icons">Coronavirus awareness icons</a> from iconfinder.</li>
+<li><a href="https://twitter.com/tomjolly/status/1240381892077277187?s=21">How design tells a story</a> from <a href="https://standardregular.com/Andrew-Sondern">Andrew Sondern</a>, Art Director of The New York Times.</li>
+<li>Another great page: &quot;<a href="https://paulliebtpaula.de/ueber-uns/">Paul liebt Paula</a>.&quot; I found it on my chase for Lightroom presets, because during this week I discovered that unfortunately <a href="https://vsco.co">VSCO</a> is not in the Lightroom Preset Business anymore.</li>
+<li>Alternatives for VSCO: <a href="https://hafenliebe.education/presets/">Hafenliebe Presets</a> by Björn Lexius. I like it that Björn has only a limited number of color and bw presets which are to be meant as a starting point for further adjustment. Björn´s presets are currently my favourite. More alternatives are <a href="https://reallyniceimages.com">RNI</a>,  and maybe <a href="https://paulliebtpaula.de/presets/">Paul liebt Paula</a>.</li>
+<li>Debugging CSS with <code>* {outline: 1px solid red;}</code> is better than setting <code>* {border: 1px solid red;}</code>, because outline doesn´t affect the box model!</li>
+</ul>
+</main>
+
+	<div class="x breakout-r">
+		<footer class="mrt-1 mrb-2 lh-4 small"><nav>
+		<ul class="mry-0 reset">
+			<li class="inline-block"><a href="/feed.xml/" class="small no-deco meta">RSS</a></li><li class="inline-block"><a href="/colophon/" class="small no-deco meta">Colophon</a></li><li class="inline-block"><a href="/ownership/" class="small no-deco meta">Ownership</a></li><li id="load-time" class="inline-block small meta"></li>
+		</ul>
+		<a href="#top" id="back-to-top" style="display:none" class="small no-deco meta">Back to top</a>
+<script>
+    function maintainBackToTopVisibility() {
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.body.clientHeight;
+        let backToTop = document.getElementById('back-to-top');
+
+        if (windowHeight * 1.5 < documentHeight) {
+            backToTop.style.display = 'inline';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    }
+
+    maintainBackToTopVisibility();
+    addEventListener('scroll', event => maintainBackToTopVisibility());
+    addEventListener('resize', event => maintainBackToTopVisibility());
+
+</script>
+	</nav>
+</footer>
+	</div>
+
+	<script src="/js/fit-vids.js"></script>
+	<script src="/js/measure-load-time.js"></script>
+</body>
+
+</html>

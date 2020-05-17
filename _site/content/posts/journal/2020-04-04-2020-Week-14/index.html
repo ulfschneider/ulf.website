@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#00bbff"><link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-200.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-italic.woff2" as="font" type="font/woff2" crossorigin/><link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/compose.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/customize.css" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<title>
+    Ulf Schneider – Developer and Agile Coach
+</title>
+
+<script>
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/serviceworker.js')
+            .catch(error => {
+                console.error(error);
+            });
+        addEventListener("load", function () {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ "command": "trimCache" });
+            }
+        });
+    }
+</script>
+</head>
+
+<body><a id="top" tabindex="-1"></a>
+	<header class="mrb-3 bg-base-background x breakout-r z-1 pdy-d1 lh-4 small">
+	<nav><span class="inline-block mrr-d1">
+						<a href="/" class="no-deco meta">Ulf Schneider</a>
+					</span><ul class="reset inline-block mry-0"><li class="inline-block">
+							<a class="no-deco meta" href="/reading/">Reading</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/articles/">Articles</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/tools/">Tools</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/journal/">Journal</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/search/">Search</a>
+						</li></ul>
+</nav>
+</header>
+
+	<main class="x indent word-wrap default"><div class="breakout-l mrb-1">
+			<div class="title no-indent"><h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">Weeknotes 14</h1><aside class="lh-2 small meta mrt-d2"><time class="no-wrap">April  4, 2020</time></aside></div>
+		</div><ul>
+<li>Emil draws &quot;<a href="/emil-drawing/snakes-with-poison-dots/">Snakes with Poison Dots</a>.&quot;</li>
+<li>Max Böck published a boilerplate <a href="https://mxb.dev/blog/emergency-website-kit/">Emergency Website Kit</a>, which, especially these days, aims to provide a quick way to publish critical information with a single HTTP request. The technique has the ability to handle sudden load spikes with maximum resilience.</li>
+<li>The complete &quot;<a href="https://aneventapart.com/news/post/the-complete-aea-dc-2019-now-online">An Event Apart Washington DC 2019 Sessions</a>&quot; are available online. That´s quite something to study.</li>
+<li>I´ve learned that there is a <code>&lt;time&gt;</code> tag in HTML which <s>can</s> should be used for dates and time to improve semantic HTML.</li>
+<li>A compelling talk from Aaron Gustafson: &quot;<a href="https://aneventapart.com/news/post/progressive-web-apps-where-do-i-begin-aea-video">Progressive Web Apps: Where Do I Begin?</a>&quot; It´s not mainly about the Service Worker. Aaron is pointing out that a Progressive Web App aims to enhance <em>– or progress –</em> an already great experience of a website with performance, less network reliance, offline capabilities, and engagement. It´s a chain of: focusing on what matters most for a particular web page to create a great core experience (<a href="https://justinjackson.ca/words.html">start with words</a>); writing semantic markup to support the core experience; designing with CSS to support the core experience; and finally using JavaScript to support the core experience.</li>
+<li><a href="https://www.pwastats.com">PWA Stats</a> is a community-driven list of stats and news related to Progressive Web Apps.</li>
+<li>Aaron Shekey, Stack Overflow’s principal product designer on design systems, explains how the new <a href="https://stackoverflow.blog/2020/03/31/building-dark-mode-on-stack-overflow/">dark mode</a> of Stack Overflow has been realized.</li>
+<li><a href="https://stackoverflow.design">Stacks</a> is the design system of Stack Overflow.</li>
+<li>A beautiful <a href="https://typespecimens.io">collection of typespecimens</a>, curated by John D. Jameson.</li>
+<li>I have added a search function to my static <a href="https://jekyllrb.com">Jekyll</a>-driven site. It´s a client-side search powered by <a href="https://lunrjs.com">Lunr</a>. Currently the search index for the entire website is built on the client with the first query a user kicks off. This is something that could be improved for the future. But still I´m happy with that thing for now.</li>
+</ul>
+</main>
+
+	<div class="x breakout-r">
+		<footer class="mrt-1 mrb-2 lh-4 small"><nav>
+		<ul class="mry-0 reset">
+			<li class="inline-block"><a href="/feed.xml/" class="small no-deco meta">RSS</a></li><li class="inline-block"><a href="/colophon/" class="small no-deco meta">Colophon</a></li><li class="inline-block"><a href="/ownership/" class="small no-deco meta">Ownership</a></li><li id="load-time" class="inline-block small meta"></li>
+		</ul>
+		<a href="#top" id="back-to-top" style="display:none" class="small no-deco meta">Back to top</a>
+<script>
+    function maintainBackToTopVisibility() {
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.body.clientHeight;
+        let backToTop = document.getElementById('back-to-top');
+
+        if (windowHeight * 1.5 < documentHeight) {
+            backToTop.style.display = 'inline';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    }
+
+    maintainBackToTopVisibility();
+    addEventListener('scroll', event => maintainBackToTopVisibility());
+    addEventListener('resize', event => maintainBackToTopVisibility());
+
+</script>
+	</nav>
+</footer>
+	</div>
+
+	<script src="/js/fit-vids.js"></script>
+	<script src="/js/measure-load-time.js"></script>
+</body>
+
+</html>

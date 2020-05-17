@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#00bbff"><link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-200.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-italic.woff2" as="font" type="font/woff2" crossorigin/><link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/compose.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/customize.css" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<title>
+    Ulf Schneider – Developer and Agile Coach
+</title>
+
+<script>
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/serviceworker.js')
+            .catch(error => {
+                console.error(error);
+            });
+        addEventListener("load", function () {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ "command": "trimCache" });
+            }
+        });
+    }
+</script>
+</head>
+
+<body><a id="top" tabindex="-1"></a>
+	<header class="mrb-3 bg-base-background x breakout-r z-1 pdy-d1 lh-4 small">
+	<nav><span class="inline-block meta heading-color bold mrr-d1">Ulf Schneider</span><ul class="reset inline-block mry-0"><li class="inline-block">
+							<a class="no-deco meta" href="/reading/">Reading</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/articles/">Articles</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/tools/">Tools</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/journal/">Journal</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/search/">Search</a>
+						</li></ul>
+</nav>
+</header>
+
+	<main class="x indent word-wrap default"><h1 class="fs-2 lh-2 md:fs-4 md:lh-1 breakout-l mrb-2">Hi, I´m <span class="inline-block">Ulf Schneider,</span> a developer and agile coach living in Paderborn, Germany.</h1>
+<p>In 1996 I graduated at the University of Paderborn (Dipl.-Wirt. Inform.). Throughout 25 years in the software industry, I was more than ten years with IBM Global Services as a developer and software architect and more than seven years self-employed as an agile coach and trainer. Since 2014 I am employed as an agile coach at the software organization of Diebold Nixdorf.</p>
+<p>I am <a href="/bike/cross-the-alps/">riding</a> race bikes and the <a href="/emil/2016-10-02/">Bullitt</a> together with my boy <a href="/emil/emil-is-ready-for-the-beach/">Emil</a>. Emil is very concerned about the Coronavirus pandemic and pictured the <a href="/emil-drawing/emil-pictured-the-coronavirus/">virus</a>.</p>
+<p>Contact me via +49 163 2505164.</p>
+<div class="mrt">
+<script>
+    function submitQuery(event) {
+        event.preventDefault();
+        let query = event.target['search-query'].value;
+        if (query && query.trim()) {
+            location.href = '/search/?query=' + encodeURIComponent(query.trim());
+        } else {
+            location.href = '/search/';
+        }
+    }
+    addEventListener('keydown', event => {
+        if (event.keyCode == 190) {
+            // . pressed
+            document.querySelector('#search-query').focus();
+            event.preventDefault();
+        }
+    });
+</script>
+<form class="mry" onsubmit="submitQuery(event);">
+    <label for="search-query" class="small">Search <em>ulf.codes,</em> press . to focus:</label>
+    <div class="flex mxw-sm">
+        <input id="search-query"  class="w-100" type="text"/>
+        <input type="submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="Search" />
+    </div>
+</form>
+</div>
+</main>
+
+	<div class="x breakout-r">
+		<footer class="mrt-1 mrb-2 lh-4 small"><nav>
+		<ul class="mry-0 reset">
+			<li class="inline-block"><a href="/feed.xml/" class="small no-deco meta">RSS</a></li><li class="inline-block"><a href="/colophon/" class="small no-deco meta">Colophon</a></li><li class="inline-block"><a href="/ownership/" class="small no-deco meta">Ownership</a></li><li id="load-time" class="inline-block small meta"></li>
+		</ul>
+		<a href="#top" id="back-to-top" style="display:none" class="small no-deco meta">Back to top</a>
+<script>
+    function maintainBackToTopVisibility() {
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.body.clientHeight;
+        let backToTop = document.getElementById('back-to-top');
+
+        if (windowHeight * 1.5 < documentHeight) {
+            backToTop.style.display = 'inline';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    }
+
+    maintainBackToTopVisibility();
+    addEventListener('scroll', event => maintainBackToTopVisibility());
+    addEventListener('resize', event => maintainBackToTopVisibility());
+
+</script>
+	</nav>
+</footer>
+	</div>
+
+	<script src="/js/fit-vids.js"></script>
+	<script src="/js/measure-load-time.js"></script>
+</body>
+
+</html>

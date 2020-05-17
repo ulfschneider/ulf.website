@@ -1,0 +1,221 @@
+---
+layout: list
+---
+<link rel="preload" as="fetch" href="/friendly-index.json" crossorigin="anonymous">
+<link rel="preload" as="fetch" href="/post-search-index.json" crossorigin="anonymous">
+
+{% include search-field.html , focus:"true", onsubmit:"event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value); history.replaceState(null, '', location.pathname + '?query=' + event.target[SEARCH_QUERY_ID].value)" %}
+
+<div id="search-results"></div>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+
+    const SEARCH_RESULTS_ID = 'search-results';
+    const SEARCH_QUERY_ID = 'search-query';
+    var searchIndex,
+        friendlyMap;
+
+    function getParameterByName(name, url) {
+        url = url
+            ? url
+            : location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+        let results = regex.exec(url);
+        if (!results) {
+            return null;
+        }
+        if (!results[2]) {
+            return '';
+        }
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    function removeChildren(parent) {
+        if (parent) {
+            let child = parent.lastElementChild;
+            while (child) {
+                parent.removeChild(child);
+                child = parent.lastElementChild;
+            }
+        }
+    }
+
+    function formatDate(date) {
+        const months = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December'
+        ];
+        let parts = date.split('-');
+        let year = parseInt(parts[0]);
+        let month = parseInt(parts[1]);
+        let day = parseInt(parts[2]);
+
+        return months[month - 1] + ' ' + day + ', ' + year;
+    }
+
+    function printResultEntry(parent, entry) {
+        if (parent) {
+            let friend = friendlyMap.get(entry.ref);
+
+            let article = document.createElement('article');
+            parent.appendChild(article);
+
+            if (friend.title && friend.title != 'notitle') {
+                let title = document.createElement('h2');
+                title.classList = 'mry-0'
+                article.appendChild(title);
+                let linkToArticle = document.createElement('a');
+                linkToArticle.href = entry.ref;
+                linkToArticle.innerHTML = friend.title;
+                title.appendChild(linkToArticle);
+            }
+
+            if (friend.refer) {
+                let refer = document.createElement('div');
+                refer.classList = 'small meta';
+                refer.innerHTML = friend.refer;
+                article.appendChild(refer);
+            }
+
+            if (friend.abstract || friend.subtitle || friend.excerpt || friend.content) {
+                let excerpt = document.createElement('p');
+                article.appendChild(excerpt);
+                excerpt.classList = 'inline';
+                let text = friend.abstract || friend.subtitle || friend.excerpt;
+                if (text) {
+                    excerpt.innerHTML = text;
+                } else {
+                    excerpt.innerHTML = friend
+                        .content
+                        .split(' ')
+                        .slice(0, 25)
+                        .join(' ') + ' …';
+                }
+            }
+
+            if (friend.author || friend.date) {
+                let aside = document.createElement('aside');
+                aside.classList = "meta small inline-block";
+                article.innerHTML += ' ';
+                article.appendChild(aside);
+                aside.innerHTML = '<span aria-hidden="true"> — </span>';
+
+                if (friend.author) {
+                    let author = document.createElement('span');
+                    author.innerHTML = 'By ' + friend.author;
+                    aside.appendChild(author);
+                }
+
+                if (friend.date) {
+                    if (friend.author) {
+                        aside.innerHTML += '<span aria-hidden="true"> · </span>';
+                    }
+                    let date = document.createElement('time');
+                    date.innerHTML += formatDate(friend.date);
+                    aside.appendChild(date);
+                }
+            }
+
+            if (!friend.title || friend.title == 'notitle') {
+                let linkToArticle = document.createElement('a');
+                linkToArticle.href = entry.ref;
+                linkToArticle.classList = 'block small meta';
+                linkToArticle.innerHTML = 'Read the entire article →';
+                article.appendChild(linkToArticle);
+            }
+        }
+    }
+
+    function printHeading(resultSet, query) {
+        let heading = document.getElementsByTagName('h1');
+        if (heading.length) {
+            if (resultSet.length) {
+                heading[0].innerHTML = 'Search results for "' + query + '"';
+            } else {
+                heading[0].innerHTML = 'No search results for "' + query + '"';
+            }
+        }
+    }
+
+    function printResultCount(searchResults, resultSet, query) {
+        let count = document.createElement('div');
+        if (resultSet.length == 0) {
+            count.innerHTML = 'Your search for "' + query + '" did not return any results.'
+        } else {
+            count.innerHTML = resultSet.length + ' results:';
+        }
+        count.classList = "small meta mrb";
+        searchResults.append(count);
+    }
+
+    function printSearchResults(resultSet, query) {
+        let searchResults = document.getElementById(SEARCH_RESULTS_ID);
+        if (!searchResults) {
+            console.error('The page does not have a DOM element with id=' + SEARCH_RESULTS_ID);
+            return;
+        }
+        removeChildren(searchResults);
+        printHeading(resultSet, query);
+        printResultCount(searchResults, resultSet, query);
+        if (resultSet.length) {
+            for (let entry of resultSet) {
+                printResultEntry(searchResults, entry);
+            }
+        }
+    }
+
+    function search(query) {
+        let resultSet = [];
+        if (query && query.trim().length) {
+            resultSet = searchIndex.search(query);
+        }
+        printSearchResults(resultSet, query);
+    }
+
+    addEventListener('load', function (event) {
+        fetch('/post-search-index.json', {credentials: 'same-origin'})
+            .then(response => {
+                return response.json()
+            })
+            .then(rawIndex => {
+                searchIndex = lunr
+                    .Index
+                    .load(rawIndex);
+                return fetch('/friendly-index.json', {credentials: 'same-origin'});
+            })
+            .then(response => {
+                return response.json();
+            })
+            .then(contentIndex => {
+
+                friendlyMap = new Map();
+                for (let item of contentIndex) {
+                    friendlyMap.set(item.id, item);
+                }
+
+                let query = getParameterByName('query');
+                let input = document.getElementById(SEARCH_QUERY_ID);
+                if (input) {
+                    input.value = query;
+                }
+
+                if (query) {
+                    search(query);
+                }
+            })
+            .catch(error => {
+                console.error('Failure when creating search index ' + error);
+            });
+    });
+</script>

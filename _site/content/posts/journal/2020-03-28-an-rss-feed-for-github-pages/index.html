@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#00bbff"><link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-serif-v8-latin-700italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-sans-v7-latin-200.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/ibm-plex-mono-v5-latin-italic.woff2" as="font" type="font/woff2" crossorigin/><link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/compose.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/customize.css" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<title>
+    Ulf Schneider – Developer and Agile Coach
+</title>
+
+<script>
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/serviceworker.js')
+            .catch(error => {
+                console.error(error);
+            });
+        addEventListener("load", function () {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ "command": "trimCache" });
+            }
+        });
+    }
+</script>
+</head>
+
+<body><a id="top" tabindex="-1"></a>
+	<header class="mrb-3 bg-base-background x breakout-r z-1 pdy-d1 lh-4 small">
+	<nav><span class="inline-block mrr-d1">
+						<a href="/" class="no-deco meta">Ulf Schneider</a>
+					</span><ul class="reset inline-block mry-0"><li class="inline-block">
+							<a class="no-deco meta" href="/reading/">Reading</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/articles/">Articles</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/tools/">Tools</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/journal/">Journal</a>
+						</li><li class="inline-block">
+							<a class="no-deco meta" href="/search/">Search</a>
+						</li></ul>
+</nav>
+</header>
+
+	<main class="x indent word-wrap default"><div class="breakout-l mrb-1">
+			<div class="title no-indent"><h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">An RSS feed for GitHub Pages</h1><aside class="lh-2 small meta mrt-d2"><time class="no-wrap">March 28, 2020</time></aside></div>
+		</div><p>RSS is a good thing. It simplifies to overview information that is produced by potentially many different sources. If someone has an RSS feed on her blog, you can easily subscribe to that feed and have all her published contents in your RSS reader – along with the published contents of other creators. There is also a privacy advantage. You don´t have to provide your mail address to subscribe.</p>
+<p>I´m building my blog with Jekyll, and hosting it via GitHub Pages. Out of the box, Jekyll doesn´t have RSS feed support. One way to publish a feed is to use the <code>jekyll-feed</code> plugin, which is supported by GitHub Pages. You only need to activate it in your <code>_config.yml</code>:</p>
+<figure>
+<figcaption>_config.yml</figcaption>
+<pre class="language-liquid"><code class="language-liquid">plugins<span class="token operator">:</span><br>  – jekyll<span class="token operator">-</span>feed</code></pre>
+</figure>
+<p>Once Jekyll rebuilds your site with the plugin activated, your RSS feed is available under the URL path <code>/feed.xml/</code>.</p>
+<h2>Limitations of jekyll-feed</h2>
+<p>However, <code>jekyll-feed</code> has some limitations:</p>
+<ul>
+<li>It makes all pages and posts available in your feed. You cannot exclude anything, or have different feeds, like for links, a reading list, and maybe your journal.</li>
+<li>Even posts that have a front matter setting of <code>published: no</code> are immediately visible in your feed.</li>
+<li>I´m referencing things inside of my blog with relative URLs. E.g., <code>/tools</code>, or <code>/images/we-are-riding-the-bullitt.jpg</code>. Those relative links remain so in your feed. But a relative link doesn´t work inside of an RSS reader, which means an image is not displayed or a link to an article is not functioning. In the RSS reader, you need absolute URLs.</li>
+</ul>
+<h2>My own feed generator</h2>
+<p>To overcome those limitations, I decided not to use <code>jekyll-feed</code> and instead write my own tiny RSS generator. My generator is publishing posts and no pages. Here is what you have to do to use it:</p>
+<p>For each feed you want to publish, you have to create a markdown file inside of the <code>_pages</code> folder – for example, a feed with the URL <code>/feed.rss/</code>, that publishes the categories <em>articles, tools, reading, and journal</em> is represented by a file <code>feed.md</code> with the following front matter contents:</p>
+<figure>
+<figcaption>_pages/feed.md</figcaption>
+<pre class="language-liquid"><code class="language-liquid"><span class="token operator">--</span><span class="token operator">-</span><br>layout<span class="token operator">:</span> rssfeed<br>permalink<span class="token operator">:</span> <span class="token operator">/</span>feed.xml<span class="token operator">/</span><br>categories<span class="token operator">:</span> [articles, tools, reading, journal]<br><span class="token operator">--</span><span class="token operator">-</span></code></pre>
+</figure>
+<p>The address of the published feed, <code>/feed.xml/</code> in this case, doesn´t need to correspond to the name of the feed definition file, <code>feed.md</code> in our example. You define the feed address with the <code>permalink</code> setting inside of the feed definition file.</p>
+<p>You can have multiple feed definition files with different content filters and subsequently different feed addresses.</p>
+<p>The filtering of posts is not only working for categories. You can also filter for tags. The following feed definition is valid:</p>
+<figure>
+<figcaption>_pages/feed.md</figcaption>
+<pre class="language-liquid"><code class="language-liquid"><span class="token operator">--</span><span class="token operator">-</span><br>layout<span class="token operator">:</span> rssfeed<br>permalink<span class="token operator">:</span> <span class="token operator">/</span>feed.xml<span class="token operator">/</span><br>tags<span class="token operator">:</span> [articles, tools, reading, journal]<br><span class="token operator">--</span><span class="token operator">-</span></code></pre>
+</figure>
+<p>A logical OR filter combination of categories and tags is in the form:</p>
+<figure>
+<figcaption>_pages/feed.md</figcaption>
+<pre class="language-liquid"><code class="language-liquid"><span class="token operator">--</span><span class="token operator">-</span><br>layout<span class="token operator">:</span> rssfeed<br>permalink<span class="token operator">:</span> <span class="token operator">/</span>feed.xml<span class="token operator">/</span><br>categories<span class="token operator">:</span> [tools]<br>tags<span class="token operator">:</span> [reading, journal]<br><span class="token operator">--</span><span class="token operator">-</span></code></pre>
+</figure>
+<p>Here are all the front matter settings you have:</p>
+<table class="underline-rows">
+<tr>
+<th>Front matter</th>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>layout</td>
+<td>rssfeed</td>
+<td>mandatory</td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>/feed.xml/</td>
+<td>it can be another URL, but it should end with <code>.xml</code></td>
+</tr>
+<tr>
+<td>categories</td>
+<td></td>
+<td>an array of all the categories you want to include into the feed</td>
+</tr>
+<tr>
+<td>tags</td>
+<td></td>
+<td>an array of all the tags you want to include into the feed</td>
+</tr>
+<tr>
+<td>exclude_categories</td>
+<td></td>
+<td>an array of all the categories you do <em>not</em> want to include into the feed</td>
+</tr>
+<tr>
+<td>exclude_tags</td>
+<td></td>
+<td>an array of all the tags you do <em>not</em> want to include into the feed</td>
+</tr>
+<tr>
+<td>exclude_layouts</td>
+<td></td>
+<td>an array of all the layouts you do <em>not</em> want to include into the feed</td>
+</tr>
+</table>
+<p>In the above <code>feed.md</code> file, a layout named <code>rssfeed</code> is referenced. The layout file needs to be available under the name <code>rssfeed.html</code> in the <code>_layouts</code> folder. The content of <code>rssfeed.html</code> is the tiny programm that creates the feed. It is this:</p>
+<figure class="breakout-wide">
+<figcaption>_layouts/rssfeed.html</figcaption>
+<pre class="language-liquid"><code class="language-liquid"><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span>"<span class="token number">1.0</span>" encoding<span class="token operator">=</span>"UTF<span class="token operator">-</span><span class="token number">8</span>" <span class="token operator">?</span><span class="token operator">></span><br><span class="token operator">&lt;</span>rss version<span class="token operator">=</span>"<span class="token number">2.0</span>"<span class="token operator">></span><br>    <span class="token operator">&lt;</span>channel<span class="token operator">></span><br>        <span class="token operator">&lt;</span>title<span class="token operator">></span>{{<span class="token operator">-</span> site.title <span class="token operator">-</span>}}<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span><br>        <span class="token operator">&lt;</span>description<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>description<span class="token operator">></span><br>        <span class="token operator">&lt;</span>link<span class="token operator">></span>{{<span class="token operator">-</span> site.url <span class="token operator">-</span>}}{{<span class="token operator">-</span> site.baseurl <span class="token operator">-</span>}}<span class="token operator">&lt;</span><span class="token operator">/</span>link<span class="token operator">></span><br>        <span class="token operator">&lt;</span>pubDate<span class="token operator">></span>{{ site.time <span class="token operator">|</span> date_to_rfc822 }}<span class="token operator">&lt;</span><span class="token operator">/</span>pubDate<span class="token operator">></span><br>        <span class="token operator">&lt;</span>lastBuildDate<span class="token operator">></span>{{<span class="token operator">-</span> site.time <span class="token operator">|</span> date_to_rfc822 <span class="token operator">-</span>}}<span class="token operator">&lt;</span><span class="token operator">/</span>lastBuildDate<span class="token operator">></span><br>        <span class="token operator">&lt;</span>generator<span class="token operator">></span>Jekyll v{{<span class="token operator">-</span> jekyll.version <span class="token operator">-</span>}}<span class="token operator">&lt;</span><span class="token operator">/</span>generator<span class="token operator">></span><br><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> imageUrl <span class="token operator">=</span> "src<span class="token operator">=</span><span class="token operator">&amp;</span>quot;" <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> imageUrl <span class="token operator">=</span> imageUrl <span class="token operator">|</span> <span class="token function">append</span><span class="token operator">:</span> site.url <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> imageUrl <span class="token operator">=</span> imageUrl <span class="token operator">|</span> <span class="token function">append</span><span class="token operator">:</span> site.baseurl <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> imageUrl <span class="token operator">=</span> imageUrl <span class="token operator">|</span> <span class="token function">append</span><span class="token operator">:</span> "<span class="token operator">/</span>" <span class="token operator">-</span><span class="token operator">%</span>}<br><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> postUrl <span class="token operator">=</span> "href<span class="token operator">=</span><span class="token operator">&amp;</span>quot;" <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> postUrl <span class="token operator">=</span> postUrl <span class="token operator">|</span> <span class="token function">append</span><span class="token operator">:</span> site.url <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> postUrl <span class="token operator">=</span> postUrl <span class="token operator">|</span> <span class="token function">append</span><span class="token operator">:</span> site.baseurl <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> postUrl <span class="token operator">=</span> postUrl <span class="token operator">|</span> <span class="token function">append</span><span class="token operator">:</span> "<span class="token operator">/</span>" <span class="token operator">-</span><span class="token operator">%</span>}<br><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> contentNodes <span class="token operator">=</span> site.posts <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> pageMeta <span class="token operator">=</span> "" <span class="token operator">|</span> <span class="token function">split</span><span class="token operator">:</span> "" <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> pageMeta <span class="token operator">=</span> pageMeta <span class="token operator">|</span> push<span class="token operator">:</span> page.tags <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> pageMeta <span class="token operator">=</span> pageMeta <span class="token operator">|</span> push<span class="token operator">:</span> page.categories <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> pageMeta <span class="token operator">=</span> pageMeta<span class="token operator">|</span><span class="token function">compact</span><span class="token operator">|</span><span class="token function">uniq</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">if</span> pageMeta.size <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> pageMeta <span class="token operator">=</span> pageMeta <span class="token operator">|</span> push<span class="token operator">:</span> "." <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endif</span> <span class="token operator">-</span><span class="token operator">%</span>}<br><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> excludeMeta <span class="token operator">=</span> "" <span class="token operator">|</span> <span class="token function">split</span><span class="token operator">:</span> "" <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> excludeMeta <span class="token operator">=</span> excludeMeta <span class="token operator">|</span> push<span class="token operator">:</span> page.exclude_tags <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> excludeMeta <span class="token operator">=</span> excludeMeta <span class="token operator">|</span> push<span class="token operator">:</span> page.exclude_categories <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> excludeMeta <span class="token operator">=</span> excludeMeta<span class="token operator">|</span><span class="token function">compact</span><span class="token operator">|</span><span class="token function">uniq</span> <span class="token operator">-</span><span class="token operator">%</span>}<br><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">for</span> node <span class="token keyword">in</span> contentNodes <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">if</span> node.published <span class="token operator">!=</span> false and node.exclude_feed <span class="token operator">!=</span> true <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">unless</span> page.exclude_layouts contains node.layout and node.layout <span class="token operator">!=</span> "rssfeed" <span class="token operator">-</span><span class="token operator">%</span>}<br><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> isExcluded <span class="token operator">=</span> false <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> nodeMeta <span class="token operator">=</span> "" <span class="token operator">|</span> <span class="token function">split</span><span class="token operator">:</span> "" <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> nodeMeta <span class="token operator">=</span> nodeMeta <span class="token operator">|</span> push<span class="token operator">:</span> node.tags <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> nodeMeta <span class="token operator">=</span> nodeMeta <span class="token operator">|</span> push<span class="token operator">:</span> node.categories <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> nodeMeta <span class="token operator">=</span> nodeMeta<span class="token operator">|</span><span class="token function">compact</span><span class="token operator">|</span><span class="token function">uniq</span> <span class="token operator">-</span><span class="token operator">%</span>}<br><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">for</span> meta <span class="token keyword">in</span> nodeMeta <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">if</span> excludeMeta contains meta <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">assign</span> isExcluded <span class="token operator">=</span> true <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">break</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endif</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endfor</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span> <span class="token keyword">unless</span> isExcluded <span class="token operator">==</span> true <span class="token operator">%</span>}<br><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">for</span> meta <span class="token keyword">in</span> pageMeta <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">if</span> meta <span class="token operator">==</span> "." or node.tags contains meta or node.categories contains meta <span class="token operator">-</span><span class="token operator">%</span>}<br>        <span class="token operator">&lt;</span>item<span class="token operator">></span><br>            <span class="token operator">&lt;</span>title<span class="token operator">></span>{{ node.title <span class="token operator">|</span> xml_escape }}<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span><br>            <span class="token operator">&lt;</span>author<span class="token operator">></span>{{ node.author }}<span class="token operator">&lt;</span><span class="token operator">/</span>author<span class="token operator">></span><br>            <span class="token operator">&lt;</span>description<span class="token operator">></span><br>                {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">if</span> node.subtitle <span class="token operator">-</span><span class="token operator">%</span>}<span class="token operator">&amp;</span>lt;p<span class="token operator">&amp;</span>gt;{{<span class="token operator">-</span> node.subtitle <span class="token operator">-</span>}}<span class="token operator">&amp;</span>lt;<span class="token operator">/</span>p<span class="token operator">&amp;</span>gt;{<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endif</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>                {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">if</span> node.refer <span class="token operator">-</span><span class="token operator">%</span>}<span class="token operator">&amp;</span>lt;p<span class="token operator">&amp;</span>gt;{{<span class="token operator">-</span> node.refer <span class="token operator">-</span>}}<span class="token operator">&amp;</span>lt;<span class="token operator">/</span>p<span class="token operator">&amp;</span>gt;{<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endif</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>                {{<span class="token operator">-</span> node.content <span class="token operator">|</span> markdownify <span class="token operator">|</span> xml_escape <span class="token operator">|</span> <span class="token function">replace</span><span class="token operator">:</span> "src<span class="token operator">=</span><span class="token operator">&amp;</span>quot;<span class="token operator">/</span>",imageUrl <span class="token operator">|</span> <span class="token function">replace</span><span class="token operator">:</span> "href<span class="token operator">=</span><span class="token operator">&amp;</span>quot;<span class="token operator">/</span>",postUrl <span class="token operator">-</span>}}<br>            <span class="token operator">&lt;</span><span class="token operator">/</span>description<span class="token operator">></span><br>            <span class="token operator">&lt;</span>pubDate<span class="token operator">></span>{{<span class="token operator">-</span> node.date <span class="token operator">|</span> date_to_rfc822 <span class="token operator">-</span>}}<span class="token operator">&lt;</span><span class="token operator">/</span>pubDate<span class="token operator">></span><br>            <span class="token operator">&lt;</span>link<span class="token operator">></span>{{<span class="token operator">-</span> node.url <span class="token operator">|</span> <span class="token function">prepend</span><span class="token operator">:</span> site.baseurl <span class="token operator">|</span> <span class="token function">prepend</span><span class="token operator">:</span> site.url <span class="token operator">-</span>}}<span class="token operator">&lt;</span><span class="token operator">/</span>link<span class="token operator">></span><br>            <span class="token operator">&lt;</span>guid<span class="token operator">></span>{{<span class="token operator">-</span> node.url <span class="token operator">|</span> <span class="token function">prepend</span><span class="token operator">:</span> site.baseurl <span class="token operator">|</span> <span class="token function">prepend</span><span class="token operator">:</span> site.url <span class="token operator">-</span>}}<span class="token operator">&lt;</span><span class="token operator">/</span>guid<span class="token operator">></span><br>            {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">for</span> tag <span class="token keyword">in</span> node.tags <span class="token operator">-</span><span class="token operator">%</span>}<br>            <span class="token operator">&lt;</span>category<span class="token operator">></span>{{<span class="token operator">-</span> tag <span class="token operator">|</span> xml_escape <span class="token operator">-</span>}}<span class="token operator">&lt;</span><span class="token operator">/</span>category<span class="token operator">></span><br>            {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endfor</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>            {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">for</span> c <span class="token keyword">in</span> node.categories <span class="token operator">-</span><span class="token operator">%</span>}<br>            <span class="token operator">&lt;</span>category<span class="token operator">></span>{{<span class="token operator">-</span> c <span class="token operator">|</span> xml_escape <span class="token operator">-</span>}}<span class="token operator">&lt;</span><span class="token operator">/</span>category<span class="token operator">></span><br>            {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endfor</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>        <span class="token operator">&lt;</span><span class="token operator">/</span>item<span class="token operator">></span><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">break</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endif</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endfor</span> <span class="token operator">-</span><span class="token operator">%</span>}<br><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endunless</span> <span class="token operator">-</span><span class="token operator">%</span>}<br><br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endunless</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endif</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>        {<span class="token operator">%</span><span class="token operator">-</span> <span class="token keyword">endfor</span> <span class="token operator">-</span><span class="token operator">%</span>}<br>    <span class="token operator">&lt;</span><span class="token operator">/</span>channel<span class="token operator">></span><br><br><span class="token operator">&lt;</span><span class="token operator">/</span>rss<span class="token operator">></span></code></pre>
+</figure>
+<p>Just copy the code above, store it inside of <code>_layouts/rssfeed.html</code>, and you are ready to use your new RSS feed.</p>
+</main>
+
+	<div class="x breakout-r">
+		<footer class="mrt-1 mrb-2 lh-4 small"><nav>
+		<ul class="mry-0 reset">
+			<li class="inline-block"><a href="/feed.xml/" class="small no-deco meta">RSS</a></li><li class="inline-block"><a href="/colophon/" class="small no-deco meta">Colophon</a></li><li class="inline-block"><a href="/ownership/" class="small no-deco meta">Ownership</a></li><li id="load-time" class="inline-block small meta"></li>
+		</ul>
+		<a href="#top" id="back-to-top" style="display:none" class="small no-deco meta">Back to top</a>
+<script>
+    function maintainBackToTopVisibility() {
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.body.clientHeight;
+        let backToTop = document.getElementById('back-to-top');
+
+        if (windowHeight * 1.5 < documentHeight) {
+            backToTop.style.display = 'inline';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    }
+
+    maintainBackToTopVisibility();
+    addEventListener('scroll', event => maintainBackToTopVisibility());
+    addEventListener('resize', event => maintainBackToTopVisibility());
+
+</script>
+	</nav>
+</footer>
+	</div>
+
+	<script src="/js/fit-vids.js"></script>
+	<script src="/js/measure-load-time.js"></script>
+</body>
+
+</html>
