@@ -59,7 +59,7 @@
 	<main class="x indent word-wrap default"><div class="breakout-l mrb-1">
 			<div class="title no-indent"><h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">Search</h1><aside class="lh-2 small meta mrt-d2"><time class="no-wrap">May 15, 2020</time></aside></div>
 		</div>
-<link rel="preload" as="fetch" href="/friendly-index.json" crossorigin="anonymous">
+<link rel="preload" as="fetch" href="/excerpt-index.json" crossorigin="anonymous">
 <link rel="preload" as="fetch" href="/post-search-index.json" crossorigin="anonymous">
 
 <script>
@@ -274,7 +274,7 @@
                 searchIndex = lunr
                     .Index
                     .load(rawIndex);
-                return fetch('/friendly-index.json', {credentials: 'same-origin'});
+                return fetch('/excerpt-index.json', {credentials: 'same-origin'});
             })
             .then(response => {
                 return response.json();

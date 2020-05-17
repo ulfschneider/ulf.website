@@ -1,7 +1,7 @@
 ---
 layout: list
 ---
-<link rel="preload" as="fetch" href="/friendly-index.json" crossorigin="anonymous">
+<link rel="preload" as="fetch" href="/excerpt-index.json" crossorigin="anonymous">
 <link rel="preload" as="fetch" href="/post-search-index.json" crossorigin="anonymous">
 
 {% include search-field.html , focus:"true", onsubmit:"event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value); history.replaceState(null, '', location.pathname + '?query=' + event.target[SEARCH_QUERY_ID].value)" %}
@@ -192,7 +192,7 @@ layout: list
                 searchIndex = lunr
                     .Index
                     .load(rawIndex);
-                return fetch('/friendly-index.json', {credentials: 'same-origin'});
+                return fetch('/excerpt-index.json', {credentials: 'same-origin'});
             })
             .then(response => {
                 return response.json();

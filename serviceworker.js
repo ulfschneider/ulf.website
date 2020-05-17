@@ -47,7 +47,7 @@ const PRECACHE_URLS = [
     '/ownership/',
     '/r/fit-vids.js',
     '/r/measure-load-time.js',
-    '/friendly-index.json',
+    '/excerpt-index.json',
     '/post-search-index.json',
     'https://unpkg.com/lunr/lunr.js',
     '/fonts/ibm-plex-serif-v8-latin-regular.woff2',
