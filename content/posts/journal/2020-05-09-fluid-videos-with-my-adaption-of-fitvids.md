@@ -49,13 +49,13 @@ addEventListener('load', event => {
         for (let vid of fitVids) {
 
             // Get Video Information            
-            var width = vid.getAttribute('width');
-            var height = vid.getAttribute('height');
-            var aspectRatio = height / width;
-            var parentDiv = vid.parentNode;
+            let width = vid.getAttribute('width');
+            let height = vid.getAttribute('height');
+            let aspectRatio = height / width;
+            let parentDiv = vid.parentNode;
 
             // Wrap it in a DIV
-            var div = document.createElement('div');
+            let div = document.createElement('div');
             div.style.position = 'relative';
             div.style.paddingBottom = aspectRatio * 100 + '%';
             div.style.width = '100%';

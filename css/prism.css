@@ -8,6 +8,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
+	color: black;
 	text-shadow: 0 1px white;
 	text-align: left;
 	white-space: pre;
@@ -72,6 +73,7 @@ pre[class*="language-"] {
 .token.doctype,
 .token.cdata {
 	color: var(--meta-color);
+	font-style: italic;
 }
 
 .token.punctuation {
@@ -89,7 +91,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: var(--accent-three-d2); /* #905;*/
+	color: var(--accent-three-d2); /* #905;*/		
 }
 
 .token.selector,
@@ -112,7 +114,7 @@ pre[class*="language-"] {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-	color: var(--accent-three-d2); /* #07a;*/
+	color: var(--accent-three-d2); /* #07a;*/	
 }
 
 .token.function,
