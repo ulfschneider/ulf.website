@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
     addLayoutAliases(eleventyConfig);
     addCollections(eleventyConfig);
     addFilters(eleventyConfig);
-
+    eleventyConfig.setDataDeepMerge(true);
     eleventyConfig.setTemplateFormats([
         'md',
         'html',
@@ -29,6 +29,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPlugin(rss);
     eleventyConfig.addPlugin(syntaxHighlight);
+
 }
 
 function addLayoutAliases(eleventyConfig) {
