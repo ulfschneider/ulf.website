@@ -1,6 +1,5 @@
 ---
 title: My entry into accessibility #todo
-categories: articles
 published: no
 ---
 - Include as many people as possible. The technology is there, we have to adopt as web developers.

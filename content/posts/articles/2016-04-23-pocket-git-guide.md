@@ -1,8 +1,6 @@
 ---
 title: Pocket Git Guide
 subtitle: A short entry-level approach to Git
-categories: articles
-abstract: A short entry-level approach to Git.
 ---
 
 <h2>Contents</h2>

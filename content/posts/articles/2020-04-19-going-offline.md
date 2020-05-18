@@ -1,6 +1,5 @@
 ---
 title: Going Offline #todo
-categories: articles
 published: no
 ---
 - https://ulf.codes/reading/pwa-where-do-i-begin/

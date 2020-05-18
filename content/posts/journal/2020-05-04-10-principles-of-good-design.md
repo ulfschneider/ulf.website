@@ -1,6 +1,5 @@
 ---
 title: The 10 Principles of Good Design
-categories: journal
 ---
 <figure>
 <img alt="" src="/i/dieter-rams-braun.jpg" />

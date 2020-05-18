@@ -1,6 +1,5 @@
 ---
 title: An RSS feed for GitHub Pages
-categories: journal
 ---
 
 RSS is a good thing. It simplifies to overview information that is produced by potentially many different sources. If someone has an RSS feed on her blog, you can easily subscribe to that feed and have all her published contents in your RSS reader – along with the published contents of other creators. There is also a privacy advantage. You don´t have to provide your mail address to subscribe.

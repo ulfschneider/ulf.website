@@ -1,7 +1,6 @@
 ---
 title: Self-organization
 subtitle: A force of life
-categories: articles
 ---
 
 Self-organization is the determining element for agile teams and companies. To think and act accordingly requires the acceptance of evolutionary forces which are an inherent part of any social system, whether we like it or not.

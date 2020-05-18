@@ -1,7 +1,6 @@
 ---
 title: Five dysfunctions of a team
 subtitle: A non-performing team is not a team
-categories: articles
 ---
 
 Deliver with each iteration a [done](/articles/definition-of-done) piece of work and collaborate as a team. If you do only these two things and forget about all the concepts and procedures we like to talk about in the agile world, you already have made a good part of the agile journey.

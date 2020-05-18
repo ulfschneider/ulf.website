@@ -1,5 +1,4 @@
 ---
-categories: journal
 title: Newspaper designs during the pandemic
 ---
 Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](https://twitter.com/michaelbierut) pointed me towards the handwritten front page designs of the New York Times.

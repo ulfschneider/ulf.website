@@ -1,6 +1,5 @@
 ---
 title: Fluid videos with my adaption of FitVids
-categories: journal
 ---
 Embedded videos are not automatically responsive or fluid. They come with a fixed setting for width and height. To make them responsive while keeping aspect ratio, typically they are embedded into a wrapper element. The wrapper receives some clever padding and positioning, and as a last step the fixed dimensions are removed from the video. The technique has been described by Thierry Koblentz in his *A List Apart* article "[Creating Intrinsic Ratios for Video](https://alistapart.com/article/creating-intrinsic-ratios-for-video/)" in 2009.
 

@@ -1,4 +1,4 @@
 {
-    "permalink": "/sports/{{ title | slug }}/",
+    "permalink": "/sports/{{ page.fileSlug }}/",
     "tags": "sports"
 }
