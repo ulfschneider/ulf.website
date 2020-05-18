@@ -1,1 +1,1 @@
-module.exports = 'default.html';
+module.exports = 'default';

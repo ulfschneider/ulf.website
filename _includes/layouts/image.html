@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{site.locale}}">
 
 <head>
 	{% include head.html %}
@@ -41,7 +41,7 @@
 	</main>
 
 	<div class="x breakout">
-		{% include footer.html mainnav=true %}
+		{% include footer.html, hasmainnav: true %}
 	</div>
 	{% include fit-vids.html %}
 	{% include measure-load-time.html %}

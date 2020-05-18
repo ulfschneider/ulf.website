@@ -12,11 +12,11 @@
     <p class="mr-0 lh-2 small meta refer mxw-rg">{%- include refer.html -%}</p>
     {%- endif -%}
 
-    {%- if page.date and page.nodate != true -%}{%- assign date = true -%}{%- else -%}{%- assign date = false%}{%- endif -%}
-    {%- if page.tags != nil or page.categories != nil -%}{%- assign meta = true -%}{%- else -%}{%- assign meta = false%}{%- endif -%}
-    {%- if page.nostepnav == true or page.nometa == true -%}{%- assign meta = false -%}{%- endif -%}
+    {%- if page.date and page.nodate != true -%}{%- assign hasdate = true -%}{%- else -%}{%- assign hasdate = false%}{%- endif -%}
+    {%- if page.tags != nil or page.categories != nil -%}{%- assign hasmeta = true -%}{%- else -%}{%- assign hasmeta = false%}{%- endif -%}
+    {%- if page.nostepnav == true or page.nometa == true -%}{%- assign hasmeta = false -%}{%- endif -%}
 
-    {%- if page.author or date or meta  -%}
+    {%- if page.author or hasdate or hasmeta  -%}
     <aside class="lh-2 small meta mrt-d2">
         {%- include author-and-date.html -%}
         {%- include categories-and-tags.html -%}        

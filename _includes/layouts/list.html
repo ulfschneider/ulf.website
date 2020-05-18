@@ -53,7 +53,7 @@ layout: default
                         </h2>
                     {%- endif -%}
                     {%- if p.refer -%}
-                        <div class="meta small">{% include refer.html refer = p.refer %}</div>
+                        <div class="meta small">{% include refer.html, refer: p.refer %}</div>
                     {%- endif -%}
 
                     <p class="inline">
@@ -68,7 +68,7 @@ layout: default
 
                     <aside class="small meta inline-block">
                         <span aria-hidden="true">—</span>
-                        {% include author-and-date.html author=p.author date=p.date %}
+                        {% include author-and-date.html, author: p.author, date: p.date %}
                     </aside>
 
                     {%- if p.title == nil or p.title == "notitle" or p.notitle == true -%}

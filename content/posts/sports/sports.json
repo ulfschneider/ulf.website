@@ -1,0 +1,4 @@
+{
+    "permalink": "/sports/{{ title | slug }}/",
+    "tags": "sports"
+}

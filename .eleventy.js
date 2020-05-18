@@ -6,27 +6,9 @@ const site = require('./_data/site.json');
 
 module.exports = function (eleventyConfig) {
 
-    const now = new Date(); 
-    const live = post => post.date <= now && post.data.published !== false && post.data.published !== 'no';
-
-    eleventyConfig.addCollection('content', collection => {
-        return [
-            ...collection.getFilteredByGlob('content/**').filter(live)
-        ];
-    });
-    eleventyConfig.addCollection('pages', collection => {
-        return [
-            ...collection.getFilteredByGlob('content/pages/**').filter(live)
-        ];
-    });
-    eleventyConfig.addCollection('posts', collection => {
-        return [
-            ...collection.getFilteredByGlob('content/posts/**').filter(live)
-        ].reverse();
-    });
-    eleventyConfig.addFilter("searchindex", searchFilter);
-    eleventyConfig.addFilter("map", mapFilter);
-    eleventyConfig.addFilter("excerpt", excerptFilter);
+    addLayoutAliases(eleventyConfig);
+    addCollections(eleventyConfig);
+    addFilters(eleventyConfig);
 
     eleventyConfig.setTemplateFormats([
         'md',
@@ -47,6 +29,48 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPlugin(rss);
     eleventyConfig.addPlugin(syntaxHighlight);
+}
+
+function addLayoutAliases(eleventyConfig) {
+    eleventyConfig.addLayoutAlias('default', 'layouts/default.html');
+    eleventyConfig.addLayoutAlias('list', 'layouts/list.html');
+    eleventyConfig.addLayoutAlias('image', 'layouts/image.html');
+    eleventyConfig.addLayoutAlias('gallery', 'layouts/gallery.html');
+    eleventyConfig.addLayoutAlias('blank', 'layouts/blank.html');
+    eleventyConfig.addLayoutAlias('none', 'layouts/none.html');
+    eleventyConfig.addLayoutAlias('rssfeed', 'layouts/rssfeed.njk');
+    eleventyConfig.addLayoutAlias('search', 'layouts/search.html');
+}
+
+function liveContent(content) {
+    const now = new Date();
+    return content.date <= now
+        && content.data.published !== false
+        && content.data.published !== 'no';
+}
+
+function addCollections(eleventyConfig) {
+    eleventyConfig.addCollection('content', collection => {
+        return [
+            ...collection.getFilteredByGlob('content/**').filter(liveContent)
+        ];
+    });
+    eleventyConfig.addCollection('pages', collection => {
+        return [
+            ...collection.getFilteredByGlob('content/pages/**').filter(liveContent)
+        ];
+    });
+    eleventyConfig.addCollection('posts', collection => {
+        return [
+            ...collection.getFilteredByGlob('content/posts/**').filter(liveContent)
+        ].reverse();
+    });
+}
+
+function addFilters(eleventyConfig) {
+    eleventyConfig.addFilter("searchindex", searchFilter);
+    eleventyConfig.addFilter("map", mapFilter);
+    eleventyConfig.addFilter("excerpt", excerptFilter);
 }
 
 function searchFilter(collection) {
