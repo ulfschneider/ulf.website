@@ -9,7 +9,7 @@ module.exports = {
         name: "Ulf Schneider",
         email: "mail@ulf.codes"
     },
-    rss: "/feed.xml/",
+    rss: "/rss.xml",
     colophon: "/colophon/",
     ownership: "/ownership/",
     search: "/search/",
