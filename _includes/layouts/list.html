@@ -41,8 +41,7 @@ layout: default
                 </h2>
             {%- endif -%}
             {%- if p.data.refer -%}
-                <div class="meta small">{% include refer.html,
-                    refer: p.data.refer %}</div>
+                <div class="meta small">{{p.data.refer}}</div>
             {%- endif -%}
 
             <p class="inline">

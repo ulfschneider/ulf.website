@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="{{site.locale}}">
 
-<head>
-	{% include head.html %}
-</head>
+	<head>
+		{% include head.html %}
+	</head>
 
-<body><a id="top" tabindex="-1"></a>
-	{% include header.html %}
+	<body>
+		<a id="top" tabindex="-1"></a>
+		{% include header.html %}
 
-	<main class="x indent word-wrap default">
-		{%- unless title == "notitle" or title == nil or notitle == true  -%}
-		<div class="breakout-l mrb-1">
-			{% include title.html  %}
+		<main class="x indent word-wrap default">
+			{%- unless title == "notitle" or notitle != nil  -%}
+				<div class="breakout-l mrb-1">
+					{% include title.html %}
+				</div>
+			{%- endunless -%}
+
+			{{ content }}
+
+			{% include step-navigation.html %}
+		</main>
+
+		<div class="x breakout-r">
+			{% include footer.html %}
 		</div>
-		{%- endunless -%}		
 
-		{{ content }}
-
-		{% include step-navigation.html %}
-	</main>
-
-	<div class="x breakout-r">
-		{% include footer.html %}
-	</div>
-
-	{% include fit-vids.html %}
-	{% include measure-load-time.html %}
-</body>
+		{% include fit-vids.html %}
+		{% include measure-load-time.html %}
+	</body>
 
 </html>

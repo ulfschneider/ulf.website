@@ -4,6 +4,8 @@ mainnav: Tools
 title: Tools
 permalink: /tools/
 tags: tools
+notags: true
+nodate: true
 ---
 I build and share these tools. Beside the componentry things perhaps you want to have a quick look at:
 

@@ -3,7 +3,8 @@ permalink: /
 title: Ulf Schneider
 notitle: true
 mainnav: Ulf Schneider
-nometa: true
+nodate: true
+notags: true
 ---
 
 <h1 class="fs-2 lh-2 md:fs-4 md:lh-1 breakout-l mrb-2">Hi, I´m <span class="inline-block">Ulf Schneider,</span> a developer and agile coach living in Paderborn, Germany.</h1>

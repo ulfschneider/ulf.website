@@ -1,4 +1,3 @@
-
 {%- assign liveContent = collections.livePosts | mustContainTag: tags | reverse -%}
 
 {%- assign prev = liveContent | getNext: page -%}
@@ -6,42 +5,42 @@
 
 {%- if prev != nil or next != nil -%}
 
-{%- if page.shortnav != nil -%}
-{%- assign shortnav = page.shortnav -%}
-{%- endif -%}
-
-{%- if shortnav == nil -%}
-{%- assign topMargin = " mrt-1" -%}
-{%- endif -%}
-
-<nav class="clearfix step-navigation small lh-2{{topMargin}}">
-    {%- if next  -%}    
-    <div class="float-left nowrap truncate">
-        <a class="no-deco meta" href="{{ next.url }}">
-            {%- if shortnav -%}
-            <div><span aria-hidden="true">&lt;&nbsp;</span>newer</div>
-            {%- else -%}
-            <div>Newer:</div>
-            <div>{%- if next.data.title != "notitle" and  next.data.notitle == nil -%}
-                {{ next.data.title }}{%- endif -%}</div>
-            {%- endif -%}
-        </a>
-    </div>
+    {%- if shortnav == nil -%}
+        {%- assign topMargin = " mrt-1" -%}
     {%- endif -%}
 
-    {%- if prev  -%}    
-    <div class="float-right mrl nowrap truncate right">
-        <a class="no-deco meta" href="{{ prev.url }}">
-            {%- if shortnav -%}
-            <div>older<span aria-hidden="true">&nbsp;&gt;</span></div>
-            {%- else -%}
-            <div>Older:</div>
-            <div>{%- if prev.data.title != "notitle" and prev.data.notitle == nil -%}
-                {{ prev.data.title }}{%- endif -%}</div>
-            {%- endif -%}
-        </a>
-    </div>
-    {%- endif -%}
-</nav>
+    <nav class="clearfix step-navigation small lh-2{{topMargin}}">
+        {%- if next  -%}
+            <div class="float-left nowrap truncate">
+                <a class="no-deco meta" href="{{ next.url }}">
+                    <div>
+                        <span aria-hidden="true">&lt;&nbsp;</span>
+                        <span>Newer</span>
+                    </div>
+                    {%- if shortnav == nil and next.data.title != "notitle" and  next.data.notitle == nil-%}
+                        <div>
+                            {{ next.data.title }}
+                        </div>
+                    {%- endif -%}
+                </a>
+            </div>
+        {%- endif -%}
+
+        {%- if prev  -%}
+            <div class="float-right mrl nowrap truncate right">
+                <a class="no-deco meta" href="{{ prev.url }}">
+                    <div>
+                        <span>Older</span>
+                        <span aria-hidden="true">&nbsp;&gt;</span>
+                    </div>
+                    {%- if shortnav == nil and prev.data.title != "notitle" and prev.data.notitle == nil-%}
+                        <div>
+                            {{ prev.data.title }}
+                        </div>
+                    {%- endif -%}
+                </a>
+            </div>
+        {%- endif -%}
+    </nav>
 
 {%- endif -%}

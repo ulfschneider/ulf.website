@@ -8,7 +8,7 @@
             try {
                 await navigator.share({
                     title: '',
-                    text: '{{page.title}}: \n' + location.href,
+                    text: '{{title}}: \n' + location.href,
                     url: '',
                 });
             } catch (err) {

@@ -2,7 +2,8 @@
 permalink: /ownership/
 title: Content Ownership
 subtitle: Impressum as required by German law
-nometa: true
+nodate: true
+notags: true
 ---
 Verantwortlich für den Inhalt gemäß § 55 Abs.2 RStV:
 

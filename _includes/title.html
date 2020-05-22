@@ -1,27 +1,37 @@
-{%- unless title == "notitle" or title == nil or notitle != nil -%}
-<div class="title no-indent">
-    {%- if title  -%}
-    <h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">{{ title }}</h1>
-    {%- endif -%}
+{%- if title != "notitle" and notitle == nil -%}
+    <section class="title no-indent">
+        {%- if title  -%}
+            <h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">{{ title }}</h1>
+        {%- endif -%}
 
-    {%- if page.subtitle -%}
-    <p class="mr-0 lh-2 sub-title heading-font mxw-rg">{{page.subtitle}}</p>
-    {%- endif -%}
+        {%- if subtitle -%}
+            <p class="mr-0 lh-2 sub-title heading-font mxw-rg">{{subtitle}}</p>
+        {%- endif -%}
 
-    {%- if page.refer -%}
-    <p class="mr-0 lh-2 small meta refer mxw-rg">{%- include refer.html -%}</p>
-    {%- endif -%}
+        {%- if refer -%}
+            <p class="mr-0 lh-2 small meta refer mxw-rg">{{refer}}</p>
+        {%- endif -%}
 
-    {%- if page.date and page.nodate != true -%}{%- assign hasdate = true -%}{%- else -%}{%- assign hasdate = false%}{%- endif -%}
-    {%- if page.tags != nil or page.categories != nil -%}{%- assign hasmeta = true -%}{%- else -%}{%- assign hasmeta = false%}{%- endif -%}
-    {%- if page.nostepnav == true or page.nometa == true -%}{%- assign hasmeta = false -%}{%- endif -%}
+        {%- if page.date and nodate == nil -%}
+            {%- assign hasdate = true -%}
+        {%- else -%}
+            {%- assign hasdate = false%}
+        {%- endif -%}
 
-    {%- if page.author or hasdate or hasmeta  -%}
-    <aside class="lh-2 small meta mrt-d2">
-        {%- include author-and-date.html -%}
-        {%- include categories-and-tags.html -%}        
-    </aside>
-    {%- endif -%}
+        {%- if tags != nil -%}
+            {%- assign hastags = true -%}
+        {%- endif -%}
 
-</div>
-{%- endunless -%}
+        {%- if nostepnav != nil or notags != nil -%}
+            {%- assign hastags = false -%}
+        {%- endif -%}
+
+        {%- if author or hasdate or hastags  -%}
+            <aside class="lh-2 small meta mrt-d2">
+                {%- include author-and-date.html -%} 
+                {%- include tags.html -%}
+            </aside>
+        {%- endif -%}
+
+    </section>
+{%- endif -%}

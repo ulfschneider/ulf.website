@@ -1,28 +1,38 @@
 {%- include preload-fonts.html -%}
 <link rel="manifest" href="/manifest.json">
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <meta name="theme-color" content={{site.themecolor}}>
-<link rel="stylesheet" href="/css/fonts.css" />
-<link rel="stylesheet" href="/css/compose.css" />
-<link rel="stylesheet" href="/css/prism.css" />
-<link rel="stylesheet" href="/css/customize.css" />
+<link rel="stylesheet" href="/css/fonts.css"/>
+<link rel="stylesheet" href="/css/compose.css"/>
+<link rel="stylesheet" href="/css/prism.css"/>
+<link rel="stylesheet" href="/css/customize.css"/>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width initial-scale=1">
 <title>
-    {% if page.title and page.title != "notitle" %}{{ page.title }}{% elsif page.mainnav %}{{ page.mainnav }}{% else %}{{ site.title }}{% endif %}
+    {% if title and title != "notitle" and notitle == nil %}{{ title }}
+        {% elsif mainnav %}
+        {{ mainnav }}
+    {% else %}
+        {{ site.title }}
+    {% endif %}
 </title>
 
 <script>
     if (navigator.serviceWorker) {
-        navigator.serviceWorker.register('/serviceworker.js')
+        navigator
+            .serviceWorker
+            .register('/serviceworker.js')
             .catch(error => {
                 console.error(error);
             });
         addEventListener("load", function () {
             if (navigator.serviceWorker.controller) {
-                navigator.serviceWorker.controller.postMessage({ "command": "trimCache" });
+                navigator
+                    .serviceWorker
+                    .controller
+                    .postMessage({"command": "trimCache"});
             }
         });
     }

@@ -4,6 +4,8 @@ mainnav: Articles
 title: Articles
 permalink: /articles/
 tags: articles
+notags: true
+nodate: true
 ---
 Essays about my experiences within the agile movement and the agile value system. Popular articles:
 

@@ -15,13 +15,12 @@
 	{%- endfor -%}
 
 	<ul class="reset inline-block mry-0">
-		{%- for p in collections.livePages -%}
+		{%- for p in collections.livePages -%}		
 			{%- if p.data.mainnav -%}
 				{%- unless p.url == "/" -%}
 					{%- if page.url == p.url -%}
 						<li class="inline-block meta heading-color bold">{{p.data.mainnav}}</li>
 						{%- elsif page.categories contains p.categories and page.categories.size == 1 -%}
-
 						<li class="inline-block">
 							<a class="no-deco meta heading-color bold" href="{{ p.url }}">{{p.data.mainnav}}</a>
 						</li>

@@ -27,7 +27,7 @@
 				{%- if page.notitle == true or page.title == nil or page.title == "notitle" -%}
 				{%- if page.categories != nil or page.tags != nil -%}
 				<div class="meta lh-2 inline-block bg-base-background">
-					{% include categories-and-tags.html %}
+					{% include tags.html %}
 				</div>
 				{%- endif -%}
 				{%- endif -%}

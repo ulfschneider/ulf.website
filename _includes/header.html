@@ -1,5 +1,5 @@
-{%- unless page.noheader -%}
-<header class="mrb-3 bg-base-background x breakout-r z-1 pdy-d1 lh-4 small">
-	{% include main-navigation.html %}
-</header>
-{%- endunless -%}
+{%- if noheader == nil -%}
+	<header class="mrb-3 bg-base-background x breakout-r z-1 pdy-d1 lh-4 small">
+		{% include main-navigation.html %}
+	</header>
+{%- endif -%}
