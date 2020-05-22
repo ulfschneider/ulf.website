@@ -184,6 +184,11 @@ layout: list
     }
 
     addEventListener('load', function (event) {
+        let query = getParameterByName('query');
+        let input = document.getElementById(SEARCH_QUERY_ID);
+        if (input) {
+            input.value = query;
+        }
         fetch('/post-search-index.json', {credentials: 'same-origin'})
             .then(response => {
                 return response.json()
@@ -198,16 +203,9 @@ layout: list
                 return response.json();
             })
             .then(contentIndex => {
-
                 friendlyMap = new Map();
                 for (let item of contentIndex) {
                     friendlyMap.set(item.id, item);
-                }
-
-                let query = getParameterByName('query');
-                let input = document.getElementById(SEARCH_QUERY_ID);
-                if (input) {
-                    input.value = query;
                 }
 
                 if (query) {

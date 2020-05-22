@@ -1,4 +1,4 @@
-{%- unless title == "notitle" or title == nil or notitle == true -%}
+{%- unless title == "notitle" or title == nil or notitle != nil -%}
 <div class="title no-indent">
     {%- if title  -%}
     <h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">{{ title }}</h1>

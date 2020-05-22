@@ -14,71 +14,58 @@ layout: default
     {%- assign siteYear = site.time | date: '%Y' -%}
     {%- assign indexYear = 0 -%}
 
-    {%- assign pageMeta = "" | split: ""%}
-    {%- assign pageMeta = pageMeta | push: page.tags -%}
-    {%- assign pageMeta = pageMeta | push: page.categories -%}
-    {%- assign pageMeta = pageMeta | compact | uniq -%}
-    {%- if pageMeta.size == 0 -%}
-        {%- assign pageMeta = pageMeta | push: "." -%}
-    {%- endif -%}
+    {%- assign liveContent = collections.livePosts | mustContainTag: tags | reverse %}
 
-    {%- for p in site.posts -%}
-        {%- for meta in pageMeta -%}
-            {%- assign pageYear = p.date | date: '%Y' -%}
+    {%- for p in liveContent -%}
 
-            {%- if p.tags contains meta or p.categories contains meta -%}
-                {%- assign count = count | plus: 1 -%}
+        {%- if p.url == page.url -%}
+            {%- continue -%}
+        {%- endif -%}
 
-                {%- if p.layout == "blank" -%}
-                    {%- assign target = "" -%}
-                {%- endif -%}
+        {%- assign pageYear = p.date | date: '%Y' -%}
+        {%- assign count = count | plus: 1 -%}
 
-                {%- if p.forward -%}
-                    {%- assign href = p.forward -%}
-                {%- else -%}
-                    {%- assign href = p.url | prepend: site.baseurl  -%}
-                {%- endif -%}
+        {%- assign href = p.url | prepend: site.baseurl  -%}
 
-                {%- if indexYear != pageYear -%}
-                    <time class="mry-2 fs-3 meta fw-200 block">
-                        {{pageYear}}
-                        {%- assign indexYear = pageYear -%}
-                    </time>
-                {%- endif -%}
+        {%- if indexYear != pageYear -%}
+            <time class="mry-2 fs-3 meta fw-200 block">
+                {{pageYear}}
+                {%- assign indexYear = pageYear -%}
+            </time>
+        {%- endif -%}
 
-                <article>
-                    {%- if p.title and p.title != "notitle" and p.notitle != true -%}
-                        <h2 class="mry-0">
-                            <a href="{{p.url}}" class="heading-color">{{ p.title }}</a>
-                        </h2>
-                    {%- endif -%}
-                    {%- if p.refer -%}
-                        <div class="meta small">{% include refer.html, refer: p.refer %}</div>
-                    {%- endif -%}
-
-                    <p class="inline">
-                        {%- if p.abstract -%}
-                            {{ p.abstract }}
-                            {%- elsif p.subtitle -%}
-                            {{p.subtitle}}
-                        {%- else -%}
-                            {{ p.excerpt | strip_html | truncatewords:25, "&nbsp;…"  }}
-                        {%- endif -%}
-                    </p>
-
-                    <aside class="small meta inline-block">
-                        <span aria-hidden="true">—</span>
-                        {% include author-and-date.html, author: p.author, date: p.date %}
-                    </aside>
-
-                    {%- if p.title == nil or p.title == "notitle" or p.notitle == true -%}
-                        <a class="small meta block" href="{{p.url}}">Read the entire article →</a>
-                    {%- endif -%}
-
-                </article>
-
-                {%- break -%}
+        <article>
+            {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
+                <h2 class="mry-0">
+                    <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
+                </h2>
             {%- endif -%}
-        {%- endfor -%}
+            {%- if p.data.refer -%}
+                <div class="meta small">{% include refer.html,
+                    refer: p.data.refer %}</div>
+            {%- endif -%}
+
+            <p class="inline">
+                {%- if p.data.abstract -%}
+                    {{ p.data.abstract }}
+                    {%- elsif p.data.subtitle -%}
+                    {{p.data.subtitle}}
+                {%- else -%}
+                    {{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}
+                {%- endif -%}
+            </p>
+
+            <aside class="small meta inline-block">
+                <span aria-hidden="true">—</span>
+                {% include author-and-date.html, author: p.data.author, date: p.date %}
+            </aside>
+
+            {%- if p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil-%}
+                <a class="small meta block" href="{{p.url}}">Read the entire article →</a>
+            {%- endif -%}
+
+        </article>
+
     {%- endfor -%}
+
 </div>

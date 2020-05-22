@@ -3,8 +3,7 @@ layout: list
 mainnav: Tools
 title: Tools
 permalink: /tools/
-categories: tools
-nometa: true
+tags: tools
 ---
 I build and share these tools. Beside the componentry things perhaps you want to have a quick look at:
 

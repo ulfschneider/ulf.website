@@ -12,8 +12,8 @@
 {% endif %}
 {%- endif -%}
 
-{%- if date and nodate != true%}
+{%- if date and nodate == nil %}
 <time class="no-wrap">{{ date | date: '%B %e, %Y' }}</time>
-{%- elsif page.date and page.nodate != true -%}
+{%- elsif page.date and page.nodate == nil -%}
 <time class="no-wrap">{{ page.date | date: '%B %e, %Y' }}</time>
 {%- endif -%}
