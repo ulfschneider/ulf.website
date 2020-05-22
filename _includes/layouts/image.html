@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="{{site.locale}}">
 
-<head>
-	{% include head.html %}
-	<style>
-		.image .title * {
-			line-height: var(--lh-2);
-			font-size: var(--fs-d1);
-		}
+	<head>
+		{% include head.html %}
+		<style>
+			.image .title * {
+				line-height: var(--lh-2);
+				font-size: var(--fs-d1);
+			}
 
-		.image .title .sub-title {
-			color: var(--meta-color);
-		}
-	</style>
-</head>
+			.image .title .sub-title {
+				color: var(--meta-color);
+			}
+		</style>
+	</head>
 
-<body><a id="top" tabindex="-1"></a>
-	<main class="x indent word-wrap image mrt-2">
+	<body>
+		<a id="top" tabindex="-1"></a>
+		<main class="x indent word-wrap image mrt-2">
 
-		{{ content }}
+			{{ content }}
 
-		<div class="breakout flex justify-space-between mrt-2">
-			<div class="small lh-2 mrr mxw-6">
-				{% include title.html %}
-
-				{%- if page.notitle == true or page.title == nil or page.title == "notitle" -%}
-				{%- if page.categories != nil or page.tags != nil -%}
-				<div class="meta lh-2 inline-block bg-base-background">
-					{% include tags.html %}
+			<div class="breakout flex justify-space-between mrt-2">
+				<div class="small lh-2 mrr mxw-6">
+					{% include title.html %}
 				</div>
-				{%- endif -%}
+				{%- if nostepnav == nil -%}
+					<div class="lh-2 small">
+						{% include step-navigation.html shortnav: true %}
+					</div>
 				{%- endif -%}
 			</div>
-			{%- if page.nostepnav != true -%}
-			<div class="lh-2 small">
-				{% include step-navigation.html shortnav=true %}
-			</div>
-			{%- endif -%}
-		</div>
-	</main>
+		</main>
 
-	<div class="x breakout">
-		{% include footer.html, hasmainnav: true %}
-	</div>
-	{% include fit-vids.html %}
-	{% include measure-load-time.html %}
-</body>
+		<div class="x breakout">
+			{% include footer.html hasmainnav: true %}
+		</div>
+		{% include fit-vids.html %}
+		{% include measure-load-time.html %}
+	</body>
 
 </html>
