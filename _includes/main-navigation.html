@@ -1,5 +1,5 @@
 <nav>
-	{%- for p in collections.pages -%}
+	{%- for p in collections.livePages -%}
 
 		{%- if p.data.mainnav -%}
 			{%- unless p.url != "/" -%}
@@ -15,7 +15,7 @@
 	{%- endfor -%}
 
 	<ul class="reset inline-block mry-0">
-		{%- for p in collections.pages -%}
+		{%- for p in collections.livePages -%}
 			{%- if p.data.mainnav -%}
 				{%- unless p.url == "/" -%}
 					{%- if page.url == p.url -%}
