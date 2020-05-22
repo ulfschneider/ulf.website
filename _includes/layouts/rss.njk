@@ -8,15 +8,15 @@ eleventyExcludeFromCollections: true
   <subtitle></subtitle>
   <link href="{{ site.url }}{{ permalink }}" rel="self"/>
   <link href="{{ site.url }}/"/>
-  {% if collections.posts | length %}
-    <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+  {% if collections.livePosts | length %}
+    <updated>{{ collections.livePosts | rssLastUpdatedDate }}</updated>
   {% endif %}
   <id>{{ site.url }}</id>
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
   </author>
-  {% for post in collections.posts %}
+  {% for post in collections.livePosts %}
     {% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
     <entry>
       <title>{{ post.data.title }}</title>
