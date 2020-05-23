@@ -43,50 +43,12 @@ layout: default
     <div id="image-container" class="gallery mry-2"></div>
     <button id="load-more" class="block mrx-auto mrt-3 mrb-2 width-5">Load more images</button>
 </div>
-<!-- prepare image urls of posts -->
-{%- assign imageData = "" | split: "" -%}
 
-{%- assign pageMeta = "" | split: ""%}
-{%- assign pageMeta = pageMeta | push: page.tags -%}
-{%- assign pageMeta = pageMeta | push: page.categories -%}
-{%- assign pageMeta = pageMeta | compact | uniq -%}
-{%- if pageMeta.size == 0-%}
-{%- assign pageMeta = pageMeta | push: "." -%}
-{%- endif -%}
-
-{%- for p in site.posts -%}
-{%- for meta in pageMeta -%}
-{%- if p.tags contains meta or p.categories contains meta -%}
-
-{%- assign excerpt = p.excerpt -%}
-{%- assign images = excerpt | split:"<img " -%}
-{%- assign hasImage = false -%}
-{%- for image in images -%}
-{%- if hasImage == false -%}
-{%- if image contains "src=" -%}
-{%- assign html = image | split:"/>" | first -%}
-{%- assign htmlTags = html | split:" " -%}
-
-{%- for htmlTag in htmlTags -%}
-{%- if htmlTag contains "src=" -%}
-{%- assign imgURL = htmlTag | remove: "src=" -%}
-{%- assign dataEntry = '{ "postURL":"' | append: p.url | append: '","imgURL":' | append: imgURL | append:'}' -%}
-{%- assign imageData = imageData | push: dataEntry -%}
-{%- assign hasImage = true -%}
-{%- endif -%}
-{%- endfor -%}
-
-{%- endif -%}
-{%- endif -%}
-{%- endfor -%}
-
-{%- break -%}
-{%- endif -%}
-{%- endfor -%}
-{%- endfor -%}
+{%- assign liveContent = collections.livePosts | mustContainTag: tags | reverse %}
+{%- assign imageData = collections.livePosts | mustContainTag: tags | reverse | firstImage -%}
 
 <script>
-    var imageData = [{{ imageData | compact | join: "," }}];
+    var imageData = {{ imageData | jsonify }};
     var index = getIndex();
     var increment = 10;
     var container = document.getElementById('image-container');
@@ -96,10 +58,11 @@ layout: default
         container.appendChild(article);
         let anchor = document.createElement('a');
         anchor.classList = 'no-deco';
-        anchor.href = imgData.postURL;
+        anchor.href = imgData.url;
         article.appendChild(anchor);
         let img = document.createElement('img');
-        img.src = imgData.imgURL;
+        img.src = imgData.src;
+        img.alt = imgData.alt;
         img.classList = 'fit-cover width-100'
         img.setAttribute('loading', 'lazy');
         anchor.appendChild(img);
@@ -109,19 +72,25 @@ layout: default
         let queryString = location.search;
         let params = new URLSearchParams(queryString);
         let index = parseInt(params.get("index"));
-        return index ? index : 0;
+        return index
+            ? index
+            : 0;
     }
 
-    function loadImages({ start, end }) {
-        start = start ? start : 0;
-        end = end ? end + increment : start + increment;
+    function loadImages({start, end}) {
+        start = start
+            ? start
+            : 0;
+        end = end
+            ? end + increment
+            : start + increment;
 
         for (let i = start; i < end && i < imageData.length; i++) {
             appendImage(imageData[i]);
         }
     }
 
-    loadImages({ start: 0, end: getIndex() });
+    loadImages({start: 0, end: getIndex()});
 
     let loadMore = document.getElementById('load-more');
     if (index + increment > imageData.length) {
@@ -130,10 +99,9 @@ layout: default
     loadMore.addEventListener('click', event => {
         index += increment;
         history.replaceState(null, '', location.pathname + '?index=' + index);
-        loadImages({ start: index });
+        loadImages({start: index});
         if (index + increment > imageData.length) {
             loadMore.style = 'display:none;';
         }
     });
-
 </script>

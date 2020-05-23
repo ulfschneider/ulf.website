@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: gallery
 mainnav: Journal
 title: Journal
 permalink: /journal/

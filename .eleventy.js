@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
     addLayoutAliases(eleventyConfig);
     addCollections(eleventyConfig);
     addFilters(eleventyConfig);
+    addShortCodes(eleventyConfig);
     eleventyConfig.setDataDeepMerge(true);
     eleventyConfig.setTemplateFormats([
         'md',
@@ -69,7 +70,6 @@ function addCollections(eleventyConfig) {
         return Array.from(tagSet.values()).sort();
     });
 
-
     eleventyConfig.addCollection('liveContent', collection => {
         return [
             ...collection.getFilteredByGlob('content/**').filter(liveContent)
@@ -93,10 +93,15 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter("searchindex", searchFilter);
     eleventyConfig.addFilter("map", mapFilter);
     eleventyConfig.addFilter("excerpt", excerptFilter);
+    eleventyConfig.addFilter("firstImage", firstImageFilter);
     eleventyConfig.addFilter("live", liveFilter);
     eleventyConfig.addFilter("mustContainTag", mustContainTag);
     eleventyConfig.addFilter("getPrev", getPrev);
     eleventyConfig.addFilter("getNext", getNext);
+}
+
+function addShortCodes(eleventyConfig) {
+    eleventyConfig.addShortcode("firstImage", firstImage);
 }
 
 function searchFilter(collection) {
@@ -144,7 +149,7 @@ function mustContainTag(collection, filterTags) {
 function getPrev(collection, current) {
     let passed;
     if (collection && collection.length > 1 && current) {
-        for (let item of collection) {            
+        for (let item of collection) {
             if (item.url == current.url) {
                 return passed;
             }
@@ -164,6 +169,36 @@ function getNext(collection, current) {
             if (item.url == current.url) {
                 passedCurrent = item;
             }
+        }
+    }
+}
+
+function firstImage(item) {
+    const content = item.templateContent;
+    if (content) {
+        const match = content.match(/<img\s+.*?\s+src="(.*?)"[^\>]+>/i);
+        if (match) {
+            return match[0];
+        }
+    }
+}
+
+function imageSrc(img) {
+    if (img) {
+        const match = img.match(/src="(.*?)"/i);
+        if (match) {
+            console.log(match);
+            return match[1];
+        }
+    }
+}
+
+function imageAlt(img) {
+    if (img) {
+        const match = img.match(/alt="(.*?)"/i);
+        if (match) {
+            console.log(match);
+            return match[1];
         }
     }
 }
@@ -208,3 +243,21 @@ function excerptFilter(collection) {
     }
     return result
 }
+
+function firstImageFilter(collection) {
+    let result = [];
+    for (let item of collection) {
+        let img = firstImage(item);
+        if (img) {
+            let src = imageSrc(img);
+            let alt = imageAlt(img);
+            result.push({
+                src: src,
+                alt: alt,
+                url: item.url
+            });
+        }
+    }
+    return result
+}
+

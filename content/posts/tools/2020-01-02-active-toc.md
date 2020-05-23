@@ -236,7 +236,7 @@ transformed in his bed into a horrible vermin.</p>
             touched
             it he was overcome by a cold</p>    
 </div>
-<script src="/r/active-toc.min.js"></script>
+<script src="/js/active-toc.min.js"></script>
 <script>
     ActiveToc.init({tocContainer: '#toc'});
 </script>
