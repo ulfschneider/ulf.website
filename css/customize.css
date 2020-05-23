@@ -52,6 +52,11 @@ nav ul li:last-child {
   margin-right: 0;
 }
 
+pre[class*="language-"] {
+  padding: var(--space-d2) var(--space);
+  margin: var(--vertical-rhythm) 0;
+}
+
 @media (min-width:650px) {
   img {
     max-height: 70vh;

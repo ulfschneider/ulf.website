@@ -3,7 +3,7 @@
 {%- assign prev = liveContent | getNext: page -%}
 {%- assign next = liveContent | getPrev: page -%}
 
-{%- if prev != nil or next != nil -%}
+{%- if prev or next -%}
 
     {%- if shortnav == nil -%}
         {%- assign topMargin = " mrt-1" -%}

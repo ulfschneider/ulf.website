@@ -1,19 +1,21 @@
-<button id="share-action" class="bg-neutral-1 white small pdy-0 pdx-d4 mry-d3" style="display:none;">Share</button>
-<script>
-    const shareAction = document.getElementById('share-action');
-    if (shareAction && navigator.share) {
-        shareAction.style.display = 'inline-block';
+{%- if noshare == nil -%}
+    <button id="share-action" class="bg-neutral-1 white small pdy-0 pdx-d4 mry-d3" style="display:none;">Share</button>
+    <script>
+        const shareAction = document.getElementById('share-action');
+        if (shareAction && navigator.share) {
+            shareAction.style.display = 'inline-block';
 
-        shareAction.addEventListener('click', async () => {
-            try {
-                await navigator.share({
-                    title: '',
-                    text: '{{title}}: \n' + location.href,
-                    url: '',
-                });
-            } catch (err) {
-                console.error('Error: ' + err);
-            }
-        });
-    }
-</script>
+            shareAction.addEventListener('click', async () => {
+                try {
+                    await navigator.share({
+                        title: '',
+                        text: '{{title}}',
+                        url: location.href
+                    });
+                } catch (err) {
+                    console.error('Error: ' + err);
+                }
+            });
+        }
+    </script>
+{%- endif -%}

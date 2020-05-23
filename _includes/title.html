@@ -4,11 +4,11 @@
             <h1 class="lh-2 fs-2 md:fs-4 md:lh-1 mrb-d2">{{ title }}</h1>
         {%- endif -%}
 
-        {%- if subtitle -%}
+        {%- if subtitle  -%}
             <p class="mr-0 lh-2 sub-title heading-font mxw-rg">{{subtitle}}</p>
         {%- endif -%}
 
-        {%- if refer -%}
+        {%- if refer  -%}
             <p class="mr-0 lh-2 small meta refer mxw-rg">{{refer}}</p>
         {%- endif -%}
 
@@ -18,20 +18,20 @@
             {%- assign hasdate = false%}
         {%- endif -%}
 
-        {%- if tags != nil -%}
+        {%- if tags  -%}
             {%- assign hastags = true -%}
         {%- endif -%}
 
-        {%- if nostepnav != nil or notags != nil -%}
+        {%- if nostepnav or notags  -%}
             {%- assign hastags = false -%}
         {%- endif -%}
 
         {%- if author or hasdate or hastags  -%}
             <aside class="lh-2 small meta mrt-d2">
-                {%- include author-and-date.html -%} 
+                {%- include author-and-date.html -%}
                 {%- include tags.html -%}
+                {% include share.html %}
             </aside>
         {%- endif -%}
-
     </section>
 {%- endif -%}
