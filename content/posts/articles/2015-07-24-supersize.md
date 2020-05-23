@@ -45,7 +45,7 @@ Market
 The centralized planning, disassembly, and automation of work brought us to the integration of human labor into precise production timing and to an understanding of companies as automatic production machines. Wohland and Wiemeyer explain the concept with their model of the Taylor-Tub.
 
 <figure>
-<img src="{{site.url}}/i/blog/taylor_tub.jpg" />
+<img src="/img/blog/taylor_tub.jpg" />
 <figcaption>Figure: The Taylor-Tub [Wohland and Wiemeyer 2007:23]</figcaption>
 </figure>
 
@@ -62,7 +62,7 @@ Problem class
 Any innovative endeavor will challenge knowledge workers with uncertainty about the problem space and the suitable solution space. To pick up a slightly modified Stacey Matrix, it is this uncertain complexity space where knowledge workers are at home, and that´s where agile is positioned. 
 
 <figure>
-<img src="{{site.url}}/i/blog/uncertainty.jpg" />
+<img src="/img/blog/uncertainty.jpg" />
 <figcaption>Figure: The complex problem class is characterized by uncertainty, this is the place where agile is at home</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ Process model
 Being positioned in dynamic, competitive markets that are characterized by uncertainty of both, problem space and solution space, we have to ask for a suitable process model to support and guide the workforce to achieve results. The detailed upfront planning of execution steps, the defined process model, does not bring any advantage, instead even the disadvantage of false safety and effort consumption. The waterfall process follows such a defined process model.
 
 <figure>
-<img src="{{site.url}}/i/blog/waterfall.jpg" />
+<img src="/img/blog/waterfall.jpg" />
 <figcaption>Figure: The waterfall process follows the defined process model approach</figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ Consider the following questions:
 In the agile world, we respond with the empirical process model.
 
 <figure>
-<img src="{{site.url}}/i/blog/iterations.jpg" />
+<img src="/img/blog/iterations.jpg" />
 <figcaption>Figure: The iterative process follows the empirical process model approach</figcaption>
 </figure>
 
@@ -132,7 +132,7 @@ Even the simple Scrum framework, in the wrong hands or misunderstood, so that th
 Ken Schwaber once suggested using a transition team to address the organizational change which is being demanded by the delivery units [Schwaber 2007]. 
 
 <figure>
-<img src="{{site.url}}/i/blog/transition_team.jpg"/>
+<img src="/img/blog/transition_team.jpg"/>
 <figcaption>Figure: Transition team</figcaption>
 </figure>
 
@@ -149,7 +149,7 @@ Supersize
 Scaling agile beyond the first team is the first step of scaling. Is there an end? What size can you reach or want to achieve? How long does it take? 
 
 <figure>
-<img src="{{site.url}}/i/blog/supersize.jpg"/>
+<img src="/img/blog/supersize.jpg"/>
 <figcaption>Supersize</figcaption>
 </figure>
 
@@ -160,7 +160,7 @@ The more people are included, the more communication work is imposed on the peop
 Here is the simple math: Communication lines among people grow in terms of n(n-1) (with a team size of n). By this you come to 20 communication lines for a team size of 5, 30 lines for a team size of 6 and a team with nine people will have 72 lines that need to be maintained among senders and receivers in the team. 
 
 <figure>
-<img src="{{site.url}}/i/blog/communication_lines.jpg"/>
+<img src="/img/blog/communication_lines.jpg"/>
 <figcaption>Figure: Communication lines</figcaption>
 </figure>
 

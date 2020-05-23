@@ -121,7 +121,7 @@ Content and process
 William Schneider is classifying his four core cultures by using the dimensions of *content* and *process*. *Content* is what the organization pays attention to; it has the two poles *actuality* and *possibility*. *Process*, on the other hand, describes the communication and decision-making process, which is *personal* or *impersonal*.
 
 <figure>
-<img src="{{site.url}}/i/blog/content_and_process.jpg" />
+<img src="/img/blog/content_and_process.jpg" />
 <figcaption>Figure: Content and process</figcaption>
 </figure>
 
@@ -150,7 +150,7 @@ On the other hand, in the agile movement a collaboration and cultivation culture
 Agile [[Beck et al 2001](http://agilemanifesto.org)] is often used as a paramount phrase for methods like [Scrum](http://scrumguides.org), [Kanban](https://en.wikipedia.org/wiki/Kanban_(development)), [XP](http://extremeprogramming.org) and even a value system like the Software Craftsmanship movement [[Bradbury et al 2009](http://manifesto.softwarecraftsmanship.org)] is sometimes entitled to be agile. If we take a closer look at these different approaches and map them to William Schneiders core cultures on the dimensions of *content* and *process*, some interesting insights reveal.
 
 <figure>
-<img src="{{site.url}}/i/blog/agile_and_culture.jpg" />
+<img src="/img/blog/agile_and_culture.jpg" />
 <figcaption>Figure: Agile and culture</figcaption>
 </figure>
 
@@ -175,7 +175,7 @@ Assuming the organization has a control culture, the least change and challenge 
 The next step is to correct the dysfunctions of the process. Is the cycle time to slow? Are there waiting queues at some work steps? To analyze those dysfunctions will provide insights to come up with possible improvements. Would it be of help to intensify collaboration? Is the technical expertise and competence on the desired level? This exercise is developing paths to balance the control culture towards a collaboration or competence culture.
 
 <figure>
-<img src="{{site.url}}/i/blog/balance_the_culture.jpg" />
+<img src="/img/blog/balance_the_culture.jpg" />
 <figcaption>Figure: Balance the culture</figcaption>
 </figure>
 

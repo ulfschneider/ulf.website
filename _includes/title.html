@@ -28,8 +28,8 @@
 
         {%- if author or hasdate or hastags  -%}
             <aside class="lh-2 small meta mrt-d2">
-                {%- include author-and-date.html -%}
-                {%- include tags.html -%}
+                {% include author-and-date.html %}
+                {% include tags.html %}
                 {% include share.html %}
             </aside>
         {%- endif -%}

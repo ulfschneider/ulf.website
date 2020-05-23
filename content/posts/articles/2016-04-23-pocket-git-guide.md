@@ -115,7 +115,7 @@ When inside of a local Git repository `git status` will tell you what branch you
 Versioning in Git is achieved by creating snapshots of your entire working directory. A snapshot is created with a _commit_. For files without changes, Git will maintain a reference to the previous snapshot. This means, each commit represents your entire working directory at that time, but stores only the files which have been changed. Technically speaking, Git maintains a _directed acyclic graph_ of snapshots of your work.
 
 <figure>
-<img src="{{site.url}}/i/blog/git_commits_over_time.jpg" />
+<img src="/img/blog/git_commits_over_time.jpg" />
 <figcaption>
 Figure: Git produces snapshots of your entire project
 </figcaption>
@@ -128,7 +128,7 @@ While you are working, Git divides your content into three main sections. Your w
 - Once you commit, Git will take the contents from the staging area and create a snapshot in the Git repository, which is then the committed revision of your project at the time of the commit.
 
 <figure>
-<img src="{{site.url}}/i/blog/git_areas.jpg" />
+<img src="/img/blog/git_areas.jpg" />
 <figcaption>Figure: Working – Staging – Committing</figcaption>
 </figure>
 
@@ -271,7 +271,7 @@ While you can have multiple branches in your repository, there is always exactly
 `git branch <branch-name> [<commit>]` will create a new branch for you. Choose a short descriptive branch name. The optional `<commit>` specifies a commit to start from. If you don´t give the `<commit>`, the branch will be created from the latest commit in the current branch.
 
 <figure>
-<img src="{{site.url}}/i/blog/git_new_branch.jpg" />
+<img src="/img/blog/git_new_branch.jpg" />
 <figcaption>Figure: Creating a new branch with the name 'lazyload'</figcaption>
 </figure>
 
@@ -280,17 +280,17 @@ While you can have multiple branches in your repository, there is always exactly
 Again, there is a shorthand command for creating a branch and making it the current working copy all at once: `git checkout -b <branch-name>` will create a new branch and make it the current working copy.
 
 <figure>
-<img src="{{site.url}}/i/blog/git_branch_first_commit.jpg" />
+<img src="/img/blog/git_branch_first_commit.jpg" />
 <figcaption>Figure: First commit in the 'lazyload' branch</figcaption>
 </figure>
 
 <figure>
-<img src="{{site.url}}/i/blog/git_branch_first_commit_alternate.jpg" />
+<img src="/img/blog/git_branch_first_commit_alternate.jpg" />
 <figcaption>Figure: Alternate picture for the first commit in the 'lazyload' branch</figcaption>
 </figure>
 
 <figure>
-<img src="{{site.url}}/i/blog/git_branch_multiple_commits.jpg" />
+<img src="/img/blog/git_branch_multiple_commits.jpg" />
 <figcaption>Figure: Multiple commits in the 'lazyload' branch</figcaption>
 </figure>
 
@@ -342,7 +342,7 @@ To be more precise, all commits from your source branch will be merged into your
 The simplest kind of merge is if nothing had been changed in the destination branch while you were working inside of the source branch.
 
 <figure>
-<img src="{{site.url}}/i/blog/git_fast_forward.jpg"/>
+<img src="/img/blog/git_fast_forward.jpg"/>
 <figcaption>Figure: Fast-forward merge of 'lazyload' into 'master' branch</figcaption>
 </figure>
 
@@ -351,21 +351,21 @@ In this case, any changes made in the source branch will entirely be added to th
 A _true merge_ is something different. That´s when both, the source branch and the destination branch, have been modified before merging.
 
 <figure>
-<img src="{{site.url}}/i/blog/git_true_merge.jpg"/>
+<img src="/img/blog/git_true_merge.jpg"/>
 <figcaption>Figure: 'master' and 'lazyload' have been modified – a true merge is needed</figcaption>
 </figure>
 
 A fast-forward then is no longer possible, and Git has to figure out the combined state of the content, which will lead to a so-called _merge commit_.
 
 <figure>
-<img src="{{site.url}}/i/blog/git_merge_commit.jpg" />
+<img src="/img/blog/git_merge_commit.jpg" />
 <figcaption>Figure: After a true merge of 'master' and 'lazyload' a merge commit was created</figcaption>
 </figure>
 
 Each changed file in each branch is compared. When Git identifies a line that has changed in either branch, that line is carried forward for inclusion in the destination merge.
 
 <figure>
-<img src="{{site.url}}/i/blog/git_merge_line_by_line.jpg" />
+<img src="/img/blog/git_merge_line_by_line.jpg" />
 <figcaption>Figure: A true merge goes line-by-line</figcaption>
 </figure>
 
@@ -432,7 +432,7 @@ The Git working mode is offline by default. This is nice because you don´t need
 A remote in the Git world is a physical copy of a repository. It may be on the same computer as the repository it was copied from (copying is named _cloning_ in Git) or on a different computer far away. The essential part is, you can exchange data between the two repositories and keep them synchronized. Usually, a remote repository is placed on a server which is accessible by your team. Any new teammate initially will clone the repository from the server to his or her local machine. The Git name for this remote repository is usually _origin_. The origin has nothing special and is not distinct from the local repositories on the machines of each team member, except only by convention it is used as a hub to which the team members connect to synchronize their work with all others. This will happen in a way that team members are working locally on their own computers and eventually sync with the remote repository on the hub server by _pulling_ and _pushing_ committed content.
 
 <figure>
-<img src="{{site.url}}/i/blog/git_hub.jpg" />
+<img src="/img/blog/git_hub.jpg" />
 <figcaption>Figure: Origin is a hub by convention</figcaption>
 </figure>
 
@@ -494,7 +494,7 @@ Git will automatically merge the remote changes into your local branch. In case 
 ## The big picture
 
 <figure>
-<img src="{{site.url}}/i/blog/git_big_picture.jpg" />
+<img src="/img/blog/git_big_picture.jpg" />
 <figcaption>Figure: Git commands and their fields of operation</figcaption>
 </figure>
 

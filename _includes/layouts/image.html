@@ -17,11 +17,13 @@
 
 	<body>
 		<a id="top" tabindex="-1"></a>
-		<main class="x indent word-wrap image mrt-2">
+		<div class="x breakout">
+			{% include header.html %}
+		</div>
 
-			{{ content }}
+		<main class="x indent word-wrap image">
 
-			<div class="breakout flex justify-space-between mrt-2">
+			<div class="breakout flex justify-space-between mrb-2">
 				<div class="small lh-2 mrr mxw-6">
 					{% include title.html %}
 				</div>
@@ -31,10 +33,13 @@
 					</div>
 				{%- endif -%}
 			</div>
+
+			{{ content }}
+
 		</main>
 
 		<div class="x breakout">
-			{% include footer.html hasmainnav: true %}
+			{% include footer.html %}
 		</div>
 		{% include fit-vids.html %}
 		{% include measure-load-time.html %}

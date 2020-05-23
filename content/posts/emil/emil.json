@@ -1,0 +1,4 @@
+{
+    "permalink": "/emil/{{ page.fileSlug }}/",
+    "tags": "emil"
+}

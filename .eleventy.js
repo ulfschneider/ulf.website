@@ -17,9 +17,10 @@ module.exports = function (eleventyConfig) {
         'njk'
     ]);
 
-    eleventyConfig.addPassthroughCopy('css');
-    eleventyConfig.addPassthroughCopy('fonts');
-    eleventyConfig.addPassthroughCopy('js');
+    eleventyConfig.addPassthroughCopy({ '_resources/css': 'css' });
+    eleventyConfig.addPassthroughCopy({ '_resources/fonts': 'fonts' });
+    eleventyConfig.addPassthroughCopy({ '_resources/js': 'js' });
+    eleventyConfig.addPassthroughCopy({ 'content/img': 'img' });
 
     eleventyConfig.addPassthroughCopy('*.png');
     eleventyConfig.addPassthroughCopy('*.ico');
@@ -176,7 +177,7 @@ function getNext(collection, current) {
 function firstImage(item) {
     const content = item.templateContent;
     if (content) {
-        const match = content.match(/<img\s+.*?\s+src="(.*?)"[^\>]+>/i);
+        const match = content.match(/<img\s+([^>]*)src="(.*?)"(.*?)[^>]*>/);
         if (match) {
             return match[0];
         }
@@ -185,9 +186,8 @@ function firstImage(item) {
 
 function imageSrc(img) {
     if (img) {
-        const match = img.match(/src="(.*?)"/i);
+        const match = img.match(/src="(.*?)"/);
         if (match) {
-            console.log(match);
             return match[1];
         }
     }
@@ -195,9 +195,8 @@ function imageSrc(img) {
 
 function imageAlt(img) {
     if (img) {
-        const match = img.match(/alt="(.*?)"/i);
+        const match = img.match(/alt="(.*?)"/);
         if (match) {
-            console.log(match);
             return match[1];
         }
     }

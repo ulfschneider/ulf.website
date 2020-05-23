@@ -1,0 +1,126 @@
+---
+permalink: /experiments/dfw/
+layout: none
+tags: experiments
+---
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>DFW</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        * {
+            outline: none;
+            color: #004b87;
+            font-family: 'IBM Plex Sans', sans-serif;
+            line-height: 1.62em;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 19px;
+            background: #004b87;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #004b87;
+            z-index: -1;
+        }
+
+        #search {
+            font-size: 19px;
+            padding: 0;
+            margin: 0;
+            max-width: 100%;
+            border: none;
+            border-bottom: 1px solid #004b87;
+            font-weight: 600;
+        }
+
+        .navigation {
+            background: white;
+            padding: 1.62em;
+        }
+
+        .wrapper {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .navigation h1 {
+            float: left;
+            display: inline;
+            line-height: 1em;
+            margin: 0;
+            padding: 0;
+            font-family: "Bungee";
+        }
+
+        .navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-left: 10em;
+        }
+
+        .navigation ul li {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 1em;
+        }
+
+        .navigation ul li:last-child {
+            margin: 0;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .navigation h1 {
+                float: unset;
+                display: block;
+                margin-bottom: 1em;
+            }
+            .navigation ul {
+                display:block;
+                margin: 0;                
+            }
+        }
+    </style>
+
+    <div class="navigation">
+        <div class="wrapper">
+            <h1>DFW</h1>
+            <ul>
+                <li><a href="#">Quickstart</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Support</a></li>
+                <li>Search: <input id="search" type="text" autocomplete="off" /></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+
+    <script src="/r/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', '/r/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+{
+    "permalink": "/paderborn/{{ page.fileSlug }}/",
+    "tags": "paderborn"
+}

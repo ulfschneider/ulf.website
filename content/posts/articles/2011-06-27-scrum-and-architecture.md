@@ -46,7 +46,7 @@ My impression is, both quotes are correct.
 To me, design decisions, compared to architectural decisions, are of tactical or operational nature for the solution space. Design decisions make a structure inside of the solutions space, and the architectural choices span the solution space itself. The transition between architecture and design might be flowing.
 
 <figure>
-<img src="{{site.url}}/i/blog/architecture_bridge.jpg" />
+<img src="/img/blog/architecture_bridge.jpg" />
 <figcaption>Figure: Architecture as a bridge between the problem- and the solution space. Arrows are indicating mutual influence.</figcaption>
 </figure>
 
@@ -106,7 +106,7 @@ Architecture by committee
 Don´t do it. Companywide architecture committees that are being fed with decisions from under-ordinated projects and that guard, release or reject architectural decisions are a bottleneck for the enterprise and the involved projects. The parties are blocking themselves on the search for synergy. Responsibility is being carved out of the projects into the superordinated committee where focus, involvement, competence, and understanding are not bound to the projects that need the decisions.
 
 <figure>
-<img src="{{site.url}}/i/blog/architecture_committee.jpg"/>
+<img src="/img/blog/architecture_committee.jpg"/>
 <figcaption>Figure: Architecture by committee is the guarantee for a bloated product</figcaption>
 </figure>
 
@@ -157,7 +157,7 @@ As an architect you should not jump into a project if this work can not be done,
 How important the knowledge of architectural goals are, can be seen in the following figures, that stand for different architectural goals:
 
 <figure>
-<img src="{{site.url}}/i/blog/architecture_goals.jpg" />
+<img src="/img/blog/architecture_goals.jpg" />
 <figcaption>Figure: The importance of architecture goals</figcaption>
 </figure>
 
@@ -168,7 +168,7 @@ System Context Diagram
 The System Context Diagram explains the environment of the system. The system itself will be seen as a black box. The important part is to understand the surrounding forces that affect the system with their input- and output-interfaces, system boundaries and responsibilities. Such forces are users as well as resources and other systems.
 
 <figure>
-<img src="{{site.url}}/i/blog/system_context.jpg" />
+<img src="/img/blog/system_context.jpg" />
 <figcaption>Figure: System Context Diagram. Understand the environmental forces that are affecting the system.</figcaption>
 </figure>
 
@@ -211,7 +211,7 @@ Constraining resource
 When crafting a system, the non-functional requirements, constraints and architecture goals will lead the project team to the limiting or restraining resources.
 
 <figure>
-<img src="{{site.url}}/i/blog/constraining_resource.jpg" />
+<img src="/img/blog/constraining_resource.jpg" />
 <figcaption>Figure: The constraining resource gives the key limit that determines the performance of the system</figcaption>
 </figure>
 
@@ -247,7 +247,7 @@ A User Story does not explain how to build it. That is intentional. The User Sto
 You start with a BBL diagram that contains the components you think are needed to build the Story. Draw the BBL on a flipchart or whiteboard. Now you break down the story into tasks by writing down each task on a sticky note and placing it on the component it belongs to in the BBL diagram.
 
 <figure>
-<img src="{{site.url}}/i/blog/storyboard.jpg" />
+<img src="/img/blog/storyboard.jpg" />
 <figcaption>Figure: Storyboard. The relevant tasks for a specific User Story will be visualized in the context of the components they belong to.</figcaption>
 </figure>
 

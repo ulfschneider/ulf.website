@@ -2,7 +2,7 @@
 title: The 10 Principles of Good Design
 ---
 <figure>
-<img alt="" src="/i/dieter-rams-braun.jpg" />
+<img alt="" src="/img/dieter-rams-braun.jpg" />
 <figcaption>Dieter Rams</figcaption>
 </figure>
 

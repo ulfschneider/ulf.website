@@ -33,7 +33,7 @@ The here proposed Box-Bullet-Line notation is an easy to use drop-in, that allow
 Let´s start with the basics. A line between two boxes indicates a dependency between two system components. A box is a component. In early phases, when you explore an existing system or design a new one when directions of communication are not of highest importance, the undirected dependency between components is a good starting point.
 
 <figure>
-<img src="{{site.url}}/i/blog/bbl_dependency.png" />
+<img src="/img/blog/bbl_dependency.png" />
 <figcaption>Figure: A dependency between A and B</figcaption>
 </figure>
 
@@ -42,7 +42,7 @@ Let´s start with the basics. A line between two boxes indicates a dependency be
 The directed connection from A to B has the meaning of „data flow from A to B“.
 
 <figure>
-<img src="{{site.url}}/i/blog/bbl_flow.png" />
+<img src="/img/blog/bbl_flow.png" />
 <figcaption>Figure: The directed connection between A and B models a data flow from A to B</figcaption>
 </figure>
 
@@ -51,12 +51,12 @@ The directed connection from A to B has the meaning of „data flow from A to B�
 The caller can be marked with a tiny bullet.
 
 <figure>
-<img src="{{site.url}}/i/blog/bbl_caller_push.png" />
+<img src="/img/blog/bbl_caller_push.png" />
 <figcaption>Figure: A is calling B and handing over data to B</figcaption>
 </figure>
 
 <figure>
-<img src="{{site.url}}/i/blog/bbl_caller_pull.png"/>
+<img src="/img/blog/bbl_caller_pull.png"/>
 <figcaption>Figure: B is calling A and requesting data</figcaption>
 </figure>
 
@@ -65,7 +65,7 @@ The caller can be marked with a tiny bullet.
 By using numbers beside the connections, calling sequences can be modeled.
 
 <figure>
-<img src="{{site.url}}/i/blog/bbl_caller_flow_sequence.png" />
+<img src="/img/blog/bbl_caller_flow_sequence.png" />
 <figcaption>Figure: Modeling data flow with a calling sequence</figcaption>
 </figure>
 
@@ -74,18 +74,18 @@ By using numbers beside the connections, calling sequences can be modeled.
 Synchronous and asynchronous communication can be modeled with single and doubled connections.
 
 <figure>
-<img src="{{site.url}}/i/blog/bbl_sync.png" />
+<img src="/img/blog/bbl_sync.png" />
 <figcaption>Figure: A request initiated by A, synchronous communication. If A writes first and gets a response or A reads first and writes back is not defined.</figcaption>
 </figure>
 
 <figure>
-<img src="{{site.url}}/i/blog/bbl_async.png" />
+<img src="/img/blog/bbl_async.png" />
 <figcaption>Figure: A call initiated by A, giving data to B. The asynchronous response with data from B follows.</figcaption>
 </figure>
 
 This simple Box-Bullet-Line notation can grow with your needs. For example, you can start modeling only undirected connections, add data flow by giving your relationships a direction and extend even more by adding caller indication with calling sequences later. You can also use a swim-lane structure and place the components into those lanes, to communicate tags or domains that the components belong to.
 
 <figure>
-<a href="{{site.url}}/assets/bbl.pdf"><img src="{{site.url}}/i/blog/bbl_model_natural.jpg"></a>
+<a href="{{site.url}}/assets/bbl.pdf"><img src="/img/blog/bbl_model_natural.jpg"></a>
 <figcaption>Click on the above image to get a short presentation of the BBL concepts.</figcaption>
 </figure>
