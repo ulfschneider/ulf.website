@@ -64,6 +64,20 @@ module.exports = {
         return result;
     },
 
+    removeLayout: function (collection, layout) {
+        if (!layout) {
+            return collection;
+        }
+
+        let result = [];
+        for (let item of collection) {
+            if (!item.data || item.data && item.data.layout != layout) {
+                result.push(item);
+            }
+        }
+        return result;
+    },
+
     searchIndex: function (collection) {
         return lunr(function () {
             this.ref('id');
@@ -75,6 +89,7 @@ module.exports = {
             this.field('categories');
             this.field('tags');
             this.field('content');
+
             for (let item of collection) {
                 this.add(utils.mapItem(item));
             }

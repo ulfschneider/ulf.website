@@ -85,4 +85,5 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter("mustContainTag", filters.mustContainTag);
     eleventyConfig.addFilter("getPrev", filters.getPrev);
     eleventyConfig.addFilter("getNext", filters.getNext);
+    eleventyConfig.addFilter("removeLayout", filters.removeLayout);
 }

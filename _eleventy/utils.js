@@ -58,6 +58,7 @@ module.exports = {
             abstract: item.data.abstract,
             author: item.data.author,
             refer: item.data.refer,
+            layout: item.data.layout,
             content: stripHtml(item.templateContent)
         }
     },

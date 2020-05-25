@@ -1,5 +1,10 @@
 {%- if noshare == nil -%}
-    <button id="share-action" class="small pdy-0 pdx-d4 mry-d3" style="display:none;">Share</button>
+    <style>
+        #share-action:hover {
+            color: white;
+        }
+    </style>
+    <button id="share-action" class="small pd-0 pdx-d2 bg-neutral-4 base-color" style="display:none;">Share</button>
     <script>
         const shareAction = document.getElementById('share-action');
         if (shareAction && navigator.share) {
