@@ -1,15 +1,16 @@
 const rss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const lunr = require("lunr");
-const stripHtml = require("string-strip-html");
+
 const site = require('./_data/site.js');
+const utils = require('./_eleventy/utils.js');
+const filters = require('./_eleventy/filters.js');
 
 module.exports = function (eleventyConfig) {
 
     addLayoutAliases(eleventyConfig);
     addCollections(eleventyConfig);
     addFilters(eleventyConfig);
-    addShortCodes(eleventyConfig);
+
     eleventyConfig.setDataDeepMerge(true);
     eleventyConfig.setTemplateFormats([
         'md',
@@ -45,23 +46,10 @@ function addLayoutAliases(eleventyConfig) {
     eleventyConfig.addLayoutAlias('search', 'layouts/search.html');
 }
 
-function liveContent(content) {
-    const now = new Date();
-    return content.date <= now
-        && content.data.published !== false
-        && content.data.published !== 'no'
-        && content.data.draft !== true
-        && content.data.draft !== 'yes';
-}
-
-function comparePostDate(a, b) {
-    return a.date - b.date;
-}
-
 function addCollections(eleventyConfig) {
     eleventyConfig.addCollection('allTags', collection => {
         let tagSet = new Set();
-        for (let post of collection.getAll().filter(liveContent)) {
+        for (let post of collection.getAll().filter(utils.isLiveItem)) {
             if (post.data.tags) {
                 for (let tag of post.data.tags) {
                     tagSet.add(tag);
@@ -73,190 +61,28 @@ function addCollections(eleventyConfig) {
 
     eleventyConfig.addCollection('liveContent', collection => {
         return [
-            ...collection.getFilteredByGlob('content/**').filter(liveContent)
+            ...collection.getFilteredByGlob('content/**').filter(utils.isLiveItem)
         ];
     });
     eleventyConfig.addCollection('livePages', collection => {
         return [
-            ...collection.getFilteredByGlob('content/pages/**').filter(liveContent)
+            ...collection.getFilteredByGlob('content/pages/**').filter(utils.isLiveItem)
         ];
     });
     eleventyConfig.addCollection('livePosts', collection => {
         return [
-            ...collection.getFilteredByGlob('content/posts/**').filter(liveContent)
-        ].reverse();
+            ...collection.getFilteredByGlob('content/posts/**').filter(utils.isLiveItem)
+        ];
     });
-
-
 }
 
 function addFilters(eleventyConfig) {
-    eleventyConfig.addFilter("searchindex", searchFilter);
-    eleventyConfig.addFilter("map", mapFilter);
-    eleventyConfig.addFilter("excerpt", excerptFilter);
-    eleventyConfig.addFilter("firstImage", firstImageFilter);
-    eleventyConfig.addFilter("live", liveFilter);
-    eleventyConfig.addFilter("mustContainTag", mustContainTag);
-    eleventyConfig.addFilter("getPrev", getPrev);
-    eleventyConfig.addFilter("getNext", getNext);
+    eleventyConfig.addFilter("searchIndex", filters.searchIndex);
+    eleventyConfig.addFilter("contentIndex", filters.contentIndex);
+    eleventyConfig.addFilter("excerptIndex", filters.excerptIndex);
+    eleventyConfig.addFilter("firstImage", filters.firstImage);
+    eleventyConfig.addFilter("live", filters.live);
+    eleventyConfig.addFilter("mustContainTag", filters.mustContainTag);
+    eleventyConfig.addFilter("getPrev", filters.getPrev);
+    eleventyConfig.addFilter("getNext", filters.getNext);
 }
-
-function addShortCodes(eleventyConfig) {
-    eleventyConfig.addShortcode("firstImage", firstImage);
-}
-
-function searchFilter(collection) {
-    return lunr(function () {
-        this.ref('id');
-        this.field('title', { boost: 10 });
-        this.field('subtitle', { boost: 10 });
-        this.field('abstract', { boost: 10 });
-        this.field('author');
-        this.field('refer');
-        this.field('categories');
-        this.field('tags');
-        this.field('content');
-        for (let item of mapFilter(collection)) {
-            this.add(item);
-        }
-    });
-};
-
-function liveFilter(collection) {
-    return collection ? collection.filter(liveContent) : collection;
-}
-
-function mustContainTag(collection, filterTags) {
-    let result = new Set();
-
-    if (collection && filterTags) {
-
-        if (typeof filterTags === 'string' || filterTags instanceof String) {
-            filterTags = [filterTags]; //make it an array
-        }
-
-        for (let item of collection) {
-            for (let tag of item.data.tags) {
-                if (filterTags.includes(tag)) {
-                    result.add(item);
-                    break;
-                }
-            }
-        }
-    }
-    return Array.from(result.values()).sort(comparePostDate);
-}
-
-function getPrev(collection, current) {
-    let passed;
-    if (collection && collection.length > 1 && current) {
-        for (let item of collection) {
-            if (item.url == current.url) {
-                return passed;
-            }
-            passed = item;
-        }
-    }
-}
-
-function getNext(collection, current) {
-    let passedCurrent;
-    if (collection && collection.length > 1 && current) {
-        for (let item of collection) {
-            if (passedCurrent) {
-                return item;
-            }
-
-            if (item.url == current.url) {
-                passedCurrent = item;
-            }
-        }
-    }
-}
-
-function firstImage(item) {
-    const content = item.templateContent;
-    if (content) {
-        const match = content.match(/<img\s+([^>]*)src="(.*?)"(.*?)[^>]*>/);
-        if (match) {
-            return match[0];
-        }
-    }
-}
-
-function imageSrc(img) {
-    if (img) {
-        const match = img.match(/src="(.*?)"/);
-        if (match) {
-            return match[1];
-        }
-    }
-}
-
-function imageAlt(img) {
-    if (img) {
-        const match = img.match(/alt="(.*?)"/);
-        if (match) {
-            return match[1];
-        }
-    }
-}
-
-function mapFilter(collection) {
-    let result = [];
-    for (let item of collection) {
-        result.push({
-            id: item.url,
-            title: item.data.title,
-            date: item.date,
-            subtitle: item.data.subtitle,
-            abstract: item.data.abstract,
-            author: item.data.author,
-            refer: item.data.refer,
-            content: stripHtml(item.templateContent)
-        });
-    }
-    return result;
-}
-
-function excerptFilter(collection) {
-    let result = [];
-    for (let item of collection) {
-        let excerpt = stripHtml(item.templateContent);
-        if (excerpt) {
-            excerpt = excerpt.split(' ')
-                .slice(0, 25)
-                .join(' ');
-        }
-
-        result.push({
-            id: item.url,
-            title: item.data.title,
-            date: item.date,
-            subtitle: item.data.subtitle,
-            abstract: item.data.abstract,
-            author: item.data.author,
-            refer: item.data.refer,
-            content: excerpt
-        });
-    }
-    return result
-}
-
-function firstImageFilter(collection) {
-    let result = [];
-    for (let item of collection) {
-        let img = firstImage(item);
-        if (img) {
-            let src = imageSrc(img);
-            let alt = imageAlt(img);
-            result.push({
-                src: src,
-                alt: alt,
-                url: item.url
-            });
-        }
-    }
-    return result
-}
-
