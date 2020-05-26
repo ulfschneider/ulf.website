@@ -1,7 +1,6 @@
 ---
 layout: image
 title: At the playground
-categories: emil
 ---
 <div class="breakout">
 

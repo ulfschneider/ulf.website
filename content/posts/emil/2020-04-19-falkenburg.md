@@ -1,7 +1,6 @@
 ---
 title: Falkenburg
 subtitle: Emil is deeply into witches and magic things. I promised to him, we would visit an old "witches castle," in our case Falkenburg, near Berlebeck. We had a wonderful time on that Sunday morning.
-categories: emil
 layout: image
 ---
 <div class="breakout">

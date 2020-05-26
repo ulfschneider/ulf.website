@@ -1,7 +1,6 @@
 ---
 title: Straying around
 subtitle: Still, I´m most of the day at home together with Emil. Every now and then we make a little break and stray around in Paderborn.
-categories: emil
 layout: image
 ---
 <div class="breakout">

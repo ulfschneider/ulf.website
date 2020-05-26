@@ -1,7 +1,6 @@
 ---
 title: Renaturation of the Paderborn inner city area
 subtitle: During the Corona crisis I am all day at home with Emil. Every now and then we have to breakout for a little excursion. We´ve come to enjoy the newly re-naturated area in the midst of Paderborn. Emil is jumping from pond to pond and finding secret items. The new design makes this a place to calm down. We appreciate it!
-categories: emil
 layout: image
 ---
 <div class="breakout">
