@@ -67,7 +67,7 @@ module.exports = {
     },
 
     getPrev: function (collection, current) {
-       return findNextItem(collection.reversed(), current);
+       return findNextItem(collection.reverse(), current);
     },
 
     getNext: function (collection, current) {
