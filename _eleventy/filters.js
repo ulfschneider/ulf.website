@@ -19,7 +19,7 @@ function findNextItem(collection, current) {
             }
         }
     }
-    return current;
+    return null;
 }
 
 module.exports = {

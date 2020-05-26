@@ -1,4 +1,4 @@
-{%- if nostepnav == nil -%}
+{%- if nostepnav == nil and notags == nil -%}
     {%- assign liveContent = collections.livePosts | mustNotContainLayout: "list,gallery" | mustContainTag: tags | reverse -%}
 
     {%- assign prev = liveContent | getNext: page -%}
