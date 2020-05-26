@@ -61,17 +61,23 @@ function addCollections(eleventyConfig) {
 
     eleventyConfig.addCollection('liveContent', collection => {
         return [
-            ...collection.getFilteredByGlob('content/**').filter(utils.isLiveItem)
+            ...collection.getFilteredByGlob('content/**')
+                .filter(utils.isLiveItem)
+                .sort(utils.comparePostDate)
         ];
     });
     eleventyConfig.addCollection('livePages', collection => {
         return [
-            ...collection.getFilteredByGlob('content/pages/**').filter(utils.isLiveItem)
+            ...collection.getFilteredByGlob('content/pages/**')
+                .filter(utils.isLiveItem)
+                .sort(utils.comparePostDate)
         ];
     });
     eleventyConfig.addCollection('livePosts', collection => {
         return [
-            ...collection.getFilteredByGlob('content/posts/**').filter(utils.isLiveItem)
+            ...collection.getFilteredByGlob('content/posts/**')
+                .filter(utils.isLiveItem)
+                .sort(utils.comparePostDate)
         ];
     });
 }
@@ -86,5 +92,4 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter("mustNotContainLayout", filters.mustNotContainLayout);
     eleventyConfig.addFilter("getPrev", filters.getPrev);
     eleventyConfig.addFilter("getNext", filters.getNext);
-    eleventyConfig.addFilter("removeLayout", filters.removeLayout);
 }
