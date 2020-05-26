@@ -89,7 +89,6 @@ addEventListener('activate', async event => {
 });
 
 
-//FIXME
 //the trimCache command must be sent from the onload event of 
 //the page where the service worker is registered
 //https://medium.com/@brandonrozek/limiting-the-cache-in-service-workers-revisited-f0245713e67e
@@ -368,23 +367,23 @@ async function trimCache({ cacheName, maxItems }) {
 function isValidToCache({ request, response }) {
     const url = new URL(request.url);
     if (/^\/browser-sync\//.test(url.pathname)) {
-        devlog(`Refusing to cache because of browser-sync request: ${request.url}`);
+        console.log(`Refusing to cache because of browser-sync request: ${request.url}`);
         return false;
     }
     if (request.method == 'POST') {
-        devlog(`Refusing to cache because of POST request: ${request.url}`);
+        console.log(`Refusing to cache because of POST request: ${request.url}`);
         return false;
     }
     if (request.method == 'PUT') {
-        devlog(`Refusing to cache because of PUT request: ${request.url}`);
+        console.log(`Refusing to cache because of PUT request: ${request.url}`);
         return false;
     }
     if (response.type == 'error') {
-        devlog(`Refusing to cache because of error response: ${request.url}`);
+        console.log(`Refusing to cache because of error response: ${request.url}`);
         return false;
     }
     if (response.type == 'opaque') {
-        devlog(`Refusing to cache because of opaque response: ${request.url}`);
+        console.log(`Refusing to cache because of opaque response: ${request.url}`);
         return false;
     }
     return true;
