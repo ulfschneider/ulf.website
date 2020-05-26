@@ -63,21 +63,21 @@ function addCollections(eleventyConfig) {
         return [
             ...collection.getFilteredByGlob('content/**')
                 .filter(utils.isLiveItem)
-                .sort(utils.comparePostDate)
+                .sort(utils.compareInputFileName)
         ];
     });
     eleventyConfig.addCollection('livePages', collection => {
         return [
             ...collection.getFilteredByGlob('content/pages/**')
                 .filter(utils.isLiveItem)
-                .sort(utils.comparePostDate)
+                .sort(utils.compareInputFileName)
         ];
     });
     eleventyConfig.addCollection('livePosts', collection => {
         return [
             ...collection.getFilteredByGlob('content/posts/**')
                 .filter(utils.isLiveItem)
-                .sort(utils.comparePostDate)
+                .sort(utils.compareInputFileName)
         ];
     });
 }

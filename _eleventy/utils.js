@@ -1,4 +1,5 @@
 const stripHtml = require("string-strip-html");
+const path = require("path");
 
 module.exports = {
 
@@ -65,5 +66,11 @@ module.exports = {
 
     compareItemDate: function (a, b) {
         return a.date - b.date;
+    },
+
+    compareInputFileName: function (a, b) {
+        const aFileName = path.basename(a.inputPath);
+        const bFileName = path.basename(b.inputPath);
+        return aFileName.localeCompare(bFileName);
     }
 }

@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "lunr": "^2.3.8",
+    "path": "^0.12.7",
     "string-strip-html": "^4.4.4"
   }
 }

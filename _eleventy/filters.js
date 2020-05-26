@@ -46,7 +46,7 @@ module.exports = {
                 }
             }
         }
-        return Array.from(result.values()).sort(utils.comparePostDate);
+        return Array.from(result.values()).sort(utils.compareInputFileName);
     },
 
     mustNotContainLayout: function (collection, filterLayouts) {
