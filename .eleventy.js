@@ -27,12 +27,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('*.ico');
     eleventyConfig.addPassthroughCopy('*.svg');
 
-    eleventyConfig.addPassthroughCopy("serviceworker.js");
-    eleventyConfig.addPassthroughCopy("manifest.json");
+    eleventyConfig.addPassthroughCopy('serviceworker.js');
+    eleventyConfig.addPassthroughCopy('manifest.json');
 
     eleventyConfig.addPlugin(rss);
     eleventyConfig.addPlugin(syntaxHighlight);
-
 }
 
 function addLayoutAliases(eleventyConfig) {
