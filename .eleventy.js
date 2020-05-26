@@ -18,9 +18,9 @@ module.exports = function (eleventyConfig) {
         'njk'
     ]);
 
-    eleventyConfig.addPassthroughCopy({ '_resources/css': 'css' });
-    eleventyConfig.addPassthroughCopy({ '_resources/fonts': 'fonts' });
-    eleventyConfig.addPassthroughCopy({ '_resources/js': 'js' });
+    eleventyConfig.addPassthroughCopy({ '_assets/css': 'css' });
+    eleventyConfig.addPassthroughCopy({ '_assets/fonts': 'fonts' });
+    eleventyConfig.addPassthroughCopy({ '_assets/js': 'js' });
     eleventyConfig.addPassthroughCopy({ 'content/img': 'img' });
 
     eleventyConfig.addPassthroughCopy('*.png');
