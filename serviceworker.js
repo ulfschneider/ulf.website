@@ -342,7 +342,7 @@ async function maintainExpiration({ response, maxAgeMinutes }) {
         }
     }
 
-    if (maxAgeMinutes > 0 && response.type != 'opaque' && response.type != 'error') {
+    if (maxAgeMinutes > 0 && !response.type.includes('opaque') && response.type != 'error') {
         //unfortunately, for opaque response types 
         //the expiration cannot be controlled here        
         return cloneResponse(response);
