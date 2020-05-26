@@ -2,6 +2,26 @@
 const lunr = require("lunr");
 const utils = require("./utils.js");
 
+function findNextItem(collection, current) {
+    let passedCurrent;
+    if (collection && collection.length > 1 && current) {
+        for (let item of collection) {
+            if (passedCurrent) {
+                if (item.data.nostepnav || item.data.notags) {
+                    continue;
+                } else {
+                    return item;
+                }
+            }
+
+            if (item.url == current.url) {
+                passedCurrent = item;
+            }
+        }
+    }
+    return current;
+}
+
 module.exports = {
 
     live: function (collection) {
@@ -14,7 +34,7 @@ module.exports = {
         if (collection && filterTags) {
 
             if (typeof filterTags === 'string' || filterTags instanceof String) {
-                filterTags = [filterTags]; //make it an array
+                filterTags = filterTags.split(','); //make it an array
             }
 
             for (let item of collection) {
@@ -29,51 +49,35 @@ module.exports = {
         return Array.from(result.values()).sort(utils.comparePostDate);
     },
 
-    getPrev: function (collection, current) {
-        let passed;
-        if (collection && collection.length > 1 && current) {
+    mustNotContainLayout: function (collection, filterLayouts) {
+        let result = [];
+        if (collection && filterLayouts) {
+
+            if (typeof filterLayouts === 'string' || filterLayouts instanceof String) {
+                filterLayouts = filterLayouts.split(','); //make it an array
+            }
+
             for (let item of collection) {
-                if (item.url == current.url) {
-                    return passed;
+                if (!filterLayouts.includes(item.data.layout)) {
+                    result.push(item);
                 }
-                passed = item;
             }
         }
+        return result;
+    },
+
+    getPrev: function (collection, current) {
+       return findNextItem(collection.reversed(), current);
     },
 
     getNext: function (collection, current) {
-        let passedCurrent;
-        if (collection && collection.length > 1 && current) {
-            for (let item of collection) {
-                if (passedCurrent) {
-                    return item;
-                }
-
-                if (item.url == current.url) {
-                    passedCurrent = item;
-                }
-            }
-        }
+        return findNextItem(collection, current);
     },
 
     contentIndex: function (collection) {
         let result = [];
         for (let item of collection) {
             result.push(utils.mapItem(item));
-        }
-        return result;
-    },
-
-    removeLayout: function (collection, layout) {
-        if (!layout) {
-            return collection;
-        }
-
-        let result = [];
-        for (let item of collection) {
-            if (!item.data || item.data && item.data.layout != layout) {
-                result.push(item);
-            }
         }
         return result;
     },

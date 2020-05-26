@@ -83,6 +83,7 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter("firstImage", filters.firstImage);
     eleventyConfig.addFilter("live", filters.live);
     eleventyConfig.addFilter("mustContainTag", filters.mustContainTag);
+    eleventyConfig.addFilter("mustNotContainLayout", filters.mustNotContainLayout);
     eleventyConfig.addFilter("getPrev", filters.getPrev);
     eleventyConfig.addFilter("getNext", filters.getNext);
     eleventyConfig.addFilter("removeLayout", filters.removeLayout);

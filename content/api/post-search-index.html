@@ -3,4 +3,4 @@ permalink: /post-search-index.json
 eleventyExcludeFromCollections: true
 layout: none
 ---
-{{ collections.livePosts | removeLayout: "image" | removeLayout: "gallery" | searchIndex | dump | safe }}
+{{ collections.liveContent | mustNotContainLayout: "list,image,gallery" | searchIndex | dump | safe }}

@@ -1,10 +1,10 @@
 {%- if tags and notags == nil and nostepnav == nil -%}
-    <span> in </span>
+    <span>in</span>
     <nav class="meta inline-block lh-1">
         {%- for tag in tags -%}
             <ul class="reset mry-0 inline ">
                 <li class="inline">
-                    <a class="meta no-deco" href="/{{tag}}/">{{tag}}</a>
+                    <a class="meta no-deco" href="/{{tag}}/">#{{tag}}</a>
                 </li>
             </ul>
         {%- endfor -%}
