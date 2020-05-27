@@ -62,6 +62,7 @@ module.exports = {
                     result.push(item);
                 }
             }
+            return result;
         }
         return collection;
     },
