@@ -9,13 +9,11 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
-	text-shadow: 0 1px white;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -27,45 +25,13 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
-	text-shadow: none;
-}
-
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
-	text-shadow: none;
-}
-
-@media print {
-
-	code[class*="language-"],
-	pre[class*="language-"] {
-		text-shadow: none;
-	}
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
-}
-
-:not(pre)>code[class*="language-"],
-pre[class*="language-"] {
-	background: var(--pre-background);
-}
 
 /* Inline code */
 :not(pre)>code[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;
+	background: var(--pre-background);
 }
 
 .token.comment,

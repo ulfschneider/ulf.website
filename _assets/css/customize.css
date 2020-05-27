@@ -58,11 +58,6 @@ nav ul li:last-child {
   margin-right: 0;
 }
 
-pre[class*="language-"] {
-  padding: var(--space-d2) 0;
-  margin: var(--vertical-rhythm) 0;
-}
-
 
 @media (any-pointer: coarse) {
   nav {
