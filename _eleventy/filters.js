@@ -63,7 +63,7 @@ module.exports = {
                 }
             }
         }
-        return result;
+        return collection;
     },
 
     getPrev: function (collection, current) {

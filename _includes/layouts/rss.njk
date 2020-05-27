@@ -1,5 +1,6 @@
 ---
 permalink: /rss.xml
+excludeLayouts: ""
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -7,15 +8,15 @@ permalink: /rss.xml
   <subtitle></subtitle>
   <link href="{{ site.url }}{{ site.rss }}" rel="self"/>
   <link href="{{ site.url }}/"/>
-  {% if collections.livePosts | mustNotContainLayout("list,image,gallery") | length %}
-    <updated>{{ collections.livePosts | mustNotContainLayout("list,image,gallery") | rssLastUpdatedDate }}</updated>
+  {% if collections.livePosts | mustNotContainLayout(excludeLayouts) | length %}
+    <updated>{{ collections.livePosts | mustNotContainLayout(excludeLayouts) | rssLastUpdatedDate }}</updated>
   {% endif %}
   <id>{{ site.url }}</id>
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
   </author>
-  {% for post in collections.livePosts | mustNotContainLayout("list,image,gallery") %}
+  {% for post in collections.livePosts | mustNotContainLayout(excludeLayouts) %}
     {% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
     <entry>
       <title>{{ post.data.title }}</title>
