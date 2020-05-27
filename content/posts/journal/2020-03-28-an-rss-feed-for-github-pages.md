@@ -8,7 +8,7 @@ I´m building my blog with Jekyll, and hosting it via GitHub Pages. Out of the b
 
 <figure>
 <figcaption>_config.yml</figcaption>
-{% highlight liquid %}
+{% highlight yml %}
 plugins:
   – jekyll-feed
 {% endhighlight %}
@@ -32,7 +32,7 @@ For each feed you want to publish, you have to create a markdown file inside of 
 
 <figure>
 <figcaption>_pages/feed.md</figcaption>
-{% highlight liquid %}
+{% highlight yml %}
 ---
 layout: rssfeed
 permalink: /feed.xml/
@@ -49,7 +49,7 @@ The filtering of posts is not only working for categories. You can also filter f
 
 <figure>
 <figcaption>_pages/feed.md</figcaption>
-{% highlight liquid %}
+{% highlight yml %}
 ---
 layout: rssfeed
 permalink: /feed.xml/
@@ -62,7 +62,7 @@ A logical OR filter combination of categories and tags is in the form:
 
 <figure>
 <figcaption>_pages/feed.md</figcaption>
-{% highlight liquid %}
+{% highlight yml %}
 ---
 layout: rssfeed
 permalink: /feed.xml/
@@ -129,7 +129,7 @@ In the above <code>feed.md</code> file, a layout named <code>rssfeed</code> is r
 
 <figure class="breakout-wide">
 <figcaption>_layouts/rssfeed.html</figcaption>
-{% highlight liquid %}
+{% highlight markup %}
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>

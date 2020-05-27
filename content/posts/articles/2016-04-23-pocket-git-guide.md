@@ -74,10 +74,12 @@ Though not mandatory, for an improved Git experience in the shell, I like to hav
 - The credential helper to cache my username and password, so I don´t have to provide it over and over again when using the https port while connecting to Git servers. See [Caching Your Git Password](https://help.github.com/articles/caching-your-github-password-in-git/) for installation advice.
 - Bash Git Completion for an improved command prompt and command completion with the tab key. Follow [Install Bash Git Completion](https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion) to get it set up (it includes a Git installation via homebrew, but you won´t need that one if you already installed GitHub Desktop like mentioned before). In addition to the explanations given, put the following lines to your `.bash_profile` to improve your command prompt:
 
-<pre>export GIT_PS1_SHOWDIRTYSTATE=true
+{% highlight shell %}
+export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
-PS1='\u@\h \W$(__git_ps1 " (%s)")\$ '</pre>
+PS1='\u@\h \W$(__git_ps1 " (%s)")\$ '
+{% endhighlight %}
 
 ## Get Git on Windows
 
@@ -91,8 +93,10 @@ You can use a slick GUI client on top of Git, like for example [Tower](https://w
 
 ## Tell Git who you are
 
-<pre>git config [--global] user.name ["your name or user name"]
-git config [--global] user.email ["your email address"]</pre>
+{% highlight git %}
+git config [--global] user.name ["your name or user name"]
+git config [--global] user.email ["your email address"]
+{% endhighlight %}
 
 Use the `--global` option to tell Git that the given configuration will be the default for all of your projects on your computer. After these settings have been made, your user data will be added to your commits. When you then push commits to a shared server, your name and email address will also appear on that server.
 
@@ -227,8 +231,10 @@ To delete a file from the working copy and the staging index, use `git rm <paths
 
 If you rename a file in your command shell with `mv a.txt b.txt`, it will produce a similar situation as if you would remove a file with just the shell command `rm a.txt` and creating a new file `b.txt`. Git would still try to keep track of `a.txt`. To fix this, you would have to
 
-<pre>git rm a.txt
-git add b.txt</pre>
+{% highlight git %}
+git rm a.txt
+git add b.txt
+{% endhighlight %}
 
 Or, use the suitable Git command right from the start: `git mv a.txt b.txt` which can be generalized to `git mv <current-path> <new-path>`
 
@@ -244,11 +250,13 @@ you can specify patterns inside of the `.gitignore` file to exclude these from G
 
 An example of the patterns your `.gitignore` may contain
 
-<pre>*.a
+{% highlight git %}
+*.a
 build/
 doc/*.txt
 doc/**/*.txt
-!doc/todo.txt</pre>
+!doc/todo.txt
+{% endhighlight %}
 
 The meaning of the patterns:
 
@@ -298,12 +306,13 @@ Again, there is a shorthand command for creating a branch and making it the curr
 
 Remote tracking branches are all branches from your remote server (please refer to [Working with remotes to share with a team](#working-with-remotes-to-share-with-a-team)) which came with your most recent `git fetch` or `git pull` into your local repository (so they are called remote tracking, but indeed they are stored in your local repository). They are used to connect your work with a remote repository. Whenever you call `get status` and get a result like
 
-<pre>Your branch is ahead of 'origin/&lt;branch-name>' by 1 commit.
-  (use "git push" to publish your local commits)</pre>
+{% highlight git %}
+Your branch is ahead of 'origin/<branch-name>' by 1 commit.
+  (use "git push" to publish your local commits){% endhighlight %}
 
 Git has figured out a difference between your local branch and its counterpart, the remote tracking branch.
 
-Remote tracking branches are named _origin/&lt;branch-name&gt;_. Don´t checkout such a branch via `git checkout origin/<branch-name>` – instead, do `git checkout <branch-name>` to make the remote tracking branch a local branch.
+Remote tracking branches are named _origin/<branch-name>_. Don´t checkout such a branch via `git checkout origin/<branch-name>` – instead, do `git checkout <branch-name>` to make the remote tracking branch a local branch.
 
 To see the history of commits in a branch-oriented tree format, use `git log --graph --oneline`.
 
@@ -329,13 +338,13 @@ Sometimes the work which has been done in a branch will be thrown away. You dele
 
 To merge any branch into your master branch, you have to
 
-<pre>git checkout master
-git merge &lt;source-branch-name></pre>
+{% highlight git %}git checkout master
+git merge <source-branch-name>{% endhighlight %}
 
 The first command will bring you into the master branch; the second command will pull in the changes from the source branch into the master branch. The principle is always the same – make the branch into which you want to merge the working copy and then pull changes from any other branch into your working copy by
 
-<pre>git checkout &lt;destination-branch-name>
-git merge &lt;source-branch-name></pre>
+{% highlight git %}git checkout <destination-branch-name>
+git merge <source-branch-name>{% endhighlight %}
 
 To be more precise, all commits from your source branch will be merged into your working copy, which is the checked out branch.
 
@@ -375,16 +384,20 @@ Unlike a regular commit, which has one parent commit, a merge commit has two par
 
 Now, when two modified lines of the same file are overlapping during a merge, a _merge conflict_ occurs. Git can not automatically solve this conflict. Instead, Git indicate the conflict in the console
 
-<pre>CONFLICT (content): Merge conflict in &lt;conflicting-file-name-in-destination-branch>
-Automatic merge failed; fix conflicts and then commit the result.</pre>
+{% highlight git %}
+CONFLICT (content): Merge conflict in <conflicting-file-name-in-destination-branch>
+Automatic merge failed; fix conflicts and then commit the result.
+{% endhighlight %}
 
 and put a _conflict marker_ into the file of the destination branch, indicating the conflicting lines.
 
-<pre><<<<<<< HEAD
-  &lt;conflicting content line in destination-branch (the current working copy)>
+{% highlight git %}
+<<<<<<< HEAD
+  <conflicting content line in destination-branch (the current working copy)>
 =======
-  &lt;conflicting content line in source-branch>
->>>>>>> &lt;destination-branch-name></pre>
+  <conflicting content line in source-branch>
+>>>>>>> <destination-branch-name>
+{% endhighlight %}
 
 To resolve the conflict, this entire section, including the angle brackets, needs to be edited and refactored into the final version you want to see in the file. After that, you can commit the merge with `commit -am "your merge commit message"`.
 
@@ -396,8 +409,8 @@ A rename of the current local branch can be achieved by `git branch -m <new-bran
 
 To have the renamed branch on the server, do
 
-<pre>git push origin &lt;new-branch-name>
-git push origin --delete &lt;old-branch-name></pre>
+{% highlight git %}git push origin <new-branch-name>
+git push origin --delete <old-branch-name>{% endhighlight %}
 
 the second push with the `--delete` option will remove the old branch from the remote.
 
@@ -407,7 +420,7 @@ The `git checkout` can not only be used to checkout an entire branch to drive fu
 
 `git checkout <commit hash>` will set your working directory into the state of the commit referred to with the commit hash (the code you see for each entry in the `git log`, something like c04ff32). You are working then in the so-called _detached HEAD_ state. Git will inform you about _detached HEAD_ with the following output:
 
-<pre>$ git checkout c04ff32
+{% highlight git %}$ git checkout c04ff32
 Note: checking out 'c04ff32'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
@@ -417,9 +430,9 @@ state without impacting any branches by performing another checkout.
 If you want to create a new branch to retain commits you create, you may
 do so (now or later) by using -b with the checkout command again. Example:
 
-  git checkout -b &lt;new-branch-name>
+  git checkout -b <new-branch-name>
 
-HEAD is now at c04ff32... New image for git committing over time</pre>
+HEAD is now at c04ff32... New image for git committing over time{% endhighlight %}
 
 Another way to use `git checkout` is to use it for files.
 
@@ -448,24 +461,24 @@ On your local machine move to the folder under which the remote repository shoul
 
 `<repo>` is the path to the remote repository and has one of the following structures, each standing for a different protocol:
 
-<pre>/path/to/repo.git
+{% highlight git %}/path/to/repo.git
 ssh://[user@]host.xz[:port]/path/to/repo.git
 git://host.xz[:port]/path/to/repo.git
-http[s]://host.xz[:port]/path/to/repo.git</pre>
+http[s]://host.xz[:port]/path/to/repo.git{% endhighlight %}
 
 The first protocol is the _local_ protocol. This is useful if the remote repository will reside on a shared filesystem to which every team member has access. The other protocols are obviously _ssh, git_ and _http_. To learn more about these, please refer to ["Git on the server – the protocols"](https://git-scm.com/book/tr/v2/Git-on-the-Server-The-Protocols).
 
 Sometimes you try to access a server via https, and the server is using a self-signed certificate. Git won´t accept this certificate but if you are sure about the server, for example, because the server is located in your local intranet, one possible solution is the following configuration in Git:
 
-<pre>cd /path/to/your/repo
-git config http.sslVerify false</pre>
+{% highlight git %}cd /path/to/your/repo
+git config http.sslVerify false{% endhighlight %}
 
 As a global setting for your entire Git: `git config --global http.sslVerify false`.
 
 Once you have cloned the remote to your computer, Git already configured the _origin_ for your project. You can check that by
 
-<pre>cd /path/to/parent/&lt;repo>
-git remote -v</pre>
+{% highlight git %}cd /path/to/parent/<repo>
+git remote -v{% endhighlight %}
 
 which will display the _fetch_ and _push_ addresses being bound to the symbolic name _origin_.
 
@@ -503,137 +516,137 @@ Git will automatically merge the remote changes into your local branch. In case 
 The following list is by far not complete. Though I found myself using these commands and options most often. For a complete list please refer to [git-scm.com/docs/](https://git-scm.com/docs/).
 
 <h3>Create new local repo</h3>
-<pre>cd /path/to/your/prj/
-git init</pre>
+{% highlight git %}cd /path/to/your/prj/
+git init{% endhighlight %}
 
 <h3>Copy existing repo</h3>
-<pre>cd /path/to/parent/
-git clone &lt;repo&gt; [&lt;new-folder-name&gt;]</pre>
+{% highlight git %}cd /path/to/parent/
+git clone <repo> [<new-folder-name>]{% endhighlight %}
 
 Where <code>&lt;repo&gt;</code> is one of
 
-<pre>/path/to/repo.git
+{% highlight git %}/path/to/repo.git
 ssh://[user@]host.xz[:port]/path/to/repo.git
 git://host.xz[:port]/path/to/repo.git
-http[s]://host.xz[:port]/path/to/repo.git</pre>
+http[s]://host.xz[:port]/path/to/repo.git{% endhighlight %}
 
 Watch out 
 
-<pre>git config [--global] http.sslVerify false</pre>
+{% highlight git %}git config [--global] http.sslVerify false{% endhighlight %}
 as one possible solution in case Git doesn´t allow you to connect to a repo via https.
 
 
 <h3>Status of repo</h3>
-<pre>git status</pre>
+{% highlight git %}git status{% endhighlight %}
 
 <h3>Stage content</h3>
-<pre>git add &lt;pathspec&gt;</pre>
+{% highlight git %}git add <pathspec>{% endhighlight %}
 
 or
 
-<pre>git add --all</pre>
+{% highlight git %}git add --all{% endhighlight %}
 
 to un-stage, use
 
-<pre>git reset &lt;pathspec&gt;</pre>
+{% highlight git %}git reset <pathspec>{% endhighlight %}
 
 <h3>Removing files which have not been staged</h3>
-<pre>git clean [-ifd]</pre>
+{% highlight git %}git clean [-ifd]{% endhighlight %}
 
 <h3>Commit content</h3>
-<pre>git commit [-a] [-m "your commit message"]</pre>
+{% highlight git %}git commit [-a] [-m "your commit message"]{% endhighlight %}
 
 where <code>-a</code> will stage all modified and deleted content and <code>-m</code> indicates the commit message, alternatively
 
-<pre>git commit -am "your commit message"</pre>
+{% highlight git %}git commit -am "your commit message"{% endhighlight %}
 
 <h3>See history of commits</h3>
-<pre>git log [--oneline] [--pretty] [&lt;branch-name&gt;]</pre>
+{% highlight git %}git log [--oneline] [--pretty] [<branch-name>]{% endhighlight %}
 
 <h3>Remove file</h3>
-<pre>git rm &lt;pathspec&gt;</pre>
+{% highlight git %}git rm <pathspec>{% endhighlight %}
 
 <h3>Rename file</h3>
-<pre>git mv &lt;current-path&gt; &lt;new-path&gt;</pre>
+{% highlight git %}git mv <current-path> <new-path>{% endhighlight %}
 
 <h3>Ignore file</h3>
 
 Use one pattern per line in .gitignore file
-<pre>*.a
+{% highlight git %}*.a
 build/
 doc/*.txt
 doc/**/*.txt
-!doc/todo.txt</pre>
+!doc/todo.txt{% endhighlight %}
 
 <h3>See what branch you are on</h3>
-<pre>git branch [-a|-r]</pre>
+{% highlight git %}git branch [-a|-r]{% endhighlight %}
 
 <h3>Create a branch</h3>
-<pre>git branch &lt;branch-name&gt; [&lt;commit&gt;]</pre>
+{% highlight git %}git branch <branch-name> [<commit>]{% endhighlight %}
 
 or
 
-<pre>git checkout -b &lt;branch-name&gt;</pre>
+{% highlight git %}git checkout -b <branch-name>{% endhighlight %}
 
 to create and checkout the branch.
 
 <h3>Checkout a branch</h3>
-<pre>git checkout &lt;branch-name&gt;</pre>
+{% highlight git %}git checkout <branch-name>{% endhighlight %}
 
 <h3>Compare changes</h3>
-<pre>git diff [--stat] [&lt;branch-name or commit&gt;]
-git diff &lt;older-commit&gt; &lt;newer-commit&gt;
-</pre>
+{% highlight git %}git diff [--stat] [<branch-name or commit>]
+git diff <older-commit> <newer-commit>
+{% endhighlight %}
 
 <h3>Merge</h3>
-<pre>git checkout &lt;destination-branch-name&gt;
-git merge &lt;source-branch-name&gt;
-</pre>
+{% highlight git %}git checkout <destination-branch-name>
+git merge <source-branch-name>
+{% endhighlight %}
 
 <h3>Rename a branch</h3>
-<pre>git -m &lt;branch-name&gt;</pre>
+{% highlight git %}git -m <branch-name>{% endhighlight %}
 
 <h3>Delete a branch</h3>
-<pre>git -d &lt;branch-name&gt;</pre>
+{% highlight git %}git -d <branch-name>{% endhighlight %}
 
 <h3>Activate an older commit</h3>
-<pre>git checkout &lt;commit-hash&gt;</pre>
+{% highlight git %}git checkout <commit-hash>{% endhighlight %}
 
 <h3>Discard file changes</h3>
-<pre>git checkout &lt;pathspec&gt;</pre>
+{% highlight git %}git checkout <pathspec>{% endhighlight %}
 
 <h3>Push to server</h3>
-<pre>git push [-u] &lt;remote&gt; &lt;remote-branch-name&gt;</pre>
+{% highlight git %}git push [-u] <remote> <remote-branch-name>{% endhighlight %}
 
 to push from current branch to remote branch, where <code>-u</code> can be used once to track the remote branch from the current branch. After setting the upstream with <code>-u</code>, it can be pushed and pulled from the current branch without specifying <code>&lt;remote&gt;</code> and <code>&lt;remote-branch-name&gt;</code>.
 
 <h3>Pull from server</h3>
-<pre>git pull &lt;remote&gt; &lt;remote-branch-name&gt;</pre>
+{% highlight git %}git pull <remote> <remote-branch-name>{% endhighlight %}
 
 to pull from remote branch into current branch. If remote branch tracking has been activated before via <code>-u</code> in a <code>git push</code>, it can be pulled from the remote branch without specifying <code>&lt;remote&gt;</code> and <code>&lt;remote-branch-name&gt;</code>.
 
 <h3>Tell Git who you are</h3>
-<pre>git config [--global] user.name ["your name or user name"]
-git config [--global] user.email ["your email address"]</pre>
+{% highlight git %}git config [--global] user.name ["your name or user name"]
+git config [--global] user.email ["your email address"]{% endhighlight %}
 
 <h3>Display your Git config</h3>
-<pre>git config --list</pre>
+{% highlight git %}git config --list{% endhighlight %}
 
 <h3>Edit your Git config file</h3>
-<pre>git config [--global] --edit</pre>
+{% highlight git %}git config [--global] --edit{% endhighlight %}
 
 <h3>Configure your editor</h3>
 
 Set your editor
 
-<pre>git config --global core.editor &lt;editor-name&gt;</pre>
+{% highlight git %}git config --global core.editor <editor-name>{% endhighlight %}
 
 Display your current editor setting
 
-<pre>git config core.editor</pre>
+{% highlight git %}git config core.editor{% endhighlight %}
 
 <h3>Let Git accept your self-signed certificate</h3>
-<pre>git config [--global] http.sslVerify false</pre>
+{% highlight git %}git config [--global] http.sslVerify false{% endhighlight %}
 
 ## References
 

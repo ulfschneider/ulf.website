@@ -1,67 +1,59 @@
 :root {
-  --font-family: "IBM Plex Serif", Georgia, serif;
-  --heading-font-family: "IBM Plex Sans", sans-serif;
-  --form-font-family: "IBM Plex Sans", sans-serif;
-  --meta-font-family: "IBM Plex Sans", sans-serif;
-  --mono-font-family: "IBM Plex Mono", monospace;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-  --heading-letter-spacing: 0;
-  --heading-color: black;
-  --fs-mono: 0.8rem;
-
-  --fs-h1: var(--fs-4);
-  --lh-h1: 1.25em;
-  --mrt-h1: 0em;
-  --mrb-h1: 0;
-
-  --mrt-h2: var(--space-1);
-  --mrt-h3: var(--space-1);
-
-  --mrt-figure: var(--space-2);
-  --mrb-figure: var(--space-2);
-  --mrt-blockquote: var(--space-2);
-  --mrb-blockquote: var(--space-2);
-
-  --fs-h2: 1rem;
-  --lh-h2: 1.62em;
-
-  --fs-h3: 1rem;
-  --lh-h3: 1.62em;
-
-  --heading-font-weight: 700;
-  --pre-background: var(--neutral-5);
+    --font-family: "IBM Plex Serif", Georgia, serif;
+    --heading-font-family: "IBM Plex Sans", sans-serif;
+    --form-font-family: "IBM Plex Sans", sans-serif;
+    --meta-font-family: "IBM Plex Sans", sans-serif;
+    --mono-font-family: "IBM Plex Mono", monospace;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --heading-letter-spacing: 0;
+    --heading-color: black;
+    --fs-mono: 0.8rem;
+    --fs-h1: var(--fs-4);
+    --lh-h1: 1.25em;
+    --mrt-h1: 0em;
+    --mrb-h1: 0;
+    --mrt-h2: var(--space-1);
+    --mrt-h3: var(--space-1);
+    --mrt-figure: var(--space-2);
+    --mrb-figure: var(--space-2);
+    --mrt-blockquote: var(--space-2);
+    --mrb-blockquote: var(--space-2);
+    --fs-h2: 1rem;
+    --lh-h2: 1.62em;
+    --fs-h3: 1rem;
+    --lh-h3: 1.62em;
+    --heading-font-weight: 700;
+    --pre-background: var(--neutral-5);
 }
 
 img {
-  display:block;
-  margin-left:  auto;
-  margin-right: auto;
-} 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 figure img {
-  margin-left: unset;
-  margin-right: unset;
+    margin-left: unset;
+    margin-right: unset;
 }
 
 @media (min-width:650px) {
-  img {
-    max-height: 70vh;
-  }
+    img {
+        max-height: 70vh;
+    }
 }
 
 nav ul li {
-  margin-right: var(--space-d1);
+    margin-right: var(--space-d1);
 }
 
 nav ul li:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
-
 
 @media (any-pointer: coarse) {
-  nav {
-    line-height: var(--space-2);
-  }
+    nav {
+        line-height: var(--space-2);
+    }
 }
-
