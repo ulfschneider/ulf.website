@@ -59,7 +59,7 @@ nav ul li:last-child {
 }
 
 pre[class*="language-"] {
-  padding: var(--space-d2) var(--space);
+  padding: var(--space-d2) 0;
   margin: var(--vertical-rhythm) 0;
 }
 
