@@ -25,6 +25,9 @@
     --lh-h3: 1.62em;
     --heading-font-weight: 700;
     --pre-background: var(--neutral-5);
+    --accent-three-h: 98.1;
+    --accent-three-s: 100%;
+    --accent-three-l: 42.9%;
 }
 
 img {
