@@ -68,7 +68,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: var(--accent-three-d1);
+    color: var(--accent-three-d2);
     /* #690;*/
 }
 
