@@ -335,7 +335,7 @@ async function maintainExpiration({ response, maxAgeMinutes }) {
                 headers: headers ? headers : response.headers
             });
         } catch (error) {
-            console.error((response ? response.url + ' ' + response.status + '/' + response.statusText + ': ' : '') + error);
+            console.error((response ? response.url + ' status ' + response.status + ': ' : '') + error);
             return response;
         }
     }
