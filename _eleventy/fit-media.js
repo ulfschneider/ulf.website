@@ -26,7 +26,6 @@ const fitVid = function (md) {
                         iframe.removeAttribute('height');
                         iframe.removeAttribute('width');
                         iframe.setAttribute('style', 'position:absolute; top:0; left:0; width:100%; height:100%;');
-                        iframe.setAttribute('loading', 'lazy');
                         const padding = height / width * 100 + '%';
                         iframe.set_content(`<div style="position:relative; width:100%; height:0%; padding-bottom:${padding};">${iframe.toString()}</div>`);
                     }
@@ -81,7 +80,7 @@ const fitImg = function (md) {
 
 const fitMedia = function (md) {
     fitVid(md);
-    fitImg(md);
+    //fitImg(md);
 }
 
 module.exports = {
