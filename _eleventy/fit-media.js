@@ -26,18 +26,18 @@ const fitVid = function (md) {
                         iframe.removeAttribute('height');
                         iframe.removeAttribute('width');
                         iframe.setAttribute('style', 'position:absolute; top:0; left:0; width:100%; height:100%;');
+                        iframe.setAttribute('loading', 'lazy');
                         const padding = height / width * 100 + '%';
-                        iframe.set_content(`<div style="position:relative; width:100%; height:0%; padding-bottom:${padding};">${iframe.toString()}</div>`);
+                        token.content = token.content.replace(orig, `<div style="position:relative; width:100%; height:0%; padding-bottom:${padding};">${iframe.toString()}</div>`);
                     }
                 }
-                token.content = html.toString();
             });
     });
 }
 
 const fitImg = function (md) {
 
-    //cover images insode of html blocks
+    //get html blocks
     md.core.ruler.push('fit-img', state => {
 
         const tokens = state.tokens;
@@ -58,17 +58,19 @@ const fitImg = function (md) {
             });
     });
 
-    //cover markdown rendered images
+    //get markdown
     let defaultRender = md.renderer.rules.image;
     md.renderer.rules.image = function (tokens, idx, options, env, self) {
         let aIndex = tokens[idx].attrIndex('loading');
 
-
+        
         if (aIndex < 0) {
             tokens[idx].attrPush(['loading', 'lazy']); // add new attribute
         } else {
             tokens[idx].attrs[aIndex][1] = 'lazy';    // replace value of existing attr
         }
+
+        console.log(tokens[idx]);
 
         // pass token to default renderer.
         return defaultRender(tokens, idx, options, env, self);
