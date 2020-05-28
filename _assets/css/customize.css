@@ -55,6 +55,12 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
+.anchor {
+    color: var(--neutral);
+    text-decoration: none;
+    font-weight: normal;
+}
+
 @media (any-pointer: coarse) {
     nav {
         line-height: var(--space-2);

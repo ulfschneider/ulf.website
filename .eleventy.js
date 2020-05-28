@@ -1,5 +1,7 @@
 const rss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
 
 const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
@@ -10,6 +12,7 @@ module.exports = function (eleventyConfig) {
     addLayoutAliases(eleventyConfig);
     addCollections(eleventyConfig);
     addFilters(eleventyConfig);
+    addMarkdownLib(eleventyConfig);
 
     eleventyConfig.setDataDeepMerge(true);
     eleventyConfig.setTemplateFormats([
@@ -32,6 +35,20 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPlugin(rss);
     eleventyConfig.addPlugin(syntaxHighlight);
+}
+
+function addMarkdownLib(eleventyConfig) {
+        const mdlib = markdownIt({
+            html: true,
+            breaks: true,
+            linkify: true,
+            typographer: true
+        }).use(markdownItAnchor, {
+            permalink: true,
+            permalinkClass: 'anchor',
+            permalinkSymbol: '#'
+        })
+        eleventyConfig.setLibrary('md', mdlib)
 }
 
 function addLayoutAliases(eleventyConfig) {
