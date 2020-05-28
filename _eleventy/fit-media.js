@@ -70,8 +70,6 @@ const fitImg = function (md) {
             tokens[idx].attrs[aIndex][1] = 'lazy';    // replace value of existing attr
         }
 
-        console.log(tokens[idx]);
-
         // pass token to default renderer.
         return defaultRender(tokens, idx, options, env, self);
     };

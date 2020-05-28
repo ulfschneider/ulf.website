@@ -19,12 +19,12 @@ Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](h
 
 <div class="breakout-wide-r x-12">
 <figure class="rg:xx-6 mrb-0">
-<img class="w-100" src="/img/2020-03-26-new-york-times.jpg" alt=""/>
+<img src="/img/2020-03-26-new-york-times.jpg" alt=""/>
 <figcaption>A handwritten design of the New York Times front page for March 27th, 2020. Source of this image is <a href="https://www.printmag.com/daily-heller/covid-19-new-york-times-front-pages/">printmag</a>.</figcaption>
 </figure>
 
 <figure class="rg:xx-6 mrb-0">
-<img class="w-100" src="/img/2020-03-27-new-york-times.jpg" alt="A column diagram showing the amount of lost jobs per week with a spike of 3.3 million for the last week"/>
+<img src="/img/2020-03-27-new-york-times.jpg" alt="A column diagram showing the amount of lost jobs per week with a spike of 3.3 million for the last week"/>
 <figcaption>The New York Times front page of March 27th, 2020. Source of this image is <a href="https://www.printmag.com/daily-heller/covid-19-new-york-times-front-pages/">printmag</a>.</figcaption>
 </figure>
 </div>
