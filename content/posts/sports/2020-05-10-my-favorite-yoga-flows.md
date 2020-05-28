@@ -12,6 +12,11 @@ title: My favorite Yoga flows
 </figure>
 
 <figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5lqHPAXwk4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>Power Yoga Workout für straffe Arme und eine starke Körpermitte | 10 Minuten zum Schwitzen</figcaption>
+</figure>
+
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/O4sv7iTUzoY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Fatburning Yoga Flow | Intensives Ganzkörperworkout | Fett verbrennen & Stoffwechsel anregen</figcaption>
 </figure>
