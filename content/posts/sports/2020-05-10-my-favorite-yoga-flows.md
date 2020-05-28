@@ -32,6 +32,11 @@ title: My favorite Yoga flows
 </figure>
 
 <figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6CgoQCbnYMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>Power Yoga für Kraft und Beweglichkeit | Arme, Schultern & Bauch | Vorübungen Unterarmstand</figcaption>
+</figure>
+
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5HswL9z6RgU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Yoga für einen gesunden Rücken | Übungen gegen Verspannungen | Self Care Routine für jeden Tag</figcaption>
 </figure>
@@ -39,6 +44,11 @@ title: My favorite Yoga flows
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BTS2SzBMhOE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Kraftvoller Yoga Vinyasa Flow | dynamisch und geschmeidig fließen | 25 Min. Yoga Workout Mittelstufe</figcaption>
+</figure>
+
+<figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B6qzscUBkCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>Yoga Krähe Crow Pose lernen für Anfänger in einfachen Schritten | Bakasana</figcaption>
 </figure>
 
 <figure>
