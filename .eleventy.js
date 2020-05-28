@@ -6,6 +6,7 @@ const markdownItAnchor = require('markdown-it-anchor');
 const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
 const filters = require('./_eleventy/filters.js');
+const fitMedia = require('./_eleventy/fit-media.js');
 
 module.exports = function (eleventyConfig) {
 
@@ -38,17 +39,19 @@ module.exports = function (eleventyConfig) {
 }
 
 function addMarkdownLib(eleventyConfig) {
-        const mdlib = markdownIt({
-            html: true,
-            breaks: true,
-            linkify: true,
-            typographer: true
-        }).use(markdownItAnchor, {
-            permalink: true,
-            permalinkClass: 'anchor',
-            permalinkSymbol: '#'
-        })
-        eleventyConfig.setLibrary('md', mdlib)
+    const mdlib = markdownIt({
+        html: true,
+        breaks: true,
+        linkify: true,
+        typographer: true
+    }).use(markdownItAnchor, {
+        permalink: true,
+        permalinkClass: 'anchor',
+        permalinkSymbol: '#'
+    });
+
+    fitMedia.fit(mdlib);
+    eleventyConfig.setLibrary('md', mdlib)
 }
 
 function addLayoutAliases(eleventyConfig) {

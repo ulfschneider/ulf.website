@@ -13,33 +13,40 @@ module.exports = {
         return excerpt;
     },
 
-    firstImageTag: function (item) {
-        const content = item.templateContent;
-        if (content) {
-            const match = content.match(/<img\s+([^>]*)src="(.*?)"(.*?)[^>]*>/);
+    firstImageTag: function (html) {
+
+        if (html) {
+            const match = html.match(/<img\s+([^>]*)src="(.*?)"(.*?)[^>]*>/);
             if (match) {
                 return match[0];
             }
         }
     },
 
-    imageSrc: function (img) {
-        if (img) {
-            const match = img.match(/src="(.*?)"/);
+    getAttr: function (html, attr) {
+        if (html) {
+            const match = html.match(new RegExp(`${attr}="(.*?)"`));
             if (match) {
                 return match[1];
             }
         }
     },
 
-    imageAlt: function (img) {
-        if (img) {
-            const match = img.match(/alt="(.*?)"/);
-            if (match) {
-                return match[1];
-            }
-        }
+    srcAttr: function (html) {
+        return this.getAttr(html, 'src');
     },
+
+    altAttr: function (html) {
+        return this.getAttr(html, 'alt');
+    },
+
+    widthAttr: function (html) {
+        return this.getAttr(html, 'width');
+    },
+
+    heightAttr: function (html) {
+        return this.getAttr(html, 'height');
+    },    
 
     isLiveItem: function (item) {
         const now = new Date();

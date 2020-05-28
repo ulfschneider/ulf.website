@@ -115,10 +115,10 @@ module.exports = {
     firstImage: function (collection) {
         let result = [];
         for (let item of collection) {
-            let img = utils.firstImageTag(item);
+            let img = utils.firstImageTag(item.templateContent);
             if (img) {
-                let src = utils.imageSrc(img);
-                let alt = utils.imageAlt(img);
+                let src = utils.srcAttr(img);
+                let alt = utils.altAttr(img);
                 result.push({
                     src: src,
                     alt: alt,
