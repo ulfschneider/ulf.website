@@ -2,6 +2,7 @@ const rss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
+const markdownItDefList = require('markdown-it-deflist');
 
 const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
@@ -48,7 +49,7 @@ function addMarkdownLib(eleventyConfig) {
         permalink: true,
         permalinkClass: 'anchor',
         permalinkSymbol: '#'
-    });
+    }).use(markdownItDefList);
 
     fitMedia.fit(mdlib);
     eleventyConfig.setLibrary('md', mdlib)
