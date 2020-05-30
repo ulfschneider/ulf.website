@@ -36,6 +36,10 @@ module.exports = {
         return this.getAttr(html, 'src');
     },
 
+    srcsetAttr: function (html) {
+        return this.getAttr(html, 'srcset');
+    },
+
     altAttr: function (html) {
         return this.getAttr(html, 'alt');
     },
