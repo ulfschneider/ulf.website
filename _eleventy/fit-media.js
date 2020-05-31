@@ -35,7 +35,7 @@ function isWrappedInPicture(node) {
 }
 
 
-function fitWrap(token, tagName) {
+function fitWrapHtmlElements(token, tagName) {
     try {
         let $ = cheerio.load(token.content);
         let elements = $(tagName);
@@ -70,9 +70,9 @@ function fitWrap(token, tagName) {
     }
 }
 
-function fitWrapHtmlElements(token, fitMediaOptions) {
+function fitWrapElements(token, fitMediaOptions) {
     for (let element of fitMediaOptions.fitWrapElements) {
-        fitWrap(token, element);
+        fitWrapHtmlElements(token, element);
     }
 }
 
@@ -172,15 +172,15 @@ function adjustMarkdownImgs(md, fitMediaOptions) {
 }
 
 
-function fitVid(md, fitMediaOptions) {
+function fitWrap(md, fitMediaOptions) {
 
-    md.core.ruler.push('fit-vid', state => {
+    md.core.ruler.push('fit-wrap', state => {
 
         const tokens = state.tokens;
 
         tokens
             .filter(token => token.type == 'html_block')
-            .forEach(token => fitWrapHtmlElements(token, fitMediaOptions));
+            .forEach(token => fitWrapElements(token, fitMediaOptions));
     });
 }
 
@@ -202,8 +202,8 @@ function fitImg(md, fitMediaOptions) {
 
 const fitMedia = function (md, fitMediaOptions) {
     fitMediaOptions = Object.assign({}, fitMedia.defaults, fitMediaOptions);
-    fitVid(md, fitMediaOptions);
     fitImg(md, fitMediaOptions);
+    fitWrap(md, fitMediaOptions);
 }
 
 fitMedia.defaults = {
