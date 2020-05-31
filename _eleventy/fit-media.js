@@ -12,9 +12,9 @@ function getDimensions(src, fitMediaOptions) {
 function styleAspectRatio(style, width, height) {
     if (style) {
         if (!/;\s*$/.test(style)) {
-            style += ';';
+            style += '; ';
         }
-        style += ` aspect-ratio:${width}/${height};`;
+        style += `aspect-ratio:${width}/${height};`;
     } else {
         style = `aspect-ratio:${width}/${height};`;
     }
@@ -55,9 +55,9 @@ function fitWrapHtmlElements(token, tagName) {
                     let style = $(element).attr('style');
                     if (style) {
                         if (!/;\s*$/.test(style)) {
-                            style += ';';
+                            style += '; ';
                         }
-                        style += ' position:absolute; top:0; left:0; width:100%; height:100%;';
+                        style += 'position:absolute; top:0; left:0; width:100%; height:100%;';
                     } else {
                         style = 'position:absolute; top:0; left:0; width:100%; height:100%;';
                     }
