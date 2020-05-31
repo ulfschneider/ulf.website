@@ -34,43 +34,45 @@ function isWrappedInPicture(node) {
     return hasParentTag(node, 'picture');
 }
 
-function adjustHtmlIFrames(token, fitMediaOptions) {
+
+function fitWrap(token, tagName) {
     try {
         let $ = cheerio.load(token.content);
-        let iframes = $('iframe');
+        let elements = $(tagName);
 
-        if (iframes.length) {
-            iframes.each(function (i, iframe) {
+        if (elements.length) {
+            elements.each(function (i, element) {
 
-                if (fitMediaOptions.lazyLoad) {
-                    $(iframe).attr('loading', 'lazy');
-                }
+                let width = parseInt($(element).attr('width'));
+                let height = parseInt($(element).attr('height'));
+                if (width > 0 && height > 0) {
+                    $(element).removeAttr('height');
+                    $(element).removeAttr('width');
 
-                if (fitMediaOptions.fitWrapIFrame) {
-                    let width = parseInt($(iframe).attr('width'));
-                    let height = parseInt($(iframe).attr('height'));
-                    if (width > 0 && height > 0) {
-                        $(iframe).removeAttr('height');
-                        $(iframe).removeAttr('width');
-
-                        let style = $(iframe).attr('style');
-                        if (style) {
-                            style += '; position:absolute; top:0; left:0; width:100%; height:100%;';
-                        } else {
-                            style = 'position:absolute; top:0; left:0; width:100%; height:100%;';
-                        }
-                        $(iframe).attr('style', style);
-
-                        const padding = height / width * 100 + '%';
-                        const fitWrapper = $(`<div class="fit-media" style="position:relative; height:0; padding-bottom:${padding};"></div>`);
-                        $(iframe).wrap(fitWrapper);
+                    let style = $(element).attr('style');
+                    if (style) {
+                        style += '; position:absolute; top:0; left:0; width:100%; height:100%;';
+                    } else {
+                        style = 'position:absolute; top:0; left:0; width:100%; height:100%;';
                     }
+                    $(element).attr('style', style);
+
+                    const padding = height / width * 100 + '%';
+                    const fitWrapper = $(`<div class="fit-media" style="position:relative; height:0; padding-bottom:${padding};"></div>`);
+                    $(element).wrap(fitWrapper);
                 }
+
             });
             token.content = $.html();
         }
     } catch (err) {
-        console.error(`Failure when adjusting IFrame ${err}`);
+        console.error(`Failure when adjusting element ${err}`);
+    }
+}
+
+function fitWrapHtmlElements(token, fitMediaOptions) {
+    for (let element of fitMediaOptions.fitWrapElements) {
+        fitWrap(token, element);
     }
 }
 
@@ -178,7 +180,7 @@ function fitVid(md, fitMediaOptions) {
 
         tokens
             .filter(token => token.type == 'html_block')
-            .forEach(token => adjustHtmlIFrames(token, fitMediaOptions));
+            .forEach(token => fitWrapHtmlElements(token, fitMediaOptions));
     });
 }
 
@@ -208,7 +210,7 @@ fitMedia.defaults = {
     imgDir: '',
     lazyLoad: true,
     aspectRatio: true,
-    fitWrapIFrame: true
+    fitWrapElements: ['iframe', 'video']
 }
 
 module.exports = fitMedia;
