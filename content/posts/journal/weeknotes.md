@@ -1,5 +1,3 @@
-
-
 ---
 published: no
 ---
