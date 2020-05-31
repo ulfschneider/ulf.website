@@ -38,7 +38,7 @@ function isWrappedInPicture(node) {
 }
 
 
-function fitWrapHtmlElements(token, tagName) {
+function fitWrapHtmlElements(token, tagName, fitMediaOptions) {
     try {
         let $ = cheerio.load(token.content);
         let elements = $(tagName);
@@ -64,11 +64,13 @@ function fitWrapHtmlElements(token, tagName) {
                     $(element).attr('style', style);
 
                     const padding = height / width * 100 + '%';
-                    const wrapperStyle = styleAspectRatio(`position:relative; height:0; padding-bottom:${padding}; `, width, height);
+                    let wrapperStyle = `position:relative; height:0; padding-bottom:${padding};`;
+                    if (fitMediaOptions.aspectRatio) {
+                        wrapperStyle = styleAspectRatio(wrapperStyle, width, height);
+                    }
                     const fitWrapper = $(`<div class="fit-media" style="${wrapperStyle}"></div>`);
                     $(element).wrap(fitWrapper);
                 }
-
             });
             token.content = $.html();
         }
@@ -79,7 +81,7 @@ function fitWrapHtmlElements(token, tagName) {
 
 function fitWrapElements(token, fitMediaOptions) {
     for (let element of fitMediaOptions.fitWrapElements) {
-        fitWrapHtmlElements(token, element);
+        fitWrapHtmlElements(token, element, fitMediaOptions);
     }
 }
 
