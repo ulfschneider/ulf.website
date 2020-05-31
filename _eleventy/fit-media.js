@@ -64,7 +64,8 @@ function fitWrapHtmlElements(token, tagName) {
                     $(element).attr('style', style);
 
                     const padding = height / width * 100 + '%';
-                    const fitWrapper = $(`<div class="fit-media" style="position:relative; height:0; padding-bottom:${padding};"></div>`);
+                    const wrapperStyle = styleAspectRatio(`position:relative; height:0; padding-bottom:${padding}; `, width, height);
+                    const fitWrapper = $(`<div class="fit-media" style="${wrapperStyle}"></div>`);
                     $(element).wrap(fitWrapper);
                 }
 
