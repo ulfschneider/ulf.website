@@ -49,8 +49,11 @@ function addMarkdownLib(eleventyConfig) {
         permalink: true,
         permalinkClass: 'anchor',
         permalinkSymbol: '#'
-    }).use(markdownItDefList).use(fitMedia);
-    
+    }).use(markdownItDefList)
+        .use(fitMedia, {
+            imgDir: './content'
+        });
+
     eleventyConfig.setLibrary('md', mdlib)
 }
 
