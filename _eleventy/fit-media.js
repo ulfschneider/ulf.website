@@ -11,9 +11,12 @@ function getDimensions(src, fitMediaOptions) {
 
 function styleAspectRatio(style, width, height) {
     if (style) {
-        style += `; aspect-ratio:${width / height};`;
+        if (!/;\s*$/.test(style)) {
+            style += ';';
+        }
+        style += ` aspect-ratio:${width}/${height};`;
     } else {
-        style = `aspect-ratio:${width / height};`;
+        style = `aspect-ratio:${width}/${height};`;
     }
     return style;
 }
@@ -51,7 +54,10 @@ function fitWrapHtmlElements(token, tagName) {
 
                     let style = $(element).attr('style');
                     if (style) {
-                        style += '; position:absolute; top:0; left:0; width:100%; height:100%;';
+                        if (!/;\s*$/.test(style)) {
+                            style += ';';
+                        }
+                        style += ' position:absolute; top:0; left:0; width:100%; height:100%;';
                     } else {
                         style = 'position:absolute; top:0; left:0; width:100%; height:100%;';
                     }
@@ -98,9 +104,6 @@ function adjustHtmlImgs(token, fitMediaOptions) {
                         const height = dimensions.height;
                         const width = dimensions.width;
                         if (height > 0 && width > 0) {
-                            $(img).removeAttr('height');
-                            $(img).removeAttr('width');
-
                             let style = $(img).attr('style');
                             style = styleAspectRatio(style, width, height);
                             $(img).attr('style', style);
