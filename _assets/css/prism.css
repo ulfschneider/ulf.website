@@ -23,6 +23,7 @@ pre[class*="language-"] {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+    font-size: var(--fs-mono);
 }
 
 
@@ -33,6 +34,7 @@ pre[class*="language-"] {
     border-radius: .3em;
     white-space: normal;
     background: var(--pre-background);
+    font-size: var(--fs-mono);
 }
 
 .token.comment,
