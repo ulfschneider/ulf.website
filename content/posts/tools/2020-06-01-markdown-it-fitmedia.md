@@ -85,7 +85,7 @@ markdownIt({
   html: true,
   linkify: true,
   typographer: true,
-}).use(markdown - it - fitmedia, {
+}).use(markdownItFitMedia, {
   //default options
   imgDir: "",
   lazyLoad: true,
