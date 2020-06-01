@@ -3,11 +3,11 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItDefList = require('markdown-it-deflist');
+const markdownItFitMedia = require('markdown-it-fitmedia');
 
 const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
 const filters = require('./_eleventy/filters.js');
-const fitMedia = require('./_eleventy/fit-media.js');
 
 module.exports = function (eleventyConfig) {
 
@@ -50,7 +50,7 @@ function addMarkdownLib(eleventyConfig) {
         permalinkClass: 'anchor',
         permalinkSymbol: '#'
     }).use(markdownItDefList)
-        .use(fitMedia, {
+        .use(markdownItFitMedia, {
             imgDir: './content'
         });
 
