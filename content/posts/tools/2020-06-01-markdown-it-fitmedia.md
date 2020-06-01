@@ -2,7 +2,8 @@
 title: markdown-it-fitmedia
 abstract: A markdown-it plugin to set aspect-ratio of responsive images, make them lazy loading, and to make videos responsive.
 ---
-A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-fitmedia) to set aspect-ratio of responsive images, make them lazy loading, and to make videos responsive. 
+
+A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-fitmedia) to set aspect-ratio of responsive images, make them lazy loading, and to make videos responsive.
 
 ## Images
 
@@ -10,66 +11,89 @@ Responsive images can create cumulative layout shifts (CLS) when loaded, because
 
 The markdown-it-fitmedia plugin is analyzing each of your referenced images, determining its dimensions, and setting the `aspect-ratio` based on the dimensions of the image. By default, the plugin will also add the `loading="lazy"` html attribute to your images. Example:
 
-```md
+<figure class="breakout-r">
+<figcaption>Markdown</figcaption>
+{% highlight md %}
 ![Image of Spitfire tool](/img/spitfire/spitfire.jpg)
-```
+{% endhighlight %}
+</figure>
 
-will become 
+will become
 
-```html
+<figure class="breakout-r">
+<figcaption>html</figcaption>
+{% highlight html %}
 <img alt="Image of Spitfire tool" src="/img/spitfire/spitfire.jpg" loading="lazy" style="aspect-ratio:750/388;">
-```
+{% endhighlight %}
+</figure>
 
-Also, html in your markdown, like for example
+Also, html inside of your markdown, like for example
 
-```html
+<figure class="breakout-r">
+<figcaption>html</figcaption>
+{% highlight html %}
 <figure>
 <img alt="" src="/img/spitfire/spitfire.jpg" >
 <figcaption>Image of Spitfire tool</figcaption>
 </figure>
-```
+{% endhighlight %}
+</figure>
 
-will be transformed into 
+will be transformed into
 
-```html
+<figure class="breakout-r">
+<figcaption>html</figcaption>
+{% highlight html %}
 <figure>
 <img alt="" src="/img/spitfire/spitfire.jpg" loading="lazy" style="aspect-ratio:750/388;">
 <figcaption>Image of Spitfire tool</figcaption>
 </figure>
-```
+{% endhighlight %}
+</figure>
 
 ## Wrapping media
 
-markdown-it-fitmedia carries an adoption of the original [fit-vids](http://fitvidsjs.com) script to make `iframe` and `video` tags responsive. Embedded videos are not automatically responsive or fluid. They come with a fixed setting for width and height. To make them responsive while keeping aspect ratio, they are embedded into a wrapper element. The wrapper receives some clever padding and positioning, and as a last step the fixed dimensions are removed from the video. The technique has been described by Thierry Koblentz in his A List Apart article “[Creating Intrinsic Ratios for Video](https://alistapart.com/article/creating-intrinsic-ratios-for-video/)” in 2009. For example, this 
+markdown-it-fitmedia carries an adoption of the original [fit-vids](http://fitvidsjs.com) script to make `iframe` and `video` tags responsive. Embedded videos are not automatically responsive or fluid. They come with a fixed setting for width and height. To make them responsive while keeping aspect ratio, they are embedded into a wrapper element. The wrapper receives some clever padding and positioning, and as a last step the fixed dimensions are removed from the video. The technique has been described by Thierry Koblentz in his A List Apart article “[Creating Intrinsic Ratios for Video](https://alistapart.com/article/creating-intrinsic-ratios-for-video/)” in 2009. For example, this
 
-```html
-<iframe src="https://player.vimeo.com/video/304626830" width="600" height="338" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-```
+<figure class="breakout-r">
+<figcaption>html</figcaption>
+{% highlight html %}
+<iframe src="https://player.vimeo.com/video/304626830" width="600" height="338"></iframe>
+{% endhighlight %}
+</figure>
 
 will become
 
-```html
-<div class="fit-media" style="position:relative; height:0; padding-bottom:56.333333333333336%;aspect-ratio:600/338;"><iframe src="https://player.vimeo.com/video/304626830" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe></div>
-```
+<figure class="breakout-r">
+<figcaption>html</figcaption>
+{% highlight html %}
+<div class="fit-media" style="position:relative; height:0; padding-bottom:56.333333333333336%;aspect-ratio:600/338;">
+<iframe src="https://player.vimeo.com/video/304626830"  style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+</div>
+{% endhighlight %}
+</figure>
 
 ## Usage
 
-```js
-var markdownIt = require('markdown-it');
-var markdownItFitMedia = require('markdown-it-fitmedia');
- 
+<figure class="breakout-r">
+<figcaption>Javascript</figcaption>
+{% highlight js %}
+var markdownIt = require("markdown-it");
+var markdownItFitMedia = require("markdown-it-fitmedia");
+
 markdownIt({
-    html: true,
-    linkify: true,
-    typographer: true,
-    })
-    .use(markdown-it-fitmedia, {  //default options
-        imgDir: '',
-        lazyLoad: true,
-        aspectRatio: true,
-        fitWrapElements: ['iframe', 'video']        
-    });
-```
+  html: true,
+  linkify: true,
+  typographer: true,
+}).use(markdown - it - fitmedia, {
+  //default options
+  imgDir: "",
+  lazyLoad: true,
+  aspectRatio: true,
+  fitWrapElements: ["iframe", "video"],
+});
+{% endhighlight %}
+</figure>
 
 ## Configuration
 
