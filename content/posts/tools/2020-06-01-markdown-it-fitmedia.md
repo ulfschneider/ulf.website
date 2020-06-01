@@ -30,7 +30,7 @@ will become
 Also, html inside of your markdown, like for example
 
 <figure class="breakout-r">
-<figcaption>html</figcaption>
+<figcaption>markup</figcaption>
 {% highlight markup %}
 <figure>
 <img alt="" src="/img/spitfire/spitfire.jpg" >
