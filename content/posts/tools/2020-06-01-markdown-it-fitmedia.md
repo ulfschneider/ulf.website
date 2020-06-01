@@ -31,7 +31,7 @@ Also, html inside of your markdown, like for example
 
 <figure class="breakout-r">
 <figcaption>html</figcaption>
-{% highlight html %}
+{% highlight markup %}
 <figure>
 <img alt="" src="/img/spitfire/spitfire.jpg" >
 <figcaption>Image of Spitfire tool</figcaption>
