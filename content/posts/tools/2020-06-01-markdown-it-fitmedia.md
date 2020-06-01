@@ -22,7 +22,7 @@ will become
 
 <figure class="breakout-r">
 <figcaption>html</figcaption>
-{% highlight html %}
+{% highlight %}
 <img alt="Image of Spitfire tool" src="/img/spitfire/spitfire.jpg" loading="lazy" style="aspect-ratio:750/388;">
 {% endhighlight %}
 </figure>
