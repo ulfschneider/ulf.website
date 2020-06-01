@@ -22,7 +22,7 @@ will become
 
 <figure class="breakout-r">
 <figcaption>html</figcaption>
-{% highlight markup %}
+{% highlight html %}
 <img alt="Image of Spitfire tool" src="/img/spitfire/spitfire.jpg" loading="lazy" style="aspect-ratio:750/388;">
 {% endhighlight %}
 </figure>
@@ -31,7 +31,7 @@ Also, html inside of your markdown, like for example
 
 <figure class="breakout-r">
 <figcaption>html</figcaption>
-{% highlight markup %}
+{% highlight html %}
 <figure>
 <img alt="" src="/img/spitfire/spitfire.jpg" >
 <figcaption>Image of Spitfire tool</figcaption>
@@ -43,7 +43,7 @@ will be transformed into
 
 <figure class="breakout-r">
 <figcaption>html</figcaption>
-{% highlight markup %}
+{% highlight html %}
 <figure>
 <img alt="" src="/img/spitfire/spitfire.jpg" loading="lazy" style="aspect-ratio:750/388;">
 <figcaption>Image of Spitfire tool</figcaption>
