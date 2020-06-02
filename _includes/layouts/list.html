@@ -28,7 +28,7 @@ nostepnav: true
         {%- assign pageYear = p.date | date: '%Y' -%}
         {%- assign count = count | plus: 1 -%}
 
-        {%- assign href = p.url | prepend: site.baseurl  -%}
+        {%- assign href = p.url -%}
 
         {%- if indexYear != pageYear -%}
             <time class="mry-2 fs-3 meta fw-200 block">
