@@ -17,3 +17,4 @@ published: no
 - updating the service worker manually
 - storing for offline manually
 
+- https://serviceworke.rs

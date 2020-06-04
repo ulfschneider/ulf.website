@@ -2,6 +2,7 @@
 layout: none
 title: Compose CSS
 permalink: /tools/compose/
+categories: tools
 abstract: A composable CSS Toolkit to build fast, maintainable, and responsive websites.
 ---
 <!DOCTYPE html>
@@ -40,7 +41,7 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
         background: var(--heading-color);
         color: var(--base-background);
         padding-left: var(--space);
-        padding-right: var(--space-d2);
+        padding-right: var(--space-d2);        
         visibility: hidden;
         border-top-right-radius: var(--rounded);
     }
@@ -73,7 +74,7 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
         <div id="top" class="breakout-full bg-neutral-4">
             <div class="x breakout pdt-2">
                 <h1 class="lh fw-700">Compose CSS</h1>
-                <p class="w-3 center pdx-d2 bg-heading-color rounded white"><span id="version">v6.0.4</span></p>
+                <p class="w-3 center pdx-d2 bg-heading-color rounded white"><span id="version">v6.0.6</span></p>
                 <p class="mxw-sm mrt-d1">A composable CSS Toolkit to build fast, maintainable, and
                     responsive websites.
                 </p>
@@ -100,8 +101,7 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
                     <div><a href="#square" class="no-deco">Square</a></div>
                     <div><a href="#hide" class="no-deco">Hide</a></div>
                     <div><a href="#forms" class="no-deco">Forms</a></div>
-                    <div><a href="/tools/" class="no-deco">↰ ulf.codes</a></div>
-                    <div class="only-when-dynamic"><a href="#top" class="no-deco">↑ Go to top</a></div>
+                    <div><a href="/tools/" class="no-deco">↰ ulf.codes</a></div><div class="only-when-dynamic"><a href="#top" class="no-deco">↑ Go to top</a></div>
                 </div>
 
                 <div class="bookmark small">
@@ -284,16 +284,16 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
         <div class="breakout-l mxw-rg">
             <h3>Word wrapping</h3>
             <p>
-            <div class="block br w-3 h-2 no-wrap mrr bg-neutral-4">No word wrap at white space</div>
-            <code>.no-wrap</code>
+                <div class="block br w-3 h-2 no-wrap mrr bg-neutral-4">No word wrap at white space</div>
+                <code>.no-wrap</code>
             </p>
             <p>
-            <div class="block br w-2 h-4 break-word mrr lh bg-neutral-4">Word wrap anywhere</div>
-            <code>.break-word</code>
+                <div class="block br w-2 h-4 break-word mrr lh bg-neutral-4">Word wrap anywhere</div>
+                <code>.break-word</code>
             </p>
             <p>
-            <div class="block br w-3 h-2 truncate mrr bg-neutral-4">No word wrap at white space</div>
-            <code>.truncate</code>
+                <div class="block br w-3 h-2 truncate mrr bg-neutral-4">No word wrap at white space</div>
+                <code>.truncate</code>
             </p>
 
             <h3>Horizontal ruler</h3>
@@ -1288,26 +1288,26 @@ p/ .no-indent //remove indentation for this p</pre>
             <div class="mxw-rg">
                 <p>Use auto margins to position horizontally:
 
-                <div>
-                    <div class="br overflow-hidden">
-                        <div class="sq-3 bg-neutral-4 mrr-auto"></div>
+                    <div>
+                        <div class="br overflow-hidden">
+                            <div class="sq-3 bg-neutral-4 mrr-auto"></div>
+                        </div>
+                        <div class="code">.mrr-auto</div>
                     </div>
-                    <div class="code">.mrr-auto</div>
-                </div>
 
-                <div>
-                    <div class="br overflow-hidden">
-                        <div class="sq-3 bg-neutral-4 mrx-auto"></div>
+                    <div>
+                        <div class="br overflow-hidden">
+                            <div class="sq-3 bg-neutral-4 mrx-auto"></div>
+                        </div>
+                        <div class="code">.mrx-auto</div>
                     </div>
-                    <div class="code">.mrx-auto</div>
-                </div>
 
-                <div>
-                    <div class="br overflow-hidden">
-                        <div class="sq-3 bg-neutral-4 mrl-auto"></div>
+                    <div>
+                        <div class="br overflow-hidden">
+                            <div class="sq-3 bg-neutral-4 mrl-auto"></div>
+                        </div>
+                        <div class="code">.mrl-auto</div>
                     </div>
-                    <div class="code">.mrl-auto</div>
-                </div>
             </div>
 
             <p>In combination with <a href="#flexbox">flexbox</a>, vertical auto margins are possible.</p>
@@ -3121,7 +3121,7 @@ p/ .no-indent //remove indentation for this p</pre>
 
             <h3>Viewport height</h3>
             <p>The class <code>.vh-100</code> will assign the exact height of the viewport.</p>
-            <div class="vh-100 brl bg-neutral-4 w-1">
+            <div class="vh-100 brl bg-neutral-4 w-1">               
                 <code class="vertical-rl block">.vh-100</code>
             </div>
 
