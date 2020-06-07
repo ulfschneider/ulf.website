@@ -9,6 +9,6 @@ refer: A documentary by Raoul Peck.
 <figure><a href="https://fsk12.bpb.de/mediathek/283417/i-am-not-your-negro">I am not your Negro</a>
 <figcaption>The documentary is provided by Bundeszentrale für politische Bildung</figcaption></figure>
 
-Jamens Baldwin was a friend of Marthin Luther King, Medgar Evers and Malcolm X. The film is based on notes by James Baldwin and provides a link from the human rights movment of the 1950´s to the black-lives-matter movement of today. 
+Jamens Baldwin was a friend of Marthin Luther King, Medgar Evers and Malcolm X. The film is based on notes by James Baldwin and provides a link from the human rights movement of the 1950´s to the black-lives-matter movement of today. 
 
 
