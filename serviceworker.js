@@ -12,6 +12,8 @@ const IMAGE_CACHE_NAME = `${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
 const RUNTIME_CACHE_NAME = `${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
 const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME];
 
+const SERVE_HTML_CACHE_FIRST = true;
+
 const CACHE_SETTINGS = {
 
     [SCRIPT_CACHE_NAME]: {
@@ -105,14 +107,18 @@ addEventListener('fetch', event => {
     const request = event.request;
 
     const handleEvent = async function () {
-        if (request.headers.get('Accept').includes('text/html')) {
-
-            let networkFirstResponse = await networkFirst(event);
-            if (networkFirstResponse) {
-                return networkFirstResponse;
+        if (isHtmlRequest(request)) {
+            if (SERVE_HTML_CACHE_FIRST) {
+                return cacheFirst(event, { revalidate: true });
+            } else {
+                let networkFirstResponse = await networkFirst(event);
+                if (networkFirstResponse) {
+                    return networkFirstResponse;
+                }
             }
         }
-
+        //everyhting that´s not an html page
+        //will be served cache first
         return cacheFirst(event);
     }
 
@@ -122,6 +128,12 @@ addEventListener('fetch', event => {
 
 
 //// helpers 
+
+function isHtmlRequest(request) {
+    let url = new URL(request.url);
+    let accept = request.headers.get('Accept');
+    return accept && accept.includes('text/html') || /^\/.+\/$/.test(url.pathname);
+}
 
 async function preCache() {
     for (let url of PRECACHE_URLS) {
@@ -151,6 +163,7 @@ async function networkFirst(event) {
 
 
 async function cacheFirst(event, options) {
+
     options = options ? options : {};
     const request = event.request;
     const responseFromCache = await caches.match(request, options);
@@ -209,7 +222,7 @@ async function fetchAndCache(request, options) {
         //or we have no expiration date for the entry
         //or we enforce a revalidation
         //therefore we have to update from the network
-        devlog(`Updating cache ${url}`);
+        devlog(`Revalidating cache ${url}`);
     } else {
         //we have no cache and therefore have
         //to fetch a response from the network
@@ -218,13 +231,12 @@ async function fetchAndCache(request, options) {
     return fetch(request)
         .then(async responseFromNetwork => {
 
-            if (NO_CACHE_URLS.includes(url.pathname + url.search) || NO_CACHE_URLS.includes(url)) {
+            if (NO_CACHE_URLS.includes(url)) {
                 return responseFromNetwork;
             }
 
-            let accept = request.headers.get('Accept');
-            if (accept && accept.includes('text/html')
-                || /^\/.+\/$/.test(url.pathname)) {
+
+            if (isHtmlRequest(request)) {
                 await stashInCache({
                     cacheName: RUNTIME_CACHE_NAME,
                     request: request,
