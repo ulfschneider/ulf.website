@@ -12,9 +12,13 @@ published: no
 
 - offline page -> ok
 - ehnance offline page with with meta text.
-- precache generic search
+
+- stale while revalidate to leverage quicklink
+
 
 - updating the service worker manually
 - storing for offline manually
+
+
 
 - https://serviceworke.rs
