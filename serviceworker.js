@@ -38,13 +38,7 @@ const NO_CACHE_URLS = [
 const PRECACHE_URLS = [
     OFFLINE_URL,
     '/',
-    '/reading/',
-    '/articles/',
-    '/tools/',
-    '/journal/',
-    '/search/',
-    '/colophon/',
-    '/ownership/',    
+    '/js/quicklink.min.js',
     '/js/measure-load-time.js',
     '/fonts/ibm-plex-serif-v8-latin-regular.woff2',
     '/fonts/ibm-plex-serif-v8-latin-italic.woff2',
@@ -59,9 +53,7 @@ const PRECACHE_URLS = [
     '/fonts/ibm-plex-mono-v5-latin-italic.woff2',
     '/fonts/ibm-plex-mono-v5-latin-700.woff2',
     '/fonts/ibm-plex-mono-v5-latin-700italic.woff2',
-    '/excerpt-index.json',
-    '/post-search-index.json',
-    'https://unpkg.com/lunr/lunr.js'
+    '/js/lunr.min.js',
 ];
 
 

@@ -9,7 +9,8 @@ published: no
 
 - aspect-ratio is around the corner
 - https://github.com/jeffbski/markdown-it-modify-token
-
+- instant page
+- 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s9LviOF5aJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Leadville Trail 100 2019 – EF Gone Racing</figcaption>
