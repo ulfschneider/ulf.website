@@ -22,6 +22,8 @@ The 10 Principles of Good Design as stated by [Dieter Rams](/reading/rams):
 <figure>Less, but better!</figure>
 
 <figure>
-<iframe src="https://player.vimeo.com/video/304626830" width="600" height="338" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/304626830" width="600" height="338" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+
+</iframe>
 <figcaption><a href="https://vimeo.com/304626830">Dieter Rams&#039; 10 Principles of Good Design</a> from <a href="https://vimeo.com/user7112450">Film First</a> on <a href="https://vimeo.com">Vimeo</a></figcaption>
 </figure>
