@@ -1,8 +1,8 @@
 ---
 layout: list
 ---
-<link rel="preload" as="fetch" href="/excerpt-index.json" crossorigin="anonymous">
-<link rel="preload" as="fetch" href="/post-search-index.json" crossorigin="anonymous">
+<link rel="preload" as="fetch" href="/excerpt-index.json" crossorigin>
+<link rel="preload" as="fetch" href="/post-search-index.json" crossorigin>
 
 {% include search-field.html , focus: true, onsubmit: "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value); history.replaceState(null, '', location.pathname + '?query=' + event.target[SEARCH_QUERY_ID].value)" %}
 

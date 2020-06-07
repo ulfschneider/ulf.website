@@ -1,23 +1,24 @@
-const CACHE_VERSION = 'v4'; //version is used to remove old caches
+const CACHE_VERSION = 'v5'; //version is used to remove old caches
 
-const STATIC = 'static';
+const SCRIPT = 'script';
 const RUNTIME = 'runtime';
 const IMAGE = 'image';
 const FONT = 'font';
 const CACHE_NAME = 'cache';
 
-const STATIC_CACHE_NAME = `${STATIC}-${CACHE_NAME}-${CACHE_VERSION}`;
+const SCRIPT_CACHE_NAME = `${SCRIPT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const FONT_CACHE_NAME = `${FONT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const IMAGE_CACHE_NAME = `${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
 const RUNTIME_CACHE_NAME = `${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
-const CACHE_NAMES = [FONT_CACHE_NAME, STATIC_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME];
+const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME];
 
 const CACHE_SETTINGS = {
-    [STATIC_CACHE_NAME]: {
-        maxAgeMinutes: 60 * 24 //expire static entries after one day
+
+    [SCRIPT_CACHE_NAME]: {
+        maxAgeMinutes: 0 //expire static never
     },
     [FONT_CACHE_NAME]: {
-        maxAgeMinutes: 60 * 24 * 30 //expire fonts after 30 days
+        maxAgeMinutes: 0 //expire fonts never
     },
     [RUNTIME_CACHE_NAME]: {
         maxAgeMinutes: 60 * 24 //expire runtime entries after one day
@@ -232,21 +233,21 @@ async function fetchAndCache(request, options) {
                 });
             } else if (/\/.*\.json$/.test(url.pathname)) {
                 await stashInCache({
-                    cacheName: STATIC_CACHE_NAME,
+                    cacheName: RUNTIME_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options,
                 });
             } else if (/js$/.test(url.pathname)) {
                 await stashInCache({
-                    cacheName: STATIC_CACHE_NAME,
+                    cacheName: SCRIPT_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options
                 });
             } else if (/css[2]?$/.test(url.pathname)) {
                 await stashInCache({
-                    cacheName: STATIC_CACHE_NAME,
+                    cacheName: RUNTIME_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options
