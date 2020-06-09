@@ -1,5 +1,5 @@
 ---
-title: How the JAMstack enables Canadas largest food retailer
+title: How the JAMstack enables Canada´s largest food retailer
 refer: A talk by Justin Watts at JAMstack_conf_sf 2019
 ---
 <figure>
