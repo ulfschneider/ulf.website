@@ -1,6 +1,4 @@
 ---
-layout: image
-categories: emil-drawing
 title: Making use of old paper
 author: Emil
 ---

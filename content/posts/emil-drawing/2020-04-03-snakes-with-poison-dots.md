@@ -1,6 +1,4 @@
 ---
-layout: image
-categories: emil-drawing
 title: Snakes with Poison Dots
 author: Emil
 ---
