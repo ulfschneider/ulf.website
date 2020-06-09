@@ -1,5 +1,5 @@
 {
     "permalink": "/emil-drawing/{{ page.fileSlug }}/",
-    "tags": "emil-drawing"
+    "tags": "emil-drawing",
     "layout": "image"
 }
