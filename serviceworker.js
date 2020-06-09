@@ -440,7 +440,7 @@ function isAllowRevalidate(response, url) {
         if (date < now) {
             return true;
         } else {
-            devlog(`${url} has been cached within the last ${NO_REVALIDATE_WITHIN_MINUTES} minutes, therefore not revalidating`);
+            devlog(`Not revalidating ${url} because it has been cached within the last ${NO_REVALIDATE_WITHIN_MINUTES} minutes`);
             return false; 
         }
     }
