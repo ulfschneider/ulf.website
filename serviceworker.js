@@ -13,6 +13,7 @@ const RUNTIME_CACHE_NAME = `${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
 const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME];
 
 const SERVE_HTML_CACHE_FIRST = true;
+const NO_REVALIDATE_WITHIN_MINUTES = 10;
 
 const CACHE_SETTINGS = {
 
@@ -171,7 +172,7 @@ async function cacheFirst(event, options) {
     if (responseFromCache && !isExpired(responseFromCache)) {
         devlog(`Responding from cache ${request.url}`);
 
-        if (options.revalidate) {
+        if (options.revalidate && isAllowRevalidate(responseFromCache, request.url)) {
             //clone response and call without await
             options.responseFromCache = responseFromCache.clone();
             fetchAndCache(request, options)
@@ -200,7 +201,7 @@ async function cacheFirst(event, options) {
 async function fetchAndCache(request, options) {
     options = options ? options : {};
     if (options.responseFromCache
-        && getExpire(options.responseFromCache) > 0
+        && getExpireTimestamp(options.responseFromCache) > 0
         && !isExpired(options.responseFromCache)
         && !options.revalidate) {
         //we have a cache entry that´s not expired
@@ -309,9 +310,14 @@ function makeURL(url) {
 }
 
 
-function getExpire(response) {
+function getExpireTimestamp(response) {
     const expires = response.headers.get(`${CACHE_NAME}-expires`);
     return expires ? Date.parse(expires) : 0;
+}
+
+function getDateTimestamp(response) {
+    const date = response.headers.get('date');
+    return date ? Date.parse(date) : 0;
 }
 
 
@@ -414,7 +420,7 @@ async function stashInCache({ request, response, cacheName, options }) {
 
 
 function isExpired(response) {
-    const expires = getExpire(response);
+    const expires = getExpireTimestamp(response);
 
     if (expires > 0) {
         const now = new Date();
@@ -423,4 +429,20 @@ function isExpired(response) {
         }
     }
     return false;
+}
+
+function isAllowRevalidate(response, url) {
+    let date = getDateTimestamp(response);
+
+    if (date > 0) {
+        date += NO_REVALIDATE_WITHIN_MINUTES * 1000 * 60;
+        const now = new Date();
+        if (date < now) {
+            return true;
+        } else {
+            devlog(`${url} has been cached within the last ${NO_REVALIDATE_WITHIN_MINUTES} minutes, therefore not revalidating`);
+            return false; 
+        }
+    }
+    return true;
 }
