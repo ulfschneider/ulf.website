@@ -285,14 +285,16 @@ async function fetchAndCache(request, options) {
         });
 }
 
-
+//logging only when the server and the browser
+//are on the same machine (for dev purpose)
 function devlog(message) {
     if (location.hostname == 'localhost') {
         console.log(message);
     }
 }
 
-
+//logging only when the server and the browser
+//are on the same machine (for dev purpose)
 function deverror(message) {
     if (location.hostname == 'localhost') {
         console.error(message);
@@ -300,7 +302,7 @@ function deverror(message) {
     }
 }
 
-
+//ensure to get a nice URL
 function makeURL(url) {
     if ((typeof url == 'string' || url instanceof String) && !url.startsWith('http')) {
         return new URL(url, location.origin);
@@ -309,17 +311,19 @@ function makeURL(url) {
 
 }
 
-
+//extract the expiration timestamp
+//from our self-invented `${CACHE_NAME}-expires` header
 function getExpireTimestamp(response) {
     const expires = response.headers.get(`${CACHE_NAME}-expires`);
     return expires ? Date.parse(expires) : 0;
 }
 
+//extract the timestamp from the 
+//http date header
 function getDateTimestamp(response) {
     const date = response.headers.get('date');
     return date ? Date.parse(date) : 0;
 }
-
 
 async function maintainExpiration({ response, maxAgeMinutes }) {
 
@@ -399,6 +403,8 @@ function isValidToCache({ request, response }) {
     return true;
 }
 
+//put the response into the cache 
+//if it is valid to cache
 async function stashInCache({ request, response, cacheName, options }) {
     options = options ? options : {};
     try {
@@ -419,6 +425,8 @@ async function stashInCache({ request, response, cacheName, options }) {
 }
 
 
+//is the cache entry expired according
+//to this response expiration settings?
 function isExpired(response) {
     const expires = getExpireTimestamp(response);
 
@@ -431,6 +439,8 @@ function isExpired(response) {
     return false;
 }
 
+//it´s okay to only revalidate if the last cache update
+//is more than NO_REVALIDATE_WITHIN_MINUTES ago
 function isAllowRevalidate(response, url) {
     let date = getDateTimestamp(response);
 
@@ -441,7 +451,7 @@ function isAllowRevalidate(response, url) {
             return true;
         } else {
             devlog(`Not revalidating ${url} because it has been cached within the last ${NO_REVALIDATE_WITHIN_MINUTES} minutes`);
-            return false; 
+            return false;
         }
     }
     return true;
