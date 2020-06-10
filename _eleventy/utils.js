@@ -50,7 +50,7 @@ module.exports = {
 
     heightAttr: function (html) {
         return this.getAttr(html, 'height');
-    },    
+    },
 
     isLiveItem: function (item) {
         const now = new Date();
@@ -59,6 +59,10 @@ module.exports = {
             && item.data.published !== 'no'
             && item.data.draft !== true
             && item.data.draft !== 'yes';
+    },
+
+    isSearchAble: function (item) {
+        return item.data.nosearch == null;
     },
 
     mapItem: function (item) {

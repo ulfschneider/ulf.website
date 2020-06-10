@@ -28,6 +28,14 @@ module.exports = {
         return collection ? collection.filter(utils.isLiveItem) : collection;
     },
 
+    searchAble: function (collection) {
+        return collection ? collection.filter(utils.isSearchAble) : collection;
+    },
+
+    rssAble: function (collection) {
+        return collection ? collection.filter(utils.isRssAble) : collection;
+    },
+
     mustContainTag: function (collection, filterTags) {
         let result = new Set();
 
@@ -68,7 +76,7 @@ module.exports = {
     },
 
     getPrev: function (collection, current) {
-       return findNextItem(collection.reverse(), current);
+        return findNextItem(collection.reverse(), current);
     },
 
     getNext: function (collection, current) {
@@ -96,7 +104,9 @@ module.exports = {
             this.field('content');
 
             for (let item of collection) {
-                this.add(utils.mapItem(item));
+                if (utils.isSearchAble(item)) {
+                    this.add(utils.mapItem(item));
+                }
             }
         });
     },

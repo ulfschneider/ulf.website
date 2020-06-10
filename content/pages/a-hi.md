@@ -7,7 +7,7 @@ nodate: true
 notags: true
 ---
 
-<h1 class="fs-2 lh-2 breakout-l mrb-2">Hi, I´m <span class="inline-block">Ulf Schneider,</span> a developer and agile coach living in Paderborn, Germany.</h1>
+<h1 class="fs-2 lh-2 breakout-l mrb-2">Hi, I´m <span class="inline-block">Ulf Schneider, </span> a developer and agile coach living in Paderborn, Germany.</h1>
 
 <figure>
 <img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-400.jpg" srcset="/img/ulf/ulf-16x9-400.jpg 400w, /img/ulf/ulf-16x9-600.jpg" alt="Portrait of Ulf Schneider">
