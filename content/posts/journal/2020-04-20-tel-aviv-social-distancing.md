@@ -1,6 +1,6 @@
 ---
-layout: image
 title: Social distancing while protesting
+refer: Picture by Tomer Appelbaum, 2020
 ---
 <figure class="breakout">
 <img alt="" src="/img/social-distancing-while-protesting.jpg"/>
