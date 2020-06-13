@@ -7,6 +7,16 @@ title: My favorite Yoga flows
 </figure>
 
 <figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bno1z2-Hg-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>Power Vinyasa Yoga für Kraft & Willensstärke | 25 Minuten Home Workout</figcaption>
+</figure>
+
+<figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Tj3eHle5xTM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>Yoga Bauch Workout Intensiv | 15 Minuten Core & Abs für einen straffen Bauch</figcaption>
+</figure>
+
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nCOgtI7dCUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Summerbody Vinyasa Yoga Flow | Ganzkörper Workout für Bauch Beine Po Rücken | 25 Minuten</figcaption>
 </figure>
@@ -19,11 +29,6 @@ title: My favorite Yoga flows
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/O4sv7iTUzoY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Fatburning Yoga Flow | Intensives Ganzkörperworkout | Fett verbrennen & Stoffwechsel anregen</figcaption>
-</figure>
-
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bno1z2-Hg-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<figcaption>Power Vinyasa Yoga für Kraft & Willensstärke | 25 Minuten Home Workout</figcaption>
 </figure>
 
 <figure>
