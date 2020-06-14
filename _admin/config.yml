@@ -24,3 +24,4 @@ collections:
         }
       - { label: "Refer", name: "refer", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - sortableFields: ["title", "date", "draft"]
