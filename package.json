@@ -22,5 +22,6 @@
     "markdown-it-fitmedia": "^0.2.11",
     "path": "^0.12.7",
     "string-strip-html": "^4.4.4"
-  }
+  },
+  "dependencies": {}
 }
