@@ -1,6 +1,6 @@
 ---
 title: My entry into accessibility #todo
-published: no
+draft: true
 ---
 - Include as many people as possible. The technology is there, we have to adopt as web developers.
 - Improve the structure of the site, whether it´s semantic html or rationalisubg design decisions based on accessibility affordances.

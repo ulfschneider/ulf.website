@@ -55,8 +55,6 @@ module.exports = {
     isLiveItem: function (item) {
         const now = new Date();
         return item.date <= now
-            && item.data.published !== false
-            && item.data.published !== 'no'
             && item.data.draft !== true
             && item.data.draft !== 'yes';
     },
