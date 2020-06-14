@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{site.locale}}">
 
-<head>
-	{% include head.html %}
-</head>
+	<head>
+		{% include head.html %}
+	</head>
 
-<body><a id="top" tabindex="-1"></a>
-	<main class="x indent word-wrap blank">
-		{{ content }}
-	</main>
-</body>
+	<body>
+		<a id="top" tabindex="-1"></a>
+		<main class="x indent word-wrap blank">
+			{{ content }}
+		</main>
+		{% include scripts.html %}
+	</body>
 
 </html>
