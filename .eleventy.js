@@ -37,6 +37,14 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPlugin(rss);
     eleventyConfig.addPlugin(syntaxHighlight);
+
+    return {
+        dir: {
+            includes: '_includes',
+            layouts: '_layouts',
+            data: '_data'
+        }
+    }
 }
 
 function addMarkdownLib(eleventyConfig) {
@@ -58,14 +66,14 @@ function addMarkdownLib(eleventyConfig) {
 }
 
 function addLayoutAliases(eleventyConfig) {
-    eleventyConfig.addLayoutAlias('default', 'layouts/default.html');
-    eleventyConfig.addLayoutAlias('list', 'layouts/list.html');
-    eleventyConfig.addLayoutAlias('image', 'layouts/image.html');
-    eleventyConfig.addLayoutAlias('gallery', 'layouts/gallery.html');
-    eleventyConfig.addLayoutAlias('blank', 'layouts/blank.html');
-    eleventyConfig.addLayoutAlias('none', 'layouts/none.html');
-    eleventyConfig.addLayoutAlias('rss', 'layouts/rss.njk');
-    eleventyConfig.addLayoutAlias('search', 'layouts/search.html');
+    eleventyConfig.addLayoutAlias('default', 'default.html');
+    eleventyConfig.addLayoutAlias('list', 'list.html');
+    eleventyConfig.addLayoutAlias('image', 'image.html');
+    eleventyConfig.addLayoutAlias('gallery', 'gallery.html');
+    eleventyConfig.addLayoutAlias('blank', 'blank.html');
+    eleventyConfig.addLayoutAlias('none', 'none.html');
+    eleventyConfig.addLayoutAlias('rss', 'rss.njk');
+    eleventyConfig.addLayoutAlias('search', 'search.html');
 }
 
 function addCollections(eleventyConfig) {
