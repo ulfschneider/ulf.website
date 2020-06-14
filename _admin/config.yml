@@ -15,6 +15,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "string", default: "default"}
       - {label: "Refer", name: "refer", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Published", name: "published", widget: "boolean"}
       - {label: "Body", name: "body", widget: "markdown"}
