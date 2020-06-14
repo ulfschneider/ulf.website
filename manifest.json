@@ -4,9 +4,10 @@
     "short_name": "Ulf Schneider",
     "description": "",
     "theme_color": "#00bbff",
-    "background_color": "#00bbff",
-    "start_url": "/",
+    "background_color": "#ffffff",
+    "start_url": "/index.html",
     "display": "minimal-ui",
+    "orientation": "natural",
     "icons": [
         {
             "src": "/favicon.ico",
