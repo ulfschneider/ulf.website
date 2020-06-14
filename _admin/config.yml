@@ -19,4 +19,4 @@ collections:
       - { label: "Layout", name: "layout", widget: "string", default: "default" }
       - { label: "Refer", name: "refer", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - sortableFields: ["title", "publishedDate", "draft"]
+
