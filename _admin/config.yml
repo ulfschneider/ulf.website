@@ -32,8 +32,9 @@ collections:
       - {
           label: "Layout",
           name: "layout",
-          widget: "list",
-          default: ["default", "image"],
+          widget: "select",
+          options: ["default", "image"],
+          default: ["default"],
           required: false,
         }
       - {
