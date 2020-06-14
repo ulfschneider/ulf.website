@@ -1,5 +1,7 @@
 ---
 draft: true
+title: Collection of future topics
+date: 2020-06-14T07:52:37.392Z
 ---
 - https://www.bonfire.com/black-lives-matter-css/
 - https://regex101.com
