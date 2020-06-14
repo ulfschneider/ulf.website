@@ -14,10 +14,21 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: "Draft", name: "draft", widget: "boolean" }      
+      - { label: "Draft", name: "draft", widget: "boolean" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Layout", name: "layout", widget: "string", default: "default" }
-      - { label: "Date", name: "date", widget: "datetime", default: "" }      
-      - { label: "Refer", name: "refer", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "string",
+          default: "default",
+          required: false
+        }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          default: "",
+          required: false
+        }
+      - { label: "Refer", name: "refer", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
