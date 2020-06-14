@@ -22,19 +22,12 @@ collections:
           widget: "text",
           required: false,
         }
-      - {
-          label: "Abstract",
-          name: "abstract",
-          widget: "text",
-          required: false,
-        }
-
+      - { label: "Abstract", name: "abstract", widget: "text", required: false }
       - {
           label: "Layout",
           name: "layout",
           widget: "select",
           options: ["default", "image"],
-          default: ["default"],
           required: false,
         }
       - {
@@ -42,7 +35,122 @@ collections:
           name: "date",
           widget: "datetime",
           default: "",
+          format: "YYYY-MM-DD",
           required: false,
         }
       - { label: "Refer", name: "refer", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
+  - name: "emil" # Used in routes, e.g., /admin/collections/blog
+    label: "Emil" # Used in the UI
+    folder: "content/posts/emil" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Draft", name: "draft", widget: "boolean" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Sub-title",
+          name: "subtitle",
+          widget: "text",
+          required: false,
+        }
+      - { label: "Abstract", name: "abstract", widget: "text", required: false }
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "select",
+          options: ["default", "image"],
+          required: false,
+        }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          default: "",
+          format: "YYYY-MM-DD",
+          required: false,
+        }
+      - { label: "Refer", name: "refer", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  - name: "emil-drawing" # Used in routes, e.g., /admin/collections/blog
+    label: "Emil Drawing" # Used in the UI
+    folder: "content/posts/emil-drawing" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Draft", name: "draft", widget: "boolean" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Sub-title",
+          name: "subtitle",
+          widget: "text",
+          required: false,
+        }
+      - { label: "Abstract", name: "abstract", widget: "text", required: false }
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "select",
+          options: ["default", "image"],
+          required: false,
+        }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          default: "",
+          format: "YYYY-MM-DD",
+          required: false,
+        }
+      - { label: "Refer", name: "refer", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  - name: "tool" # Used in routes, e.g., /admin/collections/blog
+    label: "Tool" # Used in the UI
+    folder: "content/posts/tools" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Draft", name: "draft", widget: "boolean" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Sub-title",
+          name: "subtitle",
+          widget: "text",
+          required: false,
+        }
+      - { label: "Abstract", name: "abstract", widget: "text", required: false }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          default: "",
+          format: "YYYY-MM-DD",
+          required: false,
+        }
+      - { label: "Refer", name: "refer", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }   
+  - name: "article" # Used in routes, e.g., /admin/collections/blog
+    label: "Article" # Used in the UI
+    folder: "content/posts/articles" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Draft", name: "draft", widget: "boolean" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Sub-title",
+          name: "subtitle",
+          widget: "text",
+          required: false,
+        }
+      - { label: "Abstract", name: "abstract", widget: "text", required: false }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          default: "",
+          format: "YYYY-MM-DD",
+          required: false,
+        }
+      - { label: "Refer", name: "refer", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }         
