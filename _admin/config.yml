@@ -23,10 +23,17 @@ collections:
           required: false,
         }
       - {
+          label: "Abstract",
+          name: "abstract",
+          widget: "text",
+          required: false,
+        }
+
+      - {
           label: "Layout",
           name: "layout",
-          widget: "string",
-          default: "default",
+          widget: "list",
+          default: ["default", "image"],
           required: false,
         }
       - {
