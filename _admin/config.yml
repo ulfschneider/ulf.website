@@ -5,7 +5,7 @@ backend:
 publish_mode: editorial_workflow
 
 media_folder: "content/img"
-public_folder: "/img"
+public_folder: "img"
 
 collections:
   - name: "journal" # Used in routes, e.g., /admin/collections/blog
