@@ -68,6 +68,10 @@ nav ul li:last-child {
     background: var(--neutral-5);
 }
 
+main>*:last-child {
+    margin-bottom: 0;
+}
+
 @media (any-pointer: coarse) {
     nav {
         line-height: var(--space-2);
