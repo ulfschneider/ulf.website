@@ -72,6 +72,10 @@ main>*:last-child {
     margin-bottom: 0;
 }
 
+main>*:first-child {
+    margin-top: 0;
+}
+
 @media (any-pointer: coarse) {
     nav {
         line-height: var(--space-2);
