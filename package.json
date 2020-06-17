@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "cheerio": "^1.0.0-rc.3",
+    "cssnano": "^4.1.10",
     "image-size": "^0.8.3",
     "lunr": "^2.3.8",
     "markdown-it": "^11.0.0",
@@ -21,6 +23,10 @@
     "markdown-it-deflist": "^2.0.3",
     "markdown-it-fitmedia": "^0.2.11",
     "path": "^0.12.7",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1",
+    "postcss-discard-comments": "^4.0.2",
+    "postcss-import": "^12.0.1",
     "string-strip-html": "^4.4.4"
   },
   "dependencies": {}
