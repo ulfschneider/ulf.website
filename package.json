@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css",
+  "scripts": {    
+    "serve": "run-p \"serve:*\"",    
+    "serve:css": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css --watch",
+    "serve:11ty": "npx @11ty/eleventy --serve",
+    "build": "run-p \"build:*\"",    
+    "build:css": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css",
+    "build:11ty": "npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,6 +27,7 @@
     "markdown-it-anchor": "^5.3.0",
     "markdown-it-deflist": "^2.0.3",
     "markdown-it-fitmedia": "^0.2.11",
+    "npm-run-all": "^4.1.5",
     "path": "^0.12.7",
     "postcss": "^7.0.32",
     "postcss-cli": "^7.1.1",
