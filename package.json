@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
-  "scripts": {    
-    "serve": "run-p \"serve:*\"",    
+  "scripts": {
+    "serve": "run-p \"serve:*\"",
     "serve:css": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css --watch",
-    "serve:11ty": "npx @11ty/eleventy --serve",
-    "build": "run-p \"build:*\"",    
+    "serve:11ty": "eleventy --serve",
+    "build": "run-p \"build:*\"",
     "build:css": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css",
-    "build:11ty": "npx @11ty/eleventy",
+    "build:11ty": "eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
     "cheerio": "^1.0.0-rc.3",
     "cssnano": "^4.1.10",
     "image-size": "^0.8.3",
