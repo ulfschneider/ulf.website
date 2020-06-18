@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "serve": "run-p \"serve:*\"",
-    "serve:css": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css --watch",
-    "serve:11ty": "eleventy --serve",
+    "serve:11ty": "eleventy --serve",    
+    "serve:css": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css --watch",    
     "build": "run-p \"build:*\"",
     "build:css": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css",
     "build:11ty": "eleventy",
