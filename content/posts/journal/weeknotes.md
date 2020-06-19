@@ -3,6 +3,7 @@ draft: true
 ---
 - https://www.bonfire.com/black-lives-matter-css/
 - https://regex101.com
+- https://m.writewithparkinsons.com/
 - https://www.npmjs.com/package/eleventy-plugin-pwa
 - https://www.jonathan-harrell.com/blog/better-typography-with-font-variants/
 - https://blurha.sh  LKE30U4n9u~C8_-;ozIAyEMxr=pI

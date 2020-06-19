@@ -8,7 +8,7 @@
     --font-weight-bold: 700;
     --heading-letter-spacing: 0;
     --heading-color: black;
-    --fs-mono: 0.8rem;
+    --fs-mono: 0.85rem;
     --fs-h1: var(--fs-4);
     --lh-h1: 1.25em;
     --mrt-h1: 0em;
@@ -19,6 +19,7 @@
     --mrb-figure: var(--space-2);
     --mrt-blockquote: var(--space-2);
     --mrb-blockquote: var(--space-2);
+    --list-item-type: "⁃";
     --fs-h2: 1rem;
     --lh-h2: 1.62em;
     --fs-h3: 1rem;
