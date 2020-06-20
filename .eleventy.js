@@ -1,5 +1,5 @@
-const rss = require("@11ty/eleventy-plugin-rss");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const rss = require('@11ty/eleventy-plugin-rss');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItDefList = require('markdown-it-deflist');
@@ -113,13 +113,14 @@ function addCollections(eleventyConfig) {
 }
 
 function addFilters(eleventyConfig) {
-    eleventyConfig.addFilter("searchIndex", filters.searchIndex);
-    eleventyConfig.addFilter("contentIndex", filters.contentIndex);
-    eleventyConfig.addFilter("excerptIndex", filters.excerptIndex);
-    eleventyConfig.addFilter("firstImage", filters.firstImage);
-    eleventyConfig.addFilter("live", filters.live);
-    eleventyConfig.addFilter("mustContainTag", filters.mustContainTag);
-    eleventyConfig.addFilter("mustNotContainLayout", filters.mustNotContainLayout);
-    eleventyConfig.addFilter("getPrev", filters.getPrev);
-    eleventyConfig.addFilter("getNext", filters.getNext);
+    eleventyConfig.addFilter('searchIndex', filters.searchIndex);
+    eleventyConfig.addFilter('contentIndex', filters.contentIndex);
+    eleventyConfig.addFilter('excerptIndex', filters.excerptIndex);
+    eleventyConfig.addFilter('firstImage', filters.firstImage);
+    eleventyConfig.addFilter('live', filters.live);
+    eleventyConfig.addFilter('humanDate', filters.humanDate);
+    eleventyConfig.addFilter('mustContainTag', filters.mustContainTag);
+    eleventyConfig.addFilter('mustNotContainLayout', filters.mustNotContainLayout);
+    eleventyConfig.addFilter('getPrev', filters.getPrev);
+    eleventyConfig.addFilter('getNext', filters.getNext);
 }

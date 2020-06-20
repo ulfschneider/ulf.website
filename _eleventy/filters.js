@@ -137,6 +137,10 @@ module.exports = {
             }
         }
         return result
+    },
+
+    humanDate: function(d) {
+        return utils.humanDate(d);
     }
 
 }

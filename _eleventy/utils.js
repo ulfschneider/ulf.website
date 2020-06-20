@@ -1,5 +1,7 @@
-const stripHtml = require("string-strip-html");
-const path = require("path");
+const stripHtml = require('string-strip-html');
+const path = require('path');
+const { DateTime } = require('luxon');
+const site = require('../_data/site.js');
 
 module.exports = {
 
@@ -68,6 +70,7 @@ module.exports = {
             id: item.url,
             title: item.data.title,
             date: item.date,
+            humanDate: this.humanDate(item.date),
             subtitle: item.data.subtitle,
             abstract: item.data.abstract,
             author: item.data.author,
@@ -85,5 +88,15 @@ module.exports = {
         const aFileName = path.basename(a.inputPath);
         const bFileName = path.basename(b.inputPath);
         return aFileName.localeCompare(bFileName);
+    },
+
+    humanDate: function (d) {
+        if (d) {
+            const locale = site.locale ? site.locale : 'en';
+            let dt = DateTime.fromMillis(d.getTime());
+            return dt.setLocale(locale).toLocaleString(DateTime.DATE_MED); 
+        } else {
+            return '';
+        }
     }
 }

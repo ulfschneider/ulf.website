@@ -41,32 +41,10 @@ layout: list
         }
     }
 
-    function formatDate(date) {
-        const months = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December'
-        ];
-        let parts = date.split('-');
-        let year = parseInt(parts[0]);
-        let month = parseInt(parts[1]);
-        let day = parseInt(parts[2]);
-
-        return months[month - 1] + ' ' + day + ', ' + year;
-    }
-
     function printResultEntry(parent, entry) {
         if (parent) {
             let friend = friendlyMap.get(entry.ref);
+            console.log(friend);
 
             let article = document.createElement('article');
             parent.appendChild(article);
@@ -122,7 +100,7 @@ layout: list
                         aside.innerHTML += '<span aria-hidden="true"> · </span>';
                     }
                     let date = document.createElement('time');
-                    date.innerHTML += formatDate(friend.date);
+                    date.innerHTML += friend.humanDate;
                     aside.appendChild(date);
                 }
             }
