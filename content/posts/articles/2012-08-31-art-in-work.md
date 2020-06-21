@@ -4,7 +4,7 @@ subtitle: Challenging the status quo is art
 abstract: The Agile Manifesto represents a force that is behind any particular agile procedure like XP, Scrum or Kanban. This force, the culture to challenge the status quo, attracts certain people and companies.
 ---
 
-This text was first published in OBJEKTspektrum, issue 5/2012, under the title ["Die Kunst in der Arbeit, eine Herausforderung des Status quo"][schneider2012]. I have enhanced and translated the initial document to publish it here on *{{site.url | remove:"https://"}}.*
+This text was first published in OBJEKTspektrum, issue 5/2012, under the title ["Die Kunst in der Arbeit, eine Herausforderung des Status quo"][schneider2012]. I have enhanced and translated the initial document to publish it here on *{{site.name}}.*
 
 The Agile Manifesto [[Beck et al. 2001]][agilemanifesto] represents a force that is behind any particular agile procedure like XP, Scrum or Kanban. This force, the culture to challenge the status quo, attracts certain people and companies.
 
@@ -96,5 +96,5 @@ It is not about even more working. Instead, we need to care about a more suitabl
 
 [agilemanifesto]: http://agilemanifesto.org
 [craftsmanship]: http://manifesto.softwarecraftsmanship.org
-[schneider2012]: {{site.url}}/assets/schneider_os_05_12.pdf
+[schneider2012]: /assets/schneider_os_05_12.pdf
 [wikitaylor]: http://en.wikipedia.org/wiki/Frederick_Winslow_Taylor
