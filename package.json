@@ -20,6 +20,7 @@
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.2",
     "cheerio": "^1.0.0-rc.3",
     "cssnano": "^4.1.10",
     "image-size": "^0.8.3",
@@ -35,6 +36,7 @@
     "postcss-cli": "^7.1.1",
     "postcss-discard-comments": "^4.0.2",
     "postcss-import": "^12.0.1",
+    "purgecss-from-html": "^2.2.0",
     "string-strip-html": "^4.4.4"
   },
   "dependencies": {}
