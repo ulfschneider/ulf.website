@@ -4,9 +4,6 @@ module.exports = {
     require('postcss-discard-comments'),
     require('cssnano')({
       preset: 'default',
-    }),
-    require('@fullhuman/postcss-purgecss')({
-      content: ['./**/*.html']
     })
   ]
 }
