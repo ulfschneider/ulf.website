@@ -8,17 +8,17 @@ excludeLayouts: ""
   <subtitle></subtitle>
   <link href="{{ site.url }}{{ site.rss }}" rel="self"/>
   <link href="{{ site.url }}/"/>
-  {% if collections.livePosts | mustNotContainLayout(excludeLayouts) | length %}
+  {%- if collections.livePosts | mustNotContainLayout(excludeLayouts) | length -%}
     <updated>{{ collections.livePosts | mustNotContainLayout(excludeLayouts) | rssLastUpdatedDate }}</updated>
-  {% endif %}
+  {%- endif -%}
   <id>{{ site.url }}</id>
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
   </author>
-  {% for post in collections.livePosts | mustNotContainLayout(excludeLayouts) %}
-    {% if post.data.norss == nil %}
-    {% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
+  {%- for post in collections.livePosts | mustNotContainLayout(excludeLayouts) -%}
+    {%- if post.data.norss == nil -%}
+    {%- set absolutePostUrl -%}{{ site.url }}{{ post.url | url }}{%- endset -%}
     <entry>
       <title>{{ post.data.title }}</title>
       <link href="{{ absolutePostUrl }}"/>
@@ -30,6 +30,6 @@ excludeLayouts: ""
     ]]>
       </content>
     </entry>
-    {% endif %}
-  {% endfor %}
+    {%- endif -%}
+  {%- endfor %}
 </feed>
