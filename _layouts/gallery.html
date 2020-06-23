@@ -8,10 +8,9 @@ nostepnav: true
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        grid-auto-flow: dense;
-        grid-column-gap: var(--space-2);
-        grid-row-gap: var(--space-3);
-        align-items: flex-end;
+        grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+        grid-column-gap: var(--space-3);
+        align-items: flex-start;
     }
 
     .gallery img {
@@ -19,32 +18,16 @@ nostepnav: true
         margin: 0 auto;
     }
 
-    .gallery article:nth-child(13n + 1) {
-        grid-column: 1 / -1;
-    }
-
-    .gallery article:nth-child(6n + 2) {
-        grid-column: -3 / -1;
-    }
-
-    .gallery article:nth-child(6n + 5) {
-        grid-column: 1 / -2;
-    }
-
     @media (max-width: 400px) {
         .gallery {
             display: block;
-        }
-
-        .gallery article {
-            margin: var(--space-2) 0;
         }
     }
 </style>
 {{ content }}
 <div class="breakout">
-    <div id="image-container" class="gallery mry-2"></div>
-    <button id="load-more" class="block mrx-auto mrt-3 mrb-2 width-5">Load more images</button>
+    <div id="image-container" class="gallery"></div>
+    <button id="load-more" class="block mrx-auto width-5">Load more images</button>
 </div>
 
 {%- assign liveContent = collections.livePosts | mustContainTag: tags | reverse %}
@@ -57,18 +40,27 @@ nostepnav: true
     var container = document.getElementById('image-container');
 
     function appendImage(imgData) {
-        let article = document.createElement('article');
-        container.appendChild(article);
+        let figure = document.createElement('figure');
+        container.appendChild(figure);
         let anchor = document.createElement('a');
         anchor.classList = 'no-deco';
         anchor.href = imgData.url;
-        article.appendChild(anchor);
+        figure.appendChild(anchor);
+
         let img = document.createElement('img');
         img.src = imgData.src;
         img.alt = imgData.alt;
         img.classList = 'fit-cover width-100'
         img.setAttribute('loading', 'lazy');
+
         anchor.appendChild(img);
+
+        if (imgData.title) {
+            let figCaption = document.createElement('figcaption');
+            figCaption.innerText = imgData.title;
+            figCaption.classList = 'meta small';
+            figure.appendChild(figCaption);
+        }
     }
 
     function getIndex() {
