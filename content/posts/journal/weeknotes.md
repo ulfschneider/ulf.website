@@ -1,6 +1,9 @@
 ---
 draft: true
 ---
+- https://resilientwebdesign.com
+- https://noti.st/laurakalbag/ESaCQp/sabotaging-our-future-selves
+- Technically Wrong by Sara Wachter-Boetcher
 - https://www.bonfire.com/black-lives-matter-css/
 - https://www.npmjs.com/package/eleventy-plugin-pwa
 - https://www.jonathan-harrell.com/blog/better-typography-with-font-variants/
