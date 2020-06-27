@@ -129,10 +129,13 @@ module.exports = {
             if (img) {
                 let src = utils.srcAttr(img);
                 let alt = utils.altAttr(img);
+                let humanDate = utils.humanDate(item.date);                
                 result.push({
                     src: src,
                     alt: alt,
-                    url: item.url
+                    url: item.url,
+                    title: item.data.title,
+                    humanDate: humanDate,
                 });
             }
         }
