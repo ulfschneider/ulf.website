@@ -32,7 +32,11 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;  
-    background-color: var(--neutral-5);  
+    background-color: var(--neutral-5);      
+}
+
+img+img {
+    margin-top: var(--vertical-rhythm);
 }
 
 figure img {
