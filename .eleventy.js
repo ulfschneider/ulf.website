@@ -4,6 +4,7 @@ const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItDefList = require('markdown-it-deflist');
 const markdownItFitMedia = require('markdown-it-fitmedia');
+const markdownItAttrs = require('markdown-it-attrs');
 
 const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
@@ -55,14 +56,17 @@ function addMarkdownLib(eleventyConfig) {
         breaks: true,
         linkify: true,
         typographer: true
-    }).use(markdownItAnchor, {
-        permalink: true,
-        permalinkClass: 'anchor',
-        permalinkSymbol: '#'
-    }).use(markdownItDefList)
+    })
+        .use(markdownItAnchor, {
+            permalink: true,
+            permalinkClass: 'anchor',
+            permalinkSymbol: '#'
+        })
+        .use(markdownItDefList)
         .use(markdownItFitMedia, {
             imgDir: './content'
-        });
+        })
+        .use(markdownItAttrs);
 
     eleventyConfig.setLibrary('md', mdlib)
 }

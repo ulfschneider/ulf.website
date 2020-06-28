@@ -8,15 +8,18 @@ nostepnav: true
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
-        grid-column-gap: var(--space-3);
+        grid-column-gap: var(--space-2);
+        grid-row-gap: var(--space-2);
         align-items: flex-start;
     }
 
-    .gallery img {
-        vertical-align: bottom;
-        margin: 0 auto;
+    .gallery figure {
+        padding-bottom: 100%;
+        margin: 0;
     }
+
+    .gallery figure img {
+        height: 100%;
 
     @media (max-width: 400px) {
         .gallery {
@@ -27,7 +30,7 @@ nostepnav: true
 {{ content }}
 <div class="breakout">
     <div id="image-container" class="gallery"></div>
-    <button id="load-more" class="block mrx-auto width-5">Load more images</button>
+    <button id="load-more" class="block mrt-2 mrx-auto width-5">Load more images</button>
 </div>
 
 {%- assign liveContent = collections.livePosts | mustContainTag: tags | reverse %}
@@ -41,6 +44,7 @@ nostepnav: true
 
     function appendImage(imgData) {
         let figure = document.createElement('figure');
+        figure.classList = 'relative'
         container.appendChild(figure);
         let anchor = document.createElement('a');
         anchor.classList = 'no-deco';
@@ -50,17 +54,11 @@ nostepnav: true
         let img = document.createElement('img');
         img.src = imgData.src;
         img.alt = imgData.alt;
-        img.classList = 'fit-cover width-100'
+        img.classList = 'fit-cover absolute top-0 left-0 w-100 h-100'
         img.setAttribute('loading', 'lazy');
 
         anchor.appendChild(img);
 
-        if (imgData.title) {
-            let figCaption = document.createElement('figcaption');
-            figCaption.innerText = imgData.title;
-            figCaption.classList = 'meta small';
-            figure.appendChild(figCaption);
-        }
     }
 
     function getIndex() {

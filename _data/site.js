@@ -1,3 +1,4 @@
+
 module.exports = {
     name: "ulf.codes",
     locale: "en",
@@ -7,7 +8,9 @@ module.exports = {
     description: "Hi, I´m Ulf Schneider, a developer and agile coach living in Paderborn, Germany.",
     author: {
         name: "Ulf Schneider",
-        email: "mail@ulf.codes"
+        email: "mail@ulf.codes",
+        emailUser: "mail",
+        emailDomain: "ulf.codes"
     },
     rss: "/rss.xml",
     colophon: "/colophon/",
