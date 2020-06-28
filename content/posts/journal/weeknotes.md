@@ -2,6 +2,7 @@
 draft: true
 ---
 - https://ifttt.com
+- https://addyosmani.com/resources/essentialjsdesignpatterns/book/
 - https://www.bonfire.com/black-lives-matter-css/
 - https://www.npmjs.com/package/eleventy-plugin-pwa
 - https://www.jonathan-harrell.com/blog/better-typography-with-font-variants/
