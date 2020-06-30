@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "run-p \"serve:*\"",
-    "serve:11ty": "eleventy --serve",
-    "serve:css": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css --watch",
-    "build": "run-p \"build:*\"",
-    "build:css": "postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css",
-    "build:11ty": "eleventy",
+    "serve": "gulp && concurrently \"gulp watch\" \"eleventy --serve\" \"postcss _assets/css/combine.css  --config postcss.config.js --output _assets/css/main.css --watch\"",
+    "build": "gulp && eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +19,7 @@
     "Base64": "^1.1.0",
     "autoprefixer": "^9.8.2",
     "cheerio": "^1.0.0-rc.3",
+    "concurrently": "^5.2.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
