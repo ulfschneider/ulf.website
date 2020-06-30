@@ -31,13 +31,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'content/img': '/img' });
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
 
-    eleventyConfig.addPassthroughCopy('*.png');
-    eleventyConfig.addPassthroughCopy('*.ico');
-    eleventyConfig.addPassthroughCopy('*.svg');
-
-    eleventyConfig.addPassthroughCopy('serviceworker.js');
-    eleventyConfig.addPassthroughCopy('manifest.json');
-
     eleventyConfig.addPlugin(rss);
     eleventyConfig.addPlugin(syntaxHighlight);
 
