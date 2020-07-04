@@ -22,6 +22,7 @@
     "concurrently": "^5.2.0",
     "cssnano": "^4.1.10",
     "fs": "0.0.1-security",
+    "get-google-fonts": "^1.2.2",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0",
