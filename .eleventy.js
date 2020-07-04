@@ -25,7 +25,7 @@ module.exports = function (eleventyConfig) {
     ]);
 
     eleventyConfig.addPassthroughCopy({ '_root': '/' });
-    eleventyConfig.addPassthroughCopy({ '_assets/css': '/css' });
+    //eleventyConfig.addPassthroughCopy({ '_assets/css': '/css' });
     eleventyConfig.addPassthroughCopy({ '_assets/fonts': '/fonts' });
     eleventyConfig.addPassthroughCopy({ '_assets/js': '/js' });
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
