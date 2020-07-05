@@ -4,14 +4,9 @@
 	<head>
 		{% include head.html %}
 		<style>
-			.image .title * {
-				line-height: var(--lh-2);
+			.image .title * {				
 				font-size: var(--fs-d1);
-			}
-
-			.image .title .sub-title {
-				color: var(--meta-color);
-			}
+			}			
 		</style>
 	</head>
 
@@ -24,11 +19,11 @@
 		<main class="x indent word-wrap image">
 
 			<div class="flex justify-space-between mrb-2">
-				<div class="small lh-2 mrr mxw-6">
+				<div class="mrr mxw-6">
 					{% include title.html %}
 				</div>
 				{%- if nostepnav == nil -%}
-					<div class="lh-2 small">
+					<div class="lh-2">
 						{% include step-navigation.html shortnav: true %}
 					</div>
 				{%- endif -%}
