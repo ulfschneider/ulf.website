@@ -5,8 +5,8 @@ const css = require('./_gulp/css.js');
 const { series, watch } = require('gulp');
 
 const watcher = () => {
-    watch('./content/img/**/*', { ignoreInitial: true }, images);
-    watch('./_assets/css/**/*', { ignoreInitial: true }, css);
+    watch('content/img/**/*', { ignoreInitial: true }, images);
+    watch('_assets/css/**/*', { ignoreInitial: true }, css);
 };
 
 exports.default = series([images, css]);
