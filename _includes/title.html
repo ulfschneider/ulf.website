@@ -1,15 +1,15 @@
 {%- if title != "notitle" and notitle == nil -%}
     <section class="title no-indent">
         {%- if title  -%}
-            <h1 class="lh-2 fs-2">{{ title }}</h1>
+            <h1>{{ title }}</h1>
         {%- endif -%}
 
         {%- if subtitle  -%}
-            <div class="mrt-d2 lh-2 sub-title heading-font">{{subtitle}}</div>
+            <div class="lh-2 mrt-d2 small meta sub-title">{{subtitle}}</div>
         {%- endif -%}
 
         {%- if refer  -%}
-            <div class="mrb-0 mrt-d2 lh-2 small meta refer">{{refer}}</div>
+            <div class="lh-2 mrt-d2 small meta refer">{{refer}}</div>
         {%- endif -%}
 
         {%- if page.date and nodate == nil -%}
@@ -27,7 +27,7 @@
         {%- endif -%}
 
         {%- if author or hasdate or hastags  -%}
-            <aside class="lh-2 small meta mrt-d2">
+            <aside class="lh-2 mrt-d2 small meta">
                 {% include author-and-date.html %}
                 {% include tags.html %}                
             </aside>

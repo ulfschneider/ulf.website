@@ -9,9 +9,8 @@
     --heading-letter-spacing: 0;
     --heading-color: black;
     --fs-mono: 0.85rem;
-    --fs-h1: var(--fs-4);
-    --lh-h1: 1.25em;
-    --mrt-h1: 0em;
+    --fs-h1: var(--fs-2);
+    --mrt-h1: 0;
     --mrb-h1: 0;
     --mrt-figure: var(--space-2);
     --mrb-figure: var(--space-2);
@@ -32,7 +31,11 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;  
-    background-color: var(--neutral-5);  
+    background-color: var(--neutral-5);      
+}
+
+img+img {
+    margin-top: var(--vertical-rhythm);
 }
 
 figure img {
