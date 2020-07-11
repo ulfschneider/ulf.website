@@ -1,6 +1,7 @@
 ---
 draft: true
 ---
+- https://alistapart.com/article/webwaste/
 - https://truefilms.com
 - https://resilientwebdesign.com
 - https://noti.st/laurakalbag/ESaCQp/sabotaging-our-future-selves
