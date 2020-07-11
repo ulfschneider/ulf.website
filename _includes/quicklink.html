@@ -1,4 +1,8 @@
 <script src="/js/quicklink.min.js"></script>
 <script>
-    quicklink.listen();
+    if (navigator.serviceWorker) {
+        //quickling should only run in conjunction
+        //with service worker caching
+        quicklink.listen();
+    }
 </script>

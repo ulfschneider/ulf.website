@@ -1,12 +1,14 @@
 ---
 draft: true
 ---
+- https://automattic.design/2020/07/09/sticking-to-it/
 - https://alistapart.com/article/webwaste/
 - https://truefilms.com
 - https://resilientwebdesign.com
 - https://noti.st/laurakalbag/ESaCQp/sabotaging-our-future-selves
 - Technically Wrong by Sara Wachter-Boetcher
 - https://ifttt.com
+- https://addyosmani.com/resources/essentialjsdesignpatterns/book/
 - https://www.bonfire.com/black-lives-matter-css/
 - https://www.npmjs.com/package/eleventy-plugin-pwa
 - https://www.jonathan-harrell.com/blog/better-typography-with-font-variants/
@@ -24,7 +26,6 @@ draft: true
 - https://blurha.sh
 - https://www.smashingmagazine.com/2019/07/css-lists-markers-counters/
 - - https://instant.page
-- https://24ways.org/2018/turn-jekyll-up-to-eleventy/
 - See https://css-tricks.com/turning-a-fixed-size-object-into-a-responsive-element/ together with http://marvelapp.github.io/devices.css/
 - https://moderncss.dev
 - https://github.com/jbranchaud/til
