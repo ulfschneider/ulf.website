@@ -23,7 +23,6 @@ draft: true
 - https://blurha.sh
 - https://www.smashingmagazine.com/2019/07/css-lists-markers-counters/
 - - https://instant.page
-- https://24ways.org/2018/turn-jekyll-up-to-eleventy/
 - See https://css-tricks.com/turning-a-fixed-size-object-into-a-responsive-element/ together with http://marvelapp.github.io/devices.css/
 - https://moderncss.dev
 - https://github.com/jbranchaud/til
