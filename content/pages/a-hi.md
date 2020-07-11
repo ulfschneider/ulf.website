@@ -7,7 +7,7 @@ nodate: true
 notags: true
 ---
 
-<h1 class="breakout-l mrb-3">Hi, my name is <span class="inline-block">Ulf Schneider</span></h1>
+<h1 class="breakout-l">Hi, my name is <span class="inline-block">Ulf Schneider</span></h1>
 
 <figure>
 <img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-400.jpg" srcset="/img/ulf/ulf-16x9-400.jpg 400w, /img/ulf/ulf-16x9-600.jpg" alt="Portrait of Ulf Schneider">
