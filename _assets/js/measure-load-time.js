@@ -17,6 +17,6 @@ addEventListener('load', event => {
     }
 
     if (duration) {
-        loadTime.innerHTML = 'This page loaded in ' + (duration / 1000).toFixed(3) + ' seconds';
+        loadTime.innerHTML = 'This page loaded in ' + (duration / 1000).toFixed(2) + ' seconds';
     }
 });

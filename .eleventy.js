@@ -47,7 +47,7 @@ function addMarkdownLib(eleventyConfig) {
         html: true,
         breaks: true,
         linkify: true,
-        typographer: true
+        typographer: false
     })
         .use(markdownItAnchor, {
             permalink: true,
