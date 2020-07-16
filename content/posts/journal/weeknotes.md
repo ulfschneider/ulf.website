@@ -4,6 +4,7 @@ draft: true
 - https://automattic.design/2020/07/09/sticking-to-it/
 - https://alistapart.com/article/webwaste/
 - https://truefilms.com
+- https://remove.bg
 - https://resilientwebdesign.com
 - https://noti.st/laurakalbag/ESaCQp/sabotaging-our-future-selves
 - Technically Wrong by Sara Wachter-Boetcher
