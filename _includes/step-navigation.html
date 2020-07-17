@@ -7,12 +7,14 @@
     {%- if prev or next -%}
 
         {%- if shortnav == nil -%}
-            {%- assign topMargin = " mrt-1" -%}
+            {%- assign topMargin = "mrt-2" -%}
+        {%- else -%}
+            {%- assign bottomMargin = "mrb" -%}
         {%- endif -%}
 
-        <nav class="clearfix step-navigation small lh-2{{topMargin}}">
+        <nav class="clearfix step-navigation small lh-2">
             {%- if next  -%}
-                <div class="float-left">
+                <div class="float-left {{topMargin}} {{bottomMargin}}">
                     <a class="no-deco meta" href="{{ next.url }}">
                         <div class="no-wrap">
                             <span aria-hidden="true">&lt;&nbsp;</span>
@@ -28,7 +30,7 @@
             {%- endif -%}
 
             {%- if prev  -%}
-                <div class="float-right mrl right">
+                <div class="float-right mrl right {{topMargin}}">
                     <a class="no-deco meta" href="{{ prev.url }}">
                         <div class="no-wrap">
                             <span>Older</span>

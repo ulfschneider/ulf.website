@@ -17,9 +17,9 @@
     --mrt-blockquote: var(--space-2);
     --mrb-blockquote: var(--space-2);
     --fs-h2: 1rem;
-    --lh-h2: 1.62em;
+    --lh-h2: unset;
     --fs-h3: 1rem;
-    --lh-h3: 1.62em;
+    --lh-h3: unset;
     --heading-font-weight: 700;
     --pre-background: var(--neutral-5);
     --accent-three-h: 98.1;
