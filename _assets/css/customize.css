@@ -1,9 +1,10 @@
 :root {
-    --font-family: "IBM Plex Serif", Georgia, serif;
-    --heading-font-family: "IBM Plex Sans", sans-serif;
-    --form-font-family: "IBM Plex Sans", sans-serif;
-    --meta-font-family: "IBM Plex Sans", sans-serif;
-    --mono-font-family: "IBM Plex Mono", monospace;
+    --base-font-size: 20px;
+    --font-family: Georgia, serif;
+    --heading-font-family: sans-serif;
+    --form-font-family:  sans-serif;
+    --meta-font-family:  sans-serif;
+    --mono-font-family: monospace;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
     --heading-letter-spacing: 0;
