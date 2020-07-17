@@ -2,8 +2,6 @@
 title: The Details
 refer: Blog post by Matthias Ott
 ---
-Boy, how I like that:
-
 <blockquote>The details are not the details; they make the product.
 <footer>Charles and Ray Eames</footer>
 </blockquote>
