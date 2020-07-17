@@ -1,6 +1,9 @@
 ---
 draft: true
 ---
+- betterwebtype.com
+- adamsilver.io/reading/
+- Rest by Alex Soojung-Kim Pang
 - https://automattic.design/2020/07/09/sticking-to-it/
 - https://alistapart.com/article/webwaste/
 - https://www.websitecarbon.com/website/ulf-codes-articles/
