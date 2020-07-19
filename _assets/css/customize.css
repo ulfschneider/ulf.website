@@ -44,12 +44,6 @@ figure img {
     margin-right: unset;
 }
 
-@media (min-width:650px) {
-    img {
-        max-height: 70vh;
-    }
-}
-
 nav ul li {
     margin-right: var(--space-d1);
 }
