@@ -16,13 +16,10 @@ nostepnav: true
 
     article:last-child {
         margin-bottom: 0;
+    }
 </style>
 {%- assign count = 0 -%}
-{%- assign siteYear = site.time | date: '%Y' -%}
-{%- assign indexYear = 0 -%}
-
 {%- assign liveContent = collections.livePosts | mustContainTag: tags | reverse %}
-
 <div>
     {%- for p in liveContent -%}
 
@@ -31,7 +28,6 @@ nostepnav: true
         {%- endif -%}
 
         {%- assign pageYear = p.date | date: '%Y' -%}
-        {%- assign count = count | plus: 1 -%}
 
         {%- assign href = p.url -%}
 
@@ -41,6 +37,8 @@ nostepnav: true
                 {%- assign indexYear = pageYear -%}
             </time>
         {%- endif -%}
+
+        {%- assign count = count | plus: 1 -%}
 
         <article>
             {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
