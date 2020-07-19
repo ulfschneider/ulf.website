@@ -12,7 +12,7 @@ const IMAGE_CACHE_NAME = `${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
 const RUNTIME_CACHE_NAME = `${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
 const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME];
 
-const SERVE_HTML_CACHE_FIRST = true;
+const SERVE_HTML_CACHE_FIRST = false; 
 const NO_REVALIDATE_WITHIN_MINUTES = 10;
 
 const CACHE_SETTINGS = {
@@ -439,7 +439,7 @@ function isExpired(response) {
     return false;
 }
 
-//it´s okay to only revalidate if the last cache update
+//only revalidate if the last cache update
 //is more than NO_REVALIDATE_WITHIN_MINUTES ago
 function isAllowRevalidate(response, url) {
     let date = getDateTimestamp(response);
