@@ -6,7 +6,7 @@ Our weed-covered land is starting to transform. This house project seems to deve
 I´m posting a timeline of images here to document the progress.
 
 <figure>
-<figcaption>19 Apr, 2020: Emil is running across a weed field. This is the place where we are building our house.</figcaption>
+<figcaption>19 Apr, 2019: Emil is running across a weed field. This is the place where we are building our house.</figcaption>
 <img src="/img/house/DSCF3529.jpg">
 </figure>
 
@@ -17,7 +17,12 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure>
-<figcaption>Jul 14, 2020: My brother is making the measurements to prepare the underground engineering.</figcaption>
+<figcaption>Jul 6, 2020: We are in Falkenberg to decide the complete interior design of the house – within a duration of two days. Our builder, Haas, is taking care of accomodations and after the first day of work we are enjoying dinner in the beer garden of our hotel.</figcaption>
+<img src="/img/house/IMG_1356.jpg" >
+</figure>
+
+<figure>
+<figcaption>Jul 14, 2020: My brother is doing the measurements to prepare the underground engineering.</figcaption>
 <img src="/img/house/IMG_1387.jpg">
 <img src="/img/house/IMG_1392.jpg">
 <img src="/img/house/IMG_1393.jpg">
