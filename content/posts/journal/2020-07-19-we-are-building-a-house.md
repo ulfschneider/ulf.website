@@ -6,7 +6,7 @@ Our weed-covered land is starting to transform. This house project might take a 
 I´m posting a timeline of images here to document the progress.
 
 <figure>
-<figcaption>19 Apr, 2019: Emil is running across a weed field. This is the place where we are building our house.</figcaption>
+<figcaption>19 Apr, 2019: Emil is running across a weed field. This is the place where we are going to build our house.</figcaption>
 <img src="/img/house/DSCF3529.jpg">
 </figure>
 
