@@ -29,7 +29,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure>
-<figcaption>Jul 19, 2020: Heavy machinery is brought in place to do the excavation work. Our partner here is <a href="https://westermann-paderborn.de">Andre Westermann</a>.</figcaption>
+<figcaption>Jul 19, 2020: Heavy machinery is brought into place to do the excavation work. Our partner here is <a href="https://westermann-paderborn.de">Andre Westermann</a>.</figcaption>
 <img src="/img/house/IMG_1406.jpg">
 <img src="/img/house/IMG_1403.jpg">
 <img src="/img/house/IMG_1410.jpg">
