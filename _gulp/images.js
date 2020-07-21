@@ -1,4 +1,5 @@
 const { dest, src } = require('gulp');
+const PluginError = require('plugin-error');
 
 const sharp = require('sharp');
 const through = require('through2');
@@ -7,12 +8,13 @@ const SOURCE = 'content/img/**/*';
 const DEST = '_site/img/';
 const site = require('../_data/site.js');
 const MAX_WIDTH = site.imgMaxWidth ? site.imgMaxWidth : 600;
+const PLUGIN_NAME = 'gulp-optimize-images';
 
-const imageError = function (err) {
-    console.error('There is an error while processing the image ' + err);
+const imageError = err => {
+    this.emit('error', new PluginError(PLUGIN_NAME, 'There is an error while processing the image' + err));
 }
 
-const imageTransformer = function (file, encoding, callback) {
+const imageTransformer = (file, encoding, callback) => {
     if (!file.isNull()) {
         image = sharp(file.contents);
         image.metadata()
