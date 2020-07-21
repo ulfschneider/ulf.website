@@ -26,7 +26,7 @@ const googleFontUrl = GetGoogleFonts.constructUrl(
     ['latin'],
     'swap');
 
-const fonts = async () => {
+const processingFonts = async () => {
     console.log('Loading fonts ' + googleFontUrl);
     const instance = new GetGoogleFonts({
         path:       '/fonts/',
@@ -43,4 +43,4 @@ const fonts = async () => {
     return result;
 };
 
-module.exports = fonts;
+module.exports = processingFonts;

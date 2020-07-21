@@ -1,59 +1,45 @@
 const { dest, src } = require('gulp');
-const newer = require('gulp-newer');
-const gulpif = require('gulp-if');
 
+const sharp = require('sharp');
 const through = require('through2');
-const path = require('path')
-const scaleImages = require('gulp-scale-images');
-const imagemin = require('gulp-imagemin');
 
 const SOURCE = 'content/img/**/*';
 const DEST = '_site/img/';
-
 const site = require('../_data/site.js');
-const MAX_WIDTH = site.imgMaxWidth;
-const NEWER = site.newer == undefined ? true : site.newer;
+const MAX_WIDTH = site.imgMaxWidth ? site.imgMaxWidth : 600;
 
-const computeScaleInstructions = (file, _, cb) => {
-    file.scale = {
-        maxWidth: MAX_WIDTH,
-    }
-    cb(null, file)
+const imageError = function (err) {
+    console.error('There is an error while processing the image ' + err);
 }
 
-const computeFileName = (output, scale, cb) => {
-    const fileName = path.basename(output.path);
-    cb(null, fileName)
-}
-
-const images = () => {
-    if (!NEWER) {
-        console.log('newer is configured to be false in site.js, therefore optimizing all images');
+const imageTransformer = function (file, encoding, callback) {
+    if (!file.isNull()) {
+        image = sharp(file.contents);
+        image.metadata()
+            .then(metadata => {
+                if (metadata.width > MAX_WIDTH) {
+                    image.resize(MAX_WIDTH).toBuffer((err, buffer) => {
+                        file.contents = buffer;
+                        callback(null, file);
+                    });
+                } else {
+                    //do nothing
+                    callback(null, file);
+                }
+            }).catch(imageError);
     } else {
-        console.log('Optimizing only images where the source is newer than the destination');
+        //do nothing
+        callback(null, file);
     }
-    if (MAX_WIDTH <= 0) {
-        console.log('No imgMaxWidth set in site.js, therefore not scaling down images');
-    }
-    
+}
+
+//FIXME error handling with proper file name
+
+const processingImages = () => {
+    console.log('Optimizing and resizing images for imgMaxWidth=' + MAX_WIDTH + '. Change this setting in _data/site.js if desired.');
     return src(SOURCE)
-        .pipe(gulpif(NEWER, newer(DEST)))
-        .pipe(gulpif(MAX_WIDTH > 0,
-            through.obj(computeScaleInstructions)))
-        .pipe(gulpif(MAX_WIDTH > 0,
-            scaleImages(computeFileName)))
-        .pipe(
-            imagemin(
-                [
-                    imagemin.gifsicle({ interlaced: true }),
-                    imagemin.mozjpeg({ quality: 85, progressive: true }),
-                    imagemin.optipng({ optimizationLevel: 5, interlaced: null })
-                ], {
-                verbose: true
-            }
-            )
-        )
+        .pipe(through.obj(imageTransformer))
         .pipe(dest(DEST));
 };
 
-module.exports = images;
+module.exports = processingImages;
