@@ -1,38 +1,44 @@
 const { dest, src } = require('gulp');
-const gulpif = require('gulp-if');
 
+const sharp = require('sharp');
 const through = require('through2');
-const path = require('path')
-const scaleImages = require('gulp-scale-images');
 
 const SOURCE = 'content/img/**/*';
 const DEST = '_site/img/';
-
 const site = require('../_data/site.js');
-const MAX_WIDTH = site.imgMaxWidth;
+const MAX_WIDTH = site.imgMaxWidth ? site.imgMaxWidth : 600;
 
-const computeScaleInstructions = (file, _, cb) => {
-    file.scale = {
-        maxWidth: MAX_WIDTH,
+const imageError = function (err) {
+    console.error('There is an error while processing the image ' + err);
+}
+
+const imageTransformer = function (file, encoding, callback) {
+    if (!file.isNull()) {
+        image = sharp(file.contents);
+        image.metadata()
+            .then(metadata => {
+                if (metadata.width > MAX_WIDTH) {
+                    image.resize(MAX_WIDTH).toBuffer((err, buffer) => {
+                        file.contents = buffer;
+                        callback(null, file);
+                    });
+                } else {
+                    //do nothing
+                    callback(null, file);
+                }
+            }).catch(imageError);
+    } else {
+        //do nothing
+        callback(null, file);
     }
-    cb(null, file)
 }
 
-const computeFileName = (output, scale, cb) => {
-    const fileName = path.basename(output.path);
-    cb(null, fileName)
-}
+//FIXME error handling with proper file name
 
 const processingImages = () => {
-    if (MAX_WIDTH <= 0) {
-        console.warn('No imgMaxWidth set in site.js, therefore not scaling down images');
-    }
-
+    console.log('Optimizing and resizing images for imgMaxWidth=' + MAX_WIDTH + '. Change this setting in _data/site.js if desired.');
     return src(SOURCE)
-        .pipe(gulpif(MAX_WIDTH > 0,
-            through.obj(computeScaleInstructions)))
-        .pipe(gulpif(MAX_WIDTH > 0,
-            scaleImages(computeFileName)))
+        .pipe(through.obj(imageTransformer))
         .pipe(dest(DEST));
 };
 
