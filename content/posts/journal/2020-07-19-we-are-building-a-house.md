@@ -34,3 +34,8 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1403.jpg">
 <img src="/img/house/IMG_1410.jpg">
 </figure>
+
+<figure>
+<figcaption>Jul 21, 2020: Day 1 of excavation work.</figcaption>
+<img src="/img/house/IMG_1432.jpg">
+</figure>
