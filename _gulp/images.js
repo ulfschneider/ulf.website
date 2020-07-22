@@ -29,9 +29,6 @@ const deriveOperations = function (metadata) {
         }
         operations.push({ operation: 'resize', arguments: [dimensions] });
     }
-    if (MAX_HEIGHT > 0 && metadata.width > MAX_HEIGHT) {
-        operations.push({ operation: 'resize', arguments: [{ height: MAX_HEIGHT }] });
-    }
     if (metadata.format == 'jpeg' && JPEG_QUALITY) {
         operations.push({ operation: 'jpeg', arguments: [{ quality: JPEG_QUALITY }] });
     }
