@@ -27,10 +27,10 @@ const deriveOperations = function (metadata) {
         if (MAX_HEIGHT > 0 && metadata.height > MAX_HEIGHT) {
             dimensions.height = MAX_HEIGHT;
         }
-        operations.push({ operation: 'resize', arguments: [dimensions] });
+        operations.push({ name: 'resize', arguments: [dimensions] });
     }
     if (metadata.format == 'jpeg' && JPEG_QUALITY) {
-        operations.push({ operation: 'jpeg', arguments: [{ quality: JPEG_QUALITY }] });
+        operations.push({ name: 'jpeg', arguments: [{ quality: JPEG_QUALITY }] });
     }
     return operations;
 }
@@ -43,7 +43,7 @@ const imageTransformer = (file, encoding, callback) => {
                 let operations = deriveOperations(metadata);
 
                 for (let op of operations) {
-                    image = image[op.operation].apply(image, op.arguments);
+                    image = image[op.name].apply(image, op.arguments);
                 }
                 image.toBuffer((err, buffer) => {
                     file.contents = buffer;
