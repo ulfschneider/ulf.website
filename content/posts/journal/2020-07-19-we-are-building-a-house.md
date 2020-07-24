@@ -41,8 +41,8 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1451.jpg">
 <img src="/img/house/IMG_1457.jpg">
 <img src="/img/house/IMG_1460.jpg">
-<img src="/img/house/IMG_1461.jpg">
 <img src="/img/house/IMG_1463.jpg">
+<img src="/img/house/IMG_1461.jpg">
 </figure>
 
 <figure>
