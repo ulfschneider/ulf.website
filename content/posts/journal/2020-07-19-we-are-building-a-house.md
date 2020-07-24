@@ -36,10 +36,18 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure>
-<figcaption>Jul 21, 2020: Day 1 of excavation work. Our ground is rock and stones.</figcaption>
+<figcaption>Jul 21, 2020: Day one of excavation work. Our ground is rock and stones.</figcaption>
 <img src="/img/house/IMG_1432.jpg">
 <img src="/img/house/IMG_1451.jpg">
+<img src="/img/house/IMG_1457.jpg">
 <img src="/img/house/IMG_1460.jpg">
 <img src="/img/house/IMG_1461.jpg">
 <img src="/img/house/IMG_1463.jpg">
+</figure>
+
+<figure>
+<figcaption>Jul 22, 2020: After only two days the excavation work is completed.</figcaption>
+<img src="/img/house/IMG_1468.jpg">
+<img src="/img/house/IMG_1471.jpg">
+<img src="/img/house/IMG_1474.jpg">
 </figure>
