@@ -36,7 +36,8 @@ const CACHE_SETTINGS = {
 const OFFLINE_URL = '/offline/';
 
 const NO_CACHE_URLS = [
-    '/feed.xml/'
+    '/feed.xml/',
+    '/feed.xml'
 ]
 
 const PRECACHE_URLS = [
@@ -44,20 +45,7 @@ const PRECACHE_URLS = [
     '/',
     '/js/quicklink.min.js',
     '/js/measure-load-time.js',
-    '/fonts/ibm-plex-serif-v8-latin-regular.woff2',
-    '/fonts/ibm-plex-serif-v8-latin-italic.woff2',
-    '/fonts/ibm-plex-serif-v8-latin-700.woff2',
-    '/fonts/ibm-plex-serif-v8-latin-700italic.woff2',
-    '/fonts/ibm-plex-sans-v7-latin-regular.woff2',
-    '/fonts/ibm-plex-sans-v7-latin-italic.woff2',
-    '/fonts/ibm-plex-sans-v7-latin-200.woff2',
-    '/fonts/ibm-plex-sans-v7-latin-700.woff2',
-    '/fonts/ibm-plex-sans-v7-latin-700italic.woff2',
-    '/fonts/ibm-plex-mono-v5-latin-regular.woff2',
-    '/fonts/ibm-plex-mono-v5-latin-italic.woff2',
-    '/fonts/ibm-plex-mono-v5-latin-700.woff2',
-    '/fonts/ibm-plex-mono-v5-latin-700italic.woff2',
-    '/js/lunr.min.js',
+    '/js/lunr.min.js'
 ];
 
 
@@ -232,11 +220,6 @@ async function fetchAndCache(request, options) {
     return fetch(request)
         .then(async responseFromNetwork => {
 
-            if (NO_CACHE_URLS.includes(url)) {
-                return responseFromNetwork;
-            }
-
-
             if (isHtmlRequest(request)) {
                 await stashInCache({
                     cacheName: RUNTIME_CACHE_NAME,
@@ -379,7 +362,11 @@ async function trimCache({ cacheName, maxItems }) {
 }
 
 function isValidToCache({ request, response }) {
-    const url = new URL(request.url);
+    const url = new URL(request.url);  
+    if (NO_CACHE_URLS.includes(url.pathname)) {
+        console.log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
+        return false;
+    }
     if (/^\/browser-sync\//.test(url.pathname)) {
         console.log(`Refusing to cache because of browser-sync request: ${request.url}`);
         return false;
