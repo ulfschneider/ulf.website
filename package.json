@@ -17,7 +17,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "Base64": "^1.1.0",
-    "autoprefixer": "^9.8.2",
+    "autoprefixer": "^9.8.5",
     "cheerio": "^1.0.0-rc.3",
     "concurrently": "^5.2.0",
     "cssnano": "^4.1.10",
@@ -43,7 +43,7 @@
     "postcss-import": "^12.0.1",
     "purgecss-from-html": "^2.2.0",
     "sharp": "^0.25.4",
-    "string-strip-html": "^4.4.4",
+    "string-strip-html": "^4.5.0",
     "through2": "^4.0.2"
   },
   "dependencies": {}
