@@ -5,10 +5,14 @@ Our weed-covered land is starting to transform. This house project might take a 
 
 I´m posting a timeline of images here to document the progress.
 
+## The ground
+
 <figure>
 <figcaption>19 Apr, 2019: Emil is running across a weed field. This is the place where we are going to build our house.</figcaption>
 <img src="/img/house/DSCF3529.jpg">
 </figure>
+
+## The envisioned house
 
 <figure>
 <figcaption>Oct 2019 - Apr 2020: Architecture work, some impressions.</figcaption>
@@ -21,12 +25,16 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1356.jpg" >
 </figure>
 
+## The initial measurement
+
 <figure>
 <figcaption>Jul 14, 2020: My brother is doing the measurements to prepare the underground engineering.</figcaption>
 <img src="/img/house/IMG_1387.jpg">
 <img src="/img/house/IMG_1392.jpg">
 <img src="/img/house/IMG_1393.jpg">
 </figure>
+
+## The excavation
 
 <figure>
 <figcaption>Jul 19, 2020: Heavy machinery is brought into place to do the excavation work. Our partner here is <a href="https://westermann-paderborn.de">Andre Westermann</a>.</figcaption>
@@ -50,4 +58,14 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1468.jpg">
 <img src="/img/house/IMG_1471.jpg">
 <img src="/img/house/IMG_1474.jpg">
+</figure>
+
+## Fine measurement
+
+<figure>
+<figcaption>Jul 27, 2020: My brother is doing the fine measurements. We have a problem. The ground is so solid that we cannot bring in the steel posts properly. They go only as deep that it holds like spit-glued. Fortunately our cellar builder is capable enough and willing to go ahead with it.</figcaption>
+<img src="/img/house/IMG_1515.jpg" alt="">
+<img src="/img/house/IMG_1516.jpg" alt="">
+<img src="/img/house/IMG_1524.jpg" alt="">
+<img src="/img/house/IMG_1530.jpg" alt="">
 </figure>
