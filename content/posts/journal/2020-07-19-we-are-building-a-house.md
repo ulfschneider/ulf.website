@@ -5,6 +5,8 @@ Our weed-covered land is starting to transform. This house project might take a 
 
 I´m posting a timeline of images here to document the progress.
 
+[[toc]]
+
 ## The ground
 
 <figure>
@@ -60,7 +62,7 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1474.jpg">
 </figure>
 
-## Fine measurement
+## The fine measurement
 
 <figure>
 <figcaption>Jul 27, 2020: My brother is doing the fine measurements. We have a problem. The ground is so solid that we cannot bring in the steel posts properly. They go only as deep that it holds like spit-glued. Fortunately our cellar builder is capable enough and willing to go ahead with it.</figcaption>

@@ -2,6 +2,7 @@ const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
+const markdownItTocDoneRight = require('markdown-it-toc-done-right');
 const markdownItDefList = require('markdown-it-deflist');
 const markdownItFitMedia = require('markdown-it-fitmedia');
 const markdownItAttrs = require('markdown-it-attrs');
@@ -53,6 +54,9 @@ function addMarkdownLib(eleventyConfig) {
             permalink: true,
             permalinkClass: 'anchor',
             permalinkSymbol: '#'
+        })
+        .use(markdownItTocDoneRight, {
+            placeholder: '[[toc]]'
         })
         .use(markdownItDefList)
         .use(markdownItFitMedia, {
