@@ -3,34 +3,7 @@ title: Pocket Git Guide
 subtitle: A short entry-level approach to Git
 ---
 
-<h2>Contents</h2>
-
-- [Reasons to use Git](#reasons-to-use-git)
-- [Get Git on your Mac](#get-git-on-your-mac)
-- [Get Git on Windows](#get-git-on-windows)
-- [The Git shell](#the-git-shell)
-- [Tell Git who you are](#tell-git-who-you-are)
-- [Get help from Git](#get-help-from-git)
-- [Create a new local repository](#create-a-new-local-repository)
-- [Status of your repository](#status-of-your-repository)
-- [Stage to tell Git what to refer to](#stage-to-tell-git-what-to-refer-to)
-- [Commit to make a snapshot of your work](#commit-to-make-a-snapshot-of-your-work)
-- [The commit message](#the-commit-message)
-- [Removing files](#removing-files)
-- [Renaming files](#renaming-files)
-- [Ignoring files](#ignoring-files)
-- [Branch to isolate](#branch-to-isolate)
-- [Compare your working directory](#compare-your-working-directory)
-- [Merge to include](#merge-to-include)
-- [Remove or rename a branch](#remove-or-rename-a-branch)
-- [Rewind your work](#rewind-your-work)
-- [Working with remotes to share with a team](#working-with-remotes-to-share-with-a-team)
-- [Clone a remote repository to local](#clone-a-remote-repository-to-local)
-- [Push data to remote](#push-data-to-remote)
-- [Pull data from remote](#pull-data-from-remote)
-- [The big picture](#the-big-picture)
-- [Commmand reference](#command-reference)
-- [References](#references)
+[[toc]]
 
 <figure class="breakout">
 <h2>Reasons to use Git</h2>

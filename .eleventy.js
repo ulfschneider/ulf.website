@@ -2,7 +2,7 @@ const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
-const markdownItTocDoneRight = require('markdown-it-toc-done-right');
+const markdownItTableOfContents = require('markdown-it-toc-done-right');
 const markdownItDefList = require('markdown-it-deflist');
 const markdownItFitMedia = require('markdown-it-fitmedia');
 const markdownItAttrs = require('markdown-it-attrs');
@@ -26,7 +26,6 @@ module.exports = function (eleventyConfig) {
     ]);
 
     eleventyConfig.addPassthroughCopy({ '_root': '/' });
-    //eleventyConfig.addPassthroughCopy({ '_assets/css': '/css' });
     eleventyConfig.addPassthroughCopy({ '_assets/fonts': '/fonts' });
     eleventyConfig.addPassthroughCopy({ '_assets/js': '/js' });
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
@@ -55,9 +54,7 @@ function addMarkdownLib(eleventyConfig) {
             permalinkClass: 'anchor',
             permalinkSymbol: '#'
         })
-        .use(markdownItTocDoneRight, {
-            placeholder: '[[toc]]'
-        })
+        .use(markdownItTableOfContents)
         .use(markdownItDefList)
         .use(markdownItFitMedia, {
             imgDir: './content'

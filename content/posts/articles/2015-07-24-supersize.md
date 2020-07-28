@@ -4,6 +4,8 @@ subtitle: Do not let scaled agile be your scaled snake oil
 ---
 We have to scale agile when more than one team is required to get a thing delivered. Each team, not more than ten members. There will be adjacent topics which belong to an agile organization, but when we focus just on delivery, that´s it: multiple teams working on one thing.
 
+[[toc]]
+
 Agile is about culture and cultural change. Scaling agile means radically, to scale cultural change. This is an incredibly difficult thing to do. Peter Drucker coined the phrase *"culture eats strategy for breakfast."* You better prepare for the long run. Is it clear, why you want to change? *You* are: managers, who define how the system works, product managers who determine what kind of product to build, research and development people who explore possibilities, engineers who make the product, salesforce who will drive sales, project managers who are in charge of leading one-of-a-kind endeavors – you will identify even more people and roles for your organization.
 
 Do your leaders have a sense of urgency that agile is the way to go? Can they argue for it and will they? Do your leaders know what problem they want to solve by being agile?

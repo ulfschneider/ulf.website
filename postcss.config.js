@@ -1,5 +1,3 @@
-
-
 module.exports = {
   plugins: [
     require('autoprefixer'),
@@ -20,6 +18,5 @@ module.exports = {
         return broadMatches.concat(innerMatches);
       }
     })
-
   ]
 }
