@@ -1,25 +1,26 @@
 ---
 layout: default
-notags: true
 nodate: true
 nostepnav: true
 ---
-
 {{ content }}
-
 <!-- posts -->
 <style>
     article {
-        margin-top: var(--space-2);
-        margin-bottom: var(--space-2);
+        margin-top: var(--space-1);
+        margin-bottom: var(--space-1);
     }
 
     article:last-child {
         margin-bottom: 0;
     }
 </style>
-{%- assign count = 0 -%}
-{%- assign liveContent = collections.livePosts | mustContainTag: tags | reverse %}
+
+{%- if tag != nil -%}
+    {% assign liveContent = collections[tag] | live | reverse %}
+{%- elsif sitetags != nil -%}
+    {% assign liveContent = collections.liveContent | mustContainTag: site.tagnav | reverse %}
+{%- endif %}
 <div>
     {%- for p in liveContent -%}
 
@@ -32,36 +33,34 @@ nostepnav: true
         {%- assign href = p.url -%}
 
         {%- if indexYear != pageYear -%}
-            <time class="mry-2 fs-3 meta fw-200 block">
-                {{pageYear}}
-                {%- assign indexYear = pageYear -%}
-            </time>
+            {%- if indexYear == nil -%}
+                <time class="mrt-1 mrb-2 fs-3 meta fw-100 block">{{pageYear}}</time>
+            {%- else -%}
+                <time class="mry-2 fs-3 meta fw-100 block">{{pageYear}}</time>
+            {%- endif -%}
+            {%- assign indexYear = pageYear -%}
         {%- endif -%}
 
         {%- assign count = count | plus: 1 -%}
 
         <article>
             {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
-                <h2 class="mry-0">
+                <h2 class="mry-0 inline">
                     <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
                 </h2>
             {%- endif -%}
+
             {%- if p.data.refer -%}
-                <div class="meta small">{{p.data.refer}}</div>
+                <p>{{p.data.refer}}</p>
+                {%- elsif p.data.abstract -%}
+                <p>{{p.data.abstract}}</p>
+                {%- elsif p.data.subtitle -%}
+                <p>{{p.data.subtitle}}</p>
+                {%- elsif p.templateContent -%}
+                <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
             {%- endif -%}
 
-            <p class="inline">
-                {%- if p.data.abstract -%}
-                    {{ p.data.abstract }}
-                    {%- elsif p.data.subtitle -%}
-                    {{p.data.subtitle}}
-                {%- else -%}
-                    {{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}
-                {%- endif -%}
-            </p>
-
             <aside class="small meta inline-block">
-                <span aria-hidden="true">—</span>
                 {% include author-and-date.html, author: p.data.author, date: p.date %}
             </aside>
 

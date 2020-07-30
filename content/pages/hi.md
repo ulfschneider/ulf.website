@@ -2,9 +2,9 @@
 permalink: /
 title: Ulf Schneider
 notitle: true
-mainnav: Ulf Schneider
 nodate: true
 notags: true
+navid: home
 ---
 
 <h1 class="breakout-r mrb-2">Hi, my name is <span class="inline-block">Ulf Schneider</span></h1>

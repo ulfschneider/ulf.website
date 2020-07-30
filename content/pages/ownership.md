@@ -4,6 +4,7 @@ title: Content Ownership
 subtitle: Impressum as required by German law
 nodate: true
 notags: true
+navid: ownership
 ---
 Verantwortlich für den Inhalt gemäß § 55 Abs.2 RStV:
 

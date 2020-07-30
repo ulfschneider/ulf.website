@@ -1,5 +1,8 @@
 ---
 layout: list
+nodate: true
+nostepnav: true
+permalink: '{{site.search}}'
 ---
 <link rel="preload" as="fetch" href="/excerpt-index.json" crossorigin>
 <link rel="preload" as="fetch" href="/post-search-index.json" crossorigin>
@@ -59,18 +62,10 @@ layout: list
                 title.appendChild(linkToArticle);
             }
 
-            if (friend.refer) {
-                let refer = document.createElement('div');
-                refer.classList = 'small meta';
-                refer.innerHTML = friend.refer;
-                article.appendChild(refer);
-            }
-
-            if (friend.abstract || friend.subtitle || friend.excerpt || friend.content) {
+            if (friend.refer || friend.abstract || friend.subtitle || friend.excerpt || friend.content) {
                 let excerpt = document.createElement('p');
-                article.appendChild(excerpt);
-                excerpt.classList = 'inline';
-                let text = friend.abstract || friend.subtitle || friend.excerpt;
+                article.appendChild(excerpt);                
+                let text = friend.refer || friend.abstract || friend.subtitle || friend.excerpt;
                 if (text) {
                     excerpt.innerHTML = text;
                 } else {
@@ -86,8 +81,7 @@ layout: list
                 let aside = document.createElement('aside');
                 aside.classList = "meta small inline-block";
                 article.innerHTML += ' ';
-                article.appendChild(aside);
-                aside.innerHTML = '<span aria-hidden="true"> — </span>';
+                article.appendChild(aside);                
 
                 if (friend.author) {
                     let author = document.createElement('span');

@@ -15,9 +15,50 @@ module.exports = {
         emailUser: "mail",
         emailDomain: "ulf.codes"
     },
-    rss: "/rss.xml",
-    colophon: "/colophon/",
-    ownership: "/ownership/",
-    search: "/search/",
+    mainnav: [
+        {
+            label: 'Ulf Schneider',
+            url: '/',
+            id: 'home'
+        },
+        {
+            label: 'Blog',
+            url: '/blog/',
+            id: 'blog'
+        },
+        {
+            label: 'Search',
+            url: '/search/',
+            id: 'search'
+        }
+    ],
+    footernav: [
+        {
+            label: 'RSS',
+            url: '/rss.xml',
+            id: 'rss'
+        },
+        {
+            label: 'Colophon',
+            url: '/colophon/',
+            id: 'colophon'
+        },
+        {
+            label: 'Ownership',
+            url: '/ownership/',
+            id: 'ownership'
+
+        }
+    ],
+    tagnav: [
+        'reading',
+        'articles',
+        'tools',
+        'journal'
+    ],
+
+    search: '/search/',
+    blog: '/blog/',
+    images: '/images/',
     time: new Date()
 }

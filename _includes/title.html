@@ -1,15 +1,19 @@
 {%- if title != "notitle" and notitle == nil -%}
     <section class="title no-indent">
         {%- if title  -%}
-            <h1>{{ title }}</h1>
+            <h1>{{ title }}
+                {% if tag != nil %}
+                    <span class="normal"><em>#{{tag}}</em></span>
+                {% endif %}
+            </h1>
         {%- endif -%}
 
         {%- if subtitle  -%}
-            <div class="lh-2 mrt-d2 small meta sub-title">{{subtitle}}</div>
+            <div class="lh-2 heading-font sub-title">{{subtitle}}</div>
         {%- endif -%}
 
         {%- if refer  -%}
-            <div class="lh-2 mrt-d2 small meta refer">{{refer}}</div>
+            <div class="lh-2 heading-font refer">{{refer}}</div>
         {%- endif -%}
 
         {%- if page.date and nodate == nil -%}
@@ -25,12 +29,14 @@
         {%- if nostepnav or notags  -%}
             {%- assign hastags = false -%}
         {%- endif -%}
-
         {%- if author or hasdate or hastags  -%}
-            <aside class="lh-2 mrt-d2 small meta">
+            <aside class="lh-2 meta small mrt">
                 {% include author-and-date.html %}
-                {% include tags.html %}                
+                {% include tags.html %}
             </aside>
         {%- endif -%}
     </section>
+    {%- if sitetags != nil %}
+        {% include site-tags.html %}
+    {%- endif -%}
 {%- endif -%}

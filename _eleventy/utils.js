@@ -94,9 +94,21 @@ module.exports = {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
             let dt = DateTime.fromMillis(d.getTime());
-            return dt.setLocale(locale).toLocaleString(DateTime.DATE_MED); 
+            return dt.setLocale(locale).toLocaleString(DateTime.DATE_MED);
         } else {
             return '';
         }
+    },
+
+    extractTags: function (collection) {
+        let tagSet = new Set();
+        for (let post of collection.getAll().filter(this.isLiveItem)) {
+            if (post.data.tags) {
+                for (let tag of post.data.tags) {
+                    tagSet.add(tag);
+                }
+            }
+        }
+        return [...tagSet].sort();
     }
 }

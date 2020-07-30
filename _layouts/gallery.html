@@ -1,6 +1,5 @@
 ---
 layout: image
-notags: true
 nodate: true
 nostepnav: true
 ---
@@ -21,21 +20,24 @@ nostepnav: true
     .gallery figure img {
         height: 100%;
 
-    @media (max-width: 400px) {
-        .gallery {
-            display: block;
+        @media (max-width: 400px) {
+            .gallery {
+                display: block;
+            }
         }
-    }
 </style>
 {{ content }}
+
 <div class="breakout">
     <div id="image-container" class="gallery"></div>
-    <button id="load-more" class="block mrt-2 mrx-auto width-5">Load more images</button>
+    <button id="load-more" class="small block mrt-2 mrx-auto width-5">Load more images</button>
 </div>
 
-{%- assign liveContent = collections.livePosts | mustContainTag: tags | reverse %}
-{%- assign imageData = collections.livePosts | mustContainTag: tags | reverse | firstImage -%}
-
+{%- if tag != nil -%}
+    {% assign imageData = collections[tag] | live | reverse | firstImage %}
+{%- else -%}
+    {% assign imageData = collections.liveContent | mustContainTag: site.tagnav | reverse | firstImage %}
+{%- endif %}
 <script>
     var imageData = {{ imageData | jsonify }};
     var index = getIndex();

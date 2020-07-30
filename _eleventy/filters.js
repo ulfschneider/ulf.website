@@ -40,21 +40,22 @@ module.exports = {
         let result = new Set();
 
         if (collection && filterTags) {
-
             if (typeof filterTags === 'string' || filterTags instanceof String) {
                 filterTags = filterTags.split(','); //make it an array
             }
 
             for (let item of collection) {
-                for (let tag of item.data.tags) {
-                    if (filterTags.includes(tag)) {
-                        result.add(item);
-                        break;
+                if (item.data.tags) {
+                    for (let tag of item.data.tags) {
+                        if (filterTags.includes(tag)) {
+                            result.add(item);
+                            break;
+                        }
                     }
                 }
             }
         }
-        return Array.from(result.values()).sort(utils.compareInputFileName);
+        return Array.from(result.values()).sort(utils.compareItemDate);
     },
 
     mustNotContainLayout: function (collection, filterLayouts) {
@@ -129,7 +130,7 @@ module.exports = {
             if (img) {
                 let src = utils.srcAttr(img);
                 let alt = utils.altAttr(img);
-                let humanDate = utils.humanDate(item.date);                
+                let humanDate = utils.humanDate(item.date);
                 result.push({
                     src: src,
                     alt: alt,
@@ -142,7 +143,7 @@ module.exports = {
         return result
     },
 
-    humanDate: function(d) {
+    humanDate: function (d) {
         return utils.humanDate(d);
     }
 

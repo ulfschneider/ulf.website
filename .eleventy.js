@@ -76,36 +76,38 @@ function addLayoutAliases(eleventyConfig) {
 
 function addCollections(eleventyConfig) {
     eleventyConfig.addCollection('allTags', collection => {
-        let tagSet = new Set();
-        for (let post of collection.getAll().filter(utils.isLiveItem)) {
-            if (post.data.tags) {
-                for (let tag of post.data.tags) {
-                    tagSet.add(tag);
-                }
-            }
-        }
-        return Array.from(tagSet.values()).sort();
+        return utils.extractTags(collection);
     });
+
+    eleventyConfig.addCollection('siteTags', collection => {
+        let usedTags = utils.extractTags(collection);
+        if (site.tagnav && site.tagnav.length) {
+            return site.tagnav.filter(tag => usedTags.includes(tag));
+        } else {
+            return usedTags;
+        }
+    });
+
 
     eleventyConfig.addCollection('liveContent', collection => {
         return [
             ...collection.getFilteredByGlob('content/**')
                 .filter(utils.isLiveItem)
-                .sort(utils.compareInputFileName)
+                .sort(utils.compareItemDate)
         ];
     });
     eleventyConfig.addCollection('livePages', collection => {
         return [
             ...collection.getFilteredByGlob('content/pages/**')
                 .filter(utils.isLiveItem)
-                .sort(utils.compareInputFileName)
+                .sort(utils.compareItemDate)
         ];
     });
     eleventyConfig.addCollection('livePosts', collection => {
         return [
             ...collection.getFilteredByGlob('content/posts/**')
                 .filter(utils.isLiveItem)
-                .sort(utils.compareInputFileName)
+                .sort(utils.compareItemDate)
         ];
     });
 }

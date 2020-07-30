@@ -1,0 +1,20 @@
+<nav>
+    <ul class="reset small mry-0">
+        <li class="inline-block">
+            {%- if tag == nil -%}
+                <a class="meta no-deco heading-color bold" href="{{site.blog}}">#all</a>
+            {%- else -%}
+                <a class="meta no-deco" href="{{site.blog}}">#all</a>
+            {%- endif -%}
+        </li>
+        {%- for siteTag in collections.siteTags -%}
+            <li class="inline-block">
+                {%- if tag == siteTag -%}
+                    <a class="meta no-deco heading-color bold" href="{{site.blog}}{{siteTag}}/">#{{siteTag}}</a>
+                {%- else -%}
+                    <a class="meta no-deco" href="{{site.blog}}{{siteTag}}/">#{{siteTag}}</a>
+                {%- endif -%}
+            </li>
+        {%- endfor -%}
+    </ul>
+</nav>

@@ -4,7 +4,11 @@
         {%- for tag in tags -%}
             <ul class="reset mry-0 inline ">
                 <li class="inline">
-                    <a class="meta no-deco" href="/{{tag}}/">#{{tag}}</a>
+                    {%- if layout == 'image' or layout == 'gallery' %}
+                        <a class="meta no-deco" href="/images/{{tag}}/">#{{tag}}</a>
+                    {%- else -%}
+                        <a class="meta no-deco" href="/blog/{{tag}}/">#{{tag}}</a>
+                    {%- endif -%}
                 </li>
             </ul>
         {%- endfor -%}
