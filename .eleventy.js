@@ -25,7 +25,6 @@ module.exports = function (eleventyConfig) {
     ]);
 
     eleventyConfig.addPassthroughCopy({ '_root': '/' });
-    //eleventyConfig.addPassthroughCopy({ '_assets/css': '/css' });
     eleventyConfig.addPassthroughCopy({ '_assets/fonts': '/fonts' });
     eleventyConfig.addPassthroughCopy({ '_assets/js': '/js' });
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
@@ -75,11 +74,8 @@ function addLayoutAliases(eleventyConfig) {
 }
 
 function addCollections(eleventyConfig) {
-    eleventyConfig.addCollection('allTags', collection => {
-        return utils.extractTags(collection);
-    });
 
-    eleventyConfig.addCollection('siteTags', collection => {
+    eleventyConfig.addCollection('usedSiteTags', collection => {
         let usedTags = utils.extractTags(collection);
         if (site.tagnav && site.tagnav.length) {
             return site.tagnav.filter(tag => usedTags.includes(tag));
@@ -87,25 +83,18 @@ function addCollections(eleventyConfig) {
             return usedTags;
         }
     });
-
+    eleventyConfig.addCollection('liveSiteTagContent', collection => {
+        return [
+            ...collection.getFilteredByGlob('content/**')
+                .filter(utils.isLiveItem)
+                .filter(utils.hasSiteTag)
+                .sort(utils.compareItemDate)
+        ];
+    });
 
     eleventyConfig.addCollection('liveContent', collection => {
         return [
             ...collection.getFilteredByGlob('content/**')
-                .filter(utils.isLiveItem)
-                .sort(utils.compareItemDate)
-        ];
-    });
-    eleventyConfig.addCollection('livePages', collection => {
-        return [
-            ...collection.getFilteredByGlob('content/pages/**')
-                .filter(utils.isLiveItem)
-                .sort(utils.compareItemDate)
-        ];
-    });
-    eleventyConfig.addCollection('livePosts', collection => {
-        return [
-            ...collection.getFilteredByGlob('content/posts/**')
                 .filter(utils.isLiveItem)
                 .sort(utils.compareItemDate)
         ];
@@ -118,8 +107,8 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('excerptIndex', filters.excerptIndex);
     eleventyConfig.addFilter('firstImage', filters.firstImage);
     eleventyConfig.addFilter('live', filters.live);
+    eleventyConfig.addFilter('tagIntro', filters.tagIntro);
     eleventyConfig.addFilter('humanDate', filters.humanDate);
-    eleventyConfig.addFilter('mustContainTag', filters.mustContainTag);
     eleventyConfig.addFilter('mustNotContainLayout', filters.mustNotContainLayout);
     eleventyConfig.addFilter('getPrev', filters.getPrev);
     eleventyConfig.addFilter('getNext', filters.getNext);

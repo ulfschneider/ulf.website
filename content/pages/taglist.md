@@ -9,3 +9,4 @@ permalink: '{{site.blog}}{{ tag }}/'
 navid: blog
 title: Blog
 ---
+{{collections.liveContent | tagIntro: tag }}

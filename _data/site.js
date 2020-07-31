@@ -60,5 +60,6 @@ module.exports = {
     search: '/search/',
     blog: '/blog/',
     images: '/images/',
+    rss: '/rss.xml',
     time: new Date()
 }

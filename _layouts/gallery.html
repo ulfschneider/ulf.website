@@ -36,7 +36,7 @@ nostepnav: true
 {%- if tag != nil -%}
     {% assign imageData = collections[tag] | live | reverse | firstImage %}
 {%- else -%}
-    {% assign imageData = collections.liveContent | mustContainTag: site.tagnav | reverse | firstImage %}
+    {% assign imageData = collections.liveSiteTagContent | reverse | firstImage %}
 {%- endif %}
 <script>
     var imageData = {{ imageData | jsonify }};

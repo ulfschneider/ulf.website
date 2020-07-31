@@ -19,7 +19,7 @@ nostepnav: true
 {%- if tag != nil -%}
     {% assign liveContent = collections[tag] | live | reverse %}
 {%- elsif sitetags != nil -%}
-    {% assign liveContent = collections.liveContent | mustContainTag: site.tagnav | reverse %}
+    {% assign liveContent = collections.liveSiteTagContent | reverse %}
 {%- endif %}
 <div>
     {%- for p in liveContent -%}
@@ -33,7 +33,7 @@ nostepnav: true
         {%- assign href = p.url -%}
 
         {%- if indexYear != pageYear -%}
-            {%- if indexYear == nil -%}
+            {%- if indexYear == nil and content == '' -%}
                 <time class="mrt-1 mrb-2 fs-3 meta fw-100 block">{{pageYear}}</time>
             {%- else -%}
                 <time class="mry-2 fs-3 meta fw-100 block">{{pageYear}}</time>

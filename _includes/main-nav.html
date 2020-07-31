@@ -3,7 +3,7 @@
 		{%- unless p.url != "/" -%}
 			<span class="inline-block mrr">
 				{%- if page.url == p.url -%}
-					<a href="/" class="inline-block no-deco meta heading-color bold">{{p.label}}</a>
+					<a aria-current="page" href="/" class="inline-block no-deco meta heading-color bold">{{p.label}}</a>
 				{%- else -%}
 					<a href="/" class="inline-block no-deco meta">{{p.label}}</a>
 				{%- endif -%}
@@ -16,7 +16,7 @@
 			{%- unless p.url == "/" -%}
 				<li class="inline-block">
 					{%- if navid == p.id -%}
-						<a class="no-deco meta bold heading-color" href="{{ p.url }}">{{p.label}}</a>
+						<a aria-current="page" class="no-deco meta bold heading-color" href="{{ p.url }}">{{p.label}}</a>
 					{%- else -%}
 						<a class="no-deco meta" href="{{ p.url }}">{{p.label}}</a>
 					{%- endif -%}

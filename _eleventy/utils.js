@@ -61,6 +61,21 @@ module.exports = {
             && item.data.draft !== 'yes';
     },
 
+    hasSiteTag: function (item) {
+        let siteTags = site.tagnav;
+        if (!siteTags || siteTags && !siteTags.length) {
+            return true;
+        }
+        if (item.data.tags) {
+            for (let tag of item.data.tags) {
+                if (siteTags.includes(tag)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    },
+
     isSearchAble: function (item) {
         return item.data.nosearch == null;
     },

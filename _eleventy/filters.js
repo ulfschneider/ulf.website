@@ -1,6 +1,7 @@
 
 const lunr = require("lunr");
 const utils = require("./utils.js");
+const site = require("../_data/site.js");
 
 function findNextItem(collection, current) {
     let passedCurrent;
@@ -36,28 +37,6 @@ module.exports = {
         return collection ? collection.filter(utils.isRssAble) : collection;
     },
 
-    mustContainTag: function (collection, filterTags) {
-        let result = new Set();
-
-        if (collection && filterTags) {
-            if (typeof filterTags === 'string' || filterTags instanceof String) {
-                filterTags = filterTags.split(','); //make it an array
-            }
-
-            for (let item of collection) {
-                if (item.data.tags) {
-                    for (let tag of item.data.tags) {
-                        if (filterTags.includes(tag)) {
-                            result.add(item);
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        return Array.from(result.values()).sort(utils.compareItemDate);
-    },
-
     mustNotContainLayout: function (collection, filterLayouts) {
         let result = [];
         if (collection && filterLayouts) {
@@ -90,6 +69,15 @@ module.exports = {
             result.push(utils.mapItem(item));
         }
         return result;
+    },
+
+    tagIntro: function (collection, tagintro) {
+        for (let item of collection) {
+            if (item.data.tagintro == tagintro) {
+                return item.templateContent;
+            }
+        }
+        return '';
     },
 
     searchIndex: function (collection) {

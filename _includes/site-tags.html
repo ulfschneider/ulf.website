@@ -1,16 +1,17 @@
 <nav>
     <ul class="reset small mry-0">
+        <li class="inline-block meta">With tags:</li>
         <li class="inline-block">
             {%- if tag == nil -%}
-                <a class="meta no-deco heading-color bold" href="{{site.blog}}">#all</a>
+                <a class="meta no-deco heading-color bold" aria-current="page" href="{{site.blog}}">#all</a>
             {%- else -%}
                 <a class="meta no-deco" href="{{site.blog}}">#all</a>
             {%- endif -%}
         </li>
-        {%- for siteTag in collections.siteTags -%}
+        {%- for siteTag in collections.usedSiteTags -%}
             <li class="inline-block">
                 {%- if tag == siteTag -%}
-                    <a class="meta no-deco heading-color bold" href="{{site.blog}}{{siteTag}}/">#{{siteTag}}</a>
+                    <a class="meta no-deco heading-color bold" aria-current="page" href="{{site.blog}}{{siteTag}}/">#{{siteTag}}</a>
                 {%- else -%}
                     <a class="meta no-deco" href="{{site.blog}}{{siteTag}}/">#{{siteTag}}</a>
                 {%- endif -%}

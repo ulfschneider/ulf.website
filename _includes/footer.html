@@ -7,7 +7,7 @@
 			{%- for p in site.footernav -%}
 				<li class="inline-block">
 					{%- if navid == p.id -%}
-						<a class="no-deco meta bold heading-color" href="{{ p.url }}">{{p.label}}</a>
+						<a class="no-deco meta bold heading-color" aria-current="page" href="{{ p.url }}">{{p.label}}</a>
 					{%- else -%}
 						<a class="no-deco meta" href="{{ p.url }}">{{p.label}}</a>
 					{%- endif -%}

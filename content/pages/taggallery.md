@@ -8,3 +8,4 @@ permalink: '{{site.images}}{{ tag }}/'
 navid: blog
 title: Images
 ---
+{{collections.liveContent | tagIntro: tag }}

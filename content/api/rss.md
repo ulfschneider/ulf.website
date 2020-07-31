@@ -1,5 +1,5 @@
 --- 
 layout: rss 
 eleventyExcludeFromCollections: true 
-excludeLayouts: "list,image,gallery"
+permalink: '{{site.rss}}'
 ---
