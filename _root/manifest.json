@@ -5,14 +5,15 @@
     "description": "",
     "theme_color": "#00bbff",
     "background_color": "#ffffff",
-    "start_url": "/index.html",
+    "start_url": "/",
+    "scope": "/",
     "display": "minimal-ui",
     "orientation": "natural",
     "icons": [
         {
             "src": "/favicon.ico",
             "sizes": "48x48",
-            "type": "image/x-icon"   
+            "type": "image/x-icon"
         },
         {
             "src": "/apple-touch-icon.png",
@@ -20,10 +21,10 @@
             "type": "image/png"
         },
         {
-            "src": "/maskable_icon.png",
-            "sizes": "180x180",
+            "src": "/images/icons-512.png",
+            "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
-          }
+        }
     ]
 }

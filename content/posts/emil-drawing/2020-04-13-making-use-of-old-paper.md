@@ -2,5 +2,5 @@
 title: Making use of old paper
 author: Emil
 ---
+![](/img/IMG_0891.jpg)
 
-<img alt="" src="/img/IMG_0891.jpg" />

@@ -2,7 +2,7 @@
 title: Self-organization
 subtitle: A force of life
 ---
-
+[[toc]]
 Self-organization is the determining element for agile teams and companies. To think and act accordingly requires the acceptance of evolutionary forces which are an inherent part of any social system, whether we like it or not.
 
 This contrasts with the constructing model, in which a central masterminded instance designs the system and controls it. Broadly, one can say that self-organization relies on evolution and construction relies on command and obedience.

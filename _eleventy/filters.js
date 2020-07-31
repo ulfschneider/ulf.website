@@ -80,6 +80,28 @@ module.exports = {
         return '';
     },
 
+    mustContainTag: function (collection, filterTags) {
+        let result = new Set();
+
+        if (collection && filterTags) {
+            if (typeof filterTags === 'string' || filterTags instanceof String) {
+                filterTags = filterTags.split(','); //make it an array
+            }
+
+            for (let item of collection) {
+                if (item.data.tags) {
+                    for (let tag of item.data.tags) {
+                        if (filterTags.includes(tag)) {
+                            result.add(item);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return Array.from(result.values()).sort(utils.compareItemDate);
+    },
+
     searchIndex: function (collection) {
         return lunr(function () {
             this.ref('id');

@@ -35,6 +35,7 @@
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-deflist": "^2.0.3",
     "markdown-it-fitmedia": "^0.2.11",
+    "markdown-it-toc-done-right": "^4.1.0",
     "npm-run-all": "^4.1.5",
     "plugin-error": "^1.0.1",
     "postcss": "^7.0.32",
