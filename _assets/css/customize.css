@@ -11,8 +11,6 @@
     --heading-color: black;
     --fs-mono: 0.85rem;
     --fs-h1: var(--fs-2);
-    --mrt-h1: 0;
-    --mrb-h1: 0;
     --mrt-figure: var(--space-2);
     --mrb-figure: var(--space-2);
     --mrt-blockquote: var(--space-2);
