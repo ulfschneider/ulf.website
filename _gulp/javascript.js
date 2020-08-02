@@ -8,7 +8,7 @@ const processingJS = () => {
     return src(SOURCE)
         .pipe(minify({
             ext: {
-                min: '.min.js'
+                min: '.js'
             },
             noSource: true
         }))

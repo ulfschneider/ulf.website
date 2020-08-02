@@ -44,10 +44,9 @@ const NO_CACHE_URLS = [
 
 const PRECACHE_URLS = [
     OFFLINE_URL,
-    '/',
-    '/js/quicklink.min.js',
-    '/js/measure-load-time.js',
-    '/js/lunr.min.js'
+    '/',    
+    '/js/site-scripts.js',
+    '/js/lunr.js'
 ];
 
 

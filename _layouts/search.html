@@ -10,7 +10,7 @@ permalink: '{{site.search}}'
 {% include search-field.html , focus: true, onsubmit: "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value); history.replaceState(null, '', location.pathname + '?query=' + event.target[SEARCH_QUERY_ID].value)" %}
 
 <div id="search-results"></div>
-<script src="/js/lunr.min.js"></script>
+<script src="/js/lunr.js"></script>
 <script>
 
     const SEARCH_RESULTS_ID = 'search-results';
