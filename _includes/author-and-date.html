@@ -1,7 +1,7 @@
 {%- if author -%}
     <span>By {{author}}</span>
     {%- if date or nodate == nil and page.date  -%} 
-        <span aria-hidden="true"> · </span>
+        <span aria-hidden="true"> on </span>
     {%- endif -%}
 {%- endif -%}
 {%- if date -%}
