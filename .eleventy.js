@@ -1,5 +1,7 @@
 const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+
+
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItTableOfContents = require('markdown-it-toc-done-right');
@@ -10,6 +12,7 @@ const markdownItAttrs = require('markdown-it-attrs');
 const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
 const filters = require('./_eleventy/filters.js');
+const transforms = require('./_eleventy/transforms.js');
 
 module.exports = function (eleventyConfig) {
 
@@ -25,6 +28,7 @@ module.exports = function (eleventyConfig) {
         'njk'
     ]);
 
+    eleventyConfig.addTransform('htmlmin', transforms.minifyHtml);
     eleventyConfig.addPassthroughCopy({ '_root': '/' });
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
 
@@ -114,3 +118,4 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('getPrev', filters.getPrev);
     eleventyConfig.addFilter('getNext', filters.getNext);
 }
+
