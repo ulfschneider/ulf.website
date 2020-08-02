@@ -1,6 +1,8 @@
 ---
 draft: true
 ---
+- http://typedia.com/learn/only/anatomy-of-a-typeface/
+- https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/type-classifications
 - https://teenyicons.com
 - https://zellwk.com/blog/media-query-units/
 - adamsilver.io/reading/
