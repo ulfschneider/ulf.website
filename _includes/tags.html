@@ -1,16 +1,16 @@
 {%- if tags and notags == nil and nostepnav == nil -%}
-    <span>in</span>
-    <nav class="meta inline-block lh-1">
+    <span> in </span>
+    <nav class="meta inline lh-1">
         {%- for tag in tags -%}
-            <ul class="reset mry-0 inline ">
+            <ul class="reset mry-0 inline">
                 <li class="inline">
                     {%- if layout == 'image' or layout == 'gallery' %}
-                        <a class="meta no-deco" href="/images/{{tag}}/">#{{tag}}</a>
+                        <a class="meta no-deco inline-block" href="/images/{{tag}}/">#{{tag}}</a>
                     {%- else -%}
-                        <a class="meta no-deco" href="/blog/{{tag}}/">#{{tag}}</a>
+                        <a class="meta no-deco inline-block" href="/blog/{{tag}}/">#{{tag}}</a>
                     {%- endif -%}
                 </li>
             </ul>
         {%- endfor -%}
     </nav>
-{% endif %}
+{%- endif -%}
