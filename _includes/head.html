@@ -12,22 +12,4 @@
         {{ site.title }}
     {% endif %}
 </title>
-{% include scripts.html %}
-<script>
-    if (navigator.serviceWorker) {
-        navigator
-            .serviceWorker
-            .register('/serviceworker.js')
-            .catch(error => {
-                console.error(error);
-            });
-        addEventListener("load", function () {
-            if (navigator.serviceWorker.controller) {
-                navigator
-                    .serviceWorker
-                    .controller
-                    .postMessage({"command": "trimCache"});
-            }
-        });
-    }
-</script>
+{% include site-scripts.html %}
