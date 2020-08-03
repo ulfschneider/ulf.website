@@ -40,14 +40,12 @@ I´m posting a timeline of images here to document the progress.
 
 <figure>
 <figcaption>Jul 19, 2020: Heavy machinery is brought into place to do the excavation work. Our partner here is <a href="https://westermann-paderborn.de">Andre Westermann</a>.</figcaption>
-<img src="/img/house/IMG_1406.jpg">
 <img src="/img/house/IMG_1403.jpg">
 <img src="/img/house/IMG_1410.jpg">
 </figure>
 
 <figure>
 <figcaption>Jul 21, 2020: Day one of excavation work. Our ground is rock and stones.</figcaption>
-<img src="/img/house/IMG_1432.jpg">
 <img src="/img/house/IMG_1451.jpg">
 <img src="/img/house/IMG_1457.jpg">
 <img src="/img/house/IMG_1460.jpg">
@@ -58,7 +56,6 @@ I´m posting a timeline of images here to document the progress.
 <figure>
 <figcaption>Jul 22, 2020: After only two days the excavation work is completed.</figcaption>
 <img src="/img/house/IMG_1468.jpg">
-<img src="/img/house/IMG_1471.jpg">
 <img src="/img/house/IMG_1474.jpg">
 </figure>
 
