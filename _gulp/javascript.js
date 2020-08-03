@@ -4,7 +4,7 @@ const minify = require('gulp-minify');
 const SOURCE = ['_assets/js/**/*.js'];
 const DEST = '_site/js/';
 
-const processingJS = () => {
+const processingJavascript = () => {
     return src(SOURCE)
         .pipe(minify({
             ext: {
@@ -15,4 +15,4 @@ const processingJS = () => {
         .pipe(dest(DEST));
 };
 
-module.exports = processingJS;
+module.exports = processingJavascript;
