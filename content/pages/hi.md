@@ -6,16 +6,12 @@ nodate: true
 notags: true
 navid: home
 ---
-
-<div class="x-12">
-<div class="rg:xx-6 mrb-2">
 <h1 class="mry-0">Ulf Schneider</h1>
 <p class="no-indent heading-font">Developer, Agile Coach</p>
-</div>
-<div class="rg:xx-6 mrb-2">
+
+<figure>
 <img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-600.jpg" alt="Portrait of Ulf Schneider">
-</div>
-</div>
+</figure>
 
 Welcome!
 
