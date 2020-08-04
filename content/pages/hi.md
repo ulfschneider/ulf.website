@@ -10,7 +10,7 @@ navid: home
 <p class="no-indent heading-font">Developer, Agile Coach</p>
 
 <figure>
-<img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-600.jpg" alt="Portrait of Ulf Schneider">
+<img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-900.jpg" alt="Portrait of Ulf Schneider">
 </figure>
 
 Welcome!
