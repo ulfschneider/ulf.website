@@ -5,6 +5,8 @@ abstract: A markdown-it plugin to set aspect-ratio of responsive images, make th
 
 A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-fitmedia) to set aspect-ratio of responsive images, make them lazy loading, and to make videos responsive.
 
+[[toc]]
+
 ## Images
 
 Responsive images can create cumulative layout shifts (CLS) when loaded, because it´s difficult to get their height correct when their width is flexible. Check "[Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)" to get a comprehensive view about the problem. The CSS property `aspect-ratio` is around the corner and will help solving the CLS problem for responsive images.
