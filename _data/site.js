@@ -4,7 +4,7 @@ module.exports = {
     locale: "en",
     themecolor: "#00bbff",
     url: "https://ulf.codes",
-    imgMaxWidth: 600,
+    imgMaxWidth: 700,
     imgMaxHeight: undefined,
     jpegQuality: 80,
     title: "Ulf Schneider – Developer and Agile Coach",
