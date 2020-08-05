@@ -6,7 +6,8 @@
     --meta-font-family:  sans-serif;
     --mono-font-family: monospace;
     --font-weight-normal: 400;
-    --font-weight-bold: 700;
+    --font-weight-bold: 600;
+    --space-factor: 1.75;
     --heading-letter-spacing: 0;
     --heading-color: black;
     --fs-mono: 0.85rem;
