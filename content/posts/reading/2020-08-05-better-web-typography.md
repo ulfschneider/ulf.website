@@ -2,7 +2,7 @@
 title: Better Web Typography
 refer: Online course about web typography by Matej Latin
 ---
-[Matej´s](https://matejlatin.co.uk) course on [Better Web Typography](https://betterwebtype.com) is structured into seven parts which will be mailed to you, once you subscribed to the course. Matej is passionate about his topic and putting great care into the details. What I liked especially about the course are the references to articles, tools, and books for further exploration. The parts of the course are:
+[Matej´s](https://matejlatin.co.uk) course on [Better Web Typography](https://betterwebtype.com) is structured into seven parts which will be mailed to you, once you subscribed to the course. Matej is passionate about his topic and he is putting great care into the details. What I liked especially about the course are the references to articles, tools, and books for further exploration. I found some interesting new things! The parts of the course are:
 
 [[toc]]
 
@@ -36,7 +36,7 @@ With references
 - [Massimo Vignelli´s 6 typefaces](https://fontsinuse.com/uses/14164/massimo-vignelli-s-a-few-basic-typefaces) *– fonts in use article by Stephen Coles*
 - [FOUT, FOIT, FOFT](https://css-tricks.com/fout-foit-foft/) *– CSS-Tricks article by Chris Coyier ★*
 - [Times New Roman](https://www.youtube.com/watch?v=-cGUaBbT0bA) *– video*
-- 
+
 ## Combining typefaces
 With references
 

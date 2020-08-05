@@ -4,8 +4,7 @@
     --heading-font-family: sans-serif;
     --form-font-family:  sans-serif;
     --meta-font-family:  sans-serif;
-    --mono-font-family: monospace;
-    --font-weight-normal: 400;
+    --mono-font-family: monospace;    
     --font-weight-bold: 600;
     --space-factor: 1.8;
     --heading-letter-spacing: 0;
@@ -20,7 +19,6 @@
     --lh-h2: unset;
     --fs-h3: 1rem;
     --lh-h3: unset;
-    --heading-font-weight: 700;
     --pre-background: var(--neutral-5);
     --accent-three-h: 98.1;
     --accent-three-s: 100%;
