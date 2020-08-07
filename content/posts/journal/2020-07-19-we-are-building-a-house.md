@@ -68,3 +68,12 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1524.jpg" alt="">
 <img src="/img/house/IMG_1530.jpg" alt="">
 </figure>
+
+## The cellar
+
+<figure>
+<figcaption>Aug 7, 2020: The cellar builders start their <i>hard</i> work. The temperature is above 30 °C. At the first day it´s formwork and bringing in the steel. Three men are drinking 15 bottles of water on that first day. </figcaption>
+<img src="/img/house/IMG_1574.jpg" alt="">
+<img src="/img/house/IMG_1575.jpg" alt="">
+<img src="/img/house/IMG_1583.jpg" alt="">
+</figure>
