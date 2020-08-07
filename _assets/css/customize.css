@@ -1,5 +1,11 @@
 :root {
     --base-font-size: 20px;
+
+    --font-size-breakpoint-sm: 21px;
+    --font-size-breakpoint-rg: 21px;
+    --font-size-breakpoint-md: 21px;
+    --font-size-breakpoint-lg: 21px;
+
     --font-family: Georgia, serif;
     --heading-font-family: sans-serif;
     --form-font-family:  sans-serif;
@@ -23,6 +29,8 @@
     --accent-three-h: 98.1;
     --accent-three-s: 100%;
     --accent-three-l: 42.9%;
+
+
 }
 
 img {
