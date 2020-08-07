@@ -72,8 +72,16 @@ I´m posting a timeline of images here to document the progress.
 ## The cellar
 
 <figure>
-<figcaption>Aug 6, 2020: The cellar builders start their <i>hard</i> work. The temperature is above 30 °C. At the first day it´s formwork and bringing in the steel. Three men are drinking 15 bottles of water on that first day. </figcaption>
+<figcaption>Aug 6, 2020: The cellar builders start their <i>hard</i> work. The temperature is above 30 °C. At the first day it´s formwork and bringing in the steel. Three men are drinking 15 bottles of water during that day.</figcaption>
 <img src="/img/house/IMG_1574.jpg" alt="">
 <img src="/img/house/IMG_1575.jpg" alt="">
 <img src="/img/house/IMG_1583.jpg" alt="">
+</figure>
+
+<figure>
+<figcaption>Aug 7, 2020: The basement plate preparation is ready for the concreting. I have hired a construction expert to help me with the acceptance of the delivered results. Before the concreting starts, he wants to see the steel. The expert is very satisfied with the good quality of the work and of course – I´m glad too! Finally it was the right decision to go with Knecht as the cellar builder. The three men, despite the heat of 33 °C in the afternoon, seem to work without any resting. I can only help them with providing water to drink, a bit of coffee, and some food. I think they earned their weekend well. Because of the heat they are covering the new basement plate with film, so that it doesn´t build out cracks during the drying period. Next week they are going to finalize the cellar.</figcaption>
+<img src="/img/house/IMG_1587.jpg" alt="">
+<img src="/img/house/IMG_1588.jpg" alt="">
+<img src="/img/house/IMG_1593.jpg" alt="">
+<img src="/img/house/IMG_1595.jpg" alt="">
 </figure>
