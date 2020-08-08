@@ -8,7 +8,12 @@
                 <a class="meta no-deco" href="{{site.blog}}">#all</a>
             {%- endif -%}
         </li>
-        {%- for siteTag in collections.usedSiteTags -%}
+        {%- if tag != nil -%}
+            {%-assign currentTags = collections.usedSiteTags | concat: tag | uniq | compact -%}
+        {%- else - %}
+            {%-assign currentTags = collections.usedSiteTags -%}
+        {%- endif -%}
+        {%- for siteTag in currentTags -%}
             <li class="inline-block">
                 {%- if tag == siteTag -%}
                     <a class="meta no-deco heading-color bold" aria-current="page" href="{{site.blog}}{{siteTag}}/">#{{siteTag}}</a>
