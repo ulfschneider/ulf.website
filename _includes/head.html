@@ -12,4 +12,21 @@
         {{ site.title }}
     {% endif %}
 </title>
+<script>
+    addEventListener('keydown', event => {
+        if (event.keyCode == 190) {
+            // . pressed
+            let queryField = document.querySelector('#search-query');
+            let focus = document.querySelector(':focus');
+            if (queryField && queryField != focus) {
+                queryField.focus();
+                event.preventDefault();
+            } else if (!queryField) {
+                location.href = '{{site.search}}';
+                event.preventDefault();
+            }
+
+        }
+    });
+</script>
 {% include site-scripts.html %}

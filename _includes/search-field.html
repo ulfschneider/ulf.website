@@ -17,15 +17,6 @@
             location.href = '{{site.search}}';
         }
     }
-    addEventListener('keydown', event => {
-        if (event.keyCode == 190) {
-            // . pressed
-            document
-                .querySelector('#search-query')
-                .focus();
-            event.preventDefault();
-        }
-    });
 </script>
 <form onsubmit="{{onsubmit}}">
     <label for="search-query" class="small">Search <em>{{site.name}},</em> press . to focus:</label>

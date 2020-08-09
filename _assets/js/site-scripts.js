@@ -1,3 +1,4 @@
+
 addEventListener('load', event => {
     let loadTime = document.getElementById('load-time');
     if (!loadTime) {
@@ -20,7 +21,6 @@ addEventListener('load', event => {
         loadTime.innerHTML = 'This page loaded in ' + (duration / 1000).toFixed(2) + ' seconds';
     }
 });
-
 if (navigator.serviceWorker) {
     navigator
         .serviceWorker

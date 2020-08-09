@@ -47,7 +47,6 @@ permalink: '{{site.search}}'
     function printResultEntry(parent, entry) {
         if (parent) {
             let friend = friendlyMap.get(entry.ref);
-            console.log(friend);
 
             let article = document.createElement('article');
             parent.appendChild(article);
@@ -64,7 +63,7 @@ permalink: '{{site.search}}'
 
             if (friend.refer || friend.abstract || friend.subtitle || friend.excerpt || friend.content) {
                 let excerpt = document.createElement('p');
-                article.appendChild(excerpt);                
+                article.appendChild(excerpt);
                 let text = friend.refer || friend.abstract || friend.subtitle || friend.excerpt;
                 if (text) {
                     excerpt.innerHTML = text;
@@ -81,7 +80,7 @@ permalink: '{{site.search}}'
                 let aside = document.createElement('aside');
                 aside.classList = "meta small inline-block";
                 article.innerHTML += ' ';
-                article.appendChild(aside);                
+                article.appendChild(aside);
 
                 if (friend.author) {
                     let author = document.createElement('span');
