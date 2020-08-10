@@ -14,15 +14,15 @@
 </title>
 <script>
     addEventListener('keydown', event => {
-        if (event.keyCode == 190) {
-            // . pressed
+        console.log(event.key);
+        if (event.key == '{{site.searchKey}}') {            
             let queryField = document.querySelector('#search-query');
             let focus = document.querySelector(':focus');
             if (queryField && queryField != focus) {
                 queryField.focus();
                 event.preventDefault();
             } else if (!queryField) {
-                location.href = '{{site.search}}';
+                location.href = {{site.search}};
                 event.preventDefault();
             }
 
