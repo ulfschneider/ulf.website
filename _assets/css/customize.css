@@ -2,9 +2,9 @@
     --base-font-size: 20px;
 
     --font-size-breakpoint-sm: 21px;
-    --font-size-breakpoint-rg: 21px;
-    --font-size-breakpoint-md: 21px;
-    --font-size-breakpoint-lg: 21px;
+    --font-size-breakpoint-rg: 22px;
+    --font-size-breakpoint-md: 22px;
+    --font-size-breakpoint-lg: 22px;
 
     --font-family: Georgia, serif;
     --heading-font-family: sans-serif;
@@ -16,21 +16,18 @@
     --heading-letter-spacing: 0;
     --heading-color: black;
     --fs-mono: 0.85rem;
-    --fs-h1: var(--fs-2);
+    --fs-h1: var(--fs-3);
+    --fs-h2: var(--fs-1);
+    --fs-h3: var(--fs);
     --mrt-figure: var(--space-2);
     --mrb-figure: var(--space-2);
     --mrt-blockquote: var(--space-2);
-    --mrb-blockquote: var(--space-2);
-    --fs-h2: 1rem;
-    --lh-h2: unset;
-    --fs-h3: 1rem;
-    --lh-h3: unset;
+    --mrb-blockquote: var(--space-2);    
+    --fs-h3: 1rem;    
     --pre-background: var(--neutral-5);
     --accent-three-h: 98.1;
     --accent-three-s: 100%;
     --accent-three-l: 42.9%;
-
-
 }
 
 img {
