@@ -53,7 +53,7 @@ permalink: '{{site.search}}'
 
             if (friend.title && friend.title != 'notitle') {
                 let title = document.createElement('h2');
-                title.classList = 'mry-0 fs'
+                title.classList = 'mry-0 inline fs'
                 article.appendChild(title);
                 let linkToArticle = document.createElement('a');
                 linkToArticle.href = entry.ref;
@@ -78,7 +78,7 @@ permalink: '{{site.search}}'
 
             if (friend.author || friend.date) {
                 let aside = document.createElement('aside');
-                aside.classList = "meta small inline-block";
+                aside.classList = "meta small inline";
                 article.innerHTML += ' ';
                 article.appendChild(aside);
 
@@ -90,7 +90,7 @@ permalink: '{{site.search}}'
 
                 if (friend.date) {
                     if (friend.author) {
-                        aside.innerHTML += '<span aria-hidden="true"> · </span>';
+                        aside.innerHTML += ' on ';
                     }
                     let date = document.createElement('time');
                     date.innerHTML += friend.humanDate;

@@ -58,7 +58,7 @@ nostepnav: true
                 <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
             {%- endif -%}
 
-            <aside class="small meta inline-block">
+            <aside class="small meta inline">
                 {% include author-and-date.html, author: p.data.author, date: p.date %}
             </aside>
 
