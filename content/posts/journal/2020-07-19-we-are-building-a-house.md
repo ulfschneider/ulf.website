@@ -84,3 +84,31 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1588.jpg" alt="">
 <img src="/img/house/IMG_1595.jpg" alt="">
 </figure>
+
+<figure>
+<figcaption>Aug 11, 2020, early morning: The silence before the storm. The men will erect the cellar <em>today.</em></figcaption>
+<img src="/img/house/IMG_1670.jpg" alt="">
+<img src="/img/house/IMG_1673.jpg" alt="">
+</figure>
+
+<figure>
+<figcaption>Aug 11, 2020, early morning: The work starts</figcaption>
+<img src="/img/house/IMG_1677.jpg" alt="">
+</figure>
+
+<figure>
+<figcaption>Aug 11, 2020 before noon: The cellar is visible</figcaption>
+<img src="/img/house/IMG_1683.jpg" alt="">
+</figure>
+
+<figure>
+<figcaption>Aug 11, 2020, afternoon: Bringing the last items into place</figcaption>
+<img src="/img/house/IMG_1698.jpg" alt="">
+<img src="/img/house/IMG_1714.jpg" alt="">
+<img src="/img/house/IMG_1717.jpg" alt="">
+</figure>
+
+<figure>
+<figcaption>Aug 11, 2020, afternoon: The stairs are the last piece to assemble. The men are finishing their work for today.</figcaption>
+<img src="/img/house/IMG_1727.jpg" alt="">
+</figure>
