@@ -14,7 +14,7 @@ With references
 - [Web design is 95% typography](https://ia.net/topics/the-web-is-all-about-typography-period) *– iA article*
 - [Should the terms font and typeface be used interchangeably?](https://typography.guru/journal/should-the-terms-font-and-typeface-be-used-interchangeably-r58/) *– article by Ralf Herrmann*
 - [Jan Tschichold](http://www.designishistory.com/1920/jan-tschichold/) *– design is history article*
-- [The Elements of Typographic Style](http://www.designishistory.com/1920/jan-tschichold/) *– book by Robert Bringhurst*
+- [The Elements of Typographic Style](https://www.goodreads.com/book/show/44735.The_Elements_of_Typographic_Style?ac=1&from_search=true&utm_source=Better+Web+Type&utm_campaign=73c464360d-AUTOMATION__bwt-course-L01&utm_medium=email&utm_term=0_b76a5d78ca-73c464360d-1210083454&mc_cid=73c464360d&mc_eid=4b9eda4303) *– book by Robert Bringhurst*
 
 ## Equilateral triangle of a perfect paragraph 
 With references
@@ -43,7 +43,7 @@ With references
 - [Combining Typefaces](https://typekit.files.wordpress.com/2016/04/combiningtypefaces.pdf) *– online book by Tim Brown*
 - [Beautiful Web Type](https://beautifulwebtype.com) *– font collection of open-source web types ★*
 - [Typespiration](https://typespiration.com/) *– font collection*
-- [How typography shapes our perception of truth] *– fast company article by John Brownlee*
+- [How typography shapes our perception of truth](https://www.fastcompany.com/3046365/errol-morris-how-typography-shapes-our-perception-of-truth?utm_source=Better+Web+Type&utm_campaign=6057878843-AUTOMATION__bwt-course-L07&utm_medium=email&utm_term=0_b76a5d78ca-6057878843-1210083454&mc_cid=6057878843&mc_eid=4b9eda4303) *– fast company article by John Brownlee*
 - [Canva Font Combinations](https://www.canva.com/font-combinations/) *– tool/collection*
 
 ## Rhythm in web typography
