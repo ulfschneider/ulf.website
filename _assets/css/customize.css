@@ -16,8 +16,8 @@
     --heading-letter-spacing: 0;
     --heading-color: black;
     --fs-mono: 0.85rem;
-    --fs-h1: var(--fs-3);
-    --fs-h2: var(--fs-1);
+    --fs-h1: var(--fs-2);
+    --fs-h2: var(--fs);
     --fs-h3: var(--fs);
     --mrt-figure: var(--space-2);
     --mrb-figure: var(--space-2);
