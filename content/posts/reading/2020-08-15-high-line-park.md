@@ -1,6 +1,6 @@
 ---
 title: The High Line Park
-subtitle: A beautiful garden above New York City that follows the principle "be simple and slow."
+subtitle: A beautiful garden above New York City that follows the principle "simple and slow."
 refer: arte.tv documentary
 ---
 <figure>
