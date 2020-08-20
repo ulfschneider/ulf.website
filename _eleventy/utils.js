@@ -91,6 +91,7 @@ module.exports = {
             author: item.data.author,
             refer: item.data.refer,
             layout: item.data.layout,
+            tags: item.data.tags,
             content: stripHtml(item.templateContent)
         }
     },
