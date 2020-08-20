@@ -4,7 +4,7 @@ const PluginError = require('plugin-error');
 const sharp = require('sharp');
 const through = require('through2');
 
-const SOURCE = 'content/img/**/*';
+const SOURCE = ['content/img/**/*'];
 const DEST = '_site/img/';
 const site = require('../_data/site.js');
 const MAX_WIDTH = site.imgMaxWidth;
@@ -40,15 +40,20 @@ const imageTransformer = (file, encoding, callback) => {
         image = sharp(file.contents);
         image.metadata()
             .then(metadata => {
-                let operations = deriveOperations(metadata);
-
-                for (let op of operations) {
-                    image = image[op.name].apply(image, op.arguments);
-                }
-                image.toBuffer((err, buffer) => {
-                    file.contents = buffer;
+                if (metadata.format == 'gif') {
+                    //do nothing with a gif             
                     callback(null, file);
-                });
+                } else {
+                    let operations = deriveOperations(metadata);
+
+                    for (let op of operations) {
+                        image = image[op.name].apply(image, op.arguments);
+                    }
+                    image.toBuffer((err, buffer) => {
+                        file.contents = buffer;
+                        callback(null, file);
+                    });
+                }
 
             }).catch(imageError);
     } else {
@@ -60,7 +65,7 @@ const imageTransformer = (file, encoding, callback) => {
 //FIXME error handling with proper file name
 
 const processingImages = () => {
-    console.log(`Optimizing and resizing images for imgMaxWidth=${MAX_WIDTH}, imgMaxHeight=${MAX_HEIGHT}, and jpegQuality=${JPEG_QUALITY} (0-100). Change these settings in _data/site.js if desired.`);
+    console.log(`Optimizing and resizing images for imgMaxWidth=${MAX_WIDTH}, imgMaxHeight=${MAX_HEIGHT}, and jpegQuality=${JPEG_QUALITY} (0-100). Change these settings in _data/site.js if desired. GIF files are ignored to be optimized.`);    
     return src(SOURCE)
         .pipe(through.obj(imageTransformer))
         .pipe(dest(DEST));
