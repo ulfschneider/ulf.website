@@ -52,6 +52,7 @@ module.exports = {
     ],
     tagnav: [
         'reading',
+        'accessibility',
         'articles',
         'tools',
         'journal'
