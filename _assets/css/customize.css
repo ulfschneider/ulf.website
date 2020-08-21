@@ -6,6 +6,9 @@
     --font-size-breakpoint-md: 22px;
     --font-size-breakpoint-lg: 22px;
 
+    --text-underline-offset: 0.25em;
+    --text-decoration-thickness: 2px;
+
     --font-family: Georgia, serif;
     --heading-font-family: sans-serif;
     --form-font-family:  sans-serif;
@@ -15,6 +18,7 @@
     --space-factor: 1.75;
     --heading-letter-spacing: 0;
     --heading-color: black;
+    --meta-color: var(--base-color);
     --fs-mono: 0.85rem;
     --fs-h1: var(--fs-2);
     --fs-h2: var(--fs);
@@ -29,6 +33,7 @@
     --accent-three-s: 100%;
     --accent-three-l: 42.9%;
 }
+
 
 
 img {
@@ -50,10 +55,10 @@ nav ul li:last-child {
 
 
 .anchor {
-    color: var(--neutral);
     text-decoration: none;
     font-weight: normal;
 }
+
 
 .fit-media {
     background: var(--neutral-5);

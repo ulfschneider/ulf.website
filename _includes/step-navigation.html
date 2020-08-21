@@ -1,5 +1,5 @@
 {%- if nostepnav == nil and notags == nil -%}
-    {%- assign liveContent = collections.liveContent | mustContainTag: tags | mustNotContainLayout: "list,gallery" | reverse -%}
+    {%- assign liveContent = collections.liveContent | mustEqualTags: tags | mustNotContainLayout: "list,gallery" | reverse -%}
 
     {%- assign prev = liveContent | getNext: page -%}
     {%- assign next = liveContent | getPrev: page -%}
@@ -15,7 +15,7 @@
         <nav class="clearfix step-navigation small lh-2 {{topMargin}}">
             {%- if next  -%}
                 <div class="float-left {{bottomMargin}}">
-                    <a class="no-deco meta" href="{{ next.url }}">
+                    <a class="meta no-deco" href="{{ next.url }}">
                         <div class="no-wrap">
                             <span aria-hidden="true">&lt;&nbsp;</span>
                             <span>Newer</span>
@@ -31,7 +31,7 @@
 
             {%- if prev  -%}
                 <div class="float-right mrl right">
-                    <a class="no-deco meta" href="{{ prev.url }}">
+                    <a class="meta no-deco" href="{{ prev.url }}">
                         <div class="no-wrap">
                             <span>Older</span>
                             <span aria-hidden="true">&nbsp;&gt;</span>

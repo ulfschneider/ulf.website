@@ -114,7 +114,7 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('tagIntro', filters.tagIntro);
     eleventyConfig.addFilter('humanDate', filters.humanDate);
     eleventyConfig.addFilter('mustNotContainLayout', filters.mustNotContainLayout);
-    eleventyConfig.addFilter('mustContainTag', filters.mustContainTag);
+    eleventyConfig.addFilter('mustEqualTags', filters.mustEqualTags);
     eleventyConfig.addFilter('getPrev', filters.getPrev);
     eleventyConfig.addFilter('getNext', filters.getNext);
 }

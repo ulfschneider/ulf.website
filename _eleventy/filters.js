@@ -80,22 +80,17 @@ module.exports = {
         return '';
     },
 
-    mustContainTag: function (collection, filterTags) {
+    mustEqualTags: function (collection, filterTags) {
         let result = new Set();
 
         if (collection && filterTags) {
             if (typeof filterTags === 'string' || filterTags instanceof String) {
-                filterTags = filterTags.split(','); //make it an array
+                filterTags = filterTags.split(',').sort().join(','); 
             }
 
             for (let item of collection) {
-                if (item.data.tags) {
-                    for (let tag of item.data.tags) {
-                        if (filterTags.includes(tag)) {
-                            result.add(item);
-                            break;
-                        }
-                    }
+                if (item.data.tags && item.data.tags.sort().join(',') == filterTags) {
+                    result.add(item);
                 }
             }
         }

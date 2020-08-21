@@ -58,6 +58,7 @@ permalink: '{{site.search}}'
                 let linkToArticle = document.createElement('a');
                 linkToArticle.href = entry.ref;
                 linkToArticle.innerHTML = friend.title;
+                linkToArticle.classList = 'heading-color';
                 title.appendChild(linkToArticle);
             }
 
