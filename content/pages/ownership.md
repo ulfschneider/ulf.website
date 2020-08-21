@@ -6,9 +6,9 @@ nodate: true
 notags: true
 navid: ownership
 ---
-Verantwortlich für den Inhalt gemäß § 55 Abs.2 RStV:
+Verantwortlich für den Inhalt gemäß § 55 Abs.2 RStV:{.meta}
 
-<address class="mrt">
+<address class="mrt meta">
 Ulf Schneider<br>
 Winfriedstr. 78<br>
 33098 Paderborn<br>
