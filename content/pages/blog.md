@@ -5,4 +5,4 @@ navid: blog
 sitetags: true
 permalink: '{{site.blog}}'
 ---
-Here are the things I write. If you like it, you may want to subscribe to my [RSS feed](/rss.xml).
+Here is my blog. If you like it, you may want to subscribe to my [RSS feed](/rss.xml).
