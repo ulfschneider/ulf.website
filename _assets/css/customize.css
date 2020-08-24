@@ -53,12 +53,10 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
-
 .anchor {
     text-decoration: none;
     font-weight: normal;
 }
-
 
 .fit-media {
     background: var(--neutral-5);

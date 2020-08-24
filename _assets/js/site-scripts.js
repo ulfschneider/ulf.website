@@ -35,7 +35,7 @@ function maintainBackToTopVisibility() {
     let backToTop = document.getElementById('back-to-top');
 
     if (windowHeight * 1.5 < documentHeight) {
-        backToTop.style.display = 'inline';
+        backToTop.style.display = '';
     } else {
         backToTop.style.display = 'none';
     }
@@ -61,7 +61,7 @@ function displayLoadTime() {
 
     if (duration) {
         loadTime.innerHTML = 'This page loaded in ' + (duration / 1000).toFixed(2) + ' seconds';
-        loadTime.style.display = 'inline';
+        loadTime.style.display = '';
     } else {
         loadTime.style.display = 'none';
     }
