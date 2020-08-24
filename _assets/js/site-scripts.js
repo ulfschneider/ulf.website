@@ -1,5 +1,4 @@
-
-
+/* Service Worker */
 if (navigator.serviceWorker) {
     navigator
         .serviceWorker
@@ -17,6 +16,7 @@ if (navigator.serviceWorker) {
     });
 }
 
+/* Send mail */
 function s(user, domain, b) {
     if (user && domain) {
         if (b) {
@@ -29,6 +29,7 @@ function s(user, domain, b) {
     }
 }
 
+/* Back-to-top link */
 function maintainBackToTopVisibility() {
     let windowHeight = window.innerHeight;
     let documentHeight = document.body.clientHeight;
@@ -41,6 +42,7 @@ function maintainBackToTopVisibility() {
     }
 }
 
+/* Page load time */
 function displayLoadTime() {
     let loadTime = document.getElementById('load-time');
     if (!loadTime) {
@@ -48,7 +50,7 @@ function displayLoadTime() {
         return;
     }
 
-    let duration = 0;
+    let seconds = 0;
     //PerformanceNavigationTiming API
     let entries = performance.getEntriesByType("navigation")
     if (entries && entries.length) {
@@ -60,7 +62,14 @@ function displayLoadTime() {
     }
 
     if (duration) {
-        loadTime.innerHTML = 'This page loaded in ' + (duration / 1000).toFixed(2) + ' seconds';
+        let seconds = (duration / 1000).toFixed(2);
+        let templateString = loadTime.innerText;
+        if (templateString) {
+            templateString = templateString.replace('${seconds}', seconds);
+        } else {
+            templateString = `This page loaded in ${seconds} seconds`;    
+        }
+        loadTime.innerHTML = templateString;
         loadTime.style.display = '';
     } else {
         loadTime.style.display = 'none';
