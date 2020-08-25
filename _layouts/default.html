@@ -5,10 +5,9 @@
 		{% include head.html %}
 	</head>
 
-	<body>		
-		<div class="x breakout-r mrb-3">
-			{% include header.html %}
-		</div>
+	<body>
+
+		{% include header.html %}
 
 		<main class="x indent word-wrap default">
 			{%- unless title == "notitle" or notitle != nil  -%}
@@ -22,10 +21,8 @@
 			{% include step-navigation.html %}
 		</main>
 
-		<div class="x breakout-r mry-2">
-			{% include footer.html %}
-		</div>
-		
+		{% include footer.html %}
+
 	</body>
 
 </html>

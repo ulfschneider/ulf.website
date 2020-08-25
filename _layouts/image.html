@@ -4,16 +4,14 @@
 	<head>
 		{% include head.html %}
 		<style>
-			.image .title * {				
+			.image .title * {
 				font-size: var(--fs-d1);
-			}			
+			}
 		</style>
 	</head>
 
 	<body>
-		<div class="x mrb-3">
-			{% include header.html %}
-		</div>
+		{% include header.html %}
 
 		<main class="x indent word-wrap image">
 
@@ -32,9 +30,8 @@
 
 		</main>
 
-		<div class="x breakout-r mry-2">
-			{% include footer.html %}
-		</div>
+		{% include footer.html %}
+
 	</body>
 
 </html>
