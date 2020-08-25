@@ -3,9 +3,9 @@
     <ul class="reset inline mry-0">
         <li class="inline mrr-d2">
             {%- if tag == nil -%}
-                <a class="inline-block meta no-deco heading-color bold" aria-current="page" href="{{site.blog}}">all</a>
+                <a class="meta heading-color bold" aria-current="page" href="{{site.blog}}">all</a>
             {%- else -%}
-                <a class="inline-block no-deco" href="{{site.blog}}">all</a>
+                <a href="{{site.blog}}">all</a>
             {%- endif -%}
         </li>
         {%- if tag != nil -%}
@@ -16,7 +16,7 @@
         {%- for siteTag in currentTags -%}
             {%- if tag != siteTag -%}
                 <li class="inline mrr-d2">
-                    <a class="inline-block no-deco" href="{{site.blog}}{{siteTag}}/">{{siteTag}}</a>
+                    <a href="{{site.blog}}{{siteTag}}/">{{siteTag}}</a>
                 </li>
             {%- endif -%}
         {%- endfor -%}

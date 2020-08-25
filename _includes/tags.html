@@ -5,9 +5,9 @@
             {%- for tag in tags -%}
                 <li class="inline mrr-d1">
                     {%- if layout == 'image' or layout == 'gallery' %}
-                        <a class="inline-block" href="/images/{{tag}}/">{{tag}}</a>
+                        <a href="/images/{{tag}}/">{{tag}}</a>
                     {%- else -%}
-                        <a class="inline-block" href="/blog/{{tag}}/">{{tag}}</a>
+                        <a href="/blog/{{tag}}/">{{tag}}</a>
                     {%- endif -%}
                 </li>
             {%- endfor -%}
