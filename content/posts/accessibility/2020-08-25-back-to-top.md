@@ -1,7 +1,7 @@
 ---
 title: Back to Top
 ---
-A *Back to top* link helps users navigate to the top (start) of long pages.
+A *Back to Top* link helps users navigate to the top (start) of long pages.
 
 [[toc]]
 
