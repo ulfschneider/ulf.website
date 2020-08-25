@@ -20,7 +20,7 @@
     --meta-color: var(--base-color);
     --fs-mono: 0.8rem;
     --fs-h1: var(--fs-2);
-    --fs-h2: var(--fs);
+    --fs-h2: var(--fs-1);
     --fs-h3: var(--fs);
     --mrt-figure: var(--space-2);
     --mrb-figure: var(--space-2);
@@ -32,8 +32,6 @@
     --accent-three-s: 100%;
     --accent-three-l: 42.9%;
 }
-
-
 
 img {
     display: block;

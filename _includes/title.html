@@ -1,7 +1,7 @@
 {%- if title != "notitle" and notitle == nil -%}
     <section class="title no-indent">
         {%- if title  -%}
-            <h1 class="mry-0 inline">{{ title }}
+            <h1 class="mry-0 inline meta-font">{{ title }}
                 {%- if tag != nil -%}
                     <span class="normal"> tagged with <em>{{tag}}</em></span>
                 {%- endif -%}
@@ -9,11 +9,11 @@
         {%- endif -%}
 
         {%- if subtitle  -%}
-            <p class="no-indent lh-2 heading-font sub-title">{{subtitle}}</p>
+            <p class="no-indent lh-2 meta-font sub-title">{{subtitle}}</p>
         {%- endif -%}
 
         {%- if refer  -%}
-            <p class="no-indent lh-2 heading-font refer">{{refer}}</p>
+            <p class="no-indent lh-2 meta-font refer">{{refer}}</p>
         {%- endif -%}
 
         {%- if page.date and nodate == nil -%}

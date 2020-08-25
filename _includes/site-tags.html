@@ -3,7 +3,7 @@
     <ul class="reset inline mry-0">
         <li class="inline mrr-d2">
             {%- if tag == nil -%}
-                <a class="meta heading-color bold" aria-current="page" href="{{site.blog}}">all</a>
+                <span class="meta" aria-current="page" >all</span>
             {%- else -%}
                 <a href="{{site.blog}}">all</a>
             {%- endif -%}
@@ -17,6 +17,10 @@
             {%- if tag != siteTag -%}
                 <li class="inline mrr-d2">
                     <a href="{{site.blog}}{{siteTag}}/">{{siteTag}}</a>
+                </li>
+            {%- else -%}
+                <li class="inline mrr-d2">
+                    <span class="meta" aria-current="page" >{{siteTag}}</span>
                 </li>
             {%- endif -%}
         {%- endfor -%}
