@@ -29,15 +29,15 @@ function s(user, domain, b) {
     }
 }
 
-function maintainBackToTopVisibility() {
+function maintainBackToStartVisibility() {
     let windowHeight = window.innerHeight;
     let documentHeight = document.body.clientHeight;
-    let backToTop = document.getElementById('back-to-top');
+    let backToStart = document.getElementById('back-to-start');
 
     if (windowHeight * 1.5 < documentHeight) {
-        backToTop.style.display = '';
+        backToStart.style.display = '';
     } else {
-        backToTop.style.display = 'none';
+        backToStart.style.display = 'none';
     }
 }
 
@@ -68,8 +68,8 @@ function displayLoadTime() {
 }
 
 
-addEventListener('load', event => maintainBackToTopVisibility());
-addEventListener('scroll', event => maintainBackToTopVisibility());
-addEventListener('resize', event => maintainBackToTopVisibility());
+addEventListener('load', event => maintainBackToStartVisibility());
+addEventListener('scroll', event => maintainBackToStartVisibility());
+addEventListener('resize', event => maintainBackToStartVisibility());
 
 addEventListener('load', event => displayLoadTime());
