@@ -5,9 +5,9 @@
             <ul class="reset mry-0 inline">
                 <li class="inline">
                     {%- if layout == 'image' or layout == 'gallery' %}
-                        <em><a class="no-deco inline-block" href="/images/{{tag}}/">{{tag}}</a></em>
+                        <a class="inline-block" href="/images/{{tag}}/">{{tag}}</a>
                     {%- else -%}
-                        <em><a class="no-deco inline-block" href="/blog/{{tag}}/">{{tag}}</a></em>
+                        <a class="inline-block" href="/blog/{{tag}}/">{{tag}}</a>
                     {%- endif -%}
                 </li>
             </ul>
