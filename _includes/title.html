@@ -2,8 +2,8 @@
     <section class="title no-indent">
         {%- if title  -%}
             <h1 class="mry-0 inline">{{ title }}
-                {%- if tag != nil and sitetags == nil -%}
-                    <span class="normal fs"> tagged with <em>#{{tag}}</em></span>
+                {%- if tag != nil -%}
+                    <span class="normal"> tagged with <em>{{tag}}</em></span>
                 {%- endif -%}
             </h1>
         {%- endif -%}
