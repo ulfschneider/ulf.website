@@ -19,7 +19,7 @@
     --heading-letter-spacing: 0;
     --heading-color: black;
     --meta-color: var(--base-color);
-    --fs-mono: 0.85rem;
+    --fs-mono: 0.8rem;
     --fs-h1: var(--fs-2);
     --fs-h2: var(--fs);
     --fs-h3: var(--fs);
