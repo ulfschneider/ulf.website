@@ -30,14 +30,16 @@ function s(user, domain, b) {
 }
 
 function maintainBackToStartVisibility() {
-    let windowHeight = window.innerHeight;
-    let documentHeight = document.body.clientHeight;
     let backToStart = document.getElementById('back-to-start');
+    if (backToStart) {
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.body.clientHeight;
 
-    if (windowHeight * 1.5 < documentHeight) {
-        backToStart.style.display = '';
-    } else {
-        backToStart.style.display = 'none';
+        if (windowHeight * 1.5 < documentHeight) {
+            backToStart.style.display = '';
+        } else {
+            backToStart.style.display = 'none';
+        }
     }
 }
 

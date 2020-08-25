@@ -1,5 +1,5 @@
 ---
-title: Accessibility
+title: My approach to accessibility
 ---
 Through a [post from Ethan Marcotte](https://ethanmarcotte.com/wrote/an-accessibility-statement/) I got drawn into the accessibility topic. Website accessibility was not on my radar until then and that is not good. I want to explore this field, develop my skills and make better *– accessible –* websites.
 
