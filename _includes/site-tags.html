@@ -1,11 +1,11 @@
 <nav class="meta small">
-    <span class="mrr">Choose a tag:</span>
+    <span class="mrr-d2">Choose a tag:</span>
     <ul class="reset inline mry-0">
-        <li class="inline-block">
+        <li class="inline mrr-d2">
             {%- if tag == nil -%}
-                <a class="meta no-deco heading-color bold" aria-current="page" href="{{site.blog}}">all</a>
+                <a class="inline-block meta no-deco heading-color bold" aria-current="page" href="{{site.blog}}">all</a>
             {%- else -%}
-                <a class="no-deco" href="{{site.blog}}">all</a>
+                <a class="inline-block no-deco" href="{{site.blog}}">all</a>
             {%- endif -%}
         </li>
         {%- if tag != nil -%}
@@ -15,8 +15,8 @@
         {%- endif -%}
         {%- for siteTag in currentTags -%}
             {%- if tag != siteTag -%}
-                <li class="inline-block">
-                    <a class="no-deco" href="{{site.blog}}{{siteTag}}/">{{siteTag}}</a>
+                <li class="inline mrr-d2">
+                    <a class="inline-block no-deco" href="{{site.blog}}{{siteTag}}/">{{siteTag}}</a>
                 </li>
             {%- endif -%}
         {%- endfor -%}
