@@ -54,7 +54,9 @@ function addMarkdownLib(eleventyConfig) {
         .use(markdownItAnchor, {
             permalink: true,
             permalinkClass: 'anchor',
-            permalinkSymbol: '#'
+            permalinkSymbol: '#',
+            permalinkBefore: false,
+            permalinkSpace: true
         })
         .use(markdownItTableOfContents)
         .use(markdownItDefList)

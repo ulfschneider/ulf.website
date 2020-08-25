@@ -53,6 +53,8 @@ nav ul li:last-child {
 .anchor {
     text-decoration: none;
     font-weight: normal;
+    font-size: var(--fs);
+    color: var(--neutral-1);
 }
 
 .fit-media {
