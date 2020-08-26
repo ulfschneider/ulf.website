@@ -4,10 +4,7 @@
     --font-size-breakpoint-sm: 21px;
     --font-size-breakpoint-rg: 22px;
     --font-size-breakpoint-md: 22px;
-    --font-size-breakpoint-lg: 22px;
-
-    --text-underline-offset: 0.25em;
-    --text-decoration-thickness: 1.5px;
+    --font-size-breakpoint-lg: 23px;
 
     --font-family: Georgia, serif;
     --heading-font-family: sans-serif;
@@ -22,19 +19,8 @@
     --fs-h1: var(--fs-2);
     --fs-h2: var(--fs-1);
     --fs-h3: var(--fs);
-    --mrt-figure: var(--space-2);
-    --mrb-figure: var(--space-2);
-    --mrt-blockquote: var(--space-2);
-    --mrb-blockquote: var(--space-2);    
     --fs-h3: 1rem;    
     --pre-background: var(--neutral-5);
-}
-
-*:focus {
-    outline: var(--space-d3) solid var(--primary);
-    outline-offset: var(--space-d4);
-    position: relative;
-    z-index: 11111;
 }
 
 img {
@@ -59,6 +45,14 @@ nav ul li:last-child {
     font-weight: normal;
     font-size: var(--fs);
     color: var(--neutral-1);
+}
+
+nav.table-of-contents {
+    margin: var(--vertical-rhythm) 0;
+}
+
+nav.table-of-contents > * {
+    margin: 0;
 }
 
 .fit-media {

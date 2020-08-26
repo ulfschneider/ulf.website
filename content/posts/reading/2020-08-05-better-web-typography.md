@@ -9,7 +9,6 @@ refer: Online course about web typography by Matej Latin
 I think the course is like a condensed version of Matej´s book "[Better web typography for a better web](https://betterwebtype.com/web-typography-book/)," which I didn´t read. 
 
 ## Introduction to typography
-With references
 
 - [Web design is 95% typography](https://ia.net/topics/the-web-is-all-about-typography-period) *– iA article*
 - [Should the terms font and typeface be used interchangeably?](https://typography.guru/journal/should-the-terms-font-and-typeface-be-used-interchangeably-r58/) *– article by Ralf Herrmann*
@@ -17,20 +16,17 @@ With references
 - [The Elements of Typographic Style](https://www.goodreads.com/book/show/44735.The_Elements_of_Typographic_Style?ac=1&from_search=true&utm_source=Better+Web+Type&utm_campaign=73c464360d-AUTOMATION__bwt-course-L01&utm_medium=email&utm_term=0_b76a5d78ca-73c464360d-1210083454&mc_cid=73c464360d&mc_eid=4b9eda4303) *– book by Robert Bringhurst*
 
 ## Equilateral triangle of a perfect paragraph 
-With references
 
 - [How we read](https://alistapart.com/article/how-we-read/) *– ALA article by Jason Santa Maria ★*
 - [Measure](https://chrome.google.com/webstore/detail/measure/bbompmbliibpeaaloikpoahdokhjdmeg) *– Chrome plugin*
 - [Readability: the optimal line length](https://baymard.com/blog/line-length-readability) *– article by Christian Holst*
 
 ## Anatomy of a typeface
-With references
 
 - [Type classifications](https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/type-classifications) *– article by Allan Haley*
 - [Learn: Anatomy of a typeface](http://typedia.com/learn/only/anatomy-of-a-typeface/) *– typedia article ★*
 
 ## Choosing typefaces
-With references
 
 - [Web Font Specimen](http://webfontspecimen.com/) *– tool*
 - [Massimo Vignelli´s 6 typefaces](https://fontsinuse.com/uses/14164/massimo-vignelli-s-a-few-basic-typefaces) *– fonts in use article by Stephen Coles*
@@ -38,7 +34,6 @@ With references
 - [Times New Roman](https://www.youtube.com/watch?v=-cGUaBbT0bA) *– video*
 
 ## Combining typefaces
-With references
 
 - [Combining Typefaces](https://typekit.files.wordpress.com/2016/04/combiningtypefaces.pdf) *– online book by Tim Brown*
 - [Beautiful Web Type](https://beautifulwebtype.com) *– font collection of open-source web types ★*
@@ -47,7 +42,6 @@ With references
 - [Canva Font Combinations](https://www.canva.com/font-combinations/) *– tool/collection*
 
 ## Rhythm in web typography
-With references
 
 - [Why is Vertical Rhythm an Important Typography Practice?](https://zellwk.com/blog/why-vertical-rhythms/) *– article by Zell*
 - [Kern Type, the kerning game](https://type.method.ac/) *– game by Mark MacKay*
@@ -55,7 +49,6 @@ With references
 - [Grid Lover](https://www.gridlover.net/try) *– tool*
 
 ## Modular scale & meaningful typography
-With references
 
 - [More meaningful typography](https://alistapart.com/article/more-meaningful-typography/) *– ALA article by Tim Brown*
 - [Modularscale.com](https://www.modularscale.com/) *– tool*
