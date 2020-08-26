@@ -32,7 +32,7 @@ The outline should have a contrast ratio of at least 3:1 between outline and bac
 
 <figure>
 {% highlight css %}
-* {
+*, *:hover, *:active {
   outline: none;
 }
 
@@ -44,7 +44,7 @@ The outline should have a contrast ratio of at least 3:1 between outline and bac
 }
 {% endhighlight %}
 <figcaption>
-<p>I´m first resetting the outline style by disabling it. Then, I´m styling the outline for any element that can gain focus. This will make the outline visible for keyboard users but invisible when using the mouse (which is addressed by <code>:link</code>, <code>:visited</code>, <code>:hover</code> and <code>:active</code> styling).</p>
+<p>I´m first resetting the outline style by disabling it. Then, I´m styling the outline for any element that can gain focus. This will make the outline visible for keyboard users but invisible when using the mouse (which is addressed by <code>:hover</code> and <code>:active</code> disabling).</p>
 <p>Depending on the website, it might sometimes be that the outline will partially be hidden by other site elements. To overcome that, I´m giving the focused element a <code>position</code> and a <code>z-index</code>.</p>
 </figcaption>
 </figure>
@@ -55,4 +55,4 @@ WebAIM, Jared Smith
 : [The plague of outline:0](https://webaim.org/blog/plague-of-outline-0/)
 
 Mozilla Hacks, Hidde de Vries
-: [Indicating focus to improve accessibility](https://hacks.mozilla.org/2019/06/indicating-focus-to-improve-accessibility/)
+: [http://alistapart.com/article/frameworksIndicating focus to improve accessibility](https://hacks.mozilla.org/2019/06/indicating-focus-to-improve-accessibility/)
