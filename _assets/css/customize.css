@@ -28,9 +28,13 @@
     --mrb-blockquote: var(--space-2);    
     --fs-h3: 1rem;    
     --pre-background: var(--neutral-5);
-    --accent-three-h: 98.1;
-    --accent-three-s: 100%;
-    --accent-three-l: 42.9%;
+}
+
+*:focus {
+    outline: var(--space-d3) solid var(--primary);
+    outline-offset: var(--space-d4);
+    position: relative;
+    z-index: 11111;
 }
 
 img {

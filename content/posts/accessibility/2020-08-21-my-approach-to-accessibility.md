@@ -8,7 +8,6 @@ Access by everyone regardless of disability is an essential aspect.
 <footer>Tim Berners-Lee, W3C Director and inventor of the World Wide Web</footer>
 </blockquote>
 
-
 [[toc]]
 
 ## What is accessibility
