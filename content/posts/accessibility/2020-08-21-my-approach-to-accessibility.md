@@ -1,9 +1,33 @@
 ---
 title: My approach to accessibility
 ---
-Through a [post from Ethan Marcotte](https://ethanmarcotte.com/wrote/an-accessibility-statement/) I got drawn into the accessibility topic. Website accessibility was not on my radar until then and that is not good. I want to explore this field, develop my skills and make better *– accessible –* websites.
+Through a [post from Ethan Marcotte](https://ethanmarcotte.com/wrote/an-accessibility-statement/) I got drawn into the accessibility topic. Web accessibility, like  defined by the W3C, was not on my radar until then and that is not good. 
+
+<blockquote>The power of the Web is in its universality.
+Access by everyone regardless of disability is an essential aspect.
+<footer>Tim Berners-Lee, W3C Director and inventor of the World Wide Web</footer>
+</blockquote>
+
 
 [[toc]]
+
+## What is accessibility
+
+<blockquote>
+Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. 
+<footer>W3C, in <cite><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">What is Web Accessibility</a></cite></footer>
+</blockquote>
+
+To quote the Mozilla Developer Network:
+
+<blockquote>
+Accessibility is the practice of making your websites usable by as many people as possible. We traditionally think of this as being about people with disabilities, but the practice of making sites accessible also benefits other groups such as those using mobile devices, or those with slow network connections.
+<footer>MDN Web Docs, in <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility</a></cite></footer>
+</blockquote>
+
+I want to explore this field, develop my skills and make better, *accessible* websites.
+
+
 
 ## Why accessibility matters to me
 
