@@ -32,7 +32,7 @@ The outline should have a contrast ratio of at least 3:1 between outline and bac
 
 <figure>
 {% highlight css %}
-*, *:hover, *:active {
+* {
   outline: none;
 }
 
@@ -42,17 +42,31 @@ The outline should have a contrast ratio of at least 3:1 between outline and bac
   position: relative;
   z-index: 11111;
 }
+
 {% endhighlight %}
 <figcaption>
-<p>I´m first resetting the outline style by disabling it. Then, I´m styling the outline for any element that can gain focus. This will make the outline visible for keyboard users but invisible when using the mouse (which is addressed by <code>:hover</code> and <code>:active</code> disabling).</p>
-<p>Depending on the website, it might sometimes be that the outline will partially be hidden by other site elements. To overcome that, I´m giving the focused element a <code>position</code> and a <code>z-index</code>.</p>
+<p>I´m first disabling the outline. Then, I´m styling the outline for any element that can gain focus. Depending on the website, it might sometimes be that the outline will partially be hidden by other site elements. To overcome that, I´m giving the focused element a <code>position</code> and a <code>z-index</code>.
 </figcaption>
 </figure>
 
+<figure>
+{% highlight css %}
+*:hover, *:active {
+	outline: none;
+}
+{% endhighlight %}
+<figcaption>If the outline should not be visible for mouse pointer events, the outline can be disabled for all <code>:hover</code> and <code>:active</code> elements. The outline will still remain visible for keyboard events. Place this CSS code <em>after</em> the <code>*:focus</code> selector from above.</figcaption>
+</figure>
 
 ## References
+
 WebAIM, Jared Smith
 : [The plague of outline:0](https://webaim.org/blog/plague-of-outline-0/)
 
 Mozilla Hacks, Hidde de Vries
 : [http://alistapart.com/article/frameworksIndicating focus to improve accessibility](https://hacks.mozilla.org/2019/06/indicating-focus-to-improve-accessibility/)
+
+allyjs.io
+: [Focusable Elements](https://allyjs.io/data-tables/focusable.html)
+
+[outlinenone.com](http://outlinenone.com)
