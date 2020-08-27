@@ -1,6 +1,6 @@
 {%- if title != "notitle" and notitle == nil -%}
     <section class="title no-indent">
-            {%- if page.date and nodate == nil -%}
+        {%- if page.date and nodate == nil -%}
             {%- assign hasdate = true -%}
         {%- else -%}
             {%- assign hasdate = false%}
@@ -14,17 +14,17 @@
             {%- assign hastags = false -%}
         {%- endif -%}
         {%- if author or hasdate or hastags  -%}
-            <aside class="lh-2 meta small mrb-2">
+            <aside class="lh-2 meta small mrt-d3 mrb-2">
                 {% include author-and-date.html %}
                 {% include tags.html %}
             </aside>
         {%- endif -%}
 
-
         {%- if title  -%}
             <h1 class="mry-0 inline meta-font">{{ title }}
                 {%- if tag != nil -%}
-                    <span class="normal"> tagged with <em>{{tag}}</em></span>
+                    <span class="normal"> tagged with <em>{{tag}}</em>
+                    </span>
                 {%- endif -%}
             </h1>
         {%- endif -%}
