@@ -1,16 +1,15 @@
 ---
 title: Indicating the focused element
-draft: true
 ---
 
 [[toc]]
 
 ## Focus is important for keyboard navigation
-The currently focused element on a website, which might be a link, an form field, or a button, should visually indicate its focus state. The indication of the focus state will improve or even enable keyboard navigation. 
+The currently focused element on a website, which might be a link, a form field, or a button, must visually indicate its focus state. The indication of the focus state will improve or even enable keyboard navigation. 
 
-> Without seeing what interactive element has the focus it´s impossible to navigate a website with the keyboard. For a keyboard user it is comparable to removing the mouse cursor for mouse users. 
+Without seeing what interactive element has the focus it´s impossible to navigate a website with the keyboard. For a keyboard user that situation is comparable to removing the mouse cursor for mouse users. 
 
-On a page, at any given time, there is *one* element that has the focus. If you’ve just loaded a page, it is probably the document, but once you start to click or tab, it will be one of the aforementioned interactive elements. 
+On a page, at any given time, there is *one* element that has the focus. Directly after loading the page, it is probably the document, but once you start to click or tab, it will be one of the aforementioned interactive elements. 
 
 ## Do not disable the focus outline
 By default, a browser will indicate focus with an `outline` CSS style, which can be changed. Sometimes web designers remove the outline to make the site design more elegant without *disturbing* outlines. I´m guilty of having done it many times.
@@ -25,10 +24,11 @@ By default, a browser will indicate focus with an `outline` CSS style, which can
 <figcaption>DON´T DO THAT: disabling the outline indication for focused elements in your CSS</figcaption>
 </figure>
 
-## How to style the focus outline
+## How to style the focus indication
+Styling the `outline` is the preferred method to indicate focus as opposed to styling `border` or `background`. `outline` doesn´t affect the box model, while `border` does, which means `outline` is less invasive. Also, `background` wouldn´t work for images.
 
-The outline should have a contrast ratio of at least 3:1 between outline and background, according to [WCAG 2.1 Non-text Contrast – Level AA](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1&showtechniques=324%2C331#non-text-contrast
-). Check contrast of colors with the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/). Ideally the outline should be solid and thick enough.
+The contrast ratio of the `outline` against the background must be at least 3:1, according to [WCAG 2.1 Non-text Contrast – Level AA](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1&showtechniques=324%2C331#non-text-contrast
+). Check the contrast of colors with the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/). Ideally the outline should be solid and thick enough to easily grasp it.
 
 <figure>
 {% highlight css %}
@@ -65,8 +65,3 @@ WebAIM, Jared Smith
 
 Mozilla Hacks, Hidde de Vries
 : [http://alistapart.com/article/frameworksIndicating focus to improve accessibility](https://hacks.mozilla.org/2019/06/indicating-focus-to-improve-accessibility/)
-
-allyjs.io
-: [Focusable Elements](https://allyjs.io/data-tables/focusable.html)
-
-[outlinenone.com](http://outlinenone.com)
