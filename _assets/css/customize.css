@@ -21,6 +21,16 @@
     --fs-h3: var(--fs);
     --fs-h3: 1rem;    
     --pre-background: var(--neutral-5);
+    --br-blockquote-color: transparent;
+}
+
+
+blockquote::before {
+    content: "“";
+    margin-left: calc(-1 * var(--horizontal-rhythm));        
+    position: absolute;
+    line-height: 1;
+    font-size: var(--fs-4);    
 }
 
 img {
