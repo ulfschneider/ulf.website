@@ -29,7 +29,7 @@ img {
 }
 
 img+img {
-    margin-top: var(--vertical-rhythm);
+    margin-top: var(--space-2);
 }
 
 nav ul li {

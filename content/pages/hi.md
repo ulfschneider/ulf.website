@@ -7,7 +7,7 @@ notags: true
 navid: home
 ---
 <h1 class="mry-0 meta-font">Ulf Schneider</h1>
-<p class="no-indent inline meta-font">Developer, Agile Coach</p>
+<p class="no-indent inline meta-font">Developer and Agile Coach</p>
 
 <figure>
 <img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-900.jpg" alt="Portrait of Ulf Schneider">
