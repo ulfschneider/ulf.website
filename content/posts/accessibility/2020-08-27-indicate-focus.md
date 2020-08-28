@@ -22,7 +22,7 @@ By default, a browser will indicate focus with an `outline` CSS style, which can
 {% endhighlight %}
 
 ## How to style the focus indication
-Styling the `outline` is the preferred method to indicate focus as opposed to styling `border` or `background`. `outline` doesn´t affect the box model, while `border` does, which means `outline` is less invasive. Also, `background` wouldn´t work for images.
+Styling the `outline` is the preferred method to indicate focus as opposed to styling `border` or `background`. `outline` [doesn´t affect the box model](https://css-tricks.com/almanac/properties/o/outline/), while `border` does, which means `outline` will not change the position of adjacent elements. Also, `background` wouldn´t work for images.
 
 The contrast ratio of the `outline` against the background must be at least 3:1, according to [WCAG 2.1 Non-text Contrast – Level AA](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1&showtechniques=324%2C331#non-text-contrast
 ). Check the contrast of colors with the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/). Ideally the outline should be solid and thick enough to easily grasp it.
@@ -34,7 +34,7 @@ I´m first resetting style by disabling the outline.
 }
 {% endhighlight %}
 
-Then, I´m styling the outline for any element that can gain focus. Depending on the website, it might sometimes be that the outline will partially be hidden by other site elements. To overcome that, I´m giving the focused element a <code>position</code> and a <code>z-index</code>.
+Then, I´m styling the outline for any element that can gain focus. Depending on the website, it might sometimes be that the outline will partially be hidden by other site elements. To overcome that in some cases, I´m giving the focused element a <code>position</code> and a <code>z-index</code>.
 
 {% highlight css %}
 *:focus {
@@ -60,3 +60,6 @@ WebAIM, Jared Smith
 
 Mozilla Hacks, Hidde de Vries
 : [http://alistapart.com/article/frameworksIndicating focus to improve accessibility](https://hacks.mozilla.org/2019/06/indicating-focus-to-improve-accessibility/)
+
+CSS-Tricks, Sara Cope
+: [outline](https://css-tricks.com/almanac/properties/o/outline/)
