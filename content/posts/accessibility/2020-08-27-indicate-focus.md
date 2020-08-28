@@ -55,11 +55,11 @@ If the outline should not be visible for mouse pointer events, the outline can b
 
 ## References
 
+Mozilla Hacks, Hidde de Vries
+: [Indicating focus to improve accessibility](https://hacks.mozilla.org/2019/06/indicating-focus-to-improve-accessibility/)
+
 WebAIM, Jared Smith
 : [The plague of outline:0](https://webaim.org/blog/plague-of-outline-0/)
-
-Mozilla Hacks, Hidde de Vries
-: [http://alistapart.com/article/frameworksIndicating focus to improve accessibility](https://hacks.mozilla.org/2019/06/indicating-focus-to-improve-accessibility/)
 
 CSS-Tricks, Sara Cope
 : [outline](https://css-tricks.com/almanac/properties/o/outline/)

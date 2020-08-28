@@ -1,13 +1,13 @@
 <footer class="x breakout-r mry-2 small">
 
-	{%- if shortNav == nil -%}
-		{% include step-navigation.html %}
+	{%- if stepnav != false %}
+	{% include step-navigation.html %}
 	{%- endif -%}
 
 	{%- if hasmainnav -%}
 		{%- include main-nav.html -%}
 	{%- endif -%}
-	
+
 	<nav class="meta">
 		<ul class="mry-0 reset">
 			{%- for p in site.footernav -%}
