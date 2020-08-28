@@ -45,14 +45,6 @@ Then, I´m styling the outline for any element that can gain focus. Depending on
 }
 {% endhighlight %}
 
-If the outline should not be visible for mouse pointer events, the outline can be disabled for all <code>:hover</code> and <code>:active</code> elements, while it will still remain visible for keyboard events. Place this CSS code <em>after</em> the <code>*:focus</code> selector from above.
-
-{% highlight css %}
-*:hover, *:active {
-	outline: none;
-}
-{% endhighlight %}
-
 ## References
 
 Mozilla Hacks, Hidde de Vries
