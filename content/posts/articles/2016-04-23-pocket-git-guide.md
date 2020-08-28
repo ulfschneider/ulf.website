@@ -5,10 +5,11 @@ subtitle: A short entry-level approach to Git
 
 [[toc]]
 
-<figure class="breakout">
 <h2>Reasons to use Git</h2>
+
 Git will help you doing the following things with a computer:
 
+<figure class="breakout">
 <div class="x-12 gp mrt">
 
 <div class="xx-12 rg:xx-6">
