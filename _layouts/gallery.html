@@ -10,6 +10,7 @@ nostepnav: true
         grid-column-gap: var(--space-2);
         grid-row-gap: var(--space-2);
         align-items: flex-start;
+        margin-bottom: var(--space-d2);
     }
 
     .gallery figure {
@@ -17,14 +18,11 @@ nostepnav: true
         margin: 0;
     }
 
-    .gallery figure img {
-        height: 100%;
-
-        @media (max-width: 400px) {
-            .gallery {
-                display: block;
-            }
+    @media (max-width: 400px) {
+        .gallery {
+            display: block;
         }
+    }
 </style>
 {{ content }}
 
@@ -45,21 +43,21 @@ nostepnav: true
     var container = document.getElementById('image-container');
 
     function appendImage(imgData) {
-        let figure = document.createElement('figure');
-        figure.classList = 'relative'
-        container.appendChild(figure);
         let anchor = document.createElement('a');
         anchor.classList = 'no-deco';
         anchor.href = imgData.url;
-        figure.appendChild(anchor);
+        container.appendChild(anchor);
+
+        let figure = document.createElement('figure');
+        figure.classList = 'relative';
+        anchor.appendChild(figure);
 
         let img = document.createElement('img');
         img.src = imgData.src;
         img.alt = imgData.alt;
         img.classList = 'fit-cover absolute top-0 left-0 w-100 h-100'
         img.setAttribute('loading', 'lazy');
-
-        anchor.appendChild(img);
+        figure.appendChild(img);
 
     }
 
