@@ -48,17 +48,8 @@ Then, I´m styling the outline for any element that can gain focus. Depending on
 
 ## References
 
-Mozilla Hacks, Hidde de Vries
-: [Indicating focus to improve accessibility](https://hacks.mozilla.org/2019/06/indicating-focus-to-improve-accessibility/)
-
-WebAIM, Jared Smith
-: [The plague of outline:0](https://webaim.org/blog/plague-of-outline-0/)
-
-WebAIM
-: [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/).
-
-CSS-Tricks, Sara Cope
-: [outline](https://css-tricks.com/almanac/properties/o/outline/)
-
-MDN Web Docs
-: [The box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+1. Mozilla Hacks, Hidde de Vries, [Indicating focus to improve accessibility](https://hacks.mozilla.org/2019/06/indicating-focus-to-improve-accessibility/)
+2. WebAIM, Jared Smith, [The plague of outline:0](https://webaim.org/blog/plague-of-outline-0/)
+3. WebAIM, [Contrast Checker](https://webaim.org/resources/contrastchecker/).
+4. CSS-Tricks, Sara Cope, [outline](https://css-tricks.com/almanac/properties/o/outline/)
+5. MDN Web Docs, [The box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)

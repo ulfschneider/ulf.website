@@ -53,9 +53,6 @@ addEventListener('resize', event => maintainBackToStartVisibility());
 
 ## References
 
-CSS-Tricks
-: [Need to scroll to the top of the page?](https://css-tricks.com/need-to-scroll-to-the-top-of-the-page/)
-
-Nielsen Norman Group
-: [Back-to-Top Button Design Guidelines](http://nngroup.com/articles/back-to-top/)
+- CSS-Tricks, Chris Coyier [Need to scroll to the top of the page?](https://css-tricks.com/need-to-scroll-to-the-top-of-the-page/)
+- Nielsen Norman Group, [Back-to-Top Button Design Guidelines](http://nngroup.com/articles/back-to-top/)
 
