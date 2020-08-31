@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v15'; //version is used to remove old caches
+const CACHE_VERSION = 'v16'; //version is used to remove old caches
 
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
@@ -12,7 +12,7 @@ const IMAGE_CACHE_NAME = `${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
 const RUNTIME_CACHE_NAME = `${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
 const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME];
 
-const SERVE_HTML_CACHE_FIRST = false; 
+const SERVE_HTML_CACHE_FIRST = false;
 const NO_REVALIDATE_WITHIN_MINUTES = 10;
 
 const CACHE_SETTINGS = {
@@ -44,7 +44,7 @@ const NO_CACHE_URLS = [
 
 const PRECACHE_URLS = [
     OFFLINE_URL,
-    '/',    
+    '/',
     '/js/site-scripts.js',
     '/js/lunr.js'
 ];
@@ -60,7 +60,7 @@ addEventListener('install', async event => {
 
 //remove old static caches on activate  
 addEventListener('activate', async event => {
-    const activate = async function () {
+    const activate = async function() {
         await clearOldCaches();
         await clients.claim(); //let this service worker set itself 
         //as the controller for all clients within its scope        
@@ -96,7 +96,7 @@ addEventListener("message", event => {
 addEventListener('fetch', event => {
     const request = event.request;
 
-    const handleEvent = async function () {
+    const handleEvent = async function() {
         if (isHtmlRequest(request)) {
             if (SERVE_HTML_CACHE_FIRST) {
                 return cacheFirst(event, { revalidate: true });
@@ -189,19 +189,19 @@ async function cacheFirst(event, options) {
 
 async function fetchAndCache(request, options) {
     options = options ? options : {};
-    if (options.responseFromCache
-        && getExpireTimestamp(options.responseFromCache) > 0
-        && !isExpired(options.responseFromCache)
-        && !options.revalidate) {
+    if (options.responseFromCache &&
+        getExpireTimestamp(options.responseFromCache) > 0 &&
+        !isExpired(options.responseFromCache) &&
+        !options.revalidate) {
         //we have a cache entry that´s not expired
         //and we do not enforce a revalidation
         //no need to bother the network        
         return options.responseFromCache;
     }
 
-    if (typeof request == 'string'
-        || request instanceof String
-        || request instanceof URL) {
+    if (typeof request == 'string' ||
+        request instanceof String ||
+        request instanceof URL) {
         request = new Request(request);
     }
 
@@ -311,7 +311,7 @@ function getDateTimestamp(response) {
 
 async function maintainExpiration({ response, maxAgeMinutes }) {
 
-    cloneHeaders = function (response) {
+    cloneHeaders = function(response) {
         let headers = new Headers();
         for (var kv of response.headers.entries()) {
             headers.append(kv[0], kv[1]);
@@ -319,7 +319,7 @@ async function maintainExpiration({ response, maxAgeMinutes }) {
         return headers;
     }
 
-    cloneResponse = async function (response) {
+    cloneResponse = async function(response) {
         try {
             let headers = cloneHeaders(response);
 
@@ -363,7 +363,7 @@ async function trimCache({ cacheName, maxItems }) {
 }
 
 function isValidToCache({ request, response }) {
-    const url = new URL(request.url);  
+    const url = new URL(request.url);
     if (NO_CACHE_URLS.includes(url.pathname)) {
         console.log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
         return false;
