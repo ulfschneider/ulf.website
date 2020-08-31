@@ -30,6 +30,15 @@ blockquote::before {
     font-size: var(--fs-4);
 }
 
+a {
+    transition: color .1s ease-out;
+}
+
+button {
+    transition: color .1s ease-out;
+    transition: background-color .1s ease-out;
+}
+
 img {
     display: block;
     background-color: var(--neutral-5);
