@@ -12,6 +12,6 @@ Ulf Schneider<br>
 Winfriedstr. 78<br>
 33098 Paderborn<br>
 Germany<br>
-{%if site.email.address %}{% include mailto.html %}<br>{% endif %}
+{%if site.email.address %}Email {% include mailto.html %}<br>{% endif %}
 Phone +49 163 2505164
 </address>
