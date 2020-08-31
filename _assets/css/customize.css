@@ -1,41 +1,38 @@
 :root {
     --base-font-size: 20px;
-
     --font-size-breakpoint-sm: 21px;
     --font-size-breakpoint-rg: 22px;
     --font-size-breakpoint-md: 22px;
     --font-size-breakpoint-lg: 23px;
-
     --font-family: Georgia, serif;
     --heading-font-family: sans-serif;
-    --form-font-family:  sans-serif;
-    --meta-font-family:  sans-serif;
-    --mono-font-family: monospace;    
+    --form-font-family: sans-serif;
+    --meta-font-family: sans-serif;
+    --mono-font-family: monospace;
     --font-weight-bold: 600;
     --space-factor: 1.75;
-    --heading-letter-spacing: 0;    
+    --heading-letter-spacing: 0;
     --meta-color: var(--base-color);
     --fs-mono: 0.8rem;
-    --fs-h1: var(--fs-2);
+    --fs-h1: var(--fs-3);
     --fs-h2: var(--fs-1);
     --fs-h3: var(--fs);
-    --fs-h3: 1rem;    
+    --fs-h3: 1rem;
     --pre-background: var(--neutral-5);
     --br-blockquote-color: transparent;
 }
 
-
 blockquote::before {
     content: "“";
-    margin-left: calc(-1 * var(--horizontal-rhythm));        
+    margin-left: calc(-1 * var(--horizontal-rhythm));
     position: absolute;
     line-height: 1;
-    font-size: var(--fs-4);    
+    font-size: var(--fs-4);
 }
 
 img {
     display: block;
-    background-color: var(--neutral-5);      
+    background-color: var(--neutral-5);
 }
 
 img+img {
@@ -61,7 +58,7 @@ nav.table-of-contents {
     margin: var(--vertical-rhythm) 0;
 }
 
-nav.table-of-contents > * {
+nav.table-of-contents>* {
     margin: 0;
 }
 

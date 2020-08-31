@@ -12,7 +12,7 @@
 		<main class="x indent word-wrap default">
 			{%- unless title == "notitle" or notitle != nil  -%}
 				<div class="breakout-r mrb-1">
-					{% include title.html %}
+					{% include title.html asym:true %}
 				</div>
 			{%- endunless -%}
 

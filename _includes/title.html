@@ -1,6 +1,5 @@
-{%- if title != "notitle" and notitle == nil -%}
-    <section class="title no-indent">
-        {%- if page.date and nodate == nil -%}
+{%- if title != "notitle" and notitle != true -%}
+       {%- if page.date and nodate == nil -%}
             {%- assign hasdate = true -%}
         {%- else -%}
             {%- assign hasdate = false%}
@@ -20,6 +19,11 @@
             </aside>
         {%- endif -%}
 
+    {%- if asym == true -%}
+        {%- assign asymmetricAlignment = "md:mrln-1" -%}
+    {%- endif -%}
+    <section class="title no-indent {{asymmetricAlignment}}">
+
         {%- if title  -%}
             <h1 class="mry-0 meta-font">{{ title }}
                 {%- if tag != nil -%}
@@ -36,8 +40,9 @@
         {%- if refer  -%}
             <p class="no-indent lh-2 meta-font refer mxw-rg">{{refer}}</p>
         {%- endif -%}
+
+        {%- if sitetags != nil %}
+            {% include site-tags.html %}
+        {%- endif -%}
     </section>
-    {%- if sitetags != nil %}
-        {% include site-tags.html %}
-    {%- endif -%}
 {%- endif -%}
