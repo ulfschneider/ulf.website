@@ -1,4 +1,3 @@
-
 const lunr = require("lunr");
 const utils = require("./utils.js");
 const site = require("../_data/site.js");
@@ -25,19 +24,19 @@ function findNextItem(collection, current) {
 
 module.exports = {
 
-    live: function (collection) {
+    live: function(collection) {
         return collection ? collection.filter(utils.isLiveItem) : collection;
     },
 
-    searchAble: function (collection) {
+    searchAble: function(collection) {
         return collection ? collection.filter(utils.isSearchAble) : collection;
     },
 
-    rssAble: function (collection) {
+    rssAble: function(collection) {
         return collection ? collection.filter(utils.isRssAble) : collection;
     },
 
-    mustNotContainLayout: function (collection, filterLayouts) {
+    mustNotContainLayout: function(collection, filterLayouts) {
         let result = [];
         if (collection && filterLayouts) {
 
@@ -55,15 +54,15 @@ module.exports = {
         return collection;
     },
 
-    getPrev: function (collection, current) {
+    getPrev: function(collection, current) {
         return findNextItem(collection.reverse(), current);
     },
 
-    getNext: function (collection, current) {
+    getNext: function(collection, current) {
         return findNextItem(collection, current);
     },
 
-    contentIndex: function (collection) {
+    contentIndex: function(collection) {
         let result = [];
         for (let item of collection) {
             result.push(utils.mapItem(item));
@@ -71,7 +70,7 @@ module.exports = {
         return result;
     },
 
-    tagIntro: function (collection, tagintro) {
+    tagIntro: function(collection, tagintro) {
         for (let item of collection) {
             if (item.data.tagintro == tagintro) {
                 return item.templateContent;
@@ -80,12 +79,12 @@ module.exports = {
         return '';
     },
 
-    mustEqualTags: function (collection, filterTags) {
+    mustEqualTags: function(collection, filterTags) {
         let result = new Set();
 
         if (collection && filterTags) {
             if (typeof filterTags === 'string' || filterTags instanceof String) {
-                filterTags = filterTags.split(',').sort().join(','); 
+                filterTags = filterTags.split(',').sort().join(',');
             }
 
             for (let item of collection) {
@@ -97,8 +96,8 @@ module.exports = {
         return Array.from(result.values()).sort(utils.compareItemDate);
     },
 
-    searchIndex: function (collection) {
-        return lunr(function () {
+    searchIndex: function(collection) {
+        return lunr(function() {
             this.ref('id');
             this.field('title', { boost: 10 });
             this.field('subtitle', { boost: 10 });
@@ -116,7 +115,7 @@ module.exports = {
         });
     },
 
-    excerptIndex: function (collection) {
+    excerptIndex: function(collection) {
         let result = [];
         for (let item of collection) {
             let mappedItem = utils.mapItem(item);
@@ -127,7 +126,7 @@ module.exports = {
         return result
     },
 
-    firstImage: function (collection) {
+    firstImage: function(collection) {
         let result = [];
         for (let item of collection) {
             let img = utils.firstImageTag(item.templateContent);
@@ -147,8 +146,12 @@ module.exports = {
         return result
     },
 
-    humanDate: function (d) {
+    humanDate: function(d) {
         return utils.humanDate(d);
+    },
+
+    isoDate: function(d) {
+        return utils.isoDate(d);
     }
 
 }

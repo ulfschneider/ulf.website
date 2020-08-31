@@ -5,7 +5,7 @@ const site = require('../_data/site.js');
 
 module.exports = {
 
-    excerptFromItem: function (item) {
+    excerptFromItem: function(item) {
         let excerpt = stripHtml(item.templateContent);
         if (excerpt) {
             excerpt = excerpt.split(' ')
@@ -15,7 +15,7 @@ module.exports = {
         return excerpt;
     },
 
-    firstImageTag: function (html) {
+    firstImageTag: function(html) {
 
         if (html) {
             const match = html.match(/<img\s+([^>]*)src="(.*?)"(.*?)[^>]*>/);
@@ -25,7 +25,7 @@ module.exports = {
         }
     },
 
-    getAttr: function (html, attr) {
+    getAttr: function(html, attr) {
         if (html) {
             const match = html.match(new RegExp(`${attr}="(.*?)"`));
             if (match) {
@@ -34,34 +34,34 @@ module.exports = {
         }
     },
 
-    srcAttr: function (html) {
+    srcAttr: function(html) {
         return this.getAttr(html, 'src');
     },
 
-    srcsetAttr: function (html) {
+    srcsetAttr: function(html) {
         return this.getAttr(html, 'srcset');
     },
 
-    altAttr: function (html) {
+    altAttr: function(html) {
         return this.getAttr(html, 'alt');
     },
 
-    widthAttr: function (html) {
+    widthAttr: function(html) {
         return this.getAttr(html, 'width');
     },
 
-    heightAttr: function (html) {
+    heightAttr: function(html) {
         return this.getAttr(html, 'height');
     },
 
-    isLiveItem: function (item) {
+    isLiveItem: function(item) {
         const now = new Date();
-        return item.date <= now
-            && item.data.draft !== true
-            && item.data.draft !== 'yes';
+        return item.date <= now &&
+            item.data.draft !== true &&
+            item.data.draft !== 'yes';
     },
 
-    hasSiteTag: function (item) {
+    hasSiteTag: function(item) {
         let siteTags = site.tagnav;
         if (!siteTags || siteTags && !siteTags.length) {
             return true;
@@ -76,11 +76,11 @@ module.exports = {
         return false;
     },
 
-    isSearchAble: function (item) {
+    isSearchAble: function(item) {
         return item.data.nosearch == null;
     },
 
-    mapItem: function (item) {
+    mapItem: function(item) {
         return {
             id: item.url,
             title: item.data.title,
@@ -96,17 +96,22 @@ module.exports = {
         }
     },
 
-    compareItemDate: function (a, b) {
+    compareItemDate: function(a, b) {
         return a.date - b.date;
     },
 
-    compareInputFileName: function (a, b) {
+    compareInputFileName: function(a, b) {
         const aFileName = path.basename(a.inputPath);
         const bFileName = path.basename(b.inputPath);
         return aFileName.localeCompare(bFileName);
     },
 
-    humanDate: function (d) {
+    isoDate: function(d) {
+        let dt = DateTime.fromMillis(d.getTime());
+        return dt.toISODate();
+    },
+
+    humanDate: function(d) {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
             let dt = DateTime.fromMillis(d.getTime());
@@ -116,7 +121,7 @@ module.exports = {
         }
     },
 
-    extractTags: function (collection) {
+    extractTags: function(collection) {
         let tagSet = new Set();
         for (let post of collection.getAll().filter(this.isLiveItem)) {
             if (post.data.tags) {

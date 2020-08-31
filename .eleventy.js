@@ -14,7 +14,7 @@ const utils = require('./_eleventy/utils.js');
 const filters = require('./_eleventy/filters.js');
 const transforms = require('./_eleventy/transforms.js');
 
-module.exports = function (eleventyConfig) {
+module.exports = function(eleventyConfig) {
 
     addLayoutAliases(eleventyConfig);
     addCollections(eleventyConfig);
@@ -46,11 +46,11 @@ module.exports = function (eleventyConfig) {
 
 function addMarkdownLib(eleventyConfig) {
     const mdlib = markdownIt({
-        html: true,
-        breaks: true,
-        linkify: true,
-        typographer: true
-    })
+            html: true,
+            breaks: true,
+            linkify: true,
+            typographer: true
+        })
         .use(markdownItAnchor, {
             permalink: true,
             permalinkClass: 'anchor',
@@ -92,17 +92,17 @@ function addCollections(eleventyConfig) {
     eleventyConfig.addCollection('liveSiteTagContent', collection => {
         return [
             ...collection.getFilteredByGlob('content/**')
-                .filter(utils.isLiveItem)
-                .filter(utils.hasSiteTag)
-                .sort(utils.compareItemDate)
+            .filter(utils.isLiveItem)
+            .filter(utils.hasSiteTag)
+            .sort(utils.compareItemDate)
         ];
     });
 
     eleventyConfig.addCollection('liveContent', collection => {
         return [
             ...collection.getFilteredByGlob('content/**')
-                .filter(utils.isLiveItem)
-                .sort(utils.compareItemDate)
+            .filter(utils.isLiveItem)
+            .sort(utils.compareItemDate)
         ];
     });
 }
@@ -115,9 +115,9 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('live', filters.live);
     eleventyConfig.addFilter('tagIntro', filters.tagIntro);
     eleventyConfig.addFilter('humanDate', filters.humanDate);
+    eleventyConfig.addFilter('isoDate', filters.isoDate);
     eleventyConfig.addFilter('mustNotContainLayout', filters.mustNotContainLayout);
     eleventyConfig.addFilter('mustEqualTags', filters.mustEqualTags);
     eleventyConfig.addFilter('getPrev', filters.getPrev);
     eleventyConfig.addFilter('getNext', filters.getNext);
 }
-
