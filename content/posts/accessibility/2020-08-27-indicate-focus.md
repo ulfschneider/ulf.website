@@ -22,12 +22,13 @@ By default, a browser will indicate focus with an `outline` CSS style, which can
 {% endhighlight %}
 
 ## How to style the focus indication
-Styling the `outline` is the preferred method to indicate focus as opposed to styling `border` or `background`. `outline` [doesn´t affect the box model](https://css-tricks.com/almanac/properties/o/outline/), while `border` does, which means `outline` will not change the position of adjacent elements. Also, `background` wouldn´t work for images.
+Styling the `outline` is the preferred method to indicate focus as opposed to styling `border` or `background`. `outline` [doesn´t affect the box model](https://css-tricks.com/almanac/properties/o/outline/), while `border` does, which means `outline` will not change the position of adjacent elements and  is therefore better than adjusting the border. Also, changing the `background` for focused elements wouldn´t work for images.
 
 The contrast ratio of the `outline` against the background must be at least 3:1, according to [WCAG 2.1 Non-text Contrast – Level AA](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1&showtechniques=324%2C331#non-text-contrast
-). Check the contrast of colors with the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/). Ideally the outline should be solid and thick enough to easily grasp it.
+). The contrast of colors can be checked with the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/). Ideally the outline should be solid and thick enough to attract attention.
 
-I´m first resetting style by disabling the outline.
+Here is how I do it: I´m first resetting the style by disabling the outline.
+
 {% highlight css %}
 * {
   outline: none;
@@ -53,5 +54,11 @@ Mozilla Hacks, Hidde de Vries
 WebAIM, Jared Smith
 : [The plague of outline:0](https://webaim.org/blog/plague-of-outline-0/)
 
+WebAIM
+: [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/).
+
 CSS-Tricks, Sara Cope
 : [outline](https://css-tricks.com/almanac/properties/o/outline/)
+
+MDN Web Docs
+: [The box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
