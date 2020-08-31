@@ -35,6 +35,7 @@ iframe {
     --mono-font-feature-settings: var(--font-feature-settings);
     --code-font-family: var(--mono-font-family);
     --pre-border: var(--border-w-default) dotted var(--pre-border-color);
+    --blockquote-border: var(--pre-border);
     --link-text-decoration: underline;
     --link-text-decoration-color: unset;
     --text-underline-offset: 0.25em;
@@ -545,6 +546,36 @@ pre {
     overflow-x: auto
 }
 
+blockquote {
+    margin-top: 1.7rem;
+    margin-top: var(--mrt-blockquote);
+    margin-bottom: 1.7rem;
+    margin-bottom: var(--mrb-blockquote);
+    margin-right: 0;
+    margin-left: -1.7rem;
+    margin-left: calc(var(--horizontal-rhythm)*-1);
+    font-style: italic;
+    font-style: var(--blockquote-font-style);
+    background: #f4f4f4;
+    background: var(--blockquote-background);
+    padding: .34602rem .34602rem .34602rem 1.7rem;
+    padding: var(--space-d2) var(--space-d2) var(--space-d2) var(--horizontal-rhythm);
+    border-top: 1px dotted #949494;
+    border-top: var(--blockquote-border);
+    border-bottom: 1px dotted #949494;
+    border-bottom: var(--blockquote-border)
+}
+
+blockquote:before {
+    content: "“";
+    margin-left: -1.7rem;
+    margin-left: calc(-1*var(--horizontal-rhythm));
+    position: absolute;
+    line-height: 1;
+    font-size: 2.44141rem;
+    font-size: var(--fs-4)
+}
+
 .tag {
     white-space: nowrap;
     padding: 2px;
@@ -569,22 +600,6 @@ a {
     word-break: break-word;
     word-wrap: break-word;
     overflow-wrap: break-word
-}
-
-blockquote {
-    margin-top: 1.7rem;
-    margin-top: var(--mrt-blockquote);
-    margin-bottom: 1.7rem;
-    margin-bottom: var(--mrb-blockquote);
-    margin-right: 0;
-    margin-left: -1.7rem;
-    margin-left: calc(var(--horizontal-rhythm)*-1);
-    padding-left: 1.35398rem;
-    padding-left: calc(var(--horizontal-rhythm) - var(--space-d2));
-    border-left: .34602rem solid #343434;
-    border-left: var(--space-d2) solid var(--br-blockquote-color);
-    font-style: italic;
-    font-style: var(--blockquote-font-style)
 }
 
 [class^=breakout] blockquote {
@@ -3074,10 +3089,10 @@ th:last-child {
     --code-color: var(--base-color);
     --pre-border-color: var(--neutral);
     --pre-background: var(--neutral-5);
+    --blockquote-background: var(--pre-background);
     --pre-color: var(--base-color);
     --heading-color: var(--base-color);
     --meta-color: var(--neutral-d2);
-    --br-blockquote-color: var(--heading-color);
     --li-prefix-color: var(--heading-color);
     --link-color: var(--base-color);
     --link-hover-color: var(--primary);
