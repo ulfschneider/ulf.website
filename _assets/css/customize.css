@@ -56,6 +56,22 @@ nav ul li:last-child {
     color: var(--neutral-1);
 }
 
+.email-copy button {
+    font-size: var(--fs-d2);
+    padding: var(--space-d4);
+}
+
+.visually-hidden {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+}
+
 nav.table-of-contents {
     margin: var(--vertical-rhythm) 0;
 }

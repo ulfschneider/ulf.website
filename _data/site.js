@@ -1,4 +1,3 @@
-
 module.exports = {
     name: "ulf.codes",
     locale: "en",
@@ -9,14 +8,13 @@ module.exports = {
     jpegQuality: 80,
     title: "Ulf Schneider – Developer and Agile Coach",
     description: "Hi, I´m Ulf Schneider, a developer and agile coach living in Paderborn, Germany.",
-    author: {
+    email: {
         name: "Ulf Schneider",
-        email: "mail@ulf.codes",
-        emailUser: "mail",
-        emailDomain: "ulf.codes"
+        address: "mail@ulf.codes",
+        user: "mail",
+        domain: "ulf.codes"
     },
-    mainnav: [
-        {
+    mainnav: [{
             label: 'Ulf Schneider',
             url: '/',
             id: 'home'
@@ -32,8 +30,7 @@ module.exports = {
             id: 'search'
         }
     ],
-    footernav: [
-        {
+    footernav: [{
             label: 'RSS',
             url: '/rss.xml',
             id: 'rss'
@@ -44,9 +41,9 @@ module.exports = {
             id: 'colophon'
         },
         {
-            label: 'Ownership',
-            url: '/ownership/',
-            id: 'ownership'
+            label: 'Contact',
+            url: '/contact/',
+            id: 'contact'
 
         }
     ],
@@ -62,6 +59,6 @@ module.exports = {
     blog: '/blog/',
     images: '/images/',
     rss: '/rss.xml',
-    searchKey: '.', 
+    searchKey: '.',
     time: new Date()
 }
