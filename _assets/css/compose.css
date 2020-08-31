@@ -721,7 +721,7 @@ hr:after {
     --form-font-size: var(--fs);
     --form-radius: var(--rounded);
     --form-field-color: var(--base-color);
-    --form-field-border-color: var(--neutral-2);
+    --form-field-border-color: var(--neutral);
     --caret-color: var(--primary);
     --form-focus-color: var(--primary);
     --form-button-pdx: var(--space-d2);
@@ -844,7 +844,7 @@ input[type=tel],
 input[type=text],
 input[type=url] {
     border: none;
-    border-bottom: 1px solid #bababa;
+    border-bottom: 1px solid #949494;
     border-bottom: 1px solid var(--form-field-border-color);
     vertical-align: middle;
     padding: .34602rem 0;
@@ -863,7 +863,7 @@ textarea {
     line-height: 1.46667;
     line-height: var(--lh-2);
     border: 0;
-    border-bottom: 1px solid #bababa;
+    border-bottom: 1px solid #949494;
     border-bottom: 1px solid var(--form-field-border-color);
     border-radius: 0;
     -webkit-border-radius: 0;
