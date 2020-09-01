@@ -8,11 +8,11 @@ module.exports = {
     jpegQuality: 80,
     title: "Ulf Schneider – Developer and Agile Coach",
     description: "Hi, I´m Ulf Schneider, a developer and agile coach living in Paderborn, Germany.",
-    email: {
+    ownership: {
         name: "Ulf Schneider",
-        address: "mail@ulf.codes",
-        user: "mail",
-        domain: "ulf.codes"
+        email: "mail@ulf.codes",
+        phone: "+49 163 2505164",
+        twitter: ""
     },
     mainnav: [{
             label: 'Ulf Schneider',
@@ -41,9 +41,9 @@ module.exports = {
             id: 'colophon'
         },
         {
-            label: 'Contact',
-            url: '/contact/',
-            id: 'contact'
+            label: 'About',
+            url: '/about/',
+            id: 'about'
 
         }
     ],

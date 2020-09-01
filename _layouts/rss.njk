@@ -9,8 +9,8 @@
   {%- endif -%}
   <id>{{ site.url }}</id>
   <author>
-    <name>{{ site.email.name }}</name>
-    <email>{{ site.email.address }}</email>
+    <name>{{ site.ownership.name }}</name>
+    <email>{{ site.ownership.email }}</email>
   </author>
   {%- for post in collections.liveSiteTagContent -%}
     {%- if post.data.norss == nil -%}
