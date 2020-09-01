@@ -5,8 +5,13 @@ nodate: true
 notags: true
 navid: about
 ---
+<figure>
+<img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-900.jpg" alt="Portrait of Ulf Schneider">
+</figure>
+
 Hi, I´m Ulf Schneider and this is my website.
 
+I am a software developer and agile coach, currently working for the software organization of Diebold Nixdorf in Paderborn, Germany. In 1996 I graduated at the University of Paderborn (Dipl.-Wirt. Inform.). Throughout 25 years in the software industry, I was more than ten years with IBM Global Services as a developer and software architect and more than seven years self-employed as an agile coach and trainer. Since 2014 I am employed at Diebold Nixdorf.
 
 <h2>Connect with me</h2>
 {% include connect.html %}
