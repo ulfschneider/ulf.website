@@ -15,7 +15,7 @@ iframe {
 }
 
 :root {
-    --font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-family: sans-serif;
     --font-feature-settings: unset;
     --font-weight-bold: 700;
     --font-weight-normal: 400;
@@ -36,6 +36,7 @@ iframe {
     --code-font-family: var(--mono-font-family);
     --pre-border: var(--border-w-default) dotted var(--pre-border-color);
     --blockquote-border: var(--pre-border);
+    --blockquote-font-style: italic;
     --link-text-decoration: underline;
     --link-text-decoration-color: unset;
     --text-underline-offset: 0.25em;
@@ -70,9 +71,8 @@ iframe {
     --hr-content: "◊      ◊      ◊";
     --quotes: """ """"'""'";
     --quotes-de: """ """"'""'";
-    --blockquote-font-style: italic;
     --scroll-margin-top: var(--vertical-rhythm);
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: sans-serif;
     font-family: var(--font-family);
     font-feature-settings: unset;
     font-feature-settings: var(--font-feature-settings);
@@ -141,17 +141,17 @@ a:focus {
 }
 
 .base-font {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: sans-serif;
     font-family: var(--font-family)
 }
 
 .heading-font {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: sans-serif;
     font-family: var(--heading-font-family)
 }
 
 .meta-font {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: sans-serif;
     font-family: var(--meta-font-family)
 }
 
@@ -161,7 +161,7 @@ a:focus {
 }
 
 .meta {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: sans-serif;
     font-family: var(--meta-font-family);
     font-feature-settings: unset;
     font-feature-settings: var(--meta-font-feature-settings);
@@ -398,7 +398,7 @@ h6 {
     letter-spacing: var(--heading-letter-spacing);
     font-weight: 700;
     font-weight: var(--heading-font-weight);
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: sans-serif;
     font-family: var(--heading-font-family);
     font-feature-settings: unset;
     font-feature-settings: var(--heading-font-feature-settings);
@@ -652,7 +652,7 @@ blockquote header,
 figcaption {
     margin-top: 0;
     margin-bottom: 0;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: sans-serif;
     font-family: var(--figcaption-font-family);
     font-style: normal;
     font-size: .85rem;
@@ -797,7 +797,7 @@ label,
 select,
 textarea {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: sans-serif;
     font-family: var(--form-font-family);
     font-size: 1rem;
     font-size: var(--form-font-size);
@@ -915,74 +915,90 @@ textarea:focus+label {
 }
 
 .x {
-    display: grid;
     grid-template-columns: [gutter-l] 1rem [breakout-wide-l] 1fr [breakout-l] 1fr [main-content-start] minmax(auto, 30rem) [main-content-end] 1fr [breakout-r] 1fr [breakout-wide-r] 1rem [gutter-r];
-    grid-template-columns: [gutter-l] var(--x-padding) [breakout-wide-l] 1fr [breakout-l] 1fr [main-content-start] minmax(auto, var(--main-content-width)) [main-content-end] 1fr [breakout-r] 1fr [breakout-wide-r] var(--x-padding) [gutter-r];
+    grid-template-columns: [gutter-l] var(--x-padding) [breakout-wide-l] 1fr [breakout-l] 1fr [main-content-start] minmax(auto, var(--main-content-width)) [main-content-end] 1fr [breakout-r] 1fr [breakout-wide-r] var(--x-padding) [gutter-r]
+}
+
+.x,
+.x-l {
+    display: grid;
     overflow: hidden
 }
 
-.x>:not(p):not(div):not(img)+:not(p):not(div):not(img):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6),
-.x>div+:not(div) {
+.x-l {
+    grid-template-columns: [gutter-l] 1rem [breakout-wide-l] 1fr [breakout-l] 0 [main-content-start] minmax(auto, 30rem) [main-content-end] 1fr [breakout-r] 1fr [breakout-wide-r] 1rem [gutter-r];
+    grid-template-columns: [gutter-l] var(--x-padding) [breakout-wide-l] 1fr [breakout-l] 0 [main-content-start] minmax(auto, var(--main-content-width)) [main-content-end] 1fr [breakout-r] 1fr [breakout-wide-r] var(--x-padding) [gutter-r]
+}
+
+.x-r {
+    display: grid;
+    grid-template-columns: [gutter-l] 1rem [breakout-wide-l] 1fr [breakout-l] 1fr [main-content-start] minmax(auto, 30rem) [main-content-end] 0 [breakout-r] 1fr [breakout-wide-r] 1rem [gutter-r];
+    grid-template-columns: [gutter-l] var(--x-padding) [breakout-wide-l] 1fr [breakout-l] 1fr [main-content-start] minmax(auto, var(--main-content-width)) [main-content-end] 0 [breakout-r] 1fr [breakout-wide-r] var(--x-padding) [gutter-r];
+    overflow: hidden
+}
+
+[class^=x]>:not(p):not(div):not(img)+:not(p):not(div):not(img):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6),
+[class^=x]>div+:not(div) {
     margin-top: 0
 }
 
-.x.main>*,
-.x>*,
-.x>.main {
+[class^=x].main>*,
+[class^=x]>*,
+[class^=x]>.main {
     grid-column-start: main-content-start;
     min-width: 0
 }
 
-.x.breakout-wide>*,
-.x>.breakout-wide {
+[class^=x].breakout-wide>*,
+[class^=x]>.breakout-wide {
     grid-column-start: breakout-wide-l;
     grid-column-end: breakout-wide-r
 }
 
-.x.breakout-wide-r>*,
-.x>.breakout-wide-r {
+[class^=x].breakout-wide-r>*,
+[class^=x]>.breakout-wide-r {
     grid-column-start: main-content-start;
     grid-column-end: breakout-wide-r
 }
 
-.x.breakout-wide-l>*,
-.x>.breakout-wide-l {
+[class^=x].breakout-wide-l>*,
+[class^=x]>.breakout-wide-l {
     grid-column-start: breakout-wide-l;
     grid-column-end: main-content-end
 }
 
-.x.breakout-full>*,
-.x>.breakout-full {
+[class^=x].breakout-full>*,
+[class^=x]>.breakout-full {
     grid-column-start: gutter-l;
     grid-column-end: gutter-r
 }
 
-.x.breakout-full-r>*,
-.x>.breakout-full-r {
+[class^=x].breakout-full-r>*,
+[class^=x]>.breakout-full-r {
     grid-column-start: main-content-start;
     grid-column-end: gutter-r
 }
 
-.x.breakout-full-l>*,
-.x>.breakout-full-l {
+[class^=x].breakout-full-l>*,
+[class^=x]>.breakout-full-l {
     grid-column-start: gutter-l;
     grid-column-end: main-content-end
 }
 
-.x.breakout-l>*,
-.x>.breakout-l {
+[class^=x].breakout-l>*,
+[class^=x]>.breakout-l {
     grid-column-start: breakout-l;
     grid-column-end: main-content-end
 }
 
-.x.breakout-r>*,
-.x>.breakout-r {
+[class^=x].breakout-r>*,
+[class^=x]>.breakout-r {
     grid-column-start: main-content-start;
     grid-column-end: breakout-r
 }
 
-.x.breakout>*,
-.x>.breakout {
+[class^=x].breakout>*,
+[class^=x]>.breakout {
     grid-column-start: breakout-l;
     grid-column-end: breakout-r
 }
@@ -1756,7 +1772,7 @@ ol li {
 
 ol li:before {
     content: counter(li-counter, decimal-leading-zero) " ";
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: sans-serif;
     font-family: var(--meta-font-family);
     font-size: smaller;
     font-weight: 700
@@ -2576,7 +2592,7 @@ small {
 img {
     max-width: 100%;
     vertical-align: top;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: sans-serif;
     font-family: var(--meta-font-family);
     font-size: small
 }
