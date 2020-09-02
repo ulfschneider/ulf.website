@@ -127,8 +127,21 @@ permalink: '{{site.search}}'
         } else {
             count.innerHTML = resultSet.length + ' results:';
         }
-        count.classList = "small meta mrb";
+        count.classList = "small meta mry";
         searchResults.append(count);
+    }
+
+    function printSearching() {
+        let searchResults = document.getElementById(SEARCH_RESULTS_ID);
+        if (!searchResults) {
+            console.error('The page does not have a DOM element with id=' + SEARCH_RESULTS_ID);
+            return;
+        }
+        removeChildren(searchResults);
+        let searching = document.createElement('div');
+        searching.classList = "small meta mry";
+        searching.innerHTML = 'Searching …';
+        searchResults.append(searching);
     }
 
     function printSearchResults(resultSet, query) {
@@ -160,6 +173,9 @@ permalink: '{{site.search}}'
         let input = document.getElementById(SEARCH_QUERY_ID);
         if (input) {
             input.value = query;
+        }
+        if (query) {
+            printSearching();
         }
         fetch('/post-search-index.json', {credentials: 'same-origin'})
             .then(response => {
