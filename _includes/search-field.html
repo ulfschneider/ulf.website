@@ -20,15 +20,14 @@
 
 
 <script>
-var keylessLabel = 'Search <em>{{site.name}}</em>:';
-var key = '{{site.searchKey}}';
+let keylessLabel = 'Search <em>{{site.name}}</em>:';
+let keyLabel = keylessLabel;
+let key = '{{site.searchKey}}';
 if (key) {
-    var keyLabel = 'Search <em>{{site.name}},</em> press <kbd>{{site.searchKey}}</kbd> to focus:'
-} else {
-    keyLabel = keylessLabel;
-}
-var query = document.querySelector('#search-query');
-var label = document.querySelector('#search-label');
+    keyLabel = 'Search <em>{{site.name}},</em> press <kbd>{{site.searchKey}}</kbd> to focus:'
+} 
+let query = document.querySelector('#search-query');
+let label = document.querySelector('#search-label');
 query.addEventListener('focus', event => {
     label.innerHTML = keylessLabel;
 });
