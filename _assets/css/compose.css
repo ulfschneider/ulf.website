@@ -91,7 +91,7 @@ iframe {
 }
 
 :focus {
-    outline: 3px solid #009dd6;
+    outline: 3px solid #459dca;
     outline: var(--space-d3) solid var(--link-focus-color);
     outline-offset: 2px;
     outline-offset: var(--space-d4);
@@ -101,29 +101,29 @@ iframe {
 
 @media (hover:hover) {
     a:hover {
-        color: #009dd6;
+        color: #459dca;
         color: var(--link-hover-color);
-        -webkit-text-decoration-color: #009dd6;
-        text-decoration-color: #009dd6;
+        -webkit-text-decoration-color: #459dca;
+        text-decoration-color: #459dca;
         -webkit-text-decoration-color: var(--link-hover-color);
         text-decoration-color: var(--link-hover-color)
     }
 }
 
 a:active {
-    color: #009dd6;
+    color: #459dca;
     color: var(--link-active-color);
-    -webkit-text-decoration-color: #009dd6;
-    text-decoration-color: #009dd6;
+    -webkit-text-decoration-color: #459dca;
+    text-decoration-color: #459dca;
     -webkit-text-decoration-color: var(--link-active-color);
     text-decoration-color: var(--link-active-color)
 }
 
 a:focus {
-    color: #009dd6;
+    color: #459dca;
     color: var(--link-focus-color);
-    -webkit-text-decoration-color: #009dd6;
-    text-decoration-color: #009dd6;
+    -webkit-text-decoration-color: #459dca;
+    text-decoration-color: #459dca;
     -webkit-text-decoration-color: var(--link-focus-color);
     text-decoration-color: var(--link-focus-color)
 }
@@ -476,9 +476,9 @@ h6 {
 
 p {
     margin-top: 1rem;
-    margin-top: var(--vertical-rhythm);
+    margin-top: var(--mrt-paragraph);
     margin-bottom: 1rem;
-    margin-bottom: var(--vertical-rhythm)
+    margin-bottom: var(--mrb-paragraph)
 }
 
 .indent p {
@@ -652,6 +652,7 @@ blockquote header,
 figcaption {
     margin-top: 0;
     margin-bottom: 0;
+    text-align: left;
     font-family: sans-serif;
     font-family: var(--figcaption-font-family);
     font-style: normal;
@@ -743,7 +744,7 @@ hr:after {
     --form-button-pdy: var(--space-d2);
     --form-button-background: var(--base-color);
     --form-button-color: var(--base-background);
-    caret-color: #009dd6;
+    caret-color: #459dca;
     caret-color: var(--caret-color)
 }
 
@@ -835,7 +836,7 @@ select {
     input[type=submit]:hover,
     select:focus,
     select:hover {
-        background: #009dd6;
+        background: #459dca;
         background: var(--form-focus-color)
     }
 }
@@ -905,7 +906,7 @@ textarea:focus {
 input:focus+label,
 label:focus-within,
 textarea:focus+label {
-    color: #009dd6;
+    color: #459dca;
     color: var(--form-focus-color)
 }
 
@@ -915,8 +916,8 @@ textarea:focus+label {
 }
 
 .x {
-    grid-template-columns: [gutter-l] 1rem [breakout-wide-l] 2fr [breakout-l] 2fr [main-content-start] minmax(auto, 30rem) [main-content-end] 2fr [breakout-r] 2fr [breakout-wide-r] 1rem [gutter-r];
-    grid-template-columns: [gutter-l] var(--x-padding) [breakout-wide-l] 2fr [breakout-l] 2fr [main-content-start] minmax(auto, var(--main-content-width)) [main-content-end] 2fr [breakout-r] 2fr [breakout-wide-r] var(--x-padding) [gutter-r]
+    grid-template-columns: [gutter-l] 1rem [breakout-wide-l] 1fr [breakout-l] 1fr [main-content-start] minmax(auto, 30rem) [main-content-end] 1fr [breakout-r] 1fr [breakout-wide-r] 1rem [gutter-r];
+    grid-template-columns: [gutter-l] var(--x-padding) [breakout-wide-l] 1fr [breakout-l] 1fr [main-content-start] minmax(auto, var(--main-content-width)) [main-content-end] 1fr [breakout-r] 1fr [breakout-wide-r] var(--x-padding) [gutter-r]
 }
 
 .x,
@@ -926,14 +927,14 @@ textarea:focus+label {
 }
 
 .x-l {
-    grid-template-columns: [gutter-l] 1rem [breakout-wide-l] 3fr [breakout-l] 0 [main-content-start] minmax(auto, 30rem) [main-content-end] 2fr [breakout-r] 3fr [breakout-wide-r] 1rem [gutter-r];
-    grid-template-columns: [gutter-l] var(--x-padding) [breakout-wide-l] 3fr [breakout-l] 0 [main-content-start] minmax(auto, var(--main-content-width)) [main-content-end] 2fr [breakout-r] 3fr [breakout-wide-r] var(--x-padding) [gutter-r]
+    grid-template-columns: [gutter-l] 1rem [breakout-wide-l] 1fr [breakout-l] 0fr [main-content-start] minmax(auto, 30rem) [main-content-end] 1fr [breakout-r] 2fr [breakout-wide-r] 1rem [gutter-r];
+    grid-template-columns: [gutter-l] var(--x-padding) [breakout-wide-l] 1fr [breakout-l] 0fr [main-content-start] minmax(auto, var(--main-content-width)) [main-content-end] 1fr [breakout-r] 2fr [breakout-wide-r] var(--x-padding) [gutter-r]
 }
 
 .x-r {
     display: grid;
-    grid-template-columns: [gutter-l] 1rem [breakout-wide-l] 3fr [breakout-l] 2fr [main-content-start] minmax(auto, 30rem) [main-content-end] 0 [breakout-r] 3fr [breakout-wide-r] 1rem [gutter-r];
-    grid-template-columns: [gutter-l] var(--x-padding) [breakout-wide-l] 3fr [breakout-l] 2fr [main-content-start] minmax(auto, var(--main-content-width)) [main-content-end] 0 [breakout-r] 3fr [breakout-wide-r] var(--x-padding) [gutter-r];
+    grid-template-columns: [gutter-l] 1rem [breakout-wide-l] 2fr [breakout-l] 1fr [main-content-start] minmax(auto, 30rem) [main-content-end] 0fr [breakout-r] 1fr [breakout-wide-r] 1rem [gutter-r];
+    grid-template-columns: [gutter-l] var(--x-padding) [breakout-wide-l] 2fr [breakout-l] 1fr [main-content-start] minmax(auto, var(--main-content-width)) [main-content-end] 0fr [breakout-r] 1fr [breakout-wide-r] var(--x-padding) [gutter-r];
     overflow: hidden
 }
 
@@ -2736,9 +2737,12 @@ svg {
 }
 
 :root {
-    --alternate-row-color: var(--neutral-5);
-    --alternate-col-color: var(--neutral-5);
-    --underline-row-color: var(--neutral-3);
+    --table-alternate-row-color: var(--neutral-5);
+    --table-alternate-col-color: var(--neutral-5);
+    --table-underline-row-color: var(--base-color);
+    --table-underline: var(--border-w-default) solid var(--table-underline-row-color);
+    --table-font-family: var(--font-family);
+    --table-font-size: var(--figcaption-font-size);
     --mrt-table: var(--vertical-rhythm);
     --mrb-table: var(--vertical-rhythm)
 }
@@ -2750,12 +2754,29 @@ table {
     margin-top: var(--mrt-table);
     margin-bottom: 1rem;
     margin-bottom: var(--mrb-table);
-    text-align: left
+    text-align: left;
+    font-family: sans-serif;
+    font-family: var(--table-font-family);
+    font-size: .85rem;
+    font-size: var(--table-font-size);
+    line-height: 1.46667;
+    line-height: var(--lh-2)
+}
+
+table caption {
+    margin: 1rem 0;
+    margin: var(--vertical-rhythm) 0;
+    text-align: left;
+    font-style: normal;
+    max-width: 30rem;
+    max-width: var(--regular-width);
+    font-family: sans-serif;
+    font-family: var(--figcaption-font-family)
 }
 
 .alternate-rows tr:nth-child(2n) {
     background: #f4f4f4;
-    background: var(--alternate-row-color)
+    background: var(--table-alternate-row-color)
 }
 
 .alternate-rows tr:nth-child(odd) {
@@ -2764,7 +2785,7 @@ table {
 
 .alternate-cols col:nth-child(2n) {
     background: #f4f4f4;
-    background: var(--alternate-col-color)
+    background: var(--table-alternate-col-color)
 }
 
 .alternate-cols col:nth-child(odd) {
@@ -2772,8 +2793,8 @@ table {
 }
 
 .underline-rows tr {
-    border-bottom: 1px solid #cecece;
-    border-bottom: 1px solid var(--underline-row-color)
+    border-bottom: 1px solid #343434;
+    border-bottom: var(--table-underline)
 }
 
 td {
@@ -2783,22 +2804,15 @@ td {
 th {
     vertical-align: bottom;
     font-weight: 700;
-    font-weight: var(--font-weight-bold)
+    font-weight: var(--font-weight-bold);
+    font-family: sans-serif;
+    font-family: var(--heading-font-family)
 }
 
 td,
 th {
-    padding: 3px .58824rem;
-    padding: var(--space-d3) var(--space-d1)
-}
-
-tr:first-child td,
-tr:first-child th {
-    padding-top: 0
-}
-
-tr:last-child td {
-    padding-bottom: 0
+    padding: .34602rem .58824rem;
+    padding: var(--space-d2) var(--space-d1)
 }
 
 td:first-child,
@@ -3036,9 +3050,9 @@ th:last-child {
     --neutral-3: hsl(var(--neutral-h), var(--neutral-s), calc(var(--neutral-l) + 3*var(--neutral-step)));
     --neutral-4: hsl(var(--neutral-h), var(--neutral-s), calc(var(--neutral-l) + 4*var(--neutral-step)));
     --neutral-5: hsl(var(--neutral-h), var(--neutral-s), calc(var(--neutral-l) + 5*var(--neutral-step)));
-    --primary-h: 196;
-    --primary-s: 100%;
-    --primary-l: 42%;
+    --primary-h: 200;
+    --primary-s: 55.6%;
+    --primary-l: 53%;
     --primary-step: calc((100% - var(--primary-l))*var(--color-step-factor));
     --primary-d5: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 5*var(--primary-step)));
     --primary-d4: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 4*var(--primary-step)));
@@ -3051,9 +3065,9 @@ th:last-child {
     --primary-3: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 3*var(--primary-step)));
     --primary-4: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 4*var(--primary-step)));
     --primary-5: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 5*var(--primary-step)));
-    --accent-one-h: 3;
-    --accent-one-s: 100%;
-    --accent-one-l: 61%;
+    --accent-one-h: 3.1;
+    --accent-one-s: 53.7%;
+    --accent-one-l: 53%;
     --accent-one-step: calc((100% - var(--accent-one-l))*var(--color-step-factor));
     --accent-one-d5: hsl(var(--accent-one-h), var(--accent-one-s), calc(var(--accent-one-l) - 5*var(--accent-one-step)));
     --accent-one-d4: hsl(var(--accent-one-h), var(--accent-one-s), calc(var(--accent-one-l) - 4*var(--accent-one-step)));
@@ -3066,9 +3080,9 @@ th:last-child {
     --accent-one-3: hsl(var(--accent-one-h), var(--accent-one-s), calc(var(--accent-one-l) + 3*var(--accent-one-step)));
     --accent-one-4: hsl(var(--accent-one-h), var(--accent-one-s), calc(var(--accent-one-l) + 4*var(--accent-one-step)));
     --accent-one-5: hsl(var(--accent-one-h), var(--accent-one-s), calc(var(--accent-one-l) + 5*var(--accent-one-step)));
-    --accent-two-h: 28;
-    --accent-two-s: 100%;
-    --accent-two-l: 55%;
+    --accent-two-h: 143;
+    --accent-two-s: 56.6%;
+    --accent-two-l: 53%;
     --accent-two-step: calc((100% - var(--accent-two-l))*var(--color-step-factor));
     --accent-two-d5: hsl(var(--accent-two-h), var(--accent-two-s), calc(var(--accent-two-l) - 5*var(--accent-two-step)));
     --accent-two-d4: hsl(var(--accent-two-h), var(--accent-two-s), calc(var(--accent-two-l) - 4*var(--accent-two-step)));
@@ -3081,9 +3095,9 @@ th:last-child {
     --accent-two-3: hsl(var(--accent-two-h), var(--accent-two-s), calc(var(--accent-two-l) + 3*var(--accent-two-step)));
     --accent-two-4: hsl(var(--accent-two-h), var(--accent-two-s), calc(var(--accent-two-l) + 4*var(--accent-two-step)));
     --accent-two-5: hsl(var(--accent-two-h), var(--accent-two-s), calc(var(--accent-two-l) + 5*var(--accent-two-step)));
-    --accent-three-h: 52;
-    --accent-three-s: 100%;
-    --accent-three-l: 50%;
+    --accent-three-h: 55;
+    --accent-three-s: 62.8%;
+    --accent-three-l: 53%;
     --accent-three-step: calc((100% - var(--accent-three-l))*var(--color-step-factor));
     --accent-three-d5: hsl(var(--accent-three-h), var(--accent-three-s), calc(var(--accent-three-l) - 5*var(--accent-three-step)));
     --accent-three-d4: hsl(var(--accent-three-h), var(--accent-three-s), calc(var(--accent-three-l) - 4*var(--accent-three-step)));
@@ -3121,12 +3135,12 @@ th:last-child {
 }
 
 ::-moz-selection {
-    background: #ace9ff;
+    background: #cbe4f0;
     background: var(--selection-color)
 }
 
 ::selection {
-    background: #ace9ff;
+    background: #cbe4f0;
     background: var(--selection-color)
 }
 
@@ -3384,658 +3398,658 @@ th:last-child {
 }
 
 .primary-d5 {
-    color: #000;
+    color: #0c202a;
     color: var(--primary-d5)
 }
 
 .primary-d4 {
-    color: #000101;
+    color: #163a4c;
     color: var(--primary-d4)
 }
 
 .primary-d3 {
-    color: #002836;
+    color: #1f536e;
     color: var(--primary-d3)
 }
 
 .primary-d2 {
-    color: #004f6c;
+    color: #296d8f;
     color: var(--primary-d2)
 }
 
 .primary-d1 {
-    color: #0076a1;
+    color: #3287b1;
     color: var(--primary-d1)
 }
 
 .primary {
-    color: #009dd6;
+    color: #459dca;
     color: var(--primary)
 }
 
 .primary-1 {
-    color: #0cbeff;
+    color: #66afd3;
     color: var(--primary-1)
 }
 
 .primary-2 {
-    color: #42cdff;
+    color: #88c1dd;
     color: var(--primary-2)
 }
 
 .primary-3 {
-    color: #77dbff;
+    color: #a9d2e7;
     color: var(--primary-3)
 }
 
 .primary-4 {
-    color: #ace9ff;
+    color: #cbe4f0;
     color: var(--primary-4)
 }
 
 .primary-5 {
-    color: #e1f7ff;
+    color: #ecf5fa;
     color: var(--primary-5)
 }
 
 .accent-one-d5 {
-    color: #840700;
+    color: #2a0e0d;
     color: var(--accent-one-d5)
 }
 
 .accent-one-d4 {
-    color: #a80800;
+    color: #4b1917;
     color: var(--accent-one-d4)
 }
 
 .accent-one-d3 {
-    color: #cc0a00;
+    color: #6c2521;
     color: var(--accent-one-d3)
 }
 
 .accent-one-d2 {
-    color: #ef0c00;
+    color: #8d302b;
     color: var(--accent-one-d2)
 }
 
 .accent-one-d1 {
-    color: #ff2014;
+    color: #af3b35;
     color: var(--accent-one-d1)
 }
 
 .accent-one {
-    color: #ff4238;
+    color: #c84d47;
     color: var(--accent-one)
 }
 
 .accent-one-1 {
-    color: #ff645c;
+    color: #d16d68;
     color: var(--accent-one-1)
 }
 
 .accent-one-2 {
-    color: #ff8680;
+    color: #db8d89;
     color: var(--accent-one-2)
 }
 
 .accent-one-3 {
-    color: #ffa8a4;
+    color: #e5adaa;
     color: var(--accent-one-3)
 }
 
 .accent-one-4 {
-    color: #ffcac7;
+    color: #efcdcb;
     color: var(--accent-one-4)
 }
 
 .accent-one-5 {
-    color: #ffeceb;
+    color: #f9eded;
     color: var(--accent-one-5)
 }
 
 .accent-two-d5 {
-    color: #4a2300;
+    color: #0c2b18;
     color: var(--accent-two-d5)
 }
 
 .accent-two-d4 {
-    color: #733600;
+    color: #154d2a;
     color: var(--accent-two-d4)
 }
 
 .accent-two-d3 {
-    color: #9d4900;
+    color: #1f6e3d;
     color: var(--accent-two-d3)
 }
 
 .accent-two-d2 {
-    color: #c65c00;
+    color: #289050;
     color: var(--accent-two-d2)
 }
 
 .accent-two-d1 {
-    color: #ef7000;
+    color: #31b263;
     color: var(--accent-two-d1)
 }
 
 .accent-two {
-    color: #ff851a;
+    color: #43cb77;
     color: var(--accent-two)
 }
 
 .accent-two-1 {
-    color: #ff9b43;
+    color: #65d490;
     color: var(--accent-two-1)
 }
 
 .accent-two-2 {
-    color: #ffb16c;
+    color: #87dea8;
     color: var(--accent-two-2)
 }
 
 .accent-two-3 {
-    color: #ffc795;
+    color: #a9e7c1;
     color: var(--accent-two-3)
 }
 
 .accent-two-4 {
-    color: #ffddbf;
+    color: #caf0d9;
     color: var(--accent-two-4)
 }
 
 .accent-two-5 {
-    color: #fff3e8;
+    color: #ecfaf1;
     color: var(--accent-two-5)
 }
 
 .accent-three-d5 {
-    color: #1a1600;
+    color: #2c2a0a;
     color: var(--accent-three-d5)
 }
 
 .accent-three-d4 {
-    color: #473e00;
+    color: #504a12;
     color: var(--accent-three-d4)
 }
 
 .accent-three-d3 {
-    color: #756600;
+    color: #736b1a;
     color: var(--accent-three-d3)
 }
 
 .accent-three-d2 {
-    color: #a38d00;
+    color: #968c22;
     color: var(--accent-three-d2)
 }
 
 .accent-three-d1 {
-    color: #d1b500;
+    color: #b9ad2a;
     color: var(--accent-three-d1)
 }
 
 .accent-three {
-    color: #fd0;
+    color: #d2c63c;
     color: var(--accent-three)
 }
 
 .accent-three-1 {
-    color: #ffe32e;
+    color: #dad05f;
     color: var(--accent-three-1)
 }
 
 .accent-three-2 {
-    color: #ffe95c;
+    color: #e2da82;
     color: var(--accent-three-2)
 }
 
 .accent-three-3 {
-    color: #ffef8a;
+    color: #eae5a5;
     color: var(--accent-three-3)
 }
 
 .accent-three-4 {
-    color: #fff5b8;
+    color: #f3efc8;
     color: var(--accent-three-4)
 }
 
 .accent-three-5 {
-    color: #fffce5;
+    color: #fbf9eb;
     color: var(--accent-three-5)
 }
 
 .bg-primary-d5 {
-    background-color: #000;
+    background-color: #0c202a;
     background-color: var(--primary-d5)
 }
 
 .bg-primary-d4 {
-    background-color: #000101;
+    background-color: #163a4c;
     background-color: var(--primary-d4)
 }
 
 .bg-primary-d3 {
-    background-color: #002836;
+    background-color: #1f536e;
     background-color: var(--primary-d3)
 }
 
 .bg-primary-d2 {
-    background-color: #004f6c;
+    background-color: #296d8f;
     background-color: var(--primary-d2)
 }
 
 .bg-primary-d1 {
-    background-color: #0076a1;
+    background-color: #3287b1;
     background-color: var(--primary-d1)
 }
 
 .bg-primary {
-    background-color: #009dd6;
+    background-color: #459dca;
     background-color: var(--primary)
 }
 
 .bg-primary-1 {
-    background-color: #0cbeff;
+    background-color: #66afd3;
     background-color: var(--primary-1)
 }
 
 .bg-primary-2 {
-    background-color: #42cdff;
+    background-color: #88c1dd;
     background-color: var(--primary-2)
 }
 
 .bg-primary-3 {
-    background-color: #77dbff;
+    background-color: #a9d2e7;
     background-color: var(--primary-3)
 }
 
 .bg-primary-4 {
-    background-color: #ace9ff;
+    background-color: #cbe4f0;
     background-color: var(--primary-4)
 }
 
 .bg-primary-5 {
-    background-color: #e1f7ff;
+    background-color: #ecf5fa;
     background-color: var(--primary-5)
 }
 
 .bg-accent-one-d5 {
-    background-color: #840700;
+    background-color: #2a0e0d;
     background-color: var(--accent-one-d5)
 }
 
 .bg-accent-one-d4 {
-    background-color: #a80800;
+    background-color: #4b1917;
     background-color: var(--accent-one-d4)
 }
 
 .bg-accent-one-d3 {
-    background-color: #cc0a00;
+    background-color: #6c2521;
     background-color: var(--accent-one-d3)
 }
 
 .bg-accent-one-d2 {
-    background-color: #ef0c00;
+    background-color: #8d302b;
     background-color: var(--accent-one-d2)
 }
 
 .bg-accent-one-d1 {
-    background-color: #ff2014;
+    background-color: #af3b35;
     background-color: var(--accent-one-d1)
 }
 
 .bg-accent-one {
-    background-color: #ff4238;
+    background-color: #c84d47;
     background-color: var(--accent-one)
 }
 
 .bg-accent-one-1 {
-    background-color: #ff645c;
+    background-color: #d16d68;
     background-color: var(--accent-one-1)
 }
 
 .bg-accent-one-2 {
-    background-color: #ff8680;
+    background-color: #db8d89;
     background-color: var(--accent-one-2)
 }
 
 .bg-accent-one-3 {
-    background-color: #ffa8a4;
+    background-color: #e5adaa;
     background-color: var(--accent-one-3)
 }
 
 .bg-accent-one-4 {
-    background-color: #ffcac7;
+    background-color: #efcdcb;
     background-color: var(--accent-one-4)
 }
 
 .bg-accent-one-5 {
-    background-color: #ffeceb;
+    background-color: #f9eded;
     background-color: var(--accent-one-5)
 }
 
 .bg-accent-two-d5 {
-    background-color: #4a2300;
+    background-color: #0c2b18;
     background-color: var(--accent-two-d5)
 }
 
 .bg-accent-two-d4 {
-    background-color: #733600;
+    background-color: #154d2a;
     background-color: var(--accent-two-d4)
 }
 
 .bg-accent-two-d3 {
-    background-color: #9d4900;
+    background-color: #1f6e3d;
     background-color: var(--accent-two-d3)
 }
 
 .bg-accent-two-d2 {
-    background-color: #c65c00;
+    background-color: #289050;
     background-color: var(--accent-two-d2)
 }
 
 .bg-accent-two-d1 {
-    background-color: #ef7000;
+    background-color: #31b263;
     background-color: var(--accent-two-d1)
 }
 
 .bg-accent-two {
-    background-color: #ff851a;
+    background-color: #43cb77;
     background-color: var(--accent-two)
 }
 
 .bg-accent-two-1 {
-    background-color: #ff9b43;
+    background-color: #65d490;
     background-color: var(--accent-two-1)
 }
 
 .bg-accent-two-2 {
-    background-color: #ffb16c;
+    background-color: #87dea8;
     background-color: var(--accent-two-2)
 }
 
 .bg-accent-two-3 {
-    background-color: #ffc795;
+    background-color: #a9e7c1;
     background-color: var(--accent-two-3)
 }
 
 .bg-accent-two-4 {
-    background-color: #ffddbf;
+    background-color: #caf0d9;
     background-color: var(--accent-two-4)
 }
 
 .bg-accent-two-5 {
-    background-color: #fff3e8;
+    background-color: #ecfaf1;
     background-color: var(--accent-two-5)
 }
 
 .bg-accent-three-d5 {
-    background-color: #1a1600;
+    background-color: #2c2a0a;
     background-color: var(--accent-three-d5)
 }
 
 .bg-accent-three-d4 {
-    background-color: #473e00;
+    background-color: #504a12;
     background-color: var(--accent-three-d4)
 }
 
 .bg-accent-three-d3 {
-    background-color: #756600;
+    background-color: #736b1a;
     background-color: var(--accent-three-d3)
 }
 
 .bg-accent-three-d2 {
-    background-color: #a38d00;
+    background-color: #968c22;
     background-color: var(--accent-three-d2)
 }
 
 .bg-accent-three-d1 {
-    background-color: #d1b500;
+    background-color: #b9ad2a;
     background-color: var(--accent-three-d1)
 }
 
 .bg-accent-three {
-    background-color: #fd0;
+    background-color: #d2c63c;
     background-color: var(--accent-three)
 }
 
 .bg-accent-three-1 {
-    background-color: #ffe32e;
+    background-color: #dad05f;
     background-color: var(--accent-three-1)
 }
 
 .bg-accent-three-2 {
-    background-color: #ffe95c;
+    background-color: #e2da82;
     background-color: var(--accent-three-2)
 }
 
 .bg-accent-three-3 {
-    background-color: #ffef8a;
+    background-color: #eae5a5;
     background-color: var(--accent-three-3)
 }
 
 .bg-accent-three-4 {
-    background-color: #fff5b8;
+    background-color: #f3efc8;
     background-color: var(--accent-three-4)
 }
 
 .bg-accent-three-5 {
-    background-color: #fffce5;
+    background-color: #fbf9eb;
     background-color: var(--accent-three-5)
 }
 
 .br-primary-d5 {
-    border-color: #000;
+    border-color: #0c202a;
     border-color: var(--primary-d5)
 }
 
 .br-primary-d4 {
-    border-color: #000101;
+    border-color: #163a4c;
     border-color: var(--primary-d4)
 }
 
 .br-primary-d3 {
-    border-color: #002836;
+    border-color: #1f536e;
     border-color: var(--primary-d3)
 }
 
 .br-primary-d2 {
-    border-color: #004f6c;
+    border-color: #296d8f;
     border-color: var(--primary-d2)
 }
 
 .br-primary-d1 {
-    border-color: #0076a1;
+    border-color: #3287b1;
     border-color: var(--primary-d1)
 }
 
 .br-primary {
-    border-color: #009dd6;
+    border-color: #459dca;
     border-color: var(--primary)
 }
 
 .br-primary-1 {
-    border-color: #0cbeff;
+    border-color: #66afd3;
     border-color: var(--primary-1)
 }
 
 .br-primary-2 {
-    border-color: #42cdff;
+    border-color: #88c1dd;
     border-color: var(--primary-2)
 }
 
 .br-primary-3 {
-    border-color: #77dbff;
+    border-color: #a9d2e7;
     border-color: var(--primary-3)
 }
 
 .br-primary-4 {
-    border-color: #ace9ff;
+    border-color: #cbe4f0;
     border-color: var(--primary-4)
 }
 
 .br-primary-5 {
-    border-color: #e1f7ff;
+    border-color: #ecf5fa;
     border-color: var(--primary-5)
 }
 
 .br-accent-one-d5 {
-    border-color: #840700;
+    border-color: #2a0e0d;
     border-color: var(--accent-one-d5)
 }
 
 .br-accent-one-d4 {
-    border-color: #a80800;
+    border-color: #4b1917;
     border-color: var(--accent-one-d4)
 }
 
 .br-accent-one-d3 {
-    border-color: #cc0a00;
+    border-color: #6c2521;
     border-color: var(--accent-one-d3)
 }
 
 .br-accent-one-d2 {
-    border-color: #ef0c00;
+    border-color: #8d302b;
     border-color: var(--accent-one-d2)
 }
 
 .br-accent-one-d1 {
-    border-color: #ff2014;
+    border-color: #af3b35;
     border-color: var(--accent-one-d1)
 }
 
 .br-accent-one {
-    border-color: #ff4238;
+    border-color: #c84d47;
     border-color: var(--accent-one)
 }
 
 .br-accent-one-1 {
-    border-color: #ff645c;
+    border-color: #d16d68;
     border-color: var(--accent-one-1)
 }
 
 .br-accent-one-2 {
-    border-color: #ff8680;
+    border-color: #db8d89;
     border-color: var(--accent-one-2)
 }
 
 .br-accent-one-3 {
-    border-color: #ffa8a4;
+    border-color: #e5adaa;
     border-color: var(--accent-one-3)
 }
 
 .br-accent-one-4 {
-    border-color: #ffcac7;
+    border-color: #efcdcb;
     border-color: var(--accent-one-4)
 }
 
 .br-accent-one-5 {
-    border-color: #ffeceb;
+    border-color: #f9eded;
     border-color: var(--accent-one-5)
 }
 
 .br-accent-two-d4,
 .br-accent-two-d5 {
-    border-color: #733600;
+    border-color: #154d2a;
     border-color: var(--accent-two-d4)
 }
 
 .br-accent-two-d3 {
-    border-color: #9d4900;
+    border-color: #1f6e3d;
     border-color: var(--accent-two-d3)
 }
 
 .br-accent-two-d2 {
-    border-color: #c65c00;
+    border-color: #289050;
     border-color: var(--accent-two-d2)
 }
 
 .br-accent-two-d1 {
-    border-color: #ef7000;
+    border-color: #31b263;
     border-color: var(--accent-two-d1)
 }
 
 .br-accent-two {
-    border-color: #ff851a;
+    border-color: #43cb77;
     border-color: var(--accent-two)
 }
 
 .br-accent-two-1 {
-    border-color: #ff9b43;
+    border-color: #65d490;
     border-color: var(--accent-two-1)
 }
 
 .br-accent-two-2 {
-    border-color: #ffb16c;
+    border-color: #87dea8;
     border-color: var(--accent-two-2)
 }
 
 .br-accent-two-3 {
-    border-color: #ffc795;
+    border-color: #a9e7c1;
     border-color: var(--accent-two-3)
 }
 
 .br-accent-two-4 {
-    border-color: #ffddbf;
+    border-color: #caf0d9;
     border-color: var(--accent-two-4)
 }
 
 .br-accent-two-5 {
-    border-color: #fff3e8;
+    border-color: #ecfaf1;
     border-color: var(--accent-two-5)
 }
 
 .br-accent-three-d5 {
-    border-color: #1a1600;
+    border-color: #2c2a0a;
     border-color: var(--accent-three-d5)
 }
 
 .br-accent-three-d4 {
-    border-color: #473e00;
+    border-color: #504a12;
     border-color: var(--accent-three-d4)
 }
 
 .br-accent-three-d3 {
-    border-color: #756600;
+    border-color: #736b1a;
     border-color: var(--accent-three-d3)
 }
 
 .br-accent-three-d2 {
-    border-color: #a38d00;
+    border-color: #968c22;
     border-color: var(--accent-three-d2)
 }
 
 .br-accent-three-d1 {
-    border-color: #d1b500;
+    border-color: #b9ad2a;
     border-color: var(--accent-three-d1)
 }
 
 .br-accent-three {
-    border-color: #fd0;
+    border-color: #d2c63c;
     border-color: var(--accent-three)
 }
 
 .br-accent-three-1 {
-    border-color: #ffe32e;
+    border-color: #dad05f;
     border-color: var(--accent-three-1)
 }
 
 .br-accent-three-2 {
-    border-color: #ffe95c;
+    border-color: #e2da82;
     border-color: var(--accent-three-2)
 }
 
 .br-accent-three-3 {
-    border-color: #ffef8a;
+    border-color: #eae5a5;
     border-color: var(--accent-three-3)
 }
 
 .br-accent-three-4 {
-    border-color: #fff5b8;
+    border-color: #f3efc8;
     border-color: var(--accent-three-4)
 }
 
 .br-accent-three-5 {
-    border-color: #fffce5;
+    border-color: #fbf9eb;
     border-color: var(--accent-three-5)
 }
 
