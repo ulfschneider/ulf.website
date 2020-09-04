@@ -1,1 +1,18 @@
+<script>
+    addEventListener('keydown', event => {
+        if (event.key == '{{site.searchKey}}') {
+            let queryField = document.querySelector('#search-query');
+            let focus = document.querySelector(':focus');
+            if (queryField && queryField != focus) {
+                queryField.focus();
+                event.preventDefault();
+            } else if (!queryField) {
+                location.href = {{site.search}};
+                event.preventDefault();
+            }
+
+        }
+    });
+</script>
 <script defer src="/js/site-scripts.js"></script>
+<script defer src="/js/instant-page.js" ></script>

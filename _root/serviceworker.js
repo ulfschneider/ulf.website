@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v19'; //version is used to remove old caches
+const CACHE_VERSION = 'v20 2020-09-04'; //version is used to remove old caches
 
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
@@ -342,7 +342,7 @@ async function maintainExpiration({ response, maxAgeMinutes }) {
     if (maxAgeMinutes > 0 && !response.type.includes('opaque') && response.type != 'error') {
         //unfortunately, for opaque response types 
         //the expiration cannot be controlled here        
-        let response = cloneResponse(response);
+        return cloneResponse(response);
     } else {
         return response;
     }
