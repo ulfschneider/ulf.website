@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v20 2020-09-04'; //version is used to remove old caches
+const CACHE_VERSION = 'v20'; //version is used to remove old caches
 
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
