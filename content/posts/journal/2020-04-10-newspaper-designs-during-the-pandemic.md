@@ -1,10 +1,11 @@
 ---
 title: Newspaper designs during the pandemic
+layout: image
 ---
 
 Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](https://twitter.com/michaelbierut) pointed me towards the handwritten front page designs of the New York Times.
 
-<div class="breakout-wide-r x-12">
+<div class="breakout-r gp x-12">
 
 <figure class="rg:xx-6">
 <img src="/img/2020-04-08-new-york-times-handwritten.jpg" alt=""/>
@@ -18,7 +19,7 @@ Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](h
 
 </div>
 
-<div class="breakout-wide-r x-12">
+<div class="breakout-r gp x-12">
 
 <figure class="rg:xx-6">
 <img src="/img/2020-03-26-new-york-times.jpg" alt=""/>

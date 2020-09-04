@@ -1,6 +1,7 @@
 ---
 title: Man conquers the cosmos
 refer: Mosaic by Fritz Eisel, 1972
+layout: image
 ---
 Today I saw this picture in "der Freitag", Nr. 24, June 4th 2020. 
 

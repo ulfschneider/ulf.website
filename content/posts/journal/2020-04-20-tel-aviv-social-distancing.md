@@ -1,6 +1,7 @@
 ---
 title: Social distancing while protesting
 refer: Picture by Tomer Appelbaum, 2020
+layout: image
 ---
 <figure>
 <img alt="" src="/img/social-distancing-while-protesting.jpg"/>
