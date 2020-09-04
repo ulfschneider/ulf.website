@@ -12,16 +12,15 @@
 		<main class="x indent word-wrap default">
 			{%- unless title == "notitle" or notitle != nil  -%}
 				<div class="breakout-r mrb-2 pdt-d2">
-					{% include title.html  %}
+					{% include title.html %}
 				</div>
 			{%- endunless -%}
 
 			{{ content }}
 
-		</main>	
+		</main>
 
-		{% include footer.html %}
-
+		{% include footer.html %}		
 	</body>
 
 </html>
