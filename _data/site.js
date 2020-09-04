@@ -17,33 +17,39 @@ module.exports = {
     mainnav: [{
             label: 'Ulf Schneider',
             url: '/',
-            id: 'home'
+            id: 'home',
+            kbd: 'h'
         },
         {
             label: 'Blog',
             url: '/blog/',
-            id: 'blog'
+            id: 'blog',
+            kbd: 'b'
         },
         {
             label: 'Search',
             url: '/search/',
-            id: 'search'
+            id: 'search',
+            kbd: 's'
         }
     ],
     footernav: [{
             label: 'RSS',
             url: '/rss.xml',
-            id: 'rss'
+            id: 'rss',
+            kbd: 'r'
         },
         {
             label: 'Colophon',
             url: '/colophon/',
-            id: 'colophon'
+            id: 'colophon',
+            kbd: 'c'
         },
         {
             label: 'About',
             url: '/about/',
-            id: 'about'
+            id: 'about',
+            kbd: 'a'
 
         }
     ],
@@ -59,6 +65,6 @@ module.exports = {
     blog: '/blog/',
     images: '/images/',
     rss: '/rss.xml',
-    searchKey: '.',
+    searchKey: 's',
     time: new Date()
 }

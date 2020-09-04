@@ -19,6 +19,7 @@
     --fs-h3: var(--fs);
     --fs-h3: 1rem;
     --pre-background: var(--neutral-5);
+    --kbd-background: var(--neutral-5);
 }
 
 a {

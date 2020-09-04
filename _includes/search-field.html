@@ -4,21 +4,37 @@
 {%- if focus -%}
     {%- assign autofocus = "autofocus" -%}
 {%- endif -%}
-
 <form onsubmit="{{onsubmit}}">
     {%- if site.searchKey -%}
-        <label id="search-label" for="search-query" class="small">Search <em>{{site.name}},</em> press {{site.searchKey}} to focus:</label>
+        <label id="search-label" for="search-query" class="small">Search <em>{{site.name}},</em> press <kbd>{{site.searchKey}}</kbd> to focus:</label>
     {%- else -%}
         <label id="search-label" for="search-query" class="small">Search <em>{{site.name}}</em>:</label>
     {%- endif -%}
-
 </label>
 <div class="flex mxw-sm pdy-d2">
     <input id="search-query" {{autofocus}} class="w-100" type="text"/>
     <input type="submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="Search"/>
 </div>
 </form>
+
+
+
 <script>
+var keylessLabel = 'Search <em>{{site.name}}</em>:';
+var key = '{{site.searchKey}}';
+if (key) {
+    var keyLabel = 'Search <em>{{site.name}},</em> press <kbd>{{site.searchKey}}</kbd> to focus:'
+} else {
+    keyLabel = keylessLabel;
+}
+var query = document.querySelector('#search-query');
+var label = document.querySelector('#search-label');
+query.addEventListener('focus', event => {
+    label.innerHTML = keylessLabel;
+});
+query.addEventListener('blur', event => {
+    label.innerHTML = keyLabel;
+});
 function submitQuery(event) {
     event.preventDefault();
     let query = event
