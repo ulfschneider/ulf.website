@@ -15,4 +15,6 @@
     });
 </script>
 <script defer src="/js/site-scripts.js"></script>
-<script type="module" src="/js/instant-page.js" ></script>
+{%- if site.instantPage == true -%}
+    <script type="module" src="/js/instant-page.js" ></script>
+{%- endif -%}
