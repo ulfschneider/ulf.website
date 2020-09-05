@@ -89,7 +89,6 @@ code[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
     color: var(--accent-one-d1);
-    background: #ffffff;
 }
 
 .token.atrule,
