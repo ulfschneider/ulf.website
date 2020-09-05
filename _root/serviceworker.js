@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v20'; //version is used to remove old caches
+const CACHE_VERSION = 'v21'; //version is used to remove old caches
 
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
@@ -84,7 +84,7 @@ addEventListener("message", event => {
             if (CACHE_SETTINGS[cacheName]) {
                 const maxItems = CACHE_SETTINGS[cacheName].maxItems;
                 if (maxItems) {
-                    devlog(`Trimming ${cacheName} to a max limit of ${maxItems} items`);
+                    log(`Trimming ${cacheName} to a max limit of ${maxItems} items`);
                     trimCache({ cacheName: cacheName, maxItems: maxItems });
                 }
             }
@@ -113,7 +113,7 @@ addEventListener('fetch', event => {
         return cacheFirst(event);
     }
 
-    devlog('Requesting ' + request.url);
+    log('Requesting ' + request.url);
     event.respondWith(handleEvent());
 });
 
@@ -131,7 +131,7 @@ async function preCache() {
         try {
             await fetchAndCache(makeURL(url));
         } catch (err) {
-            console.error(`Failure when caching ${url}:` + err);
+            errorlog(`Failure when caching ${url}:` + err);
         }
     }
 }
@@ -149,7 +149,7 @@ async function networkFirst(event) {
     const request = event.request;
 
     return fetchAndCache(request)
-        .catch(error => deverror('Failure in network first operation: ' + error));
+        .catch(error => errorlog('Failure in network first operation: ' + error));
 }
 
 
@@ -160,20 +160,20 @@ async function cacheFirst(event, options) {
     const responseFromCache = await caches.match(request, options);
 
     if (responseFromCache && !isExpired(responseFromCache)) {
-        devlog(`Responding from cache ${request.url}`);
+        log(`Responding from cache ${request.url}`);
 
         if (options.revalidate && isAllowRevalidate(responseFromCache, request.url)) {
             //clone response and call without await
             options.responseFromCache = responseFromCache.clone();
             fetchAndCache(request, options)
-                .catch(error => deverror('Failure in cache first operation: ' + error));
+                .catch(error => errorlog('Failure in cache first operation: ' + error));
         }
 
         return responseFromCache;
     } else {
         return fetchAndCache(request, options)
             .catch(error => {
-                deverror('Failure in cache first operation: ' + error);
+                errorlog('Failure in cache first operation: ' + error);
                 if (responseFromCache) {
                     //use an outdated cache response, 
                     //because that is better than nothing
@@ -213,11 +213,11 @@ async function fetchAndCache(request, options) {
         //or we have no expiration date for the entry
         //or we enforce a revalidation
         //therefore we have to update from the network
-        devlog(`Revalidating cache ${url}`);
+        log(`Revalidating cache ${url}`);
     } else {
         //we have no cache and therefore have
         //to fetch a response from the network
-        devlog(`Responding from network ${url}`);
+        log(`Responding from network ${url}`);
     }
     return fetch(request)
         .then(async responseFromNetwork => {
@@ -270,21 +270,12 @@ async function fetchAndCache(request, options) {
         });
 }
 
-//logging only when the server and the browser
-//are on the same machine (for dev purpose)
-function devlog(message) {
-    if (location.hostname == 'localhost') {
-        console.log(message);
-    }
+function log(message) {
+    console.log(message);
 }
 
-//logging only when the server and the browser
-//are on the same machine (for dev purpose)
-function deverror(message) {
-    if (location.hostname == 'localhost') {
-        console.error(message);
-
-    }
+function errorlog(message) {
+    console.error(message);
 }
 
 //ensure to get a nice URL
@@ -335,7 +326,7 @@ async function maintainExpiration({ response, maxAgeMinutes }) {
                 headers: headers ? headers : response.headers
             });
         } catch (error) {
-            console.error((response ? response.url + ' status ' + response.status + ': ' : '') + error);
+            errorlog((response ? response.url + ' status ' + response.status + ': ' : '') + error);
             return response;
         }
     }
@@ -359,34 +350,34 @@ async function trimCache({ cacheName, maxItems }) {
             await trimCache({ cacheName: cacheName, maxItems: maxItems });
         }
     } catch (error) {
-        console.error(error);
+        errorlog(error);
     }
 }
 
 function isValidToCache({ request, response }) {
     const url = new URL(request.url);
     if (NO_CACHE_URLS.includes(url.pathname)) {
-        console.log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
+        log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
         return false;
     }
     if (/^\/browser-sync\//.test(url.pathname)) {
-        console.log(`Refusing to cache because of browser-sync request: ${request.url}`);
+        log(`Refusing to cache because of browser-sync request: ${request.url}`);
         return false;
     }
     if (request.method == 'POST') {
-        console.log(`Refusing to cache because of POST request: ${request.url}`);
+        log(`Refusing to cache because of POST request: ${request.url}`);
         return false;
     }
     if (request.method == 'PUT') {
-        console.log(`Refusing to cache because of PUT request: ${request.url}`);
+        log(`Refusing to cache because of PUT request: ${request.url}`);
         return false;
     }
     if (response.type == 'error') {
-        console.log(`Refusing to cache because of error response: ${request.url}`);
+        log(`Refusing to cache because of error response: ${request.url}`);
         return false;
     }
     if (response.type == 'opaque') {
-        console.log(`Refusing to cache because of opaque response: ${request.url}`);
+        log(`Refusing to cache because of opaque response: ${request.url}`);
         return false;
     }
     return true;
@@ -405,11 +396,11 @@ async function stashInCache({ request, response, cacheName, options }) {
 
             let metaResponse = await maintainExpiration({ response: response, maxAgeMinutes: options.maxAgeMinutes })
             let cache = await caches.open(cacheName);
-            devlog(`Putting into ${cacheName}: ${request.url}`);
+            log(`Putting into ${cacheName}: ${request.url}`);
             return cache.put(request, metaResponse);
         }
     } catch (error) {
-        console.error(error);
+        errorlog(error);
     }
 }
 
@@ -439,7 +430,7 @@ function isAllowRevalidate(response, url) {
         if (date < now) {
             return true;
         } else {
-            devlog(`Not revalidating ${url} because it has been cached within the last ${NO_REVALIDATE_WITHIN_MINUTES} minutes`);
+            log(`Not revalidating ${url} because it has been cached within the last ${NO_REVALIDATE_WITHIN_MINUTES} minutes`);
             return false;
         }
     }
