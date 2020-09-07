@@ -18,6 +18,11 @@ tags: journal
 </figure>
 
 <figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hB7ob9X5BGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>Yoga gegen Rückenschmerzen | Starker und Gesunder Rücken | 45 Minuten</figcaption>
+</figure>
+
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Nwg5j55gicI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Yoga Schulter Nacken Entspannen | Verspannungen lösen | Übungen für den Alltag | 20 Minuten</figcaption>
 </figure>

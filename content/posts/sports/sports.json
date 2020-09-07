@@ -1,5 +1,3 @@
 {
-    "permalink": "/sports/{{ page.fileSlug }}/",
-    "tags": "sports",
-    "norss": true
+    "tags": "sports"
 }
