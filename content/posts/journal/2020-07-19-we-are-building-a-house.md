@@ -112,3 +112,23 @@ I´m posting a timeline of images here to document the progress.
 <figcaption>Aug 11, 2020, afternoon: The stairs are the last piece to assemble. The men are finishing their work for today.</figcaption>
 <img src="/img/house/IMG_1727.jpg" alt="">
 </figure>
+
+<figure>
+<figcaption>Aug 13, 2020, early morning: Concreting the ceiling of the cellar.</figcaption>
+<img src="/img/house/IMG_1728.jpg" alt="">
+</figure>
+
+<figure>
+<figcaption>Aug 28 to Sep 1, 2020: Filling up the workrooms and connecting to the sewerage system.</figcaption>
+<img src="/img/house/IMG_1729.jpg" alt="">
+<img src="/img/house/IMG_1745.jpg" alt="">
+<img src="/img/house/IMG_1752.jpg" alt="">
+<img src="/img/house/IMG_1763.jpg" alt="">
+<img src="/img/house/IMG_1773.jpg" alt="">
+</figure>
+
+<figure>
+<figcaption>Sep 3, 2020: The cellar is ready.</figcaption>
+<img src="/img/house/IMG_1781.jpg" alt="">
+</figure>
+
