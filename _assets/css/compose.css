@@ -366,18 +366,16 @@ kbd {
     border-radius: var(--space-d4);
     border: 1px solid #949494;
     border: 1px solid var(--kbd-border-color);
-    padding: .1em;
-    white-space: nowrap
-}
-
-.kbd,
-.mono,
-kbd {
-    font-family: monospace;
-    font-family: var(--mono-font-family)
+    padding: 0 .2em;
+    font-family: sans-serif;
+    font-family: var(--meta-font-family);
+    white-space: nowrap;
+    text-align: center
 }
 
 .mono {
+    font-family: monospace;
+    font-family: var(--mono-font-family);
     font-feature-settings: unset;
     font-feature-settings: var(--mono-font-feature-settings)
 }

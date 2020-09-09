@@ -16,7 +16,7 @@ module.exports = {
         twitter: ""
     },
     mainnav: [{
-            label: 'Ulf Schneider',
+            label: 'Home',
             url: '/',
             id: 'home',
             kbd: 'h'
@@ -41,6 +41,12 @@ module.exports = {
             kbd: 'r'
         },
         {
+            label: 'Accessibility',
+            url: '/accessibility/',
+            id: 'accessibility',
+            kbd: 'a'
+        },
+        {
             label: 'Colophon',
             url: '/colophon/',
             id: 'colophon',
@@ -50,7 +56,7 @@ module.exports = {
             label: 'About',
             url: '/about/',
             id: 'about',
-            kbd: 'a'
+            kbd: 't'
 
         }
     ],

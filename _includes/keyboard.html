@@ -1,0 +1,14 @@
+<table>
+    <caption class="">Shortcuts for keyboard navigation of this site</caption>
+    <tr><th class="mw-3">Key</th><th>Will navigate to</th></tr>
+    {%- for nav in site.mainnav -%}
+        <tr>
+            <td class="mw-3"><kbd class="w inline-block">{{nav.kbd}}</kbd></td><td><a class="no-deco" href="{{nav.url}}">{{nav.label}}</a></td>
+        </tr>
+    {%- endfor -%}
+    {%- for nav in site.footernav -%}
+        <tr>
+            <td class="mw-3"><kbd class="w inline-block">{{nav.kbd}}</kbd></td><td><a class="no-deco" href="{{nav.url}}">{{nav.label}}</a></td>
+        </tr>
+    {%- endfor -%}
+</table>

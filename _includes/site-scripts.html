@@ -1,17 +1,42 @@
 <script>
     addEventListener('keydown', event => {
+        let focus = document.querySelector(':focus');
+
+        if (focus && 'INPUT' == focus.tagName && 'submit' != focus.type && 'reset' != focus.type) {
+            return;
+        } else if (focus && 'TEXTAREA' == focus.tagName) {
+            return;
+        }
+
         if (event.key == '{{site.searchKey}}') {
             let queryField = document.querySelector('#search-query');
-            let focus = document.querySelector(':focus');
             if (queryField && queryField != focus) {
                 queryField.focus();
                 event.preventDefault();
+                return;
             } else if (!queryField) {
                 location.href = {{site.search}};
                 event.preventDefault();
+                return;
             }
-
         }
+
+        for (let nav of {{site.mainnav}}) {
+            if (event.key == nav.kbd && nav.url) {
+                location.href = nav.url;
+                event.preventDefault();
+                return;
+            }
+        }
+
+        for (let nav of {{site.footernav}}) {
+            if (event.key == nav.kbd && nav.url) {
+                location.href = nav.url;
+                event.preventDefault();
+                return;
+            }
+        }
+
     });
 </script>
 <script defer src="/js/site-scripts.js"></script>
