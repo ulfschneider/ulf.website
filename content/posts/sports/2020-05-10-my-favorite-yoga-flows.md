@@ -18,6 +18,11 @@ tags: journal
 </figure>
 
 <figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X2GxGhOcjQ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>Yoga Ganzkörper Flow | 20 Min. Workout Mittelstufe | Fühl dich stark, fit & selbstbewusst!</figcaption>
+</figure>
+
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hB7ob9X5BGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Yoga gegen Rückenschmerzen | Starker und Gesunder Rücken | 45 Minuten</figcaption>
 </figure>
