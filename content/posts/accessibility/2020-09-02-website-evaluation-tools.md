@@ -35,4 +35,5 @@ To validate for compliance in these areas, I´m using the following tools:
 
 ## References
 - Adam Silver, [Semantic HTML and ARIA explained](https://adamsilver.io/articles/semantic-html-and-aria-explained/)
+- kulturbanause, [HTML-Elemente und Semantik](https://blog.kulturbanause.de/2008/01/html-elemente-und-semantik/)
 - MDN, [Semantics](https://developer.mozilla.org/en-US/docs/Glossary/semantics)
