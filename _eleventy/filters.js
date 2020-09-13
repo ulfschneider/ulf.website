@@ -1,6 +1,5 @@
 const lunr = require("lunr");
 const utils = require("./utils.js");
-const site = require("../_data/site.js");
 
 function findNextItem(collection, current) {
     let passedCurrent;

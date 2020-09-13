@@ -1,6 +1,10 @@
 const stripHtml = require('string-strip-html');
 const path = require('path');
-const { DateTime } = require('luxon');
+
+const dayjs = require('dayjs');
+const advancedFormat = require('dayjs/plugin/advancedFormat');
+dayjs.extend(advancedFormat)
+
 const site = require('../_data/site.js');
 
 module.exports = {
@@ -107,15 +111,14 @@ module.exports = {
     },
 
     isoDate: function(d) {
-        let dt = DateTime.fromMillis(d.getTime());
-        return dt.toISODate();
+        return dayjs(d.getTime()).format();
     },
 
     humanDate: function(d) {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
-            let dt = DateTime.fromMillis(d.getTime());
-            return dt.setLocale(locale).toLocaleString(DateTime.DATE_MED);
+            let dt = dayjs(d.getTime()).locale(locale);
+            return dt.format('MMM Do, YYYY')
         } else {
             return '';
         }
