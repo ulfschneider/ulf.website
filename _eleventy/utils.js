@@ -111,7 +111,7 @@ module.exports = {
     },
 
     isoDate: function(d) {
-        return dayjs(d.getTime()).format();
+        return dayjs(d.getTime()).toISOString();
     },
 
     humanDate: function(d) {
