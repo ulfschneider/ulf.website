@@ -132,3 +132,13 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1781.jpg" alt="">
 </figure>
 
+## Power and water supplies
+
+<figure>
+<figcaption>Sep 15 to Sep 16, 2020: Power and water supplies are provided</figcaption>
+<img src="/img/house/IMG_1826_1.jpg" alt="">
+<img src="/img/house/IMG_1828.jpg" alt="">
+<img src="/img/house/IMG_1829.jpg" alt="">
+<img src="/img/house/IMG_1831.jpg" alt="">
+</figure>
+
