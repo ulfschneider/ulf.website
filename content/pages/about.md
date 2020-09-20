@@ -20,9 +20,9 @@ Throughout 25 years in the software industry, I was more than ten years with IBM
 
 <h2>Content ownership</h2>
 
-According to § 55 Abs.2 RStV responsible for the content of this website:{.meta .mxw-sm }
+According to § 55 Abs.2 RStV responsible for the content of this website:{.mxw-sm }
 
-<address class="mry meta">
+<address class="mry">
 Ulf Schneider<br>
 Winfriedstr. 78<br>
 33098 Paderborn<br>
