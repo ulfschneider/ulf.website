@@ -147,7 +147,7 @@ I´m posting a timeline of images here to document the progress.
 ## Measuring the cellar
 
 <figure>
-<figcaption>Sep 18, 2020: Measuring if the cellar is within the tolerance to place house on top if it</figcaption>
+<figcaption>Sep 18, 2020: Measuring if the cellar is within the tolerance to place the house on top if it</figcaption>
 <img src="/img/house/IMG_1838.jpg" alt="">
 <img src="/img/house/IMG_1841.jpg" alt="">
 </figure>
