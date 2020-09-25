@@ -130,6 +130,8 @@ I´m posting a timeline of images here to document the progress.
 <figure>
 <figcaption>Sep 3, 2020: The cellar is ready.</figcaption>
 <img src="/img/house/IMG_1781.jpg" alt="">
+<img src="/img/house/IMG_1850.jpg" alt="">
+<img src="/img/house/IMG_1852.jpg" alt="">
 </figure>
 
 ## Power and water supplies
@@ -141,4 +143,13 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1829.jpg" alt="">
 <img src="/img/house/IMG_1831.jpg" alt="">
 </figure>
+
+## Measuring the cellar
+
+<figure>
+<figcaption>Sep 18, 2020: Measuring if the cellar is within the tolerance to place house on top if it</figcaption>
+<img src="/img/house/IMG_1838.jpg" alt="">
+<img src="/img/house/IMG_1841.jpg" alt="">
+</figure>
+
 
