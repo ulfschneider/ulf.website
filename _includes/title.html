@@ -1,46 +1,43 @@
 {%- if title != "notitle" and notitle != true -%}
-       {%- if page.date and nodate == nil -%}
-            {%- assign hasdate = true -%}
-        {%- else -%}
-            {%- assign hasdate = false%}
-        {%- endif -%}
+    {%- if page.date and nodate == nil -%}
+        {%- assign hasdate = true -%}
+    {%- else -%}
+        {%- assign hasdate = false%}
+    {%- endif -%}
 
-        {%- if tags  -%}
-            {%- assign hastags = true -%}
-        {%- endif -%}
+    {%- if tags  -%}
+        {%- assign hastags = true -%}
+    {%- endif -%}
 
-        {%- if nostepnav or notags  -%}
-            {%- assign hastags = false -%}
-        {%- endif -%}
-        {%- if author or hasdate or hastags  -%}
-            <aside class="lh-2 meta small mrb-2">
-                {% include author-and-date.html %}
-                {% include tags.html %}
-            </aside>
-        {%- endif -%}
+    {%- if nostepnav or notags  -%}
+        {%- assign hastags = false -%}
+    {%- endif -%}
+    {%- if author or hasdate or hastags  -%}
+        <aside class="lh-2 meta small mrb-2">
+            {% include author-and-date.html %}
+            {% include tags.html %}
+        </aside>
+    {%- endif -%}
 
-    
-    <section class="title no-indent">
+    {%- if title  -%}
+        <h1 class="mry-0 meta-font">{{ title }}
+            {%- if tag != nil -%}
+                <span class="normal"> tagged <em>{{tag}}</em>
+                </span>
+            {%- endif -%}
+        </h1>
+    {%- endif -%}
 
-        {%- if title  -%}
-            <h1 class="mry-0 meta-font">{{ title }}
-                {%- if tag != nil -%}
-                    <span class="normal"> tagged <em>{{tag}}</em>
-                    </span>
-                {%- endif -%}
-            </h1>
-        {%- endif -%}
+    {%- if subtitle  -%}
+        <p class="no-indent lh-2 meta-font sub-title mxw-rg">{{subtitle}}</p>
+    {%- endif -%}
 
-        {%- if subtitle  -%}
-            <p class="no-indent lh-2 meta-font sub-title mxw-rg">{{subtitle}}</p>
-        {%- endif -%}
+    {%- if refer  -%}
+        <p class="no-indent lh-2 meta-font refer mxw-rg">{{refer}}</p>
+    {%- endif -%}
 
-        {%- if refer  -%}
-            <p class="no-indent lh-2 meta-font refer mxw-rg">{{refer}}</p>
-        {%- endif -%}
+    {%- if sitetags != nil %}
+        {% include site-tags.html %}
+    {%- endif -%}
 
-        {%- if sitetags != nil %}
-            {% include site-tags.html %}
-        {%- endif -%}
-    </section>
 {%- endif -%}

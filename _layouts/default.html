@@ -11,9 +11,9 @@
 
 		<main class="x indent word-wrap default">
 			{%- unless title == "notitle" or notitle != nil  -%}
-				<div class="breakout-r mrb-2 pdt-d2">
+				<section class="breakout-r title mrb-2 pdt-d2">
 					{% include title.html %}
-				</div>
+				</section>
 			{%- endunless -%}
 
 			{{ content }}
