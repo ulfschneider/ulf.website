@@ -77,6 +77,19 @@ main>*:first-child {
     margin-top: 0;
 }
 
+.anchor {
+    display: none;
+}
+
+h1:hover>.anchor,
+h2:hover>.anchor,
+h3:hover>.anchor,
+h4:hover>.anchor,
+h5:hover>.anchor,
+h6:hover>.anchor {
+    display: inline;
+}
+
 @media (any-pointer: coarse) {
     nav {
         line-height: var(--space-1);
