@@ -1814,15 +1814,15 @@ ul ul li:before {
 }
 
 @media (max-width:900px) {
-    .x ol,
-    .x ul {
+    [class^=x] ol,
+    [class^=x] ul {
         padding-left: 1.7rem;
         padding-left: var(--horizontal-rhythm)
     }
 }
 
-[class*=breakout] ol,
-[class*=breakout] ul {
+[class*=breakout-wide] ol,
+[class*=breakout-wide] ul {
     padding-left: 1.7rem;
     padding-left: var(--horizontal-rhythm)
 }

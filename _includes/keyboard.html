@@ -1,14 +1,14 @@
 <table>
     <caption>Shortcuts to navigate <em>{{site.name}}</em> with the keyboard</caption>
-    <tr><th class="w-2">Key</th><th>Will navigate to</th></tr>
+    <tr><th>Pressing key</th><th>Will navigate to</th></tr>
     {%- for nav in site.mainnav -%}
         <tr>
-            <td class="w-2"><kbd>{{nav.kbd}}</kbd></td><td><a class="no-deco" href="{{nav.url}}">{{nav.label}}</a></td>
+            <td><kbd>{{nav.kbd}}</kbd></td><td><a class="no-deco" href="{{nav.url}}">{{nav.label}}</a></td>
         </tr>
     {%- endfor -%}
     {%- for nav in site.footernav -%}
         <tr>
-            <td class="w-2"><kbd>{{nav.kbd}}</kbd></td><td><a class="no-deco" href="{{nav.url}}">{{nav.label}}</a></td>
+            <td><kbd>{{nav.kbd}}</kbd></td><td><a class="no-deco" href="{{nav.url}}">{{nav.label}}</a></td>
         </tr>
     {%- endfor -%}
 </table>
