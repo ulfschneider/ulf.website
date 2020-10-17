@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Blog
-navid: blog
+id: blog
 sitetags: true
 permalink: '{{site.blog}}'
 ---

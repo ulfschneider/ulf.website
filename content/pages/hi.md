@@ -4,7 +4,7 @@ title: Ulf Schneider
 subtitle: Developer and Agile Coach
 nodate: true
 notags: true
-navid: home
+id: home
 ---
 Welcome!
 

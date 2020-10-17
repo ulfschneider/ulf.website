@@ -3,7 +3,7 @@
 		{%- for p in site.mainnav -%}
 
 			<li class="inline-block">
-				{%- if navid == p.id -%}
+				{%- if id == p.id -%}
 					<a aria-current="page" class="meta no-deco bold heading-color" href="{{ p.url }}">{{p.label}}</a>
 				{%- else -%}
 					<a class="meta no-deco" href="{{ p.url }}">{{p.label}}</a>

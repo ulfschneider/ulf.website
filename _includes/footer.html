@@ -7,7 +7,7 @@
 		<ul class="mry-0 reset">
 			{%- for p in site.footernav -%}
 				<li class="inline-block">
-					{%- if navid == p.id -%}
+					{%- if id == p.id -%}
 						<a class="meta no-deco bold heading-color" aria-current="page" href="{{ p.url }}">{{p.label}}</a>
 					{%- else -%}
 						<a class="meta no-deco " href="{{ p.url }}">{{p.label}}</a>
