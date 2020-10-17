@@ -23,6 +23,11 @@ tags: journal
 </figure>
 
 <figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-Yuw9xaCqSA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>Yoga Flow für Kraft und einen starken Körper | Fokus Bauch, Beine Po & Drehungen | 35 Min. Mittelstufe</figcaption>
+</figure>
+
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hB7ob9X5BGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Yoga gegen Rückenschmerzen | Starker und Gesunder Rücken | 45 Minuten</figcaption>
 </figure>
