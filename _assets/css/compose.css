@@ -1822,7 +1822,9 @@ ul ul li:before {
 }
 
 [class*=breakout-wide] ol,
-[class*=breakout-wide] ul {
+[class*=breakout-wide] ul,
+table ol,
+table ul {
     padding-left: 1.7rem;
     padding-left: var(--horizontal-rhythm)
 }
