@@ -58,7 +58,12 @@ nav ul li:last-child {
 }
 
 nav.table-of-contents {
-    margin: var(--vertical-rhythm) 0;
+    margin-bottom: var(--vertical-rhythm);
+}
+
+nav.table-of-contents::before {
+    content: "Contents:";
+    display: block;
 }
 
 nav.table-of-contents>* {
