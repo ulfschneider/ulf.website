@@ -45,27 +45,7 @@ module.exports = function(eleventyConfig) {
 }
 
 function addMarkdownLib(eleventyConfig) {
-    const mdlib = markdownIt({
-            html: true,
-            breaks: true,
-            linkify: true,
-            typographer: true
-        })
-        .use(markdownItAnchor, {
-            permalink: true,
-            permalinkClass: 'anchor',
-            permalinkSymbol: '#',
-            permalinkBefore: false,
-            permalinkSpace: true
-        })
-        .use(markdownItTableOfContents)
-        .use(markdownItDefList)
-        .use(markdownItFitMedia, {
-            imgDir: './content'
-        })
-        .use(markdownItAttrs);
-
-    eleventyConfig.setLibrary('md', mdlib)
+    eleventyConfig.setLibrary('md', utils.getMarkdownLib());
 }
 
 function addLayoutAliases(eleventyConfig) {

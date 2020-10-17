@@ -1,3 +1,11 @@
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
+const markdownItTableOfContents = require('markdown-it-toc-done-right');
+const markdownItDefList = require('markdown-it-deflist');
+const markdownItFitMedia = require('markdown-it-fitmedia');
+const markdownItAttrs = require('markdown-it-attrs');
+
+const cheerio = require('cheerio');
 const stripHtml = require('string-strip-html');
 const path = require('path');
 
@@ -10,7 +18,7 @@ const site = require('../_data/site.js');
 module.exports = {
 
     excerptFromItem: function(item) {
-        let excerpt = stripHtml(item.templateContent);
+        let excerpt = this.removeHtml(item.templateContent);
         if (excerpt) {
             excerpt = excerpt.split(' ')
                 .slice(0, 25)
@@ -84,6 +92,16 @@ module.exports = {
         return item.data.nosearch == null;
     },
 
+    removeHtml: function(text) {
+        const $ = cheerio.load(text);
+
+        //remove anchors
+        $('a.anchor').each(function() {
+            $(this).remove();
+        });
+        return stripHtml($('body').html());
+    },
+
     mapItem: function(item) {
         return {
             id: item.url,
@@ -96,7 +114,7 @@ module.exports = {
             refer: item.data.refer,
             layout: item.data.layout,
             tags: item.data.tags,
-            content: stripHtml(item.templateContent)
+            content: this.removeHtml(item.templateContent)
         }
     },
 
@@ -134,5 +152,30 @@ module.exports = {
             }
         }
         return [...tagSet].sort();
+    },
+
+    getMarkdownLib: function() {
+        const mdlib = markdownIt({
+                html: true,
+                breaks: true,
+                linkify: true,
+                typographer: true
+            })
+            .use(markdownItAnchor, {
+                permalink: true,
+                permalinkClass: 'anchor',
+                permalinkSymbol: '#',
+                permalinkBefore: false,
+                permalinkSpace: true
+            })
+            .use(markdownItTableOfContents)
+            .use(markdownItDefList)
+            .use(markdownItFitMedia, {
+                imgDir: './content'
+            })
+            .use(markdownItAttrs);
+
+        return mdlib;
     }
+
 }
