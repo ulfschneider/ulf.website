@@ -1,13 +1,6 @@
 const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-
-
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const markdownItTableOfContents = require('markdown-it-toc-done-right');
-const markdownItDefList = require('markdown-it-deflist');
-const markdownItFitMedia = require('markdown-it-fitmedia');
-const markdownItAttrs = require('markdown-it-attrs');
+const fs = require('fs');
 
 const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
@@ -20,6 +13,7 @@ module.exports = function(eleventyConfig) {
     addCollections(eleventyConfig);
     addFilters(eleventyConfig);
     addMarkdownLib(eleventyConfig);
+    addBrowserSync404(eleventyConfig);
 
     eleventyConfig.setDataDeepMerge(true);
     eleventyConfig.setTemplateFormats([
@@ -100,4 +94,23 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('mustEqualTags', filters.mustEqualTags);
     eleventyConfig.addFilter('getPrev', filters.getPrev);
     eleventyConfig.addFilter('getNext', filters.getNext);
+}
+
+function addBrowserSync404(eleventyConfig) {
+    eleventyConfig.setBrowserSyncConfig({
+        callbacks: {
+            ready: function(err, bs) {
+
+                bs.addMiddleware("*", (req, res) => {
+                    const content_404 = fs.readFileSync('_site/404.html');
+                    // Provides the 404 content without redirect.
+                    res.write(content_404);
+                    // Add 404 http status code in request header.
+                    // res.writeHead(404, { "Content-Type": "text/html" });
+                    res.writeHead(404);
+                    res.end();
+                });
+            }
+        }
+    });
 }
