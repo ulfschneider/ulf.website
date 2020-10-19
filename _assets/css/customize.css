@@ -60,11 +60,6 @@ nav.table-of-contents {
     margin-bottom: var(--space-2);
 }
 
-nav.table-of-contents::before {
-    content: "Contents:";
-    display: block;
-}
-
 nav.table-of-contents>* {
     margin: 0;
 }
