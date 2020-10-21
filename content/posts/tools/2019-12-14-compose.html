@@ -1,10 +1,3 @@
----
-layout: none
-title: Compose CSS
-permalink: /tools/compose/
-categories: tools
-abstract: A composable CSS Toolkit to build fast, maintainable, and responsive websites.
----
 <!DOCTYPE html>
 <html>
 
@@ -74,7 +67,7 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
                 <div class="x-l breakout pdt-2">
                     <h1 class="lh fw-700">Compose CSS</h1>
                     <p class="w-3 center pdx-d2 bg-heading-color rounded white">
-                        <span id="version">v8.2.0</span></p>
+                        <span id="version">v8.2.3</span></p>
                     <p class="mxw-sm mrt-d1">A composable CSS Toolkit to build fast, maintainable, and
                     responsive websites.
                 </p>
@@ -139,7 +132,11 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
                         <div>
                             <a href="#forms" class="no-deco">Forms</a>
                         </div>
-                        <div><a href="/blog/tools/" class="no-deco">↰ ulf.codes</a></div><div class="only-when-dynamic"><a href="#top" class="no-deco">↑ Go to top</a></div>
+                        <!--replace breakpoint start-->
+                        <div class="only-when-dynamic pdt-1">
+                            <a href="#top" class="small no-deco mrt">Back to top</a>
+                        </div>
+                        <!--replace breakpoint end-->
                     </div>
 
                     <div class="bookmark small">
@@ -2229,7 +2226,7 @@ p/ .no-indent //remove indentation for this p</pre>
             <div>
                 <h2 id="figures">Figures</h2>
                 <figure>
-                    <img loading="lazy" class="w-100" src="/img/compose/pierre-chatel-innocenti-unsplash.jpg"/>
+                    <img loading="lazy" class="w-100" src="images/pierre-chatel-innocenti-unsplash.jpg"/>
                     <figcaption>Photo by Pierre Chatel on Unsplash</figcaption>
                 </figure>
                 <pre>figure
@@ -2239,7 +2236,7 @@ p/ .no-indent //remove indentation for this p</pre>
 
                 <figure>
                     <figcaption>Photo by Matthew Henry on Unsplash</figcaption>
-                    <img loading="lazy" class="w-100" src="/img/compose/matthew-henry-unsplash.jpg"/>
+                    <img loading="lazy" class="w-100" src="images/matthew-henry-unsplash.jpg"/>
                 </figure>
                 <pre>figure
     figcaption/
@@ -2248,7 +2245,7 @@ p/ .no-indent //remove indentation for this p</pre>
 
                 <figure>
                     <figcaption class="mrl-auto right">Photo by Matthew Henry on Unsplash</figcaption>
-                    <img loading="lazy" class="w-100" src="/img/compose/matthew-henry-unsplash.jpg"/>
+                    <img loading="lazy" class="w-100" src="images/matthew-henry-unsplash.jpg"/>
                 </figure>
                 <pre>figure
     figcaption/ .mrl-auto.right
@@ -2265,7 +2262,7 @@ p/ .no-indent //remove indentation for this p</pre>
 
                 <div class="breakout-wide">
                     <figure>
-                        <img loading="lazy" class="w-100" src="/img/compose/swan-leroi-unsplash.jpg"/>
+                        <img loading="lazy" class="w-100" src="images/swan-leroi-unsplash.jpg"/>
                         <figcaption>Photo by Swan Leroi on Unsplash</figcaption>
                     </figure>
                 </div>
@@ -2315,7 +2312,7 @@ p/ .no-indent //remove indentation for this p</pre>
                 <div class="breakout x-12">
                     <div class="xx-12 rg:xx-6">
                         <figure>
-                            <img loading="lazy" src="/img/compose/jayden-chong-unsplash.jpg" style="height:400px; width:100%"
+                            <img loading="lazy" src="images/jayden-chong-unsplash.jpg" style="height:400px; width:100%"
                             class="fit-contain br"/>
 
                             <figcaption>Photo by Jayden Chong on Unsplash</figcaption>
@@ -2325,7 +2322,7 @@ p/ .no-indent //remove indentation for this p</pre>
 
                     <div class="xx-12 rg:xx-6">
                         <figure>
-                            <img loading="lazy" src="/img/compose/jayden-chong-unsplash.jpg" style="height:400px; width:100%"
+                            <img loading="lazy" src="images/jayden-chong-unsplash.jpg" style="height:400px; width:100%"
                             class="fit-contain fit-top-left br"/>
                             <figcaption>Photo by Jayden Chong on Unsplash</figcaption>
                         </figure>
@@ -2339,7 +2336,7 @@ p/ .no-indent //remove indentation for this p</pre>
                         dimensions while preserving aspect-ratio.</p>
                         <p>The image might be stretched to cover.</p>
                         <figure>
-                            <img loading="lazy" src="/img/compose/jayden-chong-unsplash.jpg" style="height:400px; width:100%"
+                            <img loading="lazy" src="images/jayden-chong-unsplash.jpg" style="height:400px; width:100%"
                             class="fit-cover br"/>
 
                             <figcaption>Photo by Jayden Chong on Unsplash</figcaption>
@@ -2358,7 +2355,7 @@ p/ .no-indent //remove indentation for this p</pre>
             </p>
             </div>
             <div class="breakout-full mry bg-cover bg-fixed bg-center bg-no-repeat h-rg"
-            style='background-image: url("/img/compose/swan-leroi-unsplash.jpg")'>
+            style='background-image: url("images/swan-leroi-unsplash.jpg")'>
                 <div class="x-l overflow-hidden">
                     <div class="fs-8 lh-2 bold caps lsp white mry-3">Hero</div>
                 </div>
@@ -3987,8 +3984,8 @@ div/ .below-lg:hide //When visible: screen is above large width</pre>
 </div>
 </body>
 
-<script src="/js/dynamic-header.js"></script>
-<script src="/js/active-toc.js"></script>
+<script src="resources/dynamic-header.js"></script>
+<script src="resources/active-toc.js"></script>
 
 <script>
 DynamicHeader.init();
