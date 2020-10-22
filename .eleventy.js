@@ -90,6 +90,7 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('live', filters.live);
     eleventyConfig.addFilter('tagIntro', filters.tagIntro);
     eleventyConfig.addFilter('humanDate', filters.humanDate);
+    eleventyConfig.addFilter('humanDateTime', filters.humanDateTime);
     eleventyConfig.addFilter('isoDate', filters.isoDate);
     eleventyConfig.addFilter('mustNotContainLayout', filters.mustNotContainLayout);
     eleventyConfig.addFilter('mustEqualTags', filters.mustEqualTags);

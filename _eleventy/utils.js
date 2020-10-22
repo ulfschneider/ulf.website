@@ -11,7 +11,12 @@ const path = require('path');
 
 const dayjs = require('dayjs');
 const advancedFormat = require('dayjs/plugin/advancedFormat');
-dayjs.extend(advancedFormat)
+dayjs.extend(advancedFormat);
+const utc = require('dayjs/plugin/utc')
+dayjs.extend(utc);
+const timezone = require('dayjs/plugin/timezone');
+dayjs.extend(timezone);
+
 
 const site = require('../_data/site.js');
 
@@ -136,7 +141,17 @@ module.exports = {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
             let dt = dayjs(d.getTime()).locale(locale);
-            return dt.format('MMM Do, YYYY')
+            return dt.format('ddd, MMM Do, YYYY')
+        } else {
+            return '';
+        }
+    },
+
+    humanDateTime: function(d) {
+        if (d) {
+            const locale = site.locale ? site.locale : 'en';
+            let dt = dayjs(d.getTime()).locale(locale);
+            return dt.format('ddd, MMM Do, YYYY hh:mm a Z');
         } else {
             return '';
         }
