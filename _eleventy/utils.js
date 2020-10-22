@@ -141,7 +141,7 @@ module.exports = {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
             let dt = dayjs(d.getTime()).locale(locale);
-            return dt.format('ddd, MMM Do, YYYY')
+            return dt.format('MMM Do, YYYY')
         } else {
             return '';
         }
