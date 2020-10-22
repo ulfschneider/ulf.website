@@ -1767,6 +1767,8 @@ table ul {
 [class^=columns] ol,
 [class^=columns] ul,
 ol.indent,
+table ol,
+table ul,
 ul.indent {
     padding-left: 0
 }
@@ -1774,6 +1776,8 @@ ul.indent {
 [class^=columns] ol li:before,
 [class^=columns] ul li:before,
 ol.indent li:before,
+table ol li:before,
+table ul li:before,
 ul.indent li:before {
     margin-left: 0;
     padding-left: 0
@@ -2010,28 +2014,28 @@ small {
 }
 
 @media (min-width:400px) {
-     :root {
+    :root {
         font-size: 20px;
         font-size: var(--font-size-breakpoint-sm)
     }
 }
 
 @media (min-width:600px) {
-     :root {
+    :root {
         font-size: 21px;
         font-size: var(--font-size-breakpoint-rg)
     }
 }
 
 @media (min-width:900px) {
-     :root {
+    :root {
         font-size: 21px;
         font-size: var(--font-size-breakpoint-md)
     }
 }
 
 @media (min-width:1400px) {
-     :root {
+    :root {
         font-size: 22px;
         font-size: var(--font-size-breakpoint-lg)
     }
