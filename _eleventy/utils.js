@@ -94,7 +94,10 @@ module.exports = {
     },
 
     isSearchAble: function(item) {
-        return item.data.nosearch == null;
+        if (item.templateContent && item.templateContent.trim()) {
+            return item.data.nosearch == null;
+        }
+        return false;
     },
 
     removeHtml: function(text) {
