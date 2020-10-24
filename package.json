@@ -26,7 +26,6 @@
         "get-google-fonts": "^1.2.2",
         "gulp": "^4.0.2",
         "gulp-gm": "0.0.9",
-        "gulp-if": "^3.0.0",
         "gulp-minify": "^3.1.0",
         "gulp-postcss": "^8.0.0",
         "html-minifier": "^4.0.0",
