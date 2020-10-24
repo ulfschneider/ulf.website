@@ -21,6 +21,8 @@
     --kbd-background: var(--neutral-5);
 }
 
+:focus {}
+
 a {
     transition: color .1s ease-out;
 }

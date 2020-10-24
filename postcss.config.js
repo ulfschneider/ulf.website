@@ -12,7 +12,8 @@ module.exports = {
                 '_includes/**/*',
                 '_layouts/**/*',
                 '_assets/js/**/*'
-            ]
+            ],
+            safelist: [':focus'],
         }),
         require('cssnano')
     ]
