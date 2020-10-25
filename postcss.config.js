@@ -1,10 +1,8 @@
 module.exports = {
     plugins: [
         require('postcss-import'),
-        require('postcss-custom-media'),
         require('postcss-calc'),
-        require('autoprefixer'),
-        require('postcss-discard-comments'),
+        require('postcss-custom-media'),
         require('@fullhuman/postcss-purgecss')({
             content: [
                 'content/**/*',
@@ -12,8 +10,7 @@ module.exports = {
                 '_includes/**/*',
                 '_layouts/**/*',
                 '_assets/js/**/*'
-            ],
-            safelist: [':focus'],
+            ]
         }),
         require('cssnano')
     ]
