@@ -16,7 +16,7 @@ module.exports = {
         twitter: ""
     },
     mainnav: [{
-            label: 'Home',
+            label: 'Ulf Schneider',
             url: '/',
             id: 'home',
             kbd: 'h'
