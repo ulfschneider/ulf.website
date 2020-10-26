@@ -5,7 +5,8 @@ module.exports = {
         require('postcss-custom-media'),
         require('@fullhuman/postcss-purgecss')({
             content: [
-                'content/**/*',
+                'content/pages/**/*',
+                'content/posts/**/*',
                 '!content/**/*compose.html',
                 '_includes/**/*',
                 '_layouts/**/*',
