@@ -26,7 +26,7 @@ module.exports = {
         let excerpt = this.removeHtml(item.templateContent);
         if (excerpt) {
             excerpt = excerpt.split(' ')
-                .slice(0, 25)
+                .slice(0, site.excerptWordCount ? site.excerptWordCount : 25)
                 .join(' ');
         }
         return excerpt;

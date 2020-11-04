@@ -35,14 +35,12 @@ Here is how I do it: I´m first resetting the style by disabling the outline.
 }
 {% endhighlight %}
 
-Then, I´m styling the outline for any element that can gain focus. Depending on the website, it might sometimes be that the outline will partially be hidden by other site elements. To overcome that in some cases, I´m giving the focused element a <code>position</code> and a <code>z-index</code>.
+Then, I´m styling the outline for any element that can gain focus.
 
 {% highlight css %}
 *:focus {
   outline: 3px solid yellow;
   outline-offset: 2px;
-  position: relative;
-  z-index: 11111;
 }
 {% endhighlight %}
 

@@ -81,9 +81,7 @@ iframe {
 
 *:focus {
     outline: var(--space-d3) solid var(--link-focus-color);
-    outline-offset: var(--space-d4);
-    position: relative;
-    z-index: 11111
+    outline-offset: var(--space-d4)
 }
 
 @media (hover:hover) {

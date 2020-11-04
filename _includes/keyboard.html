@@ -1,14 +1,31 @@
 <table>
     <caption>Shortcuts to navigate <em>{{site.name}}</em> with the keyboard</caption>
-    <tr><th>Pressing key</th><th>will navigate you to</th></tr>
+    <tr>
+        <th>Pressing key</th>
+        <th>will navigate you to</th>
+    </tr>
     {%- for nav in site.mainnav -%}
-        <tr>
-            <td><kbd>{{nav.kbd}}</kbd></td><td><a class="no-deco" href="{{nav.url}}">{{nav.label}}</a></td>
-        </tr>
+        {%- if nav.kbd != nil and nav.kbd != '' %}
+            <tr>
+                <td>
+                    <kbd>{{nav.kbd}}</kbd>
+                </td>
+                <td>
+                    <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
+                </td>
+            </tr>
+        {%- endif -%}
     {%- endfor -%}
     {%- for nav in site.footernav -%}
-        <tr>
-            <td><kbd>{{nav.kbd}}</kbd></td><td><a class="no-deco" href="{{nav.url}}">{{nav.label}}</a></td>
-        </tr>
+        {%- if nav.kbd != nil and nav.kbd != '' %}
+            <tr>
+                <td>
+                    <kbd>{{nav.kbd}}</kbd>
+                </td>
+                <td>
+                    <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
+                </td>
+            </tr>
+        {%- endif -%}
     {%- endfor -%}
 </table>
