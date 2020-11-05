@@ -90,9 +90,3 @@ h5:hover>.anchor,
 h6:hover>.anchor {
     display: inline;
 }
-
-@media (any-pointer: coarse) {
-    nav {
-        line-height: var(--space-1);
-    }
-}
