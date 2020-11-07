@@ -1461,7 +1461,8 @@ ol,
 ul {
     padding-left: 0;
     margin-top: var(--mrt-list);
-    margin-bottom: var(--mrb-list)
+    margin-bottom: var(--mrb-list);
+    counter-reset: li-counter
 }
 
 ol ol,
