@@ -58,6 +58,8 @@ nav ul li:last-child {
     color: var(--neutral);
 }
 
+
+/*
 body {
     counter-reset: h2counter h3counter;
 }
@@ -76,6 +78,7 @@ h3::before {
     font-size: smaller;
     color: var(--neutral);
 }
+*/
 
 nav.table-of-contents {
     margin-bottom: var(--space-2);
