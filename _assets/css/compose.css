@@ -2337,6 +2337,10 @@ th {
     font-family: var(--heading-font-family)
 }
 
+tr:not(first-child) th {
+    vertical-align: top
+}
+
 td,
 th {
     padding: var(--space-d2) var(--space-d1)
