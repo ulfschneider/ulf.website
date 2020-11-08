@@ -1432,7 +1432,8 @@ textarea:focus+label {
 :root {
     --mrt-list: var(--vertical-rhythm);
     --mrb-list: var(--vertical-rhythm);
-    --list-item-type: "•"
+    --list-item-type: "•";
+    --ol-counter: counters(ol-counter, "-", decimal-leading-zero) " "
 }
 
 dl {
@@ -1462,7 +1463,7 @@ ul {
     padding-left: 0;
     margin-top: var(--mrt-list);
     margin-bottom: var(--mrb-list);
-    counter-reset: li-counter
+    counter-reset: ol-counter
 }
 
 ol ol,
@@ -1486,11 +1487,11 @@ li p {
 }
 
 ol li {
-    counter-increment: li-counter
+    counter-increment: ol-counter
 }
 
 ol li::before {
-    content: counter(li-counter, decimal-leading-zero) " ";
+    content: var(--ol-counter);
     font-family: var(--meta-font-family);
     font-size: smaller;
     font-weight: 700
@@ -1507,6 +1508,10 @@ ul li::before {
 
 ul li::before {
     content: var(--list-item-type)
+}
+
+ol ol li::before {
+    padding-right: var(--space-d1)
 }
 
 ol ol li::before,
