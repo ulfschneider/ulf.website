@@ -10,7 +10,8 @@ module.exports = {
                 '!content/**/*compose.html',
                 '_includes/**/*',
                 '_layouts/**/*',
-                '_assets/js/**/*'
+                '_assets/js/**/*',
+                '_assets/css/customize.css'
             ],
 
             defaultExtractor: content => {
