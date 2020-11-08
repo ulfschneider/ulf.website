@@ -59,7 +59,7 @@ nav ul li:last-child {
 }
 
 body {
-    counter-reset: h2counter;
+    counter-reset: h2counter h3counter;
 }
 
 h2::before {
