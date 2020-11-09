@@ -1433,7 +1433,7 @@ textarea:focus+label {
     --mrt-list: var(--vertical-rhythm);
     --mrb-list: var(--vertical-rhythm);
     --list-item-type: "•";
-    --ol-counter: counters(ol-counter, "-", decimal-leading-zero) "\0000a0\0000a0"
+    --ol-counter: counters(ol-counter, "-", decimal-leading-zero)
 }
 
 dl {
@@ -1507,7 +1507,7 @@ ul li::before {
 }
 
 ol ol li::before {
-    padding-right: var(--space-d1)
+    padding-right: var(--space)
 }
 
 ol ol li::before,
