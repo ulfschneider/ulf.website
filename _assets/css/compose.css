@@ -1433,7 +1433,7 @@ textarea:focus+label {
     --mrt-list: var(--vertical-rhythm);
     --mrb-list: var(--vertical-rhythm);
     --list-item-type: "•";
-    --ol-counter: counters(ol-counter, "-", decimal-leading-zero) " "
+    --ol-counter: counters(ol-counter, "-", decimal-leading-zero) "\0000a0\0000a0"
 }
 
 dl {
@@ -1445,25 +1445,17 @@ dd {
     margin-left: var(--horizontal-rhythm)
 }
 
-dd+dt {
+dd+dt,
+ol,
+ul {
     margin-top: var(--mrt-list)
 }
 
 ol,
 ul {
-    list-style: none
-}
-
-ol {
-    counter-reset: styled-number
-}
-
-ol,
-ul {
+    list-style: none;
     padding-left: 0;
-    margin-top: var(--mrt-list);
-    margin-bottom: var(--mrb-list);
-    counter-reset: ol-counter
+    margin-bottom: var(--mrb-list)
 }
 
 ol ol,
@@ -1484,6 +1476,10 @@ ul ul {
 
 li p {
     display: inline
+}
+
+li ol {
+    counter-reset: ol-counter
 }
 
 ol li {
