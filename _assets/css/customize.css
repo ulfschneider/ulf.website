@@ -58,34 +58,8 @@ nav ul li:last-child {
     color: var(--neutral);
 }
 
-
-/*
-body {
-    counter-reset: h2counter h3counter;
-}
-
-h2::before {
-    content: counter(h2counter, decimal-leading-zero) "\0000a0\0000a0";
-    counter-increment: h2counter;
-    counter-reset: h3counter;
-    font-size: smaller;
-    color: var(--neutral);
-}
-
-h3::before {
-    content: counter(h2counter, decimal-leading-zero) "-" counter(h3counter, decimal-leading-zero) "\0000a0\0000a0";
-    counter-increment: h3counter;
-    font-size: smaller;
-    color: var(--neutral);
-}
-*/
-
 nav.table-of-contents {
     margin-bottom: var(--space-2);
-}
-
-nav.table-of-contents li::before {
-    color: var(--neutral);
 }
 
 nav.table-of-contents>* {
