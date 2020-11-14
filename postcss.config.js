@@ -1,13 +1,27 @@
 module.exports = {
-  plugins: [
-    require('autoprefixer'),
-    require('postcss-import'),
-    require('postcss-discard-comments'),
-    require('postcss-purgecss')({
-      content: ['./_site/**/*.html', './content/**/*.html']
-    }),    
-    require('cssnano')({
-      preset: 'default',
-    })
-  ]
+    plugins: [
+        require('postcss-import'),
+        require('postcss-calc'),
+        require('postcss-custom-media'),
+        require('@fullhuman/postcss-purgecss')({
+            content: [
+                'content/pages/**/*',
+                'content/posts/**/*',
+                '!content/**/*compose.html',
+                '_includes/**/*',
+                '_layouts/**/*',
+                '_assets/js/**/*',
+                '_assets/css/customize.css'
+            ],
+
+            defaultExtractor: content => {
+                // Capture as liberally as possible, including things like `h-(screen-1.5)`
+                const broadMatches = content.match(/[^<>"'`\s:]*[^<>"'`\s:]/g) || []
+                    // Capture classes within other delimiters like .block(class="w-1/2") in Pug
+                const innerMatches = content.match(/[^<>"'`\s.():]*[^<>"'`\s.():]/g) || []
+                return broadMatches.concat(innerMatches)
+            }
+        }),
+        require('cssnano')
+    ]
 }

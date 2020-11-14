@@ -15,12 +15,13 @@
     --meta-color: var(--base-color);
     --fs-mono: 0.8rem;
     --fs-h1: var(--fs-3);
-    --fs-h2: var(--fs-1);
-    --fs-h3: var(--fs);
-    --fs-h3: 1rem;
+    --fs-h2: var(--fs-2);
+    --fs-h3: var(--fs-1);
     --pre-background: var(--neutral-5);
     --kbd-background: var(--neutral-5);
 }
+
+:focus {}
 
 a {
     transition: color .1s ease-out;
@@ -54,11 +55,11 @@ nav ul li:last-child {
     text-decoration: none;
     font-weight: normal;
     font-size: var(--fs);
-    color: var(--neutral-1);
+    color: var(--neutral);
 }
 
 nav.table-of-contents {
-    margin: var(--vertical-rhythm) 0;
+    margin-bottom: var(--space-2);
 }
 
 nav.table-of-contents>* {
@@ -77,8 +78,15 @@ main>*:first-child {
     margin-top: 0;
 }
 
-@media (any-pointer: coarse) {
-    nav {
-        line-height: var(--space-1);
-    }
+.anchor {
+    display: none;
+}
+
+h1:hover>.anchor,
+h2:hover>.anchor,
+h3:hover>.anchor,
+h4:hover>.anchor,
+h5:hover>.anchor,
+h6:hover>.anchor {
+    display: inline;
 }

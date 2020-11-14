@@ -3,7 +3,7 @@ permalink: /about/
 title: About
 nodate: true
 notags: true
-navid: about
+id: about
 ---
 <figure>
 <img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-900.jpg" alt="Portrait of Ulf Schneider">

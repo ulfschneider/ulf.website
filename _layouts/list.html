@@ -14,6 +14,14 @@ nostepnav: true
     article:last-child {
         margin-bottom: 0;
     }
+
+    h2::before {
+        content: unset;
+    }
+
+    h3::before {
+        content: unset;
+    }
 </style>
 <div>
     {%- if tag != nil -%}

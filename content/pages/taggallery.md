@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: tag
 permalink: '{{site.images}}{{ tag }}/'
-navid: blog
+id: blog
 title: Images
 ---
 {{collections.liveContent | tagIntro: tag }}

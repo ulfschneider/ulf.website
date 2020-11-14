@@ -6,43 +6,40 @@
 {%- endif -%}
 <form onsubmit="{{onsubmit}}">
     {%- if site.searchKey -%}
-        <label id="search-label" for="search-query" class="small">Search <em>{{site.name}},</em> press <kbd>{{site.searchKey}}</kbd> to focus:</label>
+        <label id="search-label" for="search-query" class="small">Search <em>{{site.name}},</em> press <kbd class="inline">{{site.searchKey}}</kbd> to focus:</label>
     {%- else -%}
         <label id="search-label" for="search-query" class="small">Search <em>{{site.name}}</em>:</label>
     {%- endif -%}
-</label>
-<div class="flex mxw-sm pdy-d2">
-    <input id="search-query" {{autofocus}} class="flex-grow-1 align-stretch" type="text"/>
-    <input type="submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="Search"/>
-</div>
+    <div class="flex mxw-sm mry-d2">
+        <input id="search-query" {{autofocus}} class="flex-grow-1 align-stretch" type="text"/>
+        <input type="submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="Search"/>
+    </div>
 </form>
 
-
-
 <script>
-let keylessLabel = 'Search <em>{{site.name}}</em>:';
-let keyLabel = keylessLabel;
-let key = '{{site.searchKey}}';
-if (key) {
-    keyLabel = 'Search <em>{{site.name}},</em> press <kbd>{{site.searchKey}}</kbd> to focus:'
-} 
-let query = document.querySelector('#search-query');
-let label = document.querySelector('#search-label');
-query.addEventListener('focus', event => {
-    label.innerHTML = keylessLabel;
-});
-query.addEventListener('blur', event => {
-    label.innerHTML = keyLabel;
-});
-function submitQuery(event) {
-    event.preventDefault();
-    let query = event
-        .target['search-query']
-        .value;
-    if (query && query.trim()) {
-        location.href = '{{site.search}}?query=' + encodeURIComponent(query.trim());
-    } else {
-        location.href = '{{site.search}}';
+    let keylessLabel = 'Search <em>{{site.name}}</em>:';
+    let keyLabel = keylessLabel;
+    let key = '{{site.searchKey}}';
+    if (key) {
+        keyLabel = 'Search <em>{{site.name}},</em> press <kbd class="inline">{{site.searchKey}}</kbd> to focus:'
     }
-}
+    let query = document.querySelector('#search-query');
+    let label = document.querySelector('#search-label');
+    query.addEventListener('focus', event => {
+        label.innerHTML = keylessLabel;
+    });
+    query.addEventListener('blur', event => {
+        label.innerHTML = keyLabel;
+    });
+    function submitQuery(event) {
+        event.preventDefault();
+        let query = event
+            .target['search-query']
+            .value;
+        if (query && query.trim()) {
+            location.href = '{{site.search}}?query=' + encodeURIComponent(query.trim());
+        } else {
+            location.href = '{{site.search}}';
+        }
+    }
 </script>

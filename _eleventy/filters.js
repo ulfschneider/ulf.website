@@ -149,6 +149,10 @@ module.exports = {
         return utils.humanDate(d);
     },
 
+    humanDateTime: function(d) {
+        return utils.humanDateTime(d);
+    },
+
     isoDate: function(d) {
         return utils.isoDate(d);
     }

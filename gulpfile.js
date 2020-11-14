@@ -1,5 +1,6 @@
 const images = require('./_gulp/images.js');
 const css = require('./_gulp/css.js');
+const compose = require('./_gulp/compose.js');
 const javascript = require('./_gulp/javascript.js');
 
 const { series, watch } = require('gulp');
@@ -10,6 +11,6 @@ const watcher = () => {
     watch(['_data/site.js', 'content/img/**/*'], { ignoreInitial: true }, images);
 };
 
-exports.default = series([javascript, css, images]);
+exports.default = series([javascript, css, compose, images]);
 
 exports.watch = watcher;

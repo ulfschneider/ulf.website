@@ -1,19 +1,32 @@
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
+const markdownItTableOfContents = require('markdown-it-toc-done-right');
+const markdownItDefList = require('markdown-it-deflist');
+const markdownItFitMedia = require('markdown-it-fitmedia');
+const markdownItAttrs = require('markdown-it-attrs');
+
+const cheerio = require('cheerio');
 const stripHtml = require('string-strip-html');
 const path = require('path');
 
 const dayjs = require('dayjs');
 const advancedFormat = require('dayjs/plugin/advancedFormat');
-dayjs.extend(advancedFormat)
+dayjs.extend(advancedFormat);
+const utc = require('dayjs/plugin/utc')
+dayjs.extend(utc);
+const timezone = require('dayjs/plugin/timezone');
+dayjs.extend(timezone);
+
 
 const site = require('../_data/site.js');
 
 module.exports = {
 
     excerptFromItem: function(item) {
-        let excerpt = stripHtml(item.templateContent);
+        let excerpt = this.removeHtml(item.templateContent);
         if (excerpt) {
             excerpt = excerpt.split(' ')
-                .slice(0, 25)
+                .slice(0, site.excerptWordCount ? site.excerptWordCount : 25)
                 .join(' ');
         }
         return excerpt;
@@ -81,7 +94,20 @@ module.exports = {
     },
 
     isSearchAble: function(item) {
-        return item.data.nosearch == null;
+        if (item.templateContent && item.templateContent.trim()) {
+            return item.data.nosearch == null;
+        }
+        return false;
+    },
+
+    removeHtml: function(text) {
+        const $ = cheerio.load(text);
+
+        //remove anchors
+        $('a.anchor').each(function() {
+            $(this).remove();
+        });
+        return stripHtml($('body').html());
     },
 
     mapItem: function(item) {
@@ -96,7 +122,7 @@ module.exports = {
             refer: item.data.refer,
             layout: item.data.layout,
             tags: item.data.tags,
-            content: stripHtml(item.templateContent)
+            content: this.removeHtml(item.templateContent)
         }
     },
 
@@ -124,6 +150,16 @@ module.exports = {
         }
     },
 
+    humanDateTime: function(d) {
+        if (d) {
+            const locale = site.locale ? site.locale : 'en';
+            let dt = dayjs(d.getTime()).locale(locale);
+            return dt.format('ddd, MMM Do, YYYY hh:mm a Z');
+        } else {
+            return '';
+        }
+    },
+
     extractTags: function(collection) {
         let tagSet = new Set();
         for (let post of collection.getAll().filter(this.isLiveItem)) {
@@ -134,5 +170,30 @@ module.exports = {
             }
         }
         return [...tagSet].sort();
+    },
+
+    getMarkdownLib: function() {
+        const mdlib = markdownIt({
+                html: true,
+                breaks: true,
+                linkify: true,
+                typographer: true
+            })
+            .use(markdownItAnchor, {
+                permalink: true,
+                permalinkClass: 'anchor',
+                permalinkSymbol: '#',
+                permalinkBefore: false,
+                permalinkSpace: true
+            })
+            .use(markdownItTableOfContents)
+            .use(markdownItDefList)
+            .use(markdownItFitMedia, {
+                imgDir: './content'
+            })
+            .use(markdownItAttrs);
+
+        return mdlib;
     }
+
 }

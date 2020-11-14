@@ -18,7 +18,7 @@ const NO_REVALIDATE_WITHIN_MINUTES = 10;
 const CACHE_SETTINGS = {
 
     [SCRIPT_CACHE_NAME]: {
-        maxAgeMinutes: 0 //expire static never
+        maxAgeMinutes: 0 //expire script never
     },
     [FONT_CACHE_NAME]: {
         maxAgeMinutes: 0 //expire fonts never

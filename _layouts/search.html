@@ -72,7 +72,10 @@ permalink: '{{site.search}}'
                     excerpt.innerHTML = friend
                         .content
                         .split(' ')
-                        .slice(0, 25)
+                        .slice(0, (
+                            {{site.excerptWordCount}}
+                            ? {{site.excerptWordCount}}
+                            : 25))
                         .join(' ') + ' …';
                 }
             }
@@ -190,9 +193,9 @@ permalink: '{{site.search}}'
             .then(response => {
                 return response.json();
             })
-            .then(contentIndex => {
+            .then(excerptIndex => {
                 friendlyMap = new Map();
-                for (let item of contentIndex) {
+                for (let item of excerptIndex) {
                     friendlyMap.set(item.id, item);
                 }
 
