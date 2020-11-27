@@ -21,7 +21,42 @@
     --kbd-background: var(--neutral-5);
 }
 
-:focus {}
+body {
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+}
+
+body>header,
+main,
+body>footer {
+    max-width: var(--mid-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p,
+ul,
+ol,
+dl,
+h3,
+h4,
+h5,
+h6,
+td,
+figcaption {
+    max-width: var(--regular-width);
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding-left: var(--space);
+        padding-right: var(--space);
+    }
+    ul,
+    ol {
+        padding-left: var(--horizontal-rhythm);
+    }
+}
 
 a {
     transition: color .1s ease-out;
@@ -59,7 +94,7 @@ nav ul li:last-child {
 }
 
 nav.table-of-contents {
-    margin-bottom: var(--space-2);
+    margin: var(--vertical-rhythm) 0;
 }
 
 nav.table-of-contents>* {
@@ -68,14 +103,6 @@ nav.table-of-contents>* {
 
 .fit-media {
     background: var(--neutral-5);
-}
-
-main>*:last-child {
-    margin-bottom: 0;
-}
-
-main>*:first-child {
-    margin-top: 0;
 }
 
 .anchor {

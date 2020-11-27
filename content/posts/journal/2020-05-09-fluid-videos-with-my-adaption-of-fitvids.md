@@ -18,7 +18,7 @@ iframe {
 
 Place the script on your website by putting it into a file, e.g. `fit-vids.js`, and reference it via `<script src="/.../fit-vids.js"></script>`. Here it is:
 
-<figure class="breakout-r">
+<figure>
 <figcaption>My adoption of FitVids</figcaption>
 {% highlight js %}
 /*

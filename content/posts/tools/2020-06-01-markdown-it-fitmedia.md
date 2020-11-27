@@ -13,7 +13,7 @@ Responsive images can create cumulative layout shifts (CLS) when loaded, because
 
 The markdown-it-fitmedia plugin makes use of `aspect-ratio` by analyzing each of your referenced images, determining its dimensions, and setting the `aspect-ratio` based on the dimensions of the image. By default, the plugin will also add the `loading="lazy"` html attribute to your images. Example:
 
-<figure class="breakout-r">
+<figure>
 <figcaption>Markdown</figcaption>
 {% highlight md %}
 ![Image of Spitfire tool](/img/spitfire/spitfire.jpg)
@@ -22,7 +22,7 @@ The markdown-it-fitmedia plugin makes use of `aspect-ratio` by analyzing each of
 
 will become
 
-<figure class="breakout-r">
+<figure>
 <figcaption>html</figcaption>
 {% highlight html %}
 <img alt="Image of Spitfire tool" src="/img/spitfire/spitfire.jpg" loading="lazy" style="aspect-ratio:750/388;">
@@ -31,7 +31,7 @@ will become
 
 Also, html inside of your markdown, like for example
 
-<figure class="breakout-r">
+<figure>
 <figcaption>html</figcaption>
 {% highlight html %}
 <figure>
@@ -43,7 +43,7 @@ Also, html inside of your markdown, like for example
 
 will be transformed into
 
-<figure class="breakout-r">
+<figure>
 <figcaption>html</figcaption>
 {% highlight html %}
 <figure>
@@ -57,7 +57,7 @@ will be transformed into
 
 markdown-it-fitmedia carries an adoption of the original [fit-vids](http://fitvidsjs.com) script to make `iframe` and `video` tags responsive. Embedded videos are not automatically responsive or fluid. They come with a fixed setting for width and height. To make them responsive while keeping aspect ratio, they are embedded into a wrapper element. The wrapper receives some clever padding and positioning, and as a last step the fixed dimensions are removed from the video. The technique has been described by Thierry Koblentz in his A List Apart article “[Creating Intrinsic Ratios for Video](https://alistapart.com/article/creating-intrinsic-ratios-for-video/)” in 2009. For example, this
 
-<figure class="breakout-r">
+<figure>
 <figcaption>html</figcaption>
 {% highlight html %}
 <iframe src="https://player.vimeo.com/video/304626830" width="600" height="338"></iframe>
@@ -66,7 +66,7 @@ markdown-it-fitmedia carries an adoption of the original [fit-vids](http://fitvi
 
 will become
 
-<figure class="breakout-r">
+<figure>
 <figcaption>html</figcaption>
 {% highlight html %}
 <div class="fit-media" style="position:relative; height:0; padding-bottom:56.333333333333336%;aspect-ratio:600/338;">
@@ -77,7 +77,7 @@ will become
 
 ## Usage
 
-<figure class="breakout-r">
+<figure>
 <figcaption>Javascript</figcaption>
 {% highlight js %}
 var markdownIt = require("markdown-it");

@@ -9,7 +9,7 @@ subtitle: A short entry-level approach to Git
 
 Git will help you doing the following things with a computer:
 
-<figure class="breakout">
+<figure>
 <div class="x-12 gp mrt">
 
 <div class="xx-12 rg:xx-6">

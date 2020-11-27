@@ -16,7 +16,7 @@ A *Back to Top* link helps users navigate to the top (start) of long pages.
 
 ## HTML to create the Back to Top link
 
-<figure class="breakout-r mry">
+<figure class="mry">
 {% highlight html %}
 <html id="start">
   <body>
@@ -29,7 +29,7 @@ A *Back to Top* link helps users navigate to the top (start) of long pages.
 
 ## JavaScript to hide the link on shorter pages
 
-<figure class="breakout-r mry">
+<figure class="mry">
 {% highlight javascript %}
 function maintainBackToStartVisibility() {
     let backToStart = document.getElementById('back-to-start');

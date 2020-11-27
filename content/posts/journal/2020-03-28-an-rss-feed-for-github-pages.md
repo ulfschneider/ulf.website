@@ -127,7 +127,7 @@ Here are all the front matter settings you have:
 
 In the above <code>feed.md</code> file, a layout named <code>rssfeed</code> is referenced. The layout file needs to be available under the name <code>rssfeed.html</code> in the <code>\_layouts</code> folder. The content of <code>rssfeed.html</code> is the tiny programm that creates the feed. It is this:
 
-<figure class="breakout-wide">
+<figure>
 <figcaption>_layouts/rssfeed.html</figcaption>
 {% highlight markup %}
 <?xml version="1.0" encoding="UTF-8" ?>

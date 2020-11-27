@@ -5,7 +5,7 @@ nodate: true
 notags: true
 id: about
 ---
-<figure>
+<figure class="mxw-rg">
 <img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-900.jpg" alt="Portrait of Ulf Schneider">
 </figure>
 
