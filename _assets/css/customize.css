@@ -47,7 +47,7 @@ figcaption {
     max-width: var(--regular-width);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     body {
         padding-left: var(--space);
         padding-right: var(--space);
@@ -57,6 +57,7 @@ figcaption {
         padding-left: var(--horizontal-rhythm);
     }
 }
+
 
 a {
     transition: color .1s ease-out;
