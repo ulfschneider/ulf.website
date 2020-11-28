@@ -15,7 +15,7 @@ Any accessible website must
 
 To validate for compliance in these areas, I´m using the following tools:
 
-<table class="breakout-r">
+<table>
 <caption>Tools to evaluate websites</caption>
 
 <colgroup>

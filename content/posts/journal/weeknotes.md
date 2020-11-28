@@ -1,7 +1,7 @@
 ---
 draft: true
 ---
-- https://css-tricks.com/using-trello-as-a-super-simple-cms/
+- mermaid support on the client http://cornishweb.com/index.php/2019/05/25/using-mermaid-js-with-eleventy-io/
 - http://typedia.com/learn/only/anatomy-of-a-typeface/
 - https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/type-classifications
 - https://teenyicons.com

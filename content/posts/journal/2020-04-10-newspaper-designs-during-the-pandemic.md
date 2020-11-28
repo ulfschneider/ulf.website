@@ -5,7 +5,7 @@ layout: image
 
 Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](https://twitter.com/michaelbierut) pointed me towards the handwritten front page designs of the New York Times.
 
-<div class="breakout-r gp x-12">
+<div class="gp x-12">
 
 <figure class="rg:xx-6">
 <img src="/img/2020-04-08-new-york-times-handwritten.jpg" alt=""/>
@@ -19,7 +19,7 @@ Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](h
 
 </div>
 
-<div class="breakout-r gp x-12">
+<div class="gp x-12">
 
 <figure class="rg:xx-6">
 <img src="/img/2020-03-26-new-york-times.jpg" alt=""/>
@@ -33,17 +33,17 @@ Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](h
 
 </div>
 
-<figure class="breakout-r">
+<figure>
 <img src="/img/EVKYGEBU0AIQsDg.jpeg" alt="Newspaper text in columns with big white space circles around some people"/>
 <figcaption>The New York Times, <a href="https://twitter.com/ThisIsJodiT/status/1248227283871072256">tweeted</a> by Jodi Terwilliger on April 9th, 2020</figcaption>
 </figure>
 
-<figure class="breakout-r">
+<figure>
 <img src="/img/EVKyriTUUAA9QEr.jpeg" alt="An entire newspaper page with only some words spread around, forming the sentence: It´s practically this easy to stop the virus from spreading."/>
 <figcaption>The Hindu, <a href="https://twitter.com/purvamichaels/status/1248256576231743489">tweeted</a> by Purva Michaels on April 9th, 2020</figcaption>
 </figure>
 
-<figure class="breakout-r">
+<figure>
 <img src="/img/EVPj1dVUEAE2oCc.jpeg" alt="The New York Times Magazine with a double page with isolated portraits."/>
 <figcaption>The New York Times Magazine, <a href="https://twitter.com/sarahmsears/status/1248592035793309698">tweeted</a> by Sarah Mason Sears on April 10th, 2020</figcaption>
 </figure>
