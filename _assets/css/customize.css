@@ -50,7 +50,7 @@ figcaption {
 @media screen and (min-width: 700px) {
 
     figure.split {
-        display: flex;
+        display: flex;        
     }
 
     figure.split>* {
