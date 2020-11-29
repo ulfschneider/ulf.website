@@ -161,11 +161,13 @@ permalink: '{{site.search}}'
     }
 
     function search(query) {
-        let resultSet = [];
-        if (query && query.trim().length) {
-            resultSet = searchIndex.search(query);
+        if (searchIndex) {
+            let resultSet = [];
+            if (query && query.trim().length) {
+                resultSet = searchIndex.search(query);
+            }
+            printSearchResults(resultSet, query);
         }
-        printSearchResults(resultSet, query);
     }
 
     addEventListener('load', function (event) {
