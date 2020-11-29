@@ -38,6 +38,7 @@ p,
 ul,
 ol,
 dl,
+h2,
 h3,
 h4,
 h5,
@@ -48,42 +49,33 @@ figcaption {
 }
 
 @media screen and (min-width: 700px) {
-
     figure.split {
-        display: flex;        
+        display: flex;
     }
-
     figure.split>* {
         flex: 1;
     }
-
     figure.split figcaption {
         margin: auto;
     }
-
     figure.split>*+figcaption {
         margin-left: var(--horizontal-rhythm);
     }
-
     figure.split>figcaption+* {
         margin-right: var(--horizontal-rhythm);
     }
-
 }
-
 
 @media screen and (max-width: 800px) {
     body {
         padding-left: var(--space);
         padding-right: var(--space);
     }
-
     ul,
     ol {
         padding-left: var(--horizontal-rhythm);
     }
 }
-
 
 a {
     transition: color .1s ease-out;
