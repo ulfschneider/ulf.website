@@ -8,6 +8,8 @@ permalink: '{{site.search}}'
 
     const SEARCH_RESULTS_ID = 'search-results';
     const SEARCH_QUERY_ID = 'search-query';
+    const SEARCH_SUBMIT_ID = 'search-submit';
+
     var searchIndex,
         friendlyMap;
 
@@ -166,7 +168,20 @@ permalink: '{{site.search}}'
         }
     }
 
+    function maintainInputState() {
+        let input = document.getElementById(SEARCH_QUERY_ID);
+        let submit = document.getElementById(SEARCH_SUBMIT_ID);
+        if (searchIndex && friendlyMap) {
+            input.disabled = false;
+            submit.disabled = false;
+        } else {
+            input.disabled = true;
+            submit.disabled = true;
+        }
+    }
+
     addEventListener('load', function (event) {
+        maintainInputState();
         let query = getParameterByName('query');
         let input = document.getElementById(SEARCH_QUERY_ID);
         if (input) {
@@ -193,6 +208,7 @@ permalink: '{{site.search}}'
                 for (let item of excerptIndex) {
                     friendlyMap.set(item.id, item);
                 }
+                maintainInputState();
 
                 if (query) {
                     search(query);
