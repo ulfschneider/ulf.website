@@ -169,13 +169,10 @@ permalink: '{{site.search}}'
     }
 
     function maintainInputState() {
-        let input = document.getElementById(SEARCH_QUERY_ID);
         let submit = document.getElementById(SEARCH_SUBMIT_ID);
         if (searchIndex && friendlyMap) {
-            input.disabled = false;
             submit.disabled = false;
         } else {
-            input.disabled = true;
             submit.disabled = true;
         }
     }
