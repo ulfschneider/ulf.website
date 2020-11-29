@@ -153,3 +153,39 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 
+## The house – a traumatic experience
+
+<figure>
+<figcaption>Oct 7, 2020: The house will be erected in this week. At first there is only the scaffolding – no house. Then, the first wall …
+</figcaption>
+<img src="/img/house/IMG_1867.jpg" alt="">
+<img src="/img/house/IMG_1868.jpg" alt="">
+</figcaption>
+</figure>
+
+<figure>
+<figcaption>
+… then it begins to rain. The ground floor is ready, but no roof ontop. We try to protect the house with foil, but the water is everywhere.
+</figcaption>
+<img src="/img/house/IMG_1870.jpg" alt="">
+<img src="/img/house/IMG_1871.jpg" alt="">
+<img src="/img/house/IMG_1874.jpg" alt="">
+<img src="/img/house/IMG_1881.jpg" alt="">
+<img src="/img/house/IMG_1881.jpg" alt="">
+<img src="/img/house/IMG_1886.jpg" alt="">
+<img src="/img/house/IMG_1911.jpg" alt="">
+<img src="/img/house/IMG_1912.jpg" alt="">
+</figure>
+
+<figure>
+<figcaption>The work cannot proceed on Oct 8 due to the rain. Only Oct 9, 2020, a Friday, the work can be finished.</figcaption>
+<img src="/img/house/IMG_1890.jpg" alt="">
+<img src="/img/house/IMG_1917.jpg" alt="">
+<img src="/img/house/IMG_1919.jpg" alt="">
+<img src="/img/house/IMG_1922.jpg" alt="">
+<img src="/img/house/IMG_1924.jpg" alt="">
+<img src="/img/house/IMG_1925.jpg" alt="">
+<img src="/img/house/IMG_1936.jpg" alt="">
+<img src="/img/house/IMG_1937.jpg" alt="">
+<img src="/img/house/IMG_1938.jpg" alt="">
+</figure>
