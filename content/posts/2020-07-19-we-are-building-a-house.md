@@ -192,19 +192,7 @@ I´m posting a timeline of images here to document the progress.
 ## Indoor installations
 
 <figure>
-<figcaption>Oct 12, 2020: Drying machines are brought into position. The indoor installation is started. Electric cabling, heating, water.
-</figcaption>
-<img src="/img/house/IMG_1970.jpg" alt="">
-<img src="/img/house/IMG_1977.jpg" alt="">
-‌<img src="/img/house/IMG_1979.jpg" alt="">
-<img src="/img/house/IMG_1982.jpg" alt="">
-<img src="/img/house/IMG_2002_1.jpg" alt="">
-<img src="/img/house/IMG_2010.jpg" alt="">
-<img src="/img/house/IMG_2011.jpg" alt="">
-</figure>
+<figcaption>
 
-<figure>
-<figcaption>Nov 9, 2020: Screed on the floors.</figcaption>
-<img src="/img/house/IMG_2020.jpg" alt="">
-<img src="/img/house/IMG_2021.jpg" alt="">
+</figcaption>
 </figure>
