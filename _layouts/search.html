@@ -44,12 +44,16 @@ permalink: '{{site.search}}'
             let friend = friendlyMap.get(entry.ref);
 
             let article = document.createElement('article');
+            article.classList = 'md:flex-row md:align-baseline';            
             parent.appendChild(article);
+
+            let section = document.createElement('section');
+            article.appendChild(section);
 
             if (friend.title && friend.title != 'notitle') {
                 let title = document.createElement('h2');
                 title.classList = 'mry-0 inline fs meta-font'
-                article.appendChild(title);
+                section.appendChild(title);
                 let linkToArticle = document.createElement('a');
                 linkToArticle.href = entry.ref;
                 linkToArticle.innerHTML = friend.title;
@@ -59,7 +63,7 @@ permalink: '{{site.search}}'
 
             if (friend.refer || friend.abstract || friend.subtitle || friend.excerpt || friend.content) {
                 let excerpt = document.createElement('p');
-                article.appendChild(excerpt);
+                section.appendChild(excerpt);
                 let text = friend.refer || friend.abstract || friend.subtitle || friend.excerpt;
                 if (text) {
                     excerpt.innerHTML = text;
@@ -77,7 +81,7 @@ permalink: '{{site.search}}'
 
             if (friend.author || friend.date) {
                 let aside = document.createElement('aside');
-                aside.classList = "meta small inline";
+                aside.classList = "meta small inline md:pdr md:order-d1 md:w-4 md:flex-grow-0 md:flex-shrink-0";
                 article.innerHTML += ' ';
                 article.appendChild(aside);
 

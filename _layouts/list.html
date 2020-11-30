@@ -40,16 +40,15 @@ nostepnav: true
 
         {%- assign href = p.url -%}
 
-        {%- if indexYear != pageYear -%}
-            {%- if indexYear != nil -%}
-            <time datetime="{{pageYear}}" class="meta mrt-2 block">{{pageYear}}</time>
-            {%- endif -%}
+        {%- if indexYear != pageYear -%}            
+            <time datetime="{{pageYear}}" class="meta mrt-2 block">{{pageYear}}</time>            
             {%- assign indexYear = pageYear -%}
         {%- endif -%}
 
         {%- assign count = count | plus: 1 -%}
 
-        <article>
+        <article class="md:flex-row md:align-baseline">
+        <section>
             {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
                 <h2 class="mry-0 inline fs meta-font">
                     <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
@@ -65,14 +64,14 @@ nostepnav: true
                 {%- elsif p.templateContent -%}
                 <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
             {%- endif -%}
-
-            <aside class="small meta inline">
-                {% include author-and-date.html, author: p.data.author, date: p.date %}
-            </aside>
-
+        </section>
+    
             {%- if p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil-%}
                 <a class="small meta block" href="{{p.url}}">Read the entire article →</a>
             {%- endif -%}
+                <aside class="small meta inline md:pdr md:order-d1 md:w-4 md:flex-grow-0 md:flex-shrink-0">
+                {% include author-and-date.html, author: p.data.author, date: p.date %}
+            </aside>
 
         </article>
 
