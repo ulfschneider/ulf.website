@@ -23,7 +23,7 @@ nostepnav: true
         content: unset;
     }
 </style>
-<div>
+
     {%- if tag != nil -%}
         {% assign liveContent = collections[tag] | live | reverse %}
         {%- elsif sitetags != nil -%}
@@ -39,7 +39,7 @@ nostepnav: true
         {%- assign pageYear = p.date | date: '%Y' -%}
 
         {%- assign href = p.url -%}
-
+    
         {%- if indexYear != pageYear -%}            
             <time datetime="{{pageYear}}" class="strong meta mrt-1 block">{{pageYear}}</time>            
             {%- assign indexYear = pageYear -%}
@@ -76,4 +76,3 @@ nostepnav: true
         </article>
 
     {%- endfor -%}
-</div>
