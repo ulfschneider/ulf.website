@@ -44,7 +44,7 @@ permalink: '{{site.search}}'
             let friend = friendlyMap.get(entry.ref);
 
             let article = document.createElement('article');
-            article.classList = 'md:flex-row md:align-baseline';            
+            article.classList = 'md:flex-row md:align-baseline';
             parent.appendChild(article);
 
             let section = document.createElement('section');
@@ -79,7 +79,15 @@ permalink: '{{site.search}}'
                 }
             }
 
-            if (friend.author || friend.date) {
+            if (!friend.title || friend.title == 'notitle') {
+                let linkToArticle = document.createElement('a');
+                linkToArticle.href = entry.ref;
+                linkToArticle.classList = 'block small meta';
+                linkToArticle.innerHTML = 'Read the entire article →';
+                article.appendChild(linkToArticle);
+            }
+
+            if (friend.author || friend.date || (friend.tags && !friend.notags && !friend.nostepnav)) {
                 let aside = document.createElement('aside');
                 aside.classList = "meta small inline md:pdr md:order-d1 md:w-4 md:flex-grow-0 md:flex-shrink-0";
                 article.innerHTML += ' ';
@@ -99,15 +107,29 @@ permalink: '{{site.search}}'
                     date.innerHTML += friend.humanDate;
                     aside.appendChild(date);
                 }
+
+                if (friend.tags && !friend.notags && !friend.nostepnav) {
+                    let label = document.createElement('span');
+                    label.innerHTML = ' in ';
+                    aside.appendChild(label);
+
+                    let nav = document.createElement('nav');
+                    nav.classList = 'meta inline';
+                    aside.appendChild(nav);
+
+                    let ul = document.createElement('ul');
+                    ul.classList = 'reset mry-0 inline';
+                    nav.appendChild(ul);
+
+                    for (let tag of friend.tags) {
+                        let li = document.createElement('li');
+                        li.classList = 'inline mrr-d1';
+                        ul.appendChild(li);
+                        li.innerHTML = `<a href="/blog/${tag}/"}>${tag}</a>`;
+                    }
+                }
             }
 
-            if (!friend.title || friend.title == 'notitle') {
-                let linkToArticle = document.createElement('a');
-                linkToArticle.href = entry.ref;
-                linkToArticle.classList = 'block small meta';
-                linkToArticle.innerHTML = 'Read the entire article →';
-                article.appendChild(linkToArticle);
-            }
         }
     }
 

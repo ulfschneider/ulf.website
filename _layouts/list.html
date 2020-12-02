@@ -50,7 +50,7 @@ nostepnav: true
         <article class="md:flex-row md:align-baseline">
         <section>
             {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
-                <h2 class="mry-0 inline fs meta-font">
+                <h2 class="mry-0 fs meta-font inline">
                     <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
                 </h2>
             {%- endif -%}
@@ -71,6 +71,7 @@ nostepnav: true
             {%- endif -%}
                 <aside class="small meta inline md:pdr md:order-d1 md:w-4 md:flex-grow-0 md:flex-shrink-0">
                 {% include author-and-date.html, author: p.data.author, date: p.date %}
+                {% include tags.html tags:p.data.tags notags:p.data.notags nostepnav:p.data.nostepnav %}
             </aside>
 
         </article>

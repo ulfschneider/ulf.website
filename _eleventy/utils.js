@@ -122,6 +122,8 @@ module.exports = {
             refer: item.data.refer,
             layout: item.data.layout,
             tags: item.data.tags,
+            notags: item.data.notags,
+            nostepnav: item.data.nostepnav,
             content: this.removeHtml(item.templateContent)
         }
     },
