@@ -6,9 +6,9 @@ const javascript = require('./_gulp/javascript.js');
 const { series, watch } = require('gulp');
 
 const watcher = () => {
-    watch(['_assets/css/**/*', 'content/**/*', '_includes/**/*', '_layouts/**/*'], { ignoreInitial: true }, css);
-    watch(['_assets/js/**/*'], { ignoreInitial: true }, javascript);
-    watch(['_data/site.js', 'content/img/**/*'], { ignoreInitial: true }, images);
+    watch(['_assets/css/**/*', 'content/**/*', '_includes/**/*', '_layouts/**/*'], css);
+    watch(['_assets/js/**/*'], javascript);
+    watch(['_data/site.js', 'content/img/**/*'], images);
 };
 
 exports.default = series([javascript, css, compose, images]);
