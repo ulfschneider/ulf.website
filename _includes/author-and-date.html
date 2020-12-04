@@ -1,12 +1,14 @@
-{%- if author -%}
-    {%- if date or nodate == nil and page.date  -%}
-        <span>By {{author}} on </span>
-    {%-else -%}
-        <span>By {{author}}</span>
+{%- if author or date or page.date -%}
+    {%- if author -%}
+        {%- if date or nodate == nil and page.date  -%}
+            <span>By {{author}} on </span>
+        {%-else -%}
+            <span>By {{author}}</span>
+        {%- endif -%}
     {%- endif -%}
-{%- endif -%}
-{%- if date -%}
-    <time datetime="{{date | isoDate}}" class="no-wrap">{{ date | humanDate }}</time>
-    {%- elsif nodate == nil and page.date  -%}
-    <time datetime="{{page.date | isoDate}}" class="no-wrap">{{ page.date | humanDate }}</time>
+    {%- if date -%}
+        <time datetime="{{date | isoDate}}" class="no-wrap">{{ date | humanDate }}</time>
+        {%- elsif nodate == nil and page.date  -%}
+        <time datetime="{{page.date | isoDate}}" class="no-wrap">{{ page.date | humanDate }}</time>
+    {%- endif -%}
 {%- endif -%}

@@ -37,47 +37,47 @@ The split is built around the `<figure>` tag, and the CSS for the split will onl
 <figcaption>CSS</figcaption>
 {% highlight css %}
 img {
-	max-width: 100%; /*Make images responsive.*/
+  max-width: 100%; /*Make images responsive.*/
 }
 
 figcaption { 
-	/*This figcaption style is used*/
-	/*when the figcaption is preceeding other content.*/
-	margin-top: 0;
-	margin-bottom: 0.81rem;
+  /*This figcaption style is used*/
+  /*when the figcaption is preceeding other content.*/
+  margin-top: 0;
+  margin-bottom: 0.81rem;
 }
 
 figure>*+figcaption { 
-	/*This figcaption style is used*/
-	/*when the figcaption is following other content.*/
-	margin-top: 0.81rem;
-	margin-bottom: 0;
+  /*This figcaption style is used*/
+  /*when the figcaption is following other content.*/
+  margin-top: 0.81rem;
+  margin-bottom: 0;
 }
 	
 .w-100 {
   /*Utility class to assign 100% width to any item.*/
   /*It is not required by the split.*/
-	width: 100%;
+  width: 100%;
 }
 	
 
 @media screen and (min-width: 700px) {
-	figure.split {
-		/*We use flex-box to split the contents and align.*/
-		/*Depending on the order of the figcaption (preceeding, following)*/ 
-		/*it will be positioned to the left (preceeding) or to the right (following).*/
-		display: flex; 
-	}
+  figure.split {
+    /*We use flex-box to split the contents and align.*/
+    /*Depending on the order of the figcaption (preceeding, following)*/ 
+    /*it will be positioned to the left (preceeding) or to the right (following).*/
+    display: flex; 
+  }
 	
-	figure.split>* {
-		flex: 1 1 50%; /*Grow and shrink equally, use 50% of width.*/
-		/*Refer to https://css-tricks.com/almanac/properties/f/flex-shrink/*/
-	}
+  figure.split>* {
+    flex: 1 1 50%; /*Grow and shrink equally, use 50% of width.*/
+    /*Refer to https://css-tricks.com/almanac/properties/f/flex-shrink/*/
+  }
 
-	figure.split figcaption {
-		margin: auto 0; /*center the figcaption vertically, thanks to flex-box*/
-		padding: 0 1.62rem; /*have padding to the left and to the right*/
-	}
+  figure.split figcaption {
+    margin: auto 0; /*center the figcaption vertically, thanks to flex-box*/
+    padding: 0 1.62rem; /*have padding to the left and to the right*/
+  }
 }
 {% endhighlight %}
 </figure>
@@ -86,25 +86,24 @@ figure>*+figcaption {
 <figcaption>HTML</figcaption>
 {% highlight html %}
 <figure class="split">
-	<div> <!--The image MUST be wrapped in a div for the split to work properly-->
-		<img src="/img/IMG_1329.jpg" alt="">
-	</div>
-	<figcaption>A beautiful day with Emil at the Paderborn Fishponds.</figcaption>
+  <div> <!--The image MUST be wrapped in a div for the split to work properly-->
+    <img src="/img/IMG_1329.jpg" alt="">
+  </div>
+  <figcaption>A beautiful day with Emil at the Paderborn Fishponds.</figcaption>
 </figure>
 
 <figure class="split">
-	<figcaption>The Fishponds are a home for many waterbirds.</figcaption>
-	<div> <!--The image MUST be wrapped in a div for the split to work properly-->
-		<img src="/img/IMG_1331.jpg" alt="">
-	</div>
+  <figcaption>The Fishponds are a home for many waterbirds.</figcaption>
+  <div> <!--The image MUST be wrapped in a div for the split to work properly-->
+    <img src="/img/IMG_1331.jpg" alt="">
+  </div>
 </figure>
 
 <figure>
-	<!--Plain old figure. Wrapping the image into a div is not neccessary!-->
-	<!--I´m only giving the image a 100% width to ensure it takes all the space-->
-	<img class="w-100" src="/img/IMG_1286.jpg" alt="">
-	<figcaption>Sunset at the the Fishponds.</figcaption>
+  <!--Plain old figure. Wrapping the image into a div is not neccessary!-->
+  <!--I´m only giving the image a 100% width to ensure it takes all the space-->
+  <img class="w-100" src="/img/IMG_1286.jpg" alt="">
+  <figcaption>Sunset at the the Fishponds.</figcaption>
 </figure>
-
 {% endhighlight %}
 </figure>
