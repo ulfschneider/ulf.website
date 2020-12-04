@@ -10,9 +10,9 @@ module.exports = {
                 '!content/**/*compose.html',
                 '_includes/**/*',
                 '_layouts/**/*',
-                '_assets/js/**/*',
-                '_assets/css/customize.css'
+                '_assets/js/**/*'
             ],
+            whitelistPatternsChildren: [/^token/, /^pre/, /^code/],
             defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] //check https://flaviocopes.com/tailwind-setup/
         }),
         require('cssnano')

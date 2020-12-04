@@ -53,16 +53,11 @@ figcaption {
         display: flex;
     }
     figure.split>* {
-        flex: 1;
+        flex: 1 1 50%;
     }
     figure.split figcaption {
-        margin: auto;
-    }
-    figure.split>*+figcaption {
-        margin-left: var(--horizontal-rhythm);
-    }
-    figure.split>figcaption+* {
-        margin-right: var(--horizontal-rhythm);
+        margin: auto 0;
+        padding: 0 var(--horizontal-rhythm);
     }
 }
 

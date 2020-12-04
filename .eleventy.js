@@ -27,7 +27,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
 
     eleventyConfig.addPlugin(rss);
-    eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(syntaxHighlight, { alwaysWrapLineHighlights: true });
 
     return {
         dir: {
