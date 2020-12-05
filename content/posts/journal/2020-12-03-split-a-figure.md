@@ -1,5 +1,5 @@
 ---
-title: Split a Figure
+title: Split a figure
 abstract: A responsive technique of splitting a figure equally into an image (one half of the available space), and the corresponding caption (other half of the available space).
 ---
 [[toc]]
