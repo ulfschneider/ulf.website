@@ -30,7 +30,7 @@ I want to explore this field, develop my skills and make better, *accessible* we
 
 ## Why accessibility matters to me
 
-- **It´s possible:** As a web developer I work with a medium that allows to provide content to people who cannot access the same content in other ways, like for example by reading a book. Through the technology it´s possible to include more people and give them access to content. I think that´s a very good thing and consequentially, as a web developer it´s my responsibility to work towards inclusion and make use of what is state of the art. I am concerned that [web accessibility got worse during the last twelve months](/journal/website-accessibility-got-worse/).
+- **It´s possible:** As a web developer I work with a medium that allows to provide content to people who cannot access the same content in other ways, like for example by reading a book. Through the technology it´s possible to include more people and give them access to content. I think that´s a very good thing and consequentially, as a web developer it´s my responsibility to work towards inclusion and make use of what is state of the art. I am concerned that [web accessibility got worse during the last twelve months](/2020-04-09-website-accessibility-got-worse/).
 
 <blockquote>Without the internet, I´d be stuck. I can´t use books. I´d be sitting in the corner with a dunce´s hat.<footer>Sam, in <cite>Accessibility for Everyone</cite> by Laura Kalbag</footer></blockquote>
 

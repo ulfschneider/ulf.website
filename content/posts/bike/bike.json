@@ -1,4 +1,3 @@
 {
-    "permalink": "/bike/{{ page.fileSlug }}/",
     "tags": "bike"
 }

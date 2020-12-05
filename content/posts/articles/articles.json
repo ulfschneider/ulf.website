@@ -1,4 +1,3 @@
 {
-    "permalink": "/articles/{{ page.fileSlug }}/",
     "tags": "agile"
 }

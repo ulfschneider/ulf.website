@@ -1,4 +1,3 @@
-{
-    "permalink": "/journal/{{ page.fileSlug }}/",
+{    
     "tags": "journal"
 }

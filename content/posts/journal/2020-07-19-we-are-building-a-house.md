@@ -1,5 +1,6 @@
 ---
 title: We are building a house
+permalink: /journal/{{ page.fileSlug }}/
 ---
 Our weed-covered land is starting to transform. This house project might take a time of nearly ten years in the end. We bought the property in 2019 from the city of Paderborn. Being elegible for buying required us to be on a waiting list for six to seven years. During 2019 we selected the builders, which are  [Knecht Fertigkeller](https://www.fertigkeller.de/de/) for the cellar and [Haas Fertigbau](https://haas-fertighaus.de) for the house. Also in 2019 we started to work on the architecture of the house. Now, in July 2020, change is coming!
 

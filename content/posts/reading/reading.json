@@ -1,4 +1,3 @@
 {
-    "permalink": "/reading/{{ page.fileSlug }}/",
     "tags": "reading"
 }
