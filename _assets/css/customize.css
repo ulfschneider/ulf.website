@@ -44,7 +44,8 @@ h4,
 h5,
 h6,
 td,
-figcaption {
+figcaption,
+blockquote {
     max-width: var(--regular-width);
 }
 

@@ -455,6 +455,7 @@ pre {
 blockquote {
     margin-top: var(--mrt-blockquote);
     margin-bottom: var(--mrb-blockquote);
+    margin-left: 0;
     margin-right: 0;
     font-style: var(--blockquote-font-style);
     background: var(--blockquote-background);
@@ -463,13 +464,9 @@ blockquote {
     border-bottom: var(--blockquote-border)
 }
 
-blockquote,
-blockquote::before {
-    margin-left: calc(var(--horizontal-rhythm)*-1)
-}
-
 blockquote::before {
     content: "“";
+    margin-left: calc(var(--horizontal-rhythm)*-1);
     position: absolute;
     line-height: 1;
     font-size: var(--fs-4)
@@ -496,12 +493,6 @@ a:not(table a) {
 
 [class^="breakout"] blockquote {
     margin-left: 0
-}
-
-@media (max-width:900px) {
-    blockquote {
-        margin-left: 0
-    }
 }
 
 blockquote p {
