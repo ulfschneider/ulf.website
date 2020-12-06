@@ -57,11 +57,11 @@ nostepnav: true
             {%- endif -%}
 
             {%- if p.data.refer -%}
-                <p>{{p.data.refer}}</p>
+                <aside>{{p.data.refer}}</aside>
                 {%- elsif p.data.abstract -%}
                 <p>{{p.data.abstract}}</p>
                 {%- elsif p.data.subtitle -%}
-                <p>{{p.data.subtitle}}</p>
+                <aside>{{p.data.subtitle}}</aside>
                 {%- elsif p.templateContent -%}
                 <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
             {%- endif -%}

@@ -61,8 +61,10 @@ permalink: '{{site.search}}'
                 title.appendChild(linkToArticle);
             }
 
-            if (friend.refer || friend.abstract || friend.subtitle || friend.excerpt || friend.content) {
-                let excerpt = document.createElement('p');
+            if (friend.refer || friend.subtitle || friend.abstract || friend.excerpt || friend.content) {
+                let excerpt = friend.refer || friend.subtitle
+                    ? document.createElement('aside')
+                    : document.createElement('p');
                 section.appendChild(excerpt);
                 let text = friend.refer || friend.abstract || friend.subtitle || friend.excerpt;
                 if (text) {
