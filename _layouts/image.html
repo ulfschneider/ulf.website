@@ -25,9 +25,7 @@
 					{% include title.html %}
 				</header>
 				{%- if nostepnav == nil -%}
-					<div class="lh-2">
-						{% include step-nav.html shortnav: true %}
-					</div>
+					{% include step-nav.html shortnav: true %}
 				{%- endif -%}
 			</div>
 
@@ -35,8 +33,8 @@
 
 		</main>
 
-		{% include footer.html stepnav: false %}		
-		
+		{% include footer.html stepnav: false %}
+
 	</body>
 
 </html>
