@@ -172,7 +172,8 @@ figure>*+figcaption {
     row-gap: 1.62rem;
   }
   figure.split>* {
-      margin: 0; /*we have column-gap and row-gap for the margins*/
+		  /*we have column-gap and row-gap for the margins*/
+      margin: 0; 
   }
   figure.split>figcaption {
     /*center the figcaption vertically, thanks to grid*/
