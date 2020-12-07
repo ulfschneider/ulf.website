@@ -51,14 +51,19 @@ blockquote {
 
 @media screen and (min-width: 700px) {
     figure.split {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--horizontal-rhythm);
+        row-gap: var(--vertical-rhythm);
     }
     figure.split>* {
-        flex: 1 1 50%;
+        margin: 0;
     }
-    figure.split figcaption {
-        margin: auto 0;
-        padding: 0 var(--horizontal-rhythm);
+    figure.split>figcaption {
+        margin-top: auto;
+        margin-bottom: auto;
+        position: sticky;
+        top: 0;
     }
 }
 
@@ -131,4 +136,19 @@ h4:hover>.anchor,
 h5:hover>.anchor,
 h6:hover>.anchor {
     display: inline;
+}
+
+.skip-link {
+    padding: var(--space-d2);
+    top: 0;
+    position: fixed;
+    transform: translateY(-300%);
+    transition: transform 0.3s;
+    background: var(--base-background);
+    color: var(--base-color);
+    font-family: var(--meta-font-family);
+}
+
+.skip-link:focus-within {
+    transform: translateY(0);
 }
