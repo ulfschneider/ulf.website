@@ -12,7 +12,7 @@ Every now and then the folks at Rapha are splitting a figure equally into an ima
 
 To make the HTML of Rapha´s approach more semantic – while keeping it responsive – I´ve come up with a simplified approach that´s relying on the `<figure>` and `<figcaption>` tags in conjunction with CSS `grid`. 
 
-In the below example, the first two figures use the split technique. Each image will only take half of the available space and the caption of the image will take the other half. The next two images are also using the split technique. In this case each images takes half of the available space with a below caption. The fifth figure is not using the split technique –  the image will always occupy the entire available space. 
+In the below example, the first two figures use the split technique. Each image will only take half of the available space and the caption of the image will take the other half. The next two images are also using the split technique. In this case each image takes half of the available space with a below caption. The fifth figure is not using the split technique –  the image will always occupy the entire available space. 
 
 <figure class="split">
 <img src="/img/IMG_1329.jpg" alt="">
