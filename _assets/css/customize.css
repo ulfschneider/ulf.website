@@ -54,7 +54,7 @@ blockquote {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: var(--horizontal-rhythm);
-        row-gap: var(--vertical-rhythm);
+        row-gap: var(--mrb-figure);
     }
     figure.split>* {
         margin: 0;
@@ -139,14 +139,22 @@ h6:hover>.anchor {
 }
 
 .skip-link {
-    padding: var(--space-d2);
-    top: 0;
+    padding: var(--space-2);
     position: fixed;
-    transform: translateY(-300%);
-    transition: transform 0.3s;
-    background: var(--base-background);
-    color: var(--base-color);
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: transform .3s ease-out;
+    background: var(--primary);
+    color: var(--base-background);
     font-family: var(--meta-font-family);
+    text-align: center;
+}
+
+.skip-link a {
+    color: var(--base-background);
+    outline-color: var(--base-background);
 }
 
 .skip-link:focus-within {
