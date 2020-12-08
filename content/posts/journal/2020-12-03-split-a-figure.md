@@ -16,11 +16,11 @@ In the below example, the first two figures use the split technique. Each image 
 
 <figure class="split">
 <img src="/img/IMG_1329.jpg" alt="">
-<figcaption>A beautiful day with Emil at the Paderborn Fishponds.</figcaption>
+<figcaption>A beautiful day with Emil at the Paderborn fishponds.</figcaption>
 </figure>
 
 <figure class="split">
-<figcaption>The Fishponds are a home for many waterbirds.</figcaption>
+<figcaption>The fishponds are a home for many waterbirds.</figcaption>
 <img src="/img/IMG_1331.jpg" alt="">
 </figure>
 
@@ -37,7 +37,7 @@ In the below example, the first two figures use the split technique. Each image 
 
 <figure>
 <img class="w-100" src="/img/IMG_1286.jpg" alt="">
-<figcaption>Sunset at the the Fishponds.</figcaption>
+<figcaption>Sunset at the the fishponds.</figcaption>
 </figure>
 
 ## The code based on flex-box
@@ -106,11 +106,11 @@ figure>*+figcaption {
   <div> <!--The image MUST be wrapped in a div for the split to work properly-->
     <img src="/img/IMG_1329.jpg" alt="">
   </div>
-  <figcaption>A beautiful day with Emil at the Paderborn Fishponds.</figcaption>
+  <figcaption>A beautiful day with Emil at the Paderborn fishponds.</figcaption>
 </figure>
 
 <figure class="split">
-  <figcaption>The Fishponds are a home for many waterbirds.</figcaption>
+  <figcaption>The fishponds are a home for many waterbirds.</figcaption>
   <div> <!--The image MUST be wrapped in a div for the split to work properly-->
     <img src="/img/IMG_1331.jpg" alt="">
   </div>
@@ -120,7 +120,7 @@ figure>*+figcaption {
   <!--Plain old figure. Wrapping the image into a div is not neccessary!-->
   <!--I´m only giving the image a 100% width to ensure it takes all the space-->
   <img class="w-100" src="/img/IMG_1286.jpg" alt="">
-  <figcaption>Sunset at the the Fishponds.</figcaption>
+  <figcaption>Sunset at the the fishponds.</figcaption>
 </figure>
 {% endhighlight %}
 </figure>
@@ -193,11 +193,11 @@ figure>*+figcaption {
 {% highlight html %}
 <figure class="split">
   <img src="/img/IMG_1329.jpg" alt="">
-  <figcaption>A beautiful day with Emil at the Paderborn Fishponds.</figcaption>
+  <figcaption>A beautiful day with Emil at the Paderborn fishponds.</figcaption>
 </figure>
 
 <figure class="split">
-  <figcaption>The Fishponds are a home for many waterbirds.</figcaption>
+  <figcaption>The fishponds are a home for many waterbirds.</figcaption>
   <img src="/img/IMG_1331.jpg" alt="">
 </figure>
 
@@ -215,7 +215,7 @@ figure>*+figcaption {
 <figure>
   <!--I´m giving the image a 100% width to ensure it takes all the space-->
   <img class="w-100" src="/img/IMG_1286.jpg" alt="">
-  <figcaption>Sunset at the the Fishponds.</figcaption>
+  <figcaption>Sunset at the the fishponds.</figcaption>
 </figure>
 {% endhighlight %}
 </figure>
