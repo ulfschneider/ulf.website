@@ -21,6 +21,10 @@
     --kbd-background: var(--neutral-5);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding-left: var(--space-2);
     padding-right: var(--space-2);
