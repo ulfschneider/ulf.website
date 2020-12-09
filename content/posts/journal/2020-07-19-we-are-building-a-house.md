@@ -184,7 +184,6 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1919.jpg" alt="">
 <img src="/img/house/IMG_1922.jpg" alt="">
 <img src="/img/house/IMG_1924.jpg" alt="">
-<img src="/img/house/IMG_1925.jpg" alt="">
 </figure>
 
 <figure>
