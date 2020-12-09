@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v26'; //version is used to remove old caches
+const CACHE_VERSION = 'v27'; //version is used to remove old caches
 
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';

@@ -3072,13 +3072,6 @@ th:last-child {
     border-collapse: collapse
 }
 
-:root {
-    --z-1: 1000;
-    --z-2: 2000;
-    --z-3: 3000;
-    --z-4: 4000
-}
-
 .inline {
     display: inline
 }
@@ -3176,6 +3169,17 @@ th:last-child {
     margin-left: calc(50% - 50vw)
 }
 
+.split {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--horizontal-rhythm);
+    row-gap: var(--mrb-figure)
+}
+
+.split>* {
+    margin: 0
+}
+
 .clearfix::after,
 .clearfix::before {
     content: " ";
@@ -3270,6 +3274,645 @@ th:last-child {
     box-decoration-break: clone;
     -o-box-decoration-break: clone;
     -webkit-box-decoration-break: clone
+}
+
+:root {
+    --z-1: 1000;
+    --z-2: 2000;
+    --z-3: 3000;
+    --z-4: 4000
+}
+
+@media (min-width:400px) {
+    .sm\:inline {
+        display: inline
+    }
+    .sm\:block {
+        display: block
+    }
+    .sm\:inline-block {
+        display: inline-block
+    }
+    .sm\:inline-table {
+        display: inline-table
+    }
+    .sm\:table {
+        display: table
+    }
+    .sm\:table-cell {
+        display: table-cell
+    }
+    .sm\:baseline {
+        vertical-align: baseline
+    }
+    .sm\:top {
+        vertical-align: top
+    }
+    .sm\:middle {
+        vertical-align: middle
+    }
+    .sm\:bottom {
+        vertical-align: bottom
+    }
+    .sm\:left {
+        text-align: left
+    }
+    .sm\:center {
+        text-align: center
+    }
+    .sm\:right {
+        text-align: right
+    }
+    .sm\:justify {
+        text-align: justify
+    }
+    .sm\:overflow-hidden {
+        overflow: hidden
+    }
+    .sm\:overflow-x-hidden {
+        overflow-x: hidden
+    }
+    .sm\:overflow-y-hidden {
+        overflow-y: hidden
+    }
+    .sm\:overflow-auto {
+        overflow: auto
+    }
+    .sm\:overflow-x-auto {
+        overflow-x: auto
+    }
+    .sm\:overflow-y-auto {
+        overflow-y: auto
+    }
+    .sm\:overflow-scroll {
+        overflow: scroll
+    }
+    .sm\:overflow-x-scroll {
+        overflow-x: scroll
+    }
+    .sm\:overflow-y-scroll {
+        overflow-y: scroll
+    }
+    .sm\:full-bleed {
+        width: 100vw;
+        margin-left: calc(50% - 50vw)
+    }
+    .sm\:split {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--horizontal-rhythm);
+        row-gap: var(--mrb-figure)
+    }
+    .sm\:split>* {
+        margin: 0
+    }
+    .sm\:clearfix::after,
+    .sm\:clearfix::before {
+        content: " ";
+        display: table
+    }
+    .sm\:clearfix::after {
+        clear: both
+    }
+    .sm\:clearfix {
+        *zoom: 1
+    }
+    .sm\:float-left {
+        float: left
+    }
+    .sm\:float-right {
+        float: right
+    }
+    .sm\:float-clear {
+        clear: both
+    }
+    .sm\:fit {
+        max-width: 100%
+    }
+    .sm\:border-box {
+        box-sizing: border-box
+    }
+    .sm\:content-box {
+        box-sizing: content-box
+    }
+    .sm\:static {
+        position: static
+    }
+    .sm\:sticky {
+        position: sticky
+    }
+    .sm\:relative {
+        position: relative
+    }
+    .sm\:absolute {
+        position: absolute
+    }
+    .sm\:fixed {
+        position: fixed
+    }
+    .sm\:top-0 {
+        top: 0
+    }
+    .sm\:right-0 {
+        right: 0
+    }
+    .sm\:bottom-0 {
+        bottom: 0
+    }
+    .sm\:left-0 {
+        left: 0
+    }
+    .sm\:z-1 {
+        z-index: var(--z-1)
+    }
+    .sm\:z-2 {
+        z-index: var(--z-2)
+    }
+    .sm\:z-3 {
+        z-index: var(--z-3)
+    }
+    .sm\:z-4 {
+        z-index: var(--z-4)
+    }
+    .sm\:box-break-clone {
+        box-decoration-break: clone;
+        -o-box-decoration-break: clone;
+        -webkit-box-decoration-break: clone
+    }
+}
+
+@media (min-width:600px) {
+    .rg\:inline {
+        display: inline
+    }
+    .rg\:block {
+        display: block
+    }
+    .rg\:inline-block {
+        display: inline-block
+    }
+    .rg\:inline-table {
+        display: inline-table
+    }
+    .rg\:table {
+        display: table
+    }
+    .rg\:table-cell {
+        display: table-cell
+    }
+    .rg\:baseline {
+        vertical-align: baseline
+    }
+    .rg\:top {
+        vertical-align: top
+    }
+    .rg\:middle {
+        vertical-align: middle
+    }
+    .rg\:bottom {
+        vertical-align: bottom
+    }
+    .rg\:left {
+        text-align: left
+    }
+    .rg\:center {
+        text-align: center
+    }
+    .rg\:right {
+        text-align: right
+    }
+    .rg\:justify {
+        text-align: justify
+    }
+    .rg\:overflow-hidden {
+        overflow: hidden
+    }
+    .rg\:overflow-x-hidden {
+        overflow-x: hidden
+    }
+    .rg\:overflow-y-hidden {
+        overflow-y: hidden
+    }
+    .rg\:overflow-auto {
+        overflow: auto
+    }
+    .rg\:overflow-x-auto {
+        overflow-x: auto
+    }
+    .rg\:overflow-y-auto {
+        overflow-y: auto
+    }
+    .rg\:overflow-scroll {
+        overflow: scroll
+    }
+    .rg\:overflow-x-scroll {
+        overflow-x: scroll
+    }
+    .rg\:overflow-y-scroll {
+        overflow-y: scroll
+    }
+    .rg\:full-bleed {
+        width: 100vw;
+        margin-left: calc(50% - 50vw)
+    }
+    .rg\:split {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--horizontal-rhythm);
+        row-gap: var(--mrb-figure)
+    }
+    .rg\:split>* {
+        margin: 0
+    }
+    .rg\:clearfix::after,
+    .rg\:clearfix::before {
+        content: " ";
+        display: table
+    }
+    .rg\:clearfix::after {
+        clear: both
+    }
+    .rg\:clearfix {
+        *zoom: 1
+    }
+    .rg\:float-left {
+        float: left
+    }
+    .rg\:float-right {
+        float: right
+    }
+    .rg\:float-clear {
+        clear: both
+    }
+    .rg\:fit {
+        max-width: 100%
+    }
+    .rg\:border-box {
+        box-sizing: border-box
+    }
+    .rg\:content-box {
+        box-sizing: content-box
+    }
+    .rg\:static {
+        position: static
+    }
+    .rg\:sticky {
+        position: sticky
+    }
+    .rg\:relative {
+        position: relative
+    }
+    .rg\:absolute {
+        position: absolute
+    }
+    .rg\:fixed {
+        position: fixed
+    }
+    .rg\:top-0 {
+        top: 0
+    }
+    .rg\:right-0 {
+        right: 0
+    }
+    .rg\:bottom-0 {
+        bottom: 0
+    }
+    .rg\:left-0 {
+        left: 0
+    }
+    .rg\:z-1 {
+        z-index: var(--z-1)
+    }
+    .rg\:z-2 {
+        z-index: var(--z-2)
+    }
+    .rg\:z-3 {
+        z-index: var(--z-3)
+    }
+    .rg\:z-4 {
+        z-index: var(--z-4)
+    }
+    .rg\:box-break-clone {
+        box-decoration-break: clone;
+        -o-box-decoration-break: clone;
+        -webkit-box-decoration-break: clone
+    }
+}
+
+@media (min-width:900px) {
+    .md\:inline {
+        display: inline
+    }
+    .md\:block {
+        display: block
+    }
+    .md\:inline-block {
+        display: inline-block
+    }
+    .md\:inline-table {
+        display: inline-table
+    }
+    .md\:table {
+        display: table
+    }
+    .md\:table-cell {
+        display: table-cell
+    }
+    .md\:baseline {
+        vertical-align: baseline
+    }
+    .md\:top {
+        vertical-align: top
+    }
+    .md\:middle {
+        vertical-align: middle
+    }
+    .md\:bottom {
+        vertical-align: bottom
+    }
+    .md\:left {
+        text-align: left
+    }
+    .md\:center {
+        text-align: center
+    }
+    .md\:right {
+        text-align: right
+    }
+    .md\:justify {
+        text-align: justify
+    }
+    .md\:overflow-hidden {
+        overflow: hidden
+    }
+    .md\:overflow-x-hidden {
+        overflow-x: hidden
+    }
+    .md\:overflow-y-hidden {
+        overflow-y: hidden
+    }
+    .md\:overflow-auto {
+        overflow: auto
+    }
+    .md\:overflow-x-auto {
+        overflow-x: auto
+    }
+    .md\:overflow-y-auto {
+        overflow-y: auto
+    }
+    .md\:overflow-scroll {
+        overflow: scroll
+    }
+    .md\:overflow-x-scroll {
+        overflow-x: scroll
+    }
+    .md\:overflow-y-scroll {
+        overflow-y: scroll
+    }
+    .md\:full-bleed {
+        width: 100vw;
+        margin-left: calc(50% - 50vw)
+    }
+    .md\:split {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--horizontal-rhythm);
+        row-gap: var(--mrb-figure)
+    }
+    .md\:split>* {
+        margin: 0
+    }
+    .md\:clearfix::after,
+    .md\:clearfix::before {
+        content: " ";
+        display: table
+    }
+    .md\:clearfix::after {
+        clear: both
+    }
+    .md\:clearfix {
+        *zoom: 1
+    }
+    .md\:float-left {
+        float: left
+    }
+    .md\:float-right {
+        float: right
+    }
+    .md\:float-clear {
+        clear: both
+    }
+    .md\:fit {
+        max-width: 100%
+    }
+    .md\:border-box {
+        box-sizing: border-box
+    }
+    .md\:content-box {
+        box-sizing: content-box
+    }
+    .md\:static {
+        position: static
+    }
+    .md\:sticky {
+        position: sticky
+    }
+    .md\:relative {
+        position: relative
+    }
+    .md\:absolute {
+        position: absolute
+    }
+    .md\:fixed {
+        position: fixed
+    }
+    .md\:top-0 {
+        top: 0
+    }
+    .md\:right-0 {
+        right: 0
+    }
+    .md\:bottom-0 {
+        bottom: 0
+    }
+    .md\:left-0 {
+        left: 0
+    }
+    .md\:z-1 {
+        z-index: var(--z-1)
+    }
+    .md\:z-2 {
+        z-index: var(--z-2)
+    }
+    .md\:z-3 {
+        z-index: var(--z-3)
+    }
+    .md\:z-4 {
+        z-index: var(--z-4)
+    }
+    .md\:box-break-clone {
+        box-decoration-break: clone;
+        -o-box-decoration-break: clone;
+        -webkit-box-decoration-break: clone
+    }
+}
+
+@media (min-width:1400px) {
+    .lg\:inline {
+        display: inline
+    }
+    .lg\:block {
+        display: block
+    }
+    .lg\:inline-block {
+        display: inline-block
+    }
+    .lg\:inline-table {
+        display: inline-table
+    }
+    .lg\:table {
+        display: table
+    }
+    .lg\:table-cell {
+        display: table-cell
+    }
+    .lg\:baseline {
+        vertical-align: baseline
+    }
+    .lg\:top {
+        vertical-align: top
+    }
+    .lg\:middle {
+        vertical-align: middle
+    }
+    .lg\:bottom {
+        vertical-align: bottom
+    }
+    .lg\:left {
+        text-align: left
+    }
+    .lg\:center {
+        text-align: center
+    }
+    .lg\:right {
+        text-align: right
+    }
+    .lg\:justify {
+        text-align: justify
+    }
+    .lg\:overflow-hidden {
+        overflow: hidden
+    }
+    .lg\:overflow-x-hidden {
+        overflow-x: hidden
+    }
+    .lg\:overflow-y-hidden {
+        overflow-y: hidden
+    }
+    .lg\:overflow-auto {
+        overflow: auto
+    }
+    .lg\:overflow-x-auto {
+        overflow-x: auto
+    }
+    .lg\:overflow-y-auto {
+        overflow-y: auto
+    }
+    .lg\:overflow-scroll {
+        overflow: scroll
+    }
+    .lg\:overflow-x-scroll {
+        overflow-x: scroll
+    }
+    .lg\:overflow-y-scroll {
+        overflow-y: scroll
+    }
+    .lg\:full-bleed {
+        width: 100vw;
+        margin-left: calc(50% - 50vw)
+    }
+    .lg\:split {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--horizontal-rhythm);
+        row-gap: var(--mrb-figure)
+    }
+    .lg\:split>* {
+        margin: 0
+    }
+    .lg\:clearfix::after,
+    .lg\:clearfix::before {
+        content: " ";
+        display: table
+    }
+    .lg\:clearfix::after {
+        clear: both
+    }
+    .lg\:clearfix {
+        *zoom: 1
+    }
+    .lg\:float-left {
+        float: left
+    }
+    .lg\:float-right {
+        float: right
+    }
+    .lg\:float-clear {
+        clear: both
+    }
+    .lg\:fit {
+        max-width: 100%
+    }
+    .lg\:border-box {
+        box-sizing: border-box
+    }
+    .lg\:content-box {
+        box-sizing: content-box
+    }
+    .lg\:static {
+        position: static
+    }
+    .lg\:sticky {
+        position: sticky
+    }
+    .lg\:relative {
+        position: relative
+    }
+    .lg\:absolute {
+        position: absolute
+    }
+    .lg\:fixed {
+        position: fixed
+    }
+    .lg\:top-0 {
+        top: 0
+    }
+    .lg\:right-0 {
+        right: 0
+    }
+    .lg\:bottom-0 {
+        bottom: 0
+    }
+    .lg\:left-0 {
+        left: 0
+    }
+    .lg\:z-1 {
+        z-index: var(--z-1)
+    }
+    .lg\:z-2 {
+        z-index: var(--z-2)
+    }
+    .lg\:z-3 {
+        z-index: var(--z-3)
+    }
+    .lg\:z-4 {
+        z-index: var(--z-4)
+    }
+    .lg\:box-break-clone {
+        box-decoration-break: clone;
+        -o-box-decoration-break: clone;
+        -webkit-box-decoration-break: clone
+    }
 }
 
 :root {

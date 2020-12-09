@@ -49,22 +49,6 @@ blockquote {
     max-width: var(--regular-width);
 }
 
-@media screen and (min-width: 700px) {
-    figure.split {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: var(--horizontal-rhythm);
-        row-gap: var(--mrb-figure);
-    }
-    figure.split>* {
-        margin: 0;
-    }
-    figure.split>figcaption {
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-}
-
 @media screen and (max-width: 800px) {
     body {
         padding-left: var(--space);

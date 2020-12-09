@@ -14,17 +14,17 @@ To make the HTML of Rapha´s approach more semantic – while keeping it respons
 
 In the below example, the first two figures use the split technique. Each image will only take half of the available space and the caption of the image will take the other half. The next two images are also using the split technique. In this case each image takes half of the available space with a below caption. The fifth figure is not using the split technique –  the image will always occupy the entire available space. 
 
-<figure class="split">
+<figure class="rg:split">
 <img src="/img/IMG_1329.jpg" alt="">
 <figcaption>A beautiful day with Emil at the Paderborn fishponds.</figcaption>
 </figure>
 
-<figure class="split">
+<figure class="rg:split">
 <figcaption>The fishponds are a home for many waterbirds.</figcaption>
 <img src="/img/IMG_1331.jpg" alt="">
 </figure>
 
-<figure class="split">
+<figure class="rg:split">
 <figure>
 <img src="/img/IMG_1298.jpg" alt="">
 <figcaption>Emil´s hand with a Paderstone that has a sheep (or a dog) drawn on it.</figcaption>
@@ -74,7 +74,7 @@ figure>*+figcaption {
 }
 	
 /*Split with flex*/
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   figure.split {
     /*We use flex-box to split the contents and align.*/
     /*Depending on the order of the figcaption (preceeding, following)*/ 
@@ -85,10 +85,10 @@ figure>*+figcaption {
   figure.split>* {
     flex: 1 1 50%; /*Grow and shrink equally, use 50% of width.*/
     /*Refer to https://css-tricks.com/almanac/properties/f/flex-shrink/*/
+    margin: 0;
   }
 
   figure.split>figcaption {
-    margin: auto 0; /*center the figcaption vertically, thanks to flex-box*/
     padding: 0 1.62rem; /*have padding to the left and to the right*/       
   }
 }
@@ -157,7 +157,7 @@ figure>*+figcaption {
 }
 	
 /*Use grid for the split*/
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   figure.split {
     /*We use grid to split the contents into two columns.*/
     /*Depending on the order of the figcaption (preceeding, following)*/ 
@@ -166,16 +166,11 @@ figure>*+figcaption {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.62rem;
     row-gap: 1.62rem;
-  }
+  }   
+  
   figure.split>* {
-		  /*we have column-gap and row-gap for the margins*/
-      margin: 0; 
+    margin:0; /*We have grid-column and grid-row instead of margins*/
   }
-  figure.split>figcaption {
-    /*center the figcaption vertically, thanks to grid*/
-    margin-top: auto;
-    margin-bottom: auto;    
-  }  
 }
 {% endhighlight %}
 </figure>
@@ -211,5 +206,30 @@ figure>*+figcaption {
 </figure>
 {% endhighlight %}
 </figure>
+
+## Don´t limit yourself to figure tags
+
+If you want to apply the split not only for `<figure>` tags, you can even use the following `.split` CSS class, which is more generic:
+
+<figure>
+<figcaption>CSS</figcaption>
+{% highlight css %}
+/*Use grid for the split*/
+@media screen and (min-width: 600px) {
+  .split {
+    /*We use grid to split the contents into two columns.*/  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.62rem;
+    row-gap: 1.62rem;
+  }   
+  
+  .split>* {
+    margin:0; /*We have grid-column and grid-row instead of margins*/
+  }
+}
+{% endhighlight %}
+
+
 
 
