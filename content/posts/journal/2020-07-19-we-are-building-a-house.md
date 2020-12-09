@@ -195,7 +195,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure>
-	<figcaption>Finally, there is a house with a roof.</figcaption>
+	<figcaption>Finally, on Friday afternoon there is a house with a roof.</figcaption>
 <img class="w-100" src="/img/house/IMG_1936.jpg" alt="">
 </figure>
 
