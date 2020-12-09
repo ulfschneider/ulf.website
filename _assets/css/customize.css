@@ -62,8 +62,6 @@ blockquote {
     figure.split>figcaption {
         margin-top: auto;
         margin-bottom: auto;
-        position: sticky;
-        top: 0;
     }
 }
 

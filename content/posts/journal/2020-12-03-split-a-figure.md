@@ -89,11 +89,7 @@ figure>*+figcaption {
 
   figure.split>figcaption {
     margin: auto 0; /*center the figcaption vertically, thanks to flex-box*/
-    padding: 0 1.62rem; /*have padding to the left and to the right*/   
-    
-    /*have a little sticky-icing, not required*/
-    position: sticky; 
-    top: 0;      
+    padding: 0 1.62rem; /*have padding to the left and to the right*/       
   }
 }
 {% endhighlight %}
@@ -178,11 +174,7 @@ figure>*+figcaption {
   figure.split>figcaption {
     /*center the figcaption vertically, thanks to grid*/
     margin-top: auto;
-    margin-bottom: auto;
-    
-    /*have a little sticky-icing, not required*/
-    position: sticky; 
-    top: 0;
+    margin-bottom: auto;    
   }  
 }
 {% endhighlight %}
