@@ -42,7 +42,7 @@ In the below example, the first two figures use the split technique. Each image 
 
 ## The code based on flex-box
 
-The split is built around the `<figure>` tag, and the CSS for the split will only become active at a screen width of at least 700px. Up to that point you have pretty normal `<figure>` and `<figcaption>` behavior (depending on your CSS).
+The split is built around the `<figure>` tag, and the CSS for the split will only become active at a screen width of at least 600px. Up to that point you have pretty normal `<figure>` and `<figcaption>` behavior (depending on your CSS).
 
 My first attempt to solve the problem was with `flex`. I do not recommend this one. I only keep it here to make my thought-process visible. My suggestion is to use the `grid`-based approach further below! The above shown examples are not based on `flex` but on `grid`.
 
