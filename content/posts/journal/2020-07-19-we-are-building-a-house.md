@@ -71,7 +71,6 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1515.jpg" alt="">
 <img src="/img/house/IMG_1516.jpg" alt="">
 <img src="/img/house/IMG_1524.jpg" alt="">
-<img src="/img/house/IMG_1530.jpg" alt="">
 </figure>
 
 ## The cellar
@@ -105,7 +104,7 @@ I´m posting a timeline of images here to document the progress.
 
 <figure>
 <figcaption>Aug 11, 2020 before noon: The cellar is visible</figcaption>
-<img src="/img/house/IMG_1683.jpg" alt="">
+<img class="w-100" src="/img/house/IMG_1683.jpg" alt="">
 </figure>
 
 <figure class="rg:split">
@@ -187,7 +186,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure class="rg:split">
-<figcaption>The work cannot proceed on Oct 8 due to the rain. Only Oct 9, 2020, a Friday, the work can be finished.</figcaption>
+<figcaption>The work cannot proceed on Oct 8 due to the rain. Only Oct 9, 2020, a Friday, the work can be finished. </figcaption>
 <img src="/img/house/IMG_1890.jpg" alt="">
 <img src="/img/house/IMG_1917.jpg" alt="">
 <img src="/img/house/IMG_1919.jpg" alt="">
@@ -196,6 +195,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure>
+	<figcaption>Finally, there is a house with a roof.</figcaption>
 <img class="w-100" src="/img/house/IMG_1936.jpg" alt="">
 </figure>
 
@@ -219,9 +219,16 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure>
-<figcaption>Nov 9, 2020: Screed on the floors.</figcaption>
+<figcaption>Nov 9, 2020: Screed on the floors. It´s now looking more and more like a future home.</figcaption>
 <figure class="rg:split">
 <img src="/img/house/IMG_2020.jpg" alt="">
 <img src="/img/house/IMG_2021.jpg" alt="">
 </figure>
+</figure>
+
+## Blower door test
+
+<figure>
+<figcaption>Dec 1, 2020: The blower door test. Everything is within tolerances.</figcaption>
+<img src="/img/house/IMG_0068D.jpg">
 </figure>
