@@ -54,9 +54,10 @@ blockquote {
         padding-left: var(--space);
         padding-right: var(--space);
     }
+    blockquote,
     ul,
     ol {
-        padding-left: var(--horizontal-rhythm);
+        margin-left: var(--horizontal-rhythm);
     }
 }
 

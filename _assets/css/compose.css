@@ -36,7 +36,6 @@ iframe {
     --mono-font-feature-settings: var(--font-feature-settings);
     --code-font-family: var(--mono-font-family);
     --pre-border: var(--border-w-default) dotted var(--pre-border-color);
-    --blockquote-border: var(--pre-border);
     --blockquote-font-style: italic;
     --link-text-decoration: underline;
     --font-variant-numeric: normal;
@@ -56,10 +55,10 @@ iframe {
     --mrb-h5: var(--vertical-rhythm);
     --mrt-h6: var(--space-2);
     --mrb-h6: var(--vertical-rhythm);
-    --mrt-blockquote: var(--space-1);
-    --mrb-blockquote: var(--space-1);
     --mrt-figure: var(--space-2);
     --mrb-figure: var(--space-2);
+    --mrt-blockquote: var(--mrt-figure);
+    --mrb-blockquote: var(--mrb-figure);
     --mrt-figcaption: var(--vertical-rhythm);
     --mrb-figcaption: var(--vertical-rhythm);
     --mrt-pre: var(--vertical-rhythm);
@@ -457,9 +456,9 @@ blockquote {
     margin-bottom: var(--mrb-blockquote);
     margin-left: 0;
     margin-right: 0;
+    padding: 0;
     font-style: var(--blockquote-font-style);
     background: var(--blockquote-background);
-    padding: var(--space-d2) var(--space-d2) var(--space-d2) var(--horizontal-rhythm);
     border-top: var(--blockquote-border);
     border-bottom: var(--blockquote-border)
 }
@@ -469,7 +468,8 @@ blockquote::before {
     margin-left: calc(var(--horizontal-rhythm)*-1);
     position: absolute;
     line-height: 1;
-    font-size: var(--fs-4)
+    font-size: var(--fs-5);
+    color: var(--blockquote-prefix-color)
 }
 
 .tag {
@@ -2163,7 +2163,10 @@ textarea:focus+label {
 
 dl {
     margin-top: var(--mrt-list);
-    margin-bottom: var(--mrb-list)
+    margin-bottom: var(--mrb-list);
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0
 }
 
 dd {
@@ -2179,7 +2182,9 @@ ul {
 ol,
 ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: var(--mrb-list)
 }
 
@@ -2187,16 +2192,14 @@ ol ol,
 ol ul,
 ul ol,
 ul ul {
-    padding-left: var(--horizontal-rhythm)
-}
-
-li,
-ol ol,
-ol ul,
-ul ol,
-ul ul {
+    margin-left: var(--horizontal-rhythm);
     margin-top: 0;
     margin-bottom: 0
+}
+
+li {
+    margin: 0;
+    padding: 0
 }
 
 li p {
@@ -2247,7 +2250,7 @@ ul ul li::before {
 @media (max-width:900px) {
     [class^="x"] ol,
     [class^="x"] ul {
-        padding-left: var(--horizontal-rhythm)
+        margin-left: var(--horizontal-rhythm)
     }
 }
 
@@ -2255,14 +2258,14 @@ ul ul li::before {
 [class*="breakout-wide"] ul,
 table ol,
 table ul {
-    padding-left: var(--horizontal-rhythm)
+    margin-left: var(--horizontal-rhythm)
 }
 
 [class^="columns"] ol,
 [class^="columns"] ul,
 ol.indent,
 ul.indent {
-    padding-left: 0
+    margin-left: 0
 }
 
 [class^="columns"] ol li::before,
@@ -2278,7 +2281,7 @@ ul.no-list-type li::before {
 }
 
 ul.reset {
-    padding-left: 0
+    margin-left: 0
 }
 
 ul.reset li::before {
@@ -4015,11 +4018,11 @@ th:last-child {
     --code-color: var(--base-color);
     --pre-border-color: var(--neutral);
     --pre-background: var(--neutral-5);
-    --blockquote-background: var(--pre-background);
     --pre-color: var(--base-color);
     --heading-color: var(--base-color);
     --meta-color: var(--neutral-d2);
     --li-prefix-color: var(--heading-color);
+    --blockquote-prefix-color: var(--li-prefix-color);
     --link-color: var(--base-color);
     --link-hover-color: var(--primary);
     --link-active-color: var(--primary);
