@@ -2248,12 +2248,14 @@ ul ul li::before {
 }
 
 @media (max-width:900px) {
+    [class^="x"] blockquote,
     [class^="x"] ol,
     [class^="x"] ul {
         margin-left: var(--horizontal-rhythm)
     }
 }
 
+[class*="breakout-wide"] blockquote,
 [class*="breakout-wide"] ol,
 [class*="breakout-wide"] ul,
 table ol,
