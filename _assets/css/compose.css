@@ -4023,6 +4023,8 @@ th:last-child {
     --meta-color: var(--neutral-d2);
     --li-prefix-color: var(--heading-color);
     --blockquote-prefix-color: var(--li-prefix-color);
+    --blockquote-background: transparent;
+    --blockquote-border: unset;
     --link-color: var(--base-color);
     --link-hover-color: var(--primary);
     --link-active-color: var(--primary);
