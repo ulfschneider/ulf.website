@@ -597,6 +597,15 @@ hr::after {
     writing-mode: horizontal-tb
 }
 
+h1+*,
+h2+*,
+h3+*,
+h4+*,
+h5+*,
+h6+* {
+    margin-top: 0
+}
+
 :root {
     --form-font-family: var(--font-family);
     --form-label-color: var(--meta-color);

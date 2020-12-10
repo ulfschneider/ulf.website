@@ -195,7 +195,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure>
-	<figcaption>Finally, on Friday afternoon there is a house with a roof.</figcaption>
+	<figcaption>Finally, on Friday afternoon, there is a house with a roof. Thankfully, the craftsmen didn´t leave until this part of the work was completed.</figcaption>
 <img class="w-100" src="/img/house/IMG_1936.jpg" alt="">
 </figure>
 
@@ -207,9 +207,9 @@ I´m posting a timeline of images here to document the progress.
 ## Indoor installations
 
 <figure class="rg:split">
-<figcaption>Oct 12, 2020: Drying machines are brought into position. The indoor installation is started. Electric cabling, heating, water.
-</figcaption>
+<figcaption>Oct 12, 2020: Drying machines are brought into position. The indoor installation is started. Electric cabling, heating, water.</figcaption>
 <img src="/img/house/IMG_1970.jpg" alt="">
+<img src="/img/house/IMG_1973.jpg" alt="">
 <img src="/img/house/IMG_1977.jpg" alt="">
 ‌<img src="/img/house/IMG_1979.jpg" alt="">
 <img src="/img/house/IMG_1982.jpg" alt="">
@@ -218,11 +218,18 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_2011.jpg" alt="">
 </figure>
 
-<figure>
-<figcaption>Nov 9, 2020: Screed on the floors. It´s now looking more and more like a future home.</figcaption>
 <figure class="rg:split">
-<img src="/img/house/IMG_2020.jpg" alt="">
+<figcaption>Nov 9, 2020: Screed on the floors. It´s now looking more and more like a future home.</figcaption>
 <img src="/img/house/IMG_2021.jpg" alt="">
+<img src="/img/house/IMG_2020.jpg" alt="">
+<img src="/img/house/IMG_0050.jpg" alt="">
+</figure>
+
+<figure>
+<figcaption>Central ventilation and heating</figcaption>
+<figure class="rg:split">
+<img src="/img/house/IMG_0052.jpg" alt="">
+<img src="/img/house/IMG_0051.jpg" alt="">
 </figure>
 </figure>
 
