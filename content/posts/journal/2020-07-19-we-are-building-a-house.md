@@ -41,10 +41,10 @@ I´m posting a timeline of images here to document the progress.
 
 <figure>
 <figcaption>Jul 19, 2020: Heavy machinery is brought into place to do the excavation work. Our partner here is <a href="https://westermann-paderborn.de">Andre Westermann</a>.</figcaption>
-<figure class="rg:split">
+<div class="rg:split">
 <img src="/img/house/IMG_1403.jpg">
 <img src="/img/house/IMG_1410.jpg">
-</figure>
+</div>
 </figure>
 
 <figure class="rg:split">
@@ -58,10 +58,10 @@ I´m posting a timeline of images here to document the progress.
 
 <figure>
 <figcaption>Jul 22, 2020: After only two days the excavation work is completed.</figcaption>
-<figure class="rg:split">
+<div class="rg:split">
 <img src="/img/house/IMG_1468.jpg">
 <img src="/img/house/IMG_1474.jpg">
-</figure>
+</div>
 </figure>
 
 ## The fine measurement
@@ -91,10 +91,10 @@ I´m posting a timeline of images here to document the progress.
 
 <figure>
 <figcaption>Aug 11, 2020, early morning: The silence before the storm. The men will erect the cellar <em>today.</em></figcaption>
-<figure class="rg:split">
+<div class="rg:split">
 <img src="/img/house/IMG_1670.jpg" alt="">
 <img src="/img/house/IMG_1673.jpg" alt="">
-</figure>
+</div>
 </figure>
 
 <figure>
@@ -154,10 +154,10 @@ I´m posting a timeline of images here to document the progress.
 
 <figure>
 <figcaption>Sep 18, 2020: Measuring if the cellar is within the tolerance to place the house on top if it</figcaption>
-<figure class="rg:split">
+<div class="rg:split">
 <img src="/img/house/IMG_1838.jpg" alt="">
 <img src="/img/house/IMG_1841.jpg" alt="">
-</figure>
+</div>
 </figure>
 
 
@@ -166,10 +166,10 @@ I´m posting a timeline of images here to document the progress.
 <figure>
 <figcaption>Oct 7, 2020: The house will be erected in this week. At first there is only the scaffolding – no house. Then, the first wall …
 </figcaption>
-<figure class="rg:split">
+<div class="rg:split">
 <img src="/img/house/IMG_1867.jpg" alt="">
 <img src="/img/house/IMG_1868.jpg" alt="">
-</figure>
+</div>
 </figure>
 
 <figure class="rg:split">
@@ -227,10 +227,10 @@ I´m posting a timeline of images here to document the progress.
 
 <figure>
 <figcaption>Central ventilation and heating</figcaption>
-<figure class="rg:split">
+<div class="rg:split">
 <img src="/img/house/IMG_0052.jpg" alt="">
 <img src="/img/house/IMG_0051.jpg" alt="">
-</figure>
+</div>
 </figure>
 
 ## Blower door test
