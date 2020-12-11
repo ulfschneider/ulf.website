@@ -549,10 +549,6 @@ figure>*+figcaption {
     margin-bottom: 0
 }
 
-figure>figure {
-    margin: 0
-}
-
 blockquote footer::before {
     content: "— "
 }
