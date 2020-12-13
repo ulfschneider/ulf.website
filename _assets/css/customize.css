@@ -49,18 +49,6 @@ blockquote {
     max-width: var(--regular-width);
 }
 
-@media screen and (max-width: 800px) {
-    body {
-        padding-left: var(--space);
-        padding-right: var(--space);
-    }
-    blockquote,
-    ul,
-    ol {
-        margin-left: var(--horizontal-rhythm);
-    }
-}
-
 a {
     transition: color .1s ease-out;
 }
@@ -142,6 +130,18 @@ h6:hover>.anchor {
 
 .skip-link:focus-within {
     transform: translateY(0);
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        padding-left: var(--space);
+        padding-right: var(--space);
+    }
+    blockquote,
+    ul,
+    ol {
+        margin-left: var(--horizontal-rhythm);
+    }
 }
 
 @media screen and (hover: none) and (pointer: coarse) {
