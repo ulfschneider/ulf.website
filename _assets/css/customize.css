@@ -147,6 +147,6 @@ h6:hover>.anchor {
 @media screen and (hover: none) and (pointer: coarse) {
     /* smartphones, touchscreens */
     nav {
-        line-height: var(--lh-5);
+        line-height: var(--lh-4);
     }
 }
