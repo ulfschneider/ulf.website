@@ -143,3 +143,10 @@ h6:hover>.anchor {
 .skip-link:focus-within {
     transform: translateY(0);
 }
+
+@media screen and (hover: none) and (pointer: coarse) {
+    /* smartphones, touchscreens */
+    nav {
+        line-height: var(--lh-5);
+    }
+}
