@@ -161,7 +161,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 
-## The house – a traumatic experience
+## The house
 
 <figure>
 <figcaption>Oct 7, 2020: The house will be erected in this week. At first there is only the scaffolding – no house. Then, the first wall …
