@@ -43,7 +43,7 @@ refer: Summary of a talk given by Hidde de Vries
 ## Structure
 - Give each page a unique `<title>`. 
 
-<blockquote>The &lt;title&gt; is still the first guarantee or first confirmation that you´ve ended up on the page that you intended to reach.
+<blockquote>The <code>&lt;title&gt;</code> is still the first guarantee or first confirmation that you´ve ended up on the page that you intended to reach.
 <footer><a href="https://tink.uk">Léonie Watson</a>, accessibility expert and screenreader user</footer>
 </blockquote>
 
