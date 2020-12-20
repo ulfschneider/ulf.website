@@ -11,7 +11,6 @@ For a start, the chain of work steps is of interest. Collect the steps for examp
 
 E.g., a short list of possible steps that are needed to get a piece of software done might be:
 
-<div>
 <table>
 <tr>
 <th>Work steps</th>
@@ -44,7 +43,6 @@ E.g., a short list of possible steps that are needed to get a piece of software 
 <td>Enduser tests</td>
 </tr>
 </table>
-</div>
 
 The team has to discuss, negotiate and conclude on the proper work steps. As a result, the team earns a clear understanding of "done" software in a specific context. This is an important contract to ensure not to break the product during iterated delivery and to have defined quality for any "done" piece of software in each iteration.
 
@@ -62,7 +60,6 @@ I do not speak for total specialization with only one specialist for each work s
 
 Sometimes it is of help to write down some professional roles that are needed to fulfill the tasks. The list with the work steps could be extended by writing proper skill sets or roles beside the work steps.
 
-<div>
 <table>
 <tr>
 <th>Work steps</th><th>Role</th>
@@ -95,7 +92,6 @@ Sometimes it is of help to write down some professional roles that are needed to
 <td>Enduser tests</td><td>User</td>
 </tr>
 </table>
-</div>
 
 If members of the team cannot fill some roles – because of a lack of skills or because no member will take over the responsibility coming along with the role – you may have found an organizational dysfunction. Identifying the root cause is worth it. Why is the role so difficult to fill? What can be changed?
 

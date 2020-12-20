@@ -17,13 +17,11 @@ To validate for compliance in these areas, I´m using the following tools:
 
 <table>
 <caption>Tools to evaluate websites</caption>
-
 <colgroup>
        <col style="width: 20%" />
        <col style="width: 30%" />
        <col style="width: 50%" />
 </colgroup>
-    
 <tr><th>Category</th><th>Tool</th><th>Comment</th></tr>
 <tr><td>HTML</td><td><a href="https://validator.w3.org/">W3C Markup Validation Service</a></td><td>Check HTML standard compliance</td></tr>
 <tr><td>HTML</td><td>Switching off CSS</td><td>A good check for semantic HTML is to switch off CSS in the browser. The document should be usable and readable even without CSS attached.</td></tr>
