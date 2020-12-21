@@ -1,7 +1,6 @@
 ---
 title: Gravel from Paderborn to Rumbeck
 subtitle: Planned route is 141.4km, 1841mtr up
-tags: bike
 ---
 <figure>
 <img alt="" src="/img/2020-09-07-map-gravel-paderborn-rumbeck.png" />

@@ -1,7 +1,6 @@
 ---
 title: Swim Skills
 subtitle: Training videos for essential swim skills
-tags: journal
 ---
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s2h0tFWwqFc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
