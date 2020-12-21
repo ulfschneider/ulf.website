@@ -1,22 +1,14 @@
 ---
 title: Website evaluation tools
 ---
-[[toc]]
-
-## Requirements
-
 Any accessible website must 
 
 - use semantic-, standards-based HTML,
 - apply accessibility best pratices (which is a wide field), and
 - be fast.
 
-## How to evaluate requirements
-
-To validate for compliance in these areas, I´m using the following tools:
-
 <table>
-<caption>Tools to evaluate websites</caption>
+<caption>Tools to validate a website for accessibility</caption>
 <colgroup>
        <col style="width: 20%" />
        <col style="width: 30%" />
