@@ -10,7 +10,9 @@ Any accessible website must
 The table below is listing tools to check a website for complience in the named areas.
 
 <table>
+
 <caption>Tools to validate a website for accessibility</caption>
+
 <colgroup>
        <col style="width: 20%" />
        <col style="width: 30%" />
