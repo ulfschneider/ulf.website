@@ -7,12 +7,10 @@ Any accessible website must
 - apply accessibility best pratices (which is a wide field), and
 - be fast.
 
-The table below is listing tools to check a website for complience in the named areas.
+The table below is listing tools to check a website for compliance in the named areas.
 
 <table>
-
 <caption>Tools to validate a website for accessibility</caption>
-
 <colgroup>
        <col style="width: 20%" />
        <col style="width: 30%" />
