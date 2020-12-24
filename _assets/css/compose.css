@@ -6,8 +6,7 @@
 
 body {
     margin: 0;
-    width: 100%;
-    overflow-x: hidden
+    width: 100%
 }
 
 iframe {
@@ -3018,9 +3017,7 @@ table {
     text-align: left;
     font-family: var(--table-font-family);
     font-size: var(--table-font-size);
-    line-height: var(--lh-2);
-    display: block;
-    overflow-x: auto
+    line-height: var(--lh-2)
 }
 
 table table {
