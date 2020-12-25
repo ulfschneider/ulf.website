@@ -96,6 +96,16 @@ nav.table-of-contents>* {
     background: var(--neutral-5);
 }
 
+.scroll-table {
+    margin-top: var(--mrt-table);
+    margin-bottom: var(--mrb-table);
+}
+
+.scroll-table>table {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .anchor {
     display: none;
 }
