@@ -35,11 +35,9 @@ function maintainBackToStartVisibility() {
 function displayLoadTime() {
     let loadTime = document.getElementById('load-time');
     if (!loadTime) {
-        console.log('Could not find DOM element with id load-time to indicate the page load time');
         return;
     }
 
-    let seconds = 0;
     //PerformanceNavigationTiming API
     let entries = performance.getEntriesByType("navigation")
     if (entries && entries.length) {
