@@ -3,6 +3,7 @@ const markdownItAnchor = require('markdown-it-anchor');
 const markdownItTableOfContents = require('markdown-it-toc-done-right');
 const markdownItDefList = require('markdown-it-deflist');
 const markdownItFitMedia = require('markdown-it-fitmedia');
+const markdownItScrollTable = require('markdown-it-scrolltable');
 const markdownItAttrs = require('markdown-it-attrs');
 
 const cheerio = require('cheerio');
@@ -193,6 +194,7 @@ module.exports = {
             .use(markdownItFitMedia, {
                 imgDir: './content'
             })
+            .use(markdownItScrollTable)
             .use(markdownItAttrs);
 
         return mdlib;
