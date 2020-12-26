@@ -2300,8 +2300,10 @@ button {
     --base-font-size: 19px;
     --fs: 1rem;
     --fs-mono: .8rem;
-    --fs-d2: 0.75rem;
-    --fs-d1: 0.85rem;
+    --fs-d2: 0.8rem;
+    --fs-d1: 0.9rem;
+    --small: var(--fs-d1);
+    --smaller: .9em;
     --fs-1: calc(var(--fs)*var(--size-factor));
     --fs-2: calc(var(--fs-1)*var(--size-factor));
     --fs-3: calc(var(--fs-2)*var(--size-factor));
@@ -2338,11 +2340,11 @@ button {
 
 .small,
 small {
-    font-size: var(--fs-d1)
+    font-size: var(--small)
 }
 
 .smaller {
-    font-size: smaller
+    font-size: var(--smaller)
 }
 
 .h1 {
@@ -2869,7 +2871,7 @@ img {
     max-width: 100%;
     vertical-align: top;
     font-family: var(--meta-font-family);
-    font-size: small
+    font-size: var(--fs-d1)
 }
 
 img,

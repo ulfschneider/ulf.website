@@ -1,26 +1,6 @@
 const lunr = require("lunr");
 const utils = require("./utils.js");
 
-function findNextItem(collection, current) {
-    let passedCurrent;
-    if (collection && collection.length > 1 && current) {
-        for (let item of collection) {
-            if (passedCurrent) {
-                if (item.data.nostepnav || item.data.notags) {
-                    continue;
-                } else {
-                    return item;
-                }
-            }
-
-            if (item.url == current.url) {
-                passedCurrent = item;
-            }
-        }
-    }
-    return null;
-}
-
 module.exports = {
 
     live: function(collection) {

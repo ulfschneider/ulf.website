@@ -1,7 +1,7 @@
 ---
 layout: image
 title: Emil is ready for the beach
-nostepnav: true
+notags: true
 ---
 ![](/img/DSCF3651.jpg)
 

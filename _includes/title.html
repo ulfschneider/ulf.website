@@ -9,11 +9,11 @@
         {%- assign hastags = true -%}
     {%- endif -%}
 
-    {%- if nostepnav or notags  -%}
+    {%- if notags  -%}
         {%- assign hastags = false -%}
     {%- endif -%}
     {%- if author or hasdate or hastags  -%}
-        <aside class="lh-2 author-and-tags meta small">
+        <aside class="lh-2 author-and-tags meta smaller">
             {% include author-and-date.html %}
             {% include tags.html %}
         </aside>

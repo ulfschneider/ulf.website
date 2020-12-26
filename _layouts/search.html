@@ -1,7 +1,6 @@
 ---
 layout: list
 nodate: true
-nostepnav: true
 permalink: '{{site.search}}'
 ---
 <script>
@@ -84,14 +83,14 @@ permalink: '{{site.search}}'
             if (!friend.title || friend.title == 'notitle') {
                 let linkToArticle = document.createElement('a');
                 linkToArticle.href = entry.ref;
-                linkToArticle.classList = 'block small meta';
+                linkToArticle.classList = 'block smaller meta';
                 linkToArticle.innerHTML = 'Read the entire article →';
                 article.appendChild(linkToArticle);
             }
 
-            if (friend.author || friend.date || (friend.tags && !friend.notags && !friend.nostepnav)) {
+            if (friend.author || friend.date || (friend.tags && !friend.notags )) {
                 let aside = document.createElement('aside');
-                aside.classList = "meta small inline md:pdr md:order-d1 md:w-4 md:flex-grow-0 md:flex-shrink-0";
+                aside.classList = "meta smaller inline md:pdr md:order-d1 md:w-4 md:flex-grow-0 md:flex-shrink-0";
                 article.innerHTML += ' ';
                 article.appendChild(aside);
 
@@ -110,7 +109,7 @@ permalink: '{{site.search}}'
                     aside.appendChild(date);
                 }
 
-                if (friend.tags && !friend.notags && !friend.nostepnav) {
+                if (friend.tags && !friend.notags) {
                     let label = document.createElement('span');
                     label.innerHTML = ' in ';
                     aside.appendChild(label);
@@ -153,7 +152,7 @@ permalink: '{{site.search}}'
         } else {
             count.innerHTML = resultSet.length + ' results:';
         }
-        count.classList = "small meta mry";
+        count.classList = "smaller meta mry";
         searchResults.append(count);
     }
 
@@ -165,7 +164,7 @@ permalink: '{{site.search}}'
         }
         removeChildren(searchResults);
         let searching = document.createElement('div');
-        searching.classList = "small meta mry";
+        searching.classList = "smaller meta mry";
         searching.innerHTML = 'Searching …';
         searchResults.append(searching);
     }

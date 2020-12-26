@@ -1,7 +1,6 @@
 ---
 layout: default
 nodate: true
-nostepnav: true
 ---
 {{ content }}
 <!-- posts -->
@@ -68,11 +67,11 @@ nostepnav: true
         </section>
     
             {%- if p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil-%}
-                <a class="small meta block" href="{{p.url}}">Read the entire article →</a>
+                <a class="smaller meta block" href="{{p.url}}">Read the entire article →</a>
             {%- endif -%}
-                <aside class="small meta inline md:pdr md:order-d1 md:w-4 md:flex-grow-0 md:flex-shrink-0">               
+                <aside class="smaller meta inline md:pdr md:order-d1 md:w-4 md:flex-grow-0 md:flex-shrink-0">               
                 {% include author-and-date.html, author: p.data.author, date: p.date %}
-                {% include tags.html tags:p.data.tags notags:p.data.notags nostepnav:p.data.nostepnav %}
+                {% include tags.html tags:p.data.tags notags:p.data.notags %}
             </aside>
 
         </article>
