@@ -35,32 +35,6 @@ module.exports = {
         return collection ? collection.filter(utils.isRssAble) : collection;
     },
 
-    mustNotContainLayout: function(collection, filterLayouts) {
-        let result = [];
-        if (collection && filterLayouts) {
-
-            if (typeof filterLayouts === 'string' || filterLayouts instanceof String) {
-                filterLayouts = filterLayouts.split(','); //make it an array
-            }
-
-            for (let item of collection) {
-                if (!filterLayouts.includes(item.data.layout)) {
-                    result.push(item);
-                }
-            }
-            return result;
-        }
-        return collection;
-    },
-
-    getPrev: function(collection, current) {
-        return findNextItem(collection.reverse(), current);
-    },
-
-    getNext: function(collection, current) {
-        return findNextItem(collection, current);
-    },
-
     contentIndex: function(collection) {
         let result = [];
         for (let item of collection) {
@@ -76,23 +50,6 @@ module.exports = {
             }
         }
         return '';
-    },
-
-    mustEqualTags: function(collection, filterTags) {
-        let result = new Set();
-
-        if (collection && filterTags) {
-            if (typeof filterTags === 'string' || filterTags instanceof String) {
-                filterTags = filterTags.split(',').sort().join(',');
-            }
-
-            for (let item of collection) {
-                if (item.data.tags && item.data.tags.sort().join(',') == filterTags) {
-                    result.add(item);
-                }
-            }
-        }
-        return Array.from(result.values()).sort(utils.compareItemDate);
     },
 
     searchIndex: function(collection) {

@@ -92,10 +92,6 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('humanDate', filters.humanDate);
     eleventyConfig.addFilter('humanDateTime', filters.humanDateTime);
     eleventyConfig.addFilter('isoDate', filters.isoDate);
-    eleventyConfig.addFilter('mustNotContainLayout', filters.mustNotContainLayout);
-    eleventyConfig.addFilter('mustEqualTags', filters.mustEqualTags);
-    eleventyConfig.addFilter('getPrev', filters.getPrev);
-    eleventyConfig.addFilter('getNext', filters.getNext);
 }
 
 function addBrowserSync404(eleventyConfig) {

@@ -8,7 +8,7 @@
 				font-size: var(--fs);
 			}
 
-			.image .title .author-and-tags *, .image .step-nav * {
+			.image .title .author-and-tags * {
 				font-size: var(--fs-d1)
 			}
 
@@ -26,14 +26,10 @@
 		{% include header.html %}
 
 		<main id="main" class="indent word-wrap image">
-
 			<div class="flex justify-space-between mrb-2 pdt-d2">
-				<header class="title mrr mxw-6">
+				<header class="title mrr mxw-rg">
 					{% include title.html %}
 				</header>
-				{%- if nostepnav == nil -%}
-					{% include step-nav.html shortnav: true %}
-				{%- endif -%}
 			</div>
 
 			{{ content }}
