@@ -3,7 +3,7 @@ layout: image
 nodate: true
 ---
 <style>
-    .gallery {
+    .gallery {        
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         grid-column-gap: var(--space-2);
@@ -16,15 +16,14 @@ nodate: true
         padding-bottom: 100%;
         margin: 0;
     }
-    
 </style>
 {{ content }}
 {%- if content != "" and content != nil -%}
-{%- assign margin = "mrt-2" -%}
+    {%- assign margin = "mrt-2" -%}
 {%- endif %}
 <div class="{{margin}}">
     <div id="image-container" class="gallery"></div>
-    <button id="load-more" class="small block mrb-d2 mrt-2 mrx-auto width-5">Load more images</button>
+    <button id="load-more" class="small block mrb-d2 mrt-2 width-5">Load more images</button>
 </div>
 
 {%- if tag != nil -%}

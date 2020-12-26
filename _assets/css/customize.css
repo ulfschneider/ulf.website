@@ -30,7 +30,7 @@ body {
 body>header,
 main,
 body>footer {
-    max-width: var(--mid-width);
+    max-width: var(--regular-width);
     margin-left: auto;
     margin-right: auto;
 }
@@ -154,6 +154,20 @@ h6:hover>.anchor {
     ul,
     ol {
         margin-left: var(--horizontal-rhythm);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    header>*,
+    footer>*,
+    main>figure,
+    main>.scroll-table,
+    main article {
+        margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
+        max-width: var(--mid-width);
+    }
+    main .gallery {
+        margin: 0 calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
     }
 }
 
