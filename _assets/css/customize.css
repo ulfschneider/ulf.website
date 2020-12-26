@@ -161,8 +161,7 @@ h6:hover>.anchor {
     header>*,
     footer>*,
     main>figure,
-    main>.scroll-table,
-    main article {
+    main>.scroll-table {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
         max-width: var(--mid-width);
     }

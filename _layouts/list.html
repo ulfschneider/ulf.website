@@ -12,8 +12,7 @@ nodate: true
 
     article:last-child {
         margin-bottom: 0;
-    }    
-
+    }
 
     h2::before {
         content: unset;
@@ -24,30 +23,30 @@ nodate: true
     }
 </style>
 
-    {%- if tag != nil -%}
-        {% assign liveContent = collections[tag] | live | reverse %}
-        {%- elsif sitetags != nil -%}
-        {% assign liveContent = collections.liveSiteTagContent | reverse %}
-    {%- endif %}
+{%- if tag != nil -%}
+    {% assign liveContent = collections[tag] | live | reverse %}
+    {%- elsif sitetags != nil -%}
+    {% assign liveContent = collections.liveSiteTagContent | reverse %}
+{%- endif %}
 
-    {%- for p in liveContent -%}
+{%- for p in liveContent -%}
 
-        {%- if p.url == page.url -%}
-            {%- continue -%}
-        {%- endif -%}
+    {%- if p.url == page.url -%}
+        {%- continue -%}
+    {%- endif -%}
 
-        {%- assign pageYear = p.date | date: '%Y' -%}
+    {%- assign pageYear = p.date | date: '%Y' -%}
 
-        {%- assign href = p.url -%}
-    
-        {%- if indexYear != pageYear -%}            
-            <time datetime="{{pageYear}}" class="strong meta mrt-1 block">{{pageYear}}</time>            
-            {%- assign indexYear = pageYear -%}
-        {%- endif -%}
+    {%- assign href = p.url -%}
 
-        {%- assign count = count | plus: 1 -%}
+    {%- if indexYear != pageYear -%}
+        <time datetime="{{pageYear}}" class="strong meta mrt-1 block">{{pageYear}}</time>
+        {%- assign indexYear = pageYear -%}
+    {%- endif -%}
 
-        <article class="md:flex-row md:align-baseline">
+    {%- assign count = count | plus: 1 -%}
+
+    <article>
         <section>
             {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
                 <h2 class="mry-0 fs meta-font inline">
@@ -65,15 +64,15 @@ nodate: true
                 <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
             {%- endif -%}
         </section>
-    
-            {%- if p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil-%}
-                <a class="small meta block" href="{{p.url}}">Read the entire article →</a>
-            {%- endif -%}
-                <aside class="small meta inline md:pdr md:order-d1 md:w-4 md:flex-grow-0 md:flex-shrink-0">               
-                {% include author-and-date.html, author: p.data.author, date: p.date %}
-                {% include tags.html tags:p.data.tags notags:p.data.notags %}
-            </aside>
 
-        </article>
+        {%- if p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil-%}
+            <a class="small meta block" href="{{p.url}}">Read the entire article →</a>
+        {%- endif -%}
+        <aside class="small meta inline">
+            {% include author-and-date.html, author: p.data.author, date: p.date %}
+            {% include tags.html tags: p.data.tags notags: p.data.notags %}
+        </aside>
 
-    {%- endfor -%}
+    </article>
+
+{%- endfor -%}

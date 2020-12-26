@@ -43,7 +43,7 @@ permalink: '{{site.search}}'
             let friend = friendlyMap.get(entry.ref);
 
             let article = document.createElement('article');
-            article.classList = 'md:flex-row md:align-baseline';
+            article.classList = '';
             parent.appendChild(article);
 
             let section = document.createElement('section');
@@ -90,7 +90,7 @@ permalink: '{{site.search}}'
 
             if (friend.author || friend.date || (friend.tags && !friend.notags )) {
                 let aside = document.createElement('aside');
-                aside.classList = "meta small inline md:pdr md:order-d1 md:w-4 md:flex-grow-0 md:flex-shrink-0";
+                aside.classList = "meta small inline";
                 article.innerHTML += ' ';
                 article.appendChild(aside);
 
