@@ -3005,6 +3005,7 @@ svg {
     --table-alternate-col-color: var(--neutral-5);
     --table-underline-row-color: var(--base-color);
     --table-underline: var(--border-w-default) solid var(--table-underline-row-color);
+    --table-heading-font-family: var(--heading-font-family);
     --table-font-family: var(--font-family);
     --table-font-size: var(--figcaption-font-size);
     --mrt-table: var(--vertical-rhythm);
@@ -3053,7 +3054,7 @@ td {
 th {
     vertical-align: bottom;
     font-weight: var(--font-weight-bold);
-    font-family: var(--heading-font-family)
+    font-family: var(--table-heading-font-family)
 }
 
 tr:not(first-child) th {
@@ -3068,9 +3069,12 @@ table caption {
     font-family: var(--figcaption-font-family)
 }
 
-caption,
 td,
 th {
+    padding: var(--space-d2) var(--space-d1)
+}
+
+caption {
     padding: var(--space-d2) 0
 }
 
