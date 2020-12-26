@@ -239,3 +239,20 @@ I´m posting a timeline of images here to document the progress.
 <figcaption>Dec 1, 2020: The blower door test. Everything is within tolerances.</figcaption>
 <img src="/img/house/IMG_0068D.jpg">
 </figure>
+
+## Heating
+
+<figure>
+<figcaption>Dec 21, 2020: Our heating is installed.</figcaption>
+<img src="/img/house/IMG_0157D.jpg" alt="">
+</figure>
+
+## Tiles
+
+<figure>
+<figcaption>Dec 22, 2020: The craftsmen are doing an exceptional job with the laying of the tiles.</figcaption>
+<div class="rg:split">
+<img src="/img/house/IMG_0143.jpg" alt="">
+<img src="/img/house/IMG_0160D.jpg" alt="">
+</div>
+</figure>

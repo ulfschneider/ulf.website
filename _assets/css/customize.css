@@ -45,6 +45,7 @@ h4,
 h5,
 h6,
 td,
+caption,
 figcaption,
 blockquote {
     max-width: var(--regular-width);
@@ -90,7 +91,8 @@ nav.table-of-contents {
 }
 
 nav.table-of-contents>* {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .fit-media {
