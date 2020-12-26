@@ -3026,14 +3026,6 @@ table table {
     margin: 0
 }
 
-table caption {
-    margin: var(--vertical-rhythm) 0;
-    text-align: left;
-    font-style: normal;
-    max-width: var(--regular-width);
-    font-family: var(--figcaption-font-family)
-}
-
 .alternate-rows tr:nth-child(even) {
     background: var(--table-alternate-row-color)
 }
@@ -3068,9 +3060,18 @@ tr:not(first-child) th {
     vertical-align: top
 }
 
+table caption {
+    margin: 0;
+    text-align: left;
+    font-style: normal;
+    max-width: var(--regular-width);
+    font-family: var(--figcaption-font-family)
+}
+
+caption,
 td,
 th {
-    padding: var(--space-d2) var(--space-d1)
+    padding: var(--space-d2) 0
 }
 
 td:first-child,
