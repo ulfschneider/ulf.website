@@ -1,25 +1,5 @@
-{%- if page.date and nodate == nil -%}
-    {%- assign hasdate = true -%}
-{%- else -%}
-    {%- assign hasdate = false%}
-{%- endif -%}
-
-{%- if tags  -%}
-    {%- assign hastags = true -%}
-{%- endif -%}
-
-{%- if notags  -%}
-    {%- assign hastags = false -%}
-{%- endif -%}
-{%- if author or hasdate or hastags  -%}
-    <aside class="lh-2 author-and-tags meta small">
-        {% include author-and-date.html %}
-        {% include tags.html %}
-    </aside>
-{%- endif -%}
-
 {%- if title  -%}
-    <h1 class="mry-0 meta-font">{{ title }}
+    <h1 class="mry-0 meta-font inline">{{ title }}
         {%- if tag != nil -%}
             <span class="normal fs"> tagged </span>{{tag}}
         {%- endif -%}
@@ -27,11 +7,11 @@
 {%- endif -%}
 
 {%- if subtitle  -%}
-    <aside class="lh-2 meta-font sub-title mxw-rg">{{subtitle}}</aside>
+    <aside class="meta-font sub-title mxw-rg">{{subtitle}}</aside>
 {%- endif -%}
 
 {%- if refer  -%}
-    <aside class="lh-2 meta-font refer mxw-rg">{{refer}}</aside>
+    <aside class="meta-font refer mxw-rg">{{refer}}</aside>
 {%- endif -%}
 
 {%- if sitetags != nil %}
