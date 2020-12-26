@@ -10,17 +10,17 @@
 		{% include header.html %}
 
 		<main id="main" class="indent word-wrap default">
-			{%- unless title == "notitle" or notitle != nil  -%}
+			{%- if title != "notitle" and title != nil and notitle == nil   -%}
 				<header class="title mrb-2">
 					{% include title.html %}
 				</header>
-			{%- endunless -%}
+			{%- endif -%}
 
 			{{ content }}
 
 		</main>
 
-		{% include footer.html %}				
+		{% include footer.html %}
 	</body>
 
 </html>
