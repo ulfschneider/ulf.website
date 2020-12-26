@@ -6,7 +6,7 @@ abstract: A responsive technique of splitting a figure equally into an image (on
 
 ## Rapha is the poster child
 
-Every now and then the folks at Rapha are splitting a figure equally into an image (e.g. left half of the available space), and the corresponding caption (e.g. right half). This can be seen for example in "[Riding the Pendulum](https://www.rapha.cc/de/de/stories/riding-the-pendulum)." I think the layout is emphasizing the image and I enjoy the appearence very much. 
+Every now and then the folks at Rapha are splitting the contents of a `<figure>` equally into an image (e.g. left half of the available space), and the corresponding caption (e.g. right half). This can be seen for example in "[Riding the Pendulum](https://www.rapha.cc/de/de/stories/riding-the-pendulum)." I think the layout is emphasizing the image and I enjoy the appearence very much. 
 
 ## Split figures example
 
