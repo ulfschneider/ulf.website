@@ -13,7 +13,6 @@ draft: true
 - https://alistapart.com/article/webwaste/
 - https://www.websitecarbon.com/website/ulf-codes-articles/
 - https://truefilms.com
-- https://remove.bg
 - https://resilientwebdesign.com
 - https://noti.st/laurakalbag/ESaCQp/sabotaging-our-future-selves
 - Technically Wrong by Sara Wachter-Boetcher
@@ -39,9 +38,11 @@ draft: true
 - See https://css-tricks.com/turning-a-fixed-size-object-into-a-responsive-element/ together with http://marvelapp.github.io/devices.css/
 - https://moderncss.dev
 - https://github.com/jbranchaud/til
+
+
+- Watched *The Leadville Trail 2019*.
+
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s9LviOF5aJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Leadville Trail 100 2019 – EF Gone Racing</figcaption>
 </figure>
-
-https://www.viraltypeface.com/?utm_source=markboulton&utm_medium=email
