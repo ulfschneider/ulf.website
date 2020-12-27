@@ -1,95 +1,120 @@
----
-layout: image
-nodate: true
----
-<style>
-    .gallery {        
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        grid-column-gap: var(--space-2);
-        grid-row-gap: var(--space-2);
-        align-items: flex-start;
-        margin-bottom: var(--space-d2);
-    }
+<!DOCTYPE html>
+<html id="start" lang="{{site.locale}}">
 
-    .gallery figure {
-        padding-bottom: 100%;
-        margin: 0;
-    }
-</style>
-{{ content }}
-{%- if content != "" and content != nil -%}
-    {%- assign margin = "mrt-2" -%}
-{%- endif %}
-<div class="{{margin}}">
-    <div id="image-container" class="gallery"></div>
-    <button id="load-more" class="small block mrb-d2 mrt-2 width-5">Load more images</button>
-</div>
+    <head>
+        {% include head.html %}
+        <style>
+            main * {
+                font-family: var(--meta-font-family);
+                font-size: var(--fs);
+            }
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                grid-column-gap: var(--space-2);
+                grid-row-gap: var(--space-2);
+                align-items: flex-start;
+                margin-bottom: var(--space-d2);
+            }
 
-{%- if tag != nil -%}
-    {% assign imageData = collections[tag] | live | reverse | firstImage %}
-{%- else -%}
-    {% assign imageData = collections.liveSiteTagContent | reverse | firstImage %}
-{%- endif %}
-<script>
-    var imageData = {{ imageData | jsonify }};
-    var index = getIndex();
-    var increment = 9;
-    var container = document.getElementById('image-container');
+            .gallery figure {
+                padding-bottom: 100%;
+                margin: 0;
+            }
+        </style>
+    </head>
 
-    function appendImage(imgData) {
-        let anchor = document.createElement('a');
-        anchor.classList = 'no-deco';
-        anchor.href = imgData.url;
-        container.appendChild(anchor);
+    <body>
+        {% include header.html %}
 
-        let figure = document.createElement('figure');
-        figure.classList = 'relative';
-        anchor.appendChild(figure);
+        <main id="main" class="indent word-wrap image">
+            <div class="mrb-2 pdt-d2">
+                <header class="title mrr mxw-rg">
+                    <h1 class="mry-0 meta-font inline">Images</h1> tagged {{tag}}
+                </header>
+            </div>
 
-        let img = document.createElement('img');
-        img.src = imgData.src;
-        img.alt = imgData.alt;
-        img.classList = 'fit-cover absolute top-0 left-0 w-100 h-100'
-        img.setAttribute('loading', 'lazy');
-        figure.appendChild(img);
+            {{ content }}
+            {%- if content != "" and content != nil -%}
+                {%- assign margin = "mrt-2" -%}
+            {%- endif %}
+            <div class="{{margin}}">
+                <div id="image-container" class="gallery"></div>
+                <button id="load-more" class="small block mrb-d2 mrt-2 width-5">Load more images</button>
+            </div>
 
-    }
+            {%- if tag != nil -%}
+                {% assign imageData = collections[tag] | live | reverse | firstImage %}
+            {%- else -%}
+                {% assign imageData = collections.liveSiteTagContent | reverse | firstImage %}
+            {%- endif %}
 
-    function getIndex() {
-        let queryString = location.search;
-        let params = new URLSearchParams(queryString);
-        let index = parseInt(params.get("index"));
-        return index
-            ? index
-            : 0;
-    }
+        </main>
 
-    function loadImages({start, end}) {
-        start = start
-            ? start
-            : 0;
-        end = end
-            ? end + increment
-            : start + increment;
+        {% include footer.html %}
 
-        for (let i = start; i < end && i < imageData.length; i++) {
-            appendImage(imageData[i]);
+    </body>
+
+    <script>
+        var imageData = {{ imageData | jsonify }};
+        var index = getIndex();
+        var increment = 9;
+        var container = document.getElementById('image-container');
+
+        function appendImage(imgData) {
+            let anchor = document.createElement('a');
+            anchor.classList = 'no-deco';
+            anchor.href = imgData.url;
+            container.appendChild(anchor);
+
+            let figure = document.createElement('figure');
+            figure.classList = 'relative';
+            anchor.appendChild(figure);
+
+            let img = document.createElement('img');
+            img.src = imgData.src;
+            img.alt = imgData.alt;
+            img.classList = 'fit-cover absolute top-0 left-0 w-100 h-100'
+            img.setAttribute('loading', 'lazy');
+            figure.appendChild(img);
+
         }
-    }
 
-    loadImages({start: 0, end: getIndex()});
+        function getIndex() {
+            let queryString = location.search;
+            let params = new URLSearchParams(queryString);
+            let index = parseInt(params.get("index"));
+            return index
+                ? index
+                : 0;
+        }
 
-    let loadMore = document.getElementById('load-more');
-    if (index + increment > imageData.length) {
-        loadMore.style = 'display:none;';
-    }
-    loadMore.addEventListener('click', event => {
-        index += increment;
-        history.replaceState(null, '', location.pathname + '?index=' + index);
-        loadImages({start: index});
+        function loadImages({start, end}) {
+            start = start
+                ? start
+                : 0;
+            end = end
+                ? end + increment
+                : start + increment;
+
+            for (let i = start; i < end && i < imageData.length; i++) {
+                appendImage(imageData[i]);
+            }
+        }
+
+        loadImages({start: 0, end: getIndex()});
+
+        let loadMore = document.getElementById('load-more');
         if (index + increment > imageData.length) {
             loadMore.style = 'display:none;';
         }
-    });
-</script>
+        loadMore.addEventListener('click', event => {
+            index += increment;
+            history.replaceState(null, '', location.pathname + '?index=' + index);
+            loadImages({start: index});
+            if (index + increment > imageData.length) {
+                loadMore.style = 'display:none;';
+            }
+        });
+    </script>
+</html>
