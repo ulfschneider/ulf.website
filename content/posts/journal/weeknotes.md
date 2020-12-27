@@ -1,6 +1,7 @@
 ---
 draft: true
 ---
+
 - mermaid support on the client http://cornishweb.com/index.php/2019/05/25/using-mermaid-js-with-eleventy-io/
 - https://jwcooney.com/2014/03/03/regular-expression-to-get-the-last-instance-of-a-word/
 - http://typedia.com/learn/only/anatomy-of-a-typeface/
