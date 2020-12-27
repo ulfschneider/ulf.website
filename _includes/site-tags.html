@@ -1,10 +1,10 @@
-<nav class="meta mry-1">
-    <ul class="reset inline mry-0">
-        <li class="inline mrr-d2">
+<nav class="meta mry-1 mrln-d2 mrrn-d2">
+    <ul class="mry-0 reset">
+        <li class="inline-block mr-d2">
             {%- if tag == nil -%}
-                <span class="bg-primary white pd-d3 rounded" aria-current="page" >all</span>
+                <span class="bg-primary white pd-d2 rounded" aria-current="page" >all</span>
             {%- else -%}
-                <a href="{{site.blog}}">all</a>
+                <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{site.blog}}">all</a>
             {%- endif -%}
         </li>
         {%- if tag != nil -%}
@@ -14,12 +14,12 @@
         {%- endif -%}
         {%- for siteTag in currentTags -%}
             {%- if tag != siteTag -%}
-                <li class="inline mrr-d2">
-                    <a href="{{site.blog}}{{siteTag}}/">{{siteTag}}</a>
+                <li class="inline-block mr-d2">
+                    <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{site.blog}}{{siteTag}}/">{{siteTag}}</a>
                 </li>
             {%- else -%}
-                <li class="inline mrr-d2">
-                    <span class="bg-primary white pd-d3 rounded" aria-current="page" >{{siteTag}}</span>
+                <li class="inline-block mr-d2">
+                    <span class="bg-primary white pd-d2 rounded no-deco" aria-current="page" >{{siteTag}}</span>
                 </li>
             {%- endif -%}
         {%- endfor -%}
