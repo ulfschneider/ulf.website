@@ -1,25 +1,28 @@
 :root {
-    --base-font-size: 20px;
-    --font-size-breakpoint-sm: 21px;
-    --font-size-breakpoint-rg: 22px;
+    --base-font-size: 19px;
+    --font-size-breakpoint-sm: 20px;
+    --font-size-breakpoint-rg: 21px;
     --font-size-breakpoint-md: 22px;
     --font-size-breakpoint-lg: 23px;
-    --font-family: Georgia, serif;
-    --figcaption-font-family: sans-serif;
-    --heading-font-family: sans-serif;
-    --form-font-family: sans-serif;
-    --meta-font-family: sans-serif;
-    --mono-font-family: monospace;
+    --font-family: 'iA Writer Quattro', sans-serif;
+    --figcaption-font-family: 'iA Writer Quattro', sans-serif;
+    --heading-font-family: 'iA Writer Quattro', sans-serif;
+    --form-font-family: 'iA Writer Quattro', sans-serif;
+    --meta-font-family: 'iA Writer Quattro', sans-serif;
+    --mono-font-family: 'iA Writer Quattro', monospace;
     --font-weight-bold: 600;
     --space-factor: 1.75;
     --heading-letter-spacing: 0;
     --meta-color: var(--base-color);
-    --fs-mono: 0.75rem;
+    --fs-mono: .9rem;
     --fs-h1: var(--fs-2);
     --fs-h2: var(--fs-1);
     --fs-h3: var(--fs-1);
     --pre-background: var(--neutral-5);
     --kbd-background: var(--neutral-5);
+    --regular-width: 35rem;
+    --mid-width: 55rem;
+    --large-width: 65rem;
 }
 
 body {
@@ -49,6 +52,10 @@ caption,
 figcaption,
 blockquote {
     max-width: var(--regular-width);
+}
+
+blockquote::before {
+    font-size: var(--fs-4);
 }
 
 a {
@@ -88,6 +95,10 @@ nav ul li:last-child {
 
 nav.table-of-contents {
     margin: var(--vertical-rhythm) 0;
+}
+
+nav.table-of-contents a {
+    text-decoration: none;
 }
 
 nav.table-of-contents>* {
