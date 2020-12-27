@@ -1,8 +1,5 @@
 {%- if title  -%}
     <h1 class="mry-0 meta-font inline">{{ title }}
-        {%- if tag != nil -%}
-            <span class="normal fs"> tagged </span>{{tag}}
-        {%- endif -%}
     </h1>
 {%- endif -%}
 
@@ -12,8 +9,4 @@
 
 {%- if refer  -%}
     <aside class="meta-font refer mxw-rg">{{refer}}</aside>
-{%- endif -%}
-
-{%- if sitetags != nil %}
-    {% include site-tags.html %}
 {%- endif -%}

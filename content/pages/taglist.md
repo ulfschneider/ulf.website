@@ -9,4 +9,6 @@ permalink: '{{site.blog}}{{ tag }}/'
 id: blog
 title: Blog
 ---
+{%- include site-tags.html -%}
+
 {{collections.liveContent | tagIntro: tag }}

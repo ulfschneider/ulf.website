@@ -1,9 +1,8 @@
-<nav class="meta">
-    <span class="mrr-d2">Choose a tag:</span>
+<nav class="meta mry-1">
     <ul class="reset inline mry-0">
         <li class="inline mrr-d2">
             {%- if tag == nil -%}
-                <span class="meta" aria-current="page" >all</span>
+                <span class="bg-primary white pd-d3 rounded" aria-current="page" >all</span>
             {%- else -%}
                 <a href="{{site.blog}}">all</a>
             {%- endif -%}
@@ -20,7 +19,7 @@
                 </li>
             {%- else -%}
                 <li class="inline mrr-d2">
-                    <span class="meta" aria-current="page" >{{siteTag}}</span>
+                    <span class="bg-primary white pd-d3 rounded" aria-current="page" >{{siteTag}}</span>
                 </li>
             {%- endif -%}
         {%- endfor -%}

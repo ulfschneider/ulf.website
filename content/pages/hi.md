@@ -2,6 +2,7 @@
 permalink: /
 nodate: true
 notags: true
+title: Ulf Schneider
 id: home
 ---
 Welcome!
