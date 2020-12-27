@@ -1,12 +1,12 @@
 <nav>
-	<ul class="reset inline-block mry-0">
+	<ul class="reset mry-0">
 		{%- for p in site.mainnav -%}
 
 			<li class="inline-block">
 				{%- if id == p.id -%}
-					<a aria-current="page" class="meta no-deco bold heading-color" href="{{ p.url }}">{{p.label}}</a>
+					<a aria-current="page" class="meta no-deco bold heading-color no-wrap" href="{{ p.url }}">{{p.label}}</a>
 				{%- else -%}
-					<a class="meta no-deco" href="{{ p.url }}">{{p.label}}</a>
+					<a class="meta no-deco no-wrap" href="{{ p.url }}">{{p.label}}</a>
 				{%- endif -%}
 			</li>
 
