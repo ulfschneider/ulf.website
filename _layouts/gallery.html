@@ -28,11 +28,10 @@
         {% include header.html %}
 
         <main id="main" class="indent word-wrap image">
-            <div class="mrb-2 pdt-d2">
-                <header class="title mrr mxw-rg">
-                    <h1 class="mry-0 meta-font inline">Images</h1> tagged {{tag}}
-                </header>
-            </div>            
+            <header class="title mrb-2 pdt-d2 mxw-rg">
+                <h1 class="mry-0 meta-font inline">Images</h1> tagged {{tag}}
+            </header>
+            {{content}}
             <div class="mry-2">
                 <div id="image-container" class="gallery"></div>
                 <button id="load-more" class="small block mrb-d2 mrt-2 width-5">Load more images</button>
