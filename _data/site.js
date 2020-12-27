@@ -62,11 +62,11 @@ module.exports = {
         }
     ],
     tagnav: [
-        'reading',
         'accessibility',
         'agile',
-        'tools',
-        'journal'
+        'journal',
+        'reading',
+        'tools'
     ],
 
     search: '/search/',
