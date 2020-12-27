@@ -1,7 +1,7 @@
 :root {
-    --base-font-size: 19px;
-    --font-size-breakpoint-sm: 20px;
-    --font-size-breakpoint-rg: 21px;
+    --base-font-size: 20px;
+    --font-size-breakpoint-sm: 21px;
+    --font-size-breakpoint-rg: 22px;
     --font-size-breakpoint-md: 22px;
     --font-size-breakpoint-lg: 23px;
     --font-family: Georgia, serif;
