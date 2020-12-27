@@ -158,9 +158,10 @@ h6:hover>.anchor {
 }
 
 @media screen and (min-width: 801px) {
-    header>*,
-    footer>*,
+    body>header>*,
+    body>footer>*,
     main>figure,
+    main>header,
     main>.scroll-table {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
         max-width: var(--mid-width);

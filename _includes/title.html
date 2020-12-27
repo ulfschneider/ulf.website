@@ -1,12 +1,5 @@
 {%- if title  -%}
-    <h1 class="mry-0 meta-font inline">{{ title }}
-    </h1>
+    <h1 class="mry-0 meta-font inline">{{ title }}</h1>
 {%- endif -%}
 
-{%- if subtitle  -%}
-    <aside class="meta-font sub-title mxw-rg">{{subtitle}}</aside>
-{%- endif -%}
-
-{%- if refer  -%}
-    <aside class="meta-font refer mxw-rg">{{refer}}</aside>
-{%- endif -%}
+{% include author-date-tags.html %}

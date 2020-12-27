@@ -1,6 +1,5 @@
 ---
 title: The Box-Bullet-Line (BBL)
-subtitle: An intuitive and natural notation to communicate flows between components
 ---
 [[toc]]
 

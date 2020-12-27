@@ -5,9 +5,9 @@ abstract: Cooperatively making architectural decisions, at a point in time when 
 ---
 This text was first published in OBJEKTspektrum, issue 4/2011, under the title ["Scrum und Architektur, konzeptionelle Integrität im Scrum Prozess"][schneider2011]. I have reworked, enhanced and translated the initial document to publish it here on *{{site.name}}.*
 
-[[toc]] 
-
 Cooperatively making architectural decisions, at a point in time when they are needed – and not earlier – is a quality-improving paradigm in agile software development. Conceptual integrity in the flow of architecture decisions will only be achieved if one person has the final word regarding those decisions. This is the architect, serving the product, whose rights and obligations in the context of the Scrum process are being reflected in this essay.
+
+[[toc]] 
 
 Iterations
 ---

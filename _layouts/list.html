@@ -54,12 +54,8 @@ nodate: true
                 </h2>
             {%- endif -%}
 
-            {%- if p.data.refer -%}
-                <aside>{{p.data.refer}}</aside>
-                {%- elsif p.data.abstract -%}
-                <p>{{p.data.abstract}}</p>
-                {%- elsif p.data.subtitle -%}
-                <aside>{{p.data.subtitle}}</aside>
+            {%- if p.data.abstract -%}
+                <p>{{p.data.abstract}}</p>                
                 {%- elsif p.templateContent -%}
                 <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
             {%- endif -%}

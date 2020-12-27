@@ -12,13 +12,12 @@
 		<main id="main" class="indent word-wrap default">
 			{%- if title != "notitle" and title != nil and notitle == nil   -%}
 				<header class="title mrb-2">
-					{% include author-date-tags.html %}
 					{% include title.html %}
 				</header>
 			{%- endif -%}
 
 			{{ content }}
-
+			
 		</main>
 
 		{% include footer.html %}
