@@ -28,7 +28,7 @@
 
     {%- assign href = p.url -%}
 
-    {%- if indexYear != pageYear -%}
+    {%- if indexYear != pageYear and limit == nil -%}
         <time datetime="{{pageYear}}" class="strong meta mrt-1 block">{{pageYear}}</time>
         {%- assign indexYear = pageYear -%}
     {%- endif -%}
