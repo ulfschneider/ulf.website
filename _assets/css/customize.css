@@ -65,6 +65,10 @@ a {
     transition: color .1s ease-out;
 }
 
+code:not(pre code) {
+    letter-spacing: 3px;
+}
+
 button,
 input[type=submit],
 input[type=reset] {
