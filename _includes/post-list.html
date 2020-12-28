@@ -10,7 +10,7 @@
 
 {%- if tag != nil -%}
     {% assign liveContent = collections[tag] | live  %}
-{%- else -%}
+{%- elsif sitetags != nil or limit > 0 -%}
     {% assign liveContent = collections.liveSiteTagContent %}
 {%- endif %}
 
