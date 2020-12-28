@@ -16,8 +16,9 @@
     --meta-color: var(--base-color);
     --fs-mono: .9rem;
     --fs-h1: var(--fs-2);
-    --fs-h2: var(--fs-1);
-    --fs-h3: var(--fs-1);
+    --fs-h2: var(--fs);
+    --fs-h3: var(--fs);
+    --fs-h4: var(--fs);
     --pre-background: var(--neutral-5);
     --kbd-background: var(--neutral-5);
     --regular-width: 35rem;
