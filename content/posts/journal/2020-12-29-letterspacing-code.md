@@ -11,7 +11,7 @@ Take care not to apply the technique for multi-line code-blocks, as the widened 
 code:not(pre code) {
 	letter-spacing: 3px;
 	font-size: .9em;
-	font-family: inherit; /*use the font of the flow text*/
+	font-family: inherit; /*use the font of the text flow*/
 	}
 {% endhighlight %}
 </figure>
