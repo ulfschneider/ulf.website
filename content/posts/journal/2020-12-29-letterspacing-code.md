@@ -1,10 +1,12 @@
 ---
 title: Letterspacing of code elements
 ---
-Widening the letterspacing of `<code>` elements in the flow of text nicely emphasizes the *code-nature* of the element without having to deal with an additional font or a different color (at least when using a sans-serif font). Take care not to apply the technique for multi-line code-blocks, as the widened letterspacing would occupy too much space and make the legibility difficult. Also, I´m lowering the `font-size` property of the `<code>` a bit, to accomodate for the enhanced letter-spacing.
+Widening the letterspacing of `<code>` elements in the flow of text nicely emphasizes the *code-nature* of the element without having to deal with an additional font or a different color (at least when using a sans-serif font). The visual effect is subtle. Also, I´m lowering the `font-size` property of the `<code>` a bit, to accomodate for the enhanced letter-spacing.
+
+Take care not to apply the technique for multi-line code-blocks, as the widened letterspacing will occupy too much space in that case and make the legibility difficult. 
 
 <figure>
-<figcaption>CSS code for letterspacing of <code>&lt;code&gt;</code> elements while not applying the rule for multi-line code.</figcaption>
+<figcaption>CSS code for letterspacing of <code>&lt;code&gt;</code> elements while <em>not</em> applying the rule for multi-line code.</figcaption>
 {% highlight css %}
 code:not(pre code) {
 	letter-spacing: 3px;
