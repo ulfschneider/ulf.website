@@ -31,7 +31,6 @@ body {
     padding-right: var(--space-2);
 }
 
-;
 body>header,
 main,
 body>footer {
@@ -51,7 +50,8 @@ h5,
 h6,
 td,
 caption,
-blockquote {
+blockquote,
+hr {
     max-width: var(--regular-width);
 }
 
@@ -70,6 +70,9 @@ a {
 code:not(pre code) {
     letter-spacing: 3px;
 }
+
+
+/* Line highlighting tailored for eleventy */
 
 pre {
     counter-reset: lineNumber;
