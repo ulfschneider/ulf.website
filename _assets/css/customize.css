@@ -31,6 +31,7 @@ body {
     padding-right: var(--space-2);
 }
 
+;
 body>header,
 main,
 body>footer {
@@ -68,6 +69,25 @@ a {
 
 code:not(pre code) {
     letter-spacing: 3px;
+}
+
+pre {
+    counter-reset: lineNumber;
+}
+
+code .highlight-line:before {
+    -webkit-user-select: none;
+    border-right: 1px solid var(--neutral-2);
+    color: var(--neutral);
+    content: counter(lineNumber);
+    counter-increment: lineNumber;
+    display: inline-block;
+    font-variant-numeric: tabular-nums;
+    margin-right: var(--space-d2);
+    padding-right: var(--space-d2);
+    width: calc(var(--horizontal-rhythm) + var(--space-d2));
+    text-align: right;
+    font-size: var(--fs-d2);
 }
 
 button,
