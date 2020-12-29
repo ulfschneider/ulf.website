@@ -1,7 +1,7 @@
 ---
 title: Letterspacing of &lt;code&gt; elements
 ---
-Widening the letterspacing of `<code>` elements in the flow of text nicely emphasizes the *code-nature* of the element without using a different font or a different color. I think it works for a sans-serif font but not so well for a serif. It is of use when having the same font for text and code. For example, you can easily have your text set with [iA Writer Quattro](https://ia.net/writer/blog/a-typographic-christmas), and use the very same typeface for your code elements. 
+Widening the letterspacing of `<code>` elements in the flow of text nicely emphasizes the *code-nature* of the element without using a different font or a different color. I think it works for a sans-serif font but not so well for a serif. It is of use when having the same font for text and code. For example, you can easily have your text set with [iA Writer Quattro](https://ia.net/writer/blog/a-typographic-christmas), and use the very same typeface for your `<code>` elements. 
 
 The visual effect is subtle yet noticable. Also, I´m lowering the `font-size` property of the `<code>` a bit, to accomodate for the enhanced letter-spacing and to create a little more distinction.
 
