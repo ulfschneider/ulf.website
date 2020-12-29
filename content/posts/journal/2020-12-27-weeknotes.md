@@ -1,7 +1,7 @@
 ---
 title: Weeknotes 52
 ---
-- [Sarah Fossheim](https://fossheim.io/) publishes her new project website [ethicaldesign.guide](https://ethicaldesign.guide/). *"… Ethical Design Guide is made to share resources on how to create ethical products that don't cause harm."* 
+[Sarah Fossheim](https://fossheim.io/) publishes her new project website [ethicaldesign.guide](https://ethicaldesign.guide/). *"… Ethical Design Guide is made to share resources on how to create ethical products that don't cause harm."* 
 
 I did a huge overhaul of my website:
 
