@@ -65,8 +65,12 @@ a {
     transition: color .1s ease-out;
 }
 
-code:not(pre code) {
+code {
     letter-spacing: 3px;
+}
+
+pre code {
+    letter-spacing: unset;
 }
 
 button,

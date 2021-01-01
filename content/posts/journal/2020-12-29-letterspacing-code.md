@@ -10,11 +10,14 @@ Take care not to apply the technique for multi-line code-blocks, as the widened 
 <figure>
 <figcaption>CSS code for letterspacing of <code>&lt;code&gt;</code> elements while <em>not</em> applying the rule for multi-line code.</figcaption>
 {% highlight css %}
-code:not(pre code) {
+code {
 	letter-spacing: 3px;
 	font-size: .9em;
 	font-family: inherit; /*use the font of the text flow*/
 	}
+pre code {
+  letter-spacing: unset; /*don´t apply letter-spacign for multi-line code*/
+  }
 {% endhighlight %}
 </figure>
 
