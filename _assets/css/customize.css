@@ -181,10 +181,14 @@ h6:hover>.anchor {
     body>header>*,
     body>footer>*,
     main>figure,
-    main>header,
     main>.scroll-table {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
         max-width: var(--mid-width);
+    }
+    main>header {
+        max-width: calc(var(--mid-width) + var(--horizontal-rhythm));
+        margin-left: calc(-1 * var(--horizontal-rhythm));
+        margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
     }
     main .gallery {
         margin: 0 calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
