@@ -153,7 +153,7 @@ h6:hover>.anchor {
     right: 0;
     transform: translateY(-100%);
     transition: transform .3s ease-out;
-    background: var(--primary);
+    background: var(--link-focus-color);
     color: var(--base-background);
     font-family: var(--meta-font-family);
     text-align: center;
