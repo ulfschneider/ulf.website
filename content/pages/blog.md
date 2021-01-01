@@ -1,6 +1,7 @@
 ---
 layout: list
 title: Blog
+notitle: true
 id: blog
 sitetags: true
 permalink: '{{site.blog}}'

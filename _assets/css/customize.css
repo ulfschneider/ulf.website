@@ -18,7 +18,7 @@
     --fs-h1: var(--fs-2);
     --fs-h2: var(--fs);
     --fs-h3: var(--fs);
-    --fs-h4: var(--fs);    
+    --fs-h4: var(--fs);
     --pre-background: var(--neutral-5);
     --kbd-background: var(--neutral-5);
     --regular-width: 35rem;
@@ -34,7 +34,7 @@ main,
 body>footer {
     max-width: var(--regular-width);
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
 }
 
 p,
@@ -66,7 +66,7 @@ a {
 }
 
 code {
-    letter-spacing: 3px;        
+    letter-spacing: 3px;
 }
 
 pre code {
@@ -180,9 +180,8 @@ h6:hover>.anchor {
 }
 
 @media screen and (min-width: 801px) {
-    body>header>*,
-    body>footer>*,
     main>figure,
+    main>nav.site-tags,
     main>.scroll-table {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
         max-width: var(--mid-width);
