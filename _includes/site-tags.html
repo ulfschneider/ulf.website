@@ -2,7 +2,7 @@
     <ul class="mry-0 reset">
         <li class="inline-block mr-d2">
             {%- if tag == nil -%}
-                <span class="bg-primary-d1 white pd-d2 rounded" aria-current="page" >all</span>
+                <span class="bg-link-focus-color white pd-d2 rounded" aria-current="page" >all</span>
             {%- else -%}
                 <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{site.blog}}">all</a>
             {%- endif -%}
@@ -19,7 +19,7 @@
                 </li>
             {%- else -%}
                 <li class="inline-block mr-d2">
-                    <span class="bg-primary-d1 white pd-d2 rounded no-deco" aria-current="page" >{{siteTag}}</span>
+                    <span class="bg-link-focus-color white pd-d2 rounded no-deco" aria-current="page" >{{siteTag}}</span>
                 </li>
             {%- endif -%}
         {%- endfor -%}
