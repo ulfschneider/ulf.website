@@ -1,9 +1,9 @@
 :root {
     --base-font-size: 18px;
-    --font-size-breakpoint-sm: 19px;
-    --font-size-breakpoint-rg: 20px;
-    --font-size-breakpoint-md: 21px;
-    --font-size-breakpoint-lg: 22px;
+    --font-size-breakpoint-sm: 18px;
+    --font-size-breakpoint-rg: 19px;
+    --font-size-breakpoint-md: 19px;
+    --font-size-breakpoint-lg: 20px;
     --font-family: 'iA Writer Quattro', sans-serif;
     --figcaption-font-family: 'iA Writer Quattro', sans-serif;
     --heading-font-family: 'iA Writer Quattro', sans-serif;
@@ -18,12 +18,10 @@
     --fs-h1: var(--fs-2);
     --fs-h2: var(--fs);
     --fs-h3: var(--fs);
-    --fs-h4: var(--fs);
+    --fs-h4: var(--fs);    
     --pre-background: var(--neutral-5);
     --kbd-background: var(--neutral-5);
     --regular-width: 35rem;
-    --mid-width: 50rem;
-    --large-width: 65rem;
 }
 
 body {
@@ -36,7 +34,7 @@ main,
 body>footer {
     max-width: var(--regular-width);
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;    
 }
 
 p,
@@ -67,8 +65,12 @@ a {
     transition: color .1s ease-out;
 }
 
-code:not(pre code) {
-    letter-spacing: 3px;
+code {
+    letter-spacing: 3px;        
+}
+
+pre code {
+    letter-spacing: unset;
 }
 
 button,
