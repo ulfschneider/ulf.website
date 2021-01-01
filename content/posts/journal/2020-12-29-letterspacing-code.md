@@ -34,5 +34,6 @@ Applying the CSS to the following HTML
 will lead to a rendering of
 
 <figure>
-<img src="/img/letterspacing-code.jpg" alt="Two paragraphs, one with a letter-spaced code named HTML, the other with non-letter-spaced HTML.">
+<img src="/img/letterspacing-code.jpg" alt="">
+<figcaption>Two paragraphs. The first with a letter-spaced code named HTML, the second with non-letter-spaced HTML.</figcaption>
 </figure>
