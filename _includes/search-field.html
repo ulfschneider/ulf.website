@@ -6,9 +6,9 @@
 {%- endif -%}
 <form onsubmit="{{onsubmit}}">
     {%- if site.searchKey -%}
-        <label id="search-label" for="search-query" class="small">Search <em>{{site.name}},</em> press <kbd class="inline">{{site.searchKey}}</kbd> to focus:</label>
+        <label id="search-label" for="search-query">Search <em>{{site.name}},</em> press <kbd class="inline">{{site.searchKey}}</kbd> to focus:</label>
     {%- else -%}
-        <label id="search-label" for="search-query" class="small">Search <em>{{site.name}}</em>:</label>
+        <label id="search-label" for="search-query">Search <em>{{site.name}}</em>:</label>
     {%- endif -%}
     <div class="flex mxw-sm mry-d2">
         <input id="search-query" {{autofocus}} class="flex-grow-1 align-stretch" type="text"/>

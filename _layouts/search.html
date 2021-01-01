@@ -81,14 +81,14 @@ permalink: '{{site.search}}'
             if (!friend.title || friend.title == 'notitle') {
                 let linkToArticle = document.createElement('a');
                 linkToArticle.href = entry.ref;
-                linkToArticle.classList = 'block small meta';
+                linkToArticle.classList = 'block meta';
                 linkToArticle.innerHTML = 'Read the entire article →';
                 article.appendChild(linkToArticle);
             }
 
             if (friend.author || friend.date || (friend.tags && !friend.notags )) {
                 let aside = document.createElement('aside');
-                aside.classList = "meta small inline";
+                aside.classList = "meta inline";
                 article.innerHTML += ' ';
                 article.appendChild(aside);
 
@@ -150,7 +150,7 @@ permalink: '{{site.search}}'
         } else {
             count.innerHTML = resultSet.length + ' results:';
         }
-        count.classList = "small meta mry";
+        count.classList = "meta mry";
         searchResults.append(count);
     }
 
@@ -162,7 +162,7 @@ permalink: '{{site.search}}'
         }
         removeChildren(searchResults);
         let searching = document.createElement('div');
-        searching.classList = "small meta mry";
+        searching.classList = "meta mry";
         searching.innerHTML = 'Searching …';
         searchResults.append(searching);
     }
