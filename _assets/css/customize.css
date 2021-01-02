@@ -23,6 +23,7 @@
     --kbd-background: var(--neutral-5);
     --link-focus-color: var(--primary-d1);
     --regular-width: 35rem;
+    --hr-content: "*  *  *";
 }
 
 body {
@@ -98,11 +99,17 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
+/* markdown-it toc */
+
 .anchor {
     text-decoration: none;
     font-weight: normal;
     font-size: var(--fs);
     color: var(--neutral);
+}
+
+.anchor {
+    display: none;
 }
 
 nav.table-of-contents {
@@ -118,9 +125,14 @@ nav.table-of-contents>* {
     margin-bottom: 0;
 }
 
+
+/*markdown-it fitmedia +/
+
 .fit-media {
     background: var(--neutral-5);
 }
+
+/* markdown-it scrolltable */
 
 .scroll-table {
     margin-top: var(--mrt-table);
@@ -132,8 +144,28 @@ nav.table-of-contents>* {
     margin-bottom: 0;
 }
 
-.anchor {
+/* markdown-it footnotes */
+
+.footnotes-sep {
     display: none;
+}
+
+.footnote-ref a, .footnote-backref {
+    text-decoration: none;
+}
+
+.footnotes-list {
+    counter-reset: footnote-counter;
+}
+
+.footnotes-list li {
+    counter-increment: footnote-counter;
+}
+
+.footnotes-list li::before {
+    content: counter(footnote-counter) ;
+    font-weight: normal;
+    vertical-align: super;
 }
 
 h1:hover>.anchor,

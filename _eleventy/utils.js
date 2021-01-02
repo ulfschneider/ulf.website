@@ -5,6 +5,7 @@ const markdownItDefList = require('markdown-it-deflist');
 const markdownItFitMedia = require('markdown-it-fitmedia');
 const markdownItScrollTable = require('markdown-it-scrolltable');
 const markdownItAttrs = require('markdown-it-attrs');
+const markdownItFootnote = require('markdown-it-footnote');
 
 const cheerio = require('cheerio');
 const stripHtml = require('string-strip-html');
@@ -192,7 +193,8 @@ module.exports = {
                 imgDir: './content'
             })
             .use(markdownItScrollTable)
-            .use(markdownItAttrs);
+            .use(markdownItAttrs)
+            .use(markdownItFootnote);
 
         return mdlib;
     }
