@@ -106,10 +106,16 @@ nav ul li:last-child {
     font-weight: normal;
     font-size: var(--fs);
     color: var(--neutral);
+    display: none;
 }
 
-.anchor {
-    display: none;
+h1:hover>.anchor,
+h2:hover>.anchor,
+h3:hover>.anchor,
+h4:hover>.anchor,
+h5:hover>.anchor,
+h6:hover>.anchor {
+    display: inline;
 }
 
 nav.table-of-contents {
@@ -126,7 +132,7 @@ nav.table-of-contents>* {
 }
 
 
-/*markdown-it fitmedia +/
+/*markdown-it fitmedia*/
 
 .fit-media {
     background: var(--neutral-5);
@@ -146,8 +152,15 @@ nav.table-of-contents>* {
 
 /* markdown-it footnotes */
 
-.footnotes-sep {
-    display: none;
+hr.footnotes-sep {    
+    width: var(--space-3);
+    margin-right: auto;
+    margin-left: 0;
+    border: 1px solid var(--base-color);    
+}
+
+hr.footnotes-sep::after {
+    content: unset;
 }
 
 .footnote-ref a, .footnote-backref {
@@ -166,15 +179,6 @@ nav.table-of-contents>* {
     content: counter(footnote-counter) ;
     font-weight: normal;
     vertical-align: super;
-}
-
-h1:hover>.anchor,
-h2:hover>.anchor,
-h3:hover>.anchor,
-h4:hover>.anchor,
-h5:hover>.anchor,
-h6:hover>.anchor {
-    display: inline;
 }
 
 .skip-link {
