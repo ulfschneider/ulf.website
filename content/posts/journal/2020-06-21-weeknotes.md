@@ -5,7 +5,7 @@ title: Weeknotes 25
 - This [regex101](https://regex101.com) is very helpful. I´m wondering why I didn´t came across it earlier.
 - A collection made by [Trebleseven](https://www.pinterest.co.uk/trebleseven/) with the [works](https://www.pinterest.co.uk/trebleseven/jacqueline-casey/) of Jacqueline Casey (20 April 1927 - 18 May 1992). I´m so impressed. 
 
-<figure>
-<img alt="" src="/img/casey-coffee-hour.jpg">
-<figcaption>"Coffee Hour" by Jacqueline Casey</figcaption>
-</figure>
+	<figure>
+	<img alt="" src="/img/casey-coffee-hour.jpg">
+	<figcaption>"Coffee Hour" by Jacqueline Casey</figcaption>
+	</figure>

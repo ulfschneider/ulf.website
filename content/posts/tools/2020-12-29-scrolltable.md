@@ -41,7 +41,7 @@ will become
 {% endhighlight %}
 </figure>
 
-Also, html inside of your markdown, like for example
+html inside of your markdown, like for example
 
 <figure>
 <figcaption>A html table inside of markdown text</figcaption>

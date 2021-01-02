@@ -8,11 +8,11 @@ title: Weeknotes 18
 - Chris Coyier writes about [automating VS Code workflows](https://css-tricks.com/some-little-improvements-to-my-vs-code-workflow-workspaces-icons-tasks/).
 - Liquid variables can be accessed inside of JavaScript. E.g, the following code, which results in an array of JSON objects, is valid. It would also be valid to put the curly-braces expression into quotes.: 
 
-~~~
-{% raw %}var imageData = [{{imageData | compact | join: "," }}];{% endraw %}
-~~~
+	~~~
+	{% raw %}var imageData = [{{imageData | compact | join: "," }}];{% endraw %}
+	~~~
 
-Some interesting website links:
+Interesting website links:
 
 - [Plane Trails](https://codepen.io/chrisgannon/full/VwwRGQG)
 - [Robb Owen](https://robbowen.digital)
