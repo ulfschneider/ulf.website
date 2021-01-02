@@ -1,6 +1,8 @@
 ---
 title: Weeknotes 53
+draft: true
 ---
+
 - :target
 - https://3perf.com/blog/link-rels/
 - [Take five](https://madmurphy.github.io/takefive.css/), a semantically-consistent pure-CSS slide renderer.
