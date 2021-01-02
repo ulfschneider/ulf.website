@@ -18,9 +18,10 @@
     --fs-h1: var(--fs-2);
     --fs-h2: var(--fs);
     --fs-h3: var(--fs);
-    --fs-h4: var(--fs);    
+    --fs-h4: var(--fs);
     --pre-background: var(--neutral-5);
     --kbd-background: var(--neutral-5);
+    --link-focus-color: var(--primary-d1);
     --regular-width: 35rem;
 }
 
@@ -34,7 +35,7 @@ main,
 body>footer {
     max-width: var(--regular-width);
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
 }
 
 p,
@@ -66,7 +67,7 @@ a {
 }
 
 code {
-    letter-spacing: 3px;        
+    letter-spacing: 3px;
 }
 
 pre code {
@@ -152,7 +153,7 @@ h6:hover>.anchor {
     right: 0;
     transform: translateY(-100%);
     transition: transform .3s ease-out;
-    background: var(--primary);
+    background: var(--link-focus-color);
     color: var(--base-background);
     font-family: var(--meta-font-family);
     text-align: center;
@@ -183,10 +184,14 @@ h6:hover>.anchor {
     body>header>*,
     body>footer>*,
     main>figure,
-    main>header,
     main>.scroll-table {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
         max-width: var(--mid-width);
+    }
+    main>header {
+        max-width: calc(var(--mid-width) + var(--horizontal-rhythm));
+        margin-left: calc(-1 * var(--horizontal-rhythm));
+        margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
     }
     main .gallery {
         margin: 0 calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));

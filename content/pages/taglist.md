@@ -8,6 +8,7 @@ pagination:
 permalink: '{{site.blog}}{{ tag }}/'
 id: blog
 title: Blog
+notitle: true
 ---
 {%- include site-tags.html -%}
 
