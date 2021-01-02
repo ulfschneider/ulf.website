@@ -99,6 +99,7 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
+
 /* markdown-it toc */
 
 .anchor {
@@ -138,6 +139,7 @@ nav.table-of-contents>* {
     background: var(--neutral-5);
 }
 
+
 /* markdown-it scrolltable */
 
 .scroll-table {
@@ -150,21 +152,23 @@ nav.table-of-contents>* {
     margin-bottom: 0;
 }
 
+
 /* markdown-it footnotes */
 
-hr.footnotes-sep {    
+hr.footnotes-sep {
     width: var(--space-3);
     margin-right: auto;
     margin-left: 0;
-    border: 1px solid var(--base-color);   
-    margin-top: var(--space-2); 
+    border: 1px solid var(--base-color);
+    margin-top: var(--space-2);
 }
 
 hr.footnotes-sep::after {
     content: unset;
 }
 
-.footnote-ref a, .footnote-backref {
+.footnote-ref a,
+.footnote-backref {
     text-decoration: none;
 }
 
@@ -182,7 +186,7 @@ hr.footnotes-sep::after {
 }
 
 .footnotes-list li::before {
-    content: counter(footnote-counter) ;
+    content: counter(footnote-counter);
     font-weight: normal;
     vertical-align: super;
 }
