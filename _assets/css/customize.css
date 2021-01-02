@@ -156,7 +156,8 @@ hr.footnotes-sep {
     width: var(--space-3);
     margin-right: auto;
     margin-left: 0;
-    border: 1px solid var(--base-color);    
+    border: 1px solid var(--base-color);   
+    margin-top: var(--space-2); 
 }
 
 hr.footnotes-sep::after {
@@ -169,6 +170,11 @@ hr.footnotes-sep::after {
 
 .footnotes-list {
     counter-reset: footnote-counter;
+}
+
+.footnotes-list :target {
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
 }
 
 .footnotes-list li {

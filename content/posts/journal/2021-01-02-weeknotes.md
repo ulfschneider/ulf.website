@@ -1,7 +1,7 @@
 ---
 title: Weeknotes 53
-draft: true
 ---
+^[This is an inline footnote]
 
 - :target
 - https://3perf.com/blog/link-rels/
