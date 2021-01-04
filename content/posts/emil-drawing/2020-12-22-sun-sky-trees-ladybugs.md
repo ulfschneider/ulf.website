@@ -1,5 +1,5 @@
 ---
-title: Sun, heaven, trees, ladybugs
+title: Sun, sky, trees, ladybugs
 author: Emil
 ---
 ![](/img/IMG_0225D.jpg)
