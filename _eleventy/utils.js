@@ -138,13 +138,13 @@ module.exports = {
     },
 
     isoDate: function(d) {
-        return dayjs(d.getTime()).toISOString();
+        return dayjs(d).toISOString();
     },
 
     humanDate: function(d) {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
-            let dt = dayjs(d.getTime()).locale(locale);
+            let dt = dayjs(d).locale(locale);
             return dt.format('MMM Do, YYYY')
         } else {
             return '';
@@ -154,7 +154,7 @@ module.exports = {
     humanDateTime: function(d) {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
-            let dt = dayjs(d.getTime()).locale(locale);
+            let dt = dayjs(d).locale(locale);
             return dt.format('ddd, MMM Do, YYYY hh:mm a Z');
         } else {
             return '';
