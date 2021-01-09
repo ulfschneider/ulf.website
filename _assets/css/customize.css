@@ -72,6 +72,11 @@ pre code {
     letter-spacing: unset;
 }
 
+figure pre {
+    display: inline-block;
+    min-width: var(--regular-width);
+}
+
 button,
 input[type=submit],
 input[type=reset] {
