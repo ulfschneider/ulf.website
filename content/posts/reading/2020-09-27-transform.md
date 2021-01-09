@@ -3,11 +3,16 @@ title: Transform
 subtitle: A Rebel´s Guide for Digital Transformation
 refer: Gerry McGovern, Book, 2016
 ---
-![Cover of Gerry McGovern´s book "Transform"](/img/gerry_mcgovern_transform.jpg){.float-left .mrr-1 .mrb } The essence of digital transformation is about moving from organization-centric (old model) to customer-centric. Customer-centric means: make it as simple as possible for the customer to complete his task – and not: present a website with a carousel of banners from marketing and management. A carousel can easily deal with *5 ego requests* from different departments within the organization. But that´s not of interest to the customer.
+<figure class="split">
+<img src="/img/gerry-mcgovern-transform.jpg" alt="">
+<figcaption>Cover of Gerry McGovern´s book "Transform"</figcaption>
+</figure>
+
+The essence of digital transformation is about moving from organization-centric (old model) to customer-centric. Customer-centric means: make it as simple as possible for the customer to complete his task – and not: present a website with a carousel of banners from marketing and management. A carousel can easily deal with *5 ego requests* from different departments within the organization. But that´s not of interest to the customer.
 
 If you want to empower customers with information and strive to make everything as simple as possible, [Transform](https://gerrymcgovern.com/books/transform-a-rebels-guide-for-digital-transformation/) by Gerry McGovern might be of help. It has real-life examples and will give you a short introduction into a method called *Top-Tasks,* which can be used as a guideline to simplify the offerings of your organization to its customers. 
 
-There is also An Event Apart talk available, in whitch Gerry is explaining his point of view: [The Customer-Obsessed Professional](https://vimeo.com/user31596242). It´s worth invisting the hour!
+There is also An Event Apart talk available, in whitch Gerry is explaining his point of view: [The Customer-Obsessed Professional](https://vimeo.com/user31596242). It´s worth investing the hour!
 
 What I´m taking from the book:
 

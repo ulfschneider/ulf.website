@@ -1,6 +1,11 @@
 ---
 title: Resilient Web Design ★
 ---
+<figure class="split">
+<img src="/img/jeremy-keith-resilient-web-design.png" alt="">
+<figcaption>Cover of Jeremy Keith´s book "Resilient Web Design"</figcaption>
+</figure>
+
 [Resilient Web Design](https://resilientwebdesign.com) by [Jeremy Keith](https://resilientwebdesign.com/author/) is a pleasure to read. Jeremy has put together context and concept for a deep understanding of the web. The writing, as well as the presentation, is with style. It´s inviting the reader. Each chapter has valuable links which by themselves are a pleasure to follow. The book is available online, free, and because Jeremy made it a *Progressive Web App*, you can even read it offline! 
 
 *Resilient Web Design* requires to acknowledge and embrace the unpredictability of the web.
