@@ -5,7 +5,7 @@ title: I am not your Negro ★
 <footer>James Baldwin</footer>
 </blockquote>
 
-<figure class="split">
+<figure class="rg:split">
 <figcaption><a href="https://fsk12.bpb.de/mediathek/283417/i-am-not-your-negro">I am not your Negro</a> is a documentary made by Raoul Peck based on notes of James Baldwin. It is provided in German language by Bundeszentrale für politische Bildung.</figcaption>
 <img src="/img/i-am-not-your-negro.jpg" alt="">
 </figure>

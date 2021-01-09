@@ -1,7 +1,7 @@
 ---
 title: Resilient Web Design ★
 ---
-<figure class="split">
+<figure class="rg:split">
 <img src="/img/jeremy-keith-resilient-web-design.png" alt="">
 <figcaption>Cover of Jeremy Keith´s book "Resilient Web Design"</figcaption>
 </figure>

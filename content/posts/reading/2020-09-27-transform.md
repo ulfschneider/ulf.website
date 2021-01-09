@@ -3,7 +3,7 @@ title: Transform
 subtitle: A Rebel´s Guide for Digital Transformation
 refer: Gerry McGovern, Book, 2016
 ---
-<figure class="split">
+<figure class="rg:split">
 <img src="/img/gerry-mcgovern-transform.jpg" alt="">
 <figcaption>Cover of Gerry McGovern´s book "Transform"</figcaption>
 </figure>
