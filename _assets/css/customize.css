@@ -50,13 +50,10 @@ h5,
 h6,
 td,
 caption,
+figcaption,
 blockquote,
 hr {
     max-width: var(--regular-width);
-}
-
-figcaption {
-    max-width: var(--small-width);
 }
 
 blockquote::before {
