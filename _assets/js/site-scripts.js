@@ -21,7 +21,7 @@ function maintainBackToStartVisibility() {
     let backToStart = document.getElementById('back-to-start');
     if (backToStart) {
         let windowHeight = window.innerHeight;
-        let documentHeight = document.body.clientHeight;
+        let documentHeight = document.body.scrollHeight;
 
         if (windowHeight * 1.5 < documentHeight) {
             backToStart.style.display = '';
