@@ -75,6 +75,7 @@ pre code {
 figure pre {
     display: inline-block;
     min-width: var(--regular-width);
+    margin: 0;
 }
 
 button,
