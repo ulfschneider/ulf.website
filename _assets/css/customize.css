@@ -26,11 +26,6 @@
     --hr-content: "*  *  *";
 }
 
-body {
-    padding-left: var(--space-2);
-    padding-right: var(--space-2);
-}
-
 body>header,
 main,
 body>footer {
@@ -217,11 +212,7 @@ hr.footnotes-sep::after {
     transform: translateY(0);
 }
 
-@media screen and (max-width: 800px) {
-    body {
-        padding-left: var(--space);
-        padding-right: var(--space);
-    }
+@media (--max-md) {
     blockquote,
     ul,
     ol {
@@ -229,7 +220,7 @@ hr.footnotes-sep::after {
     }
 }
 
-@media screen and (min-width: 801px) {
+@media (--md) {
     body>header>*,
     body>footer>*,
     main>figure,
@@ -247,8 +238,7 @@ hr.footnotes-sep::after {
     }
 }
 
-@media screen and (hover: none) and (pointer: coarse) {
-    /* smartphones, touchscreens */
+@media (--touch-device) {
     nav {
         line-height: var(--lh-4);
     }
