@@ -6,7 +6,8 @@
 
 body {
     margin: 0;
-    width: 100%
+    width: 100%;
+    counter-reset: h2-counter h3-counter h4-counter h5-counter h6-counter
 }
 
 iframe {
@@ -3145,7 +3146,17 @@ textarea:focus+label {
     --mrt-list: var(--vertical-rhythm);
     --mrb-list: var(--vertical-rhythm);
     --list-item-type: "—";
-    --ol-counter: counters(ol-counter, "-", decimal-leading-zero) "\0000a0"
+    --ol-counter-delimiter: "-";
+    --ol-counter-type: decimal-leading-zero;
+    --h-counter-type: decimal;
+    --h-counter-delimiter: ".";
+    --ol-counter: counters(ol-counter, var(--ol-counter-delimiter), var(--ol-counter-type)) "\0000a0\0000a0";
+    --h-counter: counters(ol-counter, var(--h-counter-delimiter), var(--h-counter-type)) "\0000a0\0000a0";
+    --h2-counter: counter(h2-counter) "\0000a0\0000a0";
+    --h3-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) "\0000a0\0000a0";
+    --h4-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) "\0000a0\0000a0";
+    --h5-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) "\0000a0\0000a0";
+    --h6-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) var(--h-counter-delimiter) counter(h6-counter) "\0000a0\0000a0"
 }
 
 dl {
@@ -3221,10 +3232,6 @@ ul li::before {
     content: var(--list-item-type)
 }
 
-ol ol li::before {
-    padding-right: var(--space)
-}
-
 ol ol li::before,
 ol ul li::before,
 ul ol li::before,
@@ -3232,6 +3239,34 @@ ul ul li::before {
     margin-left: calc(var(--horizontal-rhythm)*-1);
     min-width: var(--horizontal-rhythm);
     padding-left: 0
+}
+
+h1 {
+    counter-reset: h2-counter h3-counter h4-counter h5-counter h6-counter
+}
+
+h2 {
+    counter-increment: h2-counter;
+    counter-reset: h3-counter h4-counter h5-counter h6-counter
+}
+
+h3 {
+    counter-increment: h3-counter;
+    counter-reset: h4-counter h5-counter h6-counter
+}
+
+h4 {
+    counter-increment: h4-counter;
+    counter-reset: h5-counter h6-counter
+}
+
+h5 {
+    counter-increment: h5-counter;
+    counter-reset: h6-counter
+}
+
+h6 {
+    counter-increment: h6-counter
 }
 
 @media (max-width:900px) {
