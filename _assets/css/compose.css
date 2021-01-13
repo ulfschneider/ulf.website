@@ -37,6 +37,7 @@ iframe {
     --code-font-family: var(--mono-font-family);
     --pre-border: var(--border-w-default) dotted var(--pre-border-color);
     --blockquote-font-style: italic;
+    --blockquote-prefix-font-size: var(--fs-2);
     --link-text-decoration: underline;
     --font-variant-numeric: normal;
     --vertical-rhythm: var(--space);
@@ -327,7 +328,6 @@ kbd {
     font-family: var(--meta-font-family);
     white-space: nowrap;
     text-align: center;
-    display: inline-block;
     min-width: var(--space)
 }
 
@@ -474,7 +474,7 @@ blockquote::before {
     margin-left: calc(var(--horizontal-rhythm)*-1);
     position: absolute;
     line-height: 1;
-    font-size: var(--fs-5);
+    font-size: var(--blockquote-prefix-font-size);
     color: var(--blockquote-prefix-color)
 }
 
@@ -3152,11 +3152,11 @@ textarea:focus+label {
     --h-counter-delimiter: ".";
     --ol-counter: counters(ol-counter, var(--ol-counter-delimiter), var(--ol-counter-type)) "\0000a0\0000a0";
     --h-counter: counters(ol-counter, var(--h-counter-delimiter), var(--h-counter-type)) "\0000a0\0000a0";
-    --h2-counter: counter(h2-counter) "\0000a0\0000a0";
-    --h3-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) "\0000a0\0000a0";
-    --h4-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) "\0000a0\0000a0";
-    --h5-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) "\0000a0\0000a0";
-    --h6-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) var(--h-counter-delimiter) counter(h6-counter) "\0000a0\0000a0"
+    --h2-counter: counter(h2-counter) "\0000a0";
+    --h3-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) "\0000a0";
+    --h4-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) "\0000a0";
+    --h5-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) "\0000a0";
+    --h6-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) var(--h-counter-delimiter) counter(h6-counter) "\0000a0"
 }
 
 dl {
