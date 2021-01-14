@@ -28,4 +28,20 @@
             </tr>
         {%- endif -%}
     {%- endfor -%}
+    {%- if site.backToTop and site.backToTop.kbd and site.backToTop.id -%}
+        <tr>
+            <td>
+                <kbd>{{site.backToTop.kbd}}</kbd>
+            </td>
+            <td>
+                <a class="no-deco" href="#{{site.backToTop.id}}">
+                    {%- if site.backToTop.label -%}
+                        {{site.backToTop.label}}
+                    {%- else -%}
+                        Back to Top
+                    {%- endif -%}
+                </a>
+            </td>
+        </tr>
+    {%- endif -%}
 </table>

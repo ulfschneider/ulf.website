@@ -13,7 +13,16 @@
 		</ul>
 	</nav>
 
-	<nav id="back-to-start" style="display:none;" class="block right mrt-1">
-		<a  href="#start" class="meta no-wrap">Back to Top</a>
-	</nav>
+	{%- if site.backToTop and site.backToTop.id %}
+		<div id="back-to-start" class="mry right meta no-wrap" style="display:none;" >
+			<a  href="#{{site.backToTop.id}}">
+				{%- if site.backToTop.label -%}
+					{{site.backToTop.label}}
+				{%- else -%}
+					  Back to Top
+					{%- endif -%}
+			</a>
+		</div>
+	{%- endif %}
+
 </footer>

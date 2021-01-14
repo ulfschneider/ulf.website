@@ -9,17 +9,22 @@
         }
 
         if (!(event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)) {
-            if (event.key == '{{site.searchKey}}') {
+            if ('{{site.search}}' && '{{site.search.url}}' && event.key == '{{site.search.kbd}}') {
                 let queryField = document.querySelector('#search-query');
                 if (queryField && queryField != focus) {
                     queryField.focus();
                     event.preventDefault();
                     return;
                 } else if (!queryField) {
-                    location.href = {{site.search}};
+                    location.href = {{site.search.url}};
                     event.preventDefault();
                     return;
                 }
+            }
+
+            if ('{{site.backToTop}}' && '{{site.backToTop.id}}' && event.key == '{{site.backToTop.kbd}}') {
+                location.href = '#{{site.backToTop.id}}';
+                event.preventDefault();
             }
 
             for (let nav of {{site.mainnav}}) {

@@ -57,7 +57,7 @@ module.exports = {
             label: 'About',
             url: '/about/',
             id: 'about',
-            kbd: 't'
+            kbd: 'u'
 
         }
     ],
@@ -68,11 +68,18 @@ module.exports = {
         'reading',
         'tools'
     ],
-
-    search: '/search/',
+    backToTop: {
+        label: 'Back to Top',
+        id: 'start',
+        kbd: 't'
+    },
+    search: {
+        url: '/search/',
+        kbd: 's'
+    },
     blog: '/blog/',
     images: '/images/',
     rss: '/rss.xml',
-    searchKey: 's',
+
     time: new Date()
 }
