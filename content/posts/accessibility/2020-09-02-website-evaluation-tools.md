@@ -1,12 +1,15 @@
 ---
 title: Website evaluation tools
 ---
-Any accessible website must 
+[[toc]]
+
+## Any accessible website must 
 
 - use semantic-, standards-based HTML,
 - apply accessibility best pratices (which is a wide field), and
 - be fast.
 
+## Tools
 The table below is listing tools to check a website for compliance in the named areas.
 
 <table>
