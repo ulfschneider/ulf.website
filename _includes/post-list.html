@@ -60,3 +60,11 @@
     </article>
 
 {%- endfor -%}
+
+{%- if liveContent.length > limit -%}
+    {%- if tag != nil -%}
+        <a href="{{site.blog}}{{tag}}/">There are more articles</a>
+    {%- else -%}
+        <a href="{{site.blog}}">There are more articles</a>
+    {%- endif -%}
+{%- endif -%}

@@ -1,4 +1,6 @@
 const { dest, src } = require('gulp');
+const rename = require('gulp-rename');
+
 const PluginError = require('plugin-error');
 
 const sharp = require('sharp');
@@ -18,7 +20,7 @@ const imageError = err => {
     this.emit('error', new PluginError(PLUGIN_NAME, 'There is an error while processing the image' + err));
 }
 
-const deriveOperations = function(metadata) {
+const deriveImageOperations = function(metadata) {
     let operations = [];
     if (MAX_WIDTH > 0 && metadata.width > MAX_WIDTH ||
         MAX_HEIGHT > 0 && metadata.height > MAX_HEIGHT) {
@@ -46,7 +48,7 @@ const imageTransformer = (file, encoding, callback) => {
                     //do nothing with a gif             
                     callback(null, file);
                 } else {
-                    let operations = deriveOperations(metadata);
+                    let operations = deriveImageOperations(metadata);
 
                     for (let op of operations) {
                         image = image[op.name].apply(image, op.arguments);
@@ -65,11 +67,12 @@ const imageTransformer = (file, encoding, callback) => {
 }
 
 
+
 const processingImages = () => {
     console.log(`Processing images from ${SOURCE} into ${DEST}`);
     console.log(`imgMaxWidth=${MAX_WIDTH}, imgMaxHeight=${MAX_HEIGHT}, and jpegQuality=${JPEG_QUALITY} (0-100).`);
     console.log(`Change these settings in _data/site.js if desired. GIF files are ignored to be optimized.`);
-    return src(SOURCE)
+    return src(SOURCE, { nodir: true })
         .pipe(through.obj(imageTransformer))
         .pipe(dest(DEST));
 };
