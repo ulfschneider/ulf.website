@@ -10,7 +10,7 @@ layout: image
 <figure class="rg:split">
 <figure>
 <img src="/img/IMG_0262X.jpg">
-<figcaption>Typical Paderbon plateau</figcaption>
+<figcaption>Typical Paderborn plateau</figcaption>
 </figure>
 <figure>
 <img src="/img/IMG_0260.jpg">
