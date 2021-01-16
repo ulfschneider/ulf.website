@@ -10,4 +10,4 @@ title: Weeknotes 02
   {% endhighlight %}	
 - [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/) by Malte Ubl.
 - [Glyphs](https://glyphsapp.com) *"is a Mac font editor that puts you in control: quickly draw high-precision vectors, efficiently reuse shapes, and easily manage any number of letters, figures and symbols."* The editor is used by Rasmus Andersson for the creation of [Inter](https://www.figma.com/blog/the-birth-of-inter/), but it catched my attention while reading the
-- very interesting article [A font for the people](https://medium.com/@liv__king/a-font-for-the-people-cb426527ece4) by Olivia King, which [Mark Boulton](https://markboulton.co.uk) had in his typespecimens newsletter.
+- very interesting article "[A font for the people](https://medium.com/@liv__king/a-font-for-the-people-cb426527ece4)" by Olivia King, which [Mark Boulton](https://markboulton.co.uk) had in his typespecimens newsletter.
