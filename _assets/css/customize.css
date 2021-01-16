@@ -239,6 +239,9 @@ hr.footnotes-sep::after {
     h3::before {
         margin-left: 0;
     }
+    .full-bleed {
+        padding: 0 var(--space);
+    }
 }
 
 @media (--md) {
@@ -256,6 +259,9 @@ hr.footnotes-sep::after {
     }
     main .gallery {
         margin: 0 calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
+    }
+    .full-bleed {
+        padding: 0 var(--space-2);
     }
 }
 

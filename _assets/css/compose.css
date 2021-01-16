@@ -3526,49 +3526,49 @@ small {
 }
 
 @media (min-width:400px) {
-    :root {
+     :root {
         font-size: var(--font-size-breakpoint-sm)
     }
 }
 
 @media (--sm) {
-    :root {
+     :root {
         font-size: var(--font-size-breakpoint-sm)
     }
 }
 
 @media (min-width:600px) {
-    :root {
+     :root {
         font-size: var(--font-size-breakpoint-rg)
     }
 }
 
 @media (--rg) {
-    :root {
+     :root {
         font-size: var(--font-size-breakpoint-rg)
     }
 }
 
 @media (min-width:900px) {
-    :root {
+     :root {
         font-size: var(--font-size-breakpoint-md)
     }
 }
 
 @media (--md) {
-    :root {
+     :root {
         font-size: var(--font-size-breakpoint-md)
     }
 }
 
 @media (min-width:1400px) {
-    :root {
+     :root {
         font-size: var(--font-size-breakpoint-lg)
     }
 }
 
 @media (--lg) {
-    :root {
+     :root {
         font-size: var(--font-size-breakpoint-lg)
     }
 }
@@ -4369,7 +4369,8 @@ img {
     max-width: 100%;
     vertical-align: top;
     font-family: var(--meta-font-family);
-    font-size: var(--fs-d1)
+    font-size: var(--fs-d1);
+    background-color: var(--neutral-5)
 }
 
 img,
@@ -4698,6 +4699,11 @@ th:last-child {
     margin-left: calc(50% - 50vw)
 }
 
+.full-bleed>* {
+    margin-left: auto;
+    margin-right: auto
+}
+
 .split {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -4900,6 +4906,10 @@ th:last-child {
         width: 100vw;
         margin-left: calc(50% - 50vw)
     }
+    .sm\:full-bleed>* {
+        margin-left: auto;
+        margin-right: auto
+    }
     .sm\:split {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -5073,6 +5083,10 @@ th:last-child {
     .sm\:full-bleed {
         width: 100vw;
         margin-left: calc(50% - 50vw)
+    }
+    .sm\:full-bleed>* {
+        margin-left: auto;
+        margin-right: auto
     }
     .sm\:split {
         display: grid;
@@ -5248,6 +5262,10 @@ th:last-child {
         width: 100vw;
         margin-left: calc(50% - 50vw)
     }
+    .rg\:full-bleed>* {
+        margin-left: auto;
+        margin-right: auto
+    }
     .rg\:split {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -5421,6 +5439,10 @@ th:last-child {
     .rg\:full-bleed {
         width: 100vw;
         margin-left: calc(50% - 50vw)
+    }
+    .rg\:full-bleed>* {
+        margin-left: auto;
+        margin-right: auto
     }
     .rg\:split {
         display: grid;
@@ -5596,6 +5618,10 @@ th:last-child {
         width: 100vw;
         margin-left: calc(50% - 50vw)
     }
+    .md\:full-bleed>* {
+        margin-left: auto;
+        margin-right: auto
+    }
     .md\:split {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -5769,6 +5795,10 @@ th:last-child {
     .md\:full-bleed {
         width: 100vw;
         margin-left: calc(50% - 50vw)
+    }
+    .md\:full-bleed>* {
+        margin-left: auto;
+        margin-right: auto
     }
     .md\:split {
         display: grid;
@@ -5944,6 +5974,10 @@ th:last-child {
         width: 100vw;
         margin-left: calc(50% - 50vw)
     }
+    .lg\:full-bleed>* {
+        margin-left: auto;
+        margin-right: auto
+    }
     .lg\:split {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -6117,6 +6151,10 @@ th:last-child {
     .lg\:full-bleed {
         width: 100vw;
         margin-left: calc(50% - 50vw)
+    }
+    .lg\:full-bleed>* {
+        margin-left: auto;
+        margin-right: auto
     }
     .lg\:split {
         display: grid;
