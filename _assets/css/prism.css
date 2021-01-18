@@ -56,11 +56,11 @@ code[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: var(--accent-two-d2);
+    color: var(--accent-two-d3);
 }
 
 .token.punctuation {
-    color: var(--neutral-d2);
+    color: var(--neutral-d1);
 }
 
 .token.property,
@@ -79,7 +79,7 @@ code[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: var(--accent-three-d2);
+    color: var(--accent-three-d3);
 }
 
 .token.operator,
@@ -103,7 +103,7 @@ code[class*="language-"] {
 .token.regex,
 .token.important,
 .token.variable {
-    color: #ee9900;
+    color: var(--accent-one-d2);
 }
 
 .token.important,
