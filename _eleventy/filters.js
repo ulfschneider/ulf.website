@@ -1,5 +1,6 @@
 const lunr = require("lunr");
 const utils = require("./utils.js");
+const site = require("../_data/site.js");
 
 module.exports = {
 
@@ -13,6 +14,22 @@ module.exports = {
 
     rssAble: function(collection) {
         return collection ? collection.filter(utils.isRssAble) : collection;
+    },
+
+    authorEmail: function(page) {
+        if (page && page.data.author && page.data.author.email) {
+            return page.data.author.email;
+        } else if (site.ownership && site.ownership.email) {
+            return site.ownership.email;
+        }
+    },
+
+    authorName: function(page) {
+        if (page && page.data.author && page.data.author.name) {
+            return page.data.author.name;
+        } else if (site.ownership && site.ownership.name) {
+            return site.ownership.name;
+        }
     },
 
     contentIndex: function(collection) {

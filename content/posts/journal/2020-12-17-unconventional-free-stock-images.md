@@ -15,3 +15,5 @@ A list of unconventional and free stock images by Mel Choyce in her [CSS-Tricks 
 - [NASA](https://images.nasa.gov)
 - [Centers for Disease Control and Prevention](https://css-tricks.com/unconventional-stock-image-sources/) (e.g. Corona virus visualizations)
 - [Open Parks Network](https://openparksnetwork.org) (nature photos)
+
+Also, there is [Old Book Illustrations](https://www.oldbookillustrations.com), wich for example Robin Rendle is using in his [essay on newsletters](https://www.robinrendle.com/essays/newsletters).

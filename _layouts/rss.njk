@@ -8,24 +8,26 @@
     <updated>{{ collections.liveSiteTagContent | rssLastUpdatedDate }}</updated>
   {%- endif -%}
   <id>{{ site.url }}</id>
-  <author>
-    <name>{{ site.ownership.name }}</name>
-    <email>{{ site.ownership.email }}</email>
-  </author>
-  {%- for post in collections.liveSiteTagContent -%}
-    {%- if post.data.norss == nil -%}
-    {%- set absolutePostUrl -%}{{ site.url }}{{ post.url | url }}{%- endset -%}
-    <entry>
-      <title>{{ post.data.title }}</title>
-      <link href="{{ absolutePostUrl }}"/>
-      <updated>{{ post.date | rssDate }}</updated>
-      <id>{{ absolutePostUrl }}</id>
-      <content type="html">
-        <![CDATA[
-      {{ post.templateContent | safe }}
-    ]]>
-      </content>
-    </entry>
+  {%- if site.ownership -%}
+    <author>
+      <name>{{ site.ownership.name }}</name>
+      <email>{{ site.ownership.email }}</email>
+    </author>
+  {%- endif -%}
+  {%- for p in collections.liveSiteTagContent -%}
+    {%- if p.data.norss == nil -%}
+      {%- set absolutePostUrl -%}{{ site.url }}{{ p.url | url }}{%- endset -%}
+      {%- set authorEmail -%}{{ p | authorEmail }}{%- endset -%}
+      <entry>
+        <title>{{ p.data.title }}</title>
+        <link href="{{ absolutePostUrl }}"/>
+        <updated>{{ p.date | rssDate }}</updated>
+        <id>{{ absolutePostUrl }}</id>
+        <content type="html">
+          <![CDATA[{{ p.templateContent | safe }}           
+          {%- if authorEmail -%}<p><a href="mailto:{{authorEmail}}">Reply via email</a></p>{%- endif -%}]]>
+        </content>
+      </entry>
     {%- endif -%}
   {%- endfor %}
 </feed>

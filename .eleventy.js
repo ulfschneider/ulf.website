@@ -92,6 +92,8 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('humanDate', filters.humanDate);
     eleventyConfig.addFilter('humanDateTime', filters.humanDateTime);
     eleventyConfig.addFilter('isoDate', filters.isoDate);
+    eleventyConfig.addFilter('authorEmail', filters.authorEmail);
+    eleventyConfig.addFilter('authorName', filters.authorName);
 }
 
 function addBrowserSync404(eleventyConfig) {
