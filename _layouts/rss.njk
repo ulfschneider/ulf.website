@@ -25,7 +25,7 @@
         <id>{{ absolutePostUrl }}</id>
         <content type="html">
           <![CDATA[{{ p.templateContent | safe }}           
-          {%- if authorEmail -%}<p><a href="mailto:{{authorEmail}}">Reply via email</a></p>{%- endif -%}]]>
+          {%- if authorEmail -%}<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>{%- endif -%}]]>
         </content>
       </entry>
     {%- endif -%}
