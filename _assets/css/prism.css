@@ -56,7 +56,7 @@ code[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: var(--accent-two-d3);
+    color: var(--accent-two-d4);
 }
 
 .token.punctuation {
@@ -79,7 +79,7 @@ code[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: var(--accent-three-d3);
+    color: var(--accent-three-d4);
 }
 
 .token.operator,
