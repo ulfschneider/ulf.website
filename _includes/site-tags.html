@@ -1,27 +1,29 @@
-<nav class="meta mry-1 mrln-d2 mrrn-d2 site-tags">
-    <ul class="mry-0 reset">
-        <li class="inline-block mr-d2">
-            {%- if tag == nil -%}
-                <span class="bg-link-focus-color white pd-d2 rounded" aria-current="page" >all</span>
-            {%- else -%}
-                <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{site.blog}}">all</a>
-            {%- endif -%}
-        </li>
-        {%- if tag != nil -%}
-            {%-assign currentTags = collections.usedSiteTags | concat: tag | uniq | compact -%}
-        {%- else - %}
-            {%-assign currentTags = collections.usedSiteTags -%}
-        {%- endif -%}
-        {%- for siteTag in currentTags -%}
-            {%- if tag != siteTag -%}
-                <li class="inline-block mr-d2">
-                    <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{site.blog}}{{siteTag}}/">{{siteTag}}</a>
-                </li>
-            {%- else -%}
-                <li class="inline-block mr-d2">
-                    <span class="bg-link-focus-color white pd-d2 rounded no-deco" aria-current="page" >{{siteTag}}</span>
-                </li>
-            {%- endif -%}
-        {%- endfor -%}
-    </ul>
-</nav>
+{%- if tag != nil -%}
+    {%-assign currentTags = collections.usedSiteTags | concat: tag | uniq | compact -%}
+{%- else - %}
+    {%-assign currentTags = collections.usedSiteTags -%}
+{%- endif -%}
+{%- if currentTags.length -%}
+    <nav class="meta mrln-d2 mrrn-d2 site-tags">
+        <ul class="mry-0 reset">
+            <li class="inline-block mr-d2">
+                {%- if tag == nil and page.url == site.blog -%}
+                    <span class="bg-link-focus-color white pd-d2 rounded" aria-current="page" >all</span>
+                {%- else -%}
+                    <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{site.blog}}">all</a>
+                {%- endif -%}
+            </li>
+            {%- for siteTag in currentTags -%}
+                {%- if tag != siteTag -%}
+                    <li class="inline-block mr-d2">
+                        <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{site.blog}}{{siteTag}}/">{{siteTag}}</a>
+                    </li>
+                {%- else -%}
+                    <li class="inline-block mr-d2">
+                        <span class="bg-link-focus-color white pd-d2 rounded no-deco" aria-current="page" >{{siteTag}}</span>
+                    </li>
+                {%- endif -%}
+            {%- endfor -%}
+        </ul>
+    </nav>
+{%- endif -%}

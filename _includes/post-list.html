@@ -63,8 +63,14 @@
 
 {%- if liveContent.length > limit -%}
     {%- if tag != nil -%}
-        <a href="{{site.blog}}{{tag}}/">There are more articles</a>
+        {%-assign currentTags = collections.usedSiteTags | concat: tag | uniq | compact -%}
+    {%- else - %}
+        {%-assign currentTags = collections.usedSiteTags -%}
+    {%- endif -%}
+    {%- if currentTags.length -%}
+        <span>There are more articles. Choose a tag:</span>
+        {%- include site-tags.html tag:tag-%}
     {%- else -%}
         <a href="{{site.blog}}">There are more articles</a>
-    {%- endif -%}
+    {%- endif %}
 {%- endif -%}

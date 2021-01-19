@@ -10,6 +10,8 @@ id: blog
 title: Blog
 notitle: true
 ---
-{%- include site-tags.html -%}
+<div class="mry-2">
+{% include site-tags.html %}
+</div>
 
 {{collections.liveContent | tagIntro: tag }}
