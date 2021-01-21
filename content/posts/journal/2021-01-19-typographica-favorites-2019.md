@@ -1,5 +1,5 @@
 ---
-title: Typographica favorite typefaces of 2019
+title: Public Sans, Arvana, and Brucker
 ---
 An [interesting compilation of types](https://typographica.org/features/our-favorite-typefaces-of-2019/) from Typographica. Resonating:
 
