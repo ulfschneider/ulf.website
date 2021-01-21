@@ -44,8 +44,8 @@ const imageTransformer = (file, encoding, callback) => {
         image = sharp(file.contents);
         image.metadata()
             .then(metadata => {
-                if (metadata.format == 'gif') {
-                    //do nothing with a gif             
+                if (metadata.format == 'gif' || metadata.format == 'svg') {
+                    //do nothing with a gif/svg             
                     callback(null, file);
                 } else {
                     let operations = deriveImageOperations(metadata);
