@@ -488,7 +488,8 @@ blockquote::before {
 
 a {
     color: var(--link-color);
-    text-decoration: var(--link-text-decoration)
+    text-decoration: var(--link-text-decoration);
+    transition: color .1s ease-out
 }
 
 a:not(table a) {
@@ -6338,6 +6339,7 @@ th:last-child {
     --mark-background: #ff0;
     --kbd-background: var(--pre-background);
     --kbd-border-color: var(--form-field-border-color);
+    --link-color: var(--base-color);
     --text-decoration-color: unset;
     --code-background: transparent;
     --code-color: var(--base-color);
@@ -6350,7 +6352,7 @@ th:last-child {
     --blockquote-prefix-color: var(--li-prefix-color);
     --blockquote-background: transparent;
     --blockquote-border: unset;
-    --link-color: var(--base-color);
+    --link-color: inherit;
     --link-focus-color: var(--primary);
     --link-hover-color: var(--link-focus-color);
     --link-active-color: var(--link-focus-color);

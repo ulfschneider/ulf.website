@@ -51,10 +51,6 @@ hr {
     max-width: var(--regular-width);
 }
 
-a {
-    transition: color .1s ease-out;
-}
-
 code {
     letter-spacing: 3px;
 }
