@@ -106,7 +106,7 @@
             index += increment;
             history.replaceState(null, '', location.pathname + '?index=' + index);
             loadImages({start: index});
-            if (index + increment > imageData.length) {
+            if (index + increment >= imageData.length) {
                 loadMore.style = 'display:none;';
             }
         });
