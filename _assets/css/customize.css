@@ -103,6 +103,8 @@ h6:hover>.anchor {
     display: inline;
 }
 
+
+/*
 h2::before {
     content: var(--h2-counter);
     color: var(--neutral);
@@ -122,6 +124,7 @@ h3::before {
     font-weight: normal;
     font-size: larger;
 }
+*/
 
 nav.table-of-contents {
     margin: var(--vertical-rhythm) 0;
@@ -231,10 +234,11 @@ hr.footnotes-sep::after {
     ol {
         margin-left: var(--horizontal-rhythm);
     }
+    /*
     h2::before,
     h3::before {
         margin-left: 0;
-    }
+    }*/
     .full-bleed {
         padding: 0 var(--space);
     }
