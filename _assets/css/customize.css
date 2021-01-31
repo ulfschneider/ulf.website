@@ -258,7 +258,7 @@ hr.footnotes-sep::after {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
     }
     main .gallery {
-        margin: 0 calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
+        margin: 0 calc(-0.5 * (var(--mid-width) - var(--regular-width)) + var(--space-2));
     }
     .full-bleed {
         padding: 0 var(--space-2);
