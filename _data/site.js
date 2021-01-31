@@ -64,9 +64,21 @@ module.exports = {
     tagnav: [
         'accessibility',
         'agile',
+        {
+            tag: 'emil-drawing',
+            url: '/images/emil-drawing/'
+        },
         'journal',
         'reading',
-        'tools'
+        'tools',
+        {
+            tag: '*',
+            url: '/blog/*/'
+        },
+        {
+            tag: '',
+            url: '/blog/'
+        }
     ],
     backToTop: {
         label: 'Back to Top',

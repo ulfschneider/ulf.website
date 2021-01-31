@@ -58,8 +58,9 @@ function addCollections(eleventyConfig) {
 
     eleventyConfig.addCollection('usedSiteTags', collection => {
         let usedTags = utils.extractTags(collection);
-        if (site.tagnav && site.tagnav.length) {
-            return site.tagnav.filter(tag => usedTags.includes(tag));
+        let siteTags = utils.siteTags();
+        if (siteTags.length) {
+            return siteTags.filter(tag => usedTags.includes(tag));
         } else {
             return usedTags;
         }
@@ -94,6 +95,7 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('isoDate', filters.isoDate);
     eleventyConfig.addFilter('authorEmail', filters.authorEmail);
     eleventyConfig.addFilter('authorName', filters.authorName);
+    eleventyConfig.addFilter('tagUrl', filters.tagUrl);
 }
 
 function addBrowserSync404(eleventyConfig) {

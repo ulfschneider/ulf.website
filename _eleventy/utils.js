@@ -22,6 +22,21 @@ dayjs.extend(timezone);
 
 const site = require('../_data/site.js');
 
+function siteTagsFromTagNav() {
+    let siteTags = site.tagnav;
+    if (!siteTags || siteTags && !siteTags.length) {
+        return [];
+    } else {
+        return siteTags.map(v => {
+            if (typeof v == 'string' || v instanceof String) {
+                return v;
+            } else {
+                return v.tag;
+            }
+        });
+    }
+}
+
 module.exports = {
 
     excerptFromItem: function(item) {
@@ -80,9 +95,46 @@ module.exports = {
             item.data.draft !== 'yes';
     },
 
-    hasSiteTag: function(item) {
+    tagUrl: function(tag) {
+        let standard = {
+            tag: '*',
+            url: '*'
+        };
+        let empty = {
+            tag: '',
+            url: ''
+        };
         let siteTags = site.tagnav;
-        if (!siteTags || siteTags && !siteTags.length) {
+        if (siteTags) {
+            for (let v of siteTags) {
+                if (typeof v != 'string' && !(v instanceof String)) {
+                    if (v.tag == tag) {
+                        return v.url;
+                    }
+                    if (v.tag == '*') {
+                        standard = v;
+                    }
+                    if (!v.tag) {
+                        empty = v;
+                    }
+                }
+            }
+        }
+
+        if (tag == '') {
+            return empty.url;
+        } else {
+            return standard.url.replace(/\*/g, tag);
+        }
+    },
+
+    siteTags: function() {
+        return siteTagsFromTagNav();
+    },
+
+    hasSiteTag: function(item) {
+        let siteTags = siteTagsFromTagNav();
+        if (!siteTags.length) {
             return true;
         }
         if (item.data.tags) {

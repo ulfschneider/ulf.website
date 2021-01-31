@@ -107,6 +107,10 @@ module.exports = {
 
     isoDate: function(d) {
         return utils.isoDate(d);
+    },
+
+    tagUrl: function(tag) {
+        return utils.tagUrl(tag);
     }
 
 }

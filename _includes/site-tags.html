@@ -16,7 +16,7 @@
             {%- for siteTag in currentTags -%}
                 {%- if tag != siteTag -%}
                     <li class="inline-block mr-d2">
-                        <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{site.blog}}{{siteTag}}/">{{siteTag}}</a>
+                        <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
                     </li>
                 {%- else -%}
                     <li class="inline-block mr-d2">
