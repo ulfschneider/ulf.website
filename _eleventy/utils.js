@@ -128,8 +128,8 @@ module.exports = {
         }
     },
 
-    siteTags: function() {
-        return siteTagsFromTagNav();
+    siteTagsFromTagNav: function() {
+        return siteTagsFromTagNav()
     },
 
     hasSiteTag: function(item) {

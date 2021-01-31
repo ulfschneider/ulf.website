@@ -58,7 +58,7 @@ function addCollections(eleventyConfig) {
 
     eleventyConfig.addCollection('usedSiteTags', collection => {
         let usedTags = utils.extractTags(collection);
-        let siteTags = utils.siteTags();
+        let siteTags = utils.siteTagsFromTagNav();
         if (siteTags.length) {
             return siteTags.filter(tag => usedTags.includes(tag));
         } else {
