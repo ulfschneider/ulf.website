@@ -10,7 +10,7 @@ A neutral sans serif for interfaces, text, and headings by the [US Web Design Sy
 <figure><img src="/img/public-sans-typeface.png" alt=""><figcaption>Sample text in Public Sans</figcaption></figure>
 
 ## Arvana
-A calligraphic, brush type by [lo-ol](https://lo-ol.design/project/arvana) type foundry. Elegant, legible! I can imagine it would fit well for a Sushi-bar with images of quality food. 
+A calligraphic, brush type by [lo-ol](https://lo-ol.design/project/arvana) type foundry. Elegant, legible! I can imagine it would fit for a Sushi-bar with images of quality food. 
 
 <figure><img src="/img/arvana-typeface.jpg" alt=""><figcaption>Sample text in Arvana</figcaption></figure>
 
