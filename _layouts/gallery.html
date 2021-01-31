@@ -27,13 +27,13 @@
     <body class="pdx md:pdx-2">
         {% include header.html %}
 
-        <main id="main" class="indent word-wrap image">
+        <main id="main" class="indent word-wrap gallery mxw-md">
             <header class="title mrb-2 pdt-d2 mxw-rg">
                 <h1 class="mry-0 meta-font inline">Images</h1> tagged {{tag}}
             </header>
             {{content}}
             <div class="mry-2">
-                <div id="image-container" class="gallery"></div>
+                <div id="image-container"></div>
                 <button id="load-more" class="block mrb-d2 mrt-2 width-5">Load more images</button>
             </div>
 
@@ -43,9 +43,8 @@
                 {% assign imageData = collections.liveSiteTagContent | reverse | firstImage %}
             {%- endif %}
 
+            {% include footer.html %}
         </main>
-
-        {% include footer.html %}
 
     </body>
 
