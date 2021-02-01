@@ -16,4 +16,9 @@ A list of unconventional and free stock images by Mel Choyce in her [CSS-Tricks 
 - [Centers for Disease Control and Prevention](https://css-tricks.com/unconventional-stock-image-sources/) (e.g. Corona virus visualizations)
 - [Open Parks Network](https://openparksnetwork.org) (nature photos)
 
-Also, there is [Old Book Illustrations](https://www.oldbookillustrations.com), wich for example Robin Rendle is using in his [essay on newsletters](https://www.robinrendle.com/essays/newsletters).
+## Writing forth
+
+Ignited by Mel´s article, I´m writing this list of interesting image sources forth.
+
+- [Old Book Illustrations](https://www.oldbookillustrations.com), wich for example Robin Rendle is using in his [essay on newsletters](https://www.robinrendle.com/essays/newsletters).
+- [Stanford Libraries Data Visualization](https://exhibits.stanford.edu/dataviz/), old visualizations which date back into 18th century.
