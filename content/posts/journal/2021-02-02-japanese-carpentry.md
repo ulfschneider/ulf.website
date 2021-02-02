@@ -7,7 +7,7 @@ Then I saw this beautiful film^[The film was shared by Dave Rupert with his post
 
 In my opinion this is how any work should be done. This is how I have to do *my work.*
 
-<blockquote>We believe that in this house, you can live with peace of mind all the way to your grandchildren´s generation.<footer>The builder of the kigumi house</footer></blockquote>
+<blockquote>We believe that in this house, you can live with peace of mind all the way to your grandchildren´s generation.<footer>Akinori Abo, builder of the kigumi house</footer></blockquote>
 
 <figure><iframe width="560" height="315" src="https://www.youtube.com/embed/6HMa5tofqps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption><a href="https://www.youtube.com/watch?v=6HMa5tofqps">Kigumi House</a></figcaption></figure>
