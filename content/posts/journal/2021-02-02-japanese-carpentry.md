@@ -5,7 +5,7 @@ Our tiny family is [building a house](/journal/we-are-building-a-house/). We are
 
 Then I saw this beautiful film^[The film was shared by Dave Rupert with his post "[Traditional Japanese carpentry versus modern times](https://daverupert.com/2021/01/traditional-japanese-carpentry-versus-modern-times/)"] of a japanese carpenter building a wooden house for a family, and I thought by myself, with this guy I would be willing to build another house. 
 
-In my opinion this is how any work should be done. This is how *my work* must be done.
+In my opinion this is how any work should be done. This is how I have to do *my work.*
 
 <figure><iframe width="560" height="315" src="https://www.youtube.com/embed/6HMa5tofqps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption><a href="https://www.youtube.com/watch?v=6HMa5tofqps">Kigumi House</a></figcaption></figure>
