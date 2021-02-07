@@ -1,5 +1,6 @@
 ---
 title: How to pick a Typeface for User Interface and App Design?
+tags: reading
 ---
 Oliver Schöndorfer makes some points in his article "[How to pick a Typeface for User Interface and App Design?](https://www.zeichenschatz.net/typografie/how-to-pick-a-typeface-for-user-interface-and-app-design.html)"
 
