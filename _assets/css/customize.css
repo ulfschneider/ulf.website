@@ -25,7 +25,6 @@
     --regular-width: 35rem;
     --hr-content: "*  *  *";
     text-decoration-thickness: .03em;
-    text-underline-offset: .2em;
 }
 
 body>header,
