@@ -24,6 +24,7 @@
     --link-focus-color: var(--primary-d1);
     --regular-width: 35rem;
     --hr-content: "*  *  *";
+    text-decoration-thickness: .75px;
 }
 
 body>header,
