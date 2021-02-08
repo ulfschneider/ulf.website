@@ -1,19 +1,18 @@
-const htmlmin = require('html-minifier');
+const htmlmin = require("html-minifier");
 
-module.exports = {
-    minifyHtml: function (value, outputPath) {
-
-        if (outputPath.indexOf('.html') > -1) {
-            let minified = htmlmin.minify(value, {
+module.exports = function(eleventyConfig) {
+    eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+        // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+        if (outputPath.endsWith(".html")) {
+            let minified = htmlmin.minify(content, {
                 useShortDoctype: true,
                 removeComments: true,
-                collapseWhitespace: false,
+                collapseWhitespace: true,
                 minifyCSS: true,
-                minifyJS: true
             });
             return minified;
         }
 
-        return value;
-    }
+        return content;
+    });
 };
