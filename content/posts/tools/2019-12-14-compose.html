@@ -74,7 +74,7 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
                 <div class="x-l breakout pdt-2">
                     <h1 class="lh fw-700">Compose CSS</h1>
                     <p class="w-3 center pdx-d2 bg-heading-color rounded white">
-                        <span id="version">v10.5.0</span></p>
+                        <span id="version">v11.0.1</span></p>
                     <p class="mxw-sm mrt-d1">A composable CSS Toolkit to build fast, maintainable, and
                     responsive websites.
                 </p>
@@ -184,8 +184,8 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
             <p>Ideally, you run a purgecss/cssnano build-pipeline in your project 
             to reduce the size of the initial compose-css by 
             removing styles you don´t use. As an example, your <code>postcss.config.js</code> file would look in some way like this:</p>
-            </div>
-            <pre class="breakout"><code>module.exports = {
+        </div>
+        <pre class="breakout"><code>module.exports = {
     plugins: [
         /*all your postcss plugins go here*/
         /*...*/
@@ -200,7 +200,6 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
         require('cssnano')
     ]
 }</code></pre>
-
 
         <div>
             <h2 id="notation">Notation</h2>
@@ -1105,6 +1104,35 @@ p/ .no-indent //remove indentation for this p</pre>
                     <td class="bg-accent-three-4"></td>
                     <td class="bg-accent-three-5"></td>
                 </tr>
+                <tr>
+                    <th class="middle normal below-rg:hide">.accent-four </th>
+                    <td class="bg-accent-four-d5 sq-1"></td>
+                    <td class="bg-accent-four-d4"></td>
+                    <td class="bg-accent-four-d3"></td>
+                    <td class="bg-accent-four-d2"></td>
+                    <td class="bg-accent-four-d1"></td>
+                    <td class="bg-accent-four"></td>
+                    <td class="bg-accent-four-1"></td>
+                    <td class="bg-accent-four-2"></td>
+                    <td class="bg-accent-four-3"></td>
+                    <td class="bg-accent-four-4"></td>
+                    <td class="bg-accent-four-5"></td>
+                </tr>
+                <tr>
+                    <th class="middle normal below-rg:hide">.accent-five </th>
+                    <td class="bg-accent-five-d5 sq-1"></td>
+                    <td class="bg-accent-five-d4"></td>
+                    <td class="bg-accent-five-d3"></td>
+                    <td class="bg-accent-five-d2"></td>
+                    <td class="bg-accent-five-d1"></td>
+                    <td class="bg-accent-five"></td>
+                    <td class="bg-accent-five-1"></td>
+                    <td class="bg-accent-five-2"></td>
+                    <td class="bg-accent-five-3"></td>
+                    <td class="bg-accent-five-4"></td>
+                    <td class="bg-accent-five-5"></td>
+                </tr>
+
             </table>
         </div>
 
@@ -1150,6 +1178,20 @@ p/ .no-indent //remove indentation for this p</pre>
                     <td class="accent-three br-accent-three br brw-d3 code middle center">.br-accent-three
                     </td>
                     <td class="accent-three code below-sm:hide middle">accent-three-d5 … accent-three-5</td>
+                </tr>
+                <tr>
+                    <td class="accent-four code middle left">.accent-four</td>
+                    <td class="bg-accent-four white code middle center">.bg-accent-four</td>
+                    <td class="accent-four br-accent-four br brw-d3 code middle center">.br-accent-four
+                    </td>
+                    <td class="accent-four code below-sm:hide middle">accent-four-d5 … accent-four-5</td>
+                </tr>
+                <tr>
+                    <td class="accent-five code middle left">.accent-five</td>
+                    <td class="bg-accent-five white code middle center">.bg-accent-five</td>
+                    <td class="accent-five br-accent-five br brw-d3 code middle center">.br-accent-five
+                    </td>
+                    <td class="accent-five code below-sm:hide middle">accent-five-d5 … accent-five-5</td>
                 </tr>
             </table>
         </div>
@@ -1292,28 +1334,48 @@ p/ .no-indent //remove indentation for this p</pre>
                 <dt class="sq-1 bg-accent-three float-left"></dt>
                 <dd class="mrl-2">accent three</dd>
             </dl>
+            <dl>
+                <dt class="sq-1 bg-accent-four float-left"></dt>
+                <dd class="mrl-2">accent four</dd>
+            </dl>
+            <dl>
+                <dt class="sq-1 bg-accent-five float-left"></dt>
+                <dd class="mrl-2">accent five</dd>
+            </dl>
 
-            <p>To define your own color palette, change the colors by providing their hsl color code. Consider <a href="https://convertacolor.com/">convertacolor</a> to adapt rgb colors to hsl.</p>
+            <p>To define your own color palette, change the colors by providing their hsl color code. 
+            Also, play with <code>--color-dn-spread</code> (down, or dark spread) and <code>--color-up-spread</code> (up, or light spread) to define the step difference for darker and lighter colors. Each of the spread numbers must be above 5 and doesn´t need to be an integer. Higher values make the difference from one step to the next smaller.</p>
             <pre class="mid">:root {
+    --color-dn-spread: 7;
+    --color-up-spread: 7;
+
     --neutral-h: 0;
     --neutral-s: 0%;
-    --neutral-l: 58%;              
-    
-    --primary-h: 213;
-    --primary-s: 19%;
-    --primary-l: 60%;
-    
-    --accent-one-h: 3;
-    --accent-one-s: 100%;
-    --accent-one-l: 61%;  
+    --neutral-l: 58%;
 
-    --accent-two-h: 28;
-    --accent-two-s: 100%;
-    --accent-two-l: 55%;  
-    
-    --accent-three-h: 52;
-    --accent-three-s: 100%;
-    --accent-three-l: 50%;  
+    --primary-h: 200;
+    --primary-s: 55.6%;
+    --primary-l: 53%;
+
+    --accent-one-h: 3.1;
+    --accent-one-s: 53.7%;
+    --accent-one-l: 53%;
+
+    --accent-two-h: 143;
+    --accent-two-s: 56.6%;
+    --accent-two-l: 53%;
+
+    --accent-three-h: 55;
+    --accent-three-s: 62.8%;
+    --accent-three-l: 53%;
+
+    --accent-four-h: 55;
+    --accent-four-s: 62.8%;
+    --accent-four-l: 53%;
+
+    --accent-five-h: 55;
+    --accent-five-s: 62.8%;
+    --accent-five-l: 53%;
 }</pre>
         </div>
 
