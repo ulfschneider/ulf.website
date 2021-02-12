@@ -74,7 +74,7 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
                 <div class="x-l breakout pdt-2">
                     <h1 class="lh fw-700">Compose CSS</h1>
                     <p class="w-3 center pdx-d2 bg-heading-color rounded white">
-                        <span id="version">v11.0.1</span></p>
+                        <span id="version">v12.0.1</span></p>
                     <p class="mxw-sm mrt-d1">A composable CSS Toolkit to build fast, maintainable, and
                     responsive websites.
                 </p>
@@ -181,22 +181,26 @@ abstract: A composable CSS Toolkit to build fast, maintainable, and responsive w
                     href="https://www.npmjs.com/package/compose-css">compose-css</a>
                 npm package to your node project. Install with</p>
             <pre>npm i compose-css</pre>
-            <p>Ideally, you run a purgecss/cssnano build-pipeline in your project 
+            <p>Ideally, you run at least a postcss-custom-properties, a postcss-purgecss, and and a cssnano build-pipeline in your project 
             to reduce the size of the initial compose-css by 
             removing styles you don´t use. As an example, your <code>postcss.config.js</code> file would look in some way like this:</p>
         </div>
         <pre class="breakout"><code>module.exports = {
     plugins: [
-        /*all your postcss plugins go here*/
-        /*...*/
+        require('postcss-import'),
+        require('postcss-custom-media'),
+        require('postcss-custom-properties')({
+            preserve: false
+        }),
+        require('postcss-calc'),
         require('@fullhuman/postcss-purgecss')({
-            content: [
+        content: [
                 /*decide about the content to search for CSS classes to keep*/
                 /*...*/
             ],
             whitelistPatternsChildren: [/^token/, /^pre/, /^code/],
-            defaultExtractor: content => content.match(/[\w-/:]+(?&lt;!:)/g) || [] /*check https://flaviocopes.com/tailwind-setup/ */
-        }),
+            defaultExtractor: content => content.match(/[\w-/:]+(?&lt;!:)/g) || [] /*check https://flaviocopes.com/tailwind-setup/ */       
+        }),        
         require('cssnano')
     ]
 }</code></pre>

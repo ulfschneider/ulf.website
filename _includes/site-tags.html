@@ -10,13 +10,13 @@
                 {%- if tag == nil and page.url == site.blog -%}
                     <span class="bg-link-focus-color white pd-d2 rounded" aria-current="page" >all</span>
                 {%- else -%}
-                    <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{site.blog}}">all</a>
+                    <a class="bg-neutral-5 pd-d2 rounded no-deco" href="{{site.blog}}">all</a>
                 {%- endif -%}
             </li>
             {%- for siteTag in currentTags -%}
                 {%- if tag != siteTag -%}
                     <li class="inline-block mr-d2">
-                        <a class="bg-neutral-4 pd-d2 rounded no-deco" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
+                        <a class="bg-neutral-5 pd-d2 rounded no-deco" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
                     </li>
                 {%- else -%}
                     <li class="inline-block mr-d2">
