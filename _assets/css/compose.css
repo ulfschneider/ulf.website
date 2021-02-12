@@ -210,14 +210,23 @@ small,
 }
 
 @custom-media --max-sm (max-width: 400px);
+
 @custom-media --max-rg (max-width: 600px);
+
 @custom-media --max-md (max-width: 900px);
+
 @custom-media --max-lg (max-width: 1400px);
+
 @custom-media --sm (min-width: 400px);
+
 @custom-media --rg (min-width: 600px);
+
 @custom-media --md (min-width: 900px);
+
 @custom-media --lg (min-width: 1400px);
+
 @custom-media --touch-device screen and (hover: none) and (pointer: coarse);
+
 :root {
     --font-size-breakpoint-sm: calc(var(--base-font-size) + 1px);
     --font-size-breakpoint-rg: calc(var(--base-font-size) + 2px);
@@ -1304,7 +1313,6 @@ small,
     color: var(--li-prefix-color);
 }
 
-
 /* Background */
 
 .bg-neutral-d5 {
@@ -1398,7 +1406,6 @@ small,
 .bg-li-prefix-color {
     background-color: var(--li-prefix-color);
 }
-
 
 /* Border Colors */
 
@@ -1754,7 +1761,6 @@ small,
     color: var(--accent-five-5);
 }
 
-
 /* Background */
 
 .bg-primary-d5 {
@@ -2020,7 +2026,6 @@ small,
 .bg-accent-five-5 {
     background-color: var(--accent-five-5);
 }
-
 
 /* Border Colors */
 
@@ -2458,7 +2463,6 @@ small,
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-
 
 /**
 Naming conventions
@@ -3071,7 +3075,6 @@ Naming conventions
     /*for flexbox */
 }
 
-
 /**
 Naming conventions
     x=x-axis
@@ -6757,7 +6760,6 @@ Naming conventions
         /*for flexbox */
     }
 }
-
 
 /**
 Naming conventions
@@ -7165,7 +7167,6 @@ Naming conventions
     padding-left: var(--space-6);
 }
 
-
 /**
 Naming conventions
     x=x-axis
@@ -9604,7 +9605,6 @@ Naming conventions
         padding-left: var(--space-6);
     }
 }
-
 
 /**
 Naming conventions
@@ -13698,12 +13698,6 @@ pre,
     font-size: var(--fs-mono);
 }
 
-.code,
-code {
-    color: var(--code-color);
-    background: var(--code-background);
-}
-
 pre,
 .pre {
     margin-top: var(--mrt-pre);
@@ -13762,7 +13756,6 @@ a:not(table a) {
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
-
 
 /* consider x-layout */
 
@@ -14201,7 +14194,6 @@ label:focus-within {
 .x-12>.xx-12 {
     grid-column: auto / span 12;
 }
-
 
 /* column start points */
 
@@ -16609,9 +16601,7 @@ h6::before {
     counter-increment: h6-counter;
 }
 
-
 /* have the breakpoints before the .indent styles */
-
 
 /* consider x-layout */
 
@@ -17024,7 +17014,6 @@ td:last-child {
     margin: 0;
 }
 
-
 /* Nicolas Gallaghers Clearfix solution
    Ref: http://nicolasgallagher.com/micro-clearfix-hack/ */
 
@@ -17123,7 +17112,6 @@ td:last-child {
     -o-box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 }
-
 
 /* containment */
 
@@ -18607,7 +18595,6 @@ td:last-child {
     }
 }
 
-
 /* scroll snap type */
 
 .snap-y-mandatory {
@@ -18663,7 +18650,6 @@ td:last-child {
     scroll-snap-type: none;
 }
 
-
 /* scroll snap align */
 
 .snap-start {
@@ -18682,9 +18668,7 @@ td:last-child {
     scroll-snap-align: none;
 }
 
-
 /* scroll-scroll-margin */
-
 
 /**
 Naming conventions
@@ -19297,9 +19281,7 @@ Naming conventions
     /*for flexbox */
 }
 
-
 /* scroll-padding */
-
 
 /**
 Naming conventions
@@ -19706,7 +19688,6 @@ Naming conventions
 .snap-pdl-6 {
     scroll-padding-left: var(--space-6);
 }
-
 
 /*DEBUG GRID
 from http://tachyons.io/docs/debug-grid/
