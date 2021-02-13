@@ -1,6 +1,14 @@
 ---
 title: How to pick a Typeface for User Interface and App Design?
 ---
+<figure>
+<figcaption class="fs">TL;DR: Make the <strong>Il1 coe test</strong> to check whether a typeface is suitable for functional text. Il1 should be easy to distinguish and the apertures of c and e should be open.</figcaption>
+<div class="fs-2">Il1 coe</div>
+<div class="fs-1">Il1 coe</div>
+<div class="fs">Il1 coe</div>
+<div class="fs-d1">Il1 coe</div>
+</figure>
+
 Oliver Schöndorfer makes some points in his article "[How to pick a Typeface for User Interface and App Design?](https://www.zeichenschatz.net/typografie/how-to-pick-a-typeface-for-user-interface-and-app-design.html)"
 
 - **Functional text:** is short text. Labels, alerts, navigational elements, captions, and the like.
