@@ -50,7 +50,7 @@ function addLayoutAliases(eleventyConfig) {
     eleventyConfig.addLayoutAlias('gallery', 'gallery.html');
     eleventyConfig.addLayoutAlias('blank', 'blank.html');
     eleventyConfig.addLayoutAlias('none', 'none.html');
-    eleventyConfig.addLayoutAlias('rss', 'rss.njk');
+    eleventyConfig.addLayoutAlias('feed', 'feed.njk');
     eleventyConfig.addLayoutAlias('search', 'search.html');
 }
 

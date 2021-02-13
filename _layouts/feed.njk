@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.name }}</title>
   <subtitle></subtitle>
-  <link href="{{ site.url }}{{ site.rss }}" rel="self"/>
+  <link href="{{ site.url }}{{ site.feed }}" rel="self"/>
   <link href="{{ site.url }}/"/>
   {%- if collections.liveSiteTagContent | length -%}
     <updated>{{ collections.liveSiteTagContent | rssLastUpdatedDate }}</updated>

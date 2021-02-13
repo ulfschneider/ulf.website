@@ -37,7 +37,7 @@ module.exports = {
     ],
     footernav: [{
             label: 'RSS',
-            url: '/rss.xml',
+            url: '/feed.xml',
             id: 'rss',
             kbd: 'r'
         },
@@ -91,7 +91,7 @@ module.exports = {
     },
     blog: '/blog/',
     images: '/images/',
-    rss: '/rss.xml',
+    rss: '/feed.xml',
 
     time: new Date()
 }

@@ -1,5 +1,5 @@
 --- 
-layout: rss 
-eleventyExcludeFromCollections: true 
-permalink: '{{site.rss}}'
+layout: feed 
+permalink: /rss.xml
+eleventyExcludeFromCollections: true
 ---
