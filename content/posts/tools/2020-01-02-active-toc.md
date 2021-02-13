@@ -5,28 +5,20 @@ abstract: Highlight your TOC entries while scrolling.
 ---
 
 <style>
+
     html, body {
         scroll-behavior: smooth;
     }
+
   #toc a {
+
       color: unset;
         text-decoration: unset;
         display: block;
-        margin-top: var(--space);
-    }
-
-    #toc .is-active {
-        color: var(--accent-one)
-    }
-
-
-   #toc .is-visible {
-        color: var(--accent-two);
     }
      
     #toc .is-highlight {
         font-weight: bold;
-        color:  var(--primary);
     }
 
     #toc {
@@ -43,13 +35,10 @@ abstract: Highlight your TOC entries while scrolling.
         margin-left: 9rem;
     }
 
-    h2 {
-        scroll-margin-top: var(--space-1);
-    }
-
 </style>
 
 <div id="toc" class="meta">
+
         <a href="/blog/tools/" class="mrb-2">ulf.codes</a>
         <a href="#one-morning">One morning</a>
         <a href="#he-thought">He thought</a>
@@ -66,19 +55,21 @@ abstract: Highlight your TOC entries while scrolling.
         <a href="#he-lay">He lay</a>
         <a href="#a-collection">A collection</a>
         <a href="#however-hard">However hard</a>
+
 </div>
 
-<div class="content pdy-3">
-<h1 class="mrt-0" >active-toc</h1>
-<p class="mrt-1 mrb-4">An <a href="https://www.npmjs.com/package/active-toc">npm package</a> to highlight the entries of your table of contents while scrolling your website. active-toc is leveraging the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a>.</p>
+<div class="content">
+<h1 >active-toc</h1>
+<p>An <a href="https://www.npmjs.com/package/active-toc">npm package</a> to highlight the entries of your table of contents while scrolling your website. active-toc is leveraging the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a>.</p>
 
 <hr>
 
 <h2 id="one-morning">One morning</h2>
 
 <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a
+
             horrible
-            vermin. He lay on his *armour*-like back, and if he lifted his head a little he could see his brown belly,
+            vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly,
             slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed
             ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him,
             waved
@@ -90,13 +81,13 @@ abstract: Highlight your TOC entries while scrolling.
 between its four familiar walls. A collection of textile samples lay spread out on the table – Samsa was a
 travelling salesman – and above it there hung a picture that he had recently cut out of an illustrated
 magazine
-and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright,
+and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, 
 raising a heavy fur muff that covered the whole of her lower arm towards the viewer.</p>
 
 <h2 id="gregor-then">Gregor then</h2>
 
-<p>Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane,
-which made him feel quite sad. "How about if I sleep a little bit longer and forget all this nonsense," he
+<p>Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, 
+which made him feel quite sad. "How about if I sleep a little bit longer and forget all this nonsense, " he
 thought, but that was something he was unable to do because he was used to sleeping on his right, and in his
 present state couldn't get into that position. However hard he threw himself onto his right, he always
 rolled
@@ -105,8 +96,8 @@ back to where he was.</p>
 <h2 id="he-must">He must</h2>
 
 <p>He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering
-legs,
-and only stopped when he began to feel a mild, dull pain there that he had never felt before. "Oh, God," he
+legs, 
+and only stopped when he began to feel a mild, dull pain there that he had never felt before. "Oh, God, " he
 thought, "what a strenuous career it is that I've chosen! Travelling day in and day out.</p>
 
 <h2 id="doing-business">Doing business</h2>
@@ -126,7 +117,7 @@ spots which he didn't know what to make of; and when he tried to feel the place 
 it
 quickly back because as soon as he touched it he was overcome by a cold shudder. He slid back into his
 former
-position. "Getting up early all the time," he thought, "it makes you stupid.</p>
+position. "Getting up early all the time, " he thought, "it makes you stupid.</p>
 
 <h2 id="you-ve-got">You´ve got</h2>
 
@@ -135,7 +126,7 @@ back
 to the guest house during the morning to copy out the contract, these gentlemen are always still sitting
 there
 eating their breakfasts. I ought to just try that with my boss; I'd get kicked out on the spot. But who
-knows,
+knows, 
 maybe that would be the best thing for me.</p>
 
 <h2 id="if-i">If I</h2>
@@ -149,8 +140,11 @@ subordinates from up there, especially when you have to go right up close becaus
 hearing.</p>
 
 <h2 id="well">Well</h2>
+
       
+
 <p>Well, there's still some hope; once I've got the money together to pay off my parents' debt to him – another five
+
             or six years I suppose – that's definitely what I'll do. That's when I'll make the big change. First of all
             though, I've got to get up, my train leaves at five. " And he looked over at the alarm clock, ticking on the
             chest of drawers. "God in Heaven! " he thought. It was half past six and the hands were quietly moving
@@ -189,8 +183,11 @@ felt much hungrier than usual. One morning, when Gregor Samsa woke from troubled
 transformed in his bed into a horrible vermin.</p>
 
 <h2 id="he-lay">He lay</h2>
+
         
+
 <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly
+
             domed
             and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide
             off
@@ -200,8 +197,11 @@ transformed in his bed into a horrible vermin.</p>
             little too small, lay peacefully between its four familiar walls.</p>
 
 <h2 id="a-collection">A collection</h2>
+
         
+
 <p>A collection of textile samples lay spread out on the table – Samsa was a travelling salesman – and above it
+
             there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded
             frame.
             It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that
@@ -215,8 +215,11 @@ transformed in his bed into a horrible vermin.</p>
             to sleeping on his right, and in his present state couldn't get into that position.</p>
 
 <h2 id="however-hard">However hard</h2>
+
         
+
 <p>However hard he threw himself onto his right, he always rolled back to where he was. He must have tried it a
+
             hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when
             he
             began to feel a mild, dull pain there that he had never felt before. "Oh, God," he thought, "what a
@@ -235,8 +238,11 @@ transformed in his bed into a horrible vermin.</p>
             and when he tried to feel the place with one of his legs he drew it quickly back because as soon as he
             touched
             it he was overcome by a cold</p>    
+
 </div>
 <script src="/js/active-toc.js"></script>
 <script>
+
     ActiveToc.init({tocContainer: '#toc'});
+
 </script>

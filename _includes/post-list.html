@@ -29,7 +29,7 @@
     {%- assign href = p.url -%}
 
     {%- if indexYear != pageYear and limit == nil -%}
-        <time datetime="{{pageYear}}" class="larger meta neutral mry-1 block year">{{pageYear}}</time>
+        <time datetime="{{pageYear}}" class="larger meta mry-1 block year">{{pageYear}}</time>
         {%- assign indexYear = pageYear -%}
     {%- endif -%}
 
@@ -52,7 +52,7 @@
         {%- if p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil-%}
             <a class="meta block" href="{{p.url}}">Read the entire article →</a>
         {%- endif -%}
-        <aside class="meta inline">
+        <aside class="meta block">
             {% include author-and-date.html, author: p.data.author, date: p.date %}
             {% include tags.html tags: p.data.tags notags: p.data.notags %}
         </aside>
@@ -68,7 +68,7 @@
         {%-assign currentTags = collections.usedSiteTags -%}
     {%- endif -%}
     {%- if currentTags.length -%}
-        <span>There are more articles. Choose a tag:</span>
+        <label>There are more articles. Choose a tag:</label>
         {%- include site-tags.html tag:tag-%}
     {%- else -%}
         <a href="{{site.blog}}">There are more articles</a>

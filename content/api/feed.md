@@ -1,5 +1,5 @@
 --- 
 layout: feed 
 eleventyExcludeFromCollections: true 
-permalink: '{{site.feed}}'
+permalink: '{{site.rss}}'
 ---
