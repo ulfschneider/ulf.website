@@ -256,3 +256,17 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_0160D.jpg" alt="">
 </div>
 </figure>
+
+## Home office
+
+<figure class="rg:split">
+<figcaption>Jan 20, 2021: In the beginning decade of the home office, I will have my own :-).</figcaption>
+<img src="/img/house/IMG_0318.jpg" alt="">
+</figure>
+
+## Close to the finish
+
+<figure>
+<figcaption>Feb 12, 2021: White in white during the very cold and snowy days beginning of February. We are close to the finish. Thankfully.</figcaption>
+<img src="/img/house/IMG_0397X.jpg" alt="">
+</figure>
