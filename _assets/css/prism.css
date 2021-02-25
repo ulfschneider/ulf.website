@@ -60,7 +60,7 @@ code[class*="language-"] {
 }
 
 .token.punctuation {
-    color: var(--neutral-d1);
+    color: var(--neutral-d2);
 }
 
 .token.property,
@@ -70,7 +70,7 @@ code[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-    color: var(--primary-d2);
+    color: var(--primary-d3);
 }
 
 .token.selector,
@@ -79,7 +79,7 @@ code[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: var(--accent-three-d3);
+    color: var(--accent-three-d4);
 }
 
 .token.operator,
@@ -87,23 +87,23 @@ code[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: var(--accent-one-d2);
+    color: var(--accent-one-d3);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-    color: var(--primary-d2);
+    color: var(--primary-d3);
 }
 
 .token.function {
-    color: var(--accent-one-d2);
+    color: var(--accent-one-d3);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-    color: var(--accent-one-d2);
+    color: var(--accent-five-d3);
 }
 
 .token.important,
