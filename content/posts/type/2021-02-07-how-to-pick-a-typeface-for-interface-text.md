@@ -1,6 +1,5 @@
 ---
 title: How to pick a Typeface for User Interface and App Design?
-tags: type
 ---
 <figure>
 <figcaption class="fs">TL;DR: Make the <strong>Il1 coe test</strong> to check whether a typeface is suitable for functional text. Il1 should be easy to distinguish and the apertures of c and e should be open.</figcaption>
