@@ -9,7 +9,7 @@ title: How to pick a Typeface for User Interface and App Design?
 <div class="fs-d1">Il1 coe</div>
 </figure>
 
-Oliver Schöndorfer makes some points in his article "[How to pick a Typeface for User Interface and App Design?](https://www.zeichenschatz.net/typografie/how-to-pick-a-typeface-for-user-interface-and-app-design.html)"
+Oliver Schöndorfer makes some points in his article *[How to pick a Typeface for User Interface and App Design?](https://www.zeichenschatz.net/typografie/how-to-pick-a-typeface-for-user-interface-and-app-design.html):*
 
 - **Functional text:** is short text. Labels, alerts, navigational elements, captions, and the like.
 - **Clarity:** Make the Il1 test (capital I, lower case l, and the number one). If these three shapes are easy to distinguish you found a good typeface.
