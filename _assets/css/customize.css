@@ -24,7 +24,7 @@
     --link-focus-color: var(--primary-d1);
     --regular-width: 35rem;
     --hr-content: "*  *  *";
-    --list-item-type: "–";
+    --selection-color: var(--primary-5);
     text-decoration-thickness: .06em;
 }
 
@@ -233,15 +233,8 @@ hr.footnotes-sep::after {
     font-family: var(--meta-font-family);
 }
 
-@media (--max-md) {
-    blockquote,
-    ul,
-    ol {
-        margin-left: var(--horizontal-rhythm);
-    }
-    .full-bleed {
-        padding: 0 var(--space);
-    }
+.full-bleed {
+    padding: 0 var(--space);
 }
 
 @media (--md) {
@@ -249,17 +242,14 @@ hr.footnotes-sep::after {
     body>footer>*,
     main>figure,
     main>.scroll-table {
-        margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
+        margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
         max-width: var(--mid-width);
     }
     main>header,
     main time.year {
         max-width: calc(var(--mid-width) + var(--horizontal-rhythm));
         margin-left: calc(-1 * var(--horizontal-rhythm));
-        margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space-2));
-    }
-    .full-bleed {
-        padding: 0 var(--space);
+        margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
     }
 }
 
