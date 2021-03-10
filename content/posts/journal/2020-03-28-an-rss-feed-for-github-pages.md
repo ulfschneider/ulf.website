@@ -2,7 +2,7 @@
 title: An RSS feed for GitHub Pages
 ---
 
-RSS is a good thing. It simplifies to overview information that is produced by potentially many different sources. If someone has an RSS feed on her blog, you can easily subscribe to that feed and have all her published contents in your RSS reader – along with the published contents of other creators. There is also a privacy advantage. You don´t have to provide your mail address to subscribe.
+RSS is a good thing. It simplifies to overview information that is produced by potentially many different sources. If someone has an RSS feed on her blog, you can easily subscribe to that feed and have all her published contents in your RSS reader—along with the published contents of other creators. There is also a privacy advantage. You don´t have to provide your mail address to subscribe.
 
 I´m building my blog with Jekyll, and hosting it via GitHub Pages. Out of the box, Jekyll doesn´t have RSS feed support. One way to publish a feed is to use the <code>jekyll-feed</code> plugin, which is supported by GitHub Pages. You only need to activate it in your <code>\_config.yml</code>:
 
@@ -10,7 +10,7 @@ I´m building my blog with Jekyll, and hosting it via GitHub Pages. Out of the b
 <figcaption>_config.yml</figcaption>
 {% highlight yml %}
 plugins:
-  – jekyll-feed
+ —jekyll-feed
 {% endhighlight %}
 </figure>
 
@@ -28,7 +28,7 @@ However, <code>jekyll-feed</code> has some limitations:
 
 To overcome those limitations, I decided not to use <code>jekyll-feed</code> and instead write my own tiny RSS generator. My generator is publishing posts and no pages. Here is what you have to do to use it:
 
-For each feed you want to publish, you have to create a markdown file inside of the <code>\_pages</code> folder – for example, a feed with the URL <code>/feed.rss/</code>, that publishes the categories _articles, tools, reading, and journal_ is represented by a file <code>feed.md</code> with the following front matter contents:
+For each feed you want to publish, you have to create a markdown file inside of the <code>\_pages</code> folder—for example, a feed with the URL <code>/feed.rss/</code>, that publishes the categories _articles, tools, reading, and journal_ is represented by a file <code>feed.md</code> with the following front matter contents:
 
 <figure>
 <figcaption>_pages/feed.md</figcaption>

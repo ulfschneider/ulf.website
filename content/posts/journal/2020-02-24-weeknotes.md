@@ -8,7 +8,7 @@ title: Weeknotes 9
 - Interesting: "[The Evolution of Web Design](https://fabianburghardt.de/webolution/)."
 - Have to evaluate [accessible colors](https://accessible-colors.com) for anything with colors.
 - Installed [ColorSlurp](http://colorslurp.com) color picker and like the tool.
-- Read about how Jonnie Hallmann redesigned his website [destroytoday](https://destroytoday.com). He describes in his [Blog](https://destroytoday.com/blog) that he used Nuxt and Contentful. That´s an interesting choice because I like Vue and couldn´t become a friend of React so far. I´m carrying the idea of running my blog as a PWA for some time now – just to learn it. Therefore I will probably borrow ideas from Jonnie.
+- Read about how Jonnie Hallmann redesigned his website [destroytoday](https://destroytoday.com). He describes in his [Blog](https://destroytoday.com/blog) that he used Nuxt and Contentful. That´s an interesting choice because I like Vue and couldn´t become a friend of React so far. I´m carrying the idea of running my blog as a PWA for some time now—just to learn it. Therefore I will probably borrow ideas from Jonnie.
 - I like the perceived simplicity of Robin Rendle´s [essay design](https://www.robinrendle.com/essays/systems-mistakes-and-the-sea). However, I´m missing a navigation back to his page.
 - Had to read about collapsing margins again and found the [explanation from Ire Aderinokun](https://bitsofco.de/collapsible-margins/) very beneficial.
-- "It´s not fun anymore…" – Watched a down to earth [Paul Tierney running the Wainwrights](https://youtu.be/laMBEjxlst8). Beautiful landscape, comradery, achievement, and suffering!
+- "It´s not fun anymore…"—Watched a down to earth [Paul Tierney running the Wainwrights](https://youtu.be/laMBEjxlst8). Beautiful landscape, comradery, achievement, and suffering!

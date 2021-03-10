@@ -18,7 +18,7 @@ We can understand our work as being oppressive, a craft or even art.
 Work that does not allow us to find a purpose, where we can not act self-determined or are exposed to monotonous stress, with little or no influence on the outcomes or where we can not identify ourselves with the results, oppresses us. We wear out in our doing and can not have an intrinsic motivation.
 
 In some IT-projects this way of working can be observed: More often than not there is no strong cost-benefit assessment with a conclusive strategic goal which is being understood by all members of the delivery team; for only some areas of responsibility there are many coordinators, coaches, consultants and managers, but for many programming tasks there are only some software developers; the produced code is of bad quality because of heavy time pressure and too few developers with the right skills; software that is being developed is not being used because the way it is build does not help the users doing their work; responsibilities are unclear, power is being exercised when it comes to track down the guilty parties but leadership is not being given; success is not being seeked because all energy is consumed to avoid only failure.
-This way of working does not safeguard our existence – instead, it causes disease. Here is a lot to lose and little to win. If you can not change the situation, try to leave.
+This way of working does not safeguard our existence—instead, it causes disease. Here is a lot to lose and little to win. If you can not change the situation, try to leave.
 
 Projects are being deceived into such situations at first by managers. Managers are responsible for the way the systems works. If they miss setting the right constraints to foster and direct self-organizational forces, no guiding process can be established by the work-force level. The missing leadership creates a vacuum allowing disorder and lack of direction to flow in.
 
@@ -26,7 +26,7 @@ If we see our work under the aspect of good workmanship, our thinking and acting
 
 A software development team will establish a system of continuous integration or even delivery. If the environment is not prepared for that, the team will fight for it, because not to do so would hurt workmanship standards.
 
-The software craftsmanship movement [[Bradbury et al. 2009]][craftsmanship] can be seen under that impression – although this movement goes beyond workmanship, it is about art and craft.
+The software craftsmanship movement [[Bradbury et al. 2009]][craftsmanship] can be seen under that impression—although this movement goes beyond workmanship, it is about art and craft.
 
 By claiming our work as being art, the development opportunities will expand for the individual, the team and the surrounding organization. Now it´s all about purpose, autonomy, and mastery. Seth Godin explains what art in work may be:
 
@@ -41,7 +41,7 @@ By Seth Godin's definition an artist is
 <footer>Seth Godin</footer>
 </blockquote>
 
-Art is not decoration – it is a motor of change. And art will only be made by artists. In this sense, the heads behind the agile movement can be seen as artists.
+Art is not decoration—it is a motor of change. And art will only be made by artists. In this sense, the heads behind the agile movement can be seen as artists.
 
 This interpretation of art in work is not only about individual expertise, but it is also about cooperation and social capabilities. Expertise and cooperation bring us to an up-movement, while in the opposite incompetence and egoistic driven acting bring us into a down-movement.
 

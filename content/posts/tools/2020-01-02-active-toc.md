@@ -78,8 +78,8 @@ abstract: Highlight your TOC entries while scrolling.
 <h2 id="he-thought">He thought</h2>
 
 <p>he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully
-between its four familiar walls. A collection of textile samples lay spread out on the table – Samsa was a
-travelling salesman – and above it there hung a picture that he had recently cut out of an illustrated
+between its four familiar walls. A collection of textile samples lay spread out on the table—Samsa was a
+travelling salesman—and above it there hung a picture that he had recently cut out of an illustrated
 magazine
 and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, 
 raising a heavy fur muff that covered the whole of her lower arm towards the viewer.</p>
@@ -143,9 +143,9 @@ hearing.</p>
 
       
 
-<p>Well, there's still some hope; once I've got the money together to pay off my parents' debt to him – another five
+<p>Well, there's still some hope; once I've got the money together to pay off my parents' debt to him—another five
 
-            or six years I suppose – that's definitely what I'll do. That's when I'll make the big change. First of all
+            or six years I suppose—that's definitely what I'll do. That's when I'll make the big change. First of all
             though, I've got to get up, my train leaves at five. " And he looked over at the alarm clock, ticking on the
             chest of drawers. "God in Heaven! " he thought. It was half past six and the hands were quietly moving
             forwards,
@@ -200,7 +200,7 @@ transformed in his bed into a horrible vermin.</p>
 
         
 
-<p>A collection of textile samples lay spread out on the table – Samsa was a travelling salesman – and above it
+<p>A collection of textile samples lay spread out on the table—Samsa was a travelling salesman—and above it
 
             there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded
             frame.

@@ -1,10 +1,10 @@
 ---
 title: Scrum and Architecture
 subtitle: The architect and his tools in the Scrum process
-abstract: Cooperatively making architectural decisions, at a point in time when they are needed – and not earlier – is a quality-improving paradigm in agile software development. Conceptual integrity in the flow of architecture decisions will only be achieved if one person has the final word regarding those decisions. This is the architect, serving the product, whose rights and obligations in the context of the Scrum process are being reflected in this essay.
+abstract: Cooperatively making architectural decisions, at a point in time when they are needed—and not earlier—is a quality-improving paradigm in agile software development. Conceptual integrity in the flow of architecture decisions will only be achieved if one person has the final word regarding those decisions. This is the architect, serving the product, whose rights and obligations in the context of the Scrum process are being reflected in this essay.
 ---
 <figure class="larger">
-Cooperatively making architectural decisions, at a point in time when they are needed – and not earlier – is a quality-improving paradigm in agile software development. Conceptual integrity in the flow of architecture decisions will only be achieved if one person has the final word regarding those decisions. This is the architect, serving the product, whose rights and obligations in the context of the Scrum process are being reflected in this essay. 
+Cooperatively making architectural decisions, at a point in time when they are needed—and not earlier—is a quality-improving paradigm in agile software development. Conceptual integrity in the flow of architecture decisions will only be achieved if one person has the final word regarding those decisions. This is the architect, serving the product, whose rights and obligations in the context of the Scrum process are being reflected in this essay. 
 </figure>
 
 This text was first published in OBJEKTspektrum, issue 4/2011, under the title ["Scrum und Architektur, konzeptionelle Integrität im Scrum Prozess"][schneider2011]. I have reworked, enhanced and translated the initial document to publish it here on *{{site.name}}.*
@@ -84,11 +84,11 @@ This grouping of teams by components helps to bundle component know-how and to k
 
 With the only perspective of component teams, the project can quickly get into the fallacy of delivering only parts without end-to-end integration in each Sprint. A feature that can be inspected by a customer or a Product Owner will then only be visible after some Sprints.
 
-Therefore I suggest the following approach: stay with the component teams – they help to bundle component know-how. But for the delivery of features also have *virtual* feature teams that consist of people from several component teams – merely those people who anyway need to come together to let the end-to-end feature become a reality. For these feature teams often a Daily Scrum makes much more sense than for a component team because they are hunting for a feature and use the Daily Scrum to ensure the end-to-end readiness and delivery of the function.
+Therefore I suggest the following approach: stay with the component teams—they help to bundle component know-how. But for the delivery of features also have *virtual* feature teams that consist of people from several component teams—merely those people who anyway need to come together to let the end-to-end feature become a reality. For these feature teams often a Daily Scrum makes much more sense than for a component team because they are hunting for a feature and use the Daily Scrum to ensure the end-to-end readiness and delivery of the function.
 
 In such an organization component teams, virtual teams and the architect will discuss from time to time difficult changes (for example API changes) that belong to components. These changes may be required and indicated by a *virtual* feature team. And it may be the same person who suggests the need for a change from inside of the feature team, bringing it to his *home* component team, participating in the discussion and coming back with a solution approach to the feature team.
 
-The *virtual* feature teams may change from time to time – whenever the next feature to be delivered requires a different team setup.
+The *virtual* feature teams may change from time to time—whenever the next feature to be delivered requires a different team setup.
 
 This multi-team organization, which forms a matrix with the axes *feature* and *component* will support both dimensions: the component architecture and fast, communication-oriented end-to-end feature delivery.
 
@@ -118,9 +118,9 @@ Because of too many players with different interests the decisions being taken a
 
 > Architecture by committee is the guarantee for a bloated product.
 
-A companywide architecture committee should instead define constraints and architectural goals for the enterprise architecture and refrain from intervening the project work – except the project architect asks for it. To achieve results for real-world situations, it is helpful to have the same architects that work in delivery projects inside of the architecture committee. But it is essential to distinct committee goals and project work.
+A companywide architecture committee should instead define constraints and architectural goals for the enterprise architecture and refrain from intervening the project work—except the project architect asks for it. To achieve results for real-world situations, it is helpful to have the same architects that work in delivery projects inside of the architecture committee. But it is essential to distinct committee goals and project work.
 
-Project architects, on the other hand, have to follow the architecture constraints and goals given by the committee. Within this given space the architect derives architectural decisions on behalf of the project and in cooperation with the team. The architect is responsible for his choices – this includes the decision about how and when to involve the architecture committee.
+Project architects, on the other hand, have to follow the architecture constraints and goals given by the committee. Within this given space the architect derives architectural decisions on behalf of the project and in cooperation with the team. The architect is responsible for his choices—this includes the decision about how and when to involve the architecture committee.
 
 Avoid architecture by committee [Brooks 2010:39]. The architecture is in the hand of the architect and not in the many hands of the committee. Architecture by committee is the guarantee for a bloated product.
 
@@ -150,7 +150,7 @@ To go even one step further and anchor the vision within your business model, th
 
 The architect has an interest in the Product Vision, too. Often architectural goals are bound to the product vision. These often non-functional goals may be explicit or implicit, but they are by definition of strategic nature. To identify and make them explicit is in the responsibility of the architect.
 
-In addition to the business goals that are given by the Product Owner, the architect has to identify the relevant stakeholders and find the architectural goals by deriving them from the business goals. But keep in mind, the architect does not invent the architectural goals – she only makes them visible by deriving them from the business goals.
+In addition to the business goals that are given by the Product Owner, the architect has to identify the relevant stakeholders and find the architectural goals by deriving them from the business goals. But keep in mind, the architect does not invent the architectural goals—she only makes them visible by deriving them from the business goals.
 
 Architecture Vision
 ---
@@ -344,7 +344,7 @@ References
 : [U. Schneider, "Scrum und Architektur, konzeptionelle Integrität im Scrum Prozess," OBJEKTspektrum, Ausgabe 4, 2011]({{site.url}}/assets/schneider_os_04_11.pdf)
 
 [Zörner 2009] 
-: S. Zörner, "Historisch gewachsen? – Entscheidungen festhalten," Java Magazin 04/2009
+: S. Zörner, "Historisch gewachsen?—Entscheidungen festhalten," Java Magazin 04/2009
 
 [Zörner 2010] 
 : S. Zörner, "Gretchenfrage 2.0: Was unterscheidet Softwarearchitekten von Entwicklern?," Java Magazin 10/2010

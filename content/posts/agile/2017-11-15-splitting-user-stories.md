@@ -35,7 +35,7 @@ Therefore, when talking about splitting User Stories, it´s meant to cut across 
 Try the following patterns to split your User Stories:
 
 - **Testing:** When identifying and describing the testable aspects of a User Story, you are already in the kind of thinking that is needed to split the story end-to-end. Thus you have an excellent indication of how to break the story down. Often the essential testable aspects of a Story are described in the so-called acceptance criteria. Just pick that up and use it for your split. This is a perfect way to have QA engineers engaged right from the start.
-- **CRUD Operations:** Sometimes you can split a story by its CRUD operations. Watch out for the phrase "manage" in a User Story description – often this indicates a splitting opportunity into Create, Read, Update and Delete parts.
+- **CRUD Operations:** Sometimes you can split a story by its CRUD operations. Watch out for the phrase "manage" in a User Story description—often this indicates a splitting opportunity into Create, Read, Update and Delete parts.
 - **Happy and Unhappy:** If you have to take care about things that might go wrong in a User Story, you can use a split for the light flow, where everything goes well and in addition split into the exceptions (unhappy flows), where you handle the problems.
 - **Connectors:** User Story descriptions containing connectors like AND, OR, WHEN, IF point you to splitting opportunities.
 - **Parameters and Result:** Parameters which determine the function and possible result of a User Story can be used to divide the story. Depending on the number of parameters or the contents of a setting, or the different expected results, you can split along those parameter and result lines.

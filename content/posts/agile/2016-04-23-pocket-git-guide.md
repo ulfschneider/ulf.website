@@ -102,13 +102,13 @@ Figure: Git produces snapshots of your entire project
 
 While you are working, Git divides your content into three main sections. Your working directory, your staging area (often referred to as _index_) and your committed work.
 
-- Your working directory is merely the set of files and folders you operate on – your project.
+- Your working directory is merely the set of files and folders you operate on—your project.
 - The staging area is the set of changes which should go into the next commit.
 - Once you commit, Git will take the contents from the staging area and create a snapshot in the Git repository, which is then the committed revision of your project at the time of the commit.
 
 <figure>
 <img src="/img/blog/git_areas.jpg" />
-<figcaption>Figure: Working – Staging – Committing</figcaption>
+<figcaption>Figure: Working—Staging—Committing</figcaption>
 </figure>
 
 ## Stage to tell Git what to refer to
@@ -165,7 +165,7 @@ A list of available formatting options is on [git-scm.com/docs/pretty-formats](h
 
 ## The commit message
 
-A `git log` of commit messages should give an idea of how the project has evolved. Each message explains _what_ has been accomplished or changed with the commit. The message should describe a whole idea of completed work [[Westby 2014]](https://24ways.org/2014/dealing-with-emergencies-in-git/). Don´t describe _how_ the change was accomplished – that´s in the code.
+A `git log` of commit messages should give an idea of how the project has evolved. Each message explains _what_ has been accomplished or changed with the commit. The message should describe a whole idea of completed work [[Westby 2014]](https://24ways.org/2014/dealing-with-emergencies-in-git/). Don´t describe _how_ the change was accomplished—that´s in the code.
 
 A properly formed commit subject line should complete the following sentence:
 
@@ -241,7 +241,7 @@ The meaning of the patterns:
 - `doc/**/*.txt` ignore all files with extension `.txt` inside of the `doc` directory and all sub-directories of `doc`
 - `!doc/todo.txt` do not ignore `todo.txt`
 
-The `.gitignore` file itself should be under version control – so be aware of not putting `.gitignore` as a pattern into the `.gitignore` file.
+The `.gitignore` file itself should be under version control—so be aware of not putting `.gitignore` as a pattern into the `.gitignore` file.
 
 ## Branch to isolate
 
@@ -287,7 +287,7 @@ Your branch is ahead of 'origin/<branch-name>' by 1 commit.
 
 Git has figured out a difference between your local branch and its counterpart, the remote tracking branch.
 
-Remote tracking branches are named _origin/<branch-name>_. Don´t checkout such a branch via `git checkout origin/<branch-name>` – instead, do `git checkout <branch-name>` to make the remote tracking branch a local branch.
+Remote tracking branches are named _origin/<branch-name>_. Don´t checkout such a branch via `git checkout origin/<branch-name>`—instead, do `git checkout <branch-name>` to make the remote tracking branch a local branch.
 
 To see the history of commits in a branch-oriented tree format, use `git log --graph --oneline`.
 
@@ -316,7 +316,7 @@ To merge any branch into your master branch, you have to
 {% highlight git %}git checkout master
 git merge <source-branch-name>{% endhighlight %}
 
-The first command will bring you into the master branch; the second command will pull in the changes from the source branch into the master branch. The principle is always the same – make the branch into which you want to merge the working copy and then pull changes from any other branch into your working copy by
+The first command will bring you into the master branch; the second command will pull in the changes from the source branch into the master branch. The principle is always the same—make the branch into which you want to merge the working copy and then pull changes from any other branch into your working copy by
 
 {% highlight git %}git checkout <destination-branch-name>
 git merge <source-branch-name>{% endhighlight %}
@@ -336,7 +336,7 @@ A _true merge_ is something different. That´s when both, the source branch and 
 
 <figure>
 <img src="/img/blog/git_true_merge.jpg"/>
-<figcaption>Figure: 'master' and 'lazyload' have been modified – a true merge is needed</figcaption>
+<figcaption>Figure: 'master' and 'lazyload' have been modified—a true merge is needed</figcaption>
 </figure>
 
 A fast-forward then is no longer possible, and Git has to figure out the combined state of the content, which will lead to a so-called _merge commit_.
@@ -441,7 +441,7 @@ ssh://[user@]host.xz[:port]/path/to/repo.git
 git://host.xz[:port]/path/to/repo.git
 http[s]://host.xz[:port]/path/to/repo.git{% endhighlight %}
 
-The first protocol is the _local_ protocol. This is useful if the remote repository will reside on a shared filesystem to which every team member has access. The other protocols are obviously _ssh, git_ and _http_. To learn more about these, please refer to ["Git on the server – the protocols"](https://git-scm.com/book/tr/v2/Git-on-the-Server-The-Protocols).
+The first protocol is the _local_ protocol. This is useful if the remote repository will reside on a shared filesystem to which every team member has access. The other protocols are obviously _ssh, git_ and _http_. To learn more about these, please refer to ["Git on the server—the protocols"](https://git-scm.com/book/tr/v2/Git-on-the-Server-The-Protocols).
 
 Sometimes you try to access a server via https, and the server is using a self-signed certificate. Git won´t accept this certificate but if you are sure about the server, for example, because the server is located in your local intranet, one possible solution is the following configuration in Git:
 
@@ -662,7 +662,7 @@ Display your current editor setting
 : "Learn Git & Version Control," [www.git-tower.com/learn/](https://www.git-tower.com/learn/)
 
 [Tower] 
-: Version control with Git – made easy,
+: Version control with Git—made easy,
 In a beautiful, efficient, and powerful app, [git-tower.com](https://www.git-tower.com)
 
 [Westby 2014] 

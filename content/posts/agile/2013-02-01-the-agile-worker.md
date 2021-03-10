@@ -37,7 +37,7 @@ Of course, all human-created organizations have a purpose, a goal. The decisions
 
 One example: In road traffic the established rules allow any road user to travel fast, save and to arrive at the desired destination. In the Netherlands roundabouts are a common way to organize traffic flow. In Germany, traffic lights are being used to achieve the same result. We all have made the experience to wait in front of a red traffic light at an empty crossing. In a roundabout nobody is waiting if there is no traffic. Decentralized self-organization of road users is required and has a direction because traffic rules are in place. On the other hand, traffic lights correspond to a central controlling model with high controlling costs, where self-organization is largely inhibited and occasionally delays.
 
-If a manager intervenes a current Sprint in a Scrum organization, the Scrum Team will start to behave like the driver at the red traffic light, which means waiting for signals – and not like a road user in a roundabout, which means autonomous searching a way.
+If a manager intervenes a current Sprint in a Scrum organization, the Scrum Team will start to behave like the driver at the red traffic light, which means waiting for signals—and not like a road user in a roundabout, which means autonomous searching a way.
 
 ## What and how
 
@@ -70,7 +70,7 @@ Like learning is in service to produce good decisions, good decisions are in ser
 
 ## Many of us
 
-Is the idea of the self-determined, purpose-oriented and mastery-striving cooperative worker a model for many of us? I believe, yes. When we were children, we all started as agile workers. Then we have been socialized in schools, university, and corporate structures. If you want to have an idea about what happens during that way, have a look at the [marshmallow challenge][wujec] – kindergarten children usually produce better results than business school graduates.
+Is the idea of the self-determined, purpose-oriented and mastery-striving cooperative worker a model for many of us? I believe, yes. When we were children, we all started as agile workers. Then we have been socialized in schools, university, and corporate structures. If you want to have an idea about what happens during that way, have a look at the [marshmallow challenge][wujec]—kindergarten children usually produce better results than business school graduates.
 
 Ideas change the world. Taylorism has done that and left us behind with apriori process planning and acting as resources in highly automated manufacturing processes. The changing world with new challenges and ever-increasing complexity will ask for our place in this world. Routined good behavior will no longer be the answer to that question. Creativity, exploring, understanding, changing, will become the usual case. The agile movement is a promising new idea and at the same time a reality-pattern that represents a more profound and groundbreaking change that is already on the way.
 

@@ -7,7 +7,7 @@ Self-organization is the determining element for agile teams and companies. To t
 
 This contrasts with the constructing model, in which a central masterminded instance designs the system and controls it. Broadly, one can say that self-organization relies on evolution and construction relies on command and obedience.
 
-The affirmation of the evolutionary approach is rewarding but will challenge traditional behavioral patterns even in the microcosm of a single team. For the entire – possibly huge – organization is the paradox of giving up central control to make the organization controllable, radical and requires open minds and the willingness to learn and improve – in particular from the leaders of the organization.
+The affirmation of the evolutionary approach is rewarding but will challenge traditional behavioral patterns even in the microcosm of a single team. For the entire—possibly huge—organization is the paradox of giving up central control to make the organization controllable, radical and requires open minds and the willingness to learn and improve—in particular from the leaders of the organization.
 
 Leaders in agile organizations have the vital function of actively giving self-organizational forces a direction. This seems to be conflicting with the evolutionary approach and to span the tension field even further, here are two quotes I found in [Malik 2009:137]:
 
@@ -53,19 +53,19 @@ The central construction of such systems would be limited to centralized knowled
 
 ## Self-organization
 
-Self-organization describes spontaneous – emergent – processes that bring a system into some order and to sustain that order. That includes the reaction to internal and external changes, in other words, the adaptability to new conditions [[Bendel 2006:2]][bendel2006]. The ability to self-organize is a property of the system even without the actors being aware of that ability. The interactions between the actors give the essential feature of the self-organizing capability.
+Self-organization describes spontaneous—emergent—processes that bring a system into some order and to sustain that order. That includes the reaction to internal and external changes, in other words, the adaptability to new conditions [[Bendel 2006:2]][bendel2006]. The ability to self-organize is a property of the system even without the actors being aware of that ability. The interactions between the actors give the essential feature of the self-organizing capability.
 
 Water being wet is an emergent property. A single H2O molecule cannot be wet, but a lot of interdependent water molecules will develop the property of being wet.
 
 Pedestrians participating in crowded events will, when searching their path for different directions, develop streams in which they can move with the least possible collisions. This always happens although no one is planning this behavior.
 
-The spontaneous development of new system properties will happen while these properties could not be predicted upfront when inspecting the actors or components of the system. The so developed _new_ is not more or less but something different than the sum of the parts. While the actors or components are visible, their interactions are invisible and difficult to measure. In particular, these interactions are the determining element in complex and self-organizing systems, they make the behavior of the system non-linear and difficult or impossible to reproduce – small causes can have enormous effects.
+The spontaneous development of new system properties will happen while these properties could not be predicted upfront when inspecting the actors or components of the system. The so developed _new_ is not more or less but something different than the sum of the parts. While the actors or components are visible, their interactions are invisible and difficult to measure. In particular, these interactions are the determining element in complex and self-organizing systems, they make the behavior of the system non-linear and difficult or impossible to reproduce—small causes can have enormous effects.
 
 We can find many examples in nature for strong self-organizational forces. The heart is a complex, self-organizing system. Single heart cells generate a synchronized electrical pulse excitation, leading to contractions in a steady rhythm.
 
-The neurons of the human brain can be described. Even their communication protocols can be analyzed. But who, by looking at these components of the system called a brain, could predict that from these neurons and synapses something like articles, feelings, music, dreams, and consciousness will develop? And isn´t it astonishing that the total number of neurons is determined with our birth – no further will be added — only the connections between the neurons and by that the possibility of interdependencies will increase during our lifetime.
+The neurons of the human brain can be described. Even their communication protocols can be analyzed. But who, by looking at these components of the system called a brain, could predict that from these neurons and synapses something like articles, feelings, music, dreams, and consciousness will develop? And isn´t it astonishing that the total number of neurons is determined with our birth—no further will be added — only the connections between the neurons and by that the possibility of interdependencies will increase during our lifetime.
 
-Language develops in the same manner. The interdependencies within our brains continue in the outer world. Thinking and speaking are connected and speaking – as only being one of many ways to communicate – connects our thinking with the thought of others. The language we use is not the result of a central construction process with the grammar specified upfront. Language evolves and can function without a primary constructing instance.
+Language develops in the same manner. The interdependencies within our brains continue in the outer world. Thinking and speaking are connected and speaking—as only being one of many ways to communicate—connects our thinking with the thought of others. The language we use is not the result of a central construction process with the grammar specified upfront. Language evolves and can function without a primary constructing instance.
 
 The opponent of the described ordering forces is chaos. In the shape of turbulences and swirls chaos brings unpredictable dynamics and the moment of chance into the world. Complex self-organizing systems are situated along the border to chaos.
 
@@ -84,7 +84,7 @@ One has to withstand the reflex of responding to uncertainty and ambiguity with 
 
 Still, not all decisions are being taken autonomously on local levels. Self-organization can be accompanied with hierarchic structures. Lower levels build up higher levels and higher levels adapt with a slower pace. Lower levels will get their orientation from higher levels and not the other way around. In self-organizing systems, impulse and input from lower levels will be integrated into decision processes. It is not the question if centralized or decentralized decision patterns are better in self-organizing systems. Instead, both patterns can be observed and are needed.
 
-This is a theory – but what can we _do_ to give self-organizational forces a direction?
+This is a theory—but what can we _do_ to give self-organizational forces a direction?
 
 ## Cooperation and communication
 
@@ -140,7 +140,7 @@ Our tasks determine our communication patterns. Make the task that has to be ful
 
 ## Anti-fragility
 
-Nassim Nicholas Taleb coined the term anti-fragility [Taleb 2012]. Anti-fragility does not mean robustness. Robustness is the ability of a system to resist changes without modifying its initial stable structure. Anti-fragility is more. It is the ability to become stronger through drawbacks, impacts or enhanced demands. If you lift 50 kilograms on one day, your body starts preparing to lift 51 kilograms on the next day. You become stronger because you are getting trained. The same is true for self-organizing teams. As long as the task of the team is clear, the team will start to orient itself on the mission. The job is allowed to be demanding – but it has to be clear, and the team must be emancipated to change structures and adapt.
+Nassim Nicholas Taleb coined the term anti-fragility [Taleb 2012]. Anti-fragility does not mean robustness. Robustness is the ability of a system to resist changes without modifying its initial stable structure. Anti-fragility is more. It is the ability to become stronger through drawbacks, impacts or enhanced demands. If you lift 50 kilograms on one day, your body starts preparing to lift 51 kilograms on the next day. You become stronger because you are getting trained. The same is true for self-organizing teams. As long as the task of the team is clear, the team will start to orient itself on the mission. The job is allowed to be demanding—but it has to be clear, and the team must be emancipated to change structures and adapt.
 
 ## Reflection
 

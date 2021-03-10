@@ -64,7 +64,7 @@ will select an element and give its properties style. When using a selector or a
 
 ## Visions
 
-Web-capable mobile devices – the iPhone – swiped away the assumption of 960px wide layouts. Mobile devices revealed the true nature of the web as a flexible medium filled with unknowns. That´s when *Responsive Web Design,* as named by Ethan Marcotte, arrived. *Responsive Web Design* is
+Web-capable mobile devices—the iPhone—swiped away the assumption of 960px wide layouts. Mobile devices revealed the true nature of the web as a flexible medium filled with unknowns. That´s when *Responsive Web Design,* as named by Ethan Marcotte, arrived. *Responsive Web Design* is
 
 1. Fluid grids
 2. Flexible images

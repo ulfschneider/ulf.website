@@ -7,7 +7,7 @@ https://piccalil.li/course/learn-eleventy-from-scratch/) is a training made by A
 
 If you are not already on the [JAMStack](https://jamstack.org), this is a fast-paced track to get there!
 
-The course covers all the 11ty essentials in a concise way. Andy is taking you on a route where each step carries a meaningful learning that allows you to do something more with your website. You will recognize how well the training is crafted and how much love Andy has put into details that will support you – so you don´t get lost on your path.
+The course covers all the 11ty essentials in a concise way. Andy is taking you on a route where each step carries a meaningful learning that allows you to do something more with your website. You will recognize how well the training is crafted and how much love Andy has put into details that will support you—so you don´t get lost on your path.
 
 Furthermore, it´s not only about 11ty. Just *by the way* you will learn about accessibility and general website optimization techniques, like setting up gulp and Sass, self-hosting Google web fonts, and optimizing your images for speed. My own tiny website was already powered by 11ty when taking the course, and still, I learned a lot to improve my doing! Surely, Andy knows his stuff.
 
