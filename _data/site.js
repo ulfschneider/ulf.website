@@ -71,6 +71,7 @@ module.exports = {
         'journal',
         'reading',
         'tools',
+        'type',
         {
             tag: '*',
             url: '/blog/*/'
