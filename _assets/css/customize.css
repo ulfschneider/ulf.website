@@ -19,12 +19,9 @@
     --fs-h2: var(--fs);
     --fs-h3: var(--fs);
     --fs-h4: var(--fs);
-    --pre-background: var(--neutral-5);
-    --kbd-background: var(--neutral-5);
     --link-focus-color: var(--primary-d1);
     --regular-width: 35rem;
     --hr-content: "*  *  *";
-    --selection-color: var(--primary-5);
     text-decoration-thickness: .06em;
 }
 

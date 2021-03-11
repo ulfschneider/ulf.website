@@ -210,14 +210,23 @@ small,
 }
 
 @custom-media --max-sm (max-width: 400px);
+
 @custom-media --max-rg (max-width: 600px);
+
 @custom-media --max-md (max-width: 900px);
+
 @custom-media --max-lg (max-width: 1400px);
+
 @custom-media --sm (min-width: 400px);
+
 @custom-media --rg (min-width: 600px);
+
 @custom-media --md (min-width: 900px);
+
 @custom-media --lg (min-width: 1400px);
+
 @custom-media --touch-device screen and (hover: none) and (pointer: coarse);
+
 :root {
     --font-size-breakpoint-sm: calc(var(--base-font-size) + 1px);
     --font-size-breakpoint-rg: calc(var(--base-font-size) + 2px);
@@ -1067,7 +1076,7 @@ small,
 
 :root {
     --color-dn-spread: 7;
-    --color-up-spread: 7;
+    --color-up-spread: 6;
     --neutral-h: 0;
     --neutral-s: 0%;
     --neutral-l: 58%;
@@ -1183,25 +1192,25 @@ small,
     --base-color: var(--neutral-d5);
     --base-background: white;
     --mark-background: yellow;
-    --border-color: var(--neutral-d2);
+    --border-color: var(--neutral);
     --pre-background: var(--neutral-5);
     --link-color: inherit;
     --link-focus-color: var(--primary);
     --link-hover-color: var(--link-focus-color);
     --link-active-color: var(--link-focus-color);
-    --selection-color: var(--primary-4);
+    --selection-color: var(--accent-three-4);
     --heading-color: var(--base-color);
     --meta-color: var(--neutral-d2);
     --li-prefix-color: var(--heading-color);
     --form-label-color: var(--meta-color);
     --form-field-color: var(--base-color);
-    --form-field-border-color: var(--neutral);
+    --form-field-border-color: var(--border-color);
     --caret-color: var(--primary-d1);
     --form-focus-color: var(--link-focus-color);
     --form-button-background: var(--base-color);
     --form-button-color: var(--base-background);
     --kbd-background: var(--pre-background);
-    --kbd-border-color: var(--form-field-border-color);
+    --kbd-border-color: var(--border-color);
     --text-decoration-color: unset;
     --code-background: transparent;
     --code-color: var(--base-color);
@@ -1209,8 +1218,8 @@ small,
     --blockquote-background: transparent;
     --table-alternate-row-background: var(--neutral-5);
     --table-alternate-col-background: var(--neutral-5);
-    --table-hover-row-background: var(--primary-5);
-    --table-underline-row-color: var(--neutral-3);
+    --table-hover-row-background: var(--primary-4);
+    --table-underline-row-color: var(--border-color);
     --table-head-background: var(--base-background);
     color: var(--base-color);
 }
@@ -1307,7 +1316,6 @@ small,
     color: var(--li-prefix-color);
 }
 
-
 /* Background */
 
 .bg-neutral-d5 {
@@ -1401,7 +1409,6 @@ small,
 .bg-li-prefix-color {
     background-color: var(--li-prefix-color);
 }
-
 
 /* Border Colors */
 
@@ -1757,7 +1764,6 @@ small,
     color: var(--accent-five-5);
 }
 
-
 /* Background */
 
 .bg-primary-d5 {
@@ -2023,7 +2029,6 @@ small,
 .bg-accent-five-5 {
     background-color: var(--accent-five-5);
 }
-
 
 /* Border Colors */
 
@@ -2471,7 +2476,6 @@ small,
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-
 
 /**
 Naming conventions
@@ -3084,7 +3088,6 @@ Naming conventions
     /*for flexbox */
 }
 
-
 /**
 Naming conventions
     x=x-axis
@@ -6770,7 +6773,6 @@ Naming conventions
         /*for flexbox */
     }
 }
-
 
 /**
 Naming conventions
@@ -7178,7 +7180,6 @@ Naming conventions
     padding-left: var(--space-6);
 }
 
-
 /**
 Naming conventions
     x=x-axis
@@ -9617,7 +9618,6 @@ Naming conventions
         padding-left: var(--space-6);
     }
 }
-
 
 /**
 Naming conventions
@@ -13600,7 +13600,7 @@ kbd,
     border-radius: var(--space-d4);
     border: 1px solid var(--kbd-border-color);
     padding: 0 0.2em;
-    font-family: var(--meta-font-family);
+    font-family: var(--mono-font-family);
     white-space: nowrap;
     text-align: center;
     min-width: var(--space);
@@ -13757,7 +13757,6 @@ a:not(table a) {
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
-
 
 /* consider x-layout */
 
@@ -14196,7 +14195,6 @@ label:focus-within {
 .x-12>.xx-12 {
     grid-column: auto / span 12;
 }
-
 
 /* column start points */
 
@@ -17363,7 +17361,6 @@ td:last-child {
     margin: 0;
 }
 
-
 /* Nicolas Gallaghers Clearfix solution
    Ref: http://nicolasgallagher.com/micro-clearfix-hack/ */
 
@@ -17462,7 +17459,6 @@ td:last-child {
     -o-box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 }
-
 
 /* containment */
 
@@ -18946,7 +18942,6 @@ td:last-child {
     }
 }
 
-
 /* scroll snap type */
 
 .snap-y-mandatory {
@@ -19002,7 +18997,6 @@ td:last-child {
     scroll-snap-type: none;
 }
 
-
 /* scroll snap align */
 
 .snap-start {
@@ -19021,9 +19015,7 @@ td:last-child {
     scroll-snap-align: none;
 }
 
-
 /* scroll-scroll-margin */
-
 
 /**
 Naming conventions
@@ -19636,9 +19628,7 @@ Naming conventions
     /*for flexbox */
 }
 
-
 /* scroll-padding */
-
 
 /**
 Naming conventions
@@ -20045,7 +20035,6 @@ Naming conventions
 .snap-pdl-6 {
     scroll-padding-left: var(--space-6);
 }
-
 
 /*DEBUG GRID
 from http://tachyons.io/docs/debug-grid/
