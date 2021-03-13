@@ -270,3 +270,22 @@ I´m posting a timeline of images here to document the progress.
 <figcaption>Feb 12, 2021: White in white during the very cold and snowy days beginning of February. We are close to the finish. Thankfully.</figcaption>
 <img src="/img/house/IMG_0397X.jpg" alt="">
 </figure>
+
+## Moving into the house
+
+<figure>
+<figcaption>Mar 12, 2021: I cannot believe it, today we moved into the house. After the movers went into their weekend while wishing us the best, we bought some sushi from our preferred sushi cook Hakan (strongly recommended) and enjoyed just being there.</figcaption>
+<figure class="rg:split">
+<img src="/img/house/IMG_0461.jpg">
+<figcaption>👌😊 I will have my own dedicated office-space. I cannot tell how much I was looking forward to this.</figure>
+<figure class="rg:split">
+</figure>
+<figure class="rg:split">
+<figcaption>On a healthy diet with sushi and potato chips. Emil and I enjoy the peace.</figcaption>
+<img src="/img/house/IMG_0462.jpg">
+</figure>
+<figure class="rg:split">
+<img src="/img/house/hakan.jpg">
+<figcaption>Hakan, the founder of the excellent <a href="https://edoki-sushi.de">Edoki Sushibar</a>, was responsible for our first meal in the new house.</figcaption>
+</figure>
+</figure>
