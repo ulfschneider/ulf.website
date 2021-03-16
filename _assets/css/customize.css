@@ -237,14 +237,11 @@ hr.footnotes-sep::after {
 @media (--md) {
     body>header>*,
     body>footer>*,
-    main>figure,
     main>.scroll-table {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
-        max-width: var(--mid-width);
+        max-width: calc(var(--mid-width) / 2*3);
     }
-    main>header,
     main time.year {
-        max-width: calc(var(--mid-width) + var(--horizontal-rhythm));
         margin-left: calc(-1 * var(--horizontal-rhythm));
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
     }
