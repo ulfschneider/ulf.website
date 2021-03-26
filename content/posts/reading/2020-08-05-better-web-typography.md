@@ -46,7 +46,7 @@ I think the course is like a condensed version of Matej´s book "[Better web typ
 
 - [Why is Vertical Rhythm an Important Typography Practice?](https://zellwk.com/blog/why-vertical-rhythms/) *– article by Zell*
 - [Kern Type, the kerning game](https://type.method.ac/) *– game by Mark MacKay*
-- [Gutenberg—A Meaningful Web Typography Starter Kit](http://matejlatin.github.io/Gutenberg/) *– CSS tool by Matej Latin*
+- [Gutenberg – A Meaningful Web Typography Starter Kit](http://matejlatin.github.io/Gutenberg/) *– CSS tool by Matej Latin*
 - [Grid Lover](https://www.gridlover.net/try) *– tool*
 
 ## Modular scale & meaningful typography

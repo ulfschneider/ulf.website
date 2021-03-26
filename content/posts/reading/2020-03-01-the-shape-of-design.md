@@ -26,7 +26,7 @@ The creative process, like a good story, needs to start with a great leap of lig
 
 … our collective ideas advance with the same limitations.
 
-… Our magicians—our Henry Fords, our Billie Holidays, our Gutenbergs, Disneys, and Marie Curies—do not stand on the inside of what is possible and push; they imagine what is just outside of what we deem possible and pull us towards their vision of what is better. 
+… Our magicians – our Henry Fords, our Billie Holidays, our Gutenbergs, Disneys, and Marie Curies – do not stand on the inside of what is possible and push; they imagine what is just outside of what we deem possible and pull us towards their vision of what is better. 
 
 … the primary position in conversation is the one listening rather than the speaker …
 

@@ -64,7 +64,7 @@ will select an element and give its properties style. When using a selector or a
 
 ## Visions
 
-Web-capable mobile devices—the iPhone—swiped away the assumption of 960px wide layouts. Mobile devices revealed the true nature of the web as a flexible medium filled with unknowns. That´s when *Responsive Web Design,* as named by Ethan Marcotte, arrived. *Responsive Web Design* is
+Web-capable mobile devices – the iPhone – swiped away the assumption of 960px wide layouts. Mobile devices revealed the true nature of the web as a flexible medium filled with unknowns. That´s when *Responsive Web Design,* as named by Ethan Marcotte, arrived. *Responsive Web Design* is
 
 1. Fluid grids
 2. Flexible images
@@ -78,7 +78,7 @@ The lack of a media query is your first media query.
 </blockquote>
 
 <blockquote>
-The primary design principle underlying the Web’s usefulness and growth is universality. The Web should be usable by people with disabilities. It must work with any form of information, be it a document or a point of data, and information of any quality—from a silly tweet to a scholarly paper. And it should be accessible from any kind of hardware that can connect to the Internet: stationary or mobile, small screen or large.
+The primary design principle underlying the Web’s usefulness and growth is universality. The Web should be usable by people with disabilities. It must work with any form of information, be it a document or a point of data, and information of any quality – from a silly tweet to a scholarly paper. And it should be accessible from any kind of hardware that can connect to the Internet: stationary or mobile, small screen or large.
 <footer>Tim Berners-Lee</footer>
 </blockquote>
 

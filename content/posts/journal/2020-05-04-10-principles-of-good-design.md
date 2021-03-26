@@ -14,10 +14,10 @@ The 10 Principles of Good Design as stated by [Dieter Rams](/2020-04-14-rams):
 4. **Good design makes a product understandable.** It clarifies the product’s structure. Better still, it can make the product talk. At best, it is self-explanatory.
 5. **Good design is unobtrusive.** Products fulfilling a purpose are like tools. They are neither decorative objects nor works of art. Their design should therefore be both neutral and restrained, to leave room for the user’s self-expression.
 6. **Good design is honest.** It does not make a product more innovative, powerful or valuable than it really is. It does not attempt to manipulate the consumer with promises that cannot be kept.
-7. **Good design is long-lasting.** It avoids being fashionable and therefore never appears antiquated. Unlike fashionable design, it lasts many years — even in today’s throwaway society.
+7. **Good design is long-lasting.** It avoids being fashionable and therefore never appears antiquated. Unlike fashionable design, it lasts many years  –  even in today’s throwaway society.
 8. **Good design is thorough down to the last detail.** Nothing must be arbitrary or left to chance. Care and accuracy in the design process show respect towards the user.
 9. **Good design is environmentally-friendly.** Design makes an important contribution to the preservation of the environment. It conserves resources and minimises physical and visual pollution throughout the lifecycle of the product.
-10. **Good design is as little design as possible.** Less, but better — because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity.
+10. **Good design is as little design as possible.** Less, but better  –  because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity.
 
 <figure>Less, but better!</figure>
 

@@ -24,7 +24,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure class="rg:split">
-<figcaption>Jul 6, 2020: We are in Falkenberg to decide the complete interior design of the house—within a duration of two days. Our builder, Haas, is taking care of accomodations and after the first day of work we are enjoying dinner in the beer garden of our hotel.</figcaption>
+<figcaption>Jul 6, 2020: We are in Falkenberg to decide the complete interior design of the house – within a duration of two days. Our builder, Haas, is taking care of accomodations and after the first day of work we are enjoying dinner in the beer garden of our hotel.</figcaption>
 <img src="/img/house/IMG_1356.jpg" >
 </figure>
 
@@ -83,7 +83,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure class="rg:split">
-<figcaption>Aug 7, 2020: The basement plate preparation is ready for the concreting. I have hired a construction expert to help me with the acceptance of the delivered results. Before the concreting starts, he wants to see the steel. The expert is very satisfied with the good quality of the work and of course—I´m glad too! Finally it was the right decision to go with Knecht as the cellar builder. The three men, despite the heat of 33 °C in the afternoon, seem to work without any resting. I can only help them with providing water to drink, a bit of coffee, and some food. I think they earned their weekend well. Because of the heat they are covering the new basement plate with film, so that it doesn´t build out cracks during the hardening period. Next week they are going to finalize the cellar.</figcaption>
+<figcaption>Aug 7, 2020: The basement plate preparation is ready for the concreting. I have hired a construction expert to help me with the acceptance of the delivered results. Before the concreting starts, he wants to see the steel. The expert is very satisfied with the good quality of the work and of course – I´m glad too! Finally it was the right decision to go with Knecht as the cellar builder. The three men, despite the heat of 33 °C in the afternoon, seem to work without any resting. I can only help them with providing water to drink, a bit of coffee, and some food. I think they earned their weekend well. Because of the heat they are covering the new basement plate with film, so that it doesn´t build out cracks during the hardening period. Next week they are going to finalize the cellar.</figcaption>
 <img src="/img/house/IMG_1587.jpg" alt="">
 <img src="/img/house/IMG_1588.jpg" alt="">
 <img src="/img/house/IMG_1595.jpg" alt="">
@@ -164,7 +164,7 @@ I´m posting a timeline of images here to document the progress.
 ## The house
 
 <figure>
-<figcaption>Oct 7, 2020: The house will be erected in this week. At first there is only the scaffolding—no house. Then, the first wall …
+<figcaption>Oct 7, 2020: The house will be erected in this week. At first there is only the scaffolding – no house. Then, the first wall …
 </figcaption>
 <div class="rg:split">
 <img src="/img/house/IMG_1867.jpg" alt="">
