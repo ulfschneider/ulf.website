@@ -24,8 +24,8 @@ According to § 55 Abs.2 RStV responsible for the content of this website:{.mxw-
 
 <address class="mry">
 Ulf Schneider<br>
-Winfriedstr. 78<br>
-33098 Paderborn<br>
+Böckstiegel-Str. 27<br>
+33100 Paderborn<br>
 Germany<br>
 </address>
 
