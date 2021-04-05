@@ -16966,10 +16966,10 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     --mrb-list: var(--vertical-rhythm);
     --list-item-type: "–";
     --ol-counter-delimiter: "-";
-    --ol-counter-type: decimal;
+    --ol-counter-type: decimal-leading-zero;
     --h-counter-type: decimal;
     --h-counter-delimiter: ".";
-    --ol-counter: counters(ol-counter, var(--ol-counter-delimiter), var(--ol-counter-type)) "\0000a0\0000a0";
+    --ol-counter: counters(ol-counter, var(--ol-counter-delimiter), var(--ol-counter-type)) "\0000a0";
     --h-counter: counters(ol-counter, var(--h-counter-delimiter), var(--h-counter-type)) "\0000a0\0000a0";
     --h2-counter: counter(h2-counter) "\0000a0";
     --h3-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) "\0000a0";
@@ -17037,6 +17037,7 @@ ol li::before {
     display: inline-block;
     font-family: var(--meta-font-family);
     font-weight: bold;
+    font-size: smaller;
     color: var(--li-prefix-color);
 }
 
