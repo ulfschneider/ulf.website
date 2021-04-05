@@ -21,7 +21,6 @@
     --fs-h4: var(--fs);
     --link-focus-color: var(--primary-d1);
     --regular-width: 35rem;
-    --hr-content: "*  *  *";
     text-decoration-thickness: .06em;
 }
 

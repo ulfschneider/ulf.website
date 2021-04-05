@@ -13338,7 +13338,7 @@ Naming conventions
     --mrb-pre: var(--vertical-rhythm);
     --mrt-hr: var(--vertical-rhythm);
     --mrb-hr: var(--vertical-rhythm);
-    --hr-content: "◊      ◊      ◊";
+    --hr-content: "·\0000a0\0000a0\0000a0·\0000a0\0000a0\0000a0·";
     --quotes: """ """"'""'";
     --quotes-de: """ """"'""'";
     --scroll-margin-top: var(--vertical-rhythm);
