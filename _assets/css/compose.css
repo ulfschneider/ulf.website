@@ -17024,12 +17024,11 @@ dl.timeline dd,
 dl.timeline dt,
 .timeline>dl dt {
     font-weight: bold;
-    font-size: smaller;
 }
 
 dl.timeline dt::before,
 .timeline>dl dt::before {
-    border-radius: 100%;
+    border-radius: 50%;
     content: " ";
     width: 1em;
     height: 1em;
