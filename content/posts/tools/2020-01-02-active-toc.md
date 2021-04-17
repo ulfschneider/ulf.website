@@ -10,6 +10,10 @@ abstract: Highlight your TOC entries while scrolling.
         scroll-behavior: smooth;
     }
 
+    #toc {
+        margin-top: 2.5rem;
+    }
+
   #toc a {
 
       color: unset;
@@ -31,31 +35,32 @@ abstract: Highlight your TOC entries while scrolling.
         padding-left: 1rem;
     }
 
-    .content {
-        margin-left: 9rem;
+    @media (max-width: 60rem) {
+
+        .content {
+            margin-left: 9rem;
+        }
     }
 
 </style>
 
 <div id="toc" class="meta">
-
-        <a href="/blog/tools/" class="mrb-2">ulf.codes</a>
-        <a href="#one-morning">One morning</a>
-        <a href="#he-thought">He thought</a>
-        <a href="#gregor-then">Gregor then</a>
-        <a href="#he-must">He must</a>
-        <a href="#doing-business">Doing business</a>
-        <a href="#he-felt">He felt</a>
-        <a href="#you-ve-got">You´ve got</a>
-        <a href="#if-i">If I</a>
-        <a href="#well">Well</a>
-        <a href="#he-could">He could</a>
-        <a href="#and-even">And even</a>
-        <a href="#his-boss">His boss</a>
-        <a href="#he-lay">He lay</a>
-        <a href="#a-collection">A collection</a>
-        <a href="#however-hard">However hard</a>
-
+<a href="/blog/tools/" class="mrb-2">ulf.codes</a>
+<a href="#one-morning">One morning</a>
+<a href="#he-thought">He thought</a>
+<a href="#gregor-then">Gregor then</a>
+<a href="#he-must">He must</a>
+<a href="#doing-business">Doing business</a>
+<a href="#he-felt">He felt</a>
+<a href="#you-ve-got">You´ve got</a>
+<a href="#if-i">If I</a>
+<a href="#well">Well</a>
+<a href="#he-could">He could</a>
+<a href="#and-even">And even</a>
+<a href="#his-boss">His boss</a>
+<a href="#he-lay">He lay</a>
+<a href="#a-collection">A collection</a>
+<a href="#however-hard">However hard</a>
 </div>
 
 <div class="content">
@@ -67,13 +72,10 @@ abstract: Highlight your TOC entries while scrolling.
 <h2 id="one-morning">One morning</h2>
 
 <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a
-
-            horrible
-            vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly,
-            slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed
-            ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him,
-            waved
-            about helplessly as he looked. "What's happened to me?"</p>
+horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, 
+slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed
+ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, 
+waved about helplessly as he looked. "What's happened to me?"</p>
 
 <h2 id="he-thought">He thought</h2>
 
@@ -144,12 +146,10 @@ hearing.</p>
       
 
 <p>Well, there's still some hope; once I've got the money together to pay off my parents' debt to him – another five
-
-            or six years I suppose – that's definitely what I'll do. That's when I'll make the big change. First of all
-            though, I've got to get up, my train leaves at five. " And he looked over at the alarm clock, ticking on the
-            chest of drawers. "God in Heaven! " he thought. It was half past six and the hands were quietly moving
-            forwards,
-            it was even later than half past, more like quarter to seven. Had the alarm clock not rung?</p>
+or six years I suppose – that's definitely what I'll do. That's when I'll make the big change. First of allthough, 
+I've got to get up, my train leaves at five. " And he looked over at the alarm clock, ticking on the
+chest of drawers. "God in Heaven! " he thought. It was half past six and the hands were quietly moving
+forwards, it was even later than half past, more like quarter to seven. Had the alarm clock not rung?</p>
 
 <h2 id="he-could">He could</h2>
 
@@ -187,62 +187,40 @@ transformed in his bed into a horrible vermin.</p>
         
 
 <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly
-
-            domed
-            and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide
-            off
-            any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly
-            as
-            he looked. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human room although a
-            little too small, lay peacefully between its four familiar walls.</p>
+domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide
+off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly
+as he looked. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human room although a
+little too small, lay peacefully between its four familiar walls.</p>
 
 <h2 id="a-collection">A collection</h2>
 
-        
-
 <p>A collection of textile samples lay spread out on the table – Samsa was a travelling salesman – and above it
-
-            there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded
-            frame.
-            It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that
-            covered
-            the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-            weather.
-            Drops of rain could be heard hitting the pane, which made him feel quite sad. "How about if I sleep a little
-            bit
-            longer and forget all this nonsense," he thought, but that was something he was unable to do because he was
-            used
-            to sleeping on his right, and in his present state couldn't get into that position.</p>
+there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded
+frame.
+It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered
+the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.
+Drops of rain could be heard hitting the pane, which made him feel quite sad. "How about if I sleep a little
+bit longer and forget all this nonsense, " he thought, but that was something he was unable to do because he was
+used to sleeping on his right, and in his present state couldn't get into that position.</p>
 
 <h2 id="however-hard">However hard</h2>
 
         
 
 <p>However hard he threw himself onto his right, he always rolled back to where he was. He must have tried it a
-
-            hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when
-            he
-            began to feel a mild, dull pain there that he had never felt before. "Oh, God," he thought, "what a
-            strenuous
-            career it is that I've chosen! Travelling day in and day out. Doing business like this takes much more
-            effort
-            than doing your own business at home, and on top of that there's the curse of travelling, worries about
-            making
-            train connections, bad and irregular food, contact with different people all the time so that you can never
-            get
-            to know anyone or become friendly with them. It can all go to Hell! " He felt a slight itch up on his belly;
-            pushed himself slowly up on his back towards the headboard so that he could lift his head better; found
-            where
-            the itch was, and saw that it was covered with lots of little white spots which he didn't know what to make
-            of;
-            and when he tried to feel the place with one of his legs he drew it quickly back because as soon as he
-            touched
-            it he was overcome by a cold</p>    
+hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when
+he began to feel a mild, dull pain there that he had never felt before. "Oh, God, " he thought, "what a strenuous
+career it is that I've chosen! Travelling day in and day out. Doing business like this takes much more
+effort than doing your own business at home, and on top of that there's the curse of travelling, worries about
+making train connections, bad and irregular food, contact with different people all the time so that you can never
+get to know anyone or become friendly with them. It can all go to Hell! " He felt a slight itch up on his belly; 
+pushed himself slowly up on his back towards the headboard so that he could lift his head better; found
+where the itch was, and saw that it was covered with lots of little white spots which he didn't know what to make of; 
+and when he tried to feel the place with one of his legs he drew it quickly back because as soon as he touched
+it he was overcome by a cold</p>    
 
 </div>
 <script src="/js/active-toc.js"></script>
 <script>
-
-    ActiveToc.init({tocContainer: '#toc'});
-
+ActiveToc.init({tocContainer: '#toc'});
 </script>
