@@ -9,12 +9,10 @@ subtitle: A short entry-level approach to Git
 
 Git will help you doing the following things with a computer:
 
-<figure>
-<div class="x-12 gp mrt">
-
-<div class="xx-12 rg:xx-6">
-<h2 class="inline">Personal</h2>
-<ul class="indent mrt-0">
+<div class="rg:split">
+<div>
+<h2>Personal</h2>
+<ul class="indent">
 <li>Keep track of file revisions when working iteratively (this is often referred to as version control).</li>
 <li>Safely experiment because you can always step back to the previous version.</li>
 <li>No need to give your files version indicating names, like essay_v1.txt, essay_v2.txt and so on.</li>
@@ -24,17 +22,15 @@ Git will help you doing the following things with a computer:
 <li>Work consistently on multiple different operating systems, like MacOS, Linux and Windows.</li>
 </ul>
 </div>
-
-<div class="xx-12 rg:xx-6">
-<h2 class="inline">Team</h2>
-<ul class="indent mrt-0">
+<div>
+<h2>Team</h2>
+<ul class="indent">
 <li>Share your work with others and keep track of their changes by enforcing the same set of rules for managing versions. This will work even with thousands of people on a big project, but also scales down nicely for a small team.</li>
 <li>When sharing your work with others, you can work on your local computer without being always connected to a shared repository, only synchronizing eventually.</li>
 <li>No central locking of files. All team members have their own working copy on their own computers which allows each of them to work independently.</li>
 </ul>
 </div>
-
-</figure>
+</div>
 
 Git is free. You can get Git for any platform at [git-scm.com/downloads](https://git-scm.com/downloads).
 
