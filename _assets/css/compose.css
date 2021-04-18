@@ -1204,6 +1204,8 @@ small,
     --kbd-background: var(--pre-background);
     --kbd-border-color: var(--border-color);
     --timeline-color: var(--li-prefix-color);
+    --timeline-blub-color: var(--li-prefix-color);
+    --timeline-blub-background: var(--base-background);
     --text-decoration-color: unset;
     --code-background: transparent;
     --code-color: var(--base-color);
@@ -16982,6 +16984,8 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     --h4-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) "\0000a0";
     --h5-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) "\0000a0";
     --h6-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) var(--h-counter-delimiter) counter(h6-counter) "\0000a0";
+    --timeline-blub-size: 1em;
+    --timeline-width: 2px;
 }
 
 dl {
@@ -17000,41 +17004,31 @@ dd+dt {
     margin-top: var(--mrt-list);
 }
 
-dl.timeline,
-.timeline>dl {
-    border-left: 2px solid var(--timeline-color);
+dl.timeline {
+    border-left: var(--timeline-width) solid var(--timeline-color);
 }
 
-.timeline>dl {
-    margin: 0;
-}
-
-dl.timeline dt,
-dl.timeline dd,
-.timeline>dl dt,
-.timeline>dl dd {
+dl.timeline>dt,
+dl.timeline>dd {
     margin-left: 0;
     padding-left: calc(var(--horizontal-rhythm));
 }
 
-.timeline>dl+dl {
-    padding-top: var(--mrt-list);
-}
-
-dl.timeline dt,
-.timeline>dl dt {
+dl.timeline>dt {
     font-weight: bold;
 }
 
-dl.timeline dt::before,
-.timeline>dl dt::before {
+dl.timeline>dt::before {
     border-radius: 50%;
-    content: " ";
+    content: "";
     width: 1em;
     height: 1em;
+    display: block;
     position: absolute;
-    margin-left: calc(-0.5em - 1px - var(--horizontal-rhythm));
-    background: var(--timeline-color);
+    margin-left: calc(-0.5 * (var(--timeline-blub-size) + var(--timeline-width)) - var(--horizontal-rhythm));
+    margin-top: calc(0.5em * var(--lh-default) - 0.5 * var(--timeline-blub-size) - var(--timeline-width));
+    background-color: var(--timeline-blub-background);
+    border: 2px solid var(--timeline-blub-color);
 }
 
 ol,
