@@ -16984,7 +16984,7 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     --h4-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) "\0000a0";
     --h5-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) "\0000a0";
     --h6-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) var(--h-counter-delimiter) counter(h6-counter) "\0000a0";
-    --timeline-blub-size: 1em;
+    --timeline-blub-size: .8em;
     --timeline-width: 1px;
     --timeline-blub-border: 1px;
 }
@@ -17022,8 +17022,8 @@ dl.timeline>dt {
 dl.timeline>dt::before {
     border-radius: 50%;
     content: "";
-    width: 1em;
-    height: 1em;
+    width: var(--timeline-blub-size);
+    height: var(--timeline-blub-size);
     display: block;
     position: absolute;
     margin-left: calc(-0.5 * (var(--timeline-blub-size) + var(--timeline-width)) - var(--horizontal-rhythm));
