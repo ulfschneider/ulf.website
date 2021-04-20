@@ -1,16 +1,20 @@
-const CACHE_VERSION = 'v34'; //version is used to remove old caches
+const CACHE_VERSION = 'v35'; //version is used to remove old caches
 
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
 const IMAGE = 'image';
 const FONT = 'font';
+const JSONCACHE = 'json';
+const SEARCH = 'search';
 const CACHE_NAME = 'cache';
 
 const SCRIPT_CACHE_NAME = `${SCRIPT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const FONT_CACHE_NAME = `${FONT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const IMAGE_CACHE_NAME = `${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
+const JSON_CACHE_NAME = `${JSONCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
+const SEARCH_CACHE_NAME = `${SEARCH}-${CACHE_NAME}-${CACHE_VERSION}`;
 const RUNTIME_CACHE_NAME = `${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
-const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME];
+const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME, JSON_CACHE_NAME, SEARCH_CACHE_NAME];
 
 const SERVE_HTML_CACHE_FIRST = false;
 const NO_REVALIDATE_WITHIN_MINUTES = 10;
@@ -25,6 +29,12 @@ const CACHE_SETTINGS = {
     },
     [RUNTIME_CACHE_NAME]: {
         maxAgeMinutes: 60 * 24 //expire runtime entries after one day
+    },
+    [JSON_CACHE_NAME]: {
+        maxAgeMinutes: 60 * 24 //expire json after one day
+    },
+    [SEARCH_CACHE_NAME]: {
+        maxAgeMinutes: 60 * 24 //expire search after one day
     },
     [IMAGE_CACHE_NAME]: {
         maxAgeMinutes: 60 * 24 * 10, //expire images after 10 days
@@ -229,9 +239,16 @@ async function fetchAndCache(request, options) {
                     response: responseFromNetwork.clone(),
                     options
                 });
+            } else if (/\/.*index.*\.json$/.test(url.pathname)) {
+                await stashInCache({
+                    cacheName: SEARCH_CACHE_NAME,
+                    request: request,
+                    response: responseFromNetwork.clone(),
+                    options
+                });
             } else if (/\/.*\.json$/.test(url.pathname)) {
                 await stashInCache({
-                    cacheName: RUNTIME_CACHE_NAME,
+                    cacheName: JSON_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options,
