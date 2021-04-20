@@ -21,6 +21,10 @@
             </dt>
             <dd>Will match documents with words <em>beginning</em> with “foo”.</dd>
             <dt>
+                <code>foo bar</code>
+            </dt>
+            <dd>Will match documents that contain “foo” <em>or</em> “bar”.</dd>
+            <dt>
                 <code>+foo bar -baz</code>
             </dt>
             <dd>Will match documents that <em>must</em> contain “foo”, <em>might</em> contain “bar” and <em>must not</em> contain “baz”.</dd>
