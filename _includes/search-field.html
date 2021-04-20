@@ -15,6 +15,20 @@
             <input id="search-query" {{autofocus}} class="flex-grow-1 align-stretch" type="text"/>
             <input type="submit" id="search-submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="Search"/>
         </div>
+        <dl class="small meta pdb brb">
+            <dt>
+                <code>foo*</code>
+            </dt>
+            <dd>Will match documents with words <em>beginning</em> with “foo”.</dd>
+            <dt>
+                <code>+foo bar -baz</code>
+            </dt>
+            <dd>Will match documents that <em>must</em> contain “foo”, <em>might</em> contain “bar” and <em>must not</em> contain “baz”.</dd>
+            <dt>
+                <code>foo~1</code>
+            </dt>
+            <dd>Will match “boo”, as it requires a single (~1) edit (replacing “f” with “b”), but “boot” would not as it also requires an additional “t” at the end.</dd>
+        </dl>
     </form>
 
     <script>
