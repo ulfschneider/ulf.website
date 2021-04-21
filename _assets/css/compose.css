@@ -13885,6 +13885,14 @@ h6+* {
     margin-top: 0;
 }
 
+details summary {
+    cursor: pointer;
+}
+
+details summary>* {
+    display: inline;
+}
+
 :root {
     --form-font-family: var(--font-family);
     --form-font-size: var(--fs);
