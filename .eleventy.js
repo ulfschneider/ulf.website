@@ -56,8 +56,8 @@ function addLayoutAliases(eleventyConfig) {
 
 function addCollections(eleventyConfig) {
 
-    eleventyConfig.addCollection('usedSiteTags', collection => {
-        let usedTags = utils.extractTags(collection);
+    eleventyConfig.addCollection('usedSiteTags', collectionAPI => {
+        let usedTags = utils.extractTags(collectionAPI);
         let siteTags = utils.siteTagsFromTagNav();
         if (siteTags.length) {
             return siteTags.filter(tag => usedTags.includes(tag));
@@ -65,18 +65,18 @@ function addCollections(eleventyConfig) {
             return usedTags;
         }
     });
-    eleventyConfig.addCollection('liveSiteTagContent', collection => {
+    eleventyConfig.addCollection('liveSiteTagContent', collectionAPI => {
         return [
-            ...collection.getFilteredByGlob('content/**')
+            ...collectionAPI.getFilteredByGlob('content/**')
             .filter(utils.isLiveItem)
             .filter(utils.hasSiteTag)
             .sort(utils.compareItemDate)
         ];
     });
 
-    eleventyConfig.addCollection('liveContent', collection => {
+    eleventyConfig.addCollection('liveContent', collectionAPI => {
         return [
-            ...collection.getFilteredByGlob('content/**')
+            ...collectionAPI.getFilteredByGlob('content/**')
             .filter(utils.isLiveItem)
             .sort(utils.compareItemDate)
         ];

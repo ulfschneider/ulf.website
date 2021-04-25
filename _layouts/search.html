@@ -211,7 +211,7 @@ permalink: '{{site.search.url}}'
         if (query) {
             printSearching();
         }
-        fetch('/post-search-index.json', {credentials: 'same-origin'})
+        fetch('/search-index.json', {credentials: 'same-origin'})
             .then(response => {
                 return response.json()
             })
