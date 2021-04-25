@@ -90,7 +90,7 @@ module.exports = {
 
     isLiveItem: function(item) {
         const now = new Date();
-        return !item.date ||  item.date <= now &&
+        return  item.date <= now &&
             item.data.draft !== true &&
             item.data.draft !== 'yes';
     },
@@ -143,6 +143,23 @@ module.exports = {
                     return true;
                 }
             }
+        }
+        return false;
+    },
+
+    hasSiteTagOrNoTag: function(item) {
+        let siteTags = siteTagsFromTagNav();
+        if (!siteTags.length) {
+            return true;
+        }
+        if (item.data.tags) {
+            for (let tag of item.data.tags) {
+                if (siteTags.includes(tag)) {
+                    return true;
+                }
+            }
+        } else {
+            return true;
         }
         return false;
     },

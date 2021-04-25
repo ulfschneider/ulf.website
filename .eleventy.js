@@ -78,6 +78,7 @@ function addCollections(eleventyConfig) {
         return [
             ...collectionAPI.getFilteredByGlob('content/**')
             .filter(utils.isLiveItem)
+            .filter(utils.hasSiteTagOrNoTag)
             .sort(utils.compareItemDate)
         ];
     });
