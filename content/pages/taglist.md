@@ -8,6 +8,7 @@ pagination:
 permalink: '{{site.blog}}{{ tag }}/'
 id: blog
 title: Blog
+nosearch: true
 notitle: true
 ---
 <div class="mry-2">

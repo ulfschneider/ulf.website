@@ -4,6 +4,7 @@ title: Blog
 notitle: true
 id: blog
 sitetags: true
+nosearch: true
 permalink: '{{site.blog}}'
 ---
 <div class="mry-2">

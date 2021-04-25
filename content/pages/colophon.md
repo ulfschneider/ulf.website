@@ -2,7 +2,6 @@
 permalink: /colophon/
 title: Colophon
 nodate: true
-notags: true
 id: colophon
 ---
 

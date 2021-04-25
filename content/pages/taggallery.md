@@ -6,6 +6,7 @@ pagination:
   alias: tag
 permalink: '{{site.images}}{{ tag }}/'
 id: blog
+nosearch: true
 title: Images
 ---
 {{collections.liveContent | tagIntro: tag }}

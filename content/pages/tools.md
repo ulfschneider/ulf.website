@@ -1,5 +1,6 @@
 ---
 tagintro: tools
+nosearch: true
 ---
 I build and share these tools. You may want to have a quick look at:
 

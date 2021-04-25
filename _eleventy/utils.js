@@ -90,7 +90,7 @@ module.exports = {
 
     isLiveItem: function(item) {
         const now = new Date();
-        return item.date <= now &&
+        return !item.date || item.date <= now &&
             item.data.draft !== true &&
             item.data.draft !== 'yes';
     },
@@ -143,6 +143,8 @@ module.exports = {
                     return true;
                 }
             }
+        } else {
+            return true;
         }
         return false;
     },
