@@ -52,6 +52,10 @@ code[class*="language-"] {
     opacity: .7;
 }
 
+.token {
+    font-size: inherit !important;
+}
+
 .token.comment,
 .token.prolog,
 .token.doctype,
