@@ -13547,8 +13547,10 @@ u {
 }
 
 .break-word {
-    word-break: break-word;
-    word-wrap: break-word;
+    overflow-wrap: normal;
+}
+
+.break-all {
     overflow-wrap: break-word;
 }
 
@@ -13757,8 +13759,6 @@ a {
 }
 
 a:not(table a) {
-    word-break: break-word;
-    word-wrap: break-word;
     overflow-wrap: break-word;
 }
 

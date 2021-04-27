@@ -30,6 +30,7 @@ body>footer {
     max-width: var(--regular-width);
     margin-left: auto;
     margin-right: auto;
+    overflow-wrap: break-word;
 }
 
 p,
