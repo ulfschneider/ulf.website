@@ -1,5 +1,5 @@
 ---
-title: Edit on GitHub for an 11ty powered blog
+title: Edit on GitHub for an 11ty powered website
 ---
 Adding a link to edit the contentsof any page for an 11ty powered website on GitHub is simpler than I thought.^[https://www.11ty.dev/docs/quicktips/edit-on-github-links/] Example:
 
