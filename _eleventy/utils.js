@@ -133,30 +133,32 @@ module.exports = {
     },
 
     hasSiteTag: function(item) {
-        let siteTags = siteTagsFromTagNav();
-        if (!siteTags.length) {
-            return true;
-        }
         if (item.data.tags) {
-            for (let tag of item.data.tags) {
-                if (siteTags.includes(tag)) {
-                    return true;
+            let siteTags = siteTagsFromTagNav();
+            if (siteTags.length) {
+                for (let tag of item.data.tags) {
+                    if (siteTags.includes(tag)) {
+                        return true;
+                    }
                 }
+            } else {
+                return true;
             }
         }
         return false;
     },
 
     hasSiteTagOrNoTag: function(item) {
-        let siteTags = siteTagsFromTagNav();
-        if (!siteTags.length) {
-            return true;
-        }
         if (item.data.tags) {
-            for (let tag of item.data.tags) {
-                if (siteTags.includes(tag)) {
-                    return true;
+            let siteTags = siteTagsFromTagNav();
+            if (siteTags.length) {
+                for (let tag of item.data.tags) {
+                    if (siteTags.includes(tag)) {
+                        return true;
+                    }
                 }
+            } else {
+                return true;
             }
         } else {
             return true;
