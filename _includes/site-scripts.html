@@ -29,7 +29,11 @@
 
             for (let nav of {{site.mainnav}}) {
                 if (event.key == nav.kbd && nav.url) {
-                    location.href = nav.url;
+                    if (nav.id == 'editOnGitHub') {
+                        window.open(nav.url + '{{page.inputPath}}', '_blank');
+                    } else {
+                        location.href = nav.url;
+                    }
                     event.preventDefault();
                     return;
                 }
@@ -37,7 +41,12 @@
 
             for (let nav of {{site.footernav}}) {
                 if (event.key == nav.kbd && nav.url) {
-                    location.href = nav.url;
+                    if (nav.id == 'editOnGitHub') {
+                        window.open(nav.url + '{{page.inputPath}}', '_blank');
+                    } else {
+                        location.href = nav.url;
+                    }
+
                     event.preventDefault();
                     return;
                 }

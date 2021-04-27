@@ -58,7 +58,12 @@ module.exports = {
             url: '/about/',
             id: 'about',
             kbd: 'u'
-
+        },
+        {
+            label: 'Edit on GitHub',
+            id: 'editOnGitHub',
+            url: 'https://github.com/ulfschneider/11ty.ulf.codes/edit/master/',
+            kbd: 'e'
         }
     ],
     tagnav: [
