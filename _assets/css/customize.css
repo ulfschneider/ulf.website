@@ -234,6 +234,10 @@ hr.footnotes-sep::after {
     padding: 0 var(--space);
 }
 
+.sortable-column {
+    cursor: ns-resize;
+}
+
 @media (--md) {
     body>header>*,
     body>footer>*,
