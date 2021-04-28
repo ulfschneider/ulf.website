@@ -13546,11 +13546,11 @@ u {
     white-space: nowrap;
 }
 
-.break-word {
+.break-normal {
     overflow-wrap: normal;
 }
 
-.break-all {
+.break-word {
     overflow-wrap: break-word;
 }
 
