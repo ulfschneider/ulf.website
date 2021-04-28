@@ -129,6 +129,14 @@ function comparer(columnIndex, asc) {
     }
 }
 
+function indicateSortDirection(table, th, asc) {
+    table.querySelectorAll('th.sortable-column:not(table table th)').forEach(th => {
+        th.classList.remove('asc');
+        th.classList.remove('dsc');
+    });
+    th.classList.add(asc ? 'asc' : 'dsc');
+}
+
 // do the work...
 document.querySelectorAll('th').forEach(th => {
 
@@ -139,9 +147,11 @@ document.querySelectorAll('th').forEach(th => {
     if (canSort(column)) {
         th.classList.add('sortable-column');
         th.addEventListener('click', () => {
+            let asc = !isAsc(getColumn(table, columnIndex))
             Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
-                .sort(comparer(getColumnIndex(th), !isAsc(getColumn(table, columnIndex))))
+                .sort(comparer(getColumnIndex(th), asc))
                 .forEach(tr => table.appendChild(tr));
+            indicateSortDirection(table, th, asc)
         })
     }
 });
