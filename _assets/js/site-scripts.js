@@ -70,6 +70,8 @@ addEventListener('load', event => displayLoadTime());
 
 
 //initial idea from https://www.delftstack.com/howto/javascript/javascript-sort-html-table/
+//and incorporated ideas from https://adrianroselli.com/2021/04/sortable-table-columns.html
+//plus my own, which will make it more robust
 function getIndexedRowValue(row, columnIndex) {
     return row.children[columnIndex].innerText || row.children[columnIndex].textContent;
 }
@@ -135,7 +137,22 @@ function indicateSortDirection(table, th, asc) {
         th.ariaSort = null;
     });
     th.classList.add(asc ? 'asc' : 'dsc');
+    //use ariaSort for accessibility
     th.ariaSort = asc ? 'ascending' : 'descending';
+}
+
+function insertToggle(th) {
+    if (th.innerText != th.innerHTML) {
+        //we cannot replace the th content with a button
+        return null;
+    } else {
+        //use a button toggle for accessibility
+        th.innerHTML = `<button>${th.innerText}</button>`;
+        //watch out for the css
+        //th.sortable-column>*:first-child is referring to
+        //this element
+        return th.firstChild;
+    }
 }
 
 // do the work...
@@ -146,13 +163,16 @@ document.querySelectorAll('th').forEach(th => {
     let column = getColumn(table, columnIndex);
 
     if (canSort(column)) {
-        th.classList.add('sortable-column');
-        th.addEventListener('click', () => {
-            let asc = !isAsc(getColumn(table, columnIndex))
-            Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
-                .sort(comparer(getColumnIndex(th), asc))
-                .forEach(tr => table.appendChild(tr));
-            indicateSortDirection(table, th, asc)
-        })
+        let toggle = insertToggle(th);
+        if (toggle) {
+            th.classList.add('sortable-column');
+            toggle.addEventListener('click', () => {
+                let asc = !isAsc(getColumn(table, columnIndex))
+                Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+                    .sort(comparer(getColumnIndex(th), asc))
+                    .forEach(tr => table.appendChild(tr));
+                indicateSortDirection(table, th, asc)
+            })
+        }
     }
 });

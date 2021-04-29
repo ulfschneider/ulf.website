@@ -234,16 +234,20 @@ hr.footnotes-sep::after {
     padding: 0 var(--space);
 }
 
-.sortable-column {
+th.sortable-column>*:first-child {
+    /*remove all button styling*/
+    all: unset;
     cursor: ns-resize;
 }
 
-.sortable-column.asc::after {
+th.sortable-column.asc>*:first-child::after {
     content: "\00a0ᐃ";
+    font-size: smaller;
 }
 
-.sortable-column.dsc::after {
+th.sortable-column.dsc>*:first-child::after {
     content: "\00a0ᐁ";
+    font-size: smaller;
 }
 
 @media (--md) {
