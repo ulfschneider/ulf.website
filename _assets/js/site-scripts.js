@@ -142,12 +142,13 @@ function indicateSortDirection(table, th, asc) {
 }
 
 function insertToggle(th) {
-    if (th.innerText != th.innerHTML) {
+    if (th.querySelectorAll(':not(abbr):not(b):not(br):not(cite):not(code):not(em):not(i):not(img):not(kbd):not(label):not(mark):not(small):not(span):not(strong):not(sub):not(sup):not(svg):not(time)').length) {
+        //see https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content
         //we cannot replace the th content with a button
         return null;
     } else {
         //use a button toggle for accessibility
-        th.innerHTML = `<button>${th.innerText}</button>`;
+        th.innerHTML = `<button>${th.innerHTML}</button>`;
         //watch out for the css
         //th.sortable-column>*:first-child is referring to
         //this element
