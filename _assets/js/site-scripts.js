@@ -100,7 +100,6 @@ function canSort(column) {
     return true;
 }
 
-
 function getCellValue(cell) {
     return cell.innerText || cell.textContent;
 }
@@ -133,8 +132,10 @@ function indicateSortDirection(table, th, asc) {
     table.querySelectorAll('th.sortable-column:not(table table th)').forEach(th => {
         th.classList.remove('asc');
         th.classList.remove('dsc');
+        th.ariaSort = null;
     });
     th.classList.add(asc ? 'asc' : 'dsc');
+    th.ariaSort = asc ? 'ascending' : 'descending';
 }
 
 // do the work...
