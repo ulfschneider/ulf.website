@@ -68,10 +68,12 @@ addEventListener('resize', event => maintainBackToStartVisibility());
 addEventListener('load', event => displayLoadTime());
 
 
-
 //initial idea from https://www.delftstack.com/howto/javascript/javascript-sort-html-table/
 //and incorporated ideas from https://adrianroselli.com/2021/04/sortable-table-columns.html
-//plus my own, which will make it more robust
+//plus my own
+const INDICATOR_ASC = 'ᐃ';
+const INDICATOR_DSC = 'ᐁ';
+
 function getIndexedRowValue(row, columnIndex) {
     return row.children[columnIndex].innerText || row.children[columnIndex].textContent;
 }
@@ -135,22 +137,38 @@ function indicateSortDirection(table, th, asc) {
         th.classList.remove('asc');
         th.classList.remove('dsc');
         th.ariaSort = null;
+        th.querySelectorAll('.indicator').forEach(indicator => indicator.remove());
     });
-    th.classList.add(asc ? 'asc' : 'dsc');
-    //use ariaSort for accessibility
-    th.ariaSort = asc ? 'ascending' : 'descending';
+
+    let indicator = document.createElement('span');
+    th.firstChild.appendChild(indicator);
+    indicator.classList.add('indicator');
+    indicator.ariaHidden = true;
+
+    if (asc) {
+        th.classList.add('asc');
+        th.ariaSort = 'ascending';
+        indicator.innerHTML = INDICATOR_ASC;
+    } else {
+        th.classList.add('dsc');
+        th.ariaSort = 'descending';
+        indicator.innerHTML = INDICATOR_DSC;
+    }
+
 }
 
 function insertToggle(th) {
     if (th.querySelectorAll(':not(abbr):not(b):not(br):not(cite):not(code):not(em):not(i):not(img):not(kbd):not(label):not(mark):not(small):not(span):not(strong):not(sub):not(sup):not(svg):not(time)').length) {
-        //see https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content
+        //in this case
         //we cannot replace the th content with a button
+        //because buttons are allowed to only contain phrasing content
+        //https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element
         return null;
     } else {
         //use a button toggle for accessibility
         th.innerHTML = `<button>${th.innerHTML}</button>`;
         //watch out for the css
-        //th.sortable-column>*:first-child is referring to
+        //th.sortable-column>button is referring to
         //this element
         return th.firstChild;
     }
