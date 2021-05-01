@@ -245,6 +245,11 @@ th.sortable-column .indicator {
     margin-left: .5em;
 }
 
+table button.restore-order {
+    font-size: inherit;
+    padding: 0 .1em;
+}
+
 @media (--md) {
     body>header>*,
     body>footer>*,

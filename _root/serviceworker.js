@@ -1,7 +1,8 @@
-const CACHE_VERSION = 'v36'; //version is used to remove old caches
+const CACHE_VERSION = 'v37'; //version is used to remove old caches
 
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
+const CSSCACHE = 'css';
 const IMAGE = 'image';
 const FONT = 'font';
 const JSONCACHE = 'json';
@@ -11,6 +12,7 @@ const CACHE_NAME = 'cache';
 const SCRIPT_CACHE_NAME = `${SCRIPT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const FONT_CACHE_NAME = `${FONT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const IMAGE_CACHE_NAME = `${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
+const CSS_CACHE_NAME = `${CSSCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
 const JSON_CACHE_NAME = `${JSONCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
 const SEARCH_CACHE_NAME = `${SEARCH}-${CACHE_NAME}-${CACHE_VERSION}`;
 const RUNTIME_CACHE_NAME = `${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
@@ -29,6 +31,9 @@ const CACHE_SETTINGS = {
     },
     [RUNTIME_CACHE_NAME]: {
         maxAgeMinutes: 60 * 24 //expire runtime entries after one day
+    },
+    [CSS_CACHE_NAME]: {
+        maxAgeMinutes: 60 * 24 //expire css after one day
     },
     [JSON_CACHE_NAME]: {
         maxAgeMinutes: 60 * 24 //expire json after one day
@@ -262,7 +267,7 @@ async function fetchAndCache(request, options) {
                 });
             } else if (/css[2]?$/.test(url.pathname)) {
                 await stashInCache({
-                    cacheName: RUNTIME_CACHE_NAME,
+                    cacheName: CSS_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options
