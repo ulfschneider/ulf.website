@@ -251,7 +251,7 @@ th.sortable-column .indicator {
 }
 
 @media print {
-    table caption p.indicator {
+    table.sortable-table caption p.indicator {
         display: none;
     }
 }
