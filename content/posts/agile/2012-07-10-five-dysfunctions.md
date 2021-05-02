@@ -15,6 +15,8 @@ Patrick Lencioni provides with his "Five Dysfunctions of a Team" [Lencioni 2002:
 <figcaption>Figure: The five dysfunctions of a team</figcaption>
 </figure>
 
+See how the dysfunctions will typically be masked by a *team* in the below table.
+
 <table>
 <tr>
 <th>Layer</th><th>Dysfunction</th><th>Behavioral pattern</th>
@@ -36,7 +38,7 @@ Patrick Lencioni provides with his "Five Dysfunctions of a Team" [Lencioni 2002:
 
 I find the model useful to analyze team dysfunctions, isolate root causes and work through each layer, starting with the most basic and going to the top. E.g., if you can not establish a trustful environment you will not be able to get real commitments.
 
-The dysfunctions can be rephrased to give a positive direction. To come to a lively and performing team, the team should
+The dysfunctions can be rephrased to give a positive direction. The below table states what should be achieved by a team on each layer.
 
 <table>
 <tr>
