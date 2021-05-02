@@ -98,18 +98,9 @@ function getColumn(table, columnIndex) {
 }
 
 function canColumnSort(column) {
-    let foundOne = false;
     if (column.length && column[0].tagName != 'TH') {
         //first element is not a th
         return false;
-    }
-    for (let cell of column) {
-        if (!foundOne) {
-            foundOne = cell.tagName == 'TH';
-        } else if (cell.tagName == 'TH') {
-            //more than one th in a single column
-            return false;
-        }
     }
     return true;
 }
@@ -260,7 +251,7 @@ function insertColumnSortToggle(th) {
 
 function tableSorter(options) {
     setConfig(options);
-    document.querySelectorAll('th:not(.no-sort)').forEach(th => {
+    document.querySelectorAll('tr:first-child>th:not(.no-sort)').forEach(th => {
 
         let table = th.closest('table');
         if (!table.classList.contains('no-sort')) {
