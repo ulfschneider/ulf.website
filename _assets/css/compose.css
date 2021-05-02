@@ -13817,6 +13817,11 @@ figcaption {
     margin-bottom: var(--mrb-figcaption);
 }
 
+figure>* {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 figure>*+figcaption,
 blockquote footer {
     margin-top: var(--mrt-figcaption);
@@ -17319,8 +17324,8 @@ svg {
     --table-heading-font-family: var(--heading-font-family);
     --table-font-family: var(--font-family);
     --table-font-size: var(--figcaption-font-size);
-    --mrt-table: var(--vertical-rhythm);
-    --mrb-table: var(--vertical-rhythm);
+    --mrt-table: var(--mrt-figure);
+    --mrb-table: var(--mrb-figure);
 }
 
 table {
