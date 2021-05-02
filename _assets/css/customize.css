@@ -234,10 +234,15 @@ hr.footnotes-sep::after {
     padding: 0 var(--space);
 }
 
-th.sortable-column>button {
-    /*remove all button styling*/
+th.sortable-column>button,
+table button.restore-order {
     all: unset;
+    /*remove all button styling*/
     cursor: pointer;
+}
+
+table button.restore-order {
+    font-weight: bold;
 }
 
 th.sortable-column .indicator {
@@ -245,9 +250,10 @@ th.sortable-column .indicator {
     margin-left: .5em;
 }
 
-table button.restore-order {
-    font-size: inherit;
-    padding: 0 .1em;
+@media print {
+    table caption p.indicator {
+        display: none;
+    }
 }
 
 @media (--md) {
