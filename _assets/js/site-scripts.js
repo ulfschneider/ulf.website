@@ -215,18 +215,6 @@ function indicateRestoreTableOrder(table) {
             })
         }
     });
-
-    table.querySelectorAll('p.indicator .restore-hint:not(table table p.indicator .restore-hint)').forEach(hint => {
-        if (isTableSorted(table)) {
-            //if the table has been ordered by one
-            //ouf our sort actions, show the restore order button
-            hint.style.display = '';
-        } else {
-            //if the table is in original order
-            //do not show the restore order button
-            hint.style.display = 'none';
-        }
-    });
 }
 
 function indicateSortableTable(table) {
@@ -245,6 +233,7 @@ function indicateSortableTable(table) {
         indicator.innerHTML = settings.sortHint;
         caption.appendChild(indicator);
     }
+    indicateRestoreTableOrder(table);
 }
 
 function insertColumnSortToggle(th) {
@@ -298,4 +287,4 @@ function tableSorter(options) {
     });
 }
 
-addEventListener('load', event => tableSorter());
+addEventListener('load', () => tableSorter());
