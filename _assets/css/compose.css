@@ -13817,13 +13817,18 @@ figcaption {
     margin-bottom: var(--mrb-figcaption);
 }
 
-figure>* {
+figure>:first-child,
+blockquote>:first-child {
     margin-top: 0;
+}
+
+figure>:last-child,
+blockquote>:last-child {
     margin-bottom: 0;
 }
 
 figure>*+figcaption,
-blockquote footer {
+blockquote>*+footer {
     margin-top: var(--mrt-figcaption);
     margin-bottom: 0;
 }
