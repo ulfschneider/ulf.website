@@ -261,7 +261,12 @@ th.sortable-column .indicator {
     body>footer>*,
     main>.scroll-table {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
-        max-width: calc(var(--mid-width) / 2*3);
+        max-width: calc(var(--mid-width) * 2 / 3);
+    }
+    main>pre,
+    main>figure>pre {
+        margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
+        max-width: calc(var(--mid-width));
     }
     main time.year {
         margin-left: calc(-1 * var(--horizontal-rhythm));
