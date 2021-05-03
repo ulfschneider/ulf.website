@@ -234,20 +234,26 @@ hr.footnotes-sep::after {
     padding: 0 var(--space);
 }
 
-th.sortable-column>button,
-table button.restore-order {
+th.sotable-column>button,
+table.sotable button.restore-order {
     all: unset;
     /*remove all button styling*/
     cursor: pointer;
 }
 
-table button.restore-order {
+table.sotable button.restore-order {
     font-weight: bold;
 }
 
-th.sortable-column .indicator {
+th.sotable-column .indicator {
     font-size: smaller;
     margin-left: .5em;
+}
+
+@media print {
+    table.sotable caption p.indicator {
+        display: none;
+    }
 }
 
 @media print {
@@ -259,14 +265,10 @@ th.sortable-column .indicator {
 @media (--md) {
     body>header>*,
     body>footer>*,
-    main>.scroll-table {
+    main>.scroll-table,
+    main>figure {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
-        max-width: calc(var(--mid-width) * 2 / 3);
-    }
-    main>pre,
-    main>figure>pre {
-        margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
-        max-width: calc(var(--mid-width));
+        max-width: calc(var(--regular-width) / 2 * 3);
     }
     main time.year {
         margin-left: calc(-1 * var(--horizontal-rhythm));
