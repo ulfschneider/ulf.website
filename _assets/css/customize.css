@@ -195,11 +195,6 @@ hr.footnotes-sep::after {
     transform: translateY(0);
 }
 
-.gallery * {
-    font-family: var(--meta-font-family);
-    font-size: var(--fs);
-}
-
 .gallery header,
 .gallery footer {
     max-width: var(--large-width);
@@ -217,7 +212,7 @@ hr.footnotes-sep::after {
     margin-bottom: var(--space-1);
 }
 
-.image * {
+.image main * {
     font-family: var(--meta-font-family);
 }
 

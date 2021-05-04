@@ -5,16 +5,16 @@
         {% include head.html %}
     </head>
 
-    <body class="pdx gallery">
+    <body class="pdx gallery meta-font fs">
         {% include header.html %}
 
         <main id="main" class="indent mxw-lg">
-            <header class="title mrb-2 pdt-d2 mxw-rg">
-                <h1 class="mry-0 meta-font inline">Images</h1> tagged {{tag}}
+            <header class="title meta-font mrb-2 pdt-d2 fs mxw-rg">
+                <h1 class="mry-0 inline meta-font fs">Images</h1> tagged {{tag}}
             </header>
             {{content}}
 
-            <div id="image-container" class="grid gp-2 mry-2 flex-start"></div>
+            <div id="image-container" class="grid gp-2 mry-2 align-start"></div>
             <button id="load-more" class="block mrt-2 mrb-3 mrx-auto width-5">Load more images</button>
 
             {%- if tag != nil -%}
@@ -50,6 +50,13 @@
             img.classList = 'fit-contain';
             img.setAttribute('loading', 'lazy');
             figure.appendChild(img);
+
+            if (imgData.title) {
+                let figcaption = document.createElement('figcaption');
+                figcaption.innerHTML = imgData.title;
+                figcaption.classList = "small";
+                figure.appendChild(figcaption);
+            }
 
         }
 
