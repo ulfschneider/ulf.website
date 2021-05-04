@@ -267,7 +267,8 @@ th.sotable-column .indicator {
 
 @media (--md) {
     body>header>*,
-    body>footer>* {
+    body>footer>*,
+    main>figure {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
         max-width: calc(var(--regular-width) / 2 * 3);
     }
