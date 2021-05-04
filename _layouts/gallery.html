@@ -8,14 +8,14 @@
     <body class="pdx">
         {% include header.html %}
 
-        <main id="main" class="indent gallery mxw-md">
+        <main id="main" class="indent gallery mxw-lg">
             <header class="title mrb-2 pdt-d2 mxw-rg">
                 <h1 class="mry-0 meta-font inline">Images</h1> tagged {{tag}}
             </header>
             {{content}}
 
             <div id="image-container" class="grid gp-2 mry-2 flex-start"></div>
-            <button id="load-more" class="block mry-2 width-5">Load more images</button>
+            <button id="load-more" class="block mrt-2 mrb-3 mrx-auto width-5">Load more images</button>
 
             {%- if tag != nil -%}
                 {% assign imageData = collections[tag] | live | reverse | firstImage %}
@@ -41,13 +41,13 @@
             container.appendChild(anchor);
 
             let figure = document.createElement('figure');
-            figure.classList = 'relative';
+            figure.classList = 'mr-0';
             anchor.appendChild(figure);
 
             let img = document.createElement('img');
             img.src = imgData.src;
             img.alt = imgData.alt;
-            img.classList = 'fit-cover absolute top-0 left-0 w-100 h-100'
+            img.classList = 'fit-contain';
             img.setAttribute('loading', 'lazy');
             figure.appendChild(img);
 

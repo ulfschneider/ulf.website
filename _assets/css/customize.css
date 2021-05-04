@@ -213,11 +213,6 @@ hr.footnotes-sep::after {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-#image-container figure {
-    padding-bottom: 100%;
-    margin: 0;
-}
-
 .image .title h1 {
     font-size: var(--fs);
 }
