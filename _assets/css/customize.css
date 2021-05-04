@@ -34,19 +34,10 @@ body>footer {
 }
 
 p,
-ul,
-ol,
-dl,
-h2,
-h3,
-h4,
-h5,
-h6,
 td,
 caption,
 figcaption,
-blockquote,
-hr {
+blockquote {
     max-width: var(--regular-width);
 }
 
@@ -207,6 +198,11 @@ hr.footnotes-sep::after {
 .gallery * {
     font-family: var(--meta-font-family);
     font-size: var(--fs);
+}
+
+.gallery header,
+.gallery footer {
+    max-width: var(--large-width);
 }
 
 #image-container {
