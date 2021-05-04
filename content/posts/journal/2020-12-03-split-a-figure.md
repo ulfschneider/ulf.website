@@ -14,17 +14,17 @@ To make the HTML of Rapha´s approach more semantic – while keeping it respons
 
 In the below example, the first two figures use the split technique. Each image will only take half of the available space and the caption of the image will take the other half. The next two images are also using the split technique. In this case each image takes half of the available space with a below caption. The fifth figure is not using the split technique –  the image will always occupy the entire available space. 
 
-<figure class="rg:split">
+<figure class="bleed rg:split">
 <img src="/img/IMG_1329.jpg" alt="">
 <figcaption>A beautiful day with Emil at the Paderborn fishponds.</figcaption>
 </figure>
 
-<figure class="rg:split">
+<figure class="bleed rg:split">
 <figcaption>The fishponds are a home for many waterbirds.</figcaption>
 <img src="/img/IMG_1331.jpg" alt="">
 </figure>
 
-<figure class="rg:split">
+<figure class="bleed rg:split">
 <figure>
 <img src="/img/IMG_1298.jpg" alt="">
 <figcaption>Emil´s hand with a Paderstone that has a sheep (or a dog) drawn on it.</figcaption>
@@ -35,7 +35,7 @@ In the below example, the first two figures use the split technique. Each image 
 </figure>
 </figure>
 
-<figure>
+<figure class="bleed">
 <img class="w-100" src="/img/IMG_1286.jpg" alt="">
 <figcaption>Sunset at the the fishponds.</figcaption>
 </figure>
@@ -46,7 +46,7 @@ The split is built around the `<figure>` tag, and the CSS for the split will onl
 
 My first attempt to solve the problem was with `flex`. I do not recommend this one. I only keep it here to make my thought-process visible. My suggestion is to use the `grid`-based approach further below! The above shown examples are not based on `flex` but on `grid`.
 
-<figure>
+<figure class="bleed">
 <figcaption>CSS</figcaption>
 {% highlight css %}
 img {
@@ -95,7 +95,7 @@ figure>*+figcaption {
 {% endhighlight %}
 </figure>
 
-<figure>
+<figure class="bleed">
 <figcaption>HTML</figcaption>
 {% highlight html %}
 <figure class="split">
@@ -129,7 +129,7 @@ Also, adding a `<div>` to get proper image formatting is not my cup of tea.
 
 The `grid`-based CSS code is shorter and more versatile in my view. It´s possible to use `column-gap` and `row-gap` and also splitting a `<figure>` into two images is possible. Artificial `<div>` elements are not needed at all. 
 
-<figure>
+<figure class="bleed">
 <figcaption>CSS</figcaption>
 {% highlight css %}
 img {
@@ -175,7 +175,7 @@ figure>*+figcaption {
 {% endhighlight %}
 </figure>
 
-<figure>
+<figure class="bleed">
 <figcaption>HTML</figcaption>
 {% highlight html %}
 <figure class="split">
@@ -211,7 +211,7 @@ figure>*+figcaption {
 
 If you want to apply the split not only for `<figure>` tags, you can even use the following `.split` CSS class, which is more generic:
 
-<figure>
+<figure class="bleed">
 <figcaption>CSS</figcaption>
 {% highlight css %}
 /*Use grid for the split*/

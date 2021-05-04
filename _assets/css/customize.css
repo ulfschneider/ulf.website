@@ -230,10 +230,6 @@ hr.footnotes-sep::after {
     font-family: var(--meta-font-family);
 }
 
-.full-bleed {
-    padding: 0 var(--space);
-}
-
 th.sotable-column>button,
 table.sotable button.restore-order {
     all: unset;
@@ -262,13 +258,21 @@ th.sotable-column .indicator {
     }
 }
 
+@media (--rg) {
+    main>.bleed {
+        width: min(100vw - 2rem, var(--large-width));
+        margin-left: max(50% - 50vw + 1rem, 50% - var(--large-width) / 2 + 1rem);
+    }
+}
+
 @media (--md) {
     body>header>*,
-    body>footer>*,
-    main>.scroll-table,
-    main>figure {
+    body>footer>* {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
         max-width: calc(var(--regular-width) / 2 * 3);
+    }
+    main>.scroll-table {
+        margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
     }
     main time.year {
         margin-left: calc(-1 * var(--horizontal-rhythm));
