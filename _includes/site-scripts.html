@@ -59,3 +59,8 @@
 {%- if site.instantPage == true -%}
     <script type="modulepreload" src="/js/instant-page.js" ></script>
 {%- endif -%}
+<script defer type="module">
+    import sotable from '/js/sotable.js';
+    addEventListener('load', () => sotable());
+</script>
+</body>
