@@ -61,8 +61,8 @@ function displayLoadTime() {
 }
 
 
-addEventListener('load', event => maintainBackToStartVisibility());
-addEventListener('scroll', event => maintainBackToStartVisibility());
-addEventListener('resize', event => maintainBackToStartVisibility());
+addEventListener('load', () => maintainBackToStartVisibility());
+addEventListener('scroll', () => maintainBackToStartVisibility());
+addEventListener('resize', () => maintainBackToStartVisibility());
 
-addEventListener('load', event => displayLoadTime());
+addEventListener('load', () => displayLoadTime());
