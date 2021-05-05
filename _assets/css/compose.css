@@ -16995,13 +16995,13 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     --ol-counter-type: decimal-leading-zero;
     --h-counter-type: decimal;
     --h-counter-delimiter: ".";
-    --ol-counter: counters(ol-counter, var(--ol-counter-delimiter), var(--ol-counter-type)) "\0000a0";
-    --h-counter: counters(ol-counter, var(--h-counter-delimiter), var(--h-counter-type)) "\0000a0\0000a0";
-    --h2-counter: counter(h2-counter) "\0000a0";
-    --h3-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) "\0000a0";
-    --h4-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) "\0000a0";
-    --h5-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) "\0000a0";
-    --h6-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) var(--h-counter-delimiter) counter(h6-counter) "\0000a0";
+    --ol-counter: counters(ol-counter, var(--ol-counter-delimiter), var(--ol-counter-type));
+    --h-counter: counters(ol-counter, var(--h-counter-delimiter), var(--h-counter-type));
+    --h2-counter: counter(h2-counter);
+    --h3-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter);
+    --h4-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter);
+    --h5-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter);
+    --h6-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) var(--h-counter-delimiter) counter(h6-counter);
     --timeline-blub-size: 1em;
     --timeline-width: 1px;
     --timeline-blub-border: 1px;
@@ -17088,6 +17088,7 @@ ol li {
 ol li::before {
     content: var(--ol-counter);
     min-width: var(--horizontal-rhythm);
+    padding-right: var(--space-d2);
     margin-left: calc(var(--horizontal-rhythm) * -1);
     text-align: left;
     display: inline-block;
@@ -17100,6 +17101,7 @@ ol li::before {
 ul li::before {
     content: var(--list-item-type);
     margin-left: calc(var(--horizontal-rhythm) * -1);
+    padding-right: var(--space-d2);
     min-width: var(--horizontal-rhythm);
     text-align: left;
     display: inline-block;
@@ -17125,6 +17127,7 @@ h2 {
 
 h2::before {
     counter-increment: h2-counter;
+    padding-right: var(--space-d2);
 }
 
 h3 {
@@ -17133,6 +17136,7 @@ h3 {
 
 h3::before {
     counter-increment: h3-counter;
+    padding-right: var(--space-d2);
 }
 
 h4 {
@@ -17141,6 +17145,7 @@ h4 {
 
 h4::before {
     counter-increment: h4-counter;
+    padding-right: var(--space-d2);
 }
 
 h5 {
@@ -17149,10 +17154,12 @@ h5 {
 
 h5::before {
     counter-increment: h5-counter;
+    padding-right: var(--space-d2);
 }
 
 h6::before {
     counter-increment: h6-counter;
+    padding-right: var(--space-d2);
 }
 
 ul.indent,
