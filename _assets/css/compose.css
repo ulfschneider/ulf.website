@@ -17338,6 +17338,8 @@ svg {
     --table-font-size: var(--figcaption-font-size);
     --mrt-table: var(--mrt-figure);
     --mrb-table: var(--mrb-figure);
+    --td-x-padding: var(--space);
+    --td-y-padding: var(--space-d1);
 }
 
 table {
@@ -17409,7 +17411,7 @@ table caption {
 
 th,
 td {
-    padding: var(--space-d2) var(--space-d1);
+    padding: var(--td-y-padding) var(--td-x-padding);
 }
 
 th:first-child,
@@ -17420,7 +17422,7 @@ th+td {
 
 *+td,
 *+th {
-    padding-left: var(--space-d2);
+    padding-left: var(--td-x-padding);
 }
 
 th:last-child,
@@ -17429,7 +17431,7 @@ td:last-child {
 }
 
 caption {
-    padding: var(--space-d2) 0;
+    padding: var(--td-y-padding) 0;
 }
 
 .br-separate {
