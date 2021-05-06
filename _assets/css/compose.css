@@ -17134,26 +17134,38 @@ ul ol li::before {
 
 .outline h2::before {
     counter-increment: h2-counter;
-    counter-reset: h3-counter h4-counter h5-counter h6-counter;
     content: var(--h2-counter);
 }
 
+.outline h2 {
+    counter-reset: h3-counter h4-counter h5-counter h6-counter;
+}
+
 .outline h3::before {
-    counter-increment: h3-counter !important;
-    counter-reset: h4-counter h5-counter h6-counter;
+    counter-increment: h3-counter;
     content: var(--h3-counter);
+}
+
+.outline h3 {
+    counter-reset: h4-counter h5-counter h6-counter;
 }
 
 .outline h4::before {
     counter-increment: h4-counter;
-    counter-reset: h5-counter h6-counter;
     content: var(--h4-counter);
+}
+
+.outline h4 {
+    counter-reset: h5-counter h6-counter;
 }
 
 .outline h5::before {
     counter-increment: h5-counter;
-    counter-reset: h6-counter;
     content: var(--h5-counter);
+}
+
+.outline h5 {
+    counter-reset: h6-counter;
 }
 
 .outline h6::before {
