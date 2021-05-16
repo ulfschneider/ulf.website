@@ -1,0 +1,19 @@
+{%- if page.date and nodate == nil -%}
+    {%- assign hasdate = true -%}
+{%- else -%}
+    {%- assign hasdate = false%}
+{%- endif -%}
+
+{%- if tags  -%}
+    {%- assign hastags = true -%}
+{%- endif -%}
+
+{%- if notags  -%}
+    {%- assign hastags = false -%}
+{%- endif -%}
+{%- if author or hasdate or hastags  -%}
+    <aside class="author-date-tags meta">
+        {% include author-and-date.html %}
+        {% include tags.html %}
+    </aside>
+{%- endif -%}

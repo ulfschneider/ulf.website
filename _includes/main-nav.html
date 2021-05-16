@@ -1,0 +1,17 @@
+<nav>
+	<ul class="reset mry-0">
+		{%- for p in site.mainnav -%}
+
+			<li class="inline-block">
+				{%- if id == p.id -%}
+					<a aria-current="page" class="meta-font no-deco bold heading-color no-wrap" href="{{ p.url }}">{{p.label}}</a>
+					{%- elsif p.id == 'editOnGitHub' %}
+					<a href="{{p.url}}{{page.inputPath}}" target="_blank" class="meta no-deco no-wrap">{{p.label}}</a>
+					{%- else -%}
+						<a class="meta no-deco no-wrap" href="{{ p.url }}">{{p.label}}</a>
+					{%- endif -%}
+				</li>
+
+			{%- endfor -%}
+		</ul>
+	</nav>

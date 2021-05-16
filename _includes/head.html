@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content={{site.themecolor}}>
+<link rel="stylesheet" href="/css/main.css"/>
+<link rel="preload" href="/fonts/iAWriterQuattroS-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" href="/fonts/iAWriterQuattroS-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" href="/fonts/iAWriterQuattroS-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" href="/fonts/iAWriterQuattroS-BoldItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="alternate" type="application/rss+xml" title="{{site.title}}" href="{{site.feed}}">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+    {%- if title and title != "notitle" %}{{ title }}
+        {% if tag != nil %} tagged {{tag}}
+        {% endif -%}
+    {% else %}
+        {{ site.title }}
+    {% endif %}
+</title>
+{% include site-scripts.html %}

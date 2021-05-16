@@ -1,0 +1,30 @@
+<footer id="footer" class="mry-2">
+	<nav class="meta">
+		<ul class="reset mry-0">
+			{%- for p in site.footernav -%}
+				<li class="inline-block">
+					{%- if id == p.id -%}
+						<a class="meta-font no-deco bold heading-color no-wrap" aria-current="page" href="{{ p.url }}">{{p.label}}</a>
+						{%- elsif p.id == 'editOnGitHub' %}
+						<a href="{{p.url}}{{page.inputPath}}" target="_blank" class="meta no-deco no-wrap">{{p.label}}</a>
+						{%- else -%}
+							<a class="meta no-deco no-wrap" href="{{ p.url }}">{{p.label}}</a>
+						{%- endif -%}
+					</li>
+				{%- endfor -%}
+			</ul>
+		</nav>
+
+		{%- if site.backToTop and site.backToTop.id %}
+			<div id="back-to-start" class="mry right meta no-wrap" style="display:none;" >
+				<a  href="#{{site.backToTop.id}}">
+					{%- if site.backToTop.label -%}
+						{{site.backToTop.label}}
+					{%- else -%}
+					  Back to Top
+					{%- endif -%}
+				</a>
+			</div>
+		{%- endif %}
+
+	</footer>

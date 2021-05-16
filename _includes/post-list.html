@@ -1,0 +1,76 @@
+<style>
+    h2::before {
+        content: unset;
+    }
+
+    h3::before {
+        content: unset;
+    }
+</style>
+
+{%- if tag != nil -%}
+    {% assign livePosts = collections[tag] | live | post %}
+    {%- elsif sitetags != nil or limit > 0 -%}
+    {% assign livePosts = collections.livePosts %}
+{%- endif %}
+
+{%- for p in livePosts reversed -%}
+
+    {%- if limit > 0 and forloop.index > limit -%}
+        {%- break -%}
+    {%- endif -%}
+
+    {%- if p.url == page.url -%}
+        {%- continue -%}
+    {%- endif -%}
+
+    {%- assign pageYear = p.date | date: '%Y' -%}
+
+    {%- assign href = p.url -%}
+
+    {%- if indexYear != pageYear and limit == nil -%}
+        <time datetime="{{pageYear}}" class="larger meta-font neutral mry-1 block year">{{pageYear}}</time>
+        {%- assign indexYear = pageYear -%}
+    {%- endif -%}
+
+    {%- assign count = count | plus: 1 -%}
+
+    <article class="mry-1">
+
+        {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
+            <h2 class="mry-0 fs meta-font inline">
+                <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
+            </h2>
+        {%- endif -%}
+
+        {%- if p.data.abstract -%}
+            <p>{{p.data.abstract}}</p>
+            {%- elsif p.templateContent -%}
+            <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
+        {%- endif -%}
+
+        {%- if p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil-%}
+            <a class="meta block" href="{{p.url}}">Read the entire article →</a>
+        {%- endif -%}
+        <aside class="meta block">
+            {% include author-and-date.html, author: p.data.author, date: p.date %}
+            {% include tags.html tags: p.data.tags notags: p.data.notags %}
+        </aside>
+
+    </article>
+
+{%- endfor -%}
+
+{%- if livePosts.length > limit -%}
+    {%- if tag != nil -%}
+        {%-assign currentTags = collections.usedSiteTags | concat: tag | uniq | compact -%}
+    {%- else - %}
+        {%-assign currentTags = collections.usedSiteTags -%}
+    {%- endif -%}
+    {%- if currentTags.length -%}
+        <label>There are more articles. Choose a tag:</label>
+        {%- include site-tags.html tag:tag-%}
+    {%- else -%}
+        <a href="{{site.blog}}">There are more articles</a>
+    {%- endif %}
+{%- endif -%}

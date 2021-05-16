@@ -1,0 +1,246 @@
+---
+layout: list
+nodate: true
+permalink: '{{site.search.url}}'
+---
+<script>
+
+    const SEARCH_RESULTS_ID = 'search-results';
+    const SEARCH_QUERY_ID = 'search-query';
+    const SEARCH_SUBMIT_ID = 'search-submit';
+
+    var searchIndex,
+        friendlyMap;
+
+    function getParameterByName(name, url) {
+        url = url
+            ? url
+            : location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+        let results = regex.exec(url);
+        if (!results) {
+            return null;
+        }
+        if (!results[2]) {
+            return '';
+        }
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    function removeChildren(parent) {
+        if (parent) {
+            let child = parent.lastElementChild;
+            while (child) {
+                parent.removeChild(child);
+                child = parent.lastElementChild;
+            }
+        }
+    }
+
+    function printResultEntry(parent, entry) {
+        if (parent) {
+            let friend = friendlyMap.get(entry.ref);
+
+            let article = document.createElement('article');
+            article.classList = 'mry-1';
+            parent.appendChild(article);
+
+            
+
+            if (friend.title && friend.title != 'notitle') {
+                let title = document.createElement('h2');
+                title.classList = 'mry-0 inline fs meta-font'
+                article.appendChild(title);
+                let linkToArticle = document.createElement('a');
+                linkToArticle.href = entry.ref;
+                linkToArticle.innerHTML = friend.title;
+                linkToArticle.classList = 'heading-color';
+                title.appendChild(linkToArticle);
+            }
+
+            if (friend.abstract || friend.excerpt || friend.content) {
+                let excerpt = document.createElement('p');
+                article.appendChild(excerpt);
+                let text = friend.abstract || friend.excerpt;
+                if (text) {
+                    excerpt.innerHTML = text;
+                } else {
+                    excerpt.innerHTML = friend
+                        .content
+                        .split(' ')
+                        .slice(0, (
+                            {{site.excerptWordCount}}
+                            ? {{site.excerptWordCount}}
+                            : 25))
+                        .join(' ') + ' …';
+                }
+            }
+
+            if (!friend.title || friend.title == 'notitle') {
+                let linkToArticle = document.createElement('a');
+                linkToArticle.href = entry.ref;
+                linkToArticle.classList = 'block meta';
+                linkToArticle.innerHTML = 'Read the entire article →';
+                article.appendChild(linkToArticle);
+            }
+
+            if (friend.author || friend.date || (friend.tags && !friend.notags )) {
+                let aside = document.createElement('aside');
+                aside.classList = "meta block";
+                article.innerHTML += ' ';
+                article.appendChild(aside);
+
+                if (friend.author) {
+                    let author = document.createElement('span');
+                    author.innerHTML = 'By ' + friend.author;
+                    aside.appendChild(author);
+                }
+
+                if (friend.date) {
+                    if (friend.author) {
+                        aside.innerHTML += ' on ';
+                    }
+                    let date = document.createElement('time');
+                    date.innerHTML += friend.humanDate;
+                    aside.appendChild(date);
+                }
+
+                if (friend.tags && !friend.notags) {
+                    let label = document.createElement('span');
+                    label.innerHTML = ' in ';
+                    aside.appendChild(label);
+
+                    let nav = document.createElement('nav');
+                    nav.classList = 'meta inline';
+                    aside.appendChild(nav);
+
+                    let ul = document.createElement('ul');
+                    ul.classList = 'reset mry-0 inline';
+                    nav.appendChild(ul);
+
+                    for (let tag of friend.tags) {
+                        let li = document.createElement('li');
+                        li.classList = 'inline mrr-d1';
+                        ul.appendChild(li);
+                        li.innerHTML = `<a href="/blog/${tag}/"}>${tag}</a>`;
+                    }
+                }
+            }
+
+        }
+    }
+
+    function printHeading(resultSet, query) {
+        let heading = document.getElementsByTagName('h1');
+        if (heading.length) {
+            if (resultSet.length) {
+                heading[0].innerHTML = 'Search results for "' + query + '"';
+            } else {
+                heading[0].innerHTML = 'No search results for "' + query + '"';
+            }
+        }
+    }
+
+    function printResultCount(searchResults, resultSet, query) {
+        let count = document.createElement('div');
+        if (resultSet.length == 0) {
+            count.innerHTML = 'Your search for "' + query + '" did not return any results.'
+        } else {
+            count.innerHTML = resultSet.length + ' results:';
+        }
+        count.classList = "meta mry";
+        searchResults.append(count);
+    }
+
+    function printSearching() {
+        let searchResults = document.getElementById(SEARCH_RESULTS_ID);
+        if (!searchResults) {
+            console.error('The page does not have a DOM element with id=' + SEARCH_RESULTS_ID);
+            return;
+        }
+        removeChildren(searchResults);
+        let searching = document.createElement('div');
+        searching.classList = "meta mry";
+        searching.innerHTML = 'Searching …';
+        searchResults.append(searching);
+    }
+
+    function printSearchResults(resultSet, query) {
+        let searchResults = document.getElementById(SEARCH_RESULTS_ID);
+        if (!searchResults) {
+            console.error('The page does not have a DOM element with id=' + SEARCH_RESULTS_ID);
+            return;
+        }
+        removeChildren(searchResults);
+        printHeading(resultSet, query);
+        printResultCount(searchResults, resultSet, query);
+        if (resultSet.length) {
+            for (let entry of resultSet) {
+                printResultEntry(searchResults, entry);
+            }
+        }
+    }
+
+    function search(query) {
+        if (searchIndex) {
+            let resultSet = [];
+            if (query && query.trim().length) {
+                resultSet = searchIndex.search(query);
+            }
+            printSearchResults(resultSet, query);
+        }
+    }
+
+    function maintainInputState() {
+        let submit = document.getElementById(SEARCH_SUBMIT_ID);
+        if (searchIndex && friendlyMap) {
+            submit.disabled = false;
+        } else {
+            submit.disabled = true;
+        }
+    }
+
+    addEventListener('load', function (event) {
+        maintainInputState();
+        let query = getParameterByName('query');
+        let input = document.getElementById(SEARCH_QUERY_ID);
+        if (input) {
+            input.value = query;
+        }
+        if (query) {
+            printSearching();
+        }
+        fetch('/search-index.json', {credentials: 'same-origin'})
+            .then(response => {
+                return response.json()
+            })
+            .then(rawIndex => {
+                searchIndex = lunr
+                    .Index
+                    .load(rawIndex);
+                return fetch('/excerpt-index.json', {credentials: 'same-origin'});
+            })
+            .then(response => {
+                return response.json();
+            })
+            .then(excerptIndex => {
+                friendlyMap = new Map();
+                for (let item of excerptIndex) {
+                    friendlyMap.set(item.id, item);
+                }
+                maintainInputState();
+
+                if (query) {
+                    search(query);
+                }
+            })
+            .catch(error => {
+                console.error('Failure when creating search index ' + error);
+            });
+    });
+</script>
+{% include search-field.html , focus: true, onsubmit: "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value); history.replaceState(null, '', location.pathname + '?query=' + event.target[SEARCH_QUERY_ID].value)" %}
+
+<div id="search-results"></div>
+<script src="/js/lunr.js"></script>

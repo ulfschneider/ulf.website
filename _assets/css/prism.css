@@ -1,0 +1,120 @@
+/* Generated with http://k88hudson.github.io/syntax-highlighting-theme-generator/www */
+
+
+/* http://k88hudson.github.io/react-markdocs */
+
+
+/**
+*
+* Based on prism.js default theme for JavaScript, CSS and HTML
+* Based on dabblet (http://dabblet.com)
+* @author Lea Verou
+*/
+
+
+/*********************************************************
+* General
+*/
+
+pre[class*="language-"],
+code[class*="language-"] {
+    color: var(--neutral-d4);
+    font-size: var(--fs-mono);
+    text-shadow: none;
+    font-family: var(--mono-font-family);
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: keep-all;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+
+/*********************************************************
+* Tokens
+*/
+
+.namespace {
+    opacity: .7;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: var(--accent-two-d3);
+}
+
+.token.punctuation {
+    color: var(--neutral-d2);
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: var(--primary-d3);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: var(--accent-three-d4);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: var(--accent-one-d3);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: var(--primary-d3);
+}
+
+.token.function {
+    color: var(--accent-one-d3);
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: var(--accent-five-d3);
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}

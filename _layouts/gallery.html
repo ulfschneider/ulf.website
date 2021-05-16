@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html id="{{site.backToTop.id}}" lang="{{site.locale}}">
+
+    <head>
+        {% include head.html %}
+    </head>
+
+    <body class="pdx gallery meta-font fs">
+        {% include header.html %}
+
+        <main id="main" class="indent mxw-lg">
+            <header class="title meta-font mrb-2 pdt-d2 fs mxw-rg">
+                <h1 class="mry-0 inline meta-font fs">Images</h1> tagged {{tag}}
+            </header>
+            {{content}}
+
+            <div id="image-container" class="grid gp-2 mry-2 align-start"></div>
+            <button id="load-more" class="block mrt-2 mrb-3 mrx-auto width-5">Load more images</button>
+
+            {%- if tag != nil -%}
+                {% assign imageData = collections[tag] | live | post | reverse | firstImage %}
+            {%- else -%}
+                {% assign imageData = collections.livePosts | reverse | firstImage %}
+            {%- endif %}
+
+        </main>
+        {% include footer.html %}
+
+    </body>
+
+    <script>
+        var imageData = {{ imageData | jsonify }};
+        var index = getIndex();
+        var increment = 9;
+        var container = document.getElementById('image-container');
+
+        function appendImage(imgData) {
+            let anchor = document.createElement('a');
+            anchor.classList = 'no-deco';
+            anchor.href = imgData.url;
+            container.appendChild(anchor);
+
+            let figure = document.createElement('figure');
+            figure.classList = 'mr-0';
+            anchor.appendChild(figure);
+
+            let img = document.createElement('img');
+            img.src = imgData.src;
+            img.alt = imgData.alt;
+            img.classList = 'fit-contain';
+            img.setAttribute('loading', 'lazy');
+            figure.appendChild(img);
+
+            if (imgData.title) {
+                let figcaption = document.createElement('figcaption');
+                figcaption.innerHTML = imgData.title;
+                figcaption.classList = "small";
+                figure.appendChild(figcaption);
+            }
+
+        }
+
+        function getIndex() {
+            let queryString = location.search;
+            let params = new URLSearchParams(queryString);
+            let index = parseInt(params.get("index"));
+            return index
+                ? index
+                : 0;
+        }
+
+        function loadImages({start, end}) {
+            start = start
+                ? start
+                : 0;
+            end = end
+                ? end + increment
+                : start + increment;
+
+            for (let i = start; i < end && i < imageData.length; i++) {
+                appendImage(imageData[i]);
+            }
+        }
+
+        loadImages({start: 0, end: getIndex()});
+
+        let loadMore = document.getElementById('load-more');
+        if (index + increment > imageData.length) {
+            loadMore.style = 'display:none;';
+        }
+        loadMore.addEventListener('click', event => {
+            index += increment;
+            history.replaceState(null, '', location.pathname + '?index=' + index);
+            loadImages({start: index});
+            if (index + increment >= imageData.length) {
+                loadMore.style = 'display:none;';
+            }
+        });
+    </script>
+</html>

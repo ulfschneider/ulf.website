@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}</title>
+  <subtitle></subtitle>
+  <link href="{{ site.url }}{{ site.feed }}" rel="self"/>
+  <link href="{{ site.url }}/"/>
+  {%- if collections.livePosts | length -%}
+    <updated>{{ collections.livePosts | rssLastUpdatedDate }}</updated>
+  {%- endif -%}
+  <id>{{ site.url }}</id>
+  {%- if site.ownership -%}
+    <author>
+      <name>{{ site.ownership.name }}</name>
+      <email>{{ site.ownership.email }}</email>
+    </author>
+  {%- endif -%}
+  {%- for p in collections.livePosts -%}
+    {%- if p.data.norss == nil -%}
+      {%- set absolutePostUrl -%}{{ site.url }}{{ p.url | url }}{%- endset -%}
+      {%- set authorEmail -%}{{ p | authorEmail }}{%- endset -%}
+      <entry>
+        <title>{{ p.data.title }}</title>
+        <link href="{{ absolutePostUrl }}"/>
+        <updated>{{ p.date | rssDate }}</updated>
+        <id>{{ absolutePostUrl }}</id>
+        <content type="html">
+          <![CDATA[{{ p.templateContent | safe }}           
+          {%- if authorEmail -%}<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>{%- endif -%}]]>
+        </content>
+      </entry>
+    {%- endif -%}
+  {%- endfor %}
+</feed>
