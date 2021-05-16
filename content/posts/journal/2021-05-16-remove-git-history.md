@@ -2,7 +2,7 @@
 title: Remove git history
 tags: code
 ---
-Make the current working directory into the only commit and remove the complete git history.
+Make the current working directory into the only commit and remove the complete git history. Found on [stackoverflow](https://stackoverflow.com/questions/9683279/make-the-current-commit-the-only-initial-commit-in-a-git-repository/13102849#13102849).
 
 ~~~shell
 git checkout --orphan newBranch
