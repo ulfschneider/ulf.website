@@ -36,16 +36,20 @@ module.exports = {
         }
     ],
     footernav: [{
-            label: 'Accessibility',
-            url: '/accessibility/',
-            id: 'accessibility',
-            kbd: 'a'
+            label: 'Home',
+            url: '/',
         },
         {
             label: 'About',
             url: '/about/',
             id: 'about',
             kbd: 'u'
+        },
+        {
+            label: 'Accessibility',
+            url: '/accessibility/',
+            id: 'accessibility',
+            kbd: 'a'
         },
         {
             label: 'Colophon',
