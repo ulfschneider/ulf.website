@@ -36,16 +36,16 @@ module.exports = {
         }
     ],
     footernav: [{
-            label: 'RSS',
-            url: '/feed.xml',
-            id: 'rss',
-            kbd: 'r'
-        },
-        {
             label: 'Accessibility',
             url: '/accessibility/',
             id: 'accessibility',
             kbd: 'a'
+        },
+        {
+            label: 'About',
+            url: '/about/',
+            id: 'about',
+            kbd: 'u'
         },
         {
             label: 'Colophon',
@@ -54,10 +54,10 @@ module.exports = {
             kbd: 'c'
         },
         {
-            label: 'About',
-            url: '/about/',
-            id: 'about',
-            kbd: 'u'
+            label: 'RSS',
+            url: '/feed.xml',
+            id: 'rss',
+            kbd: 'r'
         },
         {
             label: 'Edit on GitHub',
