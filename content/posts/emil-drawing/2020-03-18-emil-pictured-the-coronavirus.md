@@ -1,6 +1,7 @@
 ---
 title: The Coronavirus
 author: Emil
+tags: star
 ---
 <figure class="rg:split">
 <img src="/img/emil-drawing/IMG_0729.jpg" alt="">

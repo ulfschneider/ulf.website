@@ -53,7 +53,11 @@
 
             if (imgData.title) {
                 let figcaption = document.createElement('figcaption');
-                figcaption.innerHTML = imgData.title;
+                if (imgData.starred) {
+                    figcaption.innerHTML = `${imgData.title}&nbsp;${imgData.starred}`;
+                } else {
+                    figcaption.innerHTML = imgData.title;
+                }
                 figcaption.classList = "small";
                 figure.appendChild(figcaption);
             }

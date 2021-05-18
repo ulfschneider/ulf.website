@@ -59,6 +59,14 @@ function addCollections(eleventyConfig) {
     eleventyConfig.addCollection('usedSiteTags', collectionAPI => {
         return utils.extractTags([
             ...collectionAPI.getFilteredByGlob('content/posts/**')
+            .map(item => {
+                if (item.data.tags && item.data.tags.includes('star')) {
+                    item.data.starred = '★';
+                } else {
+                    item.data.starred = '';
+                }
+                return item;
+            })
             .filter(utils.isLiveItem)
         ]);
 
@@ -66,6 +74,14 @@ function addCollections(eleventyConfig) {
     eleventyConfig.addCollection('livePosts', collectionAPI => {
         return [
             ...collectionAPI.getFilteredByGlob('content/**')
+            .map(item => {
+                if (item.data.tags && item.data.tags.includes('star')) {
+                    item.data.starred = '★';
+                } else {
+                    item.data.starred = '';
+                }
+                return item;
+            })
             .filter(utils.isLiveItem)
             .filter(utils.isPost)
             .sort(utils.compareItemDate)

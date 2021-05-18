@@ -2,7 +2,7 @@
 title: Weeknotes 13
 tags: journal
 ---
-- Write personal: "[Into the Personal-Website-Verse](https://matthiasott.com/articles/into-the-personal-website-verse)" is a plea for personal websites from Matthias Ott. That gets a ★.
+- Write personal: "[Into the Personal-Website-Verse](https://matthiasott.com/articles/into-the-personal-website-verse)" is a plea for personal websites from Matthias Ott. 
 - "[Advice from Ten Years of Leading Remote Teams](https://airbagindustries.com/advice-from-ten-years-of-leading-remote-teams/)" from Greg Storey.
 - "[How to architect a complex web table](https://www.smashingmagazine.com/2019/02/complex-web-tables/)."
 - This week a collection of the best [Rapha films](https://www.rapha.cc/en/en/stories/the-best-of-rapha-films)

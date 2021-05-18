@@ -1,6 +1,6 @@
 ---
 title: Japanese Carpentry
-tags: [video, design, like]
+tags: [video, design, star]
 ---
 Our tiny family is [building a house](/journal/we-are-building-a-house/). We are shortly before moving into the new place and I´m exhausted by the entire process. Building a house drained my batteries. In 2021 I certainly don´t want to spent my time making phone calls and appointments with builders. 
 

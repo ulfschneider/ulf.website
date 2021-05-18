@@ -1,7 +1,7 @@
 ---
 title: Early morning on our way to the Kindergarten and it´s snowing. 
 layout: image
-tags: [journal, like]
+tags: [journal, star]
 ---
 <figure class="rg:split">
 <img src="/img/journal/IMG_0240.jpg" alt="">

@@ -1,7 +1,7 @@
 ---
-title: 13 ways designers screw up client presentations ★
+title: 13 ways designers screw up client presentations
 refer: Mike Monteiro, Keynote for Interaction Design Association, Mar 2015
-tags: [design, video, like]    
+tags: [design, video, star]    
 ---
 A lively, enjoyable, and valid talk. Also, I like Mike´s slides very much.
 

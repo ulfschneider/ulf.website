@@ -94,7 +94,8 @@ module.exports = {
                     alt: alt,
                     url: item.url,
                     title: item.data.title,
-                    humanDate: humanDate,
+                    starred: item.data.starred,
+                    humanDate: humanDate
                 });
             }
         }

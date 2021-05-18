@@ -1,6 +1,6 @@
 ---
 title: The 10 Principles of Good Design
-tags: [design, like]
+tags: [design, star]
 ---
 <figure>
 <img alt="" src="/img/journal/dieter-rams-braun.jpg" />

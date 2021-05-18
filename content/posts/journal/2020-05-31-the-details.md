@@ -1,7 +1,7 @@
 ---
 title: The Details
 refer: Blog post by Matthias Ott
-tags: [reading, like]
+tags: [reading, star]
 ---
 <blockquote>The details are not the details; they make the product.
 <footer>Charles and Ray Eames</footer>

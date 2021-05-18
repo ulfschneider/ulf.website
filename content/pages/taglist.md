@@ -15,4 +15,4 @@ notitle: true
 {% include site-tags.html %}
 </div>
 
-{{collections.livePosts | tagIntro: tag }}
+{{collections.liveContent | tagIntro: tag }}

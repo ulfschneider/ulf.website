@@ -9,4 +9,4 @@ id: blog
 nosearch: true
 title: Images
 ---
-{{collections.livePosts | tagIntro: tag }}
+{{collections.liveContent | tagIntro: tag }}

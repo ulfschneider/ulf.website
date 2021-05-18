@@ -1,6 +1,6 @@
 ---
-title: Resilient Web Design ★
-tqgs: [design, like, code, reading]
+title: Resilient Web Design
+tqgs: [design, star, code, reading]
 ---
 <figure class="rg:split">
 <img src="/img/journal/jeremy-keith-resilient-web-design.png" alt="">

@@ -46,8 +46,6 @@ permalink: '{{site.search.url}}'
             article.classList = 'mry-1';
             parent.appendChild(article);
 
-            
-
             if (friend.title && friend.title != 'notitle') {
                 let title = document.createElement('h2');
                 title.classList = 'mry-0 inline fs meta-font'
@@ -57,6 +55,11 @@ permalink: '{{site.search.url}}'
                 linkToArticle.innerHTML = friend.title;
                 linkToArticle.classList = 'heading-color';
                 title.appendChild(linkToArticle);
+                if (friend.starred) {
+                    let star = document.createElement('span');
+                    star.innerHTML = `&nbsp;${friend.starred}`;
+                    title.appendChild(star);
+                }
             }
 
             if (friend.abstract || friend.excerpt || friend.content) {
@@ -85,7 +88,7 @@ permalink: '{{site.search.url}}'
                 article.appendChild(linkToArticle);
             }
 
-            if (friend.author || friend.date || (friend.tags && !friend.notags )) {
+            if (friend.author || friend.date || (friend.tags && !friend.notags)) {
                 let aside = document.createElement('aside');
                 aside.classList = "meta block";
                 article.innerHTML += ' ';

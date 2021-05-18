@@ -1,6 +1,6 @@
 ---
-title: I am not your Negro ★
-tags: [video, social, like]
+title: I am not your Negro
+tags: [video, social, star]
 ---
 <blockquote>"Why was it necessary to have a nigger in the first place? I am not a nigger. I am a man. When I´m not a nigger, and you, the white people, invented him, you got to find out why!"
 <footer>James Baldwin</footer>

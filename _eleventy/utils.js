@@ -145,6 +145,7 @@ module.exports = {
             layout: item.data.layout,
             tags: item.data.tags,
             notags: item.data.notags,
+            starred: item.data.starred,
             content: this.removeHtml(item.templateContent)
         }
     },

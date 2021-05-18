@@ -1,6 +1,6 @@
 ---
 title: Thereabouts 3 – Discovering Colombia
-tags: [sports, video, like]
+tags: [sports, video, star]
 ---
 <figure>
 <iframe src="https://player.vimeo.com/video/217588987?color=ffffff" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
