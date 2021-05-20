@@ -15,7 +15,7 @@ Ethan Marcotte has [four new courses on design systems](https://thegymnasium.com
 
 ## What is a design system
 
-Examples
+Examples:
 
 - [Olympic Games 1972 Munich, by Otl Aicher](https://www.munich72collected.com/)
 - [Mailchimp](https://ux.mailchimp.com/patterns)
@@ -61,9 +61,9 @@ A good pattern name should describe the patterns by purpose or function, not by 
 - *Teaser card*
 - *Teaser*
 
-Language is the primary interface for design patterns
+Language is the primary interface for design patterns.
 
-See a workshop format by Charlotte Jackson that can be used with customers. Its documented in the alistapart article [From Pages to Patterns: An Excercise for Everyone](https://alistapart.com/article/from-pages-to-patterns-an-exercise-for-everyone). It goes
+See a workshop format by Charlotte Jackson that can be used with customers. Its documented in the alistapart article [From Pages to Patterns: An Excercise for Everyone](https://alistapart.com/article/from-pages-to-patterns-an-exercise-for-everyone). It goes:
 
 1. Visual inventory of patterns
 	- Cut up each page of your website into its smallest elements (paper!)
