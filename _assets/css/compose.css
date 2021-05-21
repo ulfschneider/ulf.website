@@ -210,14 +210,23 @@ small,
 }
 
 @custom-media --max-sm (max-width: 400px);
+
 @custom-media --max-rg (max-width: 600px);
+
 @custom-media --max-md (max-width: 900px);
+
 @custom-media --max-lg (max-width: 1400px);
+
 @custom-media --sm (min-width: 400px);
+
 @custom-media --rg (min-width: 600px);
+
 @custom-media --md (min-width: 900px);
+
 @custom-media --lg (min-width: 1400px);
+
 @custom-media --touch-device screen and (hover: none) and (pointer: coarse);
+
 :root {
     --font-size-breakpoint-sm: calc(var(--base-font-size) + 1px);
     --font-size-breakpoint-rg: calc(var(--base-font-size) + 2px);
@@ -1311,7 +1320,6 @@ small,
     color: var(--li-prefix-color);
 }
 
-
 /* Background */
 
 .bg-neutral-d5 {
@@ -1405,7 +1413,6 @@ small,
 .bg-li-prefix-color {
     background-color: var(--li-prefix-color);
 }
-
 
 /* Border Colors */
 
@@ -1761,7 +1768,6 @@ small,
     color: var(--accent-five-5);
 }
 
-
 /* Background */
 
 .bg-primary-d5 {
@@ -2027,7 +2033,6 @@ small,
 .bg-accent-five-5 {
     background-color: var(--accent-five-5);
 }
-
 
 /* Border Colors */
 
@@ -2296,7 +2301,7 @@ small,
 }
 
 :root {
-    --border-width: var(--space-d5);
+    --border-width: 1px;
     --rounded: var(--space-d3);
     --border-style: solid;
     --border: var(--border-width) var(--border-style) var(--border-color);
@@ -2475,7 +2480,6 @@ small,
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-
 
 /**
 Naming conventions
@@ -3088,7 +3092,6 @@ Naming conventions
     /*for flexbox */
 }
 
-
 /**
 Naming conventions
     x=x-axis
@@ -6774,7 +6777,6 @@ Naming conventions
         /*for flexbox */
     }
 }
-
 
 /**
 Naming conventions
@@ -7182,7 +7184,6 @@ Naming conventions
     padding-left: var(--space-6);
 }
 
-
 /**
 Naming conventions
     x=x-axis
@@ -9621,7 +9622,6 @@ Naming conventions
         padding-left: var(--space-6);
     }
 }
-
 
 /**
 Naming conventions
@@ -13739,7 +13739,8 @@ blockquote {
     margin-bottom: var(--mrb-blockquote);
     margin-left: 0;
     margin-right: 0;
-    padding: 0;
+    padding: 0 0 0 var(--horizontal-rhythm);
+    border-left: var(--border-width) solid var(--li-prefix-color);
     font-style: var(--blockquote-font-style);
     background: var(--blockquote-background);
 }
@@ -13761,7 +13762,6 @@ a {
 a:not(table a) {
     overflow-wrap: break-word;
 }
-
 
 /* consider x-layout */
 
@@ -14044,7 +14044,6 @@ textarea:focus+label {
     color: var(--form-focus-color);
 }
 
-
 /*
 https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/
 and
@@ -14085,7 +14084,6 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     margin-left: var(--horizontal-rhythm);
 }
 
-
 /* box */
 
 .custom-control input[type=checkbox]+*::before,
@@ -14101,13 +14099,11 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     border-radius: var(--form-radius);
 }
 
-
 /* circle */
 
 .custom-control input[type=radio]+*::before {
     border-radius: 50%;
 }
-
 
 /* check */
 
@@ -14127,7 +14123,6 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     background: transparent;
 }
 
-
 /* select */
 
 .custom-control input[type=radio]+*::after {
@@ -14142,14 +14137,12 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     border-radius: 50%;
 }
 
-
 /* unchecked / unselected */
 
 .custom-control input[type=checkbox]:not(:checked)+*::after,
 .custom-control input[type=radio]:not(:checked)+*::after {
     opacity: 0;
 }
-
 
 /* checked / selected*/
 
@@ -14346,7 +14339,6 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
 .x-12>.xx-12 {
     grid-column: auto / span 12;
 }
-
 
 /* column start points */
 
@@ -17003,8 +16995,8 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     --h5-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter);
     --h6-counter: counter(h2-counter) var(--h-counter-delimiter) counter(h3-counter) var(--h-counter-delimiter) counter(h4-counter) var(--h-counter-delimiter) counter(h5-counter) var(--h-counter-delimiter) counter(h6-counter);
     --timeline-blub-size: 1em;
-    --timeline-width: 1px;
-    --timeline-blub-border: 1px;
+    --timeline-width: var(--border-width);
+    --timeline-blub-border: var(--border-width);
 }
 
 dl {
@@ -17576,7 +17568,6 @@ caption {
     margin: 0;
 }
 
-
 /* Nicolas Gallaghers Clearfix solution
    Ref: http://nicolasgallagher.com/micro-clearfix-hack/ */
 
@@ -17675,7 +17666,6 @@ caption {
     -o-box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 }
-
 
 /* containment */
 
@@ -19159,7 +19149,6 @@ caption {
     }
 }
 
-
 /* scroll snap type */
 
 .snap-y-mandatory {
@@ -19215,7 +19204,6 @@ caption {
     scroll-snap-type: none;
 }
 
-
 /* scroll snap align */
 
 .snap-start {
@@ -19234,9 +19222,7 @@ caption {
     scroll-snap-align: none;
 }
 
-
 /* scroll-scroll-margin */
-
 
 /**
 Naming conventions
@@ -19849,9 +19835,7 @@ Naming conventions
     /*for flexbox */
 }
 
-
 /* scroll-padding */
-
 
 /**
 Naming conventions
@@ -20258,7 +20242,6 @@ Naming conventions
 .snap-pdl-6 {
     scroll-padding-left: var(--space-6);
 }
-
 
 /*DEBUG GRID
 from http://tachyons.io/docs/debug-grid/
