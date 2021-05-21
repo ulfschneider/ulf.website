@@ -23,12 +23,13 @@
                     {%- endif -%}
                 {%- endfor -%}
             {%- else -%}
-                {%- if tag == nil and page.url == site.blog -%}
-                    <span class="bg-link-focus-color white pd-d2 rounded" aria-current="page" >all content</span>
-                {%- else -%}
-                    <a class="bg-neutral-5 pd-d2 br rounded no-deco" href="{{site.blog}}">all content</a>
-                {%- endif -%}
-
+                <li class="inline-block mr-d2">
+                    {%- if tag == nil and page.url == site.blog -%}
+                        <span class="bg-link-focus-color white pd-d2 rounded" aria-current="page" >all content</span>
+                    {%- else -%}
+                        <a class="bg-neutral-5 pd-d2 br rounded no-deco" href="{{site.blog}}">all content</a>
+                    {%- endif -%}
+                </li>
                 {%- for siteTag in currentTags -%}
                     {%- if tag != siteTag -%}
                         <li class="inline-block mr-d2">
