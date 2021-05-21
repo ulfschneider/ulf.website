@@ -1,6 +1,7 @@
 ---
 title: Pocket Git Guide
 subtitle: A short entry-level approach to Git
+tags: code
 ---
 
 [[toc]]
