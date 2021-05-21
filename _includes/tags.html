@@ -1,8 +1,9 @@
 {%- if tags and notags == nil -%}
     <nav class="meta inline">
         <span> tagged </span>
+        {% assign sortedTags = tags | sort %}
         <ul class="reset mry-0 inline">
-            {%- for tag in tags -%}
+            {%- for tag in sortedTags -%}
                 <li class="inline mrr-d2">
                     <a href="{{tag | tagUrl}}" class="no-wrap">{{tag}}</a>
                 </li>
