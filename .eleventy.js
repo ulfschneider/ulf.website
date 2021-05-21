@@ -56,8 +56,10 @@ function addLayoutAliases(eleventyConfig) {
 
 function addCollections(eleventyConfig) {
 
+
+
     eleventyConfig.addCollection('usedSiteTags', collectionAPI => {
-        return utils.extractTags([
+        let usedSiteTags = utils.extractTags([
             ...collectionAPI.getFilteredByGlob('content/posts/**')
             .map(item => {
                 if (item.data.tags && item.data.tags.includes('star')) {
@@ -69,8 +71,12 @@ function addCollections(eleventyConfig) {
             })
             .filter(utils.isLiveItem)
         ]);
-
+        filters.createColorMap(usedSiteTags);
+        return usedSiteTags;
     });
+
+
+
     eleventyConfig.addCollection('livePosts', collectionAPI => {
         return [
             ...collectionAPI.getFilteredByGlob('content/**')
@@ -110,6 +116,7 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('authorEmail', filters.authorEmail);
     eleventyConfig.addFilter('authorName', filters.authorName);
     eleventyConfig.addFilter('tagUrl', filters.tagUrl);
+    eleventyConfig.addFilter('tagColor', filters.tagColor);
 }
 
 function addBrowserSync404(eleventyConfig) {

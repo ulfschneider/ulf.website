@@ -2,6 +2,8 @@ const lunr = require("lunr");
 const utils = require("./utils.js");
 const site = require("../_data/site.js");
 
+let colorMap;
+
 module.exports = {
 
     live: function(collection) {
@@ -116,6 +118,34 @@ module.exports = {
 
     tagUrl: function(tag) {
         return utils.tagUrl(tag);
+    },
+
+    createColorMap: function(values) {
+
+        colorMap = new Map();
+        if (site.tagColors && site.tagColors.length) {
+            let colorIndex = 0;
+            for (let value of values) {
+                colorIndex = colorIndex % site.tagColors.length;
+                colorMap.set(value, site.tagColors[colorIndex]);
+                colorIndex++;
+            }
+        }
+        return colorMap;
+    },
+
+    tagColor: function(tag) {
+        if (!colorMap) {
+            console.error('ColorMap has not been initialized. Please call createColorMap once before calling tagColor.');
+            return '';
+        }
+        if (colorMap.size) {
+            let color = colorMap.get(tag);
+            return color ? color : '';
+
+        } else {
+            return '';
+        }
     }
 
 }
