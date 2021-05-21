@@ -11,7 +11,7 @@ Core cultures
 
 In the agile movement, many consider a collaboration culture as a worthwhile goal for any organization and even further assume the members of those organizations share this goal.
 
-This assumption is false. For an organization lacking the heritage of a collaboration culture, turning towards agile will bring only limited results and will not produce insights about what is going on behind the scenes.
+This assumption is false. For any organization lacking the heritage of a collaboration culture, turning towards agile will bring only limited results and will not produce insights about what is going on behind the scenes.
 
 In general, William Schneider is admitting the possibility of a cultural transformation, but he is also pointing out the difficulty, the risk and the long-term nature (more than ten years) of such an endeavor [Schneider 2000]. Schneider believes that at least 75% of the management has to be convinced about the necessity of a cultural transformation. For this kind of conviction, John Kotter coined the phrase *sense of urgency,* [Kotter 1996]. Such conditions are seldom to be found.
 
