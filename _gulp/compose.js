@@ -1,7 +1,7 @@
 const { dest, src } = require('gulp');
 
 const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
-const SOURCE = ['_assets/css/compose.css'];
+const SOURCE = ['node_modules/compose-css/css/compose.css'];
 const DEST = `${OUTPUT}/css/`;
 
 const processingCompose = () => {
