@@ -25,6 +25,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addTransform('htmlmin', transforms.minifyHtml);
     eleventyConfig.addPassthroughCopy({ '_root': '/' });
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
+    eleventyConfig.addPassthroughCopy({ 'node_modules/compose-css/css/compose.css': '/css/compose.css' });
 
     eleventyConfig.addPlugin(rss);
     eleventyConfig.addPlugin(syntaxHighlight, { alwaysWrapLineHighlights: true });
