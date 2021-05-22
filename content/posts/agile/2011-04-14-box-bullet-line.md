@@ -3,7 +3,7 @@ title: The Box-Bullet-Line (BBL)
 ---
 [[toc]]
 
-Many important aspects of software development are invisible. When creating software we work through different abstraction layers by analyzing symbols and writing code.
+<figure class="larger">Many important aspects of software development are invisible. When creating software we work through different abstraction layers by analyzing symbols and writing code.</figure>
 
 Writing software is comparable to the work of an author writing a book. Of course, there are engineering elements and creative and social aspects that characterize the work of a software developer, but the contemplative articulation of a model into code is authoring to me. The better we can communicate the underlying model, the better the system can grow. Indeed the ability of the system to develop is coupled to our _shared_ mental model about the system.
 

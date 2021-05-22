@@ -33,16 +33,15 @@ Architectural decisions are strategic for the solution space. They affect many a
 
 Architectural decisions are being taken under two premises [Friedrichsen 2010]:
 
-<blockquote>
-Represent and balance the interests of all stakeholders over the entire system lifecycle and<br>
-Minimize the total cost of ownership for the system during the whole lifecycle
+<blockquote><p>Represent and *balance* the interests of all stakeholders over the entire system lifecycle and *minimize* the total cost of ownership for the system during the whole lifecycle.</p>
+<footer>Uwe Friedrichsen</footer>
 </blockquote>
 
 Here the balancing aspect of the interests of all stakeholders is emphasized. The famous Frederick Brooks [Brooks 1995:45] states, that
 
-
 <blockquote>
-The architect of a system, like the architect of a building, is the user´s agent
+<p>The architect of a system, like the architect of a building, is the *user´s agent*.</p>
+<footer>Frederick Brooks</footer>
 </blockquote>
 
 My impression is, both quotes are correct.
@@ -283,21 +282,17 @@ Architecture decisions need to be communicated. Besides the spoken language, whi
     * What in detail is the problem?
     * Why is it of relevance for the architecture?
     * Which impacts does the decision have?
-
 * Constraints
     * What constraints need to be considered?
     * What influencing factors need to be considered?
-
 * Assumptions
     * What assumptions have been made?
     * What assumptions can be validated?
     * What risks exist?
-
 * Alternatives
     * What alternatives have been examined?
     * How is each of the other options being assessed?
     * What alternatives are by intent being skipped?
-
 * Decision
     * What is the decision?
     * Who took the decision?

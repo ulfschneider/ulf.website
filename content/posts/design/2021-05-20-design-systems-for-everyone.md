@@ -143,7 +143,7 @@ Visit *[A design system isn´t a project. It´s a product, serving products](htt
 	- **Design systems work is never finished, they are evolving ecosystems. And that´s good!** See *[Building a visual language](https://airbnb.design/building-a-visual-language)*.
 
 ## Further Reading
-- *[Design Systems](https://shop.smashingmagazine.com/products/design-systems-by-alla-kholmatova)*, by Alla Kholmatova
+*[Design Systems](https://shop.smashingmagazine.com/products/design-systems-by-alla-kholmatova)*, by Alla Kholmatova
 
 
 

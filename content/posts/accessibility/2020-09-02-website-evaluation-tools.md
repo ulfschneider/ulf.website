@@ -14,7 +14,7 @@ tags: accessibility
 The table below is listing tools to check a website for compliance in the named areas.
 
 <table>
-<caption>Tools to validate a website for accessibility</caption>
+<caption>Tools to validate a website for accessibility.</caption>
 <colgroup>  
        <col style="width: 20%" />
        <col style="width: 30%" />

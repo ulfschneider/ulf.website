@@ -16,10 +16,11 @@ The agile worker is searching for insights. If insights should have a meaning, t
 The agile worker is acting best inside of a system where decisions will be taken at the level with most profound insights and not necessarily at the level with the most formal power.
 
 <blockquote>
-Do not move information to authority. Move the authority to where the information lives. [Marquet 2012:49]
+<p>Do not move information to authority. Move the authority to where the information lives. </p>
+<footer>David Marquet, in [Marquet 2012:49]</footer>
 </blockquote>
 
-Such kind of authority is a central part of the leadership process in agile organizations. It also means the ability to take risks, to change the organization and to develop. This is not primarily to reduce the work of managers but to come to the best possible decisions [Appelo 2011:114].
+Authority is a central part of the leadership process in agile organizations. It also means the ability to take risks, to change the organization and to develop. This is not primarily to reduce the work of managers but to come to the best possible decisions [Appelo 2011:114].
 
 ## Self-organization
 
@@ -33,7 +34,7 @@ In any complex system, in small companies and large corporations, self-organizat
 
 ## Purpose
 
-Of course, all human-created organizations have a purpose, a goal. The decisions, the actions and the results that any organization delivers must be aligned with that purpose. Therefore self-organizational forces need have a direction.
+All human-created organizations have a purpose, a goal. The decisions, the actions and the results that any organization delivers must be aligned with that purpose. Therefore self-organizational forces need have a direction.
 
 One example: In road traffic the established rules allow any road user to travel fast, save and to arrive at the desired destination. In the Netherlands roundabouts are a common way to organize traffic flow. In Germany, traffic lights are being used to achieve the same result. We all have made the experience to wait in front of a red traffic light at an empty crossing. In a roundabout nobody is waiting if there is no traffic. Decentralized self-organization of road users is required and has a direction because traffic rules are in place. On the other hand, traffic lights correspond to a central controlling model with high controlling costs, where self-organization is largely inhibited and occasionally delays.
 
