@@ -6,14 +6,14 @@ tags: [reading, workplace]
 ---
 <figure class="rg:split">
 <img src="/img/journal/gerry-mcgovern-transform.jpg" alt="">
-<figcaption>Cover of Gerry McGovern´s book "Transform"</figcaption>
+<figcaption><strong>Transform</strong> by Gerry McGovern</figcaption>
 </figure>
 
 The essence of digital transformation is about moving from organization-centric (old model) to customer-centric. Customer-centric means: make it as simple as possible for the customer to complete his task – and not: present a website with a carousel of banners from marketing and management. A carousel can easily deal with *5 ego requests* from different departments within the organization. But that´s not of interest to the customer.
 
-If you want to empower customers with information and strive to make everything as simple as possible, [Transform](https://gerrymcgovern.com/books/transform-a-rebels-guide-for-digital-transformation/) by Gerry McGovern might be of help. It has real-life examples and will give you a short introduction into a method called *Top-Tasks,* which can be used as a guideline to simplify the offerings of your organization to its customers. 
+If you want to empower customers with information and strive to make everything as simple as possible, *[Transform](https://gerrymcgovern.com/books/transform-a-rebels-guide-for-digital-transformation/)* by Gerry McGovern might be of help. It has real-life examples and will give you a short introduction into a method called *Top-Tasks,* which can be used as a guideline to simplify the offerings of your organization to its customers. 
 
-There is also An Event Apart talk available, in whitch Gerry is explaining his point of view: [The Customer-Obsessed Professional](https://vimeo.com/user31596242). It´s worth investing the hour!
+There is also An Event Apart talk available, in whitch Gerry is explaining his point of view: *[The Customer-Obsessed Professional](https://vimeo.com/user31596242)*. It´s worth investing the hour!
 
 What I´m taking from the book:
 
@@ -23,7 +23,7 @@ What I´m taking from the book:
 5. **Measure use, not what you produce:** What is most important to the customer is often of least importance to the organization. The web is a mega-organization of customers. We come to the web to do things. Thus, designing for use is crucial to a digital designers success. The key characteristic of the digital designer is empathy – empathy for the customer. Top-Tasks is a method to identify what a customer wants to do when visiting our website. Most likely a customer doesn´t want to see advertisements or how great the new CEO is. The customer wants to complete a job as fast as possible. The more we separate the creation of the thing from the use of the thing, the more we encourage complexity to grow. The greatest driver of disloyalty is the amount of effort we require our customer to put into their service experience. Millennials would prefer to clean a toilet than ring customer services. Digital is self-service! Interesting examples: Sparebanken, p. 75; Obama campaign, p. 140: Fictitious names at Microsoft, p. 141; Norwegian Cancer Society, p. 141.
 6. **Making your organization customer-centric is a rebellious act against traditional hierarchy:** Most senior managers like to talk customer-centricity and collaboration but they don´t want to be customer-centric. Built into the old model DNA is the strong impulse to produce, to create, to publish, to own, to have, and be seen to have. Value is measured based on production and having lots of things. It is alien to most organizations to continuously improve, to review, renew, and where appropriate, remove. Your future will be more about continuously improving what you have created than creating new stuff. That´s a big shift. Your questions must be: "What can I remove? What can I improve?" Not: "What can I add? What can I create?". 
 
-<blockquote>You never change things by fighting the existing reality. Build a new model that makes the existing model obsolete.
+<blockquote><p>You never change things by fighting the existing reality. Build a new model that makes the existing model obsolete.</p>
 <footer>Gerry McGovern</footer>
 </blockquote>
 

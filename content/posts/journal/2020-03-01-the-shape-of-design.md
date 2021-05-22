@@ -3,7 +3,13 @@ title: The Shape of Design
 refer: A book y Frank Chimero
 tags: [design, reading]
 ---
-From the [book](https://shapeofdesignbook.com):
+<figure class="rg:split">
+<img src="/img/journal/the-shape-of-design.svg" alt="Book cover of 'The Shape of Design' by Frank Chimero">
+<figcaption><strong>The Shape of Design</strong> by Frank Chimero</figcaption>
+</figure>
+
+
+From the *[The Shape of Design](https://shapeofdesignbook.com)*:
 
 … Painting’s near and far states are akin to How and Why: the artist, when close to the canvas, is asking How questions related to craft; when he steps back, he raises Why questions concerned with the whole of the work and its purpose. Near and Far may be rephrased as Craft and Analysis, which describe the kinds of questions the artist asks while in each mode. This relationship can be restated in many different ways, each addressing a necessary balance: How and Why, Near and Far, Making and Thinking, Execution and Strategy, Craft and Analysis …
 
