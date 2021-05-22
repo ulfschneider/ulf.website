@@ -10,44 +10,37 @@ tags: [accessibility, star]
 ## Names
 - Use link text that makes sense even out of context (avoid ambiguous link text such as multiple links on one page, all labeled "Read more", "Click here", "Continue")
 - Give form fields a proper name by using a `<label>` tag.
-
-~~~html
-<label for="name">Name</label>
-<input type="text" id="name" />
-~~~
-
+	~~~html
+	<label for="name">Name</label>
+	<input type="text" id="name" />
+	~~~
 - Use `<caption>` for tables.
-
-~~~html
-<table>
-  <caption>Financial results 2018<caption>
+	~~~html
+	<table>
+	  <caption>Financial results 2018<caption>
   <tbody>…</tbody>
-</table>
-~~~
-
+	</table>
+	~~~
 - Use `<legend>` for fieldsets.
-
-~~~html
-<form>
-  <fieldset>
-    <legend>Personal details</legend>
-    <label for="name">Name</label>
-    <input type="text" id="name" />
-		<!-- more fields here-->
-  </fieldset>
-</form>
-~~~
+	~~~html
+	<form>
+	  <fieldset>
+	    <legend>Personal details</legend>
+	    <label for="name">Name</label>
+	    <input type="text" id="name" />
+			<!-- more fields here-->
+	  </fieldset>
+	</form>
+	~~~
 
 ## Markup
 - Use `<a>` when the user is *send somewhere.*
 - Consider `<button>` if the `href` attribute is empty. A `<button>` *does something.*
 ## Structure
 - Give each page a unique `<title>`. 
-
-<blockquote>The <code>&lt;title&gt;</code> is still the first guarantee or first confirmation that you´ve ended up on the page that you intended to reach.
-<footer><a href="https://tink.uk">Léonie Watson</a>, accessibility expert and screenreader user</footer>
-</blockquote>
-
+	<blockquote>The <code>&lt;title&gt;</code> is still the first guarantee or first confirmation that you´ve ended up on the page that you intended to reach.
+	<footer><a href="https://tink.uk">Léonie Watson</a>, accessibility expert and screenreader user</footer>
+	</blockquote>
 - Provide proper headings, as they are like the table of contents for assistive technology.
 - Have a sensible HTML structure. Check if the site is properly readable when CSS is turned off.
 ## Language
