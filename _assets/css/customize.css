@@ -246,6 +246,11 @@ th.sotable-column .indicator {
     margin-left: .5em;
 }
 
+table.sotable caption p.indicator {
+    margin-top: var(--vertical-rhythm);
+    font-size: var(--fs-d1);
+}
+
 @media print {
     table.sotable caption p.indicator {
         display: none;
