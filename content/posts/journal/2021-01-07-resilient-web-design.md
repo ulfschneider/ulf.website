@@ -4,7 +4,7 @@ tags: [design, star, code, reading]
 ---
 <figure class="rg:split">
 <img src="/img/journal/jeremy-keith-resilient-web-design.png" alt="">
-<figcaption><strong>Resilient Web Design.</strong>By Jeremy Keith.</figcaption>
+<figcaption><strong>Resilient Web Design</strong> by Jeremy Keith</figcaption>
 </figure>
 
 *[Resilient Web Design](https://resilientwebdesign.com)* by [Jeremy Keith](https://resilientwebdesign.com/author/) is a pleasure to read. Jeremy has put together context and concept for a deep understanding of the web. The writing, as well as the presentation, is with style. It´s inviting the reader. Each chapter has valuable links which by themselves are a pleasure to follow. The book is available online, free, and because Jeremy made it a *Progressive Web App*, you can even read it offline! 

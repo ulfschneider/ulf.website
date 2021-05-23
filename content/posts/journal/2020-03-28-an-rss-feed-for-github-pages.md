@@ -81,43 +81,36 @@ Here are all the front matter settings you have:
 <th>Value</th>
 <th>Meaning</th>
 </tr>
-
 <tr>
 <td>layout</td>
 <td>rssfeed</td>
 <td>mandatory</td>
 </tr>
-
 <tr>
 <td>permalink</td>
 <td>/feed.xml/</td>
 <td>it can be another URL, but it should end with <code>.xml</code></td>
 </tr>
-
 <tr>
 <td>categories</td>
 <td></td>
 <td>an array of all the categories you want to include into the feed</td>
 </tr>
-
 <tr>
 <td>tags</td>
 <td></td>
 <td>an array of all the tags you want to include into the feed</td>
 </tr>
-
 <tr>
 <td>exclude_categories</td>
 <td></td>
 <td>an array of all the categories you do <em>not</em> want to include into the feed</td>
 </tr>
-
 <tr>
 <td>exclude_tags</td>
 <td></td>
 <td>an array of all the tags you do <em>not</em> want to include into the feed</td>
 </tr>
-
 <tr>
 <td>exclude_layouts</td>
 <td></td>
