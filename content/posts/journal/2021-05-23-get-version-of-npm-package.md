@@ -24,7 +24,7 @@ let version = package.version;
 <figure>
 <figcaption>Your current package must be accessed without the package name.</figcaption>
 {% highlight js %}
-//You don´t need the package name of your current package
+//you don´t need the package name of your current package
 const package = require('./package.json'); 
 
 //access the version or any other property
