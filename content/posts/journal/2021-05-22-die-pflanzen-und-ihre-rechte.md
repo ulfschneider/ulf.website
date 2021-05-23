@@ -9,7 +9,7 @@ tags: [reading, nature, star]
 
 Ohne Pflanzen überlebt nichts auf unserem Planeten, der über nur einen schmalen Streifen des Lebens verfügt. Von der Erdoberfläche betrachtet sind es gerade 10.000 Meter nach unten und 10.000 Meter nach oben, also ca. 20 Kilometer. Stefano Mancuso beleuchtet, wie die Lebensweise der Pflanzen eine Vorlage, oder mindestens eine alternative Sichtweise zur Gestaltung des Lebens der Menschen liefern kann. 
 
-Er formuliert sein Buch als Charta – also als Satzung für die Rechte einer Nation, die von den Pflanzen bereits erfüllt wird – und gliedert diese in acht Artikel. Die Charta lässt sich wie eine Überlebensstrategie lesen. Sehr eindringlich wird klar, wie sehr unser und alles Leben von den Pflanzen abhängt.
+Er formuliert sein Buch als Charta – als Satzung für die Rechte einer *weltweiten* Nation – und gliedert diese in acht Artikel. Die Charta lässt sich wie eine Überlebensstrategie lesen. Sehr eindringlich wird klar, wie sehr unser und alles Leben von den Pflanzen abhängt.
 
 ## Die acht Artikel der Charta der Pflanzen
 
