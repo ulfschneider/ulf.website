@@ -6,9 +6,9 @@ const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
 const filters = require('./_eleventy/filters.js');
 const transforms = require('./_eleventy/transforms.js');
+const package = require('./package.json');
 
 module.exports = function(eleventyConfig) {
-
     addLayoutAliases(eleventyConfig);
     addCollections(eleventyConfig);
     addFilters(eleventyConfig);
