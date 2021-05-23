@@ -7,7 +7,7 @@ tags: [type, training]
 
 [[toc]]
 
-I think the course is like a condensed version of Matej´s book "[Better web typography for a better web](https://betterwebtype.com/web-typography-book/)," which I didn´t read. 
+I think the course is like a condensed version of Matej´s book *[Better web typography for a better web](https://betterwebtype.com/web-typography-book/)*, which I didn´t read. 
 
 ## Introduction to typography
 
