@@ -81,16 +81,6 @@ nav ul li:last-child {
     font-weight: normal;
     font-size: var(--fs);
     color: var(--neutral);
-    display: none;
-}
-
-h1:hover>.anchor,
-h2:hover>.anchor,
-h3:hover>.anchor,
-h4:hover>.anchor,
-h5:hover>.anchor,
-h6:hover>.anchor {
-    display: inline;
 }
 
 nav.table-of-contents::before {
