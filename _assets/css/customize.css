@@ -242,7 +242,8 @@ table.sotable caption p.indicator {
 }
 
 @media print {
-    table.sotable caption p.indicator {
+    table.sotable caption p.indicator,
+    .anchor {
         display: none;
     }
 }
