@@ -1,4 +1,4 @@
 @import "fonts";
-@import "../../node_modules/compose-css/css/compose.css";
+@import "compose";
 @import "prism";
 @import "customize";

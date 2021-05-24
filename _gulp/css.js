@@ -2,7 +2,7 @@ const { dest, src } = require('gulp');
 const postcss = require('gulp-postcss');
 
 const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
-const SOURCE = ['_assets/css/main.css'];
+const SOURCE = ['_assets/css/main.css', '_assets/css/compose.css'];
 const DEST = `${OUTPUT}/css/`;
 
 const processingCSS = () => {
