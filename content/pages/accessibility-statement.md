@@ -1,5 +1,5 @@
 ---
-permalink: '/accessibility/'
+permalink: '/accessibility-statement/'
 title: Accessibility of this site
 nodate: true
 id: accessibility

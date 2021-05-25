@@ -48,7 +48,7 @@ module.exports = {
         },
         {
             label: 'Accessibility',
-            url: '/accessibility/',
+            url: '/accessibility-statement/',
             id: 'accessibility',
             kbd: 'a'
         },
