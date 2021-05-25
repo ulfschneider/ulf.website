@@ -1,10 +1,5 @@
 ---
-permalink: '/accessibility/'
-title: Accessibility of this site
-nodate: true
-id: accessibility
+tagintro: accessibility
+nosearch: true
 ---
-I try to make this site accessible by following my [here documented approach](/2020-08-21-my-approach-to-accessibility/). I plan to have an *accessibility statement*^[[As a good example, the accessibility statement of Ethan Marcotte´s site](https://ethanmarcotte.com/accessibility/)] at this place. For now, it´s only a list of keys that help to navigate the site with the keyboard.
-
-{% include keyboard.html %}
-
+According to [my approach to accessibility](/2020-08-21-my-approach-to-accessibility/) this is my list of useful things, like articles, tools, or techniques. I hope, by learning from it I will make accessibility more accessible for myself and provide a more inclusive user experience with my web projects.

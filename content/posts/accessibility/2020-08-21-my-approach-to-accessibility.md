@@ -55,4 +55,4 @@ I want to start improving now. Here is my plan: I focus on the topic of accessib
 - by applying best practices in my own work – at first I will try things out on my personal site here,
 - by finding resources to test for accessibility.
 
-I will maintain a [list of useful things](/blog/accessibility), like articles, tools, or techniques. I hope, through that I will make accessibility more accessible for myself and provide a more inclusive user experience with my web projects.
+I will maintain a [list of useful things](/blog/accessibility), like articles, tools, or techniques. I hope, by learning from it I will make accessibility more accessible for myself and provide a more inclusive user experience with my web projects.
