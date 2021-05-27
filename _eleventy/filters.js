@@ -124,11 +124,9 @@ module.exports = {
 
         colorMap = new Map();
         if (site.tagColors && site.tagColors.length) {
-            let colorIndex = 0;
             for (let value of values) {
-                colorIndex = colorIndex % site.tagColors.length;
+                colorIndex = Math.abs(utils.hashCode(value)) % site.tagColors.length;
                 colorMap.set(value, site.tagColors[colorIndex]);
-                colorIndex++;
             }
         }
         return colorMap;

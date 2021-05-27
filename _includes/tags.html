@@ -4,12 +4,12 @@
         {% assign sortedTags = tags | sort %}
         <ul class="reset mry-0 inline">
             {%- for tag in sortedTags -%}
-                <li class="inline mrr-d1">
+                <li class="inline mrr-d1 no-wrap">
                     {%- assign color = tag | tagColor -%}
                     {%- if color != '' -%}
-                        <a href="{{tag | tagUrl}}" style="color: {{color}}" class="no-wrap">{{tag}}</a>
+                        <a style="color: {{color}}" href="{{tag | tagUrl}}">{{tag}}</a>
                     {%- else -%}
-                        <a href="{{tag | tagUrl}}" class="no-wrap">{{tag}}</a>
+                        <a href="{{tag | tagUrl}}">{{tag}}</a>
                     {%- endif -%}
                 </li>
             {%- endfor -%}
