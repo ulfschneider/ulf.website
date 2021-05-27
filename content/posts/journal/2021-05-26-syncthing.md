@@ -6,7 +6,8 @@ tags: [journal, star]
 - open source,
 - the synchronized data is sent peer-to-peer, the data is not transferred across a centralized server, 
 - the setup of the tool is a breeze, you will be surprised how quick and smooth,
-- the syncing itself is quick and flawless.
+- the syncing itself is quick and flawless,
+- security is one of the [primary project goals](https://docs.syncthing.net/users/security.html).
 
 👌 The system is so good, you should give it a try! I got aware via the following tweet:
 
