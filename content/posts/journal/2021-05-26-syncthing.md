@@ -9,7 +9,7 @@ tags: [journal, star]
 - the syncing itself is quick and flawless,
 - security is one of the [primary project goals](https://docs.syncthing.net/users/security.html).
 
-👌 The system is so good, you should give it a try! I got aware via the following tweet:
+👌 The tool is so good, you should give it a try! I got aware via the following tweet:
 
 <blockquote>
 It´s amazing how great computer products can be when they don´t need to deal with corporate bullshit, don´t have to promote a brand or to sell its users.
