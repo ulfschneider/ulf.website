@@ -1,3 +1,7 @@
+{%- if site.instantPage == true -%}
+    <script type="modulepreload" src="/js/instant-page.js" ></script>
+{%- endif -%}
+
 <script>
     addEventListener('keydown', event => {
         let focus = document.querySelector(':focus');
@@ -56,11 +60,7 @@
     });
 </script>
 <script defer src="/js/site-scripts.js"></script>
-{%- if site.instantPage == true -%}
-    <script type="modulepreload" src="/js/instant-page.js" ></script>
-{%- endif -%}
-<script defer type="module">
-    import sotable from '/js/sotable.js';
+<script defer src="/js/sotable.js"></script>
+<script>
     addEventListener('load', () => sotable());
 </script>
-</body>

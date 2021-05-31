@@ -80,7 +80,7 @@ function canColumnSort(column) {
 }
 
 function isTableSorted(table) {
-    return table.querySelector('.asc:not(table table asc)') ||  table.querySelector('.dsc:not(table table dsc)');
+    return table.querySelector('.asc:not(table table asc)') || table.querySelector('.dsc:not(table table dsc)');
 }
 
 function getCellValue(cell) {
@@ -104,7 +104,7 @@ function isColumnAsc(column) {
 
 function comparer(columnIndex, asc) {
     //compare table cell values of two rows for the given column index
-    return function(row1, row2) {
+    return function (row1, row2) {
         return compareValues(getIndexedRowValue(asc ? row1 : row2, columnIndex), getIndexedRowValue(asc ? row2 : row1, columnIndex));
     }
 }
@@ -251,9 +251,12 @@ function sotable(options) {
     });
 }
 
-function refresh() {
-    sotable(settings);
-}
 
-export default sotable;
-export { sotable, refresh };
+try {
+    if (module && module.exports) {
+        module.exports.sotable = sotable;
+        module.exports.run = sotable;
+    }
+} catch (e) {
+    //not using module exports
+}
