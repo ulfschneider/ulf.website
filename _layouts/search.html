@@ -62,10 +62,10 @@ permalink: '{{site.search.url}}'
                 }
             }
 
-            if (friend.abstract || friend.excerpt || friend.content) {
+            if (friend.subtitle || friend.abstract || friend.excerpt || friend.content) {
                 let excerpt = document.createElement('p');
                 article.appendChild(excerpt);
-                let text = friend.abstract || friend.excerpt;
+                let text = friend.subtitle || friend.abstract || friend.excerpt;
                 if (text) {
                     excerpt.innerHTML = text;
                 } else {
