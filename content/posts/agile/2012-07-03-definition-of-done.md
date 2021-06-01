@@ -1,10 +1,8 @@
 ---
 title: Definition of Done
 subtitle: A contract to begin your agile journey with
+abstract: The Definition of Done (DoD) is not only a checklist that has to be executed to get a piece of work delivered. The DoD and the path to its determination opens a space for agile thinking and acting which can actively be leveraged by the delivery team and the surrounding organization. It is a great entry point for agile delivery, and it can be used in Scrum, Kanban or any other procedure with iterated delivery.
 ---
-
-<figure class="larger">The Definition of Done (DoD) is not only a checklist that has to be executed to get a piece of work delivered. The DoD and the path to its determination opens a space for agile thinking and acting which can actively be leveraged by the delivery team and the surrounding organization. It is a great entry point for agile delivery, and it can be used in Scrum, Kanban or any other procedure with iterated delivery.</figure>
-
 To answer the simple question „When is a work item done?“ will produce insights into the flow of work. At first, this question should be discussed and negotiated by the team who wants to get the job done. The perspective is general for all items that are to be delivered – usually, the team has only one DoD that will be used for all of those work items. That means the team will think about the general good flow of the majority of work items and not about every exception that may occur or every specific work item that needs some other work steps.
 
 For a start, the chain of work steps is of interest. Collect the steps for example on sticky notes and put them on a wall or a whiteboard. This will show unnecessary, missing or insufficient steps. Do it among the members of the delivery team – when leveraging Scrum with the entire Scrum Team, including Scrum Product Owner. It does not take a lot of time, and it is an excellent exercise to bring the people together. The produced result is something that the members of the team can identify with, and that can later be referred to.

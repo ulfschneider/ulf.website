@@ -1,6 +1,15 @@
 {%- if title  -%}
     <h1 class="mrt-0 mrb meta-font inline">{{ title }}
-        {%- if starred%}&nbsp;{{starred}}{%endif-%}</h1>
+        {%- if starred%}&nbsp;{{starred}}{%endif-%}
+        </h1>
+        {%- if subtitle -%}
+            <p class="no-margin">{{subtitle}}</p>
+        {% endif %}
     {%- endif -%}
-
     {% include author-date-tags.html %}
+
+    {%- if abstract -%}
+        <figure class="larger">
+            {{abstract}}
+        </figure>
+    {%- endif -%}

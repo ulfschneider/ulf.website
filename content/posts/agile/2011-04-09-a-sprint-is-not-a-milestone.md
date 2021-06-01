@@ -2,8 +2,6 @@
 title:  A Sprint is not a milestone
 abstract: A Sprint is a sensor that allows us to see what has been done, what impediments are in our way and how we did better in comparison to previous Sprints.
 ---
-<figure class="larger">A Sprint is a sensor that allows us to see what has been done, what impediments are in our way and how we did better in comparison to previous Sprints.</figure>
-
 By using Scrum, we deliver "things" in a rhythm that is given by so-called Sprints. Sprints should be of the same duration (for example two weeks) and at each Sprint ending there should be testable results. In the case of software development preferably working program code.
 
 Usually, a development team has not only a concept for the things to deliver in the current Sprint. A rough idea for the delivery order of the next couple of Sprints can often be seen.

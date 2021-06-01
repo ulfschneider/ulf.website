@@ -40,11 +40,14 @@
         {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
             <h2 class="mry-0 fs meta-font inline">
                 <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
-                {%- if p.data.starred%}&nbsp;{{p.data.starred}}{% endif -%}
+                {%- if p.data.starred%}&nbsp;{{p.data.starred}}
+                {% endif -%}
             </h2>
         {%- endif -%}
 
-        {%- if p.data.abstract -%}
+        {%- if p.data.subtitle -%}
+            <p>{{p.data.subtitle}}</p>
+            {%- elsif p.data.abstract -%}
             <p>{{p.data.abstract}}</p>
             {%- elsif p.templateContent -%}
             <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>

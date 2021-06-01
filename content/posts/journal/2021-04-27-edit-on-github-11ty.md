@@ -1,6 +1,5 @@
 ---
 title: Edit on GitHub for an 11ty powered website
-abstract: Adding a link to edit the contents of any page for an 11ty powered website on GitHub is simpler than I thought.
 tags: code
 ---
 Adding a link to edit the contents of any page for an 11ty powered website on GitHub is simpler than I thought.^[https://www.11ty.dev/docs/quicktips/edit-on-github-links/] Example:
