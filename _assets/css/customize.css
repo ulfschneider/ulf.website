@@ -20,7 +20,6 @@
     --fs-h3: var(--fs);
     --fs-h4: var(--fs);
     --link-focus-color: var(--primary-d1);
-    --regular-width: 35rem;
     text-decoration-thickness: .06em;
 }
 
@@ -43,6 +42,10 @@ blockquote {
 
 code {
     letter-spacing: 3px;
+}
+
+code {
+    background: var(--pre-background);
 }
 
 pre code {
