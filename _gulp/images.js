@@ -1,78 +1,67 @@
 const { dest, src } = require('gulp');
-const rename = require('gulp-rename');
-
-const PluginError = require('plugin-error');
-
-const sharp = require('sharp');
+const Jimp = require('jimp');
 const through = require('through2');
-const site = require('../_data/site.js');
-
 const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
 const SOURCE = ['content/img/**/*'];
 const DEST = `${OUTPUT}/img/`;
 
+const site = require('../_data/site.js');
+
 const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;
-const PLUGIN_NAME = 'gulp-optimize-images';
-const JPEG_QUALITY = site.jpegQuality ? site.jpegQuality : 80;
+const QUALITY = site.jpegQuality;
 
-const imageError = err => {
-    this.emit('error', new PluginError(PLUGIN_NAME, 'There is an error while processing the image' + err));
+const getHeight = function(image) {
+    return MAX_HEIGHT || image.getHeight();
 }
 
-const deriveImageOperations = function(metadata) {
-    let operations = [];
-    if (MAX_WIDTH > 0 && metadata.width > MAX_WIDTH ||
-        MAX_HEIGHT > 0 && metadata.height > MAX_HEIGHT) {
-        let dimensions = {};
-        if (MAX_WIDTH > 0 && metadata.width > MAX_WIDTH) {
-            dimensions.width = MAX_WIDTH;
-        }
-        if (MAX_HEIGHT > 0 && metadata.height > MAX_HEIGHT) {
-            dimensions.height = MAX_HEIGHT;
-        }
-        operations.push({ name: 'resize', arguments: [dimensions] });
-    }
-    if (metadata.format == 'jpeg' && JPEG_QUALITY) {
-        operations.push({ name: 'jpeg', arguments: [{ quality: JPEG_QUALITY }] });
-    }
-    return operations;
+const getWidth = function(image) {
+    return MAX_WIDTH || image.getWidth();
 }
 
 const imageTransformer = (file, encoding, callback) => {
     if (!file.isNull()) {
-        image = sharp(file.contents);
-        image.metadata()
-            .then(metadata => {
-                if (metadata.format == 'gif' || metadata.format == 'svg') {
-                    //do nothing with a gif/svg             
-                    callback(null, file);
-                } else {
-                    let operations = deriveImageOperations(metadata);
+        Jimp.read(file.contents)
+            .then(image => {
 
-                    for (let op of operations) {
-                        image = image[op.name].apply(image, op.arguments);
+                const extension = image.getExtension();
+                if (extension == 'jpeg' ||  extension == 'jpg' ||  extension == 'png') {
+                    if (QUALITY) {
+                        image.scaleToFit(getWidth(image), getHeight(image))
+                            .quality(QUALITY)
+                            .getBuffer(image.getMIME(), (err, buffer) => {
+                                file.contents = buffer;
+                                console.log(file.basename);
+                                callback(null, file);
+                            });
+                    } else {
+                        image.scaleToFit(getWidth(image), getHeight(image))
+                            .getBuffer(image.getMIME(), (err, buffer) => {
+                                file.contents = buffer;
+                                console.log(file.basename);
+                                callback(null, file);
+                            });
                     }
-                    image.toBuffer((err, buffer) => {
-                        file.contents = buffer;
-                        callback(null, file);
-                    });
+                } else {
+                    //do nothing
+                    callback(null, file);
                 }
-
-            }).catch(imageError);
+            }).catch(imageError => {
+                console.log('Error with ' + file.basename);
+                console.log(imageError);
+                callback(null, file);
+            });
     } else {
         //do nothing
         callback(null, file);
     }
 }
 
-
-
 const processingImages = () => {
     console.log(`Processing images from ${SOURCE} into ${DEST}`);
-    console.log(`imgMaxWidth=${MAX_WIDTH}, imgMaxHeight=${MAX_HEIGHT}, and jpegQuality=${JPEG_QUALITY} (0-100).`);
+    console.log(`imgMaxWidth=${MAX_WIDTH}, imgMaxHeight=${MAX_HEIGHT}, and jpegQuality=${QUALITY} (0-100).`);
     console.log(`Change these settings in _data/site.js if desired. GIF files are ignored to be optimized.`);
-    return src(SOURCE, { nodir: true })
+    return src(SOURCE)
         .pipe(through.obj(imageTransformer))
         .pipe(dest(DEST));
 };
