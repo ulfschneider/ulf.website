@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "serve": "gulp && concurrently \"gulp watch\" \"eleventy --serve\"",
-        "build": "npm update && npm audit fix && gulp && eleventy",
+        "serve": "gulp && concurrently \"eleventy --serve\" \"gulp watch\"",
+        "build": "npm update && npm audit fix && eleventy && gulp",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],

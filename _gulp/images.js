@@ -19,35 +19,31 @@ const getWidth = function(image) {
     return MAX_WIDTH || image.getWidth();
 }
 
-const imageTransformer = (file, encoding, callback) => {
-    if (!file.isNull()) {
-        Jimp.read(file.contents)
+const imageTransformer = async(file, encoding, callback) => {
+    if (!file.isNull() && file.extname != '.svg') {
+        await Jimp.read(file.contents)
             .then(image => {
-
-                const extension = image.getExtension();
-                if (extension == 'jpeg' ||  extension == 'jpg' ||  extension == 'png') {
-                    if (QUALITY) {
-                        image.scaleToFit(getWidth(image), getHeight(image))
-                            .quality(QUALITY)
-                            .getBuffer(image.getMIME(), (err, buffer) => {
-                                file.contents = buffer;
-                                console.log(file.basename);
-                                callback(null, file);
-                            });
-                    } else {
-                        image.scaleToFit(getWidth(image), getHeight(image))
-                            .getBuffer(image.getMIME(), (err, buffer) => {
-                                file.contents = buffer;
-                                console.log(file.basename);
-                                callback(null, file);
-                            });
-                    }
-                } else {
-                    //do nothing
+                const mime = image.getMIME();
+                if (mime.indexOf('gif') >= 0 || mime.indexOf('svg') >= 0) {
                     callback(null, file);
+                } else if (QUALITY) {
+                    image.scaleToFit(getWidth(image), getHeight(image))
+                        .quality(QUALITY)
+                        .getBuffer(image.getMIME(), (err, buffer) => {
+                            file.contents = buffer;
+                            console.log(file.relative);
+                            callback(null, file);
+                        });
+                } else {
+                    image.scaleToFit(getWidth(image), getHeight(image))
+                        .getBuffer(image.getMIME(), (err, buffer) => {
+                            file.contents = buffer;
+                            console.log(file.relative);
+                            callback(null, file);
+                        });
                 }
             }).catch(imageError => {
-                console.log('Error with ' + file.basename);
+                console.log('Image not processed ' + file.relative);
                 console.log(imageError);
                 callback(null, file);
             });
