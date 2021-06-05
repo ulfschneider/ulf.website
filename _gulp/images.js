@@ -1,25 +1,30 @@
 const { dest, src } = require('gulp');
+const changed = require('gulp-changed');
 const Jimp = require('jimp');
 const through = require('through2');
+
 const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
 const SOURCE = ['content/img/**/*'];
 const DEST = `${OUTPUT}/img/`;
 
-const site = require('../_data/site.js');
+const site = require(`${process.cwd()}/_data/site.js`);
+const utils = require(`${process.cwd()}/_eleventy/utils.js`);
+const siteCTime = utils.ctime(`${process.cwd()}/_data/site.js`);
 
 const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;
 const QUALITY = site.jpegQuality;
 
-const getHeight = function(image) {
+const getHeight = function (image) {
     return MAX_HEIGHT || image.getHeight();
 }
 
-const getWidth = function(image) {
+
+const getWidth = function (image) {
     return MAX_WIDTH || image.getWidth();
 }
 
-const imageTransformer = async(file, encoding, callback) => {
+const imageTransformer = async (file, encoding, callback) => {
     if (!file.isNull() && file.extname != '.svg') {
         await Jimp.read(file.contents)
             .then(image => {
@@ -53,11 +58,25 @@ const imageTransformer = async(file, encoding, callback) => {
     }
 }
 
+const compareLastModifiedTime = async (stream, sourceFile, targetPath) => {
+    const targetCTime = utils.ctime(targetPath);
+    
+    if (sourceFile.stat && sourceFile.stat.ctime > targetCTime) {
+        stream.push(sourceFile);
+    } else if (siteCTime > targetCTime) {
+        stream.push(sourceFile);
+    }    
+}
+
 const processingImages = () => {
     console.log(`Processing images from ${SOURCE} into ${DEST}`);
     console.log(`imgMaxWidth=${MAX_WIDTH}, imgMaxHeight=${MAX_HEIGHT}, and jpegQuality=${QUALITY} (0-100).`);
     console.log(`Change these settings in _data/site.js if desired. GIF files are ignored to be optimized.`);
-    return src(SOURCE)
+
+    return src(SOURCE, { nodir: true })
+        .pipe(changed(DEST, {
+            hasChanged: compareLastModifiedTime
+        }))
         .pipe(through.obj(imageTransformer))
         .pipe(dest(DEST));
 };
