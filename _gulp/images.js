@@ -63,6 +63,12 @@ const imageTransformer = async(file, encoding, callback) => {
 const compareLastModifiedTime = async(stream, sourceFile, targetPath) => {
     const targetStats = utils.stats(targetPath);
 
+    console.log('site mtime ' + siteMTime);
+    console.log('target ctime ' + targetStats.ctime);
+    console.log('source mtime ' + sourceFile.stat.mtime);
+    console.log('target mtime ' + targetStats.mtime);
+    console.log('--');
+
     if (siteMTime > targetStats.ctime || sourceFile.stat && sourceFile.stat.mtime > targetStats.mtime) {
         //compare site.mtime with target.ctime
         //and source.mtime with target.mtime
