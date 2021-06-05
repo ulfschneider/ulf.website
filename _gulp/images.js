@@ -1,10 +1,12 @@
-const { dest, src } = require('gulp');
+const { series, dest, src } = require('gulp');
 const changed = require('gulp-changed');
 const Jimp = require('jimp');
 const through = require('through2');
 
 const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
-const SOURCE = ['content/img/**/*'];
+const SOURCE = 'content/img/**/*';
+const DEST_PROCESSED = 'content/api/processed-img/';
+const SOURCE_PROCESSED = 'content/api/processed-img/**/*';
 const DEST = `${OUTPUT}/img/`;
 
 const site = require(`${process.cwd()}/_data/site.js`);
@@ -61,7 +63,6 @@ const imageTransformer = async(file, encoding, callback) => {
 const compareLastModifiedTime = async(stream, sourceFile, targetPath) => {
     const targetStats = utils.stats(targetPath);
 
-
     if (siteMTime > targetStats.ctime || sourceFile.stat && sourceFile.stat.mtime > targetStats.mtime) {
         //compare site.mtime with target.ctime
         //and source.mtime with target.mtime
@@ -70,16 +71,22 @@ const compareLastModifiedTime = async(stream, sourceFile, targetPath) => {
 }
 
 const processingImages = () => {
-    console.log(`Processing images from ${SOURCE} into ${DEST}`);
+    console.log(`Processing images from ${SOURCE} into ${DEST_PROCESSED}`);
     console.log(`imgMaxWidth=${MAX_WIDTH}, imgMaxHeight=${MAX_HEIGHT}, and jpegQuality=${QUALITY} (0-100).`);
     console.log(`Change these settings in _data/site.js if desired. GIF files are ignored to be optimized.`);
 
     return src(SOURCE, { nodir: true })
-        .pipe(changed(DEST, {
+        .pipe(changed(DEST_PROCESSED, {
             hasChanged: compareLastModifiedTime
         }))
         .pipe(through.obj(imageTransformer))
+        .pipe(dest(DEST_PROCESSED));
+};
+
+const copyingImages = () => {
+    console.log(`Copying images from ${SOURCE_PROCESSED} into ${DEST}`);
+    return src(SOURCE_PROCESSED, { nodir: true })
         .pipe(dest(DEST));
 };
 
-module.exports = processingImages;
+module.exports = series([processingImages, copyingImages]);

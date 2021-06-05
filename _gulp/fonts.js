@@ -6,7 +6,7 @@ const SOURCE = ['_assets/fonts/**/*'];
 const DEST = `${OUTPUT}/fonts/`;
 
 const processingFonts = () => {
-    console.log(`Processing fonts from ${SOURCE} into ${DEST}`);
+    console.log(`Copying fonts from ${SOURCE} into ${DEST}`);
     return src(SOURCE)
         .pipe(changed(DEST))
         .pipe(dest(DEST));
