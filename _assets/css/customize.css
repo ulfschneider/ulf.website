@@ -36,8 +36,17 @@ p,
 td,
 caption,
 figcaption,
-blockquote {
+blockquote>header,
+blockquote>footer {
     max-width: var(--regular-width);
+}
+
+blockquote {
+    font-size: larger;
+}
+
+blockquote>p {
+    max-width: unset;
 }
 
 code {
@@ -241,7 +250,6 @@ th.sotable-column .indicator {
 
 table.sotable caption p.indicator {
     margin-top: var(--vertical-rhythm);
-    font-size: var(--fs-d1);
 }
 
 @media print {
@@ -265,6 +273,7 @@ table.sotable caption p.indicator {
     body>header>*,
     body>footer>*,
     main>figure,
+    main>blockquote,
     .default main>header.title {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
         min-width: 100%;
