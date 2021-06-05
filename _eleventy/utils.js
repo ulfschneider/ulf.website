@@ -21,7 +21,7 @@ const timezone = require('dayjs/plugin/timezone');
 dayjs.extend(timezone);
 
 
-const site = require('../_data/site.js');
+const site = require(`${process.cwd()}/_data/site.js`);
 
 module.exports = {
 
@@ -239,7 +239,7 @@ module.exports = {
         return 4294967296 * (2097151 & h2) + (h1 >>> 0);
     },
 
-    stats: function(path) {
+    stat: function(path) {
         return fs.statSync(path);
     },
 
