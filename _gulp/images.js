@@ -9,22 +9,22 @@ const DEST = `${OUTPUT}/img/`;
 
 const site = require(`${process.cwd()}/_data/site.js`);
 const utils = require(`${process.cwd()}/_eleventy/utils.js`);
-const siteCTime = utils.ctime(`${process.cwd()}/_data/site.js`);
+const siteMTime = utils.mtime(`${process.cwd()}/_data/site.js`);
 
 const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;
 const QUALITY = site.jpegQuality;
 
-const getHeight = function (image) {
+const getHeight = function(image) {
     return MAX_HEIGHT || image.getHeight();
 }
 
 
-const getWidth = function (image) {
+const getWidth = function(image) {
     return MAX_WIDTH || image.getWidth();
 }
 
-const imageTransformer = async (file, encoding, callback) => {
+const imageTransformer = async(file, encoding, callback) => {
     if (!file.isNull() && file.extname != '.svg') {
         await Jimp.read(file.contents)
             .then(image => {
@@ -58,14 +58,12 @@ const imageTransformer = async (file, encoding, callback) => {
     }
 }
 
-const compareLastModifiedTime = async (stream, sourceFile, targetPath) => {
+const compareLastModifiedTime = async(stream, sourceFile, targetPath) => {
     const targetCTime = utils.ctime(targetPath);
-    
-    if (sourceFile.stat && sourceFile.stat.ctime > targetCTime) {
+
+    if (siteMTime > targetCTime || sourceFile.stat && sourceFile.stat.mtime > targetCTime) {
         stream.push(sourceFile);
-    } else if (siteCTime > targetCTime) {
-        stream.push(sourceFile);
-    }    
+    }
 }
 
 const processingImages = () => {
