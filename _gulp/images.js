@@ -11,7 +11,7 @@ const DEST = `${OUTPUT}/img/`;
 
 const site = require(`${process.cwd()}/_data/site.js`);
 const utils = require(`${process.cwd()}/_eleventy/utils.js`);
-const siteMTime = utils.mtime(`${process.cwd()}/_data/site.js`);
+const siteMTimeMs = utils.mtimeMs(`${process.cwd()}/_data/site.js`);
 
 const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;
@@ -62,17 +62,10 @@ const imageTransformer = async(file, encoding, callback) => {
 
 const compareLastModifiedTime = async(stream, sourceFile, targetPath) => {
     const targetStat = utils.stat(targetPath);
-    const targetMTime = targetStat.mtime;
-    const targetCTime = targetStat.ctime;
+    const targetMTimeMs = targetStat.mtimeMs + 5000;
+    const targetCTimeMs = targetStat.ctimeMs + 5000;
 
-    console.log('site mtime ' + siteMTime);
-    console.log('target ctime ' + targetCTime);
-    console.log('source mtime ' + sourceFile.stat.mtime);
-    console.log('target mtime ' + targetMTime);
-    console.log('--');
-
-
-    if (siteMTime > targetCTime || sourceFile.stat && sourceFile.stat.mtime > targetMTime) {
+    if (siteMTimeMs > targetCTimeMs || sourceFile.stat && sourceFile.stat.mtimeMs > targetMTimeMs) {
         stream.push(sourceFile);
     }
 }

@@ -243,11 +243,11 @@ module.exports = {
         return fs.statSync(path);
     },
 
-    ctime: function(path) {
-        return fs.statSync(path).ctime;
+    ctimeMs: function(path) {
+        return fs.statSync(path).ctimeMs;
     },
 
-    mtime: function(path) {
-        return fs.statSync(path).mtime;
+    mtimeMs: function(path) {
+        return fs.statSync(path).mtimeMs;
     }
 }
