@@ -4,7 +4,7 @@ tags: [reading, nature, star]
 ---
 <figure class="rg:split">
 <img src="/img/journal/die-pflanzen-und-ihre-rechte.jpg" alt="Book title of 'Die Pflanzen und ihre Rechte">
-<figure><strong>Die Pflanzen und ihre Rechte</strong> – <em>Eine Charta zur Erhaltung unserer Natur</em> von Stefano Mancuso.</figure>
+<figcaption><strong>Die Pflanzen und ihre Rechte</strong> – <em>Eine Charta zur Erhaltung unserer Natur</em> von Stefano Mancuso.</figcaption>
 </figure>
 
 Ohne Pflanzen überlebt nichts auf unserem Planeten, der über nur einen schmalen Streifen des Lebens verfügt. Von der Erdoberfläche betrachtet sind es gerade 10.000 Meter nach unten und 10.000 Meter nach oben, also ca. 20 Kilometer. Stefano Mancuso beleuchtet, wie die Lebensweise der Pflanzen eine Vorlage, oder mindestens eine alternative Sichtweise zur Gestaltung des Lebens der Menschen liefern kann. 
