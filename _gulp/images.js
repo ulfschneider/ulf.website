@@ -1,5 +1,5 @@
 const { dest, src } = require('gulp');
-const rename = require('gulp-rename');
+const changed = require('gulp-changed');
 
 const PluginError = require('plugin-error');
 
@@ -73,6 +73,7 @@ const processingImages = () => {
     console.log(`imgMaxWidth=${MAX_WIDTH}, imgMaxHeight=${MAX_HEIGHT}, and jpegQuality=${JPEG_QUALITY} (0-100).`);
     console.log(`Change these settings in _data/site.js if desired. GIF files are ignored to be optimized.`);
     return src(SOURCE, { nodir: true })
+        .pipe(changed(DEST))
         .pipe(through.obj(imageTransformer))
         .pipe(dest(DEST));
 };
