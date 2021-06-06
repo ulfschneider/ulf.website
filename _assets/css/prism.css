@@ -16,12 +16,12 @@
 * General
 */
 
-pre[class*="language-"],
-code[class*="language-"] {
-    color: var(--neutral-d4);
-    font-size: var(--fs-mono);
-    text-shadow: none;
+pre[class*=language-],
+code[class*=language-] {
+    color: var(--code-color);
+    font-size: var(--fs-mono);    
     font-family: var(--mono-font-family);
+    background: var(--code-background);
     direction: ltr;
     text-align: left;
     white-space: pre;
@@ -34,13 +34,6 @@ code[class*="language-"] {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-}
-
-@media print {
-    pre[class*="language-"],
-    code[class*="language-"] {
-        text-shadow: none;
-    }
 }
 
 
