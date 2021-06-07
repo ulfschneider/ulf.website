@@ -249,6 +249,7 @@ table.sotable caption p.indicator {
 }
 
 @media print {
+
     table.sotable caption p.indicator,
     .anchor {
         display: none;
@@ -266,6 +267,7 @@ table.sotable caption p.indicator {
         width: min(100vw - 2rem, var(--large-width));
         margin-left: max(50% - 50vw + 1rem, 50% - var(--large-width) / 2 + 1rem);
     }
+
     body>header>*,
     body>footer>*,
     main>figure,
@@ -275,15 +277,21 @@ table.sotable caption p.indicator {
         min-width: 100%;
         max-width: 133%;
     }
+
     main>.scroll-table {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
         min-width: 100%;
     }
+}
+
+@media(--md) {
     main time.year {
         margin-left: calc(-1 * var(--horizontal-rhythm));
         width: 100%;
     }
 }
+
+
 
 @media (--touch-device) {
     nav {
