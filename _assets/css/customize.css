@@ -53,10 +53,6 @@ code {
     letter-spacing: 3px;
 }
 
-code {
-    background: var(--pre-background);
-}
-
 pre code {
     letter-spacing: unset;
 }
