@@ -31,7 +31,7 @@
                 event.preventDefault();
             }
 
-            for (let nav of {{site.mainnav}}) {
+            for (let nav of JSON.parse('{{site.mainnav}}')) {
                 if (event.key == nav.kbd && nav.url) {
                     if (nav.id == 'editOnGitHub') {
                         window.open(nav.url + '{{page.inputPath}}', '_blank');
