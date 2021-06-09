@@ -73,8 +73,8 @@ permalink: '{{site.search.url}}'
                         .content
                         .split(' ')
                         .slice(0, (
-                            {{site.excerptWordCount}}
-                            ? {{site.excerptWordCount}}
+                            parseInt('{{site.excerptWordCount}}')
+                            ? parseInt('{{site.excerptWordCount}}')
                             : 25))
                         .join(' ') + ' …';
                 }

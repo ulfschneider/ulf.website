@@ -20,7 +20,7 @@
                     event.preventDefault();
                     return;
                 } else if (!queryField) {
-                    location.href = {{site.search.url}};
+                    location.href = '{{site.search.url}}';
                     event.preventDefault();
                     return;
                 }
@@ -43,7 +43,7 @@
                 }
             }
 
-            for (let nav of {{site.footernav}}) {
+            for (let nav of JSON.parse('{{site.footernav}}')) {
                 if (event.key == nav.kbd && nav.url) {
                     if (nav.id == 'editOnGitHub') {
                         window.open(nav.url + '{{page.inputPath}}', '_blank');
