@@ -1,56 +1,58 @@
-const { series, dest, src } = require('gulp');
-const changed = require('gulp-changed');
-const Jimp = require('jimp');
+const { dest, src } = require('gulp');
+const sharp = require('sharp');
 const through = require('through2');
 
 const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
 const SOURCE = 'content/img/**/*';
-const DEST_PROCESSED = 'content/api/processed-img/';
-const SOURCE_PROCESSED = 'content/api/processed-img/**/*';
 const DEST = `${OUTPUT}/img/`;
 
 const site = require(`${process.cwd()}/_data/site.js`);
-const utils = require(`${process.cwd()}/_eleventy/utils.js`);
-const siteMTimeMs = utils.mtimeMs(`${process.cwd()}/_data/site.js`);
 
 const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;
 const QUALITY = site.jpegQuality;
 
-const getHeight = function(image) {
-    return MAX_HEIGHT || image.getHeight();
-}
-
-
-const getWidth = function(image) {
-    return MAX_WIDTH || image.getWidth();
+const deriveOperations = function(metadata) {
+    let operations = [];
+    if (MAX_WIDTH > 0 && metadata.width > MAX_WIDTH ||
+        MAX_HEIGHT > 0 && metadata.height > MAX_HEIGHT) {
+        let dimensions = {};
+        if (MAX_WIDTH > 0 && metadata.width > MAX_WIDTH) {
+            dimensions.width = MAX_WIDTH;
+        }
+        if (MAX_HEIGHT > 0 && metadata.height > MAX_HEIGHT) {
+            dimensions.height = MAX_HEIGHT;
+        }
+        operations.push({ name: 'resize', arguments: [dimensions] });
+    }
+    if (metadata.format == 'jpeg' && QUALITY) {
+        operations.push({ name: 'jpeg', arguments: [{ quality: QUALITY }] });
+    }
+    return operations;
 }
 
 const imageTransformer = async(file, encoding, callback) => {
-    if (!file.isNull() && file.extname != '.svg') {
-        await Jimp.read(file.contents)
-            .then(image => {
-                const mime = image.getMIME();
-                if (mime.indexOf('gif') >= 0 || mime.indexOf('svg') >= 0) {
+    if (!file.isNull()) {
+        image = sharp(file.contents);
+        await image.metadata()
+            .then(async metadata => {
+                if (metadata.format == 'gif' || metadata.format == 'svg') {
+                    //do nothing with a gif/svg             
                     callback(null, file);
-                } else if (QUALITY) {
-                    image.scaleToFit(getWidth(image), getHeight(image))
-                        .quality(QUALITY)
-                        .getBuffer(image.getMIME(), (err, buffer) => {
-                            file.contents = buffer;
-                            console.log(file.relative);
-                            callback(null, file);
-                        });
                 } else {
-                    image.scaleToFit(getWidth(image), getHeight(image))
-                        .getBuffer(image.getMIME(), (err, buffer) => {
-                            file.contents = buffer;
-                            console.log(file.relative);
-                            callback(null, file);
-                        });
+                    let operations = deriveOperations(metadata);
+                    for (let op of operations) {
+                        image = await image[op.name].apply(image, op.arguments);
+                    }
+                    await image.toBuffer((err, buffer) => {
+                        file.contents = buffer;
+                        console.log(`Writing ${DEST}${file.relative}`);
+                        callback(null, file);
+                    });
+
                 }
             }).catch(imageError => {
-                console.log('Image not processed ' + file.relative);
+                console.log('Error with ' + file.relative);
                 console.log(imageError);
                 callback(null, file);
             });
@@ -60,33 +62,16 @@ const imageTransformer = async(file, encoding, callback) => {
     }
 }
 
-const compareLastModifiedTime = async(stream, sourceFile, targetPath) => {
-    const targetStat = utils.stat(targetPath);
-    const targetMTimeMs = targetStat.mtimeMs + 5000;
-    const targetCTimeMs = targetStat.ctimeMs + 5000;
-
-    if (siteMTimeMs > targetCTimeMs || sourceFile.stat && sourceFile.stat.mtimeMs > targetMTimeMs) {
-        stream.push(sourceFile);
-    }
-}
 
 const processingImages = () => {
-    console.log(`Processing images from ${SOURCE} into ${DEST_PROCESSED}`);
+    console.log(`Processing images from ${SOURCE} into ${DEST}`);
     console.log(`imgMaxWidth=${MAX_WIDTH}, imgMaxHeight=${MAX_HEIGHT}, and jpegQuality=${QUALITY} (0-100).`);
     console.log(`Change these settings in _data/site.js if desired. GIF files are ignored to be optimized.`);
 
     return src(SOURCE, { nodir: true })
-        .pipe(changed(DEST_PROCESSED, {
-            hasChanged: compareLastModifiedTime
-        }))
         .pipe(through.obj(imageTransformer))
-        .pipe(dest(DEST_PROCESSED));
-};
-
-const copyingImages = () => {
-    console.log(`Copying images from ${SOURCE_PROCESSED} into ${DEST}`);
-    return src(SOURCE_PROCESSED, { nodir: true })
         .pipe(dest(DEST));
 };
 
-module.exports = series([processingImages, copyingImages]);
+
+module.exports = processingImages;
