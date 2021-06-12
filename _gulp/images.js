@@ -6,7 +6,7 @@ const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
 const SOURCE = 'content/img/**/*';
 const DEST = `${OUTPUT}/img/`;
 
-const site = require(`${process.cwd()}/_data/site.js`);
+const site = require('../_data/site.js');
 
 const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;

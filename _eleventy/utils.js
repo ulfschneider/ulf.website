@@ -21,7 +21,7 @@ const timezone = require('dayjs/plugin/timezone');
 dayjs.extend(timezone);
 
 
-const site = require(`${process.cwd()}/_data/site.js`);
+const site = require('../_data/site.js');
 
 module.exports = {
 
