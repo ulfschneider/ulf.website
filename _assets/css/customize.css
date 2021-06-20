@@ -32,6 +32,11 @@ body>footer {
     overflow-wrap: break-word;
 }
 
+.gallery>header,
+.gallery>footer {
+    max-width: var(--large-width);
+}
+
 p,
 td,
 caption,
@@ -208,11 +213,6 @@ hr.footnotes-sep::after {
     transform: translateY(0);
 }
 
-.gallery header,
-.gallery footer {
-    max-width: var(--large-width);
-}
-
 #image-container {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
@@ -267,8 +267,6 @@ table.sotable caption p.indicator {
         width: min(100vw - 2rem, var(--large-width));
         margin-left: max(50% - 50vw + 1rem, 50% - var(--large-width) / 2 + 1rem);
     }
-    body>header>*,
-    body>footer>*,
     main>figure,
     main>blockquote,
     .default main>header.title {
