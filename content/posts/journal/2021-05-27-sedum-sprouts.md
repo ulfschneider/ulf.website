@@ -6,5 +6,8 @@ Yesterday our two flat roofs received their sedum sprouts. The quality work has 
 
 <dl class="timeline">
 <dt>May, 27th</dt>
-<dd><img src="/img/journal/2021-05-27-sedum-sprouts.jpg" alt="The rooftop at the 27th of May"></dd>
+<dd><p>New seed.</p><img src="/img/journal/2021-05-27-sedum-sprouts.jpg" alt="The rooftop at the 27th of May"></dd>
+<dt>June, 22nd</dt>
+<dd><p>It seems there is not much happening, but at a closer look, first blossoms appear.</p>
+<img src="/img/journal/2021-06-22-sedum-sprouts.jpg" alt="The rooftop at the 22nd of June. "></dd>
 </dl>
