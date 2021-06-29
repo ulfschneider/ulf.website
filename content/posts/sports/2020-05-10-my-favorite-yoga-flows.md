@@ -13,6 +13,11 @@ tags: sports
 </figure>
 
 <figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mJjxKfl6qr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>Bauch HIIT Workout | 15 Minuten Core & Abs</figcaption>
+</figure>
+
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/O4sv7iTUzoY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Fatburning Yoga Flow | Intensives Ganzkörperworkout | Fett verbrennen & Stoffwechsel anregen</figcaption>
 </figure>
