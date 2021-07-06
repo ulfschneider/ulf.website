@@ -40,18 +40,12 @@ body>footer {
 p,
 td,
 caption,
-figcaption,
-blockquote>header,
-blockquote>footer {
+figcaption {
     max-width: var(--regular-width);
 }
 
 blockquote {
     font-size: larger;
-}
-
-blockquote>p {
-    max-width: unset;
 }
 
 code {
@@ -268,7 +262,6 @@ table.sotable caption p.indicator {
         margin-left: max(50% - 50vw + 1rem, 50% - var(--large-width) / 2 + 1rem);
     }
     main>figure,
-    main>blockquote,
     .default main>header.title {
         margin-right: calc(-0.5 * (100vw - var(--regular-width)) + var(--space));
         min-width: 100%;
