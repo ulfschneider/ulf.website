@@ -93,7 +93,6 @@ nav ul li:last-child {
 nav.table-of-contents::before {
     content: "This text is stuctured into the following sections";
     display: block;
-    line-height: var(--lh-2);
     color: var(--neutral);
 }
 
@@ -277,11 +276,5 @@ table.sotable caption p.indicator {
     main time.year {
         margin-left: calc(-1 * var(--horizontal-rhythm));
         width: 100%;
-    }
-}
-
-@media (--touch-device) {
-    nav {
-        line-height: var(--lh-4);
     }
 }
