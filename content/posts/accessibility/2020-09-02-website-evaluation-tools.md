@@ -4,7 +4,7 @@ tags: accessibility
 ---
 [[toc]]
 
-## Any accessible website must 
+## Any accessible website must … 
 
 - use semantic-, standards-based HTML,
 - apply accessibility best pratices (which is a wide field), and
