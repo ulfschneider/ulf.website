@@ -12,18 +12,43 @@ const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;
 const QUALITY = site.jpegQuality;
 
-const deriveOperations = function(metadata) {
+const deriveOperations = function(metadata, file) {
     let operations = [];
-    if (MAX_WIDTH > 0 && metadata.width > MAX_WIDTH ||
-        MAX_HEIGHT > 0 && metadata.height > MAX_HEIGHT) {
-        let dimensions = {};
-        if (MAX_WIDTH > 0 && metadata.width > MAX_WIDTH) {
-            dimensions.width = MAX_WIDTH;
+    let name = file.basename;
+    let maxWidth, maxHeight, maxDimension;
+
+    let dimension = name.match(/@(?<dimension>[0-9]+)/i);
+    if (dimension) {
+        maxDimension = parseInt(dimension.groups.dimension);
+    }
+
+    let width = name.match(/@(?<maxWidth>[0-9]+)w/i);
+    if (width) {
+        maxWidth = parseInt(width.groups.maxWidth);
+    }
+    if (!maxWidth) {
+        maxWidth = maxDimension || MAX_WIDTH;
+    }
+
+    let height = name.match(/@(?<maxHeight>[0-9]+)h/i);
+    if (height) {
+        maxHeight = parseInt(height.groups.maxHeight);
+    }
+    if (!maxHeight) {
+        maxHeight = maxDimension || MAX_HEIGHT;
+    }
+
+    if (maxWidth > 0 && metadata.width > maxWidth ||
+        maxHeight > 0 && metadata.height > maxHeight) {
+        let options = {};
+        if (maxWidth > 0 && metadata.width > maxWidth) {
+            options.width = maxWidth;
         }
-        if (MAX_HEIGHT > 0 && metadata.height > MAX_HEIGHT) {
-            dimensions.height = MAX_HEIGHT;
+        if (maxHeight > 0 && metadata.height > maxHeight) {
+            options.height = maxHeight;
         }
-        operations.push({ name: 'resize', arguments: [dimensions] });
+        options.fit = 'inside';
+        operations.push({ name: 'resize', arguments: [options] });
     }
     if (metadata.format == 'jpeg' && QUALITY) {
         operations.push({ name: 'jpeg', arguments: [{ quality: QUALITY }] });
@@ -40,7 +65,7 @@ const imageTransformer = async(file, encoding, callback) => {
                     //do nothing with a gif/svg             
                     callback(null, file);
                 } else {
-                    let operations = deriveOperations(metadata);
+                    let operations = deriveOperations(metadata, file);
                     for (let op of operations) {
                         image = await image[op.name].apply(image, op.arguments);
                     }

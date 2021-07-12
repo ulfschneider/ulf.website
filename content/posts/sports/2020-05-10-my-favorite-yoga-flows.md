@@ -2,6 +2,8 @@
 title: My favorite Yoga flows
 tags: [sports, video]
 ---
+Please also check [favorite HIIT workouts](/2021-07-09-hiit-workouts/).
+
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rjbrTr_EbB4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Yoga Ganzkörper Flow | Bauch, Beine & Balance | 30 Minuten für Kraft & Stabilität</figcaption>
@@ -10,11 +12,6 @@ tags: [sports, video]
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Tj3eHle5xTM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Yoga Bauch Workout Intensiv | 15 Minuten Core & Abs für einen straffen Bauch</figcaption>
-</figure>
-
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mJjxKfl6qr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<figcaption>Bauch HIIT Workout | 15 Minuten Core & Abs</figcaption>
 </figure>
 
 <figure>
