@@ -13,7 +13,8 @@ tags: accessibility
 ## Tools
 The table below is listing tools to check a website for compliance in the named areas.
 
-<table class="bleed">
+<figure class="bleed">
+<table>
 <caption>Tools to validate a website for accessibility.</caption>
 <colgroup>  
        <col style="width: 20%" />
@@ -30,6 +31,7 @@ The table below is listing tools to check a website for compliance in the named 
 <tr><td>Accessibility</td><td><a href="https://color.a11y.com/">Color Contrast Accessibility Validator</a></td><td>Check contrast of an entire web page</td></tr>
 <tr><td>Performance</td><td><a href="https://developers.google.com/speed/pagespeed/insights/">Lighthouse PageSpeed Insights</a></td><td>Check web page performance. A Lighhouse analysis can also be started through the Chrome Developer Tools, where it is available as a dedicated top-level menu entry. This allows to analyse a website running locally on the developer machine.</td></tr>
 </table>
+</figure>
 
 ## References
 - Adam Silver, [Semantic HTML and ARIA explained](https://adamsilver.io/articles/semantic-html-and-aria-explained/)
