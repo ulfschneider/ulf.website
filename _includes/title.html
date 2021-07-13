@@ -3,13 +3,13 @@
         {%- if starred%}&nbsp;{{starred}}{%endif-%}
         </h1>
         {%- if subtitle -%}
-            <h2 class="mr-0 normal fs">{{subtitle}}</h2>
+            <h2 class="mr-0 normal fs lh-default">{{subtitle}}</h2>
         {% endif %}
     {%- endif -%}
     {% include author-date-tags.html %}
 
     {%- if abstract -%}
-        <figure class="larger">
+        <p class="larger">
             {{abstract}}
-        </figure>
+        </p>
     {%- endif -%}
