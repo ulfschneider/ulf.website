@@ -10,4 +10,7 @@ Yesterday our two flat roofs received their sedum sprouts. The quality work has 
 <dt>June, 22nd</dt>
 <dd><p>It seems there is not much happening, but at a closer look, first blossoms appear.</p>
 <img src="/img/journal/2021-06-22-sedum-sprouts.jpg" alt="The rooftop at the 22nd of June. "></dd>
+<dt>July, 13th</dt>
+<dd><p>Four weeks later.</p>
+<img src="/img/journal/2021-07-13-sedum-sprouts.jpg" alt="The rooftop at the 13th of July. "></dd>
 </dl>
