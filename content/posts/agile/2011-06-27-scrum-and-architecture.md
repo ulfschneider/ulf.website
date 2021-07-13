@@ -29,14 +29,14 @@ Architectural decisions are strategic for the solution space. They affect many a
 
 Architectural decisions are being taken under two premises [Friedrichsen 2010]:
 
-<blockquote><p>Represent and *balance* the interests of all stakeholders over the entire system lifecycle and *minimize* the total cost of ownership for the system during the whole lifecycle.</p>
+<blockquote><p>Represent and <em>balance</em> the interests of all stakeholders over the entire system lifecycle and <em>minimize</em> the total cost of ownership for the system during the whole lifecycle.</p>
 <footer>Uwe Friedrichsen</footer>
 </blockquote>
 
 Here the balancing aspect of the interests of all stakeholders is emphasized. The famous Frederick Brooks [Brooks 1995:45] states, that
 
 <blockquote>
-<p>The architect of a system, like the architect of a building, is the *user´s agent*.</p>
+   <p>The architect of a system, like the architect of a building, is the <em>user´s agent</em>.</p>
 <footer>Frederick Brooks</footer>
 </blockquote>
 
