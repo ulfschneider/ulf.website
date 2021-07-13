@@ -212,6 +212,7 @@ hr.footnotes-sep::after {
 
 .image .title h1 {
     font-size: var(--fs);
+    line-height: var(--lh-default);
 }
 
 .image .author-date-tags {
