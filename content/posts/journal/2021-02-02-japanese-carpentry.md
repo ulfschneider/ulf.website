@@ -2,7 +2,7 @@
 title: Japanese Carpentry
 tags: [video, design, star]
 ---
-Our tiny family is [building a house](/journal/we-are-building-a-house/). We are shortly before moving into the new place and I´m exhausted by the entire process. Building a house drained my batteries. In 2021 I certainly don´t want to spent my time making phone calls and appointments with builders. 
+Our tiny family is [building a house](/journal/we-are-building-a-house/). We are shortly before moving into the new place and I´m exhausted by the entire process. Building a house drained my batteries. In 2021 I certainly don´t want to spend my time making phone calls and appointments with builders. 
 
 Then I saw this beautiful film^[The film was shared by Dave Rupert with his post *[Traditional Japanese carpentry versus modern times](https://daverupert.com/2021/01/traditional-japanese-carpentry-versus-modern-times/).* The film itself is part of a [YouTube channel](https://www.youtube.com/channel/UCfzA-aM_s7u1X0Go9DAjrJA).] of a japanese carpenter building a wooden house for a family, and I thought by myself, with this guy I would be willing to build another house. 
 
