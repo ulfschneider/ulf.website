@@ -1,8 +1,8 @@
 ---
-title: Bilder, die bleiben, der Freitag Nr. 28, 15. Juli 2021
+title: Bilder, die bleiben
 tags: [journal, reading]
 ---
-Comics als Medium von Journalismus und Reportage. *[Bilder, die bleiben](https://freitag.de/comicreportage).*
+Comics als Medium von Journalismus und Reportage. *[Bilder, die bleiben](https://freitag.de/comicreportage),* , der Freitag Nr. 28, 15. Juli 2021.
 Am Ende des Artikels ist *eine kleine Bibliothek der dokumentarischen Comics.*
 
 <figure>
