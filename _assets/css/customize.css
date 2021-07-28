@@ -13,7 +13,7 @@
     --font-weight-bold: 600;
     --space-factor: 1.75;
     --heading-letter-spacing: 0;
-    --meta-color: var(--base-color);
+    --meta-color: var(--neutral-d1);
     --fs-mono: .95rem;
     --fs-h1: var(--fs-2);
     --fs-h2: var(--fs-1);
