@@ -94,7 +94,7 @@ nav ul li:last-child {
 nav.table-of-contents::before {
     content: "This text is stuctured into the following sections";
     display: block;
-    color: var(--neutral);
+    color: var(--meta-color);
 }
 
 nav.table-of-contents {
@@ -111,7 +111,6 @@ nav.table-of-contents>* {
 }
 
 nav.table-of-contents li::before {
-    color: var(--neutral);
     content: var(--h-counter);
     font-weight: normal;
     font-size: inherit;
