@@ -1,18 +1,12 @@
 {%- if tags and notags == nil -%}
-    <nav class="inline">
-        <span>tagged</span>
-        {% assign sortedTags = tags | sort %}
-        <ul class="reset mry-0 inline">
-            {%- for tag in sortedTags -%}
-                <li class="inline mrr-d1 no-wrap">
-                    {%- assign color = tag | tagColor -%}
-                    {%- if color != '' -%}
-                        <a style="color: {{color}}" href="{{tag | tagUrl}}">{{tag}}</a>
-                    {%- else -%}
-                        <a href="{{tag | tagUrl}}">{{tag}}</a>
-                    {%- endif -%}
-                </li>
-            {%- endfor -%}
-        </ul>
-    </nav>
+    {% assign sortedTags = tags | sort %}
+    <span class="">in</span>
+    {% for tag in sortedTags %}
+        {%- assign color = tag | tagColor -%}
+        {% if color != '' %}
+            <a style="color: {{color}}" href="{{tag | tagUrl}}">{{tag}}</a>
+        {% else %}
+            <a href="{{tag | tagUrl}}">{{tag}}</a>
+        {% endif %}
+    {% endfor %}
 {%- endif -%}

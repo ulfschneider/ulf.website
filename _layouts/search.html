@@ -43,13 +43,17 @@ permalink: '{{site.search.url}}'
             let friend = friendlyMap.get(entry.ref);
 
             let article = document.createElement('article');
-            article.classList = 'mry-1';
+            article.classList = 'mry-1 lg:bleed-left lg:flex-row-reverse lg:align-baseline';
             parent.appendChild(article);
+
+            let section = document.createElement('section');
+            section.classList = 'lg:w-rg lg:flex-shrink-0';
+            article.appendChild(section);
 
             if (friend.title && friend.title != 'notitle') {
                 let title = document.createElement('h2');
                 title.classList = 'mry-0 inline fs'
-                article.appendChild(title);
+                section.appendChild(title);
                 let linkToArticle = document.createElement('a');
                 linkToArticle.href = entry.ref;
                 linkToArticle.innerHTML = friend.title;
@@ -64,7 +68,7 @@ permalink: '{{site.search.url}}'
 
             if (friend.subtitle || friend.abstract || friend.excerpt || friend.content) {
                 let excerpt = document.createElement('p');
-                article.appendChild(excerpt);
+                section.appendChild(excerpt);
                 let text = friend.subtitle || friend.abstract || friend.excerpt;
                 if (text) {
                     excerpt.innerHTML = text;
@@ -85,48 +89,45 @@ permalink: '{{site.search.url}}'
                 linkToArticle.href = entry.ref;
                 linkToArticle.classList = 'block meta';
                 linkToArticle.innerHTML = 'Read the entire article →';
-                article.appendChild(linkToArticle);
+                section.appendChild(linkToArticle);
             }
 
             if (friend.author || friend.date || (friend.tags && !friend.notags)) {
                 let aside = document.createElement('aside');
-                aside.classList = "meta block";
+                aside.classList = "meta block lg:fs-d1 lg:pdr-1 lg:mrr-auto";
                 article.innerHTML += ' ';
                 article.appendChild(aside);
 
+                let authorAndDate = document.createElement('span');
+                authorAndDate.classList = 'lg:block';
+                aside.appendChild(authorAndDate);
+
+                let author = document.createElement('span');
+                authorAndDate.appendChild(author);
+
                 if (friend.author) {
-                    let author = document.createElement('span');
                     author.innerHTML = 'By ' + friend.author;
-                    aside.appendChild(author);
                 }
+                authorAndDate.appendChild(document.createTextNode(' '));
 
                 if (friend.date) {
-                    if (friend.author) {
-                        aside.innerHTML += ' on ';
-                    }
                     let date = document.createElement('time');
+                    date.classList = 'inline-block';
                     date.innerHTML += friend.humanDate;
-                    aside.appendChild(date);
+                    authorAndDate.appendChild(date);
                 }
 
                 if (friend.tags && !friend.notags) {
                     let label = document.createElement('span');
-                    label.innerHTML = ' in ';
+                    label.innerHTML = 'in';
+                    aside.appendChild(document.createTextNode(' '));
                     aside.appendChild(label);
-
-                    let nav = document.createElement('nav');
-                    nav.classList = 'meta inline';
-                    aside.appendChild(nav);
-
-                    let ul = document.createElement('ul');
-                    ul.classList = 'reset mry-0 inline';
-                    nav.appendChild(ul);
-
                     for (let tag of friend.tags) {
-                        let li = document.createElement('li');
-                        li.classList = 'inline mrr-d1';
-                        ul.appendChild(li);
-                        li.innerHTML = `<a href="/blog/${tag}/"}>${tag}</a>`;
+                        let tagLink = document.createElement('a');
+                        tagLink.href = `/blog/${tag}/`;
+                        tagLink.innerHTML = tag;
+                        aside.appendChild(document.createTextNode(' '));
+                        aside.appendChild(tagLink);
                     }
                 }
             }

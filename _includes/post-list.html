@@ -29,38 +29,40 @@
     {%- assign href = p.url -%}
 
     {%- if indexYear != pageYear and limit == nil -%}
-        <time datetime="{{pageYear}}" class="bleed larger meta mry-1 block year">{{pageYear}}</time>
+        <time datetime="{{pageYear}}" class="bleed-left larger meta mry-1 block year sticky top-0 bg-base-background">{{pageYear}}</time>
         {%- assign indexYear = pageYear -%}
     {%- endif -%}
 
     {%- assign count = count | plus: 1 -%}
 
-    <article class="mry-1">
+    <article class="mry-1 lg:bleed-left lg:flex-row-reverse lg:align-baseline">
+        <section class="lg:w-rg lg:flex-shrink-0">
+            {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
+                <h2 class="mry-0 fs inline">
+                    <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
+                    {%- if p.data.starred%}&nbsp;{{p.data.starred}}
+                    {% endif -%}
+                </h2>
+            {%- endif -%}
 
-        {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
-            <h2 class="mry-0 fs inline">
-                <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
-                {%- if p.data.starred%}&nbsp;{{p.data.starred}}
-                {% endif -%}
-            </h2>
-        {%- endif -%}
+            {%- if p.data.subtitle -%}
+                <p>{{p.data.subtitle}}</p>
+                {%- elsif p.data.abstract -%}
+                <p>{{p.data.abstract}}</p>
+                {%- elsif p.templateContent -%}
+                <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
+            {%- endif -%}
 
-        {%- if p.data.subtitle -%}
-            <p>{{p.data.subtitle}}</p>
-            {%- elsif p.data.abstract -%}
-            <p>{{p.data.abstract}}</p>
-            {%- elsif p.templateContent -%}
-            <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
-        {%- endif -%}
-
-        {%- if p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil-%}
-            <a class="meta block" href="{{p.url}}">Read the entire article →</a>
-        {%- endif -%}
-        <aside class="meta block">
-            {% include author-and-date.html, author: p.data.author, date: p.date %}
+            {%- if p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil-%}
+                <a class="meta block" href="{{p.url}}">Read the entire article →</a>
+            {%- endif -%}
+        </section>
+        <aside class="meta block lg:fs-d1 lg:pdr-1 lg:mrr-auto">
+            <span class="lg:block">
+                {% include author-and-date.html, author: p.data.author, date: p.date %}
+            </span>
             {% include tags.html tags: p.data.tags notags: p.data.notags %}
         </aside>
-
     </article>
 
 {%- endfor -%}
