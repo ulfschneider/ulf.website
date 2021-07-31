@@ -196,7 +196,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure>
-	<figcaption>Finally, on Friday afternoon, there is a house with a roof. Thankfully, the craftsmen didn´t leave until this part of the work was completed.</figcaption>
+<figcaption>Finally, on Friday afternoon, there is a house with a roof. Thankfully, the craftsmen didn´t leave until this part of the work was completed.</figcaption>
 <img class="w-100" src="/img/house/IMG_1936.jpg" alt="">
 </figure>
 
@@ -212,7 +212,7 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_1970.jpg" alt="">
 <img src="/img/house/IMG_1973.jpg" alt="">
 <img src="/img/house/IMG_1977.jpg" alt="">
-‌<img src="/img/house/IMG_1979.jpg" alt="">
+<img src="/img/house/IMG_1979.jpg" alt="">
 <img src="/img/house/IMG_1982.jpg" alt="">
 <img src="/img/house/IMG_2002_1.jpg" alt="">
 <img src="/img/house/IMG_2010.jpg" alt="">
@@ -289,4 +289,19 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/hakan.jpg">
 <figcaption>Hakan, the founder of the excellent <a href="https://edoki-sushi.de">Edoki Sushibar</a>, was responsible for our first meal in the new house.</figcaption>
 </figure>
+</figure>
+
+## Green rooftops
+
+<figure>
+<figcaption>May 27, 2021: Our two flat rooftops have been prepared to become green. See the growth process at <em><a href="/2021-05-27-sedum-sprouts/">The green rooftop</a><em></figcaption>
+<img src="/img/journal/2021-05-27-sedum-sprouts.jpg">
+</figure>
+
+## The last parts of the scaffolding have been removed
+
+<figure>
+<figcaption>Jul 29, 2021: It´s the first time I see the house without any scaffolding. The pictures are made at dusk.</figcaption>
+<img src="/img/house/IMG_0959D.jpg">
+<img src="/img/house/IMG_0960D.jpg">
 </figure>

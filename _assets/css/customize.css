@@ -137,14 +137,6 @@ nav.table-of-contents li::before {
 }
 
 
-/* timeline */
-
-dl.timeline dt {
-    font-weight: normal;
-    font-style: italic;
-}
-
-
 /* markdown-it footnotes */
 
 hr.footnotes-sep {
