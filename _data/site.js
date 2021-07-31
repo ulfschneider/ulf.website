@@ -4,7 +4,7 @@ module.exports = {
     themecolor: "#333333",
     url: "https://ulf.codes",
     imgMaxWidth: 1200,
-    imgMaxHeight: 800,
+    imgMaxHeight: undefined,
     jpegQuality: 80,
     instantPage: true,
     excerptWordCount: 25,
