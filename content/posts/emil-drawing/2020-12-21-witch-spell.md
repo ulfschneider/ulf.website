@@ -2,4 +2,6 @@
 title: Witch´s spell
 author: Emil
 ---
-![](/img/emil-drawing/IMG_0224D.jpg)
+<figure class="bleed">
+<img src="/img/emil-drawing/IMG_0224D.jpg" alt="">
+</figure>

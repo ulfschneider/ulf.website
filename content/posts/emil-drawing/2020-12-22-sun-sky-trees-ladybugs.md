@@ -2,4 +2,6 @@
 title: Sun, sky, trees, ladybugs
 author: Emil
 ---
-![](/img/emil-drawing/IMG_0225D.jpg)
+<figure class="bleed">
+<img src="/img/emil-drawing/IMG_0225D.jpg" alt="">
+</figure>

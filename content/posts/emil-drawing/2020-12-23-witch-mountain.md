@@ -2,4 +2,6 @@
 title: Witch´s mountain
 author: Emil
 ---
-![](/img/emil-drawing/IMG_0226D.jpg)
+<figure class="bleed">
+<img src="/img/emil-drawing/IMG_0226D.jpg" alt="">
+</figure>
