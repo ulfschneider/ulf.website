@@ -246,6 +246,6 @@ table.sotable caption p.indicator {
     }
 }
 
-[class^="bleed"]>img {
+[class*="bleed"]>img {
     width: 100%;
 }
