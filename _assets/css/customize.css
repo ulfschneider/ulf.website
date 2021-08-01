@@ -13,14 +13,12 @@
     --font-weight-bold: 600;
     --space-factor: 1.75;
     --heading-letter-spacing: 0;
-    --meta-color: var(--neutral-d2);
     --fs-mono: .95rem;
     --fs-h1: var(--fs-2);
     --fs-h2: var(--fs-1);
     --fs-h3: var(--fs);
     --fs-h4: var(--fs);
     --link-focus-color: var(--primary-d1);
-    --bleed-percent: 162%;
     text-decoration-thickness: .06em;
 }
 
@@ -248,35 +246,6 @@ table.sotable caption p.indicator {
     }
 }
 
-@media (--rg) {
-    .bleed {
-        width: min(100vw - 2rem, var(--lg-px));
-        margin-left: max(50% - 50vw + 1rem, 50% - var(--lg-px) / 2);
-    }
-    .bleed-right {
-        width: auto;
-        margin-right: max(50% - 50vw + 1rem, 50% - var(--lg-px) / 2);
-    }
-    .bleed-left {
-        width: auto;
-        margin-left: max(50% - 50vw + 1rem, 50% - var(--lg-px) / 2);
-    }
-    [class^="bleed"]>img {
-        width: 100%;
-    }
-}
-
-@media(--lg) {
-    .lg\:bleed {
-        width: min(100vw - 2rem, var(--lg-px));
-        margin-left: max(50% - 50vw + 1rem, 50% - var(--lg-px) / 2);
-    }
-    .lg\:bleed-right {
-        width: auto;
-        margin-right: max(50% - 50vw + 1rem, 50% - var(--lg-px) / 2);
-    }
-    .lg\:bleed-left {
-        width: auto;
-        margin-left: max(50% - 50vw + 1rem, 50% - var(--lg-px) / 2);
-    }
+[class^="bleed"]>img {
+    width: 100%;
 }
