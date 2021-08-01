@@ -4,7 +4,7 @@ subtitle: A Rebel´s Guide for Digital Transformation
 refer: Gerry McGovern, Book, 2016
 tags: [reading, workplace]
 ---
-<figure class="rg:split">
+<figure class="bleed-right rg:split">
 <img src="/img/journal/gerry-mcgovern-transform.jpg" alt="">
 <figcaption><strong>Transform</strong> by Gerry McGovern</figcaption>
 </figure>
