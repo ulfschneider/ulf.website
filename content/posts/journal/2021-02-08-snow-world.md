@@ -12,7 +12,8 @@ tags: journal
 <img alt="Emil running in front of the Meinolf church" src="/img/journal/IMG_0380D.jpg">
 </figure>
 
-<figure class="rg:split">
+<figure>
 <img src="/img/journal/IMG_0382D.jpg">
 <img src="/img/journal/IMG_0384D.jpg">
 </figure>
+
