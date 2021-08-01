@@ -2,7 +2,7 @@
 title: Die Pflanzen und ihre Rechte
 tags: [reading, nature, star]
 ---
-<figure class="rg:split">
+<figure class="bleed-right rg:split">
 <img src="/img/journal/die-pflanzen-und-ihre-rechte.jpg" alt="Book title of 'Die Pflanzen und ihre Rechte">
 <figcaption><strong>Die Pflanzen und ihre Rechte</strong> – <em>Eine Charta zur Erhaltung unserer Natur</em> von Stefano Mancuso.</figcaption>
 </figure>
