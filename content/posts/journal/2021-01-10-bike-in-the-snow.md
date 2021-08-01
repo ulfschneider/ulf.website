@@ -3,12 +3,12 @@ title: Went with the bike into the snow
 layout: image
 tags: journal
 ---
-<figure>
+<figure class="bleed">
 <img src="/img/journal/IMG_0264D.jpg" alt="">
 <figcaption>Beautiful high beech forest around Neuenbeken</figcaption>
 </figure>
 
-<figure class="rg:split">
+<figure class="bleed rg:split">
 <figure>
 <img src="/img/journal/IMG_0262X.jpg">
 <figcaption>Typical Paderborn plateau</figcaption>

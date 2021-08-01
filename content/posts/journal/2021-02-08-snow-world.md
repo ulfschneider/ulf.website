@@ -1,5 +1,6 @@
 ---
 title: Snow-world
+layout: image
 tags: journal
 ---
 <figure class="rg:split">
@@ -7,7 +8,7 @@ tags: journal
 <figcaption>Early morning on our way to the Kindergarten. Wonderful snow. Emil is exited.</figcaption>
 </figure>
 
-<figure>
+<figure class="bleed">
 <img alt="Emil running in front of the Meinolf church" src="/img/journal/IMG_0380D.jpg">
 </figure>
 

@@ -1,5 +1,6 @@
 ---
 title: The daily ride to the Kindergarten
+layout: image
 tags: journal
 ---
 <figure>
