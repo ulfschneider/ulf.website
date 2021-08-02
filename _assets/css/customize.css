@@ -108,10 +108,11 @@ nav.table-of-contents>* {
     margin-bottom: 0;
 }
 
-nav.table-of-contents li::before {
+nav.table-of-contents ol li::before {
     content: var(--h-counter);
     font-weight: normal;
     font-size: inherit;
+    color: var(--meta-color);
 }
 
 
