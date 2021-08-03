@@ -14,7 +14,7 @@
     --space-factor: 1.75;
     --heading-letter-spacing: 0;
     --fs-mono: .95rem;
-    --fs-h1: var(--fs-2);
+    --fs-h1: var(--fs-3);
     --fs-h2: var(--fs-1);
     --fs-h3: var(--fs);
     --fs-h4: var(--fs);
