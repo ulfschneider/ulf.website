@@ -34,6 +34,6 @@ The table below is listing tools to check a website for compliance in the named 
 </figure>
 
 ## References
-- Adam Silver, [Semantic HTML and ARIA explained](https://adamsilver.io/articles/semantic-html-and-aria-explained/)
-- kulturbanause, [HTML-Elemente und Semantik](https://blog.kulturbanause.de/2008/01/html-elemente-und-semantik/)
-- MDN, [Semantics](https://developer.mozilla.org/en-US/docs/Glossary/semantics)
+1. Adam Silver, [Semantic HTML and ARIA explained](https://adamsilver.io/articles/semantic-html-and-aria-explained/)
+2. kulturbanause, [HTML-Elemente und Semantik](https://blog.kulturbanause.de/2008/01/html-elemente-und-semantik/)
+3. MDN, [Semantics](https://developer.mozilla.org/en-US/docs/Glossary/semantics)
