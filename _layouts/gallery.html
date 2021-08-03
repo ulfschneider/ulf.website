@@ -8,13 +8,13 @@
     <body class="pdx gallery fs">
         {% include header.html %}
 
-        <main id="main"  class="indent mxw-lg">
+        <main id="main"  class="indent bleed">
             <header class="title mrb-2 pdt-d2 fs mxw-rg">
                 <h1 class="mry-0 inline fs">Images</h1> tagged {{tag}}
             </header>
             {{content}}
 
-            <div id="image-container" class="grid gp-2 mry-2 align-start"></div>
+            <div id="image-container" class="grid gp-2 mry-2 align-start mxw-bleed"></div>
             <button id="load-more" class="block mrt-2 mrb-3 mrx-auto width-5">Load more images</button>
 
             {%- if tag != nil -%}

@@ -25,22 +25,23 @@
 body>header,
 main,
 body>footer {
-    max-width: var(--regular-width);
+    max-width: var(--rg-width);
     margin-left: auto;
     margin-right: auto;
     overflow-wrap: break-word;
 }
 
 .gallery>header,
+.gallery>main,
 .gallery>footer {
-    max-width: var(--large-width);
+    max-width: var(--bleed-width);
 }
 
 p,
 td,
 caption,
 figcaption {
-    max-width: var(--regular-width);
+    max-width: var(--rg-width);
 }
 
 blockquote {
@@ -198,6 +199,7 @@ hr.footnotes-sep::after {
 }
 
 #image-container {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
@@ -237,12 +239,6 @@ table.sotable caption p.indicator {
 @media print {
     table.sotable caption p.indicator,
     .anchor {
-        display: none;
-    }
-}
-
-@media print {
-    table.sortable-table caption p.indicator {
         display: none;
     }
 }
