@@ -1,5 +1,5 @@
 {%- if title  -%}
-    <h1 class="mrt-0">{{ title }}
+    <h1 class="mrt-0 bleed-right">{{ title }}
         {%- if starred%}&nbsp;{{starred}}{%endif-%}
         </h1>
         {%- if subtitle -%}
@@ -9,7 +9,7 @@
     {% include author-date-tags.html %}
 
     {%- if abstract -%}
-        <figure class="larger">
+        <figure class="larger bleed-right">
             {{abstract}}
         </figure>
     {%- endif -%}
