@@ -10,7 +10,7 @@ The following explanation from Anna Monus is taken out of *[A Comprehensive Guid
 4. *[Flexbox vs. CSS Grid: Which Should You Use and When?](https://webdesign.tutsplus.com/articles/flexbox-vs-css-grid-which-should-you-use--cms-30184)*
 
 
-Keep the below default setting in mind when reading Anna´s explanation:
+Below is the default setting for flex.
 
 ~~~ css
 flex: 0 1 auto;
@@ -20,6 +20,13 @@ flex-grow: 0;
 flex-shrink: 1;
 flex-basis: auto;
 ~~~
+
+The default setting tells the item:
+- do not grow if there is available space left
+- shrink if there is not enough available space
+- size the item initially based on it´s width and height setting, or based on the content if no width/height is set. The item will get shrinked if there is not enough space available.
+
+Anna´s explanation:
 
 <blockquote class="fs">
 <p>… Flexbox’s sizing properties allow you to make decisions about three kinds of scenarios:</p>
