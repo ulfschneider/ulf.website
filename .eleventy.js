@@ -62,7 +62,7 @@ function addCollections(eleventyConfig) {
             ...collectionAPI.getFilteredByGlob('content/posts/**')
             .map(item => {
                 if (item.data.tags && item.data.tags.includes('star')) {
-                    item.data.starred = '★';
+                    item.data.starred = 'star';
                 } else {
                     item.data.starred = '';
                 }
@@ -81,7 +81,7 @@ function addCollections(eleventyConfig) {
             ...collectionAPI.getFilteredByGlob('content/**')
             .map(item => {
                 if (item.data.tags && item.data.tags.includes('star')) {
-                    item.data.starred = '★';
+                    item.data.starred = 'star';
                 } else {
                     item.data.starred = '';
                 }

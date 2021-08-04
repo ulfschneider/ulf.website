@@ -64,6 +64,12 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
+.star::after {
+    content: "★";
+    margin-left: var(--space);
+    font-size: inherit;
+}
+
 
 /* markdown-it toc */
 

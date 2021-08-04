@@ -38,10 +38,8 @@
     <article class="mry-1 lg:bleed-left lg:flex-row-reverse lg:align-baseline">
         <section class="lg:w-rg lg:flex-shrink-0">
             {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
-                <h2 class="mry-0 fs inline">
+                <h2 class="mry-0 fs inline {{p.data.starred}}">
                     <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
-                    {%- if p.data.starred%}&nbsp;{{p.data.starred}}
-                    {% endif -%}
                 </h2>
             {%- endif -%}
 

@@ -12,7 +12,8 @@
 
             <main id="main"  class="indent">
                 <header class="title mrb-2 mxw-rg">
-                    <h1 class="mry-0 fs normal lh-default"><strong>Images</strong> tagged {{tag}}</h1> 
+                    <h1 class="mry-0 fs normal lh-default">
+                        <strong>Images</strong> tagged {{tag}}</h1>
                 </header>
                 {{content}}
 
@@ -57,12 +58,10 @@
 
             if (imgData.title) {
                 let figcaption = document.createElement('figcaption');
-                if (imgData.starred) {
-                    figcaption.innerHTML = `${imgData.title}&nbsp;${imgData.starred}`;
-                } else {
-                    figcaption.innerHTML = imgData.title;
-                }
-                figcaption.classList = "small";
+                figcaption.classList = `small ${imgData.starred
+                    ? imgData.starred
+                    : ''}`;
+                figcaption.innerHTML = imgData.title;
                 figure.appendChild(figcaption);
             }
 

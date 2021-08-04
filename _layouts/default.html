@@ -14,28 +14,29 @@
 			<main id="main"  class="indent">
 				{%- if title != "notitle" and title != nil and notitle == nil   -%}
 					<header class="mrb-2">
-						<h1 class="mrt-0 bleed-right">{{ title }}
-							{%- if starred%}&nbsp;{{starred}}{%endif-%}
-							</h1>
-							{%- if subtitle -%}
-								<h2 class="mr-0 normal fs lh-default">{{subtitle}}</h2>
-							{% endif %}
-						{%- endif -%}
+						<h1 class="mrt-0 bleed-right {{starred}}">{{ title }}</h1>
+
+						{%- if subtitle -%}
+							<h2 class="mr-0 normal fs lh-default">{{subtitle}}</h2>
+						{% endif %}
+
 						{% include author-date-tags.html %}
 						{%- if abstract -%}
 							<figure class="larger bleed-right">
 								{{abstract}}
 							</figure>
-						</header>
-					{%- endif -%}
+						{%- endif -%}
+					</header>
 
-					{{ content }}
+				{%- endif -%}
 
-				</main>
+				{{ content }}
 
-				{% include footer.html %}
+			</main>
 
-			</div>
-		</body>
+			{% include footer.html %}
 
-	</html>
+		</div>
+	</body>
+
+</html>

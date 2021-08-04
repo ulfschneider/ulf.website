@@ -52,18 +52,15 @@ permalink: '{{site.search.url}}'
 
             if (friend.title && friend.title != 'notitle') {
                 let title = document.createElement('h2');
-                title.classList = 'mry-0 inline fs'
+                title.classList = `mry-0 inline fs ${friend.starred
+                    ? friend.starred
+                    : ''}`;
                 section.appendChild(title);
                 let linkToArticle = document.createElement('a');
                 linkToArticle.href = entry.ref;
                 linkToArticle.innerHTML = friend.title;
                 linkToArticle.classList = 'heading-color';
                 title.appendChild(linkToArticle);
-                if (friend.starred) {
-                    let star = document.createElement('span');
-                    star.innerHTML = `&nbsp;${friend.starred}`;
-                    title.appendChild(star);
-                }
             }
 
             if (friend.subtitle || friend.abstract || friend.excerpt || friend.content) {
@@ -108,6 +105,7 @@ permalink: '{{site.search.url}}'
                 if (friend.author) {
                     author.innerHTML = 'By ' + friend.author;
                 }
+
                 authorAndDate.appendChild(document.createTextNode(' '));
 
                 if (friend.date) {
