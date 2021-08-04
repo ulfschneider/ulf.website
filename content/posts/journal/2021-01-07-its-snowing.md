@@ -1,5 +1,5 @@
 ---
-title: Early morning on our way to the Kindergarten and it´s snowing. 
+title: Early morning on our way to the Kindergarten and it´s snowing
 layout: image
 tags: [journal, star, emil-drawing]
 ---
