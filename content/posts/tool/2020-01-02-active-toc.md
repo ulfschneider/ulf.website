@@ -36,11 +36,9 @@ subtitle: Highlight your TOC entries while scrolling
         padding-left: 1rem;
     }
 
-    @media (max-width: 60rem) {
 
-        .content {
-            margin-left: 9rem;
-        }
+    .content {
+        margin-left: 10rem;
     }
 
 </style>

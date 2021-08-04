@@ -5,26 +5,30 @@
         {% include head.html %}
     </head>
 
-    <body class="pdx gallery fs">
-        {% include header.html %}
+    <body class="pdx gallery fs break-word">
 
-        <main id="main"  class="indent bleed">
-            <header class="title mrb-2 pdt-d2 fs mxw-rg">
-                <h1 class="mry-0 inline fs">Images</h1> tagged {{tag}}
-            </header>
-            {{content}}
+        <div class="mrx-auto mxw-bleed">
+            {% include header.html %}
 
-            <div id="image-container" class="grid gp-2 mry-2 align-start mxw-bleed"></div>
-            <button id="load-more" class="block mrt-2 mrb-3 mrx-auto width-5">Load more images</button>
+            <main id="main"  class="indent">
+                <header class="title mrb-2 mxw-rg">
+                    <h1 class="mry-0 fs normal lh-default"><strong>Images</strong> tagged {{tag}}</h1> 
+                </header>
+                {{content}}
 
-            {%- if tag != nil -%}
-                {% assign imageData = collections[tag] | live | post | reverse | firstImage %}
-            {%- else -%}
-                {% assign imageData = collections.livePosts | reverse | firstImage %}
-            {%- endif %}
+                <div id="image-container" class="gp-2 mry-2"></div>
+                <button id="load-more" class="block mrt-2 mrb-3 mrx-auto width-5">Load more images</button>
 
-        </main>
-        {% include footer.html %}
+                {%- if tag != nil -%}
+                    {% assign imageData = collections[tag] | live | post | reverse | firstImage %}
+                {%- else -%}
+                    {% assign imageData = collections.livePosts | reverse | firstImage %}
+                {%- endif %}
+
+            </main>
+            {% include footer.html %}
+
+        </div>
 
     </body>
 

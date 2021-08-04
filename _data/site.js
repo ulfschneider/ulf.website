@@ -39,6 +39,7 @@ module.exports = {
     footernav: [{
             label: 'Home',
             url: '/',
+            id: 'home'
         },
         {
             label: 'About',

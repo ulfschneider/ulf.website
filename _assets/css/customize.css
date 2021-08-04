@@ -21,21 +21,6 @@
     text-decoration-thickness: .06em;
 }
 
-body>header,
-main,
-body>footer {
-    max-width: var(--rg-width);
-    margin-left: auto;
-    margin-right: auto;
-    overflow-wrap: break-word;
-}
-
-.gallery>header,
-.gallery>main,
-.gallery>footer {
-    max-width: var(--bleed-width);
-}
-
 p,
 td,
 caption,
@@ -200,11 +185,6 @@ hr.footnotes-sep::after {
 #image-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.image .title h1 {
-    font-size: var(--fs);
-    line-height: var(--lh-default);
 }
 
 .image .author-date-tags {

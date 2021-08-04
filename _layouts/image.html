@@ -2,23 +2,36 @@
 <html id="{{site.backToTop.id}}" lang="{{site.locale}}">
 
 	<head>
-		{% include head.html %}		
+		{% include head.html %}
 	</head>
 
-	<body class="pdx image">
-		{% include header.html %}
+	<body class="pdx image break-word">
 
-		<main id="main"  class="indent">
-			<header class="title mrb-2 pdt-d2 mxw-rg">
-				{% include title.html %}
-			</header>
+		<div class="mxw-rg mrx-auto">
+			{% include header.html %}
 
-			{{ content }}
+			<main id="main"  class="indent">
+				{%- if title != "notitle" and title != nil and notitle == nil -%}
+					<header class="mrb-2">
+						<h1 class="fs lh-default mrt-0">{{ title }}
+							{%- if starred%}&nbsp;{{starred}}{%endif-%}
+						</h1>
+							{%- if subtitle -%}
+								<h2 class="mr-0 normal fs lh-default">{{subtitle}}</h2>
+							{% endif %}
 
-		</main>
+							{% include author-date-tags.html %}
+						</header>
+					{%- endif -%}
 
-		{% include footer.html %}
+					{{ content }}
 
-	</body>
+				</main>
 
-</html>
+				{% include footer.html %}
+
+			</div>
+
+		</body>
+
+	</html>

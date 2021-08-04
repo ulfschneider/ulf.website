@@ -5,22 +5,37 @@
 		{% include head.html %}
 	</head>
 
-	<body class="pdx default">
+	<body class="pdx default break-word">
 
-		{% include header.html %}
+		<div class="mrx-auto mxw-rg">
 
-		<main id="main"  class="indent">
-			{%- if title != "notitle" and title != nil and notitle == nil   -%}
-				<header class="title mrb-2">
-					{% include title.html %}
-				</header>
-			{%- endif -%}
+			{% include header.html %}
 
-			{{ content }}
+			<main id="main"  class="indent">
+				{%- if title != "notitle" and title != nil and notitle == nil   -%}
+					<header class="mrb-2">
+						<h1 class="mrt-0 bleed-right">{{ title }}
+							{%- if starred%}&nbsp;{{starred}}{%endif-%}
+							</h1>
+							{%- if subtitle -%}
+								<h2 class="mr-0 normal fs lh-default">{{subtitle}}</h2>
+							{% endif %}
+						{%- endif -%}
+						{% include author-date-tags.html %}
+						{%- if abstract -%}
+							<figure class="larger bleed-right">
+								{{abstract}}
+							</figure>
+						</header>
+					{%- endif -%}
 
-		</main>
+					{{ content }}
 
-		{% include footer.html %}
-	</body>
+				</main>
 
-</html>
+				{% include footer.html %}
+
+			</div>
+		</body>
+
+	</html>
