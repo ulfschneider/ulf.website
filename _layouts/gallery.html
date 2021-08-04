@@ -40,21 +40,23 @@
         var container = document.getElementById('image-container');
 
         function appendImage(imgData) {
-            let anchor = document.createElement('a');
-            anchor.classList = 'no-deco';
-            anchor.href = imgData.url;
-            container.appendChild(anchor);
 
             let figure = document.createElement('figure');
             figure.classList = 'mr-0';
-            anchor.appendChild(figure);
+            container.appendChild(figure);
+
+            let anchor = document.createElement('a');
+            anchor.classList = 'no-deco';
+            anchor.href = imgData.url;
+            figure.appendChild(anchor);
+
 
             let img = document.createElement('img');
             img.src = imgData.src;
             img.alt = imgData.alt;
             img.classList = 'fit-contain';
             img.setAttribute('loading', 'lazy');
-            figure.appendChild(img);
+            anchor.appendChild(img);
 
             if (imgData.title) {
                 let figcaption = document.createElement('figcaption');
@@ -62,7 +64,7 @@
                     ? imgData.starred
                     : ''}`;
                 figcaption.innerHTML = imgData.title;
-                figure.appendChild(figcaption);
+                anchor.appendChild(figcaption);
             }
 
         }
