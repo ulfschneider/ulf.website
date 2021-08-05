@@ -2,7 +2,7 @@
 //initial idea from https://www.delftstack.com/howto/javascript/javascript-sort-html-table/
 //and incorporated ideas from https://adrianroselli.com/2021/04/sotable-columns.html
 //plus my own
-const ROW_SELECTOR = 'tr:nth-child(n+2):not(table table tr)';
+const ROW_SELECTOR = 'tr:not(table table tr)';
 
 let defaults = {
     indicatorAsc: 'ᐃ',
@@ -79,8 +79,16 @@ function canColumnSort(column) {
     return true;
 }
 
-function isTableSorted(table) {
-    return table.querySelector('.asc:not(table table asc)') || table.querySelector('.dsc:not(table table dsc)');
+function getBodyRowsContainer(table) {
+    let tbody = table.querySelector('tbody');
+    return tbody ? tbody : table;
+}
+
+function getBodyRows(table) {
+    let container = getBodyRowsContainer(table);
+    return Array.from(container.querySelectorAll(ROW_SELECTOR))
+        .filter(tr => !tr.querySelector('th:not(table table th)'));
+
 }
 
 function getCellValue(cell) {
@@ -104,7 +112,7 @@ function isColumnAsc(column) {
 
 function comparer(columnIndex, asc) {
     //compare table cell values of two rows for the given column index
-    return function (row1, row2) {
+    return function(row1, row2) {
         return compareValues(getIndexedRowValue(asc ? row1 : row2, columnIndex), getIndexedRowValue(asc ? row2 : row1, columnIndex));
     }
 }
@@ -148,21 +156,25 @@ function storeOrigTableOrder(table) {
     //store the original order of the table
     //for later re-use
     let order = 1;
-    table.querySelectorAll(`${ROW_SELECTOR}:not([orig-order])`).forEach(tr => {
-        tr.setAttribute('orig-order', order);
-        order++;
+    let bodyRows = getBodyRows(table);
+    bodyRows.forEach(tr => {
+        if (!tr.querySelector(`[orig-order]:not(table table [orig-order])`)) {
+            tr.setAttribute('orig-order', order);
+            order++;
+        }
     });
 }
+
 
 function restoreOrigTableOrder(table) {
     //restore the original order of the table
     clearTableSortIndication(table);
-
-    Array.from(table.querySelectorAll(`${ROW_SELECTOR}[orig-order]`))
+    let bodyRowsContainer = getBodyRowsContainer(table);
+    Array.from(bodyRowsContainer.querySelectorAll(`[orig-order]:not(table table [orig-order])`))
         .sort((row1, row2) => {
             return parseInt(row1.getAttribute('orig-order')) - parseInt(row2.getAttribute('orig-order'));
         })
-        .forEach(tr => table.appendChild(tr));
+        .forEach(tr => bodyRowsContainer.appendChild(tr));
 }
 
 function indicateRestoreTableOrder(table) {
@@ -186,12 +198,12 @@ function indicateSortableTable(table) {
     //prepare a table caption element
     //to contain a hint that the table
     //can be sorted
-    let caption = table.querySelector('caption');
+    let caption = table.querySelector('caption:not(table table caption)');
     if (!caption) {
         caption = document.createElement('caption');
         table.prepend(caption);
     }
-    let indicator = table.querySelector('p.indicator');
+    let indicator = table.querySelector('p.indicator:not(table table p.indicator)');
     if (!indicator) {
         indicator = document.createElement('p');
         indicator.classList.add('indicator');
@@ -239,10 +251,13 @@ function sotable(options) {
                     table.classList.add('sotable');
                     indicateSortableTable(table);
                     toggle.addEventListener('click', () => {
-                        let asc = !isColumnAsc(getColumn(table, columnIndex))
-                        Array.from(table.querySelectorAll(ROW_SELECTOR))
+                        let asc = !isColumnAsc(getColumn(table, columnIndex));
+                        let bodyRowsContainer = getBodyRowsContainer(table);
+                        let bodyRows = getBodyRows(table);
+
+                        bodyRows
                             .sort(comparer(getColumnIndex(th), asc))
-                            .forEach(tr => table.appendChild(tr));
+                            .forEach(tr => bodyRowsContainer.appendChild(tr));
                         indicateColumnSortDirection(table, th, asc);
                     })
                 }
