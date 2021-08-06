@@ -64,11 +64,13 @@ nav ul li:last-child {
 }
 
 .star::after {
-    content: " ★"
+    content: "★";
+    display: block;
 }
 
 aside.star::before {
-    content: "★ ";
+    content: "★";
+    margin-right: var(--space);
 }
 
 aside.star::after {
