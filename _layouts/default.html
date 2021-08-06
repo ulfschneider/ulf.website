@@ -29,8 +29,9 @@
 					</header>
 
 				{%- endif -%}
-
-				{{ content }}
+				<div class="{% if outline and outline != false %} outline{% endif %}">
+					{{ content }}
+				</div>
 
 			</main>
 

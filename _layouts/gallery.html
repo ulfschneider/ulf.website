@@ -15,7 +15,9 @@
                     <h1 class="mry-0 fs normal lh-default">
                         <strong>Images</strong> tagged {{tag}}</h1>
                 </header>
-                {{content}}
+                <div class="{% if outline and outline != false %} outline{% endif %}">
+                    {{ content }}
+                </div>
 
                 <div id="image-container" class="gp-2 mry-2"></div>
                 <button id="load-more" class="block mrt-2 mrb-3 mrx-auto width-5">Load more images</button>
@@ -49,7 +51,6 @@
             anchor.classList = 'no-deco block';
             anchor.href = imgData.url;
             figure.appendChild(anchor);
-
 
             let img = document.createElement('img');
             img.src = imgData.src;

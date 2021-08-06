@@ -1,5 +1,6 @@
 ---
 title: Better Web Typography
+outline: true
 refer: Online course about web typography by Matej Latin
 tags: [type, training]
 ---

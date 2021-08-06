@@ -1,5 +1,6 @@
 ---
 title: The balanced organization
+outline: true
 abstract: The agile manifesto defines a collaboration culture. But what if your current environment is not collaborative? This article describes alternatives for moving into the agile direction.
 ---
 [[toc]]

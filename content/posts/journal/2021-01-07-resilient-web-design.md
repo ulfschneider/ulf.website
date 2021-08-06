@@ -1,5 +1,6 @@
 ---
 title: Resilient Web Design
+outline: true
 tags: [design, star, code, reading]
 ---
 <figure class="bleed-right rg:split">

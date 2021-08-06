@@ -1,8 +1,9 @@
 ---
 title: Back to Top
+abstract: A Back to Top link helps users navigate to the top (start) of long pages.
+outline: true
 tags: [accessibility, css, code]
 ---
-A *Back to Top* link helps users navigate to the top (start) of long pages.
 
 [[toc]]
 
@@ -54,6 +55,6 @@ addEventListener('resize', event => maintainBackToStartVisibility());
 
 ## References
 
-- CSS-Tricks, Chris Coyier [Need to scroll to the top of the page?](https://css-tricks.com/need-to-scroll-to-the-top-of-the-page/)
-- Nielsen Norman Group, [Back-to-Top Button Design Guidelines](http://nngroup.com/articles/back-to-top/)
+1. CSS-Tricks, Chris Coyier [Need to scroll to the top of the page?](https://css-tricks.com/need-to-scroll-to-the-top-of-the-page/)
+2. Nielsen Norman Group, [Back-to-Top Button Design Guidelines](http://nngroup.com/articles/back-to-top/)
 

@@ -1,17 +1,19 @@
 ---
 title: Pocket Git Guide
 subtitle: A short entry-level approach to Git
+outline: true
 tags: code
 ---
 
 [[toc]]
 
-<figure class="bleed">
-<h2>Reasons to use Git</h2>
-<p>Git will help you doing the following things with a computer:</p>
-<div class="rg:split">
+## Reasons to use Git
+
+Git will help you doing the following things with a computer:
+
+<figure class="bleed rg:split">
 <div>
-<h2>Personal</h2>
+<strong>Personal</strong>
 <ul class="indent">
 <li>Keep track of file revisions when working iteratively (this is often referred to as version control).</li>
 <li>Safely experiment because you can always step back to the previous version.</li>
@@ -23,19 +25,22 @@ tags: code
 </ul>
 </div>
 <div>
-<h2>Team</h2>
+<strong>Team</strong>
 <ul class="indent">
 <li>Share your work with others and keep track of their changes by enforcing the same set of rules for managing versions. This will work even with thousands of people on a big project, but also scales down nicely for a small team.</li>
 <li>When sharing your work with others, you can work on your local computer without being always connected to a shared repository, only synchronizing eventually.</li>
 <li>No central locking of files. All team members have their own working copy on their own computers which allows each of them to work independently.</li>
 </ul>
 </div>
-</div>
 </figure>
+
+## Get Git
 
 Git is free. You can get Git for any platform at [git-scm.com/downloads](https://git-scm.com/downloads).
 
-## Get Git on your Mac
+> No matter what platform you are using, all of the examples in this document are to be run from inside a command shell with access to Git.
+
+### Get Git on your Mac
 
 I find it a little bit faster and more comfortable to use the [GitHub Desktop Installer](https://desktop.github.com) for setting up Git on either Mac or Windows.
 
@@ -53,11 +58,9 @@ Though not mandatory, for an improved Git experience in the shell, I like to hav
   PS1='\u@\h \W$(__git_ps1 " (%s)")\$ '
   {% endhighlight %}
 
-## Get Git on Windows
+### Get Git on Windows
 
 On Windows, the installation of [GitHub Desktop](https://desktop.github.com) will bring Git and the GitHub Desktop Client on your machine. This all with minimal configuration effort for yourself. I think it´s a good starting point for your Git experience on Windows.
-
-> No matter what platform you are using, all of the examples in this document are to be run from inside a command shell with access to Git.
 
 ## The Git shell
 
