@@ -15,7 +15,7 @@
                     <h1 class="mry-0 fs normal lh-default">
                         <strong>Images</strong> tagged {{tag}}</h1>
                 </header>
-                <div class="{% if outline and outline != false %} outline{% endif %}">
+               	<div {% if outline and outline != false %}class="outline"{% endif %}>
                     {{ content }}
                 </div>
 

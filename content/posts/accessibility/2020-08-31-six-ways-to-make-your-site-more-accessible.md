@@ -1,6 +1,6 @@
 ---
 title: Six ways to make your site more accessible
-refer: Summary of a talk given by Hidde de Vries
+outline: true
 tags: [accessibility, star]
 ---
 [Hidde de Vries](https://hiddedevries.nl/en/) made this enumeration in this [talk](https://talks.hiddedevries.nl/KhyueW/six-ways-to-make-your-site-more-accessible). Here is a quick summary.
