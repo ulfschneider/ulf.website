@@ -38,7 +38,7 @@
     <article class="mry-1 lg:bleed-left lg:flex-row-reverse lg:align-baseline">
         <section class="lg:w-rg lg:flex-shrink-0">
             {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
-                <h2 class="mry-0 fs inline {{p.data.starred}}">
+                <h2 class="mry-0 fs inline">
                     <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
                 </h2>
             {%- endif -%}
@@ -55,7 +55,7 @@
                 <a class="meta block" href="{{p.url}}">Read the entire article →</a>
             {%- endif -%}
         </section>
-        <aside class="meta block lg:fs-d1 lg:pdr-1 lg:mrr-auto">
+        <aside class="meta block lg:fs-d1 lg:pdr-1 lg:mrr-auto {{p.data.starred}}">
             <span class="lg:block">
                 {% include author-and-date.html, author: p.data.author, date: p.date %}
             </span>

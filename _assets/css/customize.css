@@ -64,9 +64,15 @@ nav ul li:last-child {
 }
 
 .star::after {
-    content: "★";
-    margin-left: var(--space);
-    font-size: inherit;
+    content: " ★"
+}
+
+aside.star::before {
+    content: "★ ";
+}
+
+aside.star::after {
+    content: unset;
 }
 
 
