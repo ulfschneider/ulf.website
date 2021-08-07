@@ -63,7 +63,7 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
-.star::after {
+figcaption.star::after {
     content: "★";
     display: block;
 }
@@ -71,10 +71,6 @@ nav ul li:last-child {
 aside.star::before {
     content: "★";
     margin-right: var(--space);
-}
-
-aside.star::after {
-    content: unset;
 }
 
 
