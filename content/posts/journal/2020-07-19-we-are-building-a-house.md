@@ -1,6 +1,7 @@
 ---
 title: We are building a house
 outline: true
+bleed: true
 permalink: /journal/{{ page.fileSlug }}/
 tags: journal
 ---
@@ -22,7 +23,6 @@ I´m posting a timeline of images here to document the progress.
 <figure>
 <figcaption>Oct 2019 - Apr 2020: Architecture work, some impressions.</figcaption>
 <img src="/img/house/facade.png">
-<img src="/img/house/ground-floor.png">
 </figure>
 
 <figure class="rg:split">

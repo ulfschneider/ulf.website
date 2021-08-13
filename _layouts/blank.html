@@ -6,7 +6,7 @@
 	</head>
 
 	<body class="pdx blank break-word">
-		<main id="main"  class="indent{% if outline and outline != false %} outline{% endif %}">
+		<main id="main"  {% if outline and outline != false %}class="indent outline"{% else %}class="indent"{% endif %}>
 			{{ content }}
 		</main>		
 	</body>

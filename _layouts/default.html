@@ -7,7 +7,7 @@
 
 	<body class="pdx default break-word">
 
-		<div class="mrx-auto mxw-rg">
+		<div {% if bleed and bleed != false %}class="mrx-auto mxw-bleed"{% else%}class="mrx-auto mxw-rg"{% endif%}>
 
 			{% include header.html %}
 

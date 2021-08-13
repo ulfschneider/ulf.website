@@ -45,18 +45,16 @@
 
             for (let nav of JSON.parse('{{site.footernav}}')) {
                 if (event.key == nav.kbd && nav.url) {
+                    event.preventDefault();
                     if (nav.id == 'editOnGitHub') {
                         window.open(nav.url + '{{page.inputPath}}', '_blank');
                     } else {
                         location.href = nav.url;
                     }
-
-                    event.preventDefault();
                     return;
                 }
             }
         }
-
     });
 </script>
 <script defer src="/js/site-scripts.js"></script>
