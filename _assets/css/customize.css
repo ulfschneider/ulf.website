@@ -35,10 +35,6 @@ h6 {
     max-width: var(--rg-width);
 }
 
-blockquote {
-    font-size: larger;
-}
-
 code {
     letter-spacing: 3px;
 }
