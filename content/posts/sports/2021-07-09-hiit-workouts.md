@@ -10,21 +10,16 @@ Please also check [favorite yoga flows](/2020-05-10-my-favorite-yoga-flows/).
 </figure>
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZO9IG-6SYJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<figcaption>Fat Burning HIIT Workout</figcaption>
-</figure>
-
-<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/b2sdVtXNecs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Toned Arms, Abs & Back Workout</figcaption>
 </figure>
 
-I have to evaluate the following:
-
 <figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7P4-W0D21fg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<figcaption>10 Minute Abs Home Workout | This is Intense 🔥🔥🔥</figcaption>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZO9IG-6SYJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>Fat Burning HIIT Workout</figcaption>
 </figure>
+
+I have to evaluate the following:
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ajK3KMWHI60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
