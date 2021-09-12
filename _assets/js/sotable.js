@@ -27,14 +27,17 @@ function getArray(value) {
 }
 
 function isWhitelisted(table) {
+    if (table.classList.contains('so-so') || table.classList.contains('soso')) {
+        return true;
+    }
     if (whiteElements.size) {
         return whiteElements.has(table);
     }
-    return true;
+    return settings.whiteList ? false : true;
 }
 
 function isBlacklisted(table) {
-    if (table.classList.contains('no-so')) {
+    if (table.classList.contains('no-so') || table.classList.contains('noso')) {
         return true;
     }
 
@@ -59,7 +62,11 @@ function setConfig(options) {
 }
 
 function getIndexedRowValue(row, columnIndex) {
-    return row.children[columnIndex].innerText || row.children[columnIndex].textContent;
+    if (row.children && row.children[columnIndex]) {
+        return row.children[columnIndex].innerText || row.children[columnIndex].textContent;
+    } else {
+        return '';
+    }
 }
 
 function getColumnIndex(th) {
@@ -71,12 +78,17 @@ function getColumn(table, columnIndex) {
     return rows.map(row => row.children[columnIndex]);
 }
 
-function canColumnSort(column) {
+function canColumnSort(table, columnIndex) {
+    let column = getColumn(table, columnIndex);
+    if (!column) {
+        return false;
+    }
     if (column.length && column[0].tagName != 'TH') {
         //first element is not a th
         return false;
     }
-    return true;
+
+    return column.length == getBodyRows(table).length + 1;
 }
 
 function getBodyRowsContainer(table) {
@@ -103,9 +115,10 @@ function compareValues(value1, value2) {
     }
 }
 
-function isColumnAsc(column) {
+function isColumnAsc(table, columnIndex) {
     //is the column sorted ascending?
-    let values = column.filter(cell => cell.tagName != 'TH').map(cell => getCellValue(cell));
+    let column = getColumn(table, columnIndex);
+    let values = column.filter(cell => cell && cell.tagName != 'TH').map(cell => getCellValue(cell));
     let sortedValues = [...values].sort(compareValues);
     return String(values) == String(sortedValues);
 }
@@ -236,14 +249,12 @@ function insertColumnSortToggle(th) {
 
 function sotable(options) {
     setConfig(options);
-    document.querySelectorAll('tr:first-child>th:not(.no-so)').forEach(th => {
+    document.querySelectorAll('tr:first-child>th:not(.noso):not(.no-so)').forEach(th => {
 
         let table = th.closest('table');
         if (!isBlacklisted(table) && isWhitelisted(table)) {
             let columnIndex = getColumnIndex(th);
-            let column = getColumn(table, columnIndex);
-
-            if (canColumnSort(column)) {
+            if (canColumnSort(table, columnIndex)) {
                 storeOrigTableOrder(table);
                 let toggle = insertColumnSortToggle(th);
                 if (toggle) {
@@ -251,7 +262,7 @@ function sotable(options) {
                     table.classList.add('sotable');
                     indicateSortableTable(table);
                     toggle.addEventListener('click', () => {
-                        let asc = !isColumnAsc(getColumn(table, columnIndex));
+                        let asc = !isColumnAsc(table, columnIndex);
                         let bodyRowsContainer = getBodyRowsContainer(table);
                         let bodyRows = getBodyRows(table);
 
