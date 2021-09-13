@@ -48,7 +48,7 @@ The split is built around the `<figure>` tag, and the CSS for the split will onl
 
 My first attempt to solve the problem was with `flex`. I do not recommend this one. I only keep it here to make my thought-process visible. My suggestion is to use the `grid`-based approach further below! The above shown examples are not based on `flex` but on `grid`.
 
-<figure class="bleed">
+<figure class="bleed-right">
 <figcaption>CSS</figcaption>
 {% highlight css %}
 img {
@@ -97,7 +97,7 @@ figure>*+figcaption {
 {% endhighlight %}
 </figure>
 
-<figure class="bleed">
+<figure class="bleed-right">
 <figcaption>HTML</figcaption>
 {% highlight html %}
 <figure class="split">
@@ -131,7 +131,7 @@ Also, adding a `<div>` to get proper image formatting is not my cup of tea.
 
 The `grid`-based CSS code is shorter and more versatile in my view. It´s possible to use `column-gap` and `row-gap` and also splitting a `<figure>` into two images is possible. Artificial `<div>` elements are not needed at all. 
 
-<figure class="bleed">
+<figure class="bleed-right">
 <figcaption>CSS</figcaption>
 {% highlight css %}
 img {
@@ -177,7 +177,7 @@ figure>*+figcaption {
 {% endhighlight %}
 </figure>
 
-<figure class="bleed">
+<figure class="bleed-right">
 <figcaption>HTML</figcaption>
 {% highlight html %}
 <figure class="split">
@@ -213,7 +213,7 @@ figure>*+figcaption {
 
 If you want to apply the split not only for `<figure>` tags, you can even use the following `.split` CSS class, which is more generic:
 
-<figure class="bleed">
+<figure class="bleed-right">
 <figcaption>CSS</figcaption>
 {% highlight css %}
 /*Use grid for the split*/
