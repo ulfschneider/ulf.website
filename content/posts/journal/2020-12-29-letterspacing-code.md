@@ -8,7 +8,7 @@ The visual effect is subtle yet noticable. I´m lowering the `font-size` propert
 
 Don´t apply the technique for multi-line code-blocks, as the widened letterspacing will occupy too much space in that case and make the legibility difficult. 
 
-<figure>
+<figure class="bleed-right">
 <figcaption>CSS code for letterspacing of <code>&lt;code&gt;</code> elements while <em>not</em> applying the rule for multi-line code.</figcaption>
 {% highlight css %}
 code {
@@ -24,7 +24,7 @@ pre code {
 
 Applying the CSS to the following HTML
 
-<figure>
+<figure class="bleed-right">
 <figcaption>HTML</figcaption>
 {% highlight html %}
 <p>This <code>HTML</code> has a code distinction.</p>
