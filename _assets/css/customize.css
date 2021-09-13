@@ -88,7 +88,7 @@ aside.star::before {
 }
 
 nav.table-of-contents::before {
-    content: "This text is stuctured into the following sections";
+    content: "Content";
     display: block;
     color: var(--meta-color);
 }
@@ -220,28 +220,11 @@ hr.footnotes-sep::after {
     font-family: var(--meta-font-family);
 }
 
-th.sotable-column>button,
-table.sotable button.restore-order {
-    all: unset;
-    /*remove all button styling*/
-    cursor: pointer;
-}
-
-table.sotable button.restore-order {
-    font-weight: bold;
-}
-
-th.sotable-column .indicator {
-    font-size: smaller;
-    margin-left: .5em;
-}
-
 table.sotable caption p.indicator {
     margin-top: var(--vertical-rhythm);
 }
 
 @media print {
-    table.sotable caption p.indicator,
     .anchor {
         display: none;
     }
