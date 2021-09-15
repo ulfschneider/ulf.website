@@ -34,5 +34,3 @@ let version = package.version;
 {% endhighlight %}
 </figure>
 
-
-a
