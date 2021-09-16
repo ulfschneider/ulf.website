@@ -2,15 +2,22 @@
     {%- if author -%}
         <span>By {{author}}</span>
     {%- endif -%}
-    {% if date %}
+    {%- if refer -%}
         {%- if author -%}
+            <span>, {{refer}}</span>
+        {%- else -%}
+            <span>{{refer}}</span>
+        {%- endif -%}
+    {%- endif -%}
+    {% if date %}
+        {%- if author or refer -%}
             <span>, posted on</span>
         {%- else -%}
             <span>Posted on</span>
         {% endif %}
         <time datetime="{{date | isoDate}}" class="no-wrap">{{ date | humanDate }}</time>
         {%- elsif nodate == nil and page.date  -%}
-        {%- if author -%}
+        {%- if author or refer -%}
             <span>, posted on</span>
         {%- else -%}
             <span>Posted on</span>

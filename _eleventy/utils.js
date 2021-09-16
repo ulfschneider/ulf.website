@@ -144,6 +144,7 @@ module.exports = {
             subtitle: item.data.subtitle,
             abstract: item.data.abstract,
             author: item.data.author,
+            refer: item.data.refer,
             layout: item.data.layout,
             tags: item.data.tags,
             notags: item.data.notags,

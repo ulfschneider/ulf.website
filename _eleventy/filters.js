@@ -62,6 +62,7 @@ module.exports = {
             this.field('subtitle', { boost: 10 });
             this.field('abstract', { boost: 10 });
             this.field('author');
+            this.field('refer');
             this.field('tags');
             this.field('content');
 
