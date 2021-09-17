@@ -126,14 +126,26 @@ permalink: '{{site.search.url}}'
                 if (friend.tags && !friend.notags) {
                     let label = document.createElement('span');
                     label.innerHTML = 'in';
+                    label.classList = 'mrr-d2';
                     aside.appendChild(document.createTextNode(' '));
                     aside.appendChild(label);
-                    for (let tag of friend.tags) {
+                    if (friend.tags.includes('{{site.starTag}}')) {
                         let tagLink = document.createElement('a');
-                        tagLink.href = `/blog/${tag}/`;
-                        tagLink.innerHTML = tag;
+                        tagLink.href = `/blog/{{site.starTag}}`;
+                        tagLink.innerHTML = '{{site.starTagSymbol}}';
+                        tagLink.classList = "mrr-d2";                        
                         aside.appendChild(document.createTextNode(' '));
                         aside.appendChild(tagLink);
+                    }
+                    for (let tag of friend.tags) {
+                        if (tag != '{{site.starTag}}') {
+                            let tagLink = document.createElement('a');
+                            tagLink.href = `/blog/${tag}/`;
+                            tagLink.innerHTML = tag;
+                            tagLink.classList = "mrr-d2";
+                            aside.appendChild(document.createTextNode(' '));
+                            aside.appendChild(tagLink);
+                        }
                     }
                 }
             }
