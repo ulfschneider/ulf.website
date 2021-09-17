@@ -61,8 +61,8 @@ function addCollections(eleventyConfig) {
         let usedSiteTags = utils.extractTags([
             ...collectionAPI.getFilteredByGlob('content/posts/**')
             .map(item => {
-                if (item.data.tags && item.data.tags.includes('star')) {
-                    item.data.starred = 'star';
+                if (item.data.tags && item.data.tags.includes(site.starTag)) {
+                    item.data.starred = site.starTag;
                 } else {
                     item.data.starred = '';
                 }
@@ -80,8 +80,8 @@ function addCollections(eleventyConfig) {
         return [
             ...collectionAPI.getFilteredByGlob('content/**')
             .map(item => {
-                if (item.data.tags && item.data.tags.includes('star')) {
-                    item.data.starred = 'star';
+                if (item.data.tags && item.data.tags.includes(site.starTag)) {
+                    item.data.starred = site.starTag;
                 } else {
                     item.data.starred = '';
                 }
