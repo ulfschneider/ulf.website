@@ -67,16 +67,6 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
-figcaption.star::after {
-    content: "★";
-    display: block;
-}
-
-aside.star::before {
-    content: "★";
-    margin-right: var(--space);
-}
-
 
 /* markdown-it toc */
 

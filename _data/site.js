@@ -16,6 +16,8 @@ module.exports = {
         phone: "+49 163 2505164",
         twitter: ""
     },
+    starTag: "star",
+    starTagSymbol: "★",
     /*tagColors: ['#2b7296', '#94322d', '#2a9754', '#7e761d', '#1d7d76', '#761d7d'],*/
     mainnav: [{
             label: 'Ulf Schneider',
