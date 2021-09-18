@@ -2,7 +2,7 @@
 title: Using TextEdit as default git editor on a Mac
 tags: [journal, code]
 ---
-As a default editor for git you want something that opens up fast and is fairly simple to use. On my Mac I believe this is the default editor – TextEdit – which comes with the system. To make it the default editor for git, issue the following command in the shell:
+As a default editor for git you want something that opens up fast and is fairly simple to use. On my Mac I believe this is the system default editor – TextEdit – which comes with the system. To make it the default editor for git, issue the following command in the shell:
 
 ~~~shell
 git config --global core.editor “open -e -W -n”
