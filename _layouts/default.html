@@ -17,15 +17,14 @@
 						<h1 class="mry-0 bleed-right rg:fs-4">{{ title }}</h1>
 
 						{%- if subtitle -%}
-							<h2 class="mr-0 normal fs lh-default caps">{{subtitle}}</h2>
+							<h2 class="mr-0 normal fs-1 lh-default caps">{{subtitle}}</h2>
 						{% endif %}
-
-						{% include author-date-tags.html %}
 						{%- if abstract -%}
-							<figure class="larger bleed-right">
+							<figure class="fs-1 bleed-right">
 								{{abstract}}
 							</figure>
 						{%- endif -%}
+						{% include author-date-tags.html %}
 					</header>
 
 				{%- endif -%}
