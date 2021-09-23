@@ -1,7 +1,7 @@
 ---
 title: Sample letter
 draft: true
-tags: tool
+tags: tools
 ---
 
 @sender

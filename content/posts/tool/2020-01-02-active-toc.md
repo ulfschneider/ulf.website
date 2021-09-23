@@ -1,7 +1,7 @@
 ---
 layout: blank
 title: active-toc
-tags: tool
+tags: tools
 subtitle: Highlight your TOC entries while scrolling
 ---
 

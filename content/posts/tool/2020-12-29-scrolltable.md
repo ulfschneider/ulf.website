@@ -1,7 +1,7 @@
 ---
 title: markdown-it-scrolltable
 outline: true
-tags: tool
+tags: tools
 ---
 A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-scrolltable) to wrap any `<table>` into a `<div>` for horizontal scrolling on narrow screens. 
 

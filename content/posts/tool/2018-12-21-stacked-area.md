@@ -1,6 +1,6 @@
 ---
 title: stacked-area
-tags: tool
+tags: tools
 ---
 An [npm package](https://www.npmjs.com/package/stacked-area) to draw a SVG stacked area chart with a day-based x-axis.
 

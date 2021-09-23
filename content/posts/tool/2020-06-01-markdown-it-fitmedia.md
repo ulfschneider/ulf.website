@@ -1,7 +1,7 @@
 ---
 title: markdown-it-fitmedia
 outline: true
-tags: tool
+tags: tools
 ---
 
 A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-fitmedia) to set aspect-ratio of responsive images, make them lazy loading, and to make videos responsive.
