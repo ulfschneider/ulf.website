@@ -48,11 +48,10 @@ permalink: '{{site.search.url}}'
 
             let linkToArticle = document.createElement('a');
             linkToArticle.href = entry.ref;
-            linkToArticle.classList = 'no-deco';
+            linkToArticle.classList = 'no-deco lg:w-rg lg:flex-shrink-0';
             article.appendChild(linkToArticle);
 
             let section = document.createElement('section');
-            section.classList = 'lg:w-rg lg:flex-shrink-0';
             linkToArticle.appendChild(section);
 
             if (friend.title && friend.title != 'notitle') {
@@ -76,7 +75,7 @@ permalink: '{{site.search.url}}'
                             parseInt('{{site.excerptWordCount}}')
                             ? parseInt('{{site.excerptWordCount}}')
                             : 25))
-                        .join(' ') + ' …';
+                        .join(' ') + ' …' ;
                 }
             }
 
