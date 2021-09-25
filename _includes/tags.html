@@ -1,6 +1,6 @@
 {%- if tags and notags == nil -%}
     {% assign sortedTags = tags | sort %}
-    <span class="mrr-d2">in</span>
+    <span>in</span>
     {% for tag in sortedTags %}
         {%- if tag == site.starTag %}
             {%- assign color = tag | tagColor -%}
