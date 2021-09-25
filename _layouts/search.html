@@ -46,19 +46,20 @@ permalink: '{{site.search.url}}'
             article.classList = 'mry-1 lg:bleed-left lg:flex-row-reverse lg:align-baseline';
             parent.appendChild(article);
 
+            let linkToArticle = document.createElement('a');
+            linkToArticle.href = entry.ref;
+            linkToArticle.classList = 'no-deco';
+            article.appendChild(linkToArticle);
+
             let section = document.createElement('section');
             section.classList = 'lg:w-rg lg:flex-shrink-0';
-            article.appendChild(section);
+            linkToArticle.appendChild(section);
 
             if (friend.title && friend.title != 'notitle') {
                 let title = document.createElement('h2');
                 title.classList = 'mry-0 inline fs';
+                title.innerHTML = friend.title;
                 section.appendChild(title);
-                let linkToArticle = document.createElement('a');
-                linkToArticle.href = entry.ref;
-                linkToArticle.innerHTML = friend.title;
-                linkToArticle.classList = 'heading-color';
-                title.appendChild(linkToArticle);
             }
 
             if (friend.subtitle || friend.abstract || friend.excerpt || friend.content) {
@@ -77,14 +78,6 @@ permalink: '{{site.search.url}}'
                             : 25))
                         .join(' ') + ' …';
                 }
-            }
-
-            if (!friend.title || friend.title == 'notitle') {
-                let linkToArticle = document.createElement('a');
-                linkToArticle.href = entry.ref;
-                linkToArticle.classList = 'block meta';
-                linkToArticle.innerHTML = 'Read the entire article →';
-                section.appendChild(linkToArticle);
             }
 
             if (friend.author || friend.date || (friend.tags && !friend.notags)) {
@@ -133,7 +126,7 @@ permalink: '{{site.search.url}}'
                         let tagLink = document.createElement('a');
                         tagLink.href = `/blog/{{site.starTag}}`;
                         tagLink.innerHTML = '{{site.starTagSymbol}}';
-                        tagLink.classList = "mrr-d2";                        
+                        tagLink.classList = "mrr-d2";
                         aside.appendChild(document.createTextNode(' '));
                         aside.appendChild(tagLink);
                     }

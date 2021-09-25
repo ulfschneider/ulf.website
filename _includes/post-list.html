@@ -3,8 +3,18 @@
         content: unset;
     }
 
-    h2>a {
-        text-decoration: none;
+    @media (hover: hover) {
+        a:hover section h2 {
+            color: var(--link-hover-color);
+        }
+    }
+
+    a:active section h2 {
+        color: var(--link-active-color);
+    }
+
+    a:focus section h2 {
+        color: var(--link-focus-color);
     }
 
     h3::before {
@@ -40,25 +50,22 @@
     {%- assign count = count | plus: 1 -%}
 
     <article class="mry-1 lg:bleed-left lg:flex-row-reverse lg:align-baseline">
-        <section class="lg:w-rg lg:flex-shrink-0">
-            {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
-                <h2 class="mry-0 fs lh-default">
-                    <a href="{{p.url}}" class="heading-color">{{ p.data.title }}</a>
-                </h2>
-            {%- endif -%}
-
-            {%- if p.data.subtitle -%}
-                <p>{{p.data.subtitle}}</p>
-                {%- elsif p.data.abstract -%}
-                <p>{{p.data.abstract}}</p>
-                {%- elsif p.templateContent -%}
-                <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
-            {%- endif -%}
-
-            {%- if p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil-%}
-                <a class="meta block" href="{{p.url}}">Read the entire article →</a>
-            {%- endif -%}
-        </section>
+        <a href="{{p.url}}" class="no-deco">
+            <section class="lg:w-rg lg:flex-shrink-0">
+                {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
+                    <h2 class="mry-0 fs lh-default">
+                        {{ p.data.title }}
+                    </h2>
+                {%- endif -%}
+                {%- if p.data.subtitle -%}
+                    <p>{{p.data.subtitle}}</p>
+                    {%- elsif p.data.abstract -%}
+                    <p>{{p.data.abstract}}</p>
+                    {%- elsif p.templateContent -%}
+                    <p>{{ p.templateContent | strip_html | truncatewords:25, "&nbsp;…"  }}</p>
+                {%- endif -%}
+            </section>
+        </a>
         <aside class="meta block lg:fs-d1 lg:pdr-1 lg:mrr-auto {{p.data.starred}}">
             <span class="lg:block">
                 {% include author-and-date.html, author: p.data.author, date: p.date %}
