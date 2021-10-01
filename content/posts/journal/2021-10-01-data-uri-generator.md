@@ -1,6 +1,6 @@
 ---
 title: URI Generator to create an URL out of a small data object
-refer: David Wilkinson
+refer: Tool by David Wilkinson
 tags: [journal, code]
 ---
 Upload a file, provide a URL, or a text, and the tool will create a URI that contains the complete content of your data. 
