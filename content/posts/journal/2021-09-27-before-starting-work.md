@@ -1,5 +1,6 @@
 ---
 title: Early morning before starting work off
+layout: image
 tags: [journal, nature]
 ---
 <figure class="lg:bleed lg:split-aside-1">
