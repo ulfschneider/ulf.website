@@ -1,9 +1,11 @@
 ---
 title: URI Generator to create a URL out of a small data object
-refer: Tool by David Wilkinson
 tags: [journal, code]
 ---
-[data: URI Generator](https://dopiaza.org/tools/datauri/index.php)
+<figure>
+<a href="https://dopiaza.org/tools/datauri/index.php">data: URI Generator</a>
+<figcaption>Tool by David Wilkinson</figcaption>
+</figure>
 
 Upload a file, provide a URL, or a text, and the tool will create a URI that contains the complete content of your data. 
 
