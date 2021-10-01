@@ -1,5 +1,5 @@
 ---
-title: URI Generator to create an URL out of a small data object
+title: URI Generator to create a URL out of a small data object
 refer: Tool by David Wilkinson
 tags: [journal, code]
 ---
