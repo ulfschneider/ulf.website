@@ -14,8 +14,8 @@
     --space-factor: 1.75;
     --fs-mono: .95rem;
     --fs-h1: var(--fs-3);
-    --fs-h2: var(--fs-1);
-    --fs-h3: var(--fs);
+    --fs-h2: var(--fs-2);
+    --fs-h3: var(--fs-1);
     --fs-h4: var(--fs);
     --link-focus-color: var(--primary-d1);
     text-decoration-thickness: .06em;
