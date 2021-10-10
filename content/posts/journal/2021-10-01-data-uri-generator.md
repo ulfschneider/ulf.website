@@ -1,15 +1,15 @@
 ---
-title: URI Generator to create a URL out of a small data object
+title: Data URL Generator to create a URL out of a small data object
 tags: [journal, code]
 ---
 <figure>
-<a href="https://dopiaza.org/tools/datauri/index.php">data: URI Generator</a>
-<figcaption>Tool by David Wilkinson</figcaption>
+<a href="https://dopiaza.org/tools/datauri/index.php">Data URL Generator</a>
+<figcaption>Tool by David Wilkinson. Upload a file, provide a URL, or a text, and the tool will create a URI that contains the complete content of your data.</figcaption>
 </figure>
 
-Upload a file, provide a URL, or a text, and the tool will create a URI that contains the complete content of your data. 
-
-Useful to create small images or sounds inside of your URI.
+<blockquote>Data URLs, URLs prefixed with the data: scheme, allow content creators to embed small files inline in documents. They were formerly known as "data URIs" until that name was retired by the WHATWG.
+<footer><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">MDN Web Docs</a></footer>
+</blockquote>
 
 When I was using the tool to convert an `.mp3` file from a given URL, I needed to add the mime type manually to the resulting URI. In my case it was **audio/mp3**, like in `data:audio/mp3;base64, …`.
 
