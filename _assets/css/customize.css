@@ -10,7 +10,7 @@
     --form-font-family: 'iA Writer Quattro', sans-serif;
     --meta-font-family: 'iA Writer Quattro', sans-serif;
     --mono-font-family: 'iA Writer Quattro', monospace;
-    --font-weight-bold: 600;
+    --font-weight-bold: 700;
     --space-factor: 1.75;
     --fs-mono: .95rem;
     --fs-h1: var(--fs-3);
@@ -18,7 +18,8 @@
     --fs-h3: var(--fs-1);
     --fs-h4: var(--fs);
     --link-focus-color: var(--primary-d1);
-    text-decoration-thickness: .06em;
+    --rg-width: 40rem;
+    --md-width: 50rem;
 }
 
 p:not(blockquote p),
