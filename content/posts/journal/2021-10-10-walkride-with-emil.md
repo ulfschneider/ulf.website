@@ -1,5 +1,6 @@
 ---
 title: Early sunday morning, walkride with Emil
+layout: image
 tags: [journal, nature]
 ---
 <figure>
