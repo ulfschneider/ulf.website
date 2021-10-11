@@ -4,7 +4,15 @@ tags: sports
 draft: true
 abstract: I´m building up a new road bike. It´s based on a Fairlight Strael steel frame. 
 ---
-My first contact with the Strael was through [road.cc](https://road.cc/content/review/216171-fairlight-cycles-strael), around 2017 if I remember correctly, when Stu Kerton reviewed the bike and gave it an excellent rating.
+[[toc]]
+
+This text started life during October 2021. 
+
+## Why building my own bike?
+It´s a personal thing. I want a disc brake road bike with a personal setup. I want to make it *my* bike. 
+
+## Fairlight Cycles
+My first contact with the Fairlight Strael was through [road.cc](https://road.cc/content/review/216171-fairlight-cycles-strael), around 2017 if I remember correctly, when Stu Kerton reviewed the bike and gave it an excellent rating.
 
 <blockquote>
 <p>Taking everything into account, the Strael is pretty hard to knock, especially for the non-racer. If you want a bike you can train on, bimble about on, credit card tour on, or just get out there and wring the neck of for a full-on blast around the lanes while enjoying each and every mile, the Fairlight ticks all of the boxes.</p>
@@ -30,26 +38,32 @@ Once the first contact was made, I took attention about what else was going on w
 
 To me it was prove enough the Strael steel frame had more to it than cycling folklore.
 
-It took me four years from there to the point of ordering a Strael frame to build up my own and personal bike. In particular, it´s a Strael because of
+## The Strael frame
+
+It took me four years from there to the point of ordering a Strael frame late August 2021 to build up my personal bike. In particular, it´s a Strael because of
 
 <ul>
-<li><strong>The fit:</strong> There is a <em>tall</em> frame geometry that fits me.</li>
+<li><strong>The fit:</strong> There is a <em>tall</em> frame geometry that fits me. Have a look at the <a href="https://fairlightcycles.com/calculator/">Fairlight Fit Calculator</a>.</li>
 <li><strong>The details:</strong> When you read through Dom´s <a href="https://fairlightcycles.com/wp-content/uploads/2021/06/Fairlight-Strael-3.0-Design-Notes.pdf">design notes</a> you´ll probably get a sense of how he is taking care about everything. It´s certainly speaking to me and I like to have a frame someone was so humble and courageous about.</li>
 <li><strong>The durability:</strong> I think a steel frame can take the everyday use better than a carbon frame.</li>
-<li><strong>The ride:</strong> Unfortunately, I couldn´t do a test ride before ordering the frame. I´m relying on how certain riders describe it. Therefore I´m talking here about my expectations. The Strael is now in its third model iteration and according to how it´s described it got even better with each iteration. It´s comfortable, it climbs well, it gets to speed well, the handling is very balanced. Stu Kerton´s characterization resonates with me. It describes what I like about a road bike – comfort without being mushy, predictability without being twitchy, and pedaling performance.
-<blockquote><p>The actual handling isn't as quick or sharp as a race bike, but because the Strael's frame is so responsive it isn't really an issue. The times on my favourite testing descents were pretty much the same on the Fairlight as with the carbon superbikes I've chucked down them over the years, some of which is down to how planted and confident the Strael feels, giving you the nod to maybe take a bit more risk.</p>
+<li><strong>The ride:</strong> Unfortunately, I couldn´t do a test ride before ordering the frame. I´m relying on how certain riders describe it. Therefore I´m talking here about my expectations. The Strael is now in its third model iteration and according to how it´s described it got even better with each iteration. It´s comfortable, it climbs well, it gets to speed well, the handling is very balanced. Stu Kerton´s characterization resonates with me. He describes what I like about a road bike – comfort without being mushy, predictability without being twitchy, and pedaling performance.
+<blockquote><p>The comfort levels are absolutely spot on and well balanced too. When you are seated, regardless of pace, the rear end really takes the bumps and vibrations out of the road; the racer becomes a cruiser.</p>
 <p>…</p>
-<p>It all sounds a bit manic, doesn't it? But you don't have to ride the Strael like this all of the time, it's a cruiser too.</p>
-<footer>Stu Kerton, <cite><a href="https://road.cc/content/review/216171-fairlight-cycles-strael">road.cc</a>, 2017</cite></footer>
+<p>Everything you need to know is coming through the frame and fork from the tyres, and it's this level of interaction that allows you to ride the Fairlight as though it's a much more performance-orientated bike than it is.</p>
+<p>Slightest inputs from shifting your bodyweight or tweaking the steering, have such an instantaneous and positive feeling on how the bike behaves. It's just so precise, especially considering that the geometry is aimed more at the relaxed, endurance end of the spectrum.</p>
+<p>All this adds up to a feeling of the Strael being an extension of you as a rider. Downhill technical sections are just such a blast – the Fairlight flows from bend to bend in such a controlled manner.</p>
+<p>It's hard to get over just how much in tune with everything the Strael is. Regardless of the road conditions or the state of the surface, this thing is nailed on, composed and gives massive confidence to you as a rider.</p>
+<footer>Stu Kerton, <cite><a href="https://road.cc/content/review/fairlight-strael-30-2021-284101">road.cc</a>, 2021</cite></footer>
 </blockquote>
-There are other reviews of the subsequent design iterations of the Strael, which are the <a href="https://road.cc/content/review/240016-fairlight-cycles-strael-20">Strael 2.0</a> in 2020, and the <a href="https://road.cc/content/review/fairlight-strael-30-2021-284101">Strael 3.0</a> in 2021. All these reviews by Stu Kerton. Jack Luke did a review of the <a href="https://www.bikeradar.com/reviews/bikes/road-bikes/fairlight-strael-3-0-review/">Strael 3.0</a> on bikeradar.com. Another one is from David Arthur below.
+There are reviews of the subsequent design iterations of the Strael, which are the <a href="https://road.cc/content/review/240016-fairlight-cycles-strael-20">Strael 2.0</a> in 2020, and the <a href="https://road.cc/content/review/fairlight-strael-30-2021-284101">Strael 3.0</a> in 2021. All these reviews by Stu Kerton. Jack Luke did a review of the <a href="https://www.bikeradar.com/reviews/bikes/road-bikes/fairlight-strael-3-0-review/">Strael 3.0</a> on bikeradar.com. Another one is from David Arthur below.
 <figure><iframe width="560" height="315" src="https://www.youtube.com/embed/ORQacAmVHBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><figcaption>Fairlight Strael 3.0 Review by <a href="https://www.youtube.com/c/davidarthur/">David Arthur</a></figcaption></figure>
 </li>
-<li><strong>The standards:</strong> The frame has all the modern standards and a threaded 68mm bottom bracket.</li>
-<li><strong>The versatility:</strong> Whether it´s the CNC machined replaceable dropout design, the cable mounting guides, the bottle mounts for three bottles, or 36mm tyre clearance: it makes the bike very adjustable to all sorts of scenarios. There are also mudguard eyelets, which I think I will not use, but for some it might be a huge advantage.</li>
-<li><strong>The look and finish:</strong> You see each tube and how it´s designed to function. The frame has a timeless look. I like the <em>putty</em> frame color.</li>
+<li><strong>The sophistication:</strong> Each tube is particularly formed with a particularly choosen steel. The down tube is bi-ovalized and butted from Reynolds 853. The seat tube is butted 853. The top tube is ovalized and butted 853. The head tube is 4130 chromoly CNC machined from a solid billet into a tube. Seat tubes are non-taper Reynolds 725. Chain stays are butted Reynolds 725 and have a very complex form to accomplish excellent power transfer and still provide comfort. The dropouts are CNC machined single pieces. Honestly, I don´t understand why it´s made exactly this way, and not in a different way, but it´s no question to me that this frame is high sophisticated and the ride quality seems to justify the thoughts and effort.</li>
+<li><strong>The standards:</strong> The frame has standard thru axles and a threaded 68mm bottom bracket.</li>
+<li><strong>The versatility:</strong> Whether it´s the CNC machined replaceable dropout design, the cable mounting guides, the bottle mounts for three bottles, light cable routing, DI2 routing, or 36mm tyre clearance: it makes the bike very adjustable to all sorts of play. There are also mudguard eyelets, which I think I will not use, but for some it might be a huge advantage.</li>
+<li><strong>The look and finish:</strong> You can see each tube and how it´s designed to function. There is no bling bling just for the sake of it. The frame has a timeless look. I like the <em>putty</em> frame color and – new to the Strael 3.0 – the Anraed fork in frame color.</li>
 
-There is one thing left, *the weight of a steel frame.* The frame of the current Strael 3.0 weighs around 2200g, that´s including bolts, rear axle and dropout inserts, but without the fork. As such, the frame is 1300g to 1400g heavier than a first class carbon frame. For me it was not something to easily take without consideration, but all the advantages from above outweight the weight.
+There is one thing left, *the weight of a steel frame.* The frame of the current Strael 3.0 weighs around 2200g, that´s including bolts, rear axle and dropout inserts, but without the fork. Say, a modern first class carbon frame will weigh under 1000g, then the Strael frame is *at least* 1200g heavier than a carbon frame. For me it was not something to easily take without consideration, but all the advantages from above outweight the weight, I believe.
 
 
 
