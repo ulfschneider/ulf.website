@@ -113,6 +113,7 @@ nav.table-of-contents ol li::before {
     content: var(--h-counter);
     font-weight: normal;
     font-size: inherit;
+    margin-top: unset;
     color: var(--meta-color);
 }
 
