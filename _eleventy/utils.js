@@ -203,7 +203,7 @@ module.exports = {
         const mdlib = markdownIt({
                 html: true,
                 breaks: true,
-                linkify: true,
+                linkify: false,
                 typographer: true
             })
             .use(markdownItAnchor, {

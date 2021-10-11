@@ -11,7 +11,7 @@ tags: code
 
 Git will help you doing the following things with a computer:
 
-<figure class="bleed rg:split">
+<figure class="bleed rg:split align-start">
 <div>
 <strong>Personal</strong>
 <ul class="indent">
