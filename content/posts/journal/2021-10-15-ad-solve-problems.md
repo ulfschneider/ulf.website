@@ -3,7 +3,7 @@ title: Analysis and design are about making sure we understand, and are solving,
 refer: Rich Hickey, Hammock Driven Development, 17 Dec 2012 on youtube
 tags: [thinkabout, design, star]
 ---
-My notes from the Rich Hickey´s talk <cite><a href="https://youtu.be/f84n5oFoZBc">Hammock Driven Development</a></cite>:
+My notes from Rich Hickey´s talk <cite><a href="https://youtu.be/f84n5oFoZBc">Hammock Driven Development</a></cite>:
 
 <blockquote>There is no guarantee that if you put together a feature list, even if coming from the customer, that it will solve any problem! We have to solve problems, not create features. 
 <footer>Rich Hickey</footer>
