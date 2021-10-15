@@ -1,6 +1,6 @@
 ---
 title: Unconventional and free stock images
-tags: [design, star]
+tags: journal
 ---
 A list of unconventional and free stock images by Mel Choyce in her [CSS-Tricks article](https://css-tricks.com/unconventional-stock-image-sources/):
 - [British Library](https://unsplash.com/@britishlibrary) (unsplash)
