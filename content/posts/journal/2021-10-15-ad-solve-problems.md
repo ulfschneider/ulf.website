@@ -1,6 +1,6 @@
 ---
 title: Analysis and design are about making sure we understand, and are solving, problems
-refer: Rich Hickey, Hammock Driven Development, 17 Dec 2021 on youtube
+refer: Rich Hickey, Hammock Driven Development, 17 Dec 2012 on youtube
 tags: [thinkabout, design, star]
 ---
 My notes from the Rich Hickey´s talk <cite><a href="https://youtu.be/f84n5oFoZBc">Hammock Driven Development</a></cite>:
