@@ -13,16 +13,15 @@ Hi, I´m Ulf Schneider and this is my website.
 I´m a software developer and agile coach, currently working for the software organization of Diebold Nixdorf in Paderborn, Germany. My path through 25 years of software went like this:
 
 <dl class="timeline">
-<dt>2014 – today Diebold Nixdorf</dt>
-<dd>Since 2014 I am employed as an agile coach at Diebold Nixdorf.</dd>
-<dt>2006 – 2014 Self-employment</dt>
-<dd>Seven years of self-employed as an agile coach and trainer.</dd>
-<dt>1996 – 2006 IBM Global Services</dt>
-<dd>I was more than ten years with IBM Global Services as a developer and software architect.</dd>
 <dt>1991 – 1996 University</dt>
 <dd>I graduated at the University of Paderborn (Dipl.-Wirt. Inform.).</dd>
+<dt>1996 – 2006 IBM Global Services</dt>
+<dd>I was more than ten years with IBM Global Services as a developer and software architect.</dd>
+<dt>2006 – 2014 Self-employment</dt>
+<dd>Seven years self-employed as an agile coach and trainer.</dd>
+<dt>2014 – today Diebold Nixdorf</dt>
+<dd>Since 2014 I am employed as an agile coach at Diebold Nixdorf.</dd>
 </dl>
-
 
 <h2>Connect with me</h2>
 {% include connect.html %}
