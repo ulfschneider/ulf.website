@@ -26,7 +26,7 @@ The ride quality seemed to be impressive. Fast, direct, yet comfortable. An endu
 
 Their *tall* frame option is for people with long legs and short torso, while the *regular* is for people with short legs and long torso. I would say *regular* reflects the typical road race bike geometry. I clearly fall into the *tall* category, which means I can hardly ride a standard road race bike. Only marathon geometries, with shorter top tubes and taller head tubes, work for me. And even then I have to tune the bike with 90mm stem instead of 100mm and using drop bars with a reach around 70 to 75mm. Everything else is creating back pain and I have no joy riding longer distances, not to mention marathons like the [Rhoen Marathon](https://www.rhoen-radmarathon.dehttps://www.rhoen-radmarathon.de), which is something I enjoy doing on a road bike.
 
-Now, imagine how lucky I was to see that a *tall* Fairlight frame would do exactly that: shorten the top tube and extending the head tube while keeping excellent frame handling. As I wrote before: that was when I was getting hooked into Fairlight.
+Now, imagine how lucky I was to see that a *tall* Fairlight frame would do exactly that: shorten the top tube and extending the head tube while keeping excellent frame handling. As I wrote before: that was when I was getting hooked into Fairlight, though here are [other bikes](/2021-08-05-bike-geos/) I find interesting for that very reason.
 
 <figure>
 <iframe src="https://player.vimeo.com/video/180866780?h=17c57cd7f8&color=f9423a&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
