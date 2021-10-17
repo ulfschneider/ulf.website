@@ -201,7 +201,7 @@ hr.footnotes-sep::after {
 
 #image-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--space-5), 1fr));
 }
 
 .image .author-date-tags {
