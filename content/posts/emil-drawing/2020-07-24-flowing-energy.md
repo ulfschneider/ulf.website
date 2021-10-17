@@ -1,6 +1,7 @@
 ---
 title: Flowing energy
 author: Emil
+tags: star
 ---
 <figure class="bleed">
 <img src="/img/emil-drawing/IMG_1475.jpg" alt="">
