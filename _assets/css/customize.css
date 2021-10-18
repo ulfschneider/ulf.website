@@ -52,8 +52,8 @@ input[type=reset] {
 }
 
 img {
-    display: block;
     background-color: var(--neutral-5);
+    max-height: max(80vh, var(--space-6));
 }
 
 img+img {
@@ -224,4 +224,6 @@ table.sotable caption p.indicator {
 
 [class*="bleed"]>img {
     width: 100%;
+    max-height: unset;
+    height: unset;
 }

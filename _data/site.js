@@ -3,7 +3,7 @@ module.exports = {
     locale: "en",
     themecolor: "#333333",
     url: "https://ulf.codes",
-    imgMaxWidth: 1280,
+    imgMaxWidth: 1200,
     imgMaxHeight: 700,
     jpegQuality: 80,
     instantPage: true,
