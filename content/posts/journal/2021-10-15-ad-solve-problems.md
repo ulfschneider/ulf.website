@@ -10,12 +10,12 @@ My notes from Rich Hickey´s talk <cite><a href="https://youtu.be/f84n5oFoZBc">H
 </blockquote>
 
 - The seed of solving a problem is stating it. Write it down.
-- Understand the problem. What do you know? Facts, context, cosntraints. Are there related problems? If you ignore the solution the last guy did, you´re starting from scratch again. Write it down.
+- Understand the problem. What do you know? Facts, context, constraints. Are there related problems? If you ignore the solution the last guy did, you´re starting from scratch again. Write it down.
 - Be discerning. Find the problems in your solutions. It´s easy to be excited about the good parts you do, but you should be looking for trade-offs. What questions do you still have? If there are no question marks, you are missing something.
 	<blockquote>Not everyhting is awesome!<footer>Rich Hickey</footer></blockquote>
 - More input, better output. You can´t connect things you don´t know about, that will narrow down your possible solutions. That will limit your decisions. Read in and around your space. Look critically at other solutions.
 - Trade-offs. Enumerate at least two possible solutions and the attributes and deficits of each, before you can make a trade-off. Write it down.
-- Focus. For design work you need extreme focus. <mark>When was the last time you thought about a problem for an hour, a day, a week, a month, a year?</mark> The computer is a prime source of disctraction. You will drop other things to keep the focus because you cannot do everything at once. let loved ones know, you are going to be pretty far away. This is the nature of doing this kind of work.
+- Focus. For design work you need extreme focus. <mark>When was the last time you thought about a problem for an hour, a day, a week, a month, a year?</mark> The computer is a prime source of disctraction. You will drop other things to keep the focus because you cannot do everything at once. Let loved ones know, you are going to be pretty far away. This is the nature of doing this kind of work.
 - Waking mind. Good at critical thinking, analysis, tactics. Prone to finding local maxima. Use waking mind to feed work to background mind. 
 - Background mind. Good at making connections, synthesis, strategy, abstracts, analogizes. If you want find abstraction, you have to do this kind of thinking. This is the solver of most non-trivial problems. But you can only feed it, not direct it.
 - Sleep. As we snooze, our brain is busily processing the information we have learned during the day. Sleep makes memories stronger, and it even appears to weed out irrelevant details and background information so that only the important pieces remain. Our brain also works during slumber to find hidden relations among memories and to solve problems we were working on while awake.
