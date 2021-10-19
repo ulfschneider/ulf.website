@@ -44,11 +44,11 @@
         function appendImage(imgData) {
 
             let figure = document.createElement('figure');
-            figure.classList = 'mr-0';
+            figure.classList = 'mr-0 center';
             container.appendChild(figure);
 
             let anchor = document.createElement('a');
-            anchor.classList = 'no-deco block';
+            anchor.classList = 'no-deco inline-block';
             anchor.href = imgData.url;
             figure.appendChild(anchor);
 
@@ -61,7 +61,7 @@
 
             if (imgData.title) {
                 let figcaption = document.createElement('figcaption');
-                figcaption.classList = `small ${imgData.starred
+                figcaption.classList = `small lh-2 ${imgData.starred
                     ? imgData.starred
                     : ''}`;
                 figcaption.innerHTML = imgData.title;
