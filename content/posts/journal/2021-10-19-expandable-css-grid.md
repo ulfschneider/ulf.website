@@ -3,7 +3,7 @@ title: Expandable sections within a CSS Grid (Quickview)
 tags: [code, css]
 refer: Kev Bonnett, 15 Oct 2021, CSS-Tricks
 ---
-Kev Bonett gives an excellent example of how style expandable CSS Grid sections with only some lines of CSS in his [CSS-Tricks article](https://css-tricks.com/expandable-sections-within-a-css-grid/). Kev has a [CodePen](https://codepen.io/basherkev/pen/rNwpwgP) to play with it. His idea is:
+Kev Bonett gives an excellent example of how to style expandable CSS Grid sections with only some lines of CSS in his [CSS-Tricks article](https://css-tricks.com/expandable-sections-within-a-css-grid/). Kev has a [CodePen](https://codepen.io/basherkev/pen/rNwpwgP) to play with it. His idea is:
 
 ```css
 .grid {
