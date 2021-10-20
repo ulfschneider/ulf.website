@@ -1,27 +1,17 @@
 {%- if author or date or page.date -%}
-    {%- if author -%}
-        <span>By {{author}}</span>
-    {%- endif -%}
     {%- if refer -%}
-        {%- if author -%}
-            <span>, {{refer}}</span>
-        {%- else -%}
-            <span>{{refer}}</span>
-        {%- endif -%}
+        <div>{{refer}}</div>
     {%- endif -%}
     {% if date %}
-        {%- if author or refer -%}
-            <span>, posted on</span>
-        {%- else -%}
-            <span>Posted on</span>
-        {% endif %}
+        <span>Posted on</span>
         <time datetime="{{date | isoDate}}" class="no-wrap">{{ date | humanDate }}</time>
         {%- elsif nodate == nil and page.date  -%}
-        {%- if author or refer -%}
-            <span>, posted on</span>
-        {%- else -%}
-            <span>Posted on</span>
-        {% endif %}
+        <span>Posted on</span>
         <time datetime="{{page.date | isoDate}}" class="no-wrap">{{ page.date | humanDate }}</time>
     {% endif %}
+    {%- if author -%}
+        <span>by {{author}}</span>
+    {% elsif refer and site.ownership.name %}
+        <span>by {{site.ownership.name}}</name>
+    {%- endif -%}
 {%- endif -%}
