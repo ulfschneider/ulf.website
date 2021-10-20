@@ -99,6 +99,7 @@ module.exports = {
                     url: item.url,
                     title: item.data.title,
                     starred: item.data.starred,
+                    date: item.date,
                     humanDate: humanDate
                 });
             }

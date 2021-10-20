@@ -15,7 +15,7 @@
                     <h1 class="mry-0 fs normal lh-default">
                         <strong>Images</strong> tagged {{tag}}</h1>
                 </header>
-               	<div {% if outline and outline != false %}class="outline"{% endif %}>
+                <div {% if outline and outline != false %}class="outline"{% endif %}>
                     {{ content }}
                 </div>
 
@@ -38,10 +38,21 @@
     <script>
         var imageData = {{ imageData | jsonify }};
         var index = getIndex();
+        var year;
         var increment = 9;
         var container = document.getElementById('image-container');
 
         function appendImage(imgData) {
+
+            let imgYear = new Date(imgData.date).getFullYear();
+            if (year != imgYear) {
+                year = imgYear;
+                let yearContainer = document.createElement('time');
+                yearContainer.setAttribute('style', 'grid-column: 1 / -1;');
+                yearContainer.classList ="larger meta year mry-1";
+                yearContainer.innerHTML = year;
+                container.appendChild(yearContainer);
+            }
 
             let figure = document.createElement('figure');
             figure.classList = 'mr-0';
