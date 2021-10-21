@@ -48,8 +48,8 @@
             if (year != imgYear) {
                 year = imgYear;
                 let yearContainer = document.createElement('time');
-                yearContainer.setAttribute('style', 'grid-column: 1 / -1;');
-                yearContainer.classList ="larger meta year mry-1";
+                yearContainer.setAttribute('style', 'grid-column: 1 / -1;'); //take the entire row of the grid
+                yearContainer.classList ="larger meta year mrt-1";
                 yearContainer.innerHTML = year;
                 container.appendChild(yearContainer);
             }
