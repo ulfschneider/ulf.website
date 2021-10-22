@@ -3,6 +3,11 @@ title: HTML with Superpowers
 refer: Dave Rupert, presentation on An Event Apart Spring Summit 2021
 tags: [code, css]
 ---
+<blockquote>
+It has to have a hyphen in it.
+<footer>Dave Rupert</footer>
+</blockquote>
+
 <figure class="lg:bleed lg:split-aside-1">
 <figcaption>Excellent slide deck by Dave Rupert about Web Components. Find the deck on <a href="https://noti.st/davatron5000/k6N2LP">Notist</a>.</figcaption>
 <p data-notist="davatron5000/k6N2LP">View <a href="https://noti.st/davatron5000/k6N2LP">HTML with Superpowers</a> on Notist.</p>
