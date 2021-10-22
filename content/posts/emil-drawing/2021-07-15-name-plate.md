@@ -1,6 +1,6 @@
 ---
 title: A name plate for my room
-author: Emil
+refer: Made by Emil
 ---
 <figure>
 <img src="/img/emil-drawing/IMG_0982D.jpg" alt="">

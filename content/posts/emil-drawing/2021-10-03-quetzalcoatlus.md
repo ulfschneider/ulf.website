@@ -1,6 +1,6 @@
 ---
 title: Quetzalcoatlus and others
-author: Emil
+refer: Made by Emil
 ---
 <figure class="bleed lg:split-aside-1">
 <figcaption>Flying and walking dino´s</figcaption>

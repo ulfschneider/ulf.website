@@ -1,5 +1,5 @@
 {%- if tags and notags == nil -%}
-    {% assign sortedTags = tags | sort %}
+    {% assign sortedTags = tags | uniq | sort %}
     <span>in</span>
     {% for tag in sortedTags %}
         {%- if tag == site.starTag %}

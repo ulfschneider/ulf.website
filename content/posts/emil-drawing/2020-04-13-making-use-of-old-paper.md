@@ -1,6 +1,6 @@
 ---
 title: Making use of old paper
-author: Emil
+refer: Made by Emil
 ---
 <figure class="bleed">
 <img src="/img/emil-drawing/IMG_0891.jpg" alt="">

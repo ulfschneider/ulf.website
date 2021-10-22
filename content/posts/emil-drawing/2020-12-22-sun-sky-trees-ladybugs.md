@@ -1,6 +1,6 @@
 ---
 title: Sun, sky, trees, ladybugs
-author: Emil
+refer: Made by Emil
 ---
 <figure class="bleed">
 <img src="/img/emil-drawing/IMG_0225D.jpg" alt="">

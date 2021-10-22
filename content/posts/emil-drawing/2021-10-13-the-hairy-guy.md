@@ -1,6 +1,6 @@
 ---
 title: The hairy guy
-author: Emil
+refer: Made by Emil
 ---
 <figure class="md:bleed-right md:split">
 <img src="/img/emil-drawing/IMG_1345.jpg" alt="">
