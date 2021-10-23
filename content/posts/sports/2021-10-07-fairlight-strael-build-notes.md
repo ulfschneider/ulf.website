@@ -6,11 +6,6 @@ abstract: I´m building up a new road bike. It´s based on a Fairlight Strael st
 ---
 [[toc]]
 
-This text started life during October 2021. 
-
-## Why building my own bike?
-It´s a personal thing. I want a disc brake road bike with wide tyres and a personal setup. I want to make it *my* bike. 
-
 ## Fairlight Cycles
 My first contact with the Fairlight Strael was through [road.cc](https://road.cc/content/review/216171-fairlight-cycles-strael), around 2017 if I remember correctly, when Stu Kerton reviewed the bike and gave it an excellent rating.
 
