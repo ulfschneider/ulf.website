@@ -9,7 +9,7 @@ It has to have a hyphen in it.
 </blockquote>
 
 <figure class="lg:bleed lg:split-aside-1">
-<figcaption>Excellent slide deck by Dave Rupert about Web Components. Find the deck on <a href="https://noti.st/davatron5000/k6N2LP">Notist</a>. Within the presentation Dave is referring to his curated list of [awesome web components](https://github.com/davatron5000/awesome-standalones).</figcaption>
+<figcaption>Excellent slide deck by Dave Rupert about Web Components. Find the deck on <a href="https://noti.st/davatron5000/k6N2LP">Notist</a>. Within the presentation Dave is referring to his curated list of <a href="https://github.com/davatron5000/awesome-standalones">awesome web components</a>).</figcaption>
 <p data-notist="davatron5000/k6N2LP">View <a href="https://noti.st/davatron5000/k6N2LP">HTML with Superpowers</a> on Notist.</p>
 </figure>
 <script async src="https://on.notist.cloud/embed/002.js"></script>
