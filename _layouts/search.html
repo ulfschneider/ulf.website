@@ -75,7 +75,7 @@ permalink: '{{site.search.url}}'
                             parseInt('{{site.excerptWordCount}}')
                             ? parseInt('{{site.excerptWordCount}}')
                             : 25))
-                        .join(' ') + ' …' ;
+                        .join(' ') + ' …';
                 }
             }
 
@@ -91,22 +91,6 @@ permalink: '{{site.search.url}}'
                 authorAndDate.classList = 'lg:block';
                 aside.appendChild(authorAndDate);
 
-                let author = document.createElement('span');
-                authorAndDate.appendChild(author);
-
-                if (friend.author) {
-                    author.innerHTML = 'By ' + friend.author;
-                }
-
-                if (friend.date) {
-                    let posted = document.createElement('span');
-                    if (friend.author) {
-                        posted.innerHTML = ', posted on';
-                    } else {
-                        posted.innerHTML = 'Posted on';
-                    }
-                    authorAndDate.append(posted);
-                }
                 if (friend.author || friend.date) {
                     authorAndDate.appendChild(document.createTextNode(' '));
                 }
@@ -115,10 +99,15 @@ permalink: '{{site.search.url}}'
                 date.innerHTML += friend.humanDate;
                 authorAndDate.appendChild(date);
 
+                if (friend.author) {
+                    let author = document.createElement('span');
+                    authorAndDate.appendChild(author);
+                    author.innerHTML = 'by ' + friend.author;
+                }
+
                 if (friend.tags && !friend.notags) {
                     let label = document.createElement('span');
                     label.innerHTML = 'in';
-                    label.classList = 'mrr-d2';
                     aside.appendChild(document.createTextNode(' '));
                     aside.appendChild(label);
                     if (friend.tags.includes('{{site.starTag}}')) {

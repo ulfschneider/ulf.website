@@ -71,7 +71,7 @@
         </a>
         <aside class="meta block lg:fs-d1 lg:pdr-1 lg:mrr-auto {{p.data.starred}}">
             <span class="lg:block">
-                {% include author-and-date.html, author: p.data.author, date: p.date %}
+                {% include author-and-date.html, author: p.data.author, date: p.date, shortdate: true %}
             </span>
             {% include tags.html tags: p.data.tags notags: p.data.notags %}
         </aside>
