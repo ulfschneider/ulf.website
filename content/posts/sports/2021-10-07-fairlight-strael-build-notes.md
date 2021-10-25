@@ -33,7 +33,7 @@ Once the first contact was made, I took attention about what else was going on w
 
 To me it was prove enough the Strael steel frame had more to it than cycling folklore.
 
-## The Strael frame
+## The frame
 
 It took me four years from there to the point of ordering a Strael frame in late August 2021 to build up my personal bike. In particular, it´s a Strael because of
 
@@ -59,6 +59,18 @@ It took me four years from there to the point of ordering a Strael frame in late
 - **The look and finish:** You can see each tube and how it´s designed to function. There is no bling bling just for the sake of it. The frame has a timeless look. I like the *putty* frame color and – new to the Strael 3.0 – the Anraed fork in frame color. The Fairlight logo is beautiful too.
 
 There is one thing left, *the weight of a steel frame.* The frame of the current Strael 3.0 weighs around 2200g, that´s including bolts, rear axle and dropout inserts, but without the fork. Say, a modern first class carbon frame will weigh under 1000g, then the Strael frame is *at least* 1200g heavier than a carbon frame. For me it was not something to easily take without consideration, but all the advantages from above outweight the weight, I believe.
+
+## The groupset
+
+## The wheels
+
+## The tyres
+
+## The Seatpost and saddle
+
+## The stem and handle bars
+
+
 
 
 

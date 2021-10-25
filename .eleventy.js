@@ -80,7 +80,6 @@ function addCollections(eleventyConfig) {
         return [
             ...collectionAPI.getFilteredByGlob('content/**')
             .map(item => {
-                console.log(item);
                 if (item.data.tags && item.data.tags.includes(site.starTag)) {
                     item.data.starred = site.starTag;
                 } else {
