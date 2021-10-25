@@ -2,7 +2,7 @@
 title: Fairlight Strael Build Notes
 tags: sports
 draft: true
-abstract: I´m building up a new road bike. It´s based on a Fairlight Strael steel frame. 
+abstract: I´m building up a new road bike.<br>It´s based on a Fairlight Strael steel frame. 
 ---
 [[toc]]
 
@@ -35,7 +35,7 @@ To me it was prove enough the Strael steel frame had more to it than cycling fol
 
 ## The Strael frame
 
-It took me four years from there to the point of ordering a Strael frame late August 2021 to build up my personal bike. In particular, it´s a Strael because of
+It took me four years from there to the point of ordering a Strael frame in late August 2021 to build up my personal bike. In particular, it´s a Strael because of
 
 - **The fit:** There is a *tall* frame geometry that fits me. Have a look at the [Fairlight Fit Calculator](https://fairlightcycles.com/calculator/).
 - **The details:** When you read through Dom´s [design notes](https://fairlightcycles.com/wp-content/uploads/2021/06/Fairlight-Strael-3.0-Design-Notes.pdf) you´ll probably get a sense of how he is taking care about everything. It´s certainly speaking to me and I like to have a frame someone was so humble and courageous about.

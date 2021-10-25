@@ -78,6 +78,7 @@ function addCollections(eleventyConfig) {
 
     eleventyConfig.addCollection('livePosts', collectionAPI => {
         return [
+            ...collectionAPI.getFilteredByGlob('content/**')
             .map(item => {
                 console.log(item);
                 if (item.data.tags && item.data.tags.includes(site.starTag)) {
