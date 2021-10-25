@@ -1,6 +1,6 @@
 ---
 title: HTML with Superpowers
-refer: Dave Rupert, presentation on An Event Apart Spring Summit 2021
+refer: Dave Rupert, presentation on <a href="https://noti.st/events/3pq9MT/an-event-apart-spring-summit">An Event Apart Spring Summit 2021</a>
 tags: [code, css]
 ---
 <blockquote>
