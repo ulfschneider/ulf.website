@@ -61,7 +61,7 @@
                     <p>{{p.data.subtitle}}</p>
                     {%- elsif p.data.abstract -%}
                     <p>{{p.data.abstract}}</p>
-                {%- else  -%}
+                {%- else -%}
                     {% assign abstract = p.templateContent | strip_html | strip | truncatewords:25, "&nbsp;…" %}                    
                     {%- if abstract != "" -%}
                         <p>{{ abstract }}</p>

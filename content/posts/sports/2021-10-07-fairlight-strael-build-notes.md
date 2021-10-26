@@ -70,6 +70,11 @@ There is one thing left, *the weight of a steel frame.* The frame of the current
 
 ## The stem and handle bars
 
+https://www.bike24.de/p1168687.html?menu=1000,1868,1962,1964
+https://www.bike24.de/p1295349.html?menu=1000,1868,1962,1964 
+https://www.bike24.de/p1360331.html?menu=1000,1868,1962,1964 
+https://www.bike24.de/p150229.html?menu=1000,1868,1962,1964
+
 
 
 
