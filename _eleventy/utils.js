@@ -156,7 +156,7 @@ module.exports = {
             author: item.data.author,
             refer: item.data.refer,
             layout: item.data.layout,
-            tags: tagsWithurls,
+            tags: tagsWithUrls,
             notags: item.data.notags,
             starred: item.data.starred,
             content: this.removeHtml(item.templateContent)
