@@ -46,19 +46,20 @@ permalink: '{{site.search.url}}'
             article.classList = 'mry-1 lg:bleed-left lg:flex-row-reverse lg:align-baseline';
             parent.appendChild(article);
 
-            let linkToArticle = document.createElement('a');
-            linkToArticle.href = entry.ref;
-            linkToArticle.classList = 'no-deco lg:w-rg lg:flex-shrink-0';
-            article.appendChild(linkToArticle);
-
             let section = document.createElement('section');
-            linkToArticle.appendChild(section);
+            section.classList = 'lg:w-rg lg:flex-shrink-0';
+            article.appendChild(section);
 
             if (friend.title && friend.title != 'notitle') {
                 let title = document.createElement('h2');
-                title.classList = 'mry-0 fs lh-default';
-                title.innerHTML = friend.title;
+                title.classList = 'mry-0 fs lh-default inline';
                 section.appendChild(title);
+
+                let linkToArticle = document.createElement('a');
+                linkToArticle.href = entry.ref;
+                linkToArticle.classList = 'no-deco';
+                linkToArticle.innerHTML = friend.title;
+                title.appendChild(linkToArticle);
             }
 
             if (friend.subtitle || friend.abstract || friend.excerpt || friend.content) {
@@ -77,6 +78,13 @@ permalink: '{{site.search.url}}'
                             : 25))
                         .join(' ') + ' …';
                 }
+            }
+
+            if (!friend.title || friend.title == 'notitle') {
+                let linkToArticle = document.createElement('a');
+                linkToArticle.href = entry.ref;
+                linkToArticle.innerHTML = 'Read more';
+                section.appendChild(linkToArticle);
             }
 
             if (friend.author || friend.date || (friend.tags.length && !friend.notags)) {

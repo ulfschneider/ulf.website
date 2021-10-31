@@ -50,25 +50,31 @@
     {%- assign count = count | plus: 1 -%}
 
     <article class="mry-1 lg:bleed-left lg:flex-row-reverse lg:align-baseline">
-        <a href="{{p.url}}" class="no-deco lg:w-rg lg:flex-shrink-0">
-            <section>
-                {%- if p.data.title and p.data.title != "notitle" and p.data.notitle == nil -%}
-                    <h2 class="mry-0 fs lh-default">
+
+        <section class="lg:w-rg lg:flex-shrink-0">
+            {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
+                <h2 class="mry-0 fs lh-default inline">
+                    <a href="{{p.url}}" class="no-deco">
                         {{ p.data.title }}
-                    </h2>
+                    </a>
+                </h2>
+            {%- endif -%}
+            {%- if p.data.subtitle -%}
+                <p>{{p.data.subtitle}}</p>
+                {%- elsif p.data.abstract -%}
+                <p>{{p.data.abstract}}</p>
+            {%- else -%}
+                {% assign abstract = p.templateContent | strip_html | strip | truncatewords : 25,
+                "&nbsp;…" %}
+                {%- if abstract != "" -%}
+                    <p>{{ abstract }}</p>
                 {%- endif -%}
-                {%- if p.data.subtitle -%}
-                    <p>{{p.data.subtitle}}</p>
-                    {%- elsif p.data.abstract -%}
-                    <p>{{p.data.abstract}}</p>
-                {%- else -%}
-                    {% assign abstract = p.templateContent | strip_html | strip | truncatewords:25, "&nbsp;…" %}                    
-                    {%- if abstract != "" -%}
-                        <p>{{ abstract }}</p>
-                    {%- endif -%}
-                {%- endif -%}
-            </section>
-        </a>
+            {%- endif -%}
+
+            {%- if p.data.title == "" or p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil -%}
+                <a href="{{p.url}}">Read more</a>
+            {%- endif -%}
+        </section>
         <aside class="meta block lg:fs-d1 lg:pdr-1 lg:mrr-auto {{p.data.starred}}">
             <span class="lg:block">
                 {% include author-and-date.html, author: p.data.author, date: p.date, shortdate: true %}
