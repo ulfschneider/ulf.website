@@ -79,7 +79,7 @@ permalink: '{{site.search.url}}'
                 }
             }
 
-            if (friend.author || friend.date || (friend.tags && !friend.notags)) {
+            if (friend.author || friend.date || (friend.tags.length && !friend.notags)) {
                 let aside = document.createElement('aside');
                 aside.classList = `meta block lg:fs-d1 lg:pdr-1 lg:mrr-auto ${friend.starred
                     ? friend.starred
@@ -105,24 +105,27 @@ permalink: '{{site.search.url}}'
                     author.innerHTML = 'by ' + friend.author;
                 }
 
-                if (friend.tags && !friend.notags) {
+                if (friend.tags.length && !friend.notags) {
                     let label = document.createElement('span');
                     label.innerHTML = 'in';
                     aside.appendChild(document.createTextNode(' '));
                     aside.appendChild(label);
-                    if (friend.tags.includes('{{site.starTag}}')) {
-                        let tagLink = document.createElement('a');
-                        tagLink.href = `/blog/{{site.starTag}}`;
-                        tagLink.innerHTML = '{{site.starTagSymbol}}';
-                        tagLink.classList = "mrr-d2";
-                        aside.appendChild(document.createTextNode(' '));
-                        aside.appendChild(tagLink);
+                    for (let tag of friend.tags) {
+                        if (tag.name == '{{site.starTag}}') {
+                            let tagLink = document.createElement('a');
+                            tagLink.href = tag.url;
+                            tagLink.innerHTML = '{{site.starTagSymbol}}';
+                            tagLink.classList = "mrr-d2";
+                            aside.appendChild(document.createTextNode(' '));
+                            aside.appendChild(tagLink);
+                            break;
+                        }
                     }
                     for (let tag of friend.tags) {
-                        if (tag != '{{site.starTag}}') {
+                        if (tag.name != '{{site.starTag}}') {
                             let tagLink = document.createElement('a');
-                            tagLink.href = `/blog/${tag}/`;
-                            tagLink.innerHTML = tag;
+                            tagLink.href = tag.url;
+                            tagLink.innerHTML = tag.name;
                             tagLink.classList = "mrr-d2";
                             aside.appendChild(document.createTextNode(' '));
                             aside.appendChild(tagLink);

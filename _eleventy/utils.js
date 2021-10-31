@@ -136,6 +136,16 @@ module.exports = {
     },
 
     mapItem: function(item) {
+        let tagsWithUrls = [];
+        if (item.data.tags) {
+            for (let tag of item.data.tags) {
+                tagsWithUrls.push({
+                    name: tag,
+                    url: this.tagUrl(tag)
+                });
+            }
+        }
+
         return {
             id: item.url,
             title: item.data.title,
@@ -146,7 +156,7 @@ module.exports = {
             author: item.data.author,
             refer: item.data.refer,
             layout: item.data.layout,
-            tags: item.data.tags,
+            tags: tagsWithurls,
             notags: item.data.notags,
             starred: item.data.starred,
             content: this.removeHtml(item.templateContent)
