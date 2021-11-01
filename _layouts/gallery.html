@@ -42,7 +42,7 @@
         var increment = 9;
         var container = document.getElementById('image-container');
 
-        function appendImage(imgData) {
+        function appendImageCard(imgData) {
 
             let imgYear = new Date(imgData.date).getFullYear();
             if (year != imgYear) {
@@ -99,7 +99,7 @@
                 : start + increment;
 
             for (let i = start; i < end && i < imageData.length; i++) {
-                appendImage(imageData[i]);
+                appendImageCard(imageData[i]);
             }
         }
 
