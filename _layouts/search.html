@@ -52,12 +52,12 @@ permalink: '{{site.search.url}}'
 
             if (friend.title && friend.title != 'notitle') {
                 let title = document.createElement('h2');
-                title.classList = 'mry-0 fs lh-default inline-block';
+                title.classList = 'mry-0 fs lh-default inline';
                 section.appendChild(title);
 
                 let linkToArticle = document.createElement('a');
                 linkToArticle.href = entry.ref;
-                linkToArticle.classList = 'no-deco inline-block';
+                linkToArticle.classList = 'no-deco';
                 linkToArticle.innerHTML = friend.title;
                 title.appendChild(linkToArticle);
             }
