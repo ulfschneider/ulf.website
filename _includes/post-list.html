@@ -92,9 +92,9 @@
         {%-assign currentTags = collections.usedSiteTags -%}
     {%- endif -%}
     {%- if currentTags.length -%}
-        <h2 class="normal fs">There are more articles. Choose a tag:</h2>
+        <h2 class="normal fs">There are more posts. Choose a tag:</h2>
         {%- include site-tags.html tag:tag-%}
     {%- else -%}
-        <a href="{{site.blog}}">There are more articles …</a>
+        <a href="{{site.blog}}">There are more posts …</a>
     {%- endif %}
 {%- endif -%}
