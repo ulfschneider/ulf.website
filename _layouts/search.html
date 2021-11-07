@@ -43,11 +43,11 @@ permalink: '{{site.search.url}}'
             let friend = friendlyMap.get(entry.ref);
 
             let article = document.createElement('article');
-            article.classList = 'mry-1 lg:bleed-left lg:flex-row-reverse lg:align-baseline';
+            article.classList = 'mry-1 md:bleed-left md:flex-row-reverse md:align-baseline';
             parent.appendChild(article);
 
             let section = document.createElement('section');
-            section.classList = 'lg:w-rg lg:flex-shrink-0';
+            section.classList = 'md:w-rg md:flex-shrink-0';
             article.appendChild(section);
 
             if (friend.title && friend.title != 'notitle') {
@@ -89,14 +89,14 @@ permalink: '{{site.search.url}}'
 
             if (friend.author || friend.date || (friend.tags.length && !friend.notags)) {
                 let aside = document.createElement('aside');
-                aside.classList = `meta block lg:fs-d1 lg:pdr-1 lg:mrr-auto ${friend.starred
+                aside.classList = `meta block md:fs-d1 md:pdr-1 md:mrl-auto md:right ${friend.starred
                     ? friend.starred
                     : ''}`;
                 article.innerHTML += ' ';
                 article.appendChild(aside);
 
                 let authorAndDate = document.createElement('span');
-                authorAndDate.classList = 'lg:block';
+                authorAndDate.classList = 'md:block';
                 aside.appendChild(authorAndDate);
 
                 if (friend.author || friend.date) {

@@ -49,9 +49,9 @@
 
     {%- assign count = count | plus: 1 -%}
 
-    <article class="mry-1 lg:bleed-left lg:flex-row-reverse lg:align-baseline">
+    <article class="mry-1 md:bleed-left md:flex-row-reverse md:align-baseline">
 
-        <section class="lg:w-rg lg:flex-shrink-0">
+        <section class="md:w-rg md:flex-shrink-0">
             {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
                 <h2 class="mry-0 fs lh-default">
                     <a href="{{p.url}}" class="no-deco">
@@ -75,8 +75,8 @@
                 <a href="{{p.url}}">Read more</a>
             {%- endif -%}
         </section>
-        <aside class="meta block lg:fs-d1 lg:pdr-1 lg:mrr-auto {{p.data.starred}}">
-            <span class="lg:block">
+        <aside class="meta block md:fs-d1 md:pdr-1 md:mrl-auto md:right {{p.data.starred}}">
+            <span class="md:block">
                 {% include author-and-date.html, author: p.data.author, date: p.date, shortdate: true %}
             </span>
             {% include tags.html tags: p.data.tags notags: p.data.notags %}
