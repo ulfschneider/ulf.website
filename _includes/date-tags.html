@@ -3,17 +3,15 @@
 {%- else -%}
     {%- assign hasdate = false%}
 {%- endif -%}
-
 {%- if tags  -%}
     {%- assign hastags = true -%}
 {%- endif -%}
-
 {%- if notags  -%}
     {%- assign hastags = false -%}
 {%- endif -%}
-{%- if author or hasdate or hastags  -%}
-    <aside class="author-date-tags meta {{starred}}">
-        {% include author-and-date.html %}
+{%- if hasdate or hastags  -%}
+    <span class="inline-block {{starred}}">
+        {% include date.html %}
         {% include tags.html %}
-    </aside>
+    </span>
 {%- endif -%}

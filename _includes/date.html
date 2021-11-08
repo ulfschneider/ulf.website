@@ -1,0 +1,7 @@
+{%- if date or page.date -%}   
+    {% if date %}
+        <time datetime="{{date | isoDate}}" class="inline-block">{{ date | humanDate }}</time>
+        {%- elsif nodate == nil and page.date  -%}
+        <time datetime="{{page.date | isoDate}}" class="inline-block">{{ page.date | humanDate }}</time>
+    {% endif %}
+{%- endif -%}

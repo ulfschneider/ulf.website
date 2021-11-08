@@ -13,19 +13,26 @@
 			<main id="main"  class="indent rg:mrt-4">
 				{%- if title != "notitle" and title != nil and notitle == nil -%}
 					<header class="mrb-2 bleed-right">
+
 						<h1 class="fs lh-default mry-0">{{ title }}</h1>
 						{%- if subtitle -%}
 							<h2 class="mr-0 normal fs lh-default">{{subtitle}}</h2>
 						{% endif %}
+						{% include author.html %}
 
-						{% include author-date-tags.html %}
+						{%- if abstract -%}
+							<div class="mrt-2">
+								{{abstract}}
+							</div>
+						{%- endif -%}
 					</header>
 				{%- endif -%}
-
 				<div {% if outline and outline != false %}class="outline"{% endif %}>
 					{{ content }}
 				</div>
-
+				<aside class="mry-2">
+					{% include date-tags.html %}
+				</aside>
 			</main>
 
 			{% include footer.html %}
