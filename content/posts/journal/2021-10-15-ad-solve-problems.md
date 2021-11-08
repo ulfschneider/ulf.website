@@ -20,7 +20,7 @@ My notes from Rich Hickey´s talk <cite><a href="https://youtu.be/f84n5oFoZBc">H
 - Background mind. Good at making connections, synthesis, strategy, abstracts, analogizes. If you want find abstraction, you have to do this kind of thinking. This is the solver of most non-trivial problems. But you can only feed it, not direct it.
 - Sleep. As we snooze, our brain is busily processing the information we have learned during the day. Sleep makes memories stronger, and it even appears to weed out irrelevant details and background information so that only the important pieces remain. Our brain also works during slumber to find hidden relations among memories and to solve problems we were working on while awake.
 - Find a 7 ± 2 components solution to not load it up. Go over and over, different orders.
-- Wait for it. At least overnight. Sometimes over months. Therefore work on mor that one thing (not interleaved within a day).
+- Wait for it. At least overnight. Sometimes over months. Therefore work on more than one thing (not interleaved within a day).
 - Eureka! Wake up working. Try it. 
 - You will be wrong. Then think of better ideas. Don´t be afraid.
 	<blockquote>When the facts change, I change my mind. What do yo do, sir?<footer>John Maynard Keynes</footer></blockquote>
