@@ -87,7 +87,7 @@ permalink: '{{site.search.url}}'
                 section.appendChild(linkToArticle);
             }
 
-            if (friend.author || friend.date || (friend.tags.length && !friend.notags)) {
+            if (friend.date || (friend.tags.length && !friend.notags)) {
                 let aside = document.createElement('aside');
                 aside.classList = `meta block md:fs-d1 md:pdr-1 md:mrl-auto md:right ${friend.starred
                     ? friend.starred
@@ -95,37 +95,34 @@ permalink: '{{site.search.url}}'
                 article.innerHTML += ' ';
                 article.appendChild(aside);
 
-                let authorAndDate = document.createElement('span');
-                authorAndDate.classList = 'md:block';
-                aside.appendChild(authorAndDate);
-
-                if (friend.author || friend.date) {
-                    authorAndDate.appendChild(document.createTextNode(' '));
-                }
-                let date = document.createElement('time');
-                date.classList = 'inline-block';
-                date.innerHTML += friend.humanDate;
-                authorAndDate.appendChild(date);
-
-                if (friend.author) {
-                    let author = document.createElement('span');
-                    authorAndDate.appendChild(author);
-                    author.innerHTML = 'by ' + friend.author;
+                if (friend.date) {
+                    let date = document.createElement('time');
+                    date.innerHTML += friend.humanDate;
+                    date.classList = 'inline-block';
+                    date.appendChild(document.createTextNode(' '));
+                    aside.appendChild(date);
                 }
 
                 if (friend.tags.length && !friend.notags) {
+                    if (friend.date) {
+                        aside.appendChild(document.createTextNode(' '));
+                    }
+                    let tags = document.createElement('span');
+                    tags.classList = "inline-block";
+                    aside.appendChild(tags);
+
                     let label = document.createElement('span');
                     label.innerHTML = 'in';
-                    aside.appendChild(document.createTextNode(' '));
-                    aside.appendChild(label);
+                    tags.appendChild(document.createTextNode(' '));
+                    tags.appendChild(label);
                     for (let tag of friend.tags) {
                         if (tag.name == '{{site.starTag}}') {
                             let tagLink = document.createElement('a');
                             tagLink.href = tag.url;
                             tagLink.innerHTML = '{{site.starTagSymbol}}';
                             tagLink.classList = "pdx-d3";
-                            aside.appendChild(document.createTextNode(' '));
-                            aside.appendChild(tagLink);
+                            tags.appendChild(document.createTextNode(' '));
+                            tags.appendChild(tagLink);
                             break;
                         }
                     }
@@ -134,8 +131,9 @@ permalink: '{{site.search.url}}'
                             let tagLink = document.createElement('a');
                             tagLink.href = tag.url;
                             tagLink.innerHTML = tag.name;
-                            aside.appendChild(document.createTextNode(' '));
-                            aside.appendChild(tagLink);
+                            tagLink.classList = "inline-block";
+                            tags.appendChild(document.createTextNode(' '));
+                            tags.appendChild(tagLink);
                         }
                     }
                 }
