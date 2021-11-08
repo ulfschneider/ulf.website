@@ -1,6 +1,7 @@
 ---
 layout: image
 title: A walk before dinner
+tags: [journal, nature]
 ---
 <figure class="bleed">
 <img src="/img/journal/IMG_1010.jpg" alt= "An orchard meadow in the evening sun.">
