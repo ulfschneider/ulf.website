@@ -89,7 +89,7 @@ permalink: '{{site.search.url}}'
 
             if (friend.date || (friend.tags.length && !friend.notags)) {
                 let aside = document.createElement('aside');
-                aside.classList = `meta block md:fs-d1 md:pdr-1 md:mrl-auto md:right ${friend.starred
+                aside.classList = `meta block md:fs-d1 md:pdr-1 md:mrl-auto md:right md:flex-column ${friend.starred
                     ? friend.starred
                     : ''}`;
                 article.innerHTML += ' ';
@@ -98,7 +98,7 @@ permalink: '{{site.search.url}}'
                 if (friend.date) {
                     let date = document.createElement('time');
                     date.innerHTML += friend.humanDate;
-                    date.classList = 'block';
+                    date.classList = 'inline-block';
                     date.appendChild(document.createTextNode(' '));
                     aside.appendChild(date);
                 }
@@ -108,7 +108,7 @@ permalink: '{{site.search.url}}'
                         aside.appendChild(document.createTextNode(' '));
                     }
                     let tags = document.createElement('span');
-                    tags.classList = "block";
+                    tags.classList = "inline-block";
                     aside.appendChild(tags);
 
                     let label = document.createElement('span');
