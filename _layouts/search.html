@@ -98,7 +98,7 @@ permalink: '{{site.search.url}}'
                 if (friend.date) {
                     let date = document.createElement('time');
                     date.innerHTML += friend.humanDate;
-                    date.classList = 'inline-block';
+                    date.classList = 'block';
                     date.appendChild(document.createTextNode(' '));
                     aside.appendChild(date);
                 }
@@ -108,7 +108,7 @@ permalink: '{{site.search.url}}'
                         aside.appendChild(document.createTextNode(' '));
                     }
                     let tags = document.createElement('span');
-                    tags.classList = "inline-block";
+                    tags.classList = "block";
                     aside.appendChild(tags);
 
                     let label = document.createElement('span');
