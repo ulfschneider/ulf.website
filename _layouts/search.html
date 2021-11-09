@@ -104,9 +104,6 @@ permalink: '{{site.search.url}}'
                 }
 
                 if (friend.tags.length && !friend.notags) {
-                    if (friend.date) {
-                        aside.appendChild(document.createTextNode(' '));
-                    }
                     let tags = document.createElement('span');
                     tags.classList = "inline-block";
                     aside.appendChild(tags);
