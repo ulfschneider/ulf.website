@@ -2,7 +2,7 @@
 title: Use Visual Studio Code in the Browser
 tags: code
 ---
-How great is that? Now we can use VS Code in the Browser by navigating to [vscode.dev](https://vscode.dev). It´s possible to create and edit documents in GitHub repositories as well as working with local files.
+How great is that? Now we can use VS Code in the Browser by navigating to [vscode.dev](https://vscode.dev). It´s possible to create and edit documents in GitHub repositories as well as working with local files. See the [announcement](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev).
 
 > You can create a new file in the web just as you would in a desktop VS Code environment, using File > New File from the Command Palette (F1).
 
