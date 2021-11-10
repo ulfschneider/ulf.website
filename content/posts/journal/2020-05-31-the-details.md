@@ -1,6 +1,5 @@
 ---
 title: The Details
-refer: Blog post by Matthias Ott
 tags: [reading, star]
 ---
 <blockquote><p>The details are not the details; they make the product.</p>
