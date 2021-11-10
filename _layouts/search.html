@@ -57,7 +57,7 @@ permalink: '{{site.search.url}}'
 
                 let linkToArticle = document.createElement('a');
                 linkToArticle.href = entry.ref;
-                linkToArticle.classList = 'no-deco inline-block';
+                linkToArticle.classList = 'no-deco block';
                 linkToArticle.innerHTML = friend.title;
                 title.appendChild(linkToArticle);
             }
@@ -89,7 +89,7 @@ permalink: '{{site.search.url}}'
 
             if (friend.date || (friend.tags.length && !friend.notags)) {
                 let aside = document.createElement('aside');
-                aside.classList = `meta block md:fs-d1 md:pdr-1 md:mrl-auto md:right md:flex-column ${friend.starred
+                aside.classList = `meta md:fs-d1 md:pdr-1 md:mrl-auto md:right md:flex-column ${friend.starred
                     ? friend.starred
                     : ''}`;
                 article.innerHTML += ' ';
