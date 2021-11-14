@@ -30,6 +30,7 @@ const processingCSS = () => {
                     '!content/**/*compose.html',
                     '_includes/**/*',
                     '_layouts/**/*',
+                    '_eleventy/**/*',
                     '_assets/js/**/*',
                     '_assets/css/customize.css'
                 ],

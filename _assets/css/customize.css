@@ -173,6 +173,10 @@ hr.footnotes-sep::after {
     vertical-align: super;
 }
 
+.footnotes-list li>p {
+    display: inline;
+}
+
 .skip-link {
     padding: var(--space-2);
     position: absolute;

@@ -8,7 +8,7 @@ const { series, watch } = require('gulp');
 
 const watcher = () => {
     watch(['_assets/fonts/**/*'], fonts);
-    watch(['_assets/css/**/*', 'content/**/*', '_includes/**/*', '_layouts/**/*'], css);
+    watch(['_assets/css/**/*', 'content/**/*', '_includes/**/*', '_layouts/**/*', '_eleventy/**/*', '_assets/js/**/*'], css);
     watch(['_assets/js/**/*'], javascript);
     watch(['_data/site.js', 'content/img/**/*'], images);
 };
