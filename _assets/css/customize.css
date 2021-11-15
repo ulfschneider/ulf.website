@@ -95,7 +95,7 @@ nav.table-of-contents>* {
 }
 
 nav.table-of-contents>ol {
-    margin-left: 0;
+    padding-left: 0;
 }
 
 nav.table-of-contents ol li::before {
