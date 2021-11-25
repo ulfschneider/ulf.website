@@ -94,16 +94,8 @@ nav.table-of-contents>* {
     margin-bottom: 0;
 }
 
-nav.table-of-contents>ol {
-    padding-left: 0;
-}
-
 nav.table-of-contents ol li::before {
     content: "";
-}
-
-.outline nav.table-of-contents>ol {
-    margin-left: var(--horizontal-rhythm);
 }
 
 .outline nav.table-of-contents ol li::before {

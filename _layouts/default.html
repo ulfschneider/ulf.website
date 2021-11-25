@@ -13,15 +13,15 @@
 
 			<main id="main"  class="indent rg:mrt-4">
 				{%- if title != "notitle" and title != nil and notitle == nil   -%}
-					<header class="mrb-2 bleed-right">
-						<h1 class="mry-0 rg:fs-4 lsp-d1">{{ title }}</h1>
+					<header class="mrb-2 bleed-right md:pdr-1">
+						<h1 class="mry-0 md:mrr-1 rg:fs-4 lsp-d1">{{ title }}</h1>
 						{%- if subtitle -%}
-							<h2 class="mr-0 normal fs-1 lh-2 caps">{{subtitle}}</h2>
+							<h2 class="mry-0 normal fs-1 lh-2 caps">{{subtitle}}</h2>
 						{% endif %}
 						{% include author.html %}
 
 						{%- if abstract -%}
-							<div class="fs-1 lh-2 mrt-2">
+							<div class="fs-1 lh-2 mrt-1">
 								{{abstract}}
 							</div>
 						{%- endif -%}
