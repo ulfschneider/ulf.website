@@ -104,6 +104,8 @@ nav.table-of-contents ol li::before {
     font-size: inherit;
     margin-top: unset;
     color: var(--meta-color);
+    background: transparent;
+    justify-content: start;
 }
 
 
