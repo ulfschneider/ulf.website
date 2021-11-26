@@ -94,6 +94,10 @@ nav.table-of-contents>* {
     margin-bottom: 0;
 }
 
+nav.table-of-contents:not(.outline nav.table-of-contents)>* {
+    padding: 0;
+}
+
 nav.table-of-contents ol li::before {
     content: "";
 }
