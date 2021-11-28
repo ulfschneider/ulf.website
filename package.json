@@ -20,7 +20,7 @@
         "Base64": "^1.1.0",
         "autoprefixer": "^9.8.8",
         "cheerio": "^1.0.0-rc.10",
-        "compose-css": "^24.1.0",
+        "compose-css": "^24.1.1",
         "concurrently": "^5.3.0",
         "cssnano": "^4.1.11",
         "dayjs": "^1.10.7",
