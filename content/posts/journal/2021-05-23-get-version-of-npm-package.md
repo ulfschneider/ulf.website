@@ -6,7 +6,7 @@ tags: code
 
 ## Getting the version of a different package
 
-The version of any npm package is in its `package.json` file. From within your JavaScript code you get access to the `package.json` of all the installed packages by using `require`. *The basic functionality of `require` is that it reads a JavaScript file, executes the file, and then proceeds to return the exports object^[https://nodejs.org/en/knowledge/getting-started/what-is-require/].* Assuming you are working from within a JavaScript file that´s located in the root directory of your package, the following snippet will provide you the contents of the file as a JSON object:
+The version of any npm package is in its `package.json` file. From within your JavaScript code you get access to the `package.json` of all the installed packages by using `require`. *The basic functionality of `require` is that it reads a JavaScript file, executes the file, and then proceeds to return the exports object^[[https://nodejs.org/en/knowledge/getting-started/what-is-require/](https://nodejs.org/en/knowledge/getting-started/what-is-require/)].* Assuming you are working from within a JavaScript file that´s located in the root directory of your package, the following snippet will provide you the contents of the file as a JSON object:
 
 <figure>
 <figcaption>Use <code>require</code> to access the contents of the <code>package.json</code>.</figcaption>
