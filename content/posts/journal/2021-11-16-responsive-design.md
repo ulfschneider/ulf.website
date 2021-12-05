@@ -3,7 +3,7 @@ title: Learn Responsive Design
 refer: <a href="https://web.dev/learn/design/">web.dev course</a> by Jeremy Keith
 tags: [courses, css, code, accessibility]
 ---
-[Learn Responsive Design](https://web.dev/learn/design/) is
+Learn Responsive Design is
 
 > A course exploring all aspects of responsive design. Learn how to make sites that look great and work well for everyone.
 
