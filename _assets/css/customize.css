@@ -106,12 +106,15 @@ nav.table-of-contents ol li::before {
     content: var(--h-counter);
     font-weight: normal;
     font-size: inherit;
-    margin-top: unset;
     color: var(--meta-color);
     background: transparent;
-    justify-content: start;
 }
 
+nav.table-of-contents:not(.outline nav.table-of-contents) ol li::before {
+   min-width: 0;
+   margin:0;
+   padding: 0;
+}
 
 /*markdown-it fitmedia*/
 
