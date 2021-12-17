@@ -76,9 +76,8 @@ nav ul li:last-child {
 }
 
 nav.table-of-contents::before {
-    content: "Content";
+    content: "Table of contents";
     display: block;
-    color: var(--meta-color);
 }
 
 nav.table-of-contents {
@@ -106,8 +105,6 @@ nav.table-of-contents ol li::before {
     content: var(--h-counter);
     font-weight: normal;
     font-size: inherit;
-    color: var(--meta-color);
-    background: transparent;
 }
 
 nav.table-of-contents:not(.outline nav.table-of-contents) ol li::before {
@@ -219,14 +216,36 @@ table.sotable caption p.indicator {
     margin-top: var(--vertical-rhythm);
 }
 
+[class*="bleed"]>img {
+    width: 100%;
+    max-height: unset;
+    height: unset;
+}
+
 @media print {
     .anchor {
         display: none;
     }
 }
 
-[class*="bleed"]>img {
-    width: 100%;
-    max-height: unset;
-    height: unset;
+@media (--mi-rg-breakpoint) {
+    .outline h2:not(table h2):before,
+    .outline h3:not(table h3):before,
+    .outline h4:not(table h4):before,
+    .outline h5:not(table h5):before,
+    .outline h6:not(table h6):before {
+        margin-left: calc(-1 * var(--space-3));
+        width: var(--space-3);
+        text-align: right;
+    }
+    ul:not(li ul):not(table ul),
+    ol:not(li ol):not(table ol) {
+        padding-left: 0;
+    }
+    li:not(table li):not(li li)::before {
+        justify-content: end;
+    }
+    dl.timeline:not(table dl.timeline) {
+        margin-left: calc(-1 * var(--horizontal-rhythm) + var(--timeline-blub-size) / 2 + 2px);
+    }
 }
