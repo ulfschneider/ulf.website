@@ -103,8 +103,6 @@ nav.table-of-contents ol li::before {
 
 .outline nav.table-of-contents ol li::before {
     content: var(--h-counter);
-    font-weight: normal;
-    font-size: inherit;
 }
 
 nav.table-of-contents:not(.outline nav.table-of-contents) ol li::before {
