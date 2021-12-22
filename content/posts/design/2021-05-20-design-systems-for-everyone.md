@@ -3,7 +3,7 @@ title: Design systems for everyone
 outline: true
 tags: [design, css, courses, star]
 ---
-Ethan Marcotte has [four new courses on design systems](https://thegymnasium.com/design-systems), available for free at Aquent Gymnasium. These are my notes about the excellent first course, *[Design systems for everyone](https://thegymnasium.com/design-systems#everyone)*.
+Ethan Marcotte has [four new courses on design systems](https://thegymnasium.com/design-systems), available for free at Aquent Gymnasium. These are my notes about the excellent first course, [<cite>Design systems for everyone</cite>](https://thegymnasium.com/design-systems#everyone).
 
 [[toc]]
 
@@ -144,7 +144,7 @@ Visit *[A design system isn´t a project. It´s a product, serving products](htt
 	- **Design systems work is never finished, they are evolving ecosystems. And that´s good!** See *[Building a visual language](https://airbnb.design/building-a-visual-language)*.
 
 ## Further Reading
-*[Design Systems](https://shop.smashingmagazine.com/products/design-systems-by-alla-kholmatova)*, by Alla Kholmatova
+[<cite>Design Systems</cite>](https://shop.smashingmagazine.com/products/design-systems-by-alla-kholmatova), by Alla Kholmatova
 
 
 
