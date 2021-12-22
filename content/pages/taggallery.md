@@ -6,6 +6,8 @@ pagination:
   alias: tag
 permalink: '{{site.images}}{{ tag }}/'
 id: blog
+bleed: '{{bleed}}'
+outline: '{{outline}}'
 nosearch: true
 title: Images
 ---

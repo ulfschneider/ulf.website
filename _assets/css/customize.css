@@ -232,23 +232,23 @@ table.sotable caption p.indicator {
 }
 
 @media (--mi-rg-breakpoint) {
-    .outline h2:not(table h2):before,
-    .outline h3:not(table h3):before,
-    .outline h4:not(table h4):before,
-    .outline h5:not(table h5):before,
-    .outline h6:not(table h6):before {
+    .outline h2:not(table h2):not(.bleed h2):not(.full-bleed h2):not(.bleed-left h2):before,
+    .outline h3:not(table h3):not(.bleed h3):not(.full-bleed h3):not(.bleed-left h3):before,
+    .outline h4:not(table h4):not(.bleed h4):not(.full-bleed h4):not(.bleed-left h4):before,
+    .outline h5:not(table h5):not(.bleed h5):not(.full-bleed h5):not(.bleed-left h5):before,
+    .outline h6:not(table h6):not(.bleed h6):not(.full-bleed h6):not(.bleed-left h6):before {
         margin-left: calc(-1 * var(--space-3));
         width: var(--space-3);
         text-align: right;
     }
-    ul:not(li ul):not(table ul),
-    ol:not(li ol):not(table ol) {
+    ul:not(li ul):not(table ul):not(.bleed ul):not(.full-bleed ul):not(.bleed-left ul),
+    ol:not(li ol):not(table ol):not(.bleed ol):not(.full-bleed ol):not(.bleed-left ol) {
         padding-left: 0;
     }
-    li:not(table li):not(li li)::before {
+    li:not(table li):not(li li):not(.bleed li):not(.full-bleed li):not(.bleed-left li)::before {
         justify-content: end;
     }
-    dl.timeline:not(table dl.timeline) {
+    dl.timeline:not(table dl.timeline):not(.bleed dl.timeline):not(.full-bleed dl.timeline):not(.bleed-left dl.timeline) {
         margin-left: calc(-1 * var(--horizontal-rhythm) + var(--timeline-blub-size) / 2 + 2px);
     }
 }

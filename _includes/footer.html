@@ -1,5 +1,5 @@
 <footer id="footer" class="full-bleed bg-neutral-5 pdx">
-	<nav class="meta-font mxw-rg mrx-auto mrt-2 pdy">
+	<nav class="meta-font {% if bleed and bleed != false%}bleed{% else %}mxw-rg{% endif %} mrx-auto mrt-2 pdy">
 		<ul class="reset mry-0">
 			{%- for p in site.footernav -%}
 				<li class="inline-block">

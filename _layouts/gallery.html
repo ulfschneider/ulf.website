@@ -6,19 +6,18 @@
     </head>
 
     <body class="gallery fs break-word bg-neutral-5">
-        <div class="miw-100 mih-100 pdx bg-base-background">
-            <div class="mrx-auto mxw-bleed mivh-100">
+        <div class="mivw-100 mivh-100 pdx bg-base-background">
+            <div class="mrx-auto {% if bleed and bleed != false %}bleed{% else%}mxw-rg{% endif%}">
                 {% include header.html %}
 
                 <main id="main"  class="indent rg:mrt-4">
-                    <header class="title mrb-2 mxw-md">
+                    <header class="title mrb-2">
                         <h1 class="mry-0 fs normal lh-default">
                             <strong>Images</strong> tagged {{tag}}</h1>
                     </header>
                     <div {% if outline and outline != false %}class="outline"{% endif %}>
                         {{ content }}
                     </div>
-
                     <div id="image-container" class="gp-2"></div>
                     <button id="load-more" class="block mrt-2 mrb-3 mrx-auto">Load more images</button>
 

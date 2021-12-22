@@ -1,5 +1,7 @@
 ---
 tagintro: emil-drawing
+bleed: true
+outline: false
 nosearch: true
 ---
 

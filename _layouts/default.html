@@ -7,7 +7,7 @@
 
 	<body class="default break-word bg-neutral-5">
 		<div class="mivw-100 mivh-100 pdx bg-base-background">
-			<div {% if bleed and bleed != false %}class="mrx-auto mxw-bleed"{% else%}class="mrx-auto mxw-rg"{% endif%}>
+			<div class="mrx-auto {% if bleed and bleed != false %}bleed{% else%}mxw-rg{% endif%}">
 
 				{% include header.html %}
 
