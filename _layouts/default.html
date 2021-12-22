@@ -6,8 +6,8 @@
 	</head>
 
 	<body class="default break-word bg-neutral-5">
-		<div class="miw-100 mih-100 pdx bg-white">
-			<div {% if bleed and bleed != false %}class="mivh-100 mrx-auto mxw-bleed"{% else%}class="mivh-100 mrx-auto mxw-rg"{% endif%}>
+		<div class="mivw-100 mivh-100 pdx bg-base-background">
+			<div {% if bleed and bleed != false %}class="mrx-auto mxw-bleed"{% else%}class="mrx-auto mxw-rg"{% endif%}>
 
 				{% include header.html %}
 
@@ -34,10 +34,8 @@
 						{% include date-tags.html %}
 					</aside>
 				</main>
-
-				{% include footer.html %}
-
 			</div>
+			{% include footer.html %}
 		</div>
 	</body>
 
