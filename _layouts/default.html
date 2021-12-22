@@ -5,38 +5,39 @@
 		{% include head.html %}
 	</head>
 
-	<body class="pdx default break-word">
+	<body class="default break-word bg-neutral-5">
+		<div class="miw-100 mih-100 pdx bg-white">
+			<div {% if bleed and bleed != false %}class="mivh-100 mrx-auto mxw-bleed"{% else%}class="mivh-100 mrx-auto mxw-rg"{% endif%}>
 
-		<div {% if bleed and bleed != false %}class="h-100 mrx-auto mxw-bleed"{% else%}class="mrx-auto mxw-rg"{% endif%}>
+				{% include header.html %}
 
-			{% include header.html %}
+				<main id="main"  class="indent rg:mrt-4">
+					{%- if title != "notitle" and title != nil and notitle == nil   -%}
+						<header class="mrb-2 bleed-right">
+							<h1 class="mry-0 rg:fs-4 lsp-d1">{{ title }}</h1>
+							{%- if subtitle -%}
+								<h2 class="mry-0 normal fs-1 lh-2 caps">{{subtitle}}</h2>
+							{% endif %}
+							{% include author.html %}
 
-			<main id="main"  class="indent rg:mrt-4">
-				{%- if title != "notitle" and title != nil and notitle == nil   -%}
-					<header class="mrb-2 bleed-right">
-						<h1 class="mry-0 rg:fs-4 lsp-d1">{{ title }}</h1>
-						{%- if subtitle -%}
-							<h2 class="mry-0 normal fs-1 lh-2 caps">{{subtitle}}</h2>
-						{% endif %}
-						{% include author.html %}
+							{%- if abstract -%}
+								<div class="fs-1 lh-2 mrt-1">
+									{{abstract}}
+								</div>
+							{%- endif -%}
+						</header>
+					{%- endif -%}
+					<div {% if outline and outline != false %}class="outline"{% endif %}>
+						{{ content }}
+					</div>
+					<aside class="mry-2">
+						{% include date-tags.html %}
+					</aside>
+				</main>
 
-						{%- if abstract -%}
-							<div class="fs-1 lh-2 mrt-1">
-								{{abstract}}
-							</div>
-						{%- endif -%}
-					</header>
-				{%- endif -%}
-				<div {% if outline and outline != false %}class="outline"{% endif %}>
-					{{ content }}
-				</div>
-				<aside class="mry-2">
-					{% include date-tags.html %}
-				</aside>
-			</main>
+				{% include footer.html %}
 
-			{% include footer.html %}
-
+			</div>
 		</div>
 	</body>
 

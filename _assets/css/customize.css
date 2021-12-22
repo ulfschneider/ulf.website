@@ -66,8 +66,8 @@ nav ul li:last-child {
 }
 
 #footer {
-position: sticky;
-  top: 100vh;
+    position: sticky;
+    top: 100vh;
 }
 
 
