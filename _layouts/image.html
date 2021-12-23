@@ -5,40 +5,40 @@
 		{% include head.html %}
 	</head>
 
-	<body class="image break-word bg-neutral-5">
-		<div class="miw-100 mih-100 pdx bg-base-background">
-			<div {% if bleed and bleed != false %}class="mrx-auto mxw-bleed mivh-100"{% else%}class="mrx-auto mxw-rg mivh-100"{% endif%}>
-				{% include header.html %}
+	<body class="default break-word bg-neutral-5 flex-column">
+		<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
 
-				<main id="main"  class="indent rg:mrt-4">
-					{%- if title != "notitle" and title != nil and notitle == nil -%}
-						<header class="mrb-2">
+			{% include header.html %}
 
-							<h1 class="fs lh-default mry-0">{{ title }}</h1>
-							{%- if subtitle -%}
-								<h2 class="mr-0 normal fs lh-default">{{subtitle}}</h2>
-							{% endif %}
-							{% include author.html %}
+			<main id="main" class="indent rg:mrt-4 mrb-2 {% if bleed and bleed != false%}bleed{% else %}mxw-rg{% endif %} mrx-auto">
 
-							{%- if abstract -%}
-								<div class="mrt-2">
-									{{abstract}}
-								</div>
-							{%- endif -%}
-						</header>
-					{%- endif -%}
-					<div {% if outline and outline != false %}class="outline"{% endif %}>
-						{{ content }}
-					</div>
-					<aside class="mry-2">
-						{% include date-tags.html %}
-					</aside>
-				</main>
+				{%- if title != "notitle" and title != nil and notitle == nil -%}
+					<header class="mrb-2">
 
-				{% include footer.html %}
+						<h1 class="fs lh-default mry-0">{{ title }}</h1>
+						{%- if subtitle -%}
+							<h2 class="mr-0 normal fs lh-default">{{subtitle}}</h2>
+						{% endif %}
+						{% include author.html %}
 
-			</div>
+						{%- if abstract -%}
+							<div class="mrt-2">
+								{{abstract}}
+							</div>
+						{%- endif -%}
+					</header>
+				{%- endif -%}
+				<div {% if outline and outline != false %}class="outline"{% endif %}>
+					{{ content }}
+				</div>
+				<aside class="mry-2">
+					{% include date-tags.html %}
+				</aside>
+			</main>
+
 		</div>
+		{% include footer.html %}
+
 	</body>
 
 </html>

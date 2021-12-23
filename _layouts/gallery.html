@@ -5,33 +5,32 @@
         {% include head.html %}
     </head>
 
-    <body class="gallery fs break-word bg-neutral-5">
-        <div class="mivw-100 mivh-100 pdx bg-base-background">
-            <div class="mrx-auto {% if bleed and bleed != false %}bleed{% else%}mxw-rg{% endif%}">
-                {% include header.html %}
+    <body class="default break-word bg-neutral-5 flex-column">
+        <div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
 
-                <main id="main"  class="indent rg:mrt-4">
-                    <header class="title mrb-2">
-                        <h1 class="mry-0 fs normal lh-default">
-                            <strong>Images</strong> tagged {{tag}}</h1>
-                    </header>
-                    <div {% if outline and outline != false %}class="outline"{% endif %}>
-                        {{ content }}
-                    </div>
-                    <div id="image-container" class="gp-2"></div>
-                    <button id="load-more" class="block mrt-2 mrb-3 mrx-auto">Load more images</button>
+            {% include header.html %}
 
-                    {%- if tag != nil -%}
-                        {% assign imageData = collections[tag] | live | post | reverse | firstImage %}
-                    {%- else -%}
-                        {% assign imageData = collections.livePosts | reverse | firstImage %}
-                    {%- endif %}
+            <main id="main" class="indent rg:mrt-4 mrb-2 {% if bleed and bleed != false%}bleed{% else %}mxw-rg{% endif %} mrx-auto">
 
-                </main>
-                {% include footer.html %}
-            </div>
+                <header class="title mrb-2">
+                    <h1 class="mry-0 fs normal lh-default">
+                        <strong>Images</strong> tagged {{tag}}</h1>
+                </header>
+                <div {% if outline and outline != false %}class="outline"{% endif %}>
+                    {{ content }}
+                </div>
+                <div id="image-container" class="gp-2"></div>
+                <button id="load-more" class="block mrt-2 mrb-3 mrx-auto">Load more images</button>
+
+                {%- if tag != nil -%}
+                    {% assign imageData = collections[tag] | live | post | reverse | firstImage %}
+                {%- else -%}
+                    {% assign imageData = collections.livePosts | reverse | firstImage %}
+                {%- endif %}
+
+            </main>
         </div>
-
+        {% include footer.html %}
     </body>
 
     <script>
