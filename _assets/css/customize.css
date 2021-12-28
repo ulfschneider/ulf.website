@@ -246,7 +246,7 @@ table.sotable caption p.indicator {
     dl.timeline:not(dl dl.timeline):not(table dl.timeline):not(.bleed dl.timeline):not(.full-bleed dl.timeline):not(.bleed-left dl.timeline) {
         margin-left: calc(-1 * var(--horizontal-rhythm) + var(--timeline-blub-size) / 2 + 2px);
     }
-    details>summary:not(details details>summary):not(table details>summary):not(.bleed details>summary):not(.full-bleed details>summary):not(.bleed-left details>summary)::before {
+    details>summary:not(table details>summary):not(.bleed details>summary):not(.full-bleed details>summary):not(.bleed-left details>summary)::before {
         margin-left: calc(-1 * var(--horizontal-rhythm));
         justify-content: end;
     }
