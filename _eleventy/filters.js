@@ -93,8 +93,16 @@ module.exports = {
                 let src = utils.srcAttr(img);
                 let alt = utils.altAttr(img);
                 let humanDate = utils.humanDate(item.date);
+                let dimensions;
+                try {
+                    dimensions = utils.getDimensions(`${site.output}${src}`);
+                } catch (e) {
+                    console.log(e);
+                }
                 result.push({
                     src: src,
+                    width: dimensions ? dimensions.width : 0,
+                    height: dimensions ? dimensions.height : 0,
                     alt: alt,
                     url: item.url,
                     title: item.data.title,

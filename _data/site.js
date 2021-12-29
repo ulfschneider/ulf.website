@@ -99,6 +99,8 @@ module.exports = {
     blog: '/blog/',
     images: '/images/',
     rss: '/feed.xml',
+    output: process.env.OUTPUT ? process.env.OUTPUT : '_site',
+    input: process.env.INPUT ? process.env.INPUT : 'content',
 
     time: new Date()
 }

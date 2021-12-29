@@ -33,7 +33,7 @@ module.exports = function(eleventyConfig) {
             includes: '_includes',
             layouts: '_layouts',
             data: '_data',
-            output: process.env.OUTPUT ? process.env.OUTPUT : '_site'
+            output: site.output
         }
     }
 }

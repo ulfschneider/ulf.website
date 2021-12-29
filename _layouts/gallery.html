@@ -10,8 +10,7 @@
 
             {% include header.html %}
 
-            <main id="main" class="indent mry-2 rg:mrt-4 trans-mry {% if bleed and bleed != false%}bleed{% else %}mxw-rg{% endif %} mrx-auto">
-
+            <main id="main" class="indent {% if bleed and bleed != false%}bleed{% else %}mxw-rg{% endif %} mrx-auto">
                 <header class="title mry-2 rg:mry-4 trans-mry">
                     <h1 class="mry-0 fs normal lh-default">
                         <strong>Images</strong> tagged {{tag}}</h1>
@@ -63,9 +62,14 @@
 
             let img = document.createElement('img');
             img.src = imgData.src;
-            img.alt = imgData.alt;
+            img.alt = imgData.alt;        
             img.classList = 'fit-contain mxh-6 md:mxh-5';
             img.setAttribute('loading', 'lazy');
+            if (imgData.width && imgData.height) {
+                img.setAttribute('width', imgData.width);
+                img.setAttribute('height', imgData.height);
+                img.setAttribute('style', `aspect-ratio:${imgData.width}/${imgData.height}`);
+            }
             anchor.appendChild(img);
 
             if (imgData.title) {

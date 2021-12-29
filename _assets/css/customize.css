@@ -49,7 +49,6 @@ input[type=reset] {
 }
 
 img {
-    background-color: var(--neutral-5);
     max-height: max(80vh, var(--space-6));
 }
 

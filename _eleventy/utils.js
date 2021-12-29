@@ -6,7 +6,7 @@ const markdownItFitMedia = require('markdown-it-fitmedia');
 const markdownItScrollTable = require('markdown-it-scrolltable');
 const markdownItAttrs = require('markdown-it-attrs');
 const markdownItFootnote = require('markdown-it-footnote');
-
+const sizeOf = require('image-size');
 const cheerio = require('cheerio');
 const stripHtml = require('string-strip-html');
 const fs = require('fs');
@@ -74,6 +74,10 @@ module.exports = {
         return this.getAttr(html, 'height');
     },
 
+    getDimensions: function(src) {
+        return sizeOf(src);
+    },
+
     isLiveItem: function(item) {
         const now = new Date();
         return item.date <= now &&
@@ -82,7 +86,7 @@ module.exports = {
     },
 
     isPost: function(item) {
-        return item.inputPath.startsWith('./content/posts/');
+        return item.inputPath.startsWith(`./${site.input}/posts/`);
     },
 
     tagUrl: function(tag) {
