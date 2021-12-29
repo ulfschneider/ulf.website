@@ -17,7 +17,11 @@
 						{%- if subtitle -%}
 							<h2 class="mry-0 normal fs-1 lh-2 caps">{{subtitle}}</h2>
 						{% endif %}
-						{% include author.html %}
+						{%- if refer -%}
+							<div class="mrt-1">{{refer}}</div>
+							{%- elsif author -%}
+							<div class="mrt-1">{{author}}</div>
+						{%- endif -%}
 
 						{%- if abstract -%}
 							<div class="fs-1 lh-2 mrt-1">
