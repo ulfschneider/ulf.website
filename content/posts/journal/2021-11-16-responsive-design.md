@@ -1,7 +1,7 @@
 ---
 title: Learn Responsive Design
 refer: <a href="https://web.dev/learn/design/">web.dev course</a> by Jeremy Keith
-tags: [courses, css, code, accessibility]
+tags: [courses, css, code, accessibility, star]
 ---
 Learn Responsive Design is
 
