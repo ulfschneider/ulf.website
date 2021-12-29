@@ -20,10 +20,6 @@
     --link-focus-color: var(--primary-d1);
 }
 
-* {
-    transition: .15s margin-top ease, .15s margin-bottom ease;
-}
-
 p:not(blockquote p),
 td,
 ul,

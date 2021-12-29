@@ -1,6 +1,6 @@
-<footer id="footer" class="flex-shrink-0 full-bleed bg-neutral-5 pdx">
+<footer id="footer" class="flex-shrink-0 full-bleed bg-neutral-5 pdx pdy-1">
 	<nav class="meta-font {% if bleed and bleed != false%}bleed{% else %}mxw-rg{% endif %} mrx-auto">
-		<ul class="reset mry">
+		<ul class="reset mr-0">
 			{%- for p in site.footernav -%}
 				<li class="inline-block">
 					{%- if id == p.id and id -%}
@@ -14,7 +14,7 @@
 			{%- endfor -%}
 		</ul>
 		{%- if site.backToTop and site.backToTop.id %}
-			<div id="back-to-start" class="mrt mrb-1 right no-wrap bleed-right" style="display:none;" >
+			<div id="back-to-start" class="mrt right no-wrap bleed-right" style="display:none;" >
 				<a  href="#{{site.backToTop.id}}">
 					{%- if site.backToTop.label -%}
 						{{site.backToTop.label}}
