@@ -251,3 +251,18 @@ table.sotable caption p.indicator {
         justify-content: end;
     }
 }
+
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before,
+ul,
+ol,
+li::before,
+dl,
+dt,
+dd,
+details>summary::before {
+    transition: var(--transition-duration) margin-left var(--transition-function), var(--transition-duration) padding-left var(--transition-function), var(--transition-duration) background-color var(--transition-function);
+}
