@@ -1,9 +1,8 @@
 const { dest, src } = require('gulp');
 const changed = require('gulp-changed');
-
-const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
+const site = require('../_data/site.js');
 const SOURCE = ['_assets/fonts/**/*'];
-const DEST = `${OUTPUT}/fonts/`;
+const DEST = `${site.output}/fonts/`;
 
 const processingFonts = () => {
     console.log(`Copying fonts from ${SOURCE} into ${DEST}`);

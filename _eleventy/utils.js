@@ -230,7 +230,8 @@ module.exports = {
             .use(markdownItTableOfContents)
             .use(markdownItDefList)
             .use(markdownItFitMedia, {
-                imgDir: './content'
+                imgDir: './content',
+                imgSizeHint: true
             })
             .use(markdownItScrollTable)
             .use(markdownItAttrs)

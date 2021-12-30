@@ -6,10 +6,11 @@ const postcssCustomProperties = require('postcss-custom-properties');
 const postcssCalc = require('postcss-calc');
 const postcssPurgeCSS = require('@fullhuman/postcss-purgecss');
 const cssNano = require('cssnano');
+const site = require('../_data/site.js');
 
-const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
+
 const SOURCE = ['_assets/css/main.css', '_assets/css/compose.css'];
-const DEST = `${OUTPUT}/css/`;
+const DEST = `${site.output}/css/`;
 
 const processingCSS = () => {
     console.log(`Processing CSS from ${SOURCE} into ${DEST}`);

@@ -1,6 +1,5 @@
 ---
 title: Design systems for everyone
-outline: true
 tags: [design, css, courses, star]
 ---
 Ethan Marcotte has [four new courses on design systems](https://thegymnasium.com/design-systems), available for free at Aquent Gymnasium. These are my notes about the excellent first course, [<cite>Design systems for everyone</cite>](https://thegymnasium.com/design-systems#everyone).

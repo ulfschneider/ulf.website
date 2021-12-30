@@ -1,6 +1,5 @@
 ---
 title: Six ways to make your site more accessible
-outline: true
 tags: [accessibility, star]
 ---
 [Hidde de Vries](https://hiddedevries.nl/en/) made this enumeration in this [talk](https://talks.hiddedevries.nl/KhyueW/six-ways-to-make-your-site-more-accessible). Here is a quick summary.

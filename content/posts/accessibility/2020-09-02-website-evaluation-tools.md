@@ -1,6 +1,5 @@
 ---
-title: Website evaluation tools
-outline: true
+title: Website evaluation tool
 tags: accessibility
 ---
 [[toc]]

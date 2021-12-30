@@ -1,7 +1,6 @@
 ---
 title: Back to Top
 abstract: A Back to Top link helps users navigate to the top (start) of long pages.
-outline: true
 tags: [accessibility, css, code]
 ---
 

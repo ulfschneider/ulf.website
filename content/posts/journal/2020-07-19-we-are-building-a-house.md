@@ -1,6 +1,5 @@
 ---
 title: We are building a house
-outline: true
 bleed: true
 permalink: /journal/{{ page.fileSlug }}/
 tags: journal

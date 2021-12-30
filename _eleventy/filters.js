@@ -115,6 +115,28 @@ module.exports = {
         return result
     },
 
+    imgSizeHint: function(src) {
+        try {
+            dimensions = utils.getDimensions(`${site.output}${src}`);
+            if (dimensions.height > 0 && dimensions.width > 0) {
+                return `width="${dimensions.width}" height="${dimensions.height}"`;
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    },
+
+    imgAspectRatio: function(src) {
+        try {
+            dimensions = utils.getDimensions(`${site.output}${src}`);
+            if (dimensions.height > 0 && dimensions.width > 0) {
+                return `aspect-ratio:${dimensions.width}/${dimensions.height};`;
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    },
+
     humanDate: function(d) {
         return utils.humanDate(d);
     },

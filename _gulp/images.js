@@ -1,12 +1,11 @@
 const { dest, src } = require('gulp');
 const sharp = require('sharp');
 const through = require('through2');
-
-const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
-const SOURCE = 'content/img/**/*';
-const DEST = `${OUTPUT}/img/`;
-
 const site = require('../_data/site.js');
+
+const SOURCE = 'content/img/**/*';
+const DEST = `${site.output}/img/`;
+
 
 const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;

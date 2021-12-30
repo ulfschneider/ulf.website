@@ -1,6 +1,5 @@
 ---
 title: My approach to accessibility
-outline: true
 tags: accessibility
 ---
 <blockquote><p>The power of the Web is in its universality.

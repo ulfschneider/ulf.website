@@ -1,9 +1,9 @@
 const { dest, src } = require('gulp');
 const changed = require('gulp-changed');
 const minify = require('gulp-minify');
-const OUTPUT = process.env.OUTPUT ? process.env.OUTPUT : '_site';
+const site = require('../_data/site.js');
 const SOURCE = ['_assets/js/**/*.js'];
-const DEST = `${OUTPUT}/js/`;
+const DEST = `${site.output}/js/`;
 
 const processingJavascript = () => {
     console.log(`Processing javascript from ${SOURCE} into ${DEST}`);

@@ -1,10 +1,10 @@
 const del = require('del');
+const site = require('../_data/site.js');
 
-const OUTPUT = [process.env.OUTPUT ? process.env.OUTPUT : '_site'];
 
 const clean = () => {
-    console.log(`Cleaning up ${OUTPUT}`);
-    return del(OUTPUT);
+    console.log(`Cleaning up ${site.output}`);
+    return del(site.output);
 };
 
 module.exports = clean;

@@ -1,6 +1,5 @@
 ---
 title: Indicating the focused element
-outline: true
 tags: [accessibility, css, code]
 ---
 

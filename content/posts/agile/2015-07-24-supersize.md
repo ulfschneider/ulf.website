@@ -1,7 +1,6 @@
 ---
 title:  Supersize
 subtitle: Do not let scaled agile be your scaled snake oil
-outline: true
 abstract: We have to scale agile when more than one team is required to get a thing delivered. Each team, not more than ten members. There will be adjacent topics which belong to an agile organization, but when we focus just on delivery, that´s it, multiple teams working on one thing.
 ---
 
