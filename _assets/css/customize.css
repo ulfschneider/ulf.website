@@ -77,6 +77,7 @@ nav ul li:last-child {
 nav.table-of-contents::before {
     content: "Table of contents";
     display: block;
+    font-weight: bold;
 }
 
 nav.table-of-contents {
