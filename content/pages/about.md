@@ -8,7 +8,7 @@ id: about
 <img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-900.jpg" alt="Portrait of Ulf Schneider">
 </figure>
 
-Hi, my name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently working for the software organization of Diebold Nixdorf in Paderborn, Germany. My path through 25 years of software went like this:
+Hi, my name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently working for the software organization of Diebold Nixdorf in Paderborn, Germany. My path through 30 years of software went like this:
 
 <dl class="timeline">
 <dt>1991 – 1996 University</dt>
