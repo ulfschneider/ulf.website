@@ -1,6 +1,6 @@
 {%- if hero != nil and hero != ""-%}
     <figure class="full-bleed pdx mry-0 ">
-        <img src="{{hero}}" class="fit-cover fit-center" style="max-height:66vh;">
+        <img src="{{hero}}" class="fit-cover fit-center" style="max-height:66vh;" loading="eager">
         {%- if herocaption and herocaption != "" -%}
         <figcaption class="small mrl-auto right">{{herocaption}}</figcaption>
         {%- endif -%}
