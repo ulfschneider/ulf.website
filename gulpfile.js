@@ -3,6 +3,7 @@ const fonts = require('./_gulp/fonts.js');
 const images = require('./_gulp/images.js');
 const css = require('./_gulp/css.js');
 const javascript = require('./_gulp/javascript.js');
+const root = require('./_gulp/root.js');
 
 const { series, watch } = require('gulp');
 
@@ -11,8 +12,9 @@ const watcher = () => {
     watch(['_assets/css/**/*', 'content/**/*', '_includes/**/*', '_layouts/**/*', '_eleventy/**/*', '_assets/js/**/*'], css);
     watch(['_assets/js/**/*'], javascript);
     watch(['_data/site.js', 'content/img/**/*'], images);
+    watch(['_root/**/*'], root);
 };
 
-exports.default = series([clean, fonts, javascript, css, images]);
+exports.default = series([clean, fonts, javascript, css, images, root]);
 
 exports.watch = watcher;

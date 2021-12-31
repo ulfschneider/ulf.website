@@ -22,7 +22,6 @@ module.exports = function(eleventyConfig) {
     ]);
 
     eleventyConfig.addTransform('htmlmin', transforms.minifyHtml);
-    eleventyConfig.addPassthroughCopy({ '_root': '/' });
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
 
     eleventyConfig.addPlugin(rss);
