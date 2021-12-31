@@ -1,9 +1,8 @@
 ---
 title: Fonts Knowledge
 tags: type
-refer: <a href="https://fonts.google.com/knowledge">Google library of original guides to the world of typography</a>
 ---
-The Google Fonts Knowledge library contains articles about
+The [<cite>Google Fonts Knowledge</cite>](https://fonts.google.com/knowledge) library of original guides to the world of typography contains articles about
 
 - [Introducing type](https://fonts.google.com/knowledge/introducing_type)
 - [Choosing type](https://fonts.google.com/knowledge/choosing_type)

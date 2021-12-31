@@ -6,7 +6,7 @@ Uniwidth is not the same as monospace! Monospace is non-proportional, meaning ea
 
 A uniwidth typeface allows using weights to indicate different label states  – without altering the amount of space the label occupies inside of the layout. This is a valuable feature for [functional text](/2021-02-07-how-to-pick-a-typeface-for-interface-text/) in screen design, like for headers and menu bars.
 
-Lisa Staudingers article *[Uniwidth typefaces for interface design](https://uxdesign.cc/uniwidth-typefaces-for-interface-design-b6e8078dc0f7)* is an excellent guide into the topic. In addition, Lisa provides many links for uniwidth typefaces, like for example 
+Lisa Staudingers article [<cite>Uniwidth typefaces for interface design</cite>](https://uxdesign.cc/uniwidth-typefaces-for-interface-design-b6e8078dc0f7) is an excellent guide into the topic. In addition, Lisa provides many links for uniwidth typefaces, like for example 
 
 - [Recursive](https://www.recursive.design),
 - [Golos UI](https://www.paratype.com/fonts/pt/golos-ui), and
