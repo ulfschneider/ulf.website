@@ -15,6 +15,6 @@ const watcher = () => {
     watch(['_root/**/*'], root);
 };
 
-exports.default = series([clean, fonts, javascript, css, images, root]);
+exports.default = series([clean, root, fonts, javascript, css, images]);
 
 exports.watch = watcher;

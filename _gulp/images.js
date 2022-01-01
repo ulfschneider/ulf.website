@@ -1,9 +1,10 @@
 const { dest, src } = require('gulp');
 const sharp = require('sharp');
+const svgo = require('gulp-svgo');
 const through = require('through2');
 const site = require('../_data/site.js');
 
-const SOURCE = 'content/img/**/*';
+const SOURCE = `${site.input}/img/**/*`;
 const DEST = `${site.output}/img/`;
 
 
@@ -94,6 +95,7 @@ const processingImages = () => {
 
     return src(SOURCE, { nodir: true })
         .pipe(through.obj(imageTransformer))
+        .pipe(svgo())
         .pipe(dest(DEST));
 };
 
