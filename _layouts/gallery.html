@@ -6,10 +6,8 @@
     </head>
 
     <body class="default break-word bg-neutral-5 flex-column">
+        {% include header.html %}
         <div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
-
-            {% include header.html %}
-
             <main id="main" class="indent mrb-2 mrt-3 {% if bleed and bleed != false%}bleed{% else %}mxw-rg{% endif %} mrx-auto">
                 <header class="title mry-3">
                     <h1 class="mry-0 fs normal lh-default">
@@ -62,7 +60,7 @@
 
             let img = document.createElement('img');
             img.src = imgData.src;
-            img.alt = imgData.alt;        
+            img.alt = imgData.alt;
             img.classList = 'fit-contain mxh-6 md:mxh-5';
             img.setAttribute('loading', 'lazy');
             if (imgData.width && imgData.height) {

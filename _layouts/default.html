@@ -6,12 +6,12 @@
 	</head>
 
 	<body class="default break-word bg-neutral-5 flex-column">
+		{% include header.html %}
 		<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
-			{% include header.html %}			
 			{% include hero.html %}
 			<main id="main" class="indent mrb-2 mrt-3 {% if bleed and bleed != false%}bleed{% else %}mxw-rg{% endif %} mrx-auto">
 				{%- if title != "notitle" and title != nil and notitle == nil   -%}
-				
+
 					<header class="title mry-3 bleed-right">
 						<h1 class="mry-0 rg:fs-4 lsp-d1">{{ title }}</h1>
 						{%- if subtitle -%}
@@ -39,7 +39,6 @@
 			</main>
 		</div>
 		{% include footer.html %}
-
 	</body>
 
 </html>
