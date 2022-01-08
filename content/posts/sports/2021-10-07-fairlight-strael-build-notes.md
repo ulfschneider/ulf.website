@@ -2,6 +2,7 @@
 title: Fairlight Strael Build Notes
 tags: sports
 abstract: I´m building up a new road bike.<br>It´s based on a Fairlight Strael steel frame. 
+draft: true
 ---
 [[toc]]
 
