@@ -2,7 +2,9 @@ const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItTableOfContents = require('markdown-it-toc-done-right');
 const markdownItDefList = require('markdown-it-deflist');
+const markdownItContainer = require('markdown-it-container');
 const markdownItFitMedia = require('markdown-it-fitmedia');
+const markdownItTrimmer = require('markdown-it-trimmer');
 const markdownItScrollTable = require('markdown-it-scrolltable');
 const markdownItAttrs = require('markdown-it-attrs');
 const markdownItFootnote = require('markdown-it-footnote');
@@ -220,6 +222,7 @@ module.exports = {
                 linkify: false,
                 typographer: true
             })
+            .use(markdownItContainer)
             .use(markdownItAnchor, {
                 permalink: true,
                 permalinkClass: 'anchor',
@@ -229,12 +232,14 @@ module.exports = {
             })
             .use(markdownItTableOfContents)
             .use(markdownItDefList)
-            .use(markdownItFitMedia, {
-                imgDir: `./${site.input}`,
-            })
             .use(markdownItScrollTable)
             .use(markdownItAttrs)
-            .use(markdownItFootnote);
+            .use(markdownItFootnote)
+            .use(markdownItTrimmer)
+            .use(markdownItFitMedia, {
+                imgDir: `./${site.input}`,
+            });
+
 
         return mdlib;
     },

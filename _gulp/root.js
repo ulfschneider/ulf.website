@@ -4,7 +4,7 @@ const replace = require('gulp-string-replace');
 const gulpif = require('gulp-if');
 const site = require('../_data/site.js');
 const SOURCE = ['_root/**/*'];
-const DEST = `${site.output}`;
+const DEST = `${site.output}/`;
 
 const isManifest = (file) => {
     console.log(`Writing ${DEST}${file.relative}`);
