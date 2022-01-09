@@ -9,10 +9,7 @@ A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-trimmer) to tri
 
 ## Opening list items `<li>`
 
-After opening list items with `<li>` , any whitespace, including new lines, is removed. 
-This can be useful when you are styling your list items with `li::before` and use display settings of `inline` or `inline-grid` (as an example). 
-In such scenarios a whitespace between the opening `<li>` tag and the following content would always be rendered as an additional space
-by the browser, which is something you typically wouldn´t want.
+After opening list items with `<li>` , any whitespace, including new lines, is removed. This can be useful when you are styling your list items with `li::before` and use display settings of `inline` or `inline-grid` (as an example). In such scenarios a whitespace between the opening `<li>` tag and the following content would always be rendered as an additional space by the browser, which is something you typically wouldn´t want.
 
 HTML written inside of your markdown text will not be affected by this plugin - only markdown output rendering is altered.
 
