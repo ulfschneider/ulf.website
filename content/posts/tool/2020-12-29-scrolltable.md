@@ -96,9 +96,7 @@ var markdownIt = require('markdown-it');
 var markdownItScrollTable = require('markdown-it-scrolltable');
 
 markdownIt({
-        html: true,
-        linkify: true,
-        typographer: true,
+        html: true
     })
     .use(markdownItScrollTable);
 {% endhighlight %}
