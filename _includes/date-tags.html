@@ -1,7 +1,10 @@
-{% assign isPosted = date or page.date and nodate == nil %}
-{% assign isUpdated = updated or page.updated and nodate == nil %}
-
-{%- if isPosted or isUpdated -%}
+{%- if date or page.date and nodate == nil %}
+{%- assign hasDate = true -%}
+{%- endif -%}
+{%- if updated or page.updated and nodate == nil %}
+{%- assign isUpdated = true -%}
+{%- endif -%}
+{%- if hasDate or isUpdated -%}
     {%- assign hasdate = true -%}
 {%- else -%}
     {%- assign hasdate = false%}
@@ -14,7 +17,10 @@
 {%- endif -%}
 {%- if hasdate or hastags  -%}
     <span class="inline-block {{starred}}">        
-        {% include date.html %}
-        {% include tags.html %}
+        {%- include date.html -%}
+        {%- if hastags and hasdate or isUpdated -%}
+        <span>, </span>
+        {%- endif -%}
+        {%- include tags.html -%}
     </span>
 {%- endif -%}
