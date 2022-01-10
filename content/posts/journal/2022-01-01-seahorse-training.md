@@ -1,7 +1,6 @@
 ---
 title: Training materials for the seahorse badge
 tags: journal
-layout: image
 updated: 2022-01-10
 ---
 <figure>
