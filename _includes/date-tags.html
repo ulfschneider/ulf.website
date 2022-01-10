@@ -10,7 +10,7 @@
     {%- assign hastags = false -%}
 {%- endif -%}
 {%- if hasdate or hastags  -%}
-    <span class="inline-block {{starred}}">
+    <span class="inline-block {{starred}}">        
         {% include date.html %}
         {% include tags.html %}
     </span>
