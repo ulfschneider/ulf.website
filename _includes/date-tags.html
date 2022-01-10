@@ -1,4 +1,7 @@
-{%- if page.date and nodate == nil -%}
+{% assign isPosted = date or page.date and nodate == nil %}
+{% assign isUpdated = updated or page.updated and nodate == nil %}
+
+{%- if isPosted or isUpdated -%}
     {%- assign hasdate = true -%}
 {%- else -%}
     {%- assign hasdate = false%}
