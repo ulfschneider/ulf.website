@@ -43,8 +43,7 @@ pre code {
 button,
 input[type=submit],
 input[type=reset] {
-    transition: color .1s ease-out;
-    transition: background-color .1s ease-out;
+    transition: color var(--transition-duration) ease-out, background-color var(--transition-duration) ease-out;
 }
 
 img {
@@ -263,5 +262,5 @@ dl,
 dt,
 dd,
 details>summary::before {
-    transition: var(--transition-duration) margin-left var(--transition-function), var(--transition-duration) padding-left var(--transition-function), var(--transition-duration) background-color var(--transition-function);
+    transition: var(--transition-duration) margin-left var(--transition-function), var(--transition-duration) padding-left var(--transition-function);
 }

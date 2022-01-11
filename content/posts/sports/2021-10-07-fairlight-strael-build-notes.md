@@ -61,18 +61,108 @@ It took me four years from there to the point of ordering a Strael frame in late
 - **The versatility:** Whether it´s the CNC machined replaceable dropout design, the cable mounting guides, the bottle mounts for three bottles, internal light cable routing for dynamo lights (drive and non-drive side), internal DI2 routing, or 36mm tyre clearance: it makes the bike very adjustable to all sorts of play. There are also mudguard eyelets, which I think I will not use, but for some it might be a huge advantage.
 - **The look and finish:** You can see each tube and how it´s designed to function. Everything is at display. There is no bling bling just for the sake of it. The frame has a timeless look. I like the *putty* frame color and – new to the Strael 3.0 – the Anraed fork in frame color. The Fairlight logo is beautiful too.
 
-There is one thing left, *the weight of a steel frame.* The frame of the current Strael 3.0 weighs around 2200g, that´s including bolts, rear axle and dropout inserts, but without the fork. Say, a modern first class carbon frame will weigh under 1000g, then the Strael frame is *at least* 1200g heavier than a carbon frame. For me it was not something to easily take without consideration, but all the advantages from above outweight the weight, I believe.
+There is one thing left, *the weight of a steel frame.* The frame of the current Strael 3.0 weighs around 2200g, that´s including bolts, rear axle and dropout inserts, but without the fork. Say, a modern first class carbon frame will weigh under 1000g, then the Strael frame is *at least* 1200g heavier than a carbon frame. For me it was not something to easily take without consideration, but all the advantages from above outweigh the weight in my view.
 
 ## The groupset
 
-My original plan was to have a mechanical groupset on the bike because I dislike taking care of proper battery charging just to shift gears. Also the environmental impact of batteries is something I prefer to avoid. For the very long term perspective there is also a reliability drawback of electronic shifting: Would a 15 year old electronic groupset still perform as well as a 15 year old mechanical groupset? At least the battery (or batteries) need to be replaced. During touring, you have a chance to repair a mechanical groupset by yourself. Forget about that with an electronic groupset.
+My original plan was to have a mechanical groupset on the bike because I dislike taking care of proper battery charging just to shift gears. Also the environmental impact of batteries is something I prefer to avoid. For the very long term perspective there might be a reliability drawback of electronic shifting: Would a 15 year old electronic groupset still perform as well as a 15 year old mechanical groupset? At least the battery (or batteries) need to be replaced. The derailleurs of electronic groupsets are much more complex than mechanical ones, so there is a greater chance of something breaking. When touring, you have a chance to repair a mechanical groupset by yourself. Forget about that with an electronic groupset.
 
-But, with Shimano presenting their new Dura Ace and Ultegra groupsets in 2021, all current first tier and second tier groupsets are shifting electronically, and nothing else. It seems there is no path into the future for mechanical shifting anymore. Electronic shifting has become faster, more accurate, and more comfortable than mechanical shifting. The rider experience is improved if everything works well – and sure, things work well most of the time. But to me not everything about electronic shifting is just positive. I started thinking about electronic groupsets. 
+With Shimano presenting their new Dura Ace and Ultegra groupsets in 2021, the current first tier and second tier groupsets of Shimano and SRAM are shifting electronically, and nothing else. It seems there is no path into the future for mechanical shifting anymore. Electronic shifting has become faster, more accurate, and more comfortable than mechanical shifting. The rider experience is improved if everything works well – and sure, things work well most of the time. 
 
-- SRAM´s shifting is electronically and wireless. The bike will only need brake hoses and no cables for shifting. It´s quick to set up and the gearing range is absolutely interesting, with smaller chainrings front and a smallest sprocket on the cassette with 10 tooths, which makes a broader gearing range while riding more often on the big chainring, which leads to less changing gears on the front. SRAM has been a huge innovator in the bike industry and when they bring something new it´s always interesting to look at it. I like almost everything about their groupsets, except, you have to take care of the charging status of four batteries. Each derailleur has its own battery, which should last for 400 km of riding and a battery can be charged within 60 minutes. In addition, each brake lever has a CR2032 battery to be able to send the wireless signals to the derailleurs. The shifter batteries should last for two years. Four batteries with each one a different charging status is something that scares me off. On the other hand, replacing a battery is super quick and probably carrying a replacement part on longer rides is doable.
-- Shimano´s approach is still mostly wired. There is a central battery that will be placed inside of the seattube, which hides away and protects the battery. The both derailleurs are wired to the battery and a fully charged system would allow for around 1000 km of riding. There is the option to wire the brake levers with the battery, which I clearly prefer because then there´s only one battery in the system with a clear charging status. The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which add´s two more batteries of course and makes shifting a little bit slower, from what I´ve heard. Shifting of SRAM is good but shifting of Shimao works better, no matter if wireless or wired. It´s fastest and most accurate - Shimano is the benchmark in this field. 
-- Campagnolo has never been an option for me, because I dislike their brake lever ergonomics.
+I started thinking about electronic groupsets.
 
+### Electronic shifting 
+
+- **SRAM´s eTap AXS** shifting is wireless. The bike will only need brake hoses and no cables for shifting. It´s quick to set up and the gearing range is absolutely interesting, with smaller chainrings front and a small 10 teeth sprocket on the cassette, which makes a broader gearing range. The smaller chainrings will lead to riding more often on the big chainring, which leads to less changing gears on the front. SRAM has been a huge innovator in the bike industry and when they bring something new it´s always interesting to look at it. I like almost everything about their groupsets, except, you have to take care of the charging status of four batteries. Each derailleur has its own battery, which should last for 400 km of riding. A battery can be charged within 60 minutes and for that reason the battery will be removed from the bike and put into a charging cradle. Keep in mind, each derailleur has its own battery, they are both the same, so they can be interchanged, but there are two of them. In addition, each brake lever has a CR2032 battery to be able to send the wireless signals to the derailleurs. The shifter batteries should last for two years. Four batteries with each one a different charging status is something that scares me off. On the other hand, replacing a battery is super quick and because they are small and of low weight, carrying a replacement part on longer rides is doable.
+- **Shimano´s Di2** shifting approach is still mostly wired. There is a central battery that will be placed inside of the seatpost, which hides away and protects the battery. Both derailleurs are wired to the battery and a fully charged system would allow for around 1000 km of riding. Even if it´s less or more than 1000 km, the Di2 battery will allow to ride at least double as far than the eTap AXS batteries before charging is required. To charge the battery, the rear dearailleur needs to get wired to a power supply, which means the entire bike needs to be near a power supply. There is the option to wire the brake levers with the central battery, which I prefer because then there´s only one battery in the system with a clear charging status. This option is claimed to even prolongue battery life and speed up shifting. The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which add´s two more batteries, shortens life of the central battery, and it makes shifting slower. Shifting of SRAM is good but shifting of Shimano works better, no matter if wireless or wired. While each system is a joy to use, Shimano is the fastest and most accurate. 
+- **Campagnolo** has never been an option for me, because I dislike their brake lever ergonomics.
+
+> When deciding for an electronic shifting system, I lean towards Shimano for the following reasons: Di2 can be set up to have a single central battery for the entire system, which makes it easy to have a clear charging status. The battery has double the capacity of the SRAM batteries, and Shimano shifts faster and more accurate.
+
+### Weight
+
+In the below table I´m considering shifters and brakes, derailleurs, batteries, cassette and chain. I do not include the crankset, because I will use a different one.
+
+<div class="full-bleed pdx">
+<table class="mrx-auto">
+<caption>
+<strong>Weight comparison of SRAM and Shimano electronic groupsets</strong>
+<p>Weights are provided in gram. Sources of data:</p>
+<ul>
+<li>Di2 Dura Ace: <a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html">Shimano Website</a></li>
+<li>Di2 Ultegra: <a href="https://bike.shimano.com/en-US/product/component/ultegra-r8100.html">Shimano Website</a></li>
+<li>eTap AXS Red: <a href="https://bikerumor.com/sram-red-etap-axs-wireless-road-bike-group-first-ride-review-actual-weights/">Bikerumor Website</a></li>
+<li>eTap AXS Force: <a href="https://bikerumor.com/hands-on-actual-weight-of-the-new-sram-force-etap-axs-2x12-road-group/">Bikerumor Website</a></li>
+</ul>
+For the weight of Shimano´s brake hoses and their electronic wiring I found some data on <a href="https://www.cyclingweekly.com/products/shimano-dura-ace-9200-12-speed-semi-wireless-groupset-launched">Cyclingweekly</a>. Those weights are separately added to the figures.
+</caption>
+<thead>
+<tr>
+<th>Groupset</th>
+<th>Total</th>
+<th>Shifters</th>
+<th>Calipers</th>
+<th>Front derailleur</th>
+<th>Rear derailleur</th>
+<th>Cassette</th>
+<th>Chain</th>
+<th>Battery</th>
+</tr>
+</thead>
+<tbody class="no-wrap">
+<tr>
+<td>Di2 Dura Ace</td>
+<td>1482.5</td>
+<td>350</td>
+<td>230 + 60 /+ hose</td>
+<td>96</td>
+<td>215</td>
+<td>223 /11-30</pre></td>
+<td>242 /XTR</td>
+<td>52 + 14.5 /+ wiring</td>
+</tr>
+<tr>
+<td>Di2 Ultegra</td>
+<td>1714.5</td>
+<td>391</td>
+<td>282 + 60 /+ hose</td>
+<td>110</td>
+<td>262</td>
+<td>291 /11-30</pre></td>
+<td>252 /XT</td>
+<td>52 + 14.5 /+ wiring</td>
+</tr>
+<tr>
+<td>eTap AXS Red</td>
+<td>1647</td>
+<td>466</td>
+<td>316 /w. hose</td>
+<td>165 /w. battery</td>
+<td>247 /w. battery</td>
+<td>211 /10-33</td>
+<td>242 /assumed</td>
+<td>0</td>
+</tr>
+<tr>
+<td>eTap AXS Force</td>
+<td>1871</td>
+<td>476</td>
+<td>346 /w. hose</td>
+<td>199 /w. battery</td>
+<td>325 /w. battery</td>
+<td>266 /10-33</td>
+<td>259</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+ 
+
+https://www.theproscloset.com/blogs/news/di2-vs-axs-guide
+https://www.cyclingweekly.com/products/shimano-dura-ace-r9200-v-ultegra-r8100-what-are-the-key-differences
+
+### Cost
 
 
 ## The crankset
@@ -86,6 +176,10 @@ But, with Shimano presenting their new Dura Ace and Ultegra groupsets in 2021, a
 ## The stem, handle bars and tape
 
 ## The waterbottle cages
+
+https://silca.cc/products/sicuro-titanium-bottle-cage-v2
+https://silca.cc/products/sicuro-titanium-bottle-cage-black-cerakote-edition 
+https://silca.cc/products/titanium-cage-bolts
 
 ## The bell
 
