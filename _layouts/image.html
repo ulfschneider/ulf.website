@@ -8,7 +8,7 @@
 	<body class="default break-word bg-neutral-5 flex-column">
 		{% include header.html %}
 		<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
-			<main id="main" class="indent mrb-2 mrt-3 {% if bleed and bleed != false%}bleed{% else %}mxw-rg{% endif %} mrx-auto">
+			<main id="main" class="indent mrb-2 mrt-3 mxw-rg mrx-auto">
 
 				{%- if title != "notitle" and title != nil and notitle == nil -%}
 					<header class="title mry-3">
@@ -30,7 +30,7 @@
 						{%- endif -%}
 					</header>
 				{%- endif -%}
-				<div {% if outline and outline != false %}class="outline"{% endif %}>
+				<div {% if outline == true %}class="outline"{% endif %}>
 					{{ content }}
 				</div>
 				<aside class="mry-2">

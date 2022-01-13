@@ -11,8 +11,4 @@ title: Blog
 nosearch: true
 notitle: true
 ---
-<div class="mry-2">
-{% include site-tags.html %}
-</div>
-
 {{collections.liveContent | tagIntro: tag }}
