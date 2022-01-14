@@ -113,7 +113,7 @@ module.exports = {
                 });
             }
         }
-        return result
+        return JSON.stringify(result);
     },
 
     imgSizeHint: function(src) {
