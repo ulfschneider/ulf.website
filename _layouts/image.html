@@ -2,11 +2,11 @@
 <html id="{{site.backToTop.id}}" lang="{{site.locale}}">
 
 	<head>
-		{% include head.html %}
+		{% include "head.html" %}
 	</head>
 
 	<body class="default break-word bg-neutral-5 flex-column">
-		{% include header.html %}
+		{% include "header.html" %}
 		<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
 			<main id="main" class="indent mrb-2 mrt-3 mxw-rg mrx-auto">
 
@@ -34,10 +34,10 @@
 					{{ content }}
 				</div>
 				<aside class="mry-2">
-					{% include date-tags.html %}
+					{% include "date-tags.html" %}
 				</aside>
 			</main>
 		</div>
-		{% include footer.html %}
+		{% include "footer.html" %}
 	</body>
 </html>

@@ -56,8 +56,8 @@ It took me four years from there to the point of ordering a Strael frame in late
   To be more complete, there are other reviews of the different design iterations of the Strael, like [<cite>Fairlight Cycles Strael 2.0</cite>](https://road.cc/content/review/240016-fairlight-cycles-strael-20) in 2020, again by Stu Kerton. Jack Luke did a [<cite>Fairlight Strael 3.0 review</cite>](https://www.bikeradar.com/reviews/bikes/road-bikes/fairlight-strael-3-0-review/) on bikeradar, with a rating of 5 out of 5. Another one is from David Arthur below.    
   
   <figure><iframe width="560" height="315" src="https://www.youtube.com/embed/ORQacAmVHBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><figcaption><a href="https://www.youtube.com/watch?v=ORQacAmVHBA&t=12s"><cite>Fairlight Strael 3.0 Review</cite></a> by <a href="https://www.youtube.com/c/davidarthur/">David Arthur</a></figcaption></figure>    
-- **The sophistication:** Tubes are made in Birmingham, England. Frames are hand-built in Taiwan. Each tube is formed with an intentionally choosen steel. The down tube is bi-ovalized and butted from [Reynolds 853](https://www.reynoldstechnology.biz/materials/steel/s-853/). The seat tube is butted 853. The top tube is ovalized and butted 853. The head tube is 4130 chromoly CNC machined from a solid billet into a tube. Seat tubes are non-taper [Reynolds 725](https://www.reynoldstechnology.biz/materials/steel/s-725/). Chain stays are butted Reynolds 725 and have a very complex form to accomplish excellent power transfer and still provide comfort. The dropouts are CNC machined single pieces and can be replaced. Honestly, I don´t understand why it´s made exactly this way, but it´s no question to me that this frame is high sophisticated and the ride quality seems to justify the thoughts and effort.
-- **The standards:** The frame has standard thru axles with 12x100mm front and 12x142mm rear, as well as an english – what else? – threaded 68mm bottom bracket ^[[<cite>The complete guide to bottom bracket standards</cite>](https://www.bikeradar.com/advice/buyers-guides/the-complete-guide-to-bottom-bracket-standards/)] ^[The threaded english bottom bracket standard also <q>goes by other names, but they all mean the same thing. These are: BSA, BSC, BC, ISO, British, and Euro, the name used in BMX bike circles. The term BSA stands for Birmingham Small Arms, a British company that produced bicycles, cars and other durable goods. The term BSC stands for British Standard Cycle, which adopted the same standard. BSC is sometimes shortened to BC. The term ISO is refers to the International Standard Organization, an international standards organization, which also adopted this same standard to be the ISO standard.</q> Source: [<cite>Bottom bracket standards and terminology</cite>](https://www.parktool.com/blog/repair-help/bottom-bracket-standards-and-terminology)], a 27.2mm seatpost, and maximum 160mm disc rotors front and rear (flatmount). It´s compatible with all double road chainsets, 46T max single. SHIS headset ZS44/28.6 | EC44/40.
+- **The sophistication:** Tubes are made by Reynolds in Birmingham, England. Frames are hand-built in Taiwan. Each tube is formed with an intentionally choosen steel. Custom 0.7/0.4/0.7 [Reynolds 853](https://www.reynoldstechnology.biz/materials/steel/s-853/) top tube, 20 x 30mm oval. Custom 0.75/0.45/0.75 Reynolds 853 down tube, 30 x 40mm bi-oval. [Reynolds 725](https://www.reynoldstechnology.biz/materials/steel/s-725/) 22.2mm custom formed chainstays with 0.8/0.6mm butting. Those chainstays have a very complex form to accomplish excellent power transfer while still providing comfort. Reynolds 725 14mm non-taper seat stays with 0.6mm wall thickness. The head tube is 4130 chromoly CNC machined from a solid billet into a tube. The dropouts are CNC machined single pieces and can be replaced.  It´s no question to me that this frame is high sophisticated and the ride quality seems to justify the thoughts and effort.
+- **The standards:** The frame has standard thru axles with 12x100mm front and 12x142mm rear, as well as an english – what else? – threaded 68mm bottom bracket ^[[<cite>The complete guide to bottom bracket standards</cite>](https://www.bikeradar.com/advice/buyers-guides/the-complete-guide-to-bottom-bracket-standards/)] ^[The threaded english bottom bracket standard also <q>goes by other names, but they all mean the same thing. These are: BSA, BSC, BC, ISO, British, and Euro, the name used in BMX bike circles. The term BSA stands for Birmingham Small Arms, a British company that produced bicycles, cars and other durable goods. The term BSC stands for British Standard Cycle, which adopted the same standard. BSC is sometimes shortened to BC. The term ISO is refers to the International Standard Organization, which also adopted this same standard to be the ISO standard.</q> Source: [<cite>Bottom bracket standards and terminology</cite>](https://www.parktool.com/blog/repair-help/bottom-bracket-standards-and-terminology)], a 27.2mm seatpost, and maximum 160mm disc rotors front and rear (flatmount). It´s compatible with all double road chainsets, 46T max single. SHIS headset ZS44/28.6 | EC44/40.
 - **The versatility:** Whether it´s the CNC machined replaceable dropout design, the cable mounting guides, the bottle mounts for three bottles, internal light cable routing for dynamo lights (drive and non-drive side), internal DI2 routing, or 36mm tyre clearance: it makes the bike very adjustable to all sorts of play. There are also mudguard eyelets, which I think I will not use, but for some it might be a huge advantage.
 - **The look and finish:** You can see each tube and how it´s designed to function. Everything is at display. There is no bling bling just for the sake of it. The frame has a timeless look. I like the *putty* frame color and – new to the Strael 3.0 – the Anraed fork in frame color. The Fairlight logo is beautiful too.
 
@@ -89,10 +89,10 @@ In the below table I´m considering shifters and brakes, derailleurs, batteries,
 <strong>Weight comparison of SRAM and Shimano electronic groupsets</strong>
 <p>Weights are provided in gram. Sources of data:</p>
 <ul>
-<li>Di2 Dura Ace: <a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html">Shimano Website</a></li>
-<li>Di2 Ultegra: <a href="https://bike.shimano.com/en-US/product/component/ultegra-r8100.html">Shimano Website</a></li>
-<li>eTap AXS Red: <a href="https://bikerumor.com/sram-red-etap-axs-wireless-road-bike-group-first-ride-review-actual-weights/">Bikerumor Website</a></li>
-<li>eTap AXS Force: <a href="https://bikerumor.com/hands-on-actual-weight-of-the-new-sram-force-etap-axs-2x12-road-group/">Bikerumor Website</a></li>
+<li>Di2 Dura Ace: <a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html">Shimano website</a></li>
+<li>Di2 Ultegra: <a href="https://bike.shimano.com/en-US/product/component/ultegra-r8100.html">Shimano website</a></li>
+<li>eTap AXS Red: <a href="https://bikerumor.com/sram-red-etap-axs-wireless-road-bike-group-first-ride-review-actual-weights/">Bikerumor website</a></li>
+<li>eTap AXS Force: <a href="https://bikerumor.com/hands-on-actual-weight-of-the-new-sram-force-etap-axs-2x12-road-group/">Bikerumor website</a></li>
 </ul>
 For the weight of Shimano´s brake hoses and their electronic wiring I found some data on <a href="https://www.cyclingweekly.com/products/shimano-dura-ace-9200-12-speed-semi-wireless-groupset-launched">Cyclingweekly</a>. Those weights are separately added to the figures.
 </caption>
@@ -122,17 +122,6 @@ For the weight of Shimano´s brake hoses and their electronic wiring I found som
 <td>52 + 14.5 /+ wiring</td>
 </tr>
 <tr>
-<td>Di2 Ultegra</td>
-<td>1714.5</td>
-<td>391</td>
-<td>282 + 60 /+ hose</td>
-<td>110</td>
-<td>262</td>
-<td>291 /11-30</pre></td>
-<td>252 /XT</td>
-<td>52 + 14.5 /+ wiring</td>
-</tr>
-<tr>
 <td>eTap AXS Red</td>
 <td>1647</td>
 <td>466</td>
@@ -142,6 +131,17 @@ For the weight of Shimano´s brake hoses and their electronic wiring I found som
 <td>211 /10-33</td>
 <td>242 /assumed</td>
 <td>0</td>
+</tr>
+<tr>
+<td>Di2 Ultegra</td>
+<td>1714.5</td>
+<td>391</td>
+<td>282 + 60 /+ hose</td>
+<td>110</td>
+<td>262</td>
+<td>291 /11-30</pre></td>
+<td>252 /XT</td>
+<td>52 + 14.5 /+ wiring</td>
 </tr>
 <tr>
 <td>eTap AXS Force</td>
@@ -166,6 +166,31 @@ https://www.cyclingweekly.com/products/shimano-dura-ace-r9200-v-ultegra-r8100-wh
 
 
 ## The crankset
+
+Being able to route Di2 wires through the Strael frame requires a 24mm crankset axle and no larger. 24mm is the axle diameter used by Shimano, for that reason it wouldn´t be a problem to mount a standard Dura Ace or Ultegra crankset onto the frame – except, I do not like the crankset design too much and I would prefer to use sub-compact chainrings with 32-48 tooths. Being constraint to 24mm limits the number options options apart from Shimano. Basically I came to the Rotor cranksets, which allow a modular setup of different chainrings, even with Powermeter, look better in my opinion, and weigh less. See the weight comparison below. Please not that I only found the total weights of the Shimano cranksets without differentiating into their parts. 
+
+<div class="full-bleed pdx">
+<table class="mrx-auto">
+<caption>
+<strong>Weight comparison of cranksets</strong>
+<p>Weights are provided in gram. Sources of data:</p>
+<ul>
+<li>ALDHU: <a href="https://rotorbike.com">Rotor website</a></li>
+<li>Dura Ace: <a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html">Shimano website</a></li>
+<li>Ultegra: <a href="https://bike.shimano.com/en-US/product/component/ultegra-r8100.html">Shimano website</a></li>
+</ul>
+</caption>
+<thead>
+<tr><th>Crank</th><th>Total</th><th>Crank arms 172.5mm</th><th>Spider</th><th>Chainrings 34-50</th><th>Axle 24mm</th></tr>
+</thead>
+<tbody class="no-wrap">
+<tr><td>ALDHU DM</td><td>645</td><td>350</td><td>0</td><td>150 /assumed</td><td>145</td></tr>
+<tr><td>ALDHU Spider</td><td>675.5</td><td>350</td><td>60 /assumed</td><td>30.5 + 90 </td><td>145</td></tr>
+<tr><td>Dura Ace 9200</td><td>685</td><td>←</td><td>←</td><td>←</td><td>←</td></tr>
+<tr><td>Ultegra 8100</td><td>700</td><td>←</td><td>←</td><td>←</td><td>←</td></tr>
+</tbody>
+</table>
+</div>
 
 ## The wheels
 

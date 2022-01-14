@@ -43,7 +43,7 @@ module.exports = {
         for (let item of collection) {
             result.push(utils.mapItem(item));
         }
-        return result;
+        return JSON.stringify(result);
     },
 
     tagIntro: function(collection, tagintro) {
@@ -56,7 +56,7 @@ module.exports = {
     },
 
     searchIndex: function(collection) {
-        return lunr(function() {
+        const index = lunr(function() {
             this.ref('id');
             this.field('title', { boost: 10 });
             this.field('subtitle', { boost: 10 });
@@ -72,6 +72,7 @@ module.exports = {
                 }
             }
         });
+        return JSON.stringify(index);
     },
 
     excerptIndex: function(collection) {
@@ -82,7 +83,7 @@ module.exports = {
 
             result.push(mappedItem);
         }
-        return result
+        return JSON.stringify(result);
     },
 
     firstImage: function(collection) {

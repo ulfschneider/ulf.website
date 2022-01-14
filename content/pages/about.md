@@ -22,7 +22,7 @@ Hi, my name is Ulf Schneider and this is my website. I´m a software developer a
 </dl>
 
 <h2>Connect with me</h2>
-{% include connect.html %}
+{% include "connect.html" %}
 
 <h2>Content ownership</h2>
 

@@ -17,10 +17,10 @@
 {%- endif -%}
 {%- if hasdate or hastags  -%}
     <span class="inline-block {{starred}}">        
-        {%- include date.html -%}
+        {%- include "date.html" -%}
         {%- if hastags and hasdate or isUpdated -%}
         <span>, </span>
         {%- endif -%}
-        {%- include tags.html -%}
+        {%- include "tags.html" -%}
     </span>
 {%- endif -%}
