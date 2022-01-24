@@ -13,4 +13,11 @@ updated: 2022-01-10
 	<dd>Emil used his new diving ring to exercise for the seahorse badge. That made a huge difference. Seeing the red ring underwater and trying to get it was a motivation booster. Also having proper goggles is helping a lot. At the end, Emil could dive deeper than required!</dd>
 	<dt>9 Jan 2022</dt>
 	<dd>In our todays swimming, for the first time Emil jumped into the water and swam more than the necessary 25 meters in a row. At the end he was surprised by how far he could get. Both of us are very proud.<div class="larger">🏊🤸</div></dd>
+	<dt>24 Jan 2022</dt>
+	<dd>Usually we swim in the mornings, but this time it was Sunday late afternoon. It was a relaxed session with ring diving, a bit of swimming and watersliding.
+	<figure>
+		<img src="/img/journal/IMG_1637D.jpg" alt="">
+		<figcaption>Emil after swimming</figcaption>
+	</figure>
+	</dd>
 </dl>
