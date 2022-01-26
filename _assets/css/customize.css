@@ -13,7 +13,7 @@
     --font-weight-bold: 700;
     --fs-mono: .95rem;
     --fs-h1: var(--fs-3);
-    --fs-h2: var(--fs-2);
+    --fs-h2: var(--fs-1);
     --fs-h3: var(--fs-1);
     --fs-h4: var(--fs);
     --link-focus-color: var(--primary-d1);
@@ -25,11 +25,16 @@ ul,
 ol,
 caption,
 figcaption,
+h2,
 h3,
 h4,
 h5,
 h6 {
     max-width: var(--rg-width);
+}
+
+header h2 {
+    max-width: unset;
 }
 
 code {
@@ -141,7 +146,11 @@ hr.footnotes-sep {
 }
 
 hr.footnotes-sep::after {
-    content: unset;
+    content: "Footnotes";
+    font-weight: bold;
+    font-size: var(--fs-h2);
+    white-space: nowrap;
+    word-break: keep-all;
 }
 
 .footnote-ref a,
@@ -164,8 +173,7 @@ hr.footnotes-sep::after {
 
 .footnotes-list li::before {
     content: counter(footnote-counter);
-    font-weight: normal;
-    vertical-align: super;
+    font-size: smaller;
 }
 
 .footnotes-list li>p {
@@ -222,45 +230,4 @@ table.sotable caption p.indicator {
     .anchor {
         display: none;
     }
-}
-
-@media (--mi-rg-breakpoint) {
-    .outline h2:not(table h2):not(.bleed h2):not(.full-bleed h2):not(.bleed-left h2):before,
-    .outline h3:not(table h3):not(.bleed h3):not(.full-bleed h3):not(.bleed-left h3):before,
-    .outline h4:not(table h4):not(.bleed h4):not(.full-bleed h4):not(.bleed-left h4):before,
-    .outline h5:not(table h5):not(.bleed h5):not(.full-bleed h5):not(.bleed-left h5):before,
-    .outline h6:not(table h6):not(.bleed h6):not(.full-bleed h6):not(.bleed-left h6):before {
-        margin-left: calc(-1 * var(--space-3));
-        width: var(--space-3);
-        text-align: right;
-    }
-    ul:not(li ul):not(table ul):not(.bleed ul):not(.full-bleed ul):not(.bleed-left ul),
-    ol:not(li ol):not(table ol):not(.bleed ol):not(.full-bleed ol):not(.bleed-left ol) {
-        padding-left: 0;
-    }
-    li:not(table li):not(li li):not(.bleed li):not(.full-bleed li):not(.bleed-left li)::before {
-        justify-content: flex-end;
-    }
-    dl.timeline:not(dl dl.timeline):not(table dl.timeline):not(.bleed dl.timeline):not(.full-bleed dl.timeline):not(.bleed-left dl.timeline) {
-        margin-left: calc(-1 * var(--horizontal-rhythm) + var(--timeline-blub-size) / 2 + 2px);
-    }
-    details>summary:not(table details>summary):not(.bleed details>summary):not(.full-bleed details>summary):not(.bleed-left details>summary)::before {
-        margin-left: calc(-1 * var(--horizontal-rhythm));
-        justify-content: flex-end;
-    }
-}
-
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before,
-ul,
-ol,
-li::before,
-dl,
-dt,
-dd,
-details>summary::before {
-    transition: var(--transition-duration) margin-left var(--transition-function), var(--transition-duration) padding-left var(--transition-function);
 }
