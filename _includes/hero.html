@@ -1,8 +1,8 @@
 {%- if hero != nil and hero != ""-%}
-    <figure class="full-bleed pdx mry-0 ">
-        <img src="{{hero}}" alt="" class="fit-cover fit-center" style="max-height:66vh; {{hero | imgAspectRatio}}" {{hero | imgSizeHint}} loading="eager">
+    <figure class="mry-0 ">
+        <img src="{{hero}}" alt="" class="w-100 fit-cover fit-center" style="{{hero | imgAspectRatio}}" {{hero | imgSizeHint}} loading="eager">
         {%- if herocaption and herocaption != "" -%}
-        <figcaption class="small mrl-auto right">{{herocaption}}</figcaption>
+            <figcaption class="small mrl-auto right">{{herocaption}}</figcaption>
         {%- endif -%}
     </figure>
 {%- endif -%}

@@ -1,6 +1,5 @@
 ---
 title: Monday morning
-layout: image
 ---
 It´s Monday morning 7 am and I want to kick work off. This is what my desk looks like.
 
