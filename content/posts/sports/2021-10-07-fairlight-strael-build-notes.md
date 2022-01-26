@@ -3,6 +3,7 @@ title: Fairlight Strael Build Notes
 tags: sports
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame.
 draft: true
+updated: 2022-01-26
 ---
 
 [[toc]]
