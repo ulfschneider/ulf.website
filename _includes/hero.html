@@ -1,5 +1,5 @@
 {%- if hero != nil and hero != ""-%}
-    <figure class="mry-0 mrx-auto mxw-lg">
+    <figure class="mry-0 mrx-auto mxw-lg-breakpoint">
         <img src="{{hero}}" alt="" class="w-100 fit-cover fit-center" style="max-height: unset; {{hero | imgAspectRatio}}" {{hero | imgSizeHint}} loading="eager">
         {%- if herocaption and herocaption != "" -%}
             <figcaption class="small mrl-auto right">{{herocaption}}</figcaption>

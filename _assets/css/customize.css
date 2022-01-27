@@ -173,7 +173,6 @@ hr.footnotes-sep::after {
 
 .footnotes-list li::before {
     content: counter(footnote-counter);
-    font-size: smaller;
 }
 
 .footnotes-list li>p {
