@@ -135,20 +135,9 @@ module.exports = {
         return `src="${src}"`;
     },
 
-    imgSizeHint: function(src) {
-        try {
-            dimensions = utils.getDimensions(`${site.output}${src}`);
-            if (dimensions.height > 0 && dimensions.width > 0) {
-                return `width="${dimensions.width}" height="${dimensions.height}"`;
-            }
-        } catch (e) {
-            console.log(e);
-        }
-    },
-
     imgAspectRatio: function(src) {
         try {
-            dimensions = utils.getDimensions(`${site.output}${src}`);
+            dimensions = utils.getDimensions(`${site.input}${src}`);
             if (dimensions.height > 0 && dimensions.width > 0) {
                 return `aspect-ratio:${dimensions.width}/${dimensions.height};`;
             }
