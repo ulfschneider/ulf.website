@@ -278,7 +278,7 @@ async function fetchAndCache(request, options) {
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/(jpg|jpeg|ico|png|gif|svg)$/.test(url.pathname)) {
+            } else if (/(jpg|jpeg|webp|ico|png|gif|svg)$/.test(url.pathname)) {
                 await stashInCache({
                     cacheName: IMAGE_CACHE_NAME,
                     request: request,
