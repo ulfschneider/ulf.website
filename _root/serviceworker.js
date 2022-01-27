@@ -243,42 +243,42 @@ async function fetchAndCache(request, options) {
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/\/.*index.*\.json$/.test(url.pathname)) {
+            } else if (/\/.*index.*\.json$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: SEARCH_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/\/.*\.json$/.test(url.pathname)) {
+            } else if (/\/.*\.json$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: JSON_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options,
                 });
-            } else if (/js$/.test(url.pathname)) {
+            } else if (/\.js$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: SCRIPT_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/css[2]?$/.test(url.pathname)) {
+            } else if (/\.css[2]?$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: CSS_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/(woff[2]?|ttf|otf|sfnt)$/.test(url.pathname)) {
+            } else if (/\.(woff[2]?|ttf|otf|sfnt)$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: FONT_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/(jpg|jpeg|webp|ico|png|gif|svg)$/.test(url.pathname)) {
+            } else if (/\.(jpg|jpeg|webp|ico|png|gif|svg)$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: IMAGE_CACHE_NAME,
                     request: request,
