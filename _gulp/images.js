@@ -12,7 +12,7 @@ const DEST = `${site.output}/img/`;
 
 const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;
-const QUALITY = site.jpegQuality;
+const QUALITY = site.imgQuality;
 
 const maxWidthOperation = function(metadata, maxWidth) {
     if (maxWidth > 0) {
@@ -24,9 +24,11 @@ const maxWidthOperation = function(metadata, maxWidth) {
     }
 }
 
-const jpegQualityOperation = function(metadata) {
+const qualityOperation = function(metadata) {
     if (metadata.format == 'jpeg' && QUALITY) {
         return { name: 'jpeg', arguments: [{ quality: QUALITY }] };
+    } else if (metadata.format == 'webp' && QUALITY) {
+        return { name: 'webp', arguments: [{ quality: QUALITY }] };
     }
 }
 
@@ -68,17 +70,17 @@ const deriveOperations = function(metadata, file) {
         options.fit = 'inside';
         operations.push({ name: 'resize', arguments: [options] });
     }
-    let jpegQuality = jpegQualityOperation(metadata);
-    if (jpegQuality) {
-        operations.push(jpegQuality);
+    let quality = qualityOperation(metadata);
+    if (quality) {
+        operations.push(quality);
     }
     return operations;
 }
 
 
-const responsiveImages = async function(file, encoding, callback) {
+const webP = async function(file, encoding, callback) {
 
-    let image = sharp(file.contents);
+    let image = sharp(file.contents).webp({ lossless: true });
 
     const optimize = async function(metadata, maxWidth, suffix) {
         let jpegQuality = jpegQualityOperation(metadata);
@@ -116,7 +118,39 @@ const responsiveImages = async function(file, encoding, callback) {
         });
 }
 
-const singleImage = async function(file, encoding, callback) {
+
+const webpFormat = async function(file, encoding, callback) {
+
+    let image = sharp(file.contents);
+    await image.metadata()
+        .then(async metadata => {
+            file.basename = utils.clearResponsive(file.basename);
+
+            if (metadata.format == 'webp' || metadata.format == 'gif' || metadata.format == 'svg') {
+                //do nothing with a gif/svg             
+                callback(null, file);
+            } else {
+                image = await image.webp({ lossless: true });
+                let operations = deriveOperations(metadata, file);
+                for (let op of operations) {
+                    image = await image[op.name].apply(image, op.arguments);
+                }
+                await image.toBuffer((err, buffer) => {
+                    let relative = file.relative.replace(file.basename, file.stem + '.webp');
+                    console.log(`Writing ${DEST}${relative}`);
+                    fs.writeFileSync(`${DEST}${relative}`, buffer);
+                });
+
+            }
+        }).catch(imageError => {
+            console.log('Error with ' + file.relative);
+            console.log(imageError);
+            callback(null, file);
+        });
+}
+
+
+const keepFormat = async function(file, encoding, callback) {
 
     let image = sharp(file.contents);
     await image.metadata()
@@ -146,10 +180,9 @@ const singleImage = async function(file, encoding, callback) {
 
 const imageTransformer = async function(file, encoding, callback) {
     if (!file.isNull()) {
+        keepFormat(file, encoding, callback);
         if (utils.isResponsive(file.basename)) {
-            responsiveImages(file, encoding, callback);
-        } else {
-            singleImage(file, encoding, callback);
+            webpFormat(file, encoding, callback);
         }
     } else {
         //do nothing

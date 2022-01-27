@@ -117,29 +117,50 @@ module.exports = {
         return JSON.stringify(result);
     },
 
-    srcset: function(src) {
+    imgAspectRatio: function(src) {
+        try {
+            dimensions = utils.getDimensions(`${site.output}${src}`);
+            if (dimensions.height > 0 && dimensions.width > 0) {
+                return `aspect-ratio:${dimensions.width}/${dimensions.height};`;
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    },
+
+    responsiveHero: function(src) {
+        let clearSrc = utils.clearResponsive(src);
+
+        const imgAspectRatio = function() {
+            try {
+                dimensions = utils.getDimensions(`${site.output}${clearSrc}`);
+                if (dimensions.height > 0 && dimensions.width > 0) {
+                    return `aspect-ratio:${dimensions.width}/${dimensions.height};`;
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        }
+
+        let img = `<img src="${clearSrc}" alt="" class="w-100 fit-cover fit-center" style="max-height: unset; ${imgAspectRatio()}" loading="eager">`;
         if (utils.isResponsive(src)) {
-            let clearSrc = utils.clearResponsive(src);
             let extname = path.extname(clearSrc);
             let basename = path.basename(clearSrc, extname);
             let dirname = path.dirname(clearSrc);
-
-            return `src="${dirname}/${basename}-sm${extname}" 
-            srcset="${dirname}/${basename}-sm${extname} ${site.responsiveImages.smWidth}w,            
-            ${dirname}/${basename}-rg${extname} ${site.responsiveImages.rgWidth}w,
-            ${dirname}/${basename}-md${extname} ${site.responsiveImages.mdWidth}w,
-            ${dirname}/${basename}-lg${extname} ${site.responsiveImages.lgWidth}w"`;
-
+            return `<picture>
+            <source srcset="${dirname}/${basename}.webp" type="image/webp">
+            ${img}
+            </picture>`;
+        } else {
+            return img;
         }
-
-        return `src="${src}"`;
     },
 
-    imgAspectRatio: function(src) {
+    imgSizeHint: function(src) {
         try {
-            dimensions = utils.getDimensions(`${site.input}${src}`);
+            dimensions = utils.getDimensions(`${site.output}${src}`);
             if (dimensions.height > 0 && dimensions.width > 0) {
-                return `aspect-ratio:${dimensions.width}/${dimensions.height};`;
+                return `width="${dimensions.width}" height="${dimensions.height}"`;
             }
         } catch (e) {
             console.log(e);

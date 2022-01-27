@@ -5,13 +5,7 @@ module.exports = {
     url: "https://ulf.codes",
     imgMaxWidth: 1024,
     imgMaxHeight: 700,
-    jpegQuality: 80,
-    responsiveImages: {
-        smWidth: 400,
-        rgWidth: 640,
-        mdWidth: 768,
-        lgWidth: 1024
-    },
+    imgQuality: 80,
     instantPage: true,
     excerptWordCount: 25,
     title: "Ulf Schneider – Developer and Agile Coach",
