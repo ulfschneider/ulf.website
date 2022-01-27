@@ -5,33 +5,14 @@ const through = require('through2');
 const fs = require('fs');
 const path = require('path');
 const site = require('../_data/site.js');
-
+const utils = require('../_eleventy/utils.js');
 const SOURCE = `${site.input}/img/**/*`;
 const DEST = `${site.output}/img/`;
+
 
 const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;
 const QUALITY = site.jpegQuality;
-
-
-const ensureDirectory = function(filePath) {
-    var dirName = path.dirname(filePath);
-    if (fs.existsSync(dirName)) {
-        return;
-    } else {
-        fs.mkdirSync(dirName, { recursive: true });
-    }
-}
-
-const isResponsive = function(filePath) {
-    var fileName = path.basename(filePath);
-    return /@picture|@responsive/i.test(fileName);
-}
-
-const clearResponsive = function(filePath) {
-    var fileName = path.basename(filePath);
-    return fileName.replace(/@picture|@responsive/ig, '');
-}
 
 const maxWidthOperation = function(metadata, maxWidth) {
     if (maxWidth > 0) {
@@ -117,13 +98,13 @@ const responsiveImages = async function(file, encoding, callback) {
     await image.metadata()
         .then(async metadata => {
             if (metadata.format != 'gif' && metadata.format != 'svg') {
-                file.basename = clearResponsive(file.basename);
-                ensureDirectory(`${DEST}${file.relative}`);
+                file.stem = utils.clearResponsive(file.stem);
+                utils.ensureDirectory(`${DEST}${file.relative}`);
 
-                optimize(metadata, site.responsiveImages.lgWidth, '-lg');
-                optimize(metadata, site.responsiveImages.mdWidth, '-md');
-                optimize(metadata, site.responsiveImages.rgWidth, '-rg');
-                optimize(metadata, site.responsiveImages.smWidth, '-sm');
+                await optimize(metadata, site.responsiveImages.lgWidth, '-lg');
+                await optimize(metadata, site.responsiveImages.mdWidth, '-md');
+                await optimize(metadata, site.responsiveImages.rgWidth, '-rg');
+                await optimize(metadata, site.responsiveImages.smWidth, '-sm');
             }
             //do nothing
             callback(null, file);
@@ -165,7 +146,7 @@ const singleImage = async function(file, encoding, callback) {
 
 const imageTransformer = async function(file, encoding, callback) {
     if (!file.isNull()) {
-        if (isResponsive(file.basename)) {
+        if (utils.isResponsive(file.basename)) {
             responsiveImages(file, encoding, callback);
         } else {
             singleImage(file, encoding, callback);

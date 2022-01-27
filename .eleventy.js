@@ -111,6 +111,7 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('humanDate', filters.humanDate);
     eleventyConfig.addFilter('humanDateTime', filters.humanDateTime);
     eleventyConfig.addFilter('isoDate', filters.isoDate);
+    eleventyConfig.addFilter('srcset', filters.srcset);
     eleventyConfig.addFilter('imgSizeHint', filters.imgSizeHint);
     eleventyConfig.addFilter('imgAspectRatio', filters.imgAspectRatio);
     eleventyConfig.addFilter('authorEmail', filters.authorEmail);

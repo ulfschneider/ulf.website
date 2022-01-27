@@ -173,6 +173,24 @@ module.exports = {
         return a.date - b.date;
     },
 
+    ensureDirectory: function(filePath) {
+        let dirName = path.dirname(filePath);
+        if (fs.existsSync(dirName)) {
+            return;
+        } else {
+            fs.mkdirSync(dirName, { recursive: true });
+        }
+    },
+
+    isResponsive: function(filePath) {
+        let fileName = path.basename(filePath);
+        return /@picture|@responsive/i.test(fileName);
+    },
+
+    clearResponsive: function(filePath) {
+        return filePath.replace(/@picture|@responsive/ig, '');
+    },
+
     compareInputFileName: function(a, b) {
         const aFileName = path.basename(a.inputPath);
         const bFileName = path.basename(b.inputPath);

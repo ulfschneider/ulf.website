@@ -7,7 +7,7 @@ module.exports = {
     imgMaxHeight: 700,
     jpegQuality: 80,
     responsiveImages: {
-        smWidth: 300,
+        smWidth: 400,
         rgWidth: 640,
         mdWidth: 768,
         lgWidth: 1024

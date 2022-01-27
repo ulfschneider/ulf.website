@@ -1,6 +1,7 @@
-const lunr = require("lunr");
-const utils = require("./utils.js");
-const site = require("../_data/site.js");
+const lunr = require('lunr');
+const path = require('path');
+const utils = require('./utils.js');
+const site = require('../_data/site.js');
 
 let colorMap;
 
@@ -114,6 +115,24 @@ module.exports = {
             }
         }
         return JSON.stringify(result);
+    },
+
+    srcset: function(src) {
+        if (utils.isResponsive(src)) {
+            let clearSrc = utils.clearResponsive(src);
+            let extname = path.extname(clearSrc);
+            let basename = path.basename(clearSrc, extname);
+            let dirname = path.dirname(clearSrc);
+
+            return `src="${dirname}/${basename}-sm${extname}" 
+            srcset="${dirname}/${basename}-sm${extname} ${site.responsiveImages.smWidth}w,            
+            ${dirname}/${basename}-rg${extname} ${site.responsiveImages.rgWidth}w,
+            ${dirname}/${basename}-md${extname} ${site.responsiveImages.mdWidth}w,
+            ${dirname}/${basename}-lg${extname} ${site.responsiveImages.lgWidth}w"`;
+
+        }
+
+        return `src="${src}"`;
     },
 
     imgSizeHint: function(src) {
