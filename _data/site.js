@@ -3,9 +3,15 @@ module.exports = {
     locale: "en",
     themecolor: "#ebebeb",
     url: "https://ulf.codes",
-    imgMaxWidth: 1200,
+    imgMaxWidth: 1024,
     imgMaxHeight: 700,
     jpegQuality: 80,
+    responsiveImages: {
+        smWidth: 300,
+        rgWidth: 640,
+        mdWidth: 768,
+        lgWidth: 1024
+    },
     instantPage: true,
     excerptWordCount: 25,
     title: "Ulf Schneider – Developer and Agile Coach",
