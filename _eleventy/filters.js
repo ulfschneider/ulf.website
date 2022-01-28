@@ -92,7 +92,10 @@ module.exports = {
         for (let item of collection) {
             let img = utils.firstImageTag(item.templateContent);
             if (img) {
-                let src = utils.srcAttr(img);
+                let src = utils.clearResponsive(utils.srcAttr(img));
+                let extname = path.extname(src);
+                let stem = path.basename(src, extname);
+                let dirname = path.dirname(src);
                 let alt = utils.altAttr(img);
                 let humanDate = utils.humanDate(item.date);
                 let dimensions;
@@ -103,6 +106,7 @@ module.exports = {
                 }
                 result.push({
                     src: src,
+                    smallSrc: dirname + '/' + stem + site.imgSmallPostfix + extname,
                     width: dimensions ? dimensions.width : 0,
                     height: dimensions ? dimensions.height : 0,
                     alt: alt,
@@ -129,7 +133,7 @@ module.exports = {
     },
 
     responsiveHero: function(src) {
-        let clearSrc = utils.clearResponsive(src);
+
 
         const imgAspectRatio = function() {
             try {
@@ -142,13 +146,14 @@ module.exports = {
             }
         }
 
+        let clearSrc = utils.clearResponsive(src);
         let img = `<img src="${clearSrc}" alt="" class="w-100 fit-cover fit-center" style="max-height: unset; ${imgAspectRatio()}" loading="eager">`;
         if (utils.isResponsive(src)) {
             let extname = path.extname(clearSrc);
-            let basename = path.basename(clearSrc, extname);
+            let stem = path.basename(clearSrc, extname);
             let dirname = path.dirname(clearSrc);
             return `<picture>
-            <source srcset="${dirname}/${basename}.webp" type="image/webp">
+            <source srcset="${dirname}/${stem}.webp" type="image/webp">
             ${img}
             </picture>`;
         } else {

@@ -12,17 +12,9 @@ const DEST = `${site.output}/img/`;
 
 const MAX_WIDTH = site.imgMaxWidth;
 const MAX_HEIGHT = site.imgMaxHeight;
+const SMALL_WIDTH = site.imgSmallWidth;
+const SMALL_HEIGHT = site.imgSmallHeight;
 const QUALITY = site.imgQuality;
-
-const maxWidthOperation = function(metadata, maxWidth) {
-    if (maxWidth > 0) {
-        let options = {};
-        options.width = maxWidth;
-        options.fit = 'inside';
-        operation = { name: 'resize', arguments: [options] };
-        return operation;
-    }
-}
 
 const qualityOperation = function(metadata) {
     if (metadata.format == 'jpeg' && QUALITY) {
@@ -77,67 +69,38 @@ const deriveOperations = function(metadata, file) {
     return operations;
 }
 
-
-const webP = async function(file, encoding, callback) {
-
-    let image = sharp(file.contents).webp({ lossless: true });
-
-    const optimize = async function(metadata, maxWidth, suffix) {
-        let jpegQuality = jpegQualityOperation(metadata);
-        let width = maxWidthOperation(metadata, maxWidth);
-
-        let optimizedImage = await image[width.name].apply(image, width.arguments);
-        if (jpegQuality) {
-            optimizedImage = await optimizedImage[jpegQuality.name].apply(optimizedImage, jpegQuality.arguments);
+const smallOperation = function(metadata) {
+    if (metadata.width > SMALL_WIDTH ||
+        metadata.height > SMALL_HEIGHT) {
+        let options = {};
+        if (metadata.width > SMALL_WIDTH) {
+            options.width = SMALL_WIDTH;
         }
-        await optimizedImage.toBuffer((err, buffer) => {
-            let relative = file.relative.replace(file.basename, file.stem + suffix + file.extname);
-            console.log(`Writing ${DEST}${relative}`);
-            fs.writeFileSync(`${DEST}${relative}`, buffer);
-        });
+        if (metadata.height > SMALL_HEIGHT) {
+            options.height = SMALL_HEIGHT;
+        }
+        options.fit = 'inside';
+        return { name: 'resize', arguments: [options] };
     }
-
-    await image.metadata()
-        .then(async metadata => {
-            if (metadata.format != 'gif' && metadata.format != 'svg') {
-                file.stem = utils.clearResponsive(file.stem);
-                utils.ensureDirectory(`${DEST}${file.relative}`);
-
-                await optimize(metadata, site.responsiveImages.lgWidth, '-lg');
-                await optimize(metadata, site.responsiveImages.mdWidth, '-md');
-                await optimize(metadata, site.responsiveImages.rgWidth, '-rg');
-                await optimize(metadata, site.responsiveImages.smWidth, '-sm');
-            }
-            //do nothing
-            callback(null, file);
-
-        }).catch(imageError => {
-            console.log('Error with ' + file.relative);
-            console.log(imageError);
-            callback(null, file);
-        });
 }
 
 
-const webpFormat = async function(file, encoding, callback) {
 
+const webpFormat = async function(file, encoding, callback) {
     let image = sharp(file.contents);
     await image.metadata()
         .then(async metadata => {
-            file.basename = utils.clearResponsive(file.basename);
-
-            if (metadata.format == 'webp' || metadata.format == 'gif' || metadata.format == 'svg') {
-                //do nothing with a gif/svg             
-                callback(null, file);
-            } else {
+            if (metadata.format != 'webp' && metadata.format != 'gif' && metadata.format != 'svg') {
                 image = await image.webp({ lossless: true });
                 let operations = deriveOperations(metadata, file);
                 for (let op of operations) {
                     image = await image[op.name].apply(image, op.arguments);
                 }
                 await image.toBuffer((err, buffer) => {
-                    let relative = file.relative.replace(file.basename, file.stem + '.webp');
+                    let stem = utils.clearResponsive(file.stem);
+                    let relative = file.relative.replace(file.basename, stem + '.webp');
                     console.log(`Writing ${DEST}${relative}`);
+                    utils.ensureDirectory(`${DEST}${relative}`);
                     fs.writeFileSync(`${DEST}${relative}`, buffer);
                 });
 
@@ -155,20 +118,28 @@ const keepFormat = async function(file, encoding, callback) {
     let image = sharp(file.contents);
     await image.metadata()
         .then(async metadata => {
-            if (metadata.format == 'gif' || metadata.format == 'svg') {
-                //do nothing with a gif/svg             
-                callback(null, file);
-            } else {
+            if (metadata.format != 'gif' && metadata.format != 'svg') {
                 let operations = deriveOperations(metadata, file);
                 for (let op of operations) {
                     image = await image[op.name].apply(image, op.arguments);
                 }
+                let stem = utils.clearResponsive(file.stem);
                 await image.toBuffer((err, buffer) => {
-                    file.contents = buffer;
-                    console.log(`Writing ${DEST}${file.relative}`);
-                    callback(null, file);
+                    let relative = file.relative.replace(file.basename, stem + file.extname);
+                    console.log(`Writing ${DEST}${relative}`);
+                    utils.ensureDirectory(`${DEST}${relative}`);
+                    fs.writeFileSync(`${DEST}${relative}`, buffer);
                 });
-
+                let small = smallOperation(metadata);
+                if (small) {
+                    image = await image[small.name].apply(image, small.arguments);
+                    await image.toBuffer((err, buffer) => {
+                        let relative = file.relative.replace(file.basename, stem + site.imgSmallPostfix + file.extname);
+                        console.log(`Writing ${DEST}${relative}`);
+                        utils.ensureDirectory(`${DEST}${relative}`);
+                        fs.writeFileSync(`${DEST}${relative}`, buffer);
+                    });
+                }
             }
         }).catch(imageError => {
             console.log('Error with ' + file.relative);
@@ -180,14 +151,12 @@ const keepFormat = async function(file, encoding, callback) {
 
 const imageTransformer = async function(file, encoding, callback) {
     if (!file.isNull()) {
-        keepFormat(file, encoding, callback);
+        await keepFormat(file, encoding, callback);
         if (utils.isResponsive(file.basename)) {
-            webpFormat(file, encoding, callback);
+            await webpFormat(file, encoding, callback);
         }
-    } else {
-        //do nothing
-        callback(null, file);
     }
+    callback(null, file);
 }
 
 
