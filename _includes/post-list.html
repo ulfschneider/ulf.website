@@ -1,8 +1,4 @@
 <style>
-    h2::before {
-        content: unset;
-    }
-
     @media (hover: hover) {
         a:hover section h2 {
             color: var(--link-hover-color);
@@ -15,10 +11,6 @@
 
     a:focus section h2 {
         color: var(--link-focus-color);
-    }
-
-    h3::before {
-        content: unset;
     }
 </style>
 
@@ -90,7 +82,7 @@
         {%-assign currentTags = collections.usedSiteTags -%}
     {%- endif -%}
     {%- if currentTags.length -%}
-        <h2 class="normal fs">There are more posts. Choose a tag:</h2>
+        <h2 class="normal fs lh-default">There are more posts. Choose a tag:</h2>
         {%- include site-tags.html tag:tag-%}
     {%- else -%}
         <a href="{{site.blog}}">There are more posts …</a>

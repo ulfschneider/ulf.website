@@ -88,7 +88,7 @@ const smallOperation = function(metadata) {
 
 const webpFormat = async function(file, encoding, callback) {
     let image = sharp(file.contents);
-    await image.metadata()
+    return image.metadata()
         .then(async metadata => {
             if (metadata.format != 'webp' && metadata.format != 'gif' && metadata.format != 'svg') {
                 image = await image.webp({ lossless: true });
@@ -116,7 +116,7 @@ const webpFormat = async function(file, encoding, callback) {
 const keepFormat = async function(file, encoding, callback) {
 
     let image = sharp(file.contents);
-    await image.metadata()
+    return image.metadata()
         .then(async metadata => {
             if (metadata.format != 'gif' && metadata.format != 'svg') {
                 let operations = deriveOperations(metadata, file);
