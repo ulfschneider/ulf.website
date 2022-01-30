@@ -5,13 +5,14 @@
 		{% include head.html %}
 	</head>
 
-	<body class="default break-word bg-neutral-5 flex-column">
+    {%- assign isArticle = tags | hasTag: "article" -%}
+
+	<body class="default break-word bg-neutral-5 flex-column{% if isArticle == true %} article{%-endif-%}">	
 		{% include header.html %}
 		<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
-			{% include hero.html %}
+			{% include hero.html %}			
 			<main id="main" class="indent mrb-2 mrt-3 mxw-rg mrx-auto">
 				{%- if title != "notitle" and title != nil and notitle == nil   -%}
-
 					<header class="title mry-3 bleed-right">
 						<h1 class="mry-0 rg:fs-4 lsp-d1">{{ title }}</h1>
 						{%- if subtitle -%}

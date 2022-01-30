@@ -108,6 +108,7 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('live', filters.live);
     eleventyConfig.addFilter('post', filters.post);
     eleventyConfig.addFilter('tagIntro', filters.tagIntro);
+    eleventyConfig.addFilter('hasTag', filters.hasTag);
     eleventyConfig.addFilter('humanDate', filters.humanDate);
     eleventyConfig.addFilter('humanDateTime', filters.humanDateTime);
     eleventyConfig.addFilter('isoDate', filters.isoDate);

@@ -2,8 +2,8 @@
 title: Scrum and Architecture
 subtitle: The architect and his tools in the Scrum process
 abstract: Cooperatively making architectural decisions, at a point in time when they are needed – and not earlier – is a quality-improving paradigm in agile software development. Conceptual integrity in the flow of architecture decisions will only be achieved if one person has the final word regarding those decisions. This is the architect, whose rights and obligations in the context of the Scrum process are being reflected in this essay.
+tags: article
 ---
-This text was first published in OBJEKTspektrum, issue 4/2011, under the title ["Scrum und Architektur, konzeptionelle Integrität im Scrum Prozess"][schneider2011]. I have reworked, enhanced and translated the initial document to publish it here on *{{site.name}}.*
 
 [[toc]] 
 
@@ -302,6 +302,11 @@ Conclusion
 The here made suggestions are explicitly not meant to make the Scrum framework more complicated or to inject an additional hierarchical level just for the architect. Also, traditional architecture tools, of which only some are being mentioned here, should not be replaced by the here mentioned. Instead, these elaborations should describe what the architects' role is about in the context of the Scrum role model and what concepts and tools are of use in that case.
 
 The essay is a plea for the rights and obligations of the architect acting inside of the Scrum process; towards collaboration in the Scrum Team and against architecture by committee. I hope you can use some of the here made suggestions in your current or your next endeavor.
+
+---
+
+This text was first published in OBJEKTspektrum, issue 4/2011, under the title ["Scrum und Architektur, konzeptionelle Integrität im Scrum Prozess"][schneider2011]. I have reworked, enhanced and translated the initial document to publish it here on *{{site.name}}.*
+
 
 References
 ---

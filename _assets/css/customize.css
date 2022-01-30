@@ -67,6 +67,14 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
+.article main>div>p:first-of-type::first-letter {
+    font-size: 5.95rem;
+    font-weight: bold;
+    float: left;
+    line-height: .65;
+    padding: var(--space-d2) var(--space-d2) 0 0;
+}
+
 
 /* markdown-it toc */
 
@@ -84,7 +92,7 @@ nav.table-of-contents::before {
 }
 
 nav.table-of-contents {
-    margin: var(--vertical-rhythm) 0;
+    margin: var(--space-2) 0;
 }
 
 nav.table-of-contents a {

@@ -2,8 +2,8 @@
 title: The art in our work
 subtitle: Challenging the status quo is art
 abstract: The Agile Manifesto represents a force that is behind any particular agile procedure like XP, Scrum or Kanban. This force, the culture to challenge the status quo, attracts certain people and companies.
+tags: article
 ---
-This text was first published in OBJEKTspektrum, issue 5/2012, under the title ["Die Kunst in der Arbeit, eine Herausforderung des Status quo"][schneider2012]. I have enhanced and translated the initial document to publish it here on *{{site.name}}.*
 
 [[toc]]
 
@@ -69,6 +69,10 @@ A template for congruent acting can be seen in the Agile Manifesto. And the simi
 ## Perspective
 
 It is not about even more working. Instead, we need to care about a more suitable style of working nowadays, about personal progress and development. Those people and companies that understand their work as an art and who explore the field that will be opened through that thinking and acting, are the avant-garde of a new wave. Maybe this wave can be compared to the transformative power that Taylorism unfolded during the last century. The Agile Manifesto and also the software craftsmanship movement are patterns of this new reality. The related value systems can guide the path for the individual, the team and the company.
+
+---
+
+This text was first published in OBJEKTspektrum, issue 5/2012, under the title ["Die Kunst in der Arbeit, eine Herausforderung des Status quo"][schneider2012]. I have enhanced and translated the initial document to publish it here on *{{site.name}}.*
 
 ## References
 

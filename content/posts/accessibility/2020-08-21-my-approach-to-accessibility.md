@@ -1,6 +1,6 @@
 ---
 title: My approach to accessibility
-tags: accessibility
+tags: [accessibility, article]
 ---
 <blockquote><p>The power of the Web is in its universality.
 Access by everyone regardless of disability is an essential aspect.</p>
@@ -9,9 +9,7 @@ Access by everyone regardless of disability is an essential aspect.</p>
 
 Through a [post from Ethan Marcotte](https://ethanmarcotte.com/wrote/an-accessibility-statement/) I got drawn into the accessibility topic. Web accessibility, like  defined by the W3C, was not on my radar until then and that is not good. 
 
-[[toc]]
-
-## What is accessibility
+## Accessibility
 
 <blockquote><p>Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. </p>
 <footer>W3C, in <cite><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">What is Web Accessibility</a></cite></footer>
@@ -46,7 +44,7 @@ I want to explore this field, develop my skills and make better, *accessible* we
 
 To imagine my future self as someone who is not so quick anymore is one thing, but it must be a different experience of not being able to see the contents of a page and still navigating the web. I don´t have that experience and it´s frightening me. Considering how many years it took me to develop a desired direction, an understanding and a style for my website designs, I have to accept that it takes probably years to develop the necessary skills to build accessible websites. If I can say so, I´m not a *native* in that field and I believe the results of my work will reveal that.
 
-## What do I want to do about it
+## What I want to do about it
 
 I want to start improving now. Here is my plan: I focus on the topic of accessibility 
 

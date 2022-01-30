@@ -188,6 +188,10 @@ module.exports = {
         return utils.tagUrl(tag);
     },
 
+    hasTag: function(tags, tag) {
+        return tags && tag && tags.includes(tag);
+    },
+
     createColorMap: function(values) {
 
         colorMap = new Map();

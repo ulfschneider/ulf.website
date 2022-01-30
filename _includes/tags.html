@@ -2,7 +2,7 @@
     {% assign sortedTags = tags | uniq | sort %}
     <span class="inline-block">
         <span>in</span>
-        <span class="tag-list">
+        <span class="tag-list comma-list">
             {% for tag in sortedTags %}
                 {% if tag == site.starTag %}
                     {%- assign color = tag | tagColor -%}
