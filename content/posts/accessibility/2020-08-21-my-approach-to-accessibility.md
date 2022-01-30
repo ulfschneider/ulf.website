@@ -2,14 +2,14 @@
 title: My approach to accessibility
 tags: [accessibility, articles]
 ---
+Through a [post from Ethan Marcotte](https://ethanmarcotte.com/wrote/an-accessibility-statement/) I got drawn into the accessibility topic. Web accessibility, like  defined by the W3C, was not on my radar until then and that is not good. 
+
+## Accessibility
+
 <blockquote><p>The power of the Web is in its universality.
 Access by everyone regardless of disability is an essential aspect.</p>
 <footer>Tim Berners-Lee, W3C Director and inventor of the World Wide Web</footer>
 </blockquote>
-
-Through a [post from Ethan Marcotte](https://ethanmarcotte.com/wrote/an-accessibility-statement/) I got drawn into the accessibility topic. Web accessibility, like  defined by the W3C, was not on my radar until then and that is not good. 
-
-## Accessibility
 
 <blockquote><p>Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. </p>
 <footer>W3C, in <cite><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">What is Web Accessibility</a></cite></footer>
