@@ -1,6 +1,6 @@
 ---
 title: My approach to accessibility
-tags: [accessibility, article]
+tags: [accessibility, articles]
 ---
 <blockquote><p>The power of the Web is in its universality.
 Access by everyone regardless of disability is an essential aspect.</p>

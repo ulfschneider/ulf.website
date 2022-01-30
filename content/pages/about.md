@@ -3,7 +3,7 @@ permalink: /about/
 title: About
 nodate: true
 notags: true
-tags: article
+tags: articles
 id: about
 ---
 <figure class="mxw-rg">

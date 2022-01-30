@@ -1,7 +1,7 @@
 ---
 title: The agile worker
 abstract: The agile worker exists because of differences between theory and reality,  and because insights can be gained through these discrepancies.
-tags: article
+tags: articles
 ---
 [[toc]]
 

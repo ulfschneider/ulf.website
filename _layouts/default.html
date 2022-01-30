@@ -5,7 +5,7 @@
 		{% include head.html %}
 	</head>
 
-    {%- assign isArticle = tags | hasTag: "article" -%}
+    {%- assign isArticle = tags | hasTag: "articles" -%}
 
 	<body class="default break-word bg-neutral-5 flex-column{% if isArticle == true %} article{%-endif-%}">	
 		{% include header.html %}
