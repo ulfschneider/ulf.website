@@ -31,9 +31,9 @@ Anna´s explanation:
 <blockquote class="fs">
 <p>… Flexbox’s sizing properties allow you to make decisions about three kinds of scenarios:</p>
 <ul>
-<li><code>flex-grow</code>: how flex items should behave when there’s <strong>a surplus of free space (how they should grow)</strong>.</li>
-<li><code>flex-shrink</code>: how flex items should behave when there’s <strong>a shortage of free space (how they should shrink)</strong>.</li>
-<li><code>flex-basis</code>: how flex items should behave when there’s <strong>exactly as much space as needed</strong>.</li>
+<li><code>flex-grow</code>: how flex items should behave when there’s a surplus of free space (how they should grow).</li>
+<li><code>flex-shrink</code>: how flex items should behave when there’s a shortage of free space (how they should shrink).</li>
+<li><code>flex-basis</code>: how flex items should behave when there’s exactly as much space as needed.</li>
 </ul>
 <p>As flexbox is a one-dimensional layout, as opposed to CSS Grid which is two-dimensional, you can allocate free space along the main axis (whether that be top to bottom, bottom to top, left to right, or right to left). You can set the direction of the main axis using the <code>flex-direction</code> property.</p>
 <p>… Note that while <code>flex-grow</code> and <code>flex-shrink</code> have relative values (0, 1, 2, etc.), <code>flex-basis</code> always takes an absolute value (<code>px</code>, <code>rem</code>, <code>content</code>, etc.).</p>

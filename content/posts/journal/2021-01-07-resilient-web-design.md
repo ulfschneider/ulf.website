@@ -34,32 +34,26 @@ As soon as there were two web browsers in the world, interoperability and backwa
 
 The ongoing development and advancement of the web is possible because web browsers ignore HTML tags they don´t know, simply display the text within the tag, and keep working without throwing an error. 
 
-<figure>
-<figcaption><code>p</code> is a known HTML tag</figcaption>
-{% highlight html %}
+``` html
 <p>some text</p>
-{% endhighlight %}
-</figure>
+```
 
-<figure>
-<figcaption><code>marklar</code> is not a HTML tag. The browser will display only the text within the tag.</figcaption>
-{% highlight html %}
+
+``` html
 <marklar>some more text</marklar>
-{% endhighlight %}
-</figure>
+```
+
 
 This liberal attitude allowed HTML to grow, because it allows web browsers to implement features at different rates.
 
 Styling HTML with CSS is the same. The simple pattern
 
-<figure>
-<figcaption>CSS: select an element and give its properties style</figcaption>
-{% highlight css %}
+``` css
 selector {
   property: value;
   }
-{% endhighlight %}
-</figure>
+```
+
 
 will select an element and give its properties style. When using a selector or a property a web browser doesn´t understand, again, it will simply be ignored and the web browser will process further without throwing an error.
 

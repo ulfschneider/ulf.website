@@ -8,9 +8,7 @@ The visual effect is subtle yet noticable. I´m lowering the `font-size` propert
 
 Don´t apply the technique for multi-line code-blocks, as the widened letterspacing will occupy too much space in that case and make the legibility difficult. 
 
-<figure class="bleed-right">
-<figcaption>CSS code for letterspacing of <code>&lt;code&gt;</code> elements while <em>not</em> applying the rule for multi-line code.</figcaption>
-{% highlight css %}
+``` css
 code {
 	letter-spacing: 3px;
 	font-size: .9em;
@@ -19,18 +17,15 @@ code {
 pre code {
   letter-spacing: unset; /*don´t apply letter-spacign for multi-line code*/
   }
-{% endhighlight %}
-</figure>
+```
 
 Applying the CSS to the following HTML
 
-<figure class="bleed-right">
-<figcaption>HTML</figcaption>
-{% highlight html %}
+``` html
 <p>This <code>HTML</code> has a code distinction.</p>
 <p>This HTML doesn´t.</p>
-{% endhighlight %}
-</figure>
+```
+
 
 will lead to a rendering of
 

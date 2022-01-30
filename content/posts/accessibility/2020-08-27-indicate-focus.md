@@ -13,14 +13,15 @@ Without seeing what interactive element has the focus it´s impossible to naviga
 On a page, at any given time, there is *one* element that has the focus. Directly after loading the page, it is probably the document, but once you start to click or tab, it will be one of the aforementioned interactive elements. 
 
 ## Do not disable the focus outline
+
 By default, a browser will indicate focus with an `outline` CSS style, which can be changed. Sometimes web designers remove the outline to make the site design more elegant without *disturbing* outlines. I´m guilty of having done it many times.
 
-{% highlight css %}
+```css
 /* DON´T DO THAT */
 *:focus {
   outline: none;
 }
-{% endhighlight %}
+```
 
 ## How to style the focus indication
 Styling the `outline` is the preferred method to indicate focus as opposed to styling `border` or `background`. `outline` [doesn´t affect the box model](https://css-tricks.com/almanac/properties/o/outline/), while `border` does, which means `outline` will not change the position of adjacent elements and  is therefore better than adjusting the border. Also, changing the `background` for focused elements wouldn´t work for images.
@@ -30,20 +31,20 @@ The contrast ratio of the `outline` against the background must be at least 3:1,
 
 Here is how I do it: I´m first resetting the style by disabling the outline.
 
-{% highlight css %}
+```css
 * {
   outline: none;
 }
-{% endhighlight %}
+```
 
 Then, I´m styling the outline for any element that can gain focus.
 
-{% highlight css %}
+```css
 *:focus {
   outline: 3px solid yellow;
   outline-offset: 2px;
 }
-{% endhighlight %}
+```
 
 ## References
 

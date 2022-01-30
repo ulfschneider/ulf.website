@@ -4,12 +4,10 @@ tags: code
 ---
 Adding a link to edit the contents of any page for an 11ty powered website on GitHub is simpler than I thought.^[https://www.11ty.dev/docs/quicktips/edit-on-github-links/] Example:
 
-<figure class="bleed-right">
-<figcaption>HTML</figcaption>
-{% highlight html %}
+``` html
 <a href="https://github.com/ulfschneider/11ty.ulf.codes/edit/master/{{page.inputPath}}">Edit on GitHub</a>
-{% endhighlight %}
-</figure>
+```
+
 
 Assuming the above code is inside of an [11ty layout file](https://www.11ty.dev/docs/layouts/), here is how to get the correct url for the edit link:
 

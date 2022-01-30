@@ -8,20 +8,14 @@ A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-scrolltable) to
 
 ## Examples
 
-<figure>
-<figcaption>A markdown table</figcaption>
-{% highlight md %}
+``` md
 Column | Column
 ------ | ------
 Cell   | Cell  
-{% endhighlight %}
-</figure>
+```
 
 will become 
 
-<figure>
-<figcaption>A html <code>&lt;table&gt;</code> wrapped into <code>&lt;div&gt;</code></figcaption>
-{% highlight html %}
 <div class="scroll-table" style="overflow-x:auto">
     <table>
         <thead>
@@ -38,14 +32,11 @@ will become
         </tbody>
     </table>
 </div>
-{% endhighlight %}
-</figure>
+```
 
 html inside of your markdown, like for example
 
-<figure>
-<figcaption>A html table inside of markdown text</figcaption>
-{% highlight html %}
+``` html
 <table>
     <thead>
         <tr>
@@ -60,14 +51,11 @@ html inside of your markdown, like for example
         </tr>
     </tbody>
 </table>
-{% endhighlight %}
-</figure>
+```
 
 will be transformed into 
 
-<figure>
-<figcaption>A html <code>&lt;table&gt;</code> wrapped into <code>&lt;div&gt;</code></figcaption>
-{% highlight html %}
+``` html
 <div class="scroll-table" style="overflow-x:auto">
     <table>
         <thead>
@@ -84,14 +72,12 @@ will be transformed into
         </tbody>
     </table>
 </div>
-{% endhighlight %}
-</figure>
+```
+
 
 ## Usage
 
-<figure>
-<figcaption>JavaScript</figcaption>
-{% highlight js %}
+``` js
 var markdownIt = require('markdown-it');
 var markdownItScrollTable = require('markdown-it-scrolltable');
 
@@ -99,6 +85,6 @@ markdownIt({
         html: true
     })
     .use(markdownItScrollTable);
-{% endhighlight %}
-</figure>
+```
+
 

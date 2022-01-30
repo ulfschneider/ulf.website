@@ -1,39 +1,18 @@
-/* PrismJS 1.24.1
-https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/* PrismJS 1.26.0
+https://prismjs.com/download.html#themes=prism-funky&languages=markup+css+clike+javascript */
 
 
 /**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
+ * prism.js Funky theme
+ * Based on “Polyfilling the gaps” talk slides http://lea.verou.me/polyfilling-the-gaps/
  * @author Lea Verou
  */
-
-code[class*="language-"],
-pre[class*="language-"] {
-    color: var(--code-color);
-    font-size: var(--fs-mono);
-    font-family: var(--mono-font-family);
-    background: var(--code-background);
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-}
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: slategray;
+    color: #aaa;
 }
 
 .token.punctuation {
@@ -49,49 +28,36 @@ pre[class*="language-"] {
 .token.boolean,
 .token.number,
 .token.constant,
-.token.symbol,
-.token.deleted {
-    color: #905;
-    /*accent-two*/
+.token.symbol {
+    color: #0cf;
 }
 
 .token.selector,
 .token.attr-name,
 .token.string,
 .token.char,
-.token.builtin,
-.token.inserted {
-    color: #690;
-    /*accent-one*/
+.token.builtin {
+    color: yellow;
 }
 
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string {
-    color: #9a6e3a;
-    /*accent-five*/
+.token.variable,
+.token.inserted {
+    color: yellowgreen;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-    color: #07a;
-    /*primary*/
-}
-
-.token.function,
-.token.class-name {
-    color: #DD4A68;
-    /*accent-three*/
+    color: deeppink;
 }
 
 .token.regex,
-.token.important,
-.token.variable {
-    color: #e90;
-    /*accent-four*/
+.token.important {
+    color: orange;
 }
 
 .token.important,
@@ -105,4 +71,23 @@ pre[class*="language-"] {
 
 .token.entity {
     cursor: help;
+}
+
+.token.deleted {
+    color: red;
+}
+
+
+/* Plugin styles: Diff Highlight */
+
+pre.diff-highlight.diff-highlight>code .token.deleted:not(.prefix),
+pre>code.diff-highlight.diff-highlight .token.deleted:not(.prefix) {
+    background-color: rgba(255, 0, 0, .3);
+    display: inline;
+}
+
+pre.diff-highlight.diff-highlight>code .token.inserted:not(.prefix),
+pre>code.diff-highlight.diff-highlight .token.inserted:not(.prefix) {
+    background-color: rgba(0, 255, 128, .3);
+    display: inline;
 }

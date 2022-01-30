@@ -1,5 +1,6 @@
 const rss = require('@11ty/eleventy-plugin-rss');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 const fs = require('fs');
 
 const site = require('./_data/site.js');
@@ -25,7 +26,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
 
     eleventyConfig.addPlugin(rss);
-    eleventyConfig.addPlugin(syntaxHighlight, { alwaysWrapLineHighlights: true });
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     return {
         dir: {

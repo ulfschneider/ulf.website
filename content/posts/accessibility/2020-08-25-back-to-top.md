@@ -17,21 +17,21 @@ tags: [accessibility, css, code]
 
 ## HTML to create the Back to Top link
 
-<figure>
-{% highlight html %}
+
+``` html
 <html id="start">
   <body>
   <!-- the contents of the page -->
   <a href="#start" id="back-to-start">Back to Top</a>
   </body>
 </html>
-{% endhighlight %}
-</figure>
+```
+
 
 ## JavaScript to hide the link on shorter pages
 
-<figure>
-{% highlight javascript %}
+
+``` js
 function maintainBackToStartVisibility() {
     let backToStart = document.getElementById('back-to-start');
     if (backToStart) {
@@ -49,8 +49,7 @@ function maintainBackToStartVisibility() {
 addEventListener('load', event => maintainBackToStartVisibility());
 addEventListener('scroll', event => maintainBackToStartVisibility());
 addEventListener('resize', event => maintainBackToStartVisibility());
-{% endhighlight %}
-</figure>
+```
 
 ## References
 
