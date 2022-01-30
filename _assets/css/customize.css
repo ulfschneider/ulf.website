@@ -141,7 +141,8 @@ hr.footnotes-sep {
     margin-right: auto;
     margin-left: 0;
     border-top: 2px solid var(--li-prefix-color);
-    margin-top: var(--space-2);
+    margin-top: var(--mrt-h2);
+    margin-bottom: var(--mrb-h2);
 }
 
 hr.footnotes-sep::after {
