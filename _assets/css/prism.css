@@ -12,11 +12,11 @@ https://prismjs.com/download.html#themes=prism-funky&languages=markup+css+clike+
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #aaa;
+    color: var(--accent-one-2);
 }
 
 .token.punctuation {
-    color: #999;
+    color: var(--neutral-2);
 }
 
 .token.namespace {
@@ -29,7 +29,7 @@ https://prismjs.com/download.html#themes=prism-funky&languages=markup+css+clike+
 .token.number,
 .token.constant,
 .token.symbol {
-    color: #0cf;
+    color: var(--primary-2);
 }
 
 .token.selector,
@@ -37,7 +37,7 @@ https://prismjs.com/download.html#themes=prism-funky&languages=markup+css+clike+
 .token.string,
 .token.char,
 .token.builtin {
-    color: yellow;
+    color: var(--accent-four-2);
 }
 
 .token.operator,
@@ -46,18 +46,18 @@ https://prismjs.com/download.html#themes=prism-funky&languages=markup+css+clike+
 .language-css .token.string,
 .token.variable,
 .token.inserted {
-    color: yellowgreen;
+    color: var(--accent-one-2);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-    color: deeppink;
+    color: var(--accent-two-2);
 }
 
 .token.regex,
 .token.important {
-    color: orange;
+    color: var(--accent-three-2);
 }
 
 .token.important,
@@ -74,7 +74,7 @@ https://prismjs.com/download.html#themes=prism-funky&languages=markup+css+clike+
 }
 
 .token.deleted {
-    color: red;
+    color: var(--accent-three);
 }
 
 
