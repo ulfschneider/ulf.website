@@ -8,7 +8,7 @@ A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-scrolltable) to
 
 ## Examples
 
-``` md
+```md
 Column | Column
 ------ | ------
 Cell   | Cell  
@@ -36,7 +36,7 @@ will become
 
 html inside of your markdown, like for example
 
-``` html
+```html
 <table>
     <thead>
         <tr>
@@ -55,7 +55,7 @@ html inside of your markdown, like for example
 
 will be transformed into 
 
-``` html
+```html
 <div class="scroll-table" style="overflow-x:auto">
     <table>
         <thead>
@@ -77,7 +77,7 @@ will be transformed into
 
 ## Usage
 
-``` js
+```js
 var markdownIt = require('markdown-it');
 var markdownItScrollTable = require('markdown-it-scrolltable');
 

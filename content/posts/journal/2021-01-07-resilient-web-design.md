@@ -34,12 +34,12 @@ As soon as there were two web browsers in the world, interoperability and backwa
 
 The ongoing development and advancement of the web is possible because web browsers ignore HTML tags they don´t know, simply display the text within the tag, and keep working without throwing an error. 
 
-``` html
+```html
 <p>some text</p>
 ```
 
 
-``` html
+```html
 <marklar>some more text</marklar>
 ```
 
@@ -48,7 +48,7 @@ This liberal attitude allowed HTML to grow, because it allows web browsers to im
 
 Styling HTML with CSS is the same. The simple pattern
 
-``` css
+```css
 selector {
   property: value;
   }

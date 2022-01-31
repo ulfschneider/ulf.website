@@ -44,6 +44,6 @@ Here is the main content.
 Here is the footer content.
 </footer>
 </body>
-``` 
+```
 
 See the [CodePen](https://codepen.io/ulfschneider/pen/ZEXavJV).

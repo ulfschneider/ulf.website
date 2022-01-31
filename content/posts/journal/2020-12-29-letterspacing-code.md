@@ -8,7 +8,7 @@ The visual effect is subtle yet noticable. I´m lowering the `font-size` propert
 
 Don´t apply the technique for multi-line code-blocks, as the widened letterspacing will occupy too much space in that case and make the legibility difficult. 
 
-``` css
+```css
 code {
 	letter-spacing: 3px;
 	font-size: .9em;
@@ -21,7 +21,7 @@ pre code {
 
 Applying the CSS to the following HTML
 
-``` html
+```html
 <p>This <code>HTML</code> has a code distinction.</p>
 <p>This HTML doesn´t.</p>
 ```

@@ -18,7 +18,7 @@ tags: [accessibility, css, code]
 ## HTML to create the Back to Top link
 
 
-``` html
+```html
 <html id="start">
   <body>
   <!-- the contents of the page -->
@@ -31,7 +31,7 @@ tags: [accessibility, css, code]
 ## JavaScript to hide the link on shorter pages
 
 
-``` js
+```js
 function maintainBackToStartVisibility() {
     let backToStart = document.getElementById('back-to-start');
     if (backToStart) {

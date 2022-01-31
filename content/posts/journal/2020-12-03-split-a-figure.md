@@ -47,7 +47,7 @@ The split is built around the `<figure>` tag, and the CSS for the split will onl
 
 My first attempt to solve the problem was with `flex`. I do not recommend this one. I only keep it here to make my thought-process visible. My suggestion is to use the `grid`-based approach further below! The above shown examples are not based on `flex` but on `grid`.
 
-``` css
+```css
 img {
   max-width: 100%; /*Make images responsive.*/
 }
@@ -94,7 +94,7 @@ figure>*+figcaption {
 ```
 
 
-``` html
+```html
 <figure class="split">
   <div> <!--The image MUST be wrapped in a div for the split to work properly-->
     <img src="/img/journal/IMG_1329.jpg" alt="">
@@ -126,7 +126,7 @@ Also, adding a `<div>` to get proper image formatting is not my cup of tea.
 
 The `grid`-based CSS code is shorter and more versatile in my view. It´s possible to use `column-gap` and `row-gap` and also splitting a `<figure>` into two images is possible. Artificial `<div>` elements are not needed at all. 
 
-``` css
+```css
 img {
   max-width: 100%; /*Make images responsive.*/
 }
@@ -170,7 +170,7 @@ figure>*+figcaption {
 ```
 
 
-``` html
+```html
 <figure class="split">
   <img src="/img/journal/IMG_1329.jpg" alt="">
   <figcaption>A beautiful day with Emil at the Paderborn fishponds.</figcaption>
@@ -204,7 +204,7 @@ figure>*+figcaption {
 
 If you want to apply the split not only for `<figure>` tags, you can even use the following `.split` CSS class, which is more generic:
 
-``` css
+```css
 /*Use grid for the split*/
 @media screen and (min-width: 600px) {
   .split {

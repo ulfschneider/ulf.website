@@ -8,7 +8,7 @@ To achieve this kind of manipulation automatically for all videos on your websit
 
 For correct initial rendering on small screens, **it is important to set a max-width for IFrames in your CSS,** otherwise your text might be rendered too tall on those small screens. That´s because initially, before the script does its work, the IFrame might have too much width and breaks your layout. Setting it to a max-width of 100% ensures it stays within desired limits. However, the adjusting script needs to run afterwards, because otherwise the aspect ratio of the videos would be broken. 
 
-``` css
+```css
 iframe {
   max-width: 100%;
   }
@@ -17,7 +17,7 @@ iframe {
 
 Place the script on your website by putting it into a file, e.g. `fit-vids.js`, and reference it via `<script src="/.../fit-vids.js"></script>`. Here it is:
 
-``` js
+```js
 /*
 A tailored version of FitVids, 
 which is originally created by Dave Rupert (davatron5000).

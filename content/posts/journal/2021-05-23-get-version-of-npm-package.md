@@ -8,7 +8,7 @@ tags: code
 
 The version of any npm package is in its `package.json` file. From within your JavaScript code you get access to the `package.json` of all the installed packages by using `require`. *The basic functionality of `require` is that it reads a JavaScript file, executes the file, and then proceeds to return the exports object^[[https://nodejs.org/en/knowledge/getting-started/what-is-require/](https://nodejs.org/en/knowledge/getting-started/what-is-require/)].* Assuming you are working from within a JavaScript file that´s located in the root directory of your package, the following snippet will provide you the contents of the file as a JSON object:
 
-``` js
+```js
 //replace <package-name> with real package name
 const package = require('./node_modules/<package-name>/package.json'); 
 
@@ -21,7 +21,7 @@ You need to replace the prefixed `./` path location by one or multiple `../` if 
 
 ## Getting the version of your current package
 
-``` js
+```js
 //you don´t need the package name of your current package
 const package = require('./package.json'); 
 

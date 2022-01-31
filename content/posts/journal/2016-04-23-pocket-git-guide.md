@@ -50,7 +50,7 @@ Though not mandatory, for an improved Git experience in the shell, I like to hav
 * The credential helper to cache my username and password, so I don´t have to provide it over and over again when using the https port while connecting to Git servers. See [Caching Your Git Password](https://help.github.com/articles/caching-your-github-password-in-git/) for installation advice.
 * Bash Git Completion for an improved command prompt and command completion with the tab key. Follow [Install Bash Git Completion](https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion) to get it set up (it includes a Git installation via homebrew, but you won´t need that one if you already installed GitHub Desktop like mentioned before). In addition to the explanations given, put the following lines to your `.bash_profile` to improve your command prompt:
 
-  ``` shell
+  ```shell
   export GIT_PS1_SHOWDIRTYSTATE=true
   export GIT_PS1_SHOWUNTRACKEDFILES=true
 
@@ -67,7 +67,7 @@ You can use a slick GUI client on top of Git, like for example [Tower](https://w
 
 ## Tell Git who you are
 
-``` git
+```git
 git config [--global] user.name ["your name or user name"]
 git config [--global] user.email ["your email address"]
 ```
@@ -203,7 +203,7 @@ To delete a file from the working copy and the staging index, use `git rm <paths
 
 If you rename a file in your command shell with `mv a.txt b.txt` , it will produce a similar situation as if you would remove a file with just the shell command `rm a.txt` and creating a new file `b.txt` . Git would still try to keep track of `a.txt` . To fix this, you would have to
 
-``` git
+```git
 git rm a.txt
 git add b.txt
 ```
@@ -222,7 +222,7 @@ you can specify patterns inside of the `.gitignore` file to exclude these from G
 
 An example of the patterns your `.gitignore` may contain
 
-``` git
+```git
 *.a
 build/
 doc/*.txt
@@ -278,7 +278,7 @@ Again, there is a shorthand command for creating a branch and making it the curr
 
 Remote tracking branches are all branches from your remote server (please refer to [Working with remotes to share with a team](#working-with-remotes-to-share-with-a-team)) which came with your most recent `git fetch` or `git pull` into your local repository (so they are called remote tracking, but indeed they are stored in your local repository). They are used to connect your work with a remote repository. Whenever you call `get status` and get a result like
 
-``` git
+```git
 Your branch is ahead of 'origin/<branch-name>' by 1 commit.
   (use "git push" to publish your local commits)
 ```
@@ -311,14 +311,14 @@ Sometimes the work which has been done in a branch will be thrown away. You dele
 
 To merge any branch into your master branch, you have to
 
-``` git
+```git
 git checkout master
 git merge <source-branch-name>
 ```
 
 The first command will bring you into the master branch; the second command will pull in the changes from the source branch into the master branch. The principle is always the same – make the branch into which you want to merge the working copy and then pull changes from any other branch into your working copy by
 
-``` git
+```git
 git checkout <destination-branch-name>
 git merge <source-branch-name>
 ```
@@ -361,14 +361,14 @@ Unlike a regular commit, which has one parent commit, a merge commit has two par
 
 Now, when two modified lines of the same file are overlapping during a merge, a _merge conflict_ occurs. Git can not automatically solve this conflict. Instead, Git indicate the conflict in the console
 
-``` git
+```git
 CONFLICT (content): Merge conflict in <conflicting-file-name-in-destination-branch>
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 and put a _conflict marker_ into the file of the destination branch, indicating the conflicting lines.
 
-``` git
+```git
 <<<<<<< HEAD
   <conflicting content line in destination-branch (the current working copy)>
 =======
@@ -388,7 +388,7 @@ A rename of the current local branch can be achieved by `git branch -m <new-bran
 
 To have the renamed branch on the server, do
 
-``` git
+```git
 git push origin <new-branch-name>
 git push origin --delete <old-branch-name>
 ```
@@ -401,7 +401,7 @@ The `git checkout` can not only be used to checkout an entire branch to drive fu
 
 `git checkout <commit hash>` will set your working directory into the state of the commit referred to with the commit hash (the code you see for each entry in the `git log` , something like c04ff32). You are working then in the so-called _detached HEAD_ state. Git will inform you about _detached HEAD_ with the following output:
 
-``` git
+```git
 git checkout c04ff32
 Note: checking out 'c04ff32'.
 
@@ -444,7 +444,7 @@ On your local machine move to the folder under which the remote repository shoul
 
 `<repo>` is the path to the remote repository and has one of the following structures, each standing for a different protocol:
 
-``` git
+```git
 /path/to/repo.git
 ssh://[user@]host.xz[:port]/path/to/repo.git
 git://host.xz[:port]/path/to/repo.git
@@ -455,7 +455,7 @@ The first protocol is the _local_ protocol. This is useful if the remote reposit
 
 Sometimes you try to access a server via https, and the server is using a self-signed certificate. Git won´t accept this certificate but if you are sure about the server, for example, because the server is located in your local intranet, one possible solution is the following configuration in Git:
 
-``` git
+```git
 cd /path/to/your/repo
 git config http.sslVerify false
 ```
@@ -464,7 +464,7 @@ As a global setting for your entire Git: `git config --global http.sslVerify fal
 
 Once you have cloned the remote to your computer, Git already configured the _origin_ for your project. You can check that by
 
-``` git
+```git
 cd /path/to/parent/<repo>
 git remote -v
 ```
@@ -506,21 +506,21 @@ The following list is by far not complete. Though I found myself using these com
 
 <h3>Create new local repo</h3>
 
-``` git
+```git
 cd /path/to/your/prj/
 git init
 ```
 
 <h3>Copy existing repo</h3>
 
-``` git
+```git
 cd /path/to/parent/
 git clone <repo> [<new-folder-name>]
 ```
 
 Where `<repo>` is one of
 
-``` git
+```git
 /path/to/repo.git
 ssh://[user@]host.xz[:port]/path/to/repo.git
 git://host.xz[:port]/path/to/repo.git
@@ -529,62 +529,62 @@ http[s]://host.xz[:port]/path/to/repo.git
 
 Watch out 
 
-``` git
+```git
 git config [--global] http.sslVerify false
 ```
 
 as one possible solution in case Git doesn´t allow you to connect to a repo via https.
 
 <h3>Status of repo</h3>
-``` git
+```git
 git status
 ```
 
 <h3>Stage content</h3>
-``` git
+```git
 git add <pathspec>
 ```
 
 or
 
-``` git
+```git
 git add --all
 ```
 
 to un-stage, use
 
-``` git
+```git
 git reset <pathspec>
 ```
 
 <h3>Removing files which have not been staged</h3>
-``` git
+```git
 git clean [-ifd]
 ```
 
 <h3>Commit content</h3>
-``` git
+```git
 git commit [-a] [-m "your commit message"]
 ```
 
 where `-a` will stage all modified and deleted content and `-m` indicates the commit message, alternatively
 
-``` git
+```git
 git commit -am "your commit message"
 ```
 
 <h3>See history of commits</h3>
-``` git
+```git
 git log [--oneline] [--pretty] [<branch-name>]
 ```
 
 <h3>Remove file</h3>
-``` git
+```git
 git rm <pathspec>
 ```
 
 <h3>Rename file</h3>
-``` git
+```git
 git mv <current-path> <new-path>
 ```
 
@@ -592,7 +592,7 @@ git mv <current-path> <new-path>
 
 Use one pattern per line in .gitignore file
 
-``` git
+```git
 *.a
 build/
 doc/*.txt
@@ -601,87 +601,87 @@ doc/**/*.txt
 ```
 
 <h3>See what branch you are on</h3>
-``` git
+```git
 git branch [-a|-r]
 ```
 
 <h3>Create a branch</h3>
-``` git
+```git
 git branch <branch-name> [<commit>]
 ```
 
 or
 
-``` git
+```git
 git checkout -b <branch-name>
 ```
 
 to create and checkout the branch.
 
 <h3>Checkout a branch</h3>
-``` git
+```git
 git checkout <branch-name>
 ```
 
 <h3>Compare changes</h3>
-``` git 
+```git 
 git diff [--stat] [<branch-name or commit>]
 git diff <older-commit> <newer-commit>
 ```
 
 <h3>Merge</h3>
-``` git
+```git
 git checkout <destination-branch-name>
 git merge <source-branch-name>
 ```
 
 <h3>Rename a branch</h3>
-``` git
+```git
 git -m <branch-name>
 ```
 
 <h3>Delete a branch</h3>
-``` git
+```git
 git -d <branch-name>
 ```
 
 <h3>Activate an older commit</h3>
-``` git
+```git
 git checkout <commit-hash>
 ```
 
 <h3>Discard file changes</h3>
-``` git
+```git
 git checkout <pathspec>
 ```
 
 <h3>Push to server</h3>
-``` git
+```git
 git push [-u] <remote> <remote-branch-name>
 ```
 
 to push from current branch to remote branch, where <code>-u</code> can be used once to track the remote branch from the current branch. After setting the upstream with <code>-u</code>, it can be pushed and pulled from the current branch without specifying <code>&lt; remote&gt; </code> and <code>&lt; remote-branch-name&gt; </code>.
 
 <h3>Pull from server</h3>
-``` git
+```git
 git pull <remote> <remote-branch-name>
 ```
 
 to pull from remote branch into current branch. If remote branch tracking has been activated before via <code>-u</code> in a <code>git push</code>, it can be pulled from the remote branch without specifying <code>&lt; remote&gt; </code> and <code>&lt; remote-branch-name&gt; </code>.
 
 <h3>Tell Git who you are</h3>
-``` git
+```git
 git config [--global] user.name ["your name or user name"]
 git config [--global] user.email ["your email address"]
 ```
 
 <h3>Display your Git config</h3>
-``` git
+```git
 git config --list
 ```
 
 <h3>Edit your Git config file</h3>
-``` git 
+```git 
 git config [--global] --edit
 ```
 
@@ -689,18 +689,18 @@ git config [--global] --edit
 
 Set your editor
 
-``` git
+```git
 git config --global core.editor <editor-name>
 ```
 
 Display your current editor setting
 
-``` git
+```git
 git config core.editor
 ```
 
 <h3>Let Git accept your self-signed certificate</h3>
-``` git 
+```git 
 git config [--global] http.sslVerify false
 ```
 
