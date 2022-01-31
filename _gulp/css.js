@@ -35,7 +35,7 @@ const processingCSS = () => {
                     '_assets/js/**/*',
                     '_assets/css/customize.css'
                 ],
-                whitelistPatternsChildren: [/^token/, /^pre/, /^code/],
+                whitelistPatterns: [/^token/, /^pre/, /^code/],
                 defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] //check https://flaviocopes.com/tailwind-setup/
             }),
             cssNano()
