@@ -1,9 +1,10 @@
 ---
 title: Training materials for the seahorse badge
 tags: journal
-updated: 2022-01-10
+updated: 2022-01-14
 ---
-<dl class="timeline framed row bleed-right">
+<div class="bleed-right">
+<dl class="timeline framed row">
   <dt>24 Dec 2021</dt>
   <dd><figure>
 <img src="/img/journal/IMG_1581-sm.jpg" class="w-100" alt="">
@@ -23,3 +24,4 @@ updated: 2022-01-10
 	</figure>
 	</dd>
 </dl>
+</div>
