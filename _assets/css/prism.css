@@ -51,7 +51,8 @@ https://prismjs.com/download.html#themes=prism-funky&languages=markup+css+clike+
 
 .token.atrule,
 .token.attr-value,
-.token.keyword {
+.token.keyword,
+.token.function {
     color: var(--accent-two-3);
 }
 
