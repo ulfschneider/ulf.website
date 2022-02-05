@@ -3,7 +3,7 @@ title: Fairlight Strael Build Notes
 tags: sports
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame.<br>This is my thought process for choosing the parts.
 draft: true
-updated: 2022-01-26
+updated: 2022-02-04
 ---
 
 [[toc]]
@@ -45,7 +45,7 @@ To me it was prove enough the Strael steel frame had more to it than cycling fol
 It took me four years from there to the point of ordering a Strael 3.0 frame in late August 2021 to build up my personal bike. In particular, it´s a Strael because of
 
 -   **The fit:** There is a _tall_ frame geometry that fits me. Have a look at the [Fairlight Fit Calculator](https://fairlightcycles.com/calculator/).
--   **The details:** When you read through Dom´s [design notes](https://fairlightcycles.com/wp-content/uploads/2021/06/Fairlight-Strael-3.0-Design-Notes.pdf) you´ll get a sense of how he is taking care about everything. It´s speaking to me and I enjoy owning a frame someone was so humble and courageous about.
+-   **The details:** When you read through Dom´s [design notes](https://fairlightcycles.com/wp-content/uploads/2021/06/Fairlight-Strael-3.0-Design-Notes.pdf) you´ll get a sense of how he is taking care about everything. It´s speaking to me and I will enjoy riding a frame someone was so humble and courageous about. The way the bike is designed reminds me of the [10 principles of good design](/2020-05-04-10-principles-of-good-design/), by Dieter Rams.
 -   **The durability:** I think a steel frame can take the everyday use better than a carbon frame.
 -   **The ride:** Unfortunately, I couldn´t do a test ride before ordering the frame. I´m relying on how certain riders describe it. Therefore I´m talking here about my expectations. The Strael is now in its third model iteration and according to how it´s described it got even better with each iteration. It´s comfortable, it climbs, it gets to speed, the handling is balanced. Stu Kerton´s characterization resonates with me. He describes what I like about a road bike – comfort without being mushy, predictability without being twitchy, and pedaling performance.
 
@@ -76,9 +76,15 @@ It took me four years from there to the point of ordering a Strael 3.0 frame in 
 -   **The sophistication:** Tubes are made by Reynolds in Birmingham, England. Frames are hand-built in Taiwan. Each tube is formed with an intentionally choosen steel. The top tube is custom 0.7/0.4/0.7 butted [Reynolds 853](https://www.reynoldstechnology.biz/materials/steel/s-853/), 20 x 30mm oval. The down tube is custom 0.75/0.45/0.75 butted Reynolds 853, 30 x 40mm bi-oval. The chainstys are [Reynolds 725](https://www.reynoldstechnology.biz/materials/steel/s-725/) 22.2mm custom formed with 0.8/0.6mm butting. Those chainstays have a very complex form to accomplish excellent power transfer while still providing comfort. The seat-stays are Reynolds 725 14mm non-taper with 0.6mm wall thickness. The head tube is 4130 chromoly CNC machined from a solid billet into a tube. The dropouts are CNC machined single pieces and can be replaced. From what I can say by looking at the pictures, the welding is excellent. It´s no question to me that this frame is high sophisticated and the ride quality seems to justify the thoughts and effort.
 -   **The standards:** The frame has standard thru axles with 12x100mm front and 12x142mm rear, as well as an english – what else? – threaded 68mm bottom bracket ^[[<cite>The complete guide to bottom bracket standards</cite>](https://www.bikeradar.com/advice/buyers-guides/the-complete-guide-to-bottom-bracket-standards/)] ^[The threaded english bottom bracket standard also <q>goes by other names, but they all mean the same thing. These are: BSA, BSC, BC, ISO, British, and Euro, the name used in BMX bike circles. The term BSA stands for Birmingham Small Arms, a British company that produced bicycles, cars and other durable goods. The term BSC stands for British Standard Cycle, which adopted the same standard. BSC is sometimes shortened to BC. The term ISO is refers to the International Standard Organization, which also adopted this same standard to be the ISO standard.</q> Source: [<cite>Bottom bracket standards and terminology</cite>](https://www.parktool.com/blog/repair-help/bottom-bracket-standards-and-terminology)], a 27.2mm seatpost, and maximum 160mm disc rotors front and rear (flatmount). It´s compatible with all double road chainsets, 46T max single. 28.6 band on front derailleur. SHIS headset ZS44/28.6 | EC44/40.
 -   **The versatility:** Whether it´s the CNC machined replaceable dropout design, the cable mounting guides, the bottle mounts for three bottles, internal light cable routing for dynamo lights (drive and non-drive side), internal Di2 routing, or 36mm tyre clearance: it makes the bike very adjustable to all sorts of play. There are also mudguard eyelets, which I think I will not use, but for some it might be important.
--   **The look and finish:** You can see each tube and how it´s designed to function. Everything is at display. There is no bling bling just for the sake of it. The frame has a timeless look. I like the _putty_ frame color and – new to the Strael 3.0 – the Anraed fork in frame color. The Fairlight logo is beautiful too.
+-   **The look and finish:** You can see each tube and how it´s designed to function. Everything is at display. There is no bling bling just for the sake of it. The frame has a timeless look. I like the _putty_ frame color and – new to the Strael 3.0 – the Anraed fork in frame color. The Fairlight logo is beautiful too. New to the Strael 3.0 is the solar pattern on the top tube, which should remind you <q>to look up and make shure you take it all in</q>. To quote the design notes:
 
+	> The Solar Pattern on your top tube serve a humble but poetic purpose: They remind you that no day is the same, that every day is worth getting out and rebalancing yourself with your surroundings. When you’re head down and pushing hard, they remind you to look up and make sure you take it all in.
+	> For us, this is a key characteristic of the Strael 3.0 and all Fairlight Cycles: they give you the smooth glides along country lanes, the happiness to be outside and breathe in the morning air. The daily rides, all year long, finding and keeping your own rhythm, harmony with yourself and nature.
+	><footer>from the <a href="https://fairlightcycles.com/wp-content/uploads/2021/06/Fairlight-Strael-3.0-Design-Notes.pdf"><cite>Strael 3.0 Design Notes</cite></a></footer>
+ 
 There is one thing left, _the weight of a steel frame._ The frame of the current Strael 3.0 weighs around 2200g, including bolts, rear axle and dropout inserts, but without the fork. Say, a modern first class carbon frame will weigh under 1000g including the rear axle, then the Strael frame is _at least_ 1000g heavier than a carbon frame. It´s not something to take easily but all the advantages from above outweigh the weight in my view.
+
+**My decision:** Strael 3.0 Tall 56 frameset in color putty.
 
 ## The groupset
 
@@ -88,11 +94,11 @@ With Shimano presenting their new Dura Ace and Ultegra groupsets in 2021, the cu
 
 ### Electronic shifting
 
--   **SRAM´s eTap AXS** shifting is wireless. The bike will only need brake hoses and no cables for shifting. It´s quick to set up and the gearing range is absolutely interesting, with smaller chainrings front and a small 10 teeth sprocket on the cassette, which creates a broader gearing range. The smaller chainrings will lead to riding more often on the big chainring, which leads to less changing gears on the front. SRAM has been a huge innovator in the bike industry and when they bring something new it´s always interesting to look at it. I like almost everything about their groupsets, except, you have to take care of the charging status of four batteries. Each derailleur has its own battery, which should last for 400km of riding. A battery can be charged within 60 minutes. Charting requires the battery to be removed from the bike and put into a charging cradle. Keep in mind, each derailleur has its own battery, they are both the same, so they can be swapped for each other, but there are two of them that require charging. In addition, each brake lever has a CR2032 battery to be able to send the wireless signals to the derailleurs. The shifter batteries should last for two years. Four batteries with each one a different charging status is something that scares me off. On the other hand, replacing a battery is super quick and because they are small and of low weight, carrying a replacement part on longer rides is doable. Another point I do not like too much about SRAM, is, their hydraulic brakes use the more aggressive DOT fluid and not minaral oil, like Shimano. Theoretically, because DOT is hygroscopic, it should be replaced once a year and because the fluid is aggressive on bike surfaces you have do be careful when doing that. I admit, I never did that in the past and my SRAM brakes are working fine.
--   **Shimano´s Di2 ([Digital Integrated Intelligence](https://bike.shimano.com/en-US/technologies/component/details/di2.html))** shifting approach is still mostly wired. There is a central battery that will be placed inside of the seatpost, which protects the battery as well as hiding it away. Both derailleurs are wired to the battery. A fully charged system would allow for around 1000km of riding. Even if it´s less or more than 1000km, the Di2 battery will allow to ride at least double as far than with the eTap AXS batteries before charging is required. To charge the battery, the rear dearailleur needs to get wired to a power supply, which means the entire bike needs to be near a power supply. There is the option to wire the brake levers with the central battery, which I prefer because then there´s only one battery in the system with a clear charging status. This option is claimed to even prolongue battery life by 50%, and to speed up shifting. The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which add´s two more batteries, shortens life of the central battery, and it makes shifting slower. Shifting of SRAM is good but shifting of Shimano is better, no matter if wireless or wired. While each system is a joy to use, Shimano is the fastest and most accurate.
+-   **SRAM´s eTap AXS** shifting is wireless. The bike will only need brake hoses and no cables for shifting. It´s quick to set up and the gearing range is absolutely interesting, with smaller chainrings front and a small 10 teeth sprocket on the cassette, which creates a broader gearing range. The smaller chainrings will lead to riding more often on the big chainring, which leads to less changing gears on the front. SRAM has been a huge innovator in the bike industry and when they bring something new it´s always interesting to look at it. I like almost everything about their groupsets, except, you have to take care of the charging status of four batteries. Each derailleur has its own battery, which should last for 400km of riding. A battery can be charged within 60 minutes. Charging requires the battery to be removed from the bike and put into a charging cradle. Keep in mind, each derailleur has its own battery, they are both the same, so they can be swapped for each other, but there are two of them that require charging. In addition, each brake lever has a CR2032 battery to be able to send the wireless shifting signals to the derailleurs. The shifter batteries should last for two years. Four batteries with each one a different charging status is something that scares me off. On the other hand, replacing a battery is super quick and because they are small and of low weight, carrying a replacement part on longer rides is doable. Another point I do not like too much about SRAM, is, their hydraulic brakes use the more aggressive DOT fluid and not minaral oil, like Shimano. Theoretically, because DOT is hygroscopic, it should be replaced once a year and because the fluid is aggressive on bike surfaces you have do be careful when doing that. I admit, I never replace the DOT fluid on my bike in the past and my SRAM brakes are working fine.
+-   **Shimano´s Di2 ([Digital Integrated Intelligence](https://bike.shimano.com/en-US/technologies/component/details/di2.html))** shifting approach is still mostly wired. There is a central battery that will be placed inside of the seatpost, which protects the battery as well as hiding it away. Both derailleurs are wired to the battery. A fully charged system would allow for around 1000km of riding. Even if it´s less or more than 1000km, the Di2 battery will allow to ride at least double as far than the eTap AXS batteries before charging is required. To charge the battery, the rear dearailleur needs to get wired to a power supply, which means the entire bike needs to be near a power supply. There is the option to wire the brake levers with the central battery, which I prefer because then there´s only one battery in the system with a clear charging status. This option is claimed to even prolongue battery life by 50%, and to speed up shifting. The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which add´s two more batteries, shortens life of the central battery, and it makes shifting slower. Shifting of SRAM is good but shifting of Shimano is better, no matter if wireless or wired. While each system is a joy to use, Shimano is the fastest and most accurate.
 -   **Campagnolo** has never been an option for me, because I dislike their brake lever ergonomics.
 
-> When deciding for an electronic shifting system, I lean towards Shimano for the following reasons: Di2 can be set up to have a single central battery for the entire system, which makes it easy to have a clear charging status. The battery has at least double the capacity of the SRAM batteries, and Shimano shifts faster and more accurate.
+**My decision:** For choosing an electronic shifting system, I lean towards Shimano for the following reasons: Di2 can be set up to have a single central battery for the entire system, which makes it easy to have a clear charging status. The battery has at least double the capacity of the SRAM batteries, and Shimano shifts faster and more accurate.
 
 ### Weight
 
@@ -105,7 +111,7 @@ Now that Di2 is set, let´s compare the weights. To know the field the SRAM grou
 
 For the weight of Shimano´s brake hoses and their electronic wiring I found some data on [Cyclingweekly](https://www.cyclingweekly.com/products/shimano-dura-ace-9200-12-speed-semi-wireless-groupset-launched). Those weights are separately added to the figures.
 
-The crankset weights are without Powermeter. The weights of the SRAM cranks are from [r2-bike](https://r2-bike.com/). Please note, the AXS Red crankset is *more than 100 gram lighter than the Dura Ace* cranks. I believe that´s to some extent because the rings of the SRAM AXS gearing are smaller. Nevertheless, that weight saving is impressive.
+The crankset weights are without Powermeter. The weights of the SRAM cranks are from [r2-bike](https://r2-bike.com/). Please note, the AXS Red crankset is *more than 100 gram lighter than the Dura Ace* cranks. I think that´s to some extent because the rings of the SRAM AXS gearing are smaller. Nevertheless, that weight saving is impressive.
 
 <div class="full-bleed pdx">
   <table class="mrx-auto">
@@ -151,13 +157,13 @@ The weight of the Shimano groupsets is competitive which makes a decision for ei
 
 Function-wise all derailleurs are able to shift 11-34 on the cassette. For the rings, the top gears can have up to 54 tooths with a max. step down of 16 tooths to the small ring. Mixing shifters and derailleurs across the two groupsets is possible according to Shimano´s [<cite>E-Tube Compatibility Chart</cite>](https://bike.shimano.com/content/dam/e-tube/assets/images/contents/project/compatibillity/pdf/en/HM-CC_5.0.1-00-EN.pdf).
 
-> For the recreational cyclist, justifying the additional cost of 1660€ to save 249 grams of weight is difficult – to say the least. But, you know, one gram adds to the other and partially it´s compensating the weight of the steel frame. For the beauty of the Dura Ace finish, to know I´ve mounted the top-gear on my personal bike, and because I´m going to enjoy it whenever I look at it for years to come, I´m opting for Dura Ace. I cannot find another rationale for this decision.
+**My decision:** For the recreational cyclist, justifying the additional cost of 1660€ to save 249 grams of weight is difficult – to say the least. But, you know, one gram adds to the other and partially the weightsaving would compensate the weight of the steel frame. For the beauty of the Dura Ace finish, to know I´ve mounted the top-gear on my personal bike, and because I´m going to enjoy it whenever I look at it for years to come, I´m opting for Dura Ace. I cannot find another rationale for this decision.
 
 ### The cassette
 
 When using a compact 34-50 crank, a jump on the cassette from 22 to 19 is something that´s bothering me. On my old SRAM 11-speed setup I´m riding a 11-30 cassette for that reason (and not 11-32), because the jump is only 2 tooths from 21 to 19. Once on a 19, there is another two-tooths jump to 17, then 15, which is kind of okay but would be better if there were 1-tooth jumps. Everything from 15 to 11 is one-tooth. The modern 12-speed Shimano cassettes do not have that 22-19 jump anymore, no matter if 11-30 or 11-34. The same has to be said about the 12-speed SRAM cassettes. That means, even with an 11-34 cassette the modern Shimano groupsets would give me tight gear steps where I want them and the 34-34 combo in conjunction with a compact crank would allow decent climbing. 
 
-Every now and then I hear or read that 12-speed is not really necessary and 11-speed is as good. I cannot follow that line of thought. At least from my point of view, 12-speed brings a significant improvement in a very specific area that´s important to me. 
+Every now and then I hear or read that 12-speed is not really necessary and 11-speed is as good. I cannot follow that line of thought. At least from my point of view, 12-speed brings an improvement in a very specific area that´s important to me. 
 
 <div class="full-bleed pdx">
    <table class="mrx-auto noso">
@@ -167,6 +173,7 @@ Every now and then I hear or read that 12-speed is not really necessary and 11-s
 			<dt>Color-coding for tooth-jumps:</dt>
 			<dd><span class="bg-accent-one-4 pdx-d3">1 tooth</span> <span class="bg-accent-four-4 pdx-d3">2 tooths</span> <span class="bg-accent-three-4 pdx-d3">3 tooths</span> <span class="bg-accent-two-4 white pdx-d3">4 tooths</span> <span class="bg-accent-two-3 white pdx-d3">5 tooths</span></dd>
 		</dl>
+		<p>My current cassette is <span class="underline">SRAM 11-30 11-speed</span>.</p>
 	</caption>
 	<thead>
 		<tr><th>Manufacturer and range</th><th colspan="12">Steps</th></tr>
@@ -174,15 +181,13 @@ Every now and then I hear or read that 12-speed is not really necessary and 11-s
 	<tbody class="no-wrap">
 		<tr><td>Shimano 11-30 (12 speed)</td><td class="bg-accent-one-4">11</td><td class="bg-accent-one-4">12</td><td class="bg-accent-one-4">13</td><td class="bg-accent-one-4">14</td><td class="bg-accent-one-4">15</td><td class="bg-accent-one-4">16</td><td class="bg-accent-one-4">17</td><td class="bg-accent-four-4">19</td><td class="bg-accent-four-4">21</td><td  class="bg-accent-three-4">24</td><td  class="bg-accent-three-4">27</td><td  class="bg-accent-three-4">30</td></tr>
 		<tr><td>Shimano 11-34 (12 speed)</td><td class="bg-accent-one-4">11</td><td class="bg-accent-one-4">12</td><td class="bg-accent-one-4">13</td><td class="bg-accent-one-4">14</td><td class="bg-accent-one-4">15</td><td class="bg-accent-four-4">17</td><td class="bg-accent-four-4">19</td><td class="bg-accent-four-4">21</td><td class="bg-accent-three-4">24</td><td class="bg-accent-three-4">27</td><td class="bg-accent-three-4">30</td><td class="bg-accent-two-4 white">34</td></tr>
-		<tr><td>SRAM 11-30 (11 speed)</td><td class="bg-accent-one-4">11</td><td class="bg-accent-one-4">12</td><td class="bg-accent-one-4">13</td><td class="bg-accent-one-4">14</td><td class="bg-accent-one-4">15</td><td class="bg-accent-four-4">17</td><td class="bg-accent-four-4">19</td><td class="bg-accent-four-4">21</td><td class="bg-accent-three-4">24</td><td  class="bg-accent-three-4">27</td><td  class="bg-accent-three-4">30</td><td class="center">X</td></tr>			
+		<tr class="brb br-base-color"><td>SRAM 11-30 (11 speed)</td><td class="bg-accent-one-4">11</td><td class="bg-accent-one-4">12</td><td class="bg-accent-one-4">13</td><td class="bg-accent-one-4">14</td><td class="bg-accent-one-4">15</td><td class="bg-accent-four-4">17</td><td class="bg-accent-four-4">19</td><td class="bg-accent-four-4">21</td><td class="bg-accent-three-4">24</td><td  class="bg-accent-three-4">27</td><td  class="bg-accent-three-4">30</td><td class="center">X</td></tr>			
 		<tr><td>SRAM 10-33 (12 speed)</td><td class="bg-accent-one-4">10</td><td class="bg-accent-one-4">11</td><td class="bg-accent-one-4">12</td><td class="bg-accent-one-4">13</td><td class="bg-accent-one-4">14</td><td class="bg-accent-one-4">15</td><td class="bg-accent-four-4">17</td><td class="bg-accent-four-4">19</td><td class="bg-accent-four-4">21</td><td  class="bg-accent-three-4">24</td><td  class="bg-accent-two-4 white">28</td><td class="bg-accent-two-3 white">33</td></tr>	
 	</tbody>
 </table>
 </div>
 
-> Compared to my current 11-speed compact setup, the 12-speed 11-34 cassette would give me the exact same gearing – plus an additional climbing gear. That´s not bad. Or I can ride the 11-30, which has the same lowest gear than what I´m riding today plus tight gear steps 21-19-17-16-15.
-> 
-> The tight gears in that sweet spot are important enough for me to choose the 11-30 Ultegra cassette. It´s made of steel, which is more durable than the partially titanium Dura Ace cassette and because it costs much less, it´s not too difficult to also swap it for an 11-34 if necessary.
+**My decision:** Compared to my current 11-speed compact setup, the 12-speed 11-34 cassette would give me the exact same gearing – plus an additional climbing gear. That´s not bad. Or I can ride the 11-30, which has the same lowest gear than what I´m riding today plus tight gear steps 21-19-17-16-15. The tight gears in that sweet spot are important enough for me to choose the 11-30 Ultegra cassette. It´s made of steel, which is more durable than the partially titanium Dura Ace cassette and because it costs much less, it´s not too difficult to also swap it for an 11-34 if necessary.
 
 ### The crankset
 
@@ -221,9 +226,41 @@ The Rotor cranksets allow a modular setup of different chainrings, look better i
 </table>
 </div>
 
-> For the crankset I´m going to choose the Rotor ALDHU DirectMount crankset with a 32-48 chainring combo. It provides my preferred gear-ratio, can easily be changed to other gear-ratios, carries the least weight, and looks best.
+**My decision:** Because at the time of writing, during February 2022, whether Shimano nor Rotor say officially that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. For that reason I will go for the Dura Ace 34-50 crankset without powermeter. Otherwise I´d probably choosen the Rotor ALDHU DirectMount crankset with a 32-48 chainring combo, as it provides my preferred gear-ratio, can easily be changed to other gear-ratios, carries the least weight, and looks best.
 
 ## The wheels
+
+<div class="bleed">
+<table class="mrx-auto">
+	<caption>
+		<strong>My shortlist of wheels</caption>
+	</caption>
+<thead>
+	<tr><th>Model</th><th>Weight</th><th>Rim depth</th><th>Internal width</th><th>Spokes front/rear</th><th>Hub</th><th>Ratchet freewheel</th><th>Hooked rim</th><th>System weight limit</th><th>Comment</th></tr>
+</thead>
+<tbody>
+	<tr><td><a href="https://rovalcomponents.com/collections/road/products/alpinist-cl">Roval Alpinist CL</a></td><td>1365g</td><td>32mm</td><td>21mm</td><td>24F 24R</td><td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td>125kg</td><td>Not tubeless compatible</td></tr>
+	<tr><td><a href="https://rovalcomponents.com/collections/road/products/cl-50">Roval CL50</a></td><td>1515g</td><td>50mm</td><td>21mm</td><td>21F 24R<td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td>unknown</td><td></td></tr>
+	<tr><td><a href="https://www.mavic.com/en-gb/cosmic-slr-45-disc-rr1330.html">Mavic Cosmic SLR 45</a></td><td>1440g</td><td>45mm</td><td>19mm</td><td>24F 24R<td>Mavic Infinity</td><td>Yes</td><td>Yes</td><td>120kg</td><td>ASTM category 2! and the Mavic Fore rims that don´t require rim tape.</td></tr>
+	<tr><td><a href="https://www.reservewheels.com/reserve-40-44-road-wheel">Reserve Wheels 40|44</a></td><td>1450g</td><td>40mm front<br>44mm rear</td><td>25.5mm front<br>25mm rear</td><td>24F 24R<td>DT Swiss 240</td><td>Yes</td><td>Yes</td><td>unknown</td><td>I learned these wheels are not intended for the German market.</td></tr>	
+	<tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura Ace C36</a></td><td>1350g</td><td>36mm</td><td>21mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>unknown</td><td>Cup and cone bearings</td></tr>	
+	<tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura Ace C50</a></td><td>1461g</td><td>50mm</td><td>21mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>unknown</td><td>Cup and cone bearings</td></tr>	
+</tbody>
+</table>
+</div>
+
+All of these wheels have a ratchet freewheel 🙌 and hooked rims 🙌. In my experience a ratchet freewheel is more sturdy and has quicker engagement. Hooked rims allow to use non-tubless tyres. That´s all good.
+
+The Rovals cannot be used with tubeless tyres. I think that is not really a problem, but for some time now the move of manufacturers was towards tubeless and not away from it. I think both wheels are sturdy, probably the Alpinist CL even more so, at even a low weight. 
+
+The Mavic is an allround wheel even for ASTM category 2 (road and offroad with jumps less than 15cm) at a weight of 1440g. Their Fore rim technology ensures the wheel can be used without rim tape. Very impressive. 
+
+The Reserve Wheels, ,ike the Mavics, are designed for riding on a broad range of surfaces. I didn´t take the Reserve Wheels further into consideration because if there´s no support in Germany it doesn´t make sense in my view choose them. 
+
+The Shimano wheelsets are highly competitive. In the past I always overlooked Shimano wheels but the new 2021 wheels are very interesting. Shimano recommends the C50 to every kind of rider (<q>C50 is the best all-round wheel in Shimano’s history, our recommendation for all riders.</q>), and they recommend C36 for climbers. The Dura Ace wheels, as opposed to the Ultegra wheels, have the new ratchet *Direct Engagement* freewheel. For that reason the Ultegras are not on my shortlist.
+ 
+**My decision:** Because I´m already in the Shimano Dura Ace system, I will go for Dura Ace wheels. The C36, even if meant for climbing, are as well excellent allround wheels in my view. I do not give much on the aero advantage of deeper wheels compared to the C36 rim because in practice I cannot recognize the difference anyway. What´s noticable to me in practice is how difficult deep rims handle in crosswinds. Another thing to recognize, is, lighter wheels are better to accelerate and reduce the overall bike weight, of course. Function-wise, for the average rider, the shallower rim is typically the better choice. But, I say it, choosing a deeper rim over a shallower rim has to do with aesthetics. The wheels should match the appearance of the bike. A carbon superbike with big sculptural tubes looks imbalanced with skinny rims. On the other hand, the steel tubes of the Strael frame are not as big, the top tube is even skinny. I believe the C36 will make a balanced appearence on the Strael frame – it´s not skinny and not overwhelming. Not to forget the real riding advantages of fast acceleration because the wheels weigh only 1350g, plus crosswind stability.
+
 
 ## The tyres
 
