@@ -149,8 +149,8 @@ hr.footnotes-sep {
 
 hr.footnotes-sep::after {
     content: "Footnotes";
-    font-weight: bold;
-    font-size: var(--fs-h2);
+    font-weight: normal;
+    font-size: var(--fs);
     white-space: nowrap;
     word-break: keep-all;
 }
