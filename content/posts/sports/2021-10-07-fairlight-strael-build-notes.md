@@ -13,14 +13,14 @@ updated: 2022-02-04
 My first contact with the Fairlight Strael was through [road.cc](https://road.cc/content/review/216171-fairlight-cycles-strael), around 2017, when Stu Kerton reviewed the bike and gave it an excellent rating.
 
 > Taking everything into account, the Strael is pretty hard to knock, especially for the non-racer. If you want a bike you can train on, bimble about on, credit card tour on, or just get out there and wring the neck of for a full-on blast around the lanes while enjoying each and every mile, the Fairlight ticks all of the boxes.
->
+> 
 > A truly stunning four-season machine with an infectious grin factor and amazing handling.
->
+> 
 > <footer>Stu Kerton, <cite>
 >   <a href="https://road.cc/content/review/216171-fairlight-cycles-strael">Fairlight Cycles Strael</a>
 > </cite>, road.cc 2017</footer>
 
-I was not particularly interested in a steel bike, actually I was far away of it. It was more out of curiosity that I wanted to know why someone would consider an _old school steel bike_ as being top of the range, even compared to modern carbon bikes.^[At the time I was riding a Rose Carbon XEON Team GF 57cm frame with SRAM Red and Mavic Cosmic Carbon Pro wheels. Still, in 2021, the Rose is my road bike and I´m very satisfied with the Rose. Also, the service you get from Rose is top. I had never any reason to complain.]
+I was not particularly interested in a steel bike, actually I was far away of it. It was more out of curiosity that I wanted to know why someone would consider an *old school steel bike* as being top of the range, even compared to modern carbon bikes.
 
 The ride quality seemed to be impressive. Fast, direct, yet comfortable to be used as an endurance bike. The next thing to check was the geometry and that´s where the story started lifting off for me. [Fairlight](https://fairlightcycles.com) is a small bike brand based in London, founded by Dom Thomas and Jon Reid. All their bikes are designed around _[Proportional Geometry](https://fairlightcycles.com/proportional-geometry/)_, which means you can have each frame size in a _regular_ and a _tall_ option. That´s something I don´t see with other brands, even the big ones. The fact that Dom Thomas, the bike designer, is taking so much care about rider needs cannot be over-emphasized in my view. 🙌
 
@@ -228,45 +228,58 @@ The Rotor cranksets allow a modular setup of different chainrings, look better i
 
 **My decision:** Because at the time of writing, during February 2022, whether Shimano nor Rotor say officially that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. For that reason I will go for the Dura Ace 34-50 crankset without powermeter. Otherwise I´d probably choosen the Rotor ALDHU DirectMount crankset with a 32-48 chainring combo, as it provides my preferred gear-ratio, can easily be changed to other gear-ratios, carries the least weight, and looks best.
 
+## The pedals
+
 ## The wheels
 
-<div class="bleed">
+<div class="full-bleed pdx">
 <table class="mrx-auto">
 	<caption>
 		<strong>My shortlist of wheels</caption>
 	</caption>
 <thead>
-	<tr><th>Model</th><th>Weight</th><th>Rim depth</th><th>Internal width</th><th>Spokes front/rear</th><th>Hub</th><th>Ratchet freewheel</th><th>Hooked rim</th><th>System weight limit</th><th>Comment</th></tr>
+	<tr><th>Model</th><th>Weight</th><th>Rim depth</th><th>Internal width</th><th>Spokes front/rear</th><th>Hub</th><th>Ratchet freewheel</th><th>Hooked rim</th><th>Comment</th></tr>
 </thead>
 <tbody>
-	<tr><td><a href="https://rovalcomponents.com/collections/road/products/alpinist-cl">Roval Alpinist CL</a></td><td>1365g</td><td>32mm</td><td>21mm</td><td>24F 24R</td><td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td>125kg</td><td>Not tubeless compatible</td></tr>
-	<tr><td><a href="https://rovalcomponents.com/collections/road/products/cl-50">Roval CL50</a></td><td>1515g</td><td>50mm</td><td>21mm</td><td>21F 24R<td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td>unknown</td><td></td></tr>
-	<tr><td><a href="https://www.mavic.com/en-gb/cosmic-slr-45-disc-rr1330.html">Mavic Cosmic SLR 45</a></td><td>1440g</td><td>45mm</td><td>19mm</td><td>24F 24R<td>Mavic Infinity</td><td>Yes</td><td>Yes</td><td>120kg</td><td>ASTM category 2! and the Mavic Fore rims that don´t require rim tape.</td></tr>
-	<tr><td><a href="https://www.reservewheels.com/reserve-40-44-road-wheel">Reserve Wheels 40|44</a></td><td>1450g</td><td>40mm front<br>44mm rear</td><td>25.5mm front<br>25mm rear</td><td>24F 24R<td>DT Swiss 240</td><td>Yes</td><td>Yes</td><td>unknown</td><td>I learned these wheels are not intended for the German market.</td></tr>	
-	<tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura Ace C36</a></td><td>1350g</td><td>36mm</td><td>21mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>unknown</td><td>Cup and cone bearings</td></tr>	
-	<tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura Ace C50</a></td><td>1461g</td><td>50mm</td><td>21mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>unknown</td><td>Cup and cone bearings</td></tr>	
+	<tr><td><a href="https://rovalcomponents.com/collections/road/products/alpinist-cl">Roval Alpinist CL</a></td><td>1365g</td><td>32mm</td><td>21mm</td><td>24F 24R</td><td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td>Not tubeless compatible</td></tr>
+	<tr><td><a href="https://rovalcomponents.com/collections/road/products/cl-50">Roval CL50</a></td><td>1515g</td><td>50mm</td><td>21mm</td><td>21F 24R<td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td></td></tr>
+	<tr><td><a href="https://www.mavic.com/en-gb/cosmic-slr-45-disc-rr1330.html">Mavic Cosmic SLR 45</a></td><td>1440g</td><td>45mm</td><td>19mm</td><td>24F 24R<td>Mavic Infinity</td><td>Yes</td><td>Yes</td><td>ASTM category 2! Mavic Fore rims don´t require rim tape.</td></tr>
+	<tr><td><a href="https://www.reservewheels.com/reserve-40-44-road-wheel">Reserve Wheels 40|44</a></td><td>1450g</td><td>40mm front<br>44mm rear</td><td>25.5mm front<br>25mm rear</td><td>24F 24R<td>DT Swiss 240</td><td>Yes</td><td>Yes</td><td>I learned these wheels are not for the German market.</td></tr>	
+	<tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura Ace C36</a></td><td>1350g</td><td>36mm</td><td>21mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>Cup and cone bearings</td></tr>	
+	<tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura Ace C50</a></td><td>1461g</td><td>50mm</td><td>21mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>Cup and cone bearings</td></tr>	
 </tbody>
 </table>
 </div>
 
-All of these wheels have a ratchet freewheel 🙌 and hooked rims 🙌. In my experience a ratchet freewheel is more sturdy and has quicker engagement. Hooked rims allow to use non-tubless tyres. That´s all good.
+All of these wheels have a ratchet freewheel 🙌 and hooked rims 🙌. In my experience a ratchet freewheel is sturdier and has quicker engagement. Hooked rims allow to use non-tubless tyres. That´s all good.
 
-The Rovals cannot be used with tubeless tyres. I think that is not really a problem, but for some time now the move of manufacturers was towards tubeless and not away from it. I think both wheels are sturdy, probably the Alpinist CL even more so, at even a low weight. 
+The Rovals cannot be used with tubeless tyres. I think that is not really a problem, but for some time the move of manufacturers was towards tubeless and not away from it. I think both wheels are sturdy, probably the Alpinist CL even more so. The Alpinist has a nice low weight which brings it into the same class as the Shimano C36. 
 
-The Mavic is an allround wheel even for ASTM category 2 (road and offroad with jumps less than 15cm) at a weight of 1440g. Their Fore rim technology ensures the wheel can be used without rim tape. Very impressive. 
+The Mavic is an allround wheel for even ASTM category 2 (road and offroad with jumps less than 15cm) at a weight of 1440g. Their Fore rim technology ensures the wheel can be used without rim tape. Very impressive. 
 
-The Reserve Wheels, ,ike the Mavics, are designed for riding on a broad range of surfaces. I didn´t take the Reserve Wheels further into consideration because if there´s no support in Germany it doesn´t make sense in my view choose them. 
+The Reserve Wheels, like the Mavics, are designed for riding on a broad range of surfaces. I didn´t take the Reserve Wheels further into consideration because if there´s no support in Germany it doesn´t make sense in my view choose them. 
 
-The Shimano wheelsets are highly competitive. In the past I always overlooked Shimano wheels but the new 2021 wheels are very interesting. Shimano recommends the C50 to every kind of rider (<q>C50 is the best all-round wheel in Shimano’s history, our recommendation for all riders.</q>), and they recommend C36 for climbers. The Dura Ace wheels, as opposed to the Ultegra wheels, have the new ratchet *Direct Engagement* freewheel. For that reason the Ultegras are not on my shortlist.
+The Shimano wheelsets are highly competitive. In the past I overlooked Shimano wheels but the new 2021 wheels are very interesting. Shimano recommends the C50 to every kind of rider (<q>C50 is the best all-round wheel in Shimano’s history, our recommendation for all riders.</q>), and they recommend C36 for climbers. The Dura Ace wheels, as opposed to the Ultegra wheels, have the new ratchet *Direct Engagement* freewheel. For that reason the Ultegras are not on my shortlist. The weight of the C36 and the Roval Alpinist are pretty much the same, but the C36 can be ridden tubeless.
  
-**My decision:** Because I´m already in the Shimano Dura Ace system, I will go for Dura Ace wheels. The C36, even if meant for climbing, are as well excellent allround wheels in my view. I do not give much on the aero advantage of deeper wheels compared to the C36 rim because in practice I cannot recognize the difference anyway. What´s noticable to me in practice is how difficult deep rims handle in crosswinds. Another thing to recognize, is, lighter wheels are better to accelerate and reduce the overall bike weight, of course. Function-wise, for the average rider, the shallower rim is typically the better choice. But, I say it, choosing a deeper rim over a shallower rim has to do with aesthetics. The wheels should match the appearance of the bike. A carbon superbike with big sculptural tubes looks imbalanced with skinny rims. On the other hand, the steel tubes of the Strael frame are not as big, the top tube is even skinny. I believe the C36 will make a balanced appearence on the Strael frame – it´s not skinny and not overwhelming. Not to forget the real riding advantages of fast acceleration because the wheels weigh only 1350g, plus crosswind stability.
+**My decision:** Because I´m already in the Shimano Dura Ace system, I will go for Dura Ace wheels. The C36, even if meant for climbing, are as well excellent allround wheels in my view. I do not give much on the aero advantage of deeper wheels compared to the C36 rim because in practice I cannot recognize the difference anyway. What´s noticable to me in practice is how difficult deep rims can be handled in crosswinds. Another thing to recognize, is, lighter wheels are better to accelerate and reduce the overall bike weight, of course. Function-wise, for the average rider, the shallower rim is typically the better choice. But, I say it, choosing a deeper rim over a shallower rim has to do with aesthetics. The wheels should match the appearance of the bike. A carbon superbike with big sculptural tubes looks imbalanced with skinny rims. On the other hand, the steel tubes of the Strael frame are not as big, the top tube is even skinny. I believe the C36 will make a balanced appearence on the Strael frame – it´s not skinny and not overwhelming. Not to forget the real riding advantages of fast acceleration because the wheels weigh only 1350g, plus crosswind stability.
 
 
 ## The tyres
 
-## The seatpost and saddle
+I´ve been riding tubeless for several years and during that time I had only two punctures which sealed by themself. Still, I think tubeless has two drawbacks: It can be extremely difficult to get the tyre on and off the rim. Doing that during a ride I assume will not be a joy. Having to deal with sealant and inserting a tube because the sealing didn´t work is also something you don´t want to experience.
 
-## The stem, handle bars and tape
+Also, Shimano recommends not using tyre leavers with their new rims which might be impossible when using a tubeless setup. 
+
+**My decision:** This time I will choose tyres that require tubes. Continental GP 5000 in a 30mm width or maybe even 32mm width.
+
+## The seatpost, stem, handle bar and tape
+
+
+
+
+## The saddle
+
+**My decision: ** Specialized Phenom Expert 143mm.
 
 ## The waterbottle cages
 
@@ -278,8 +291,3 @@ The Shimano wheelsets are highly competitive. In the past I always overlooked Sh
 
 <https://www.bike24.de/p1168687.html?menu=1000,1868,1962,1964> <https://www.bike24.de/p1295349.html?menu=1000,1868,1962,1964> <https://www.bike24.de/p1360331.html?menu=1000,1868,1962,1964> <https://www.bike24.de/p150229.html?menu=1000,1868,1962,1964>
 
-Design is Everything. Steel bicycles inspired by funciton and utility.
-
-<https://www.slowtwitch.com/Products/Things_that_Roll/Race_Wheels/The_Unique_Virtues_of_Shimano_s_Road_Wheels__8096.html>
-
-<https://fairlightcycles.com/proportional-geometry/>
