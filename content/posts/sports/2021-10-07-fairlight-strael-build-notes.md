@@ -22,9 +22,9 @@ My first contact with the Fairlight Strael was through [road.cc](https://road.cc
 
 I was not particularly interested in a steel bike, actually I was far away of it. It was more out of curiosity that I wanted to know why someone would consider an *old school steel bike* as being top of the range, even compared to modern carbon bikes.
 
-The ride quality seemed to be impressive. Fast, direct, yet comfortable to be used as an endurance bike. The next thing to check was the geometry and that´s where the story started lifting off for me. [Fairlight](https://fairlightcycles.com) is a small bike brand based in London, founded by Dom Thomas and Jon Reid. All their bikes are designed around _[Proportional Geometry](https://fairlightcycles.com/proportional-geometry/)_, which means you can have each frame size in a _regular_ and a _tall_ option. That´s something I don´t see with other brands, even the big ones. The fact that Dom Thomas, the bike designer, is taking so much care about rider needs cannot be over-emphasized in my view. 🙌
+The ride quality seemed to be impressive. Fast, direct, yet comfortable to be used as an endurance bike. The next thing to check was the geometry and that´s where the story started lifting off for me. [Fairlight](https://fairlightcycles.com) is a small bike brand based in London, founded by Dom Thomas and Jon Reid. All their bikes are designed around _[Proportional Geometry](https://fairlightcycles.com/proportional-geometry/)_, which means you can have each frame size in a _regular_ and a _tall_ option. That´s something I don´t see with other brands, even the big ones. The fact that Dom Thomas, the bike designer, is taking so much care about rider needs cannot be over-emphasized in my view 🙌.^[The big manufacturers sometimes claim they are using different carbon layups for differently sized bikes of the same model to create the exact same ride behavior, no matter what frame size. Well, is there a way for you and me to verify that claim? How are the manufacturers going to verify? I think that´s difficult.] 
 
-Their _tall_ frame option is for people with long legs and short torso, while the _regular_ is for people with short legs and long torso (or, regular legs and regular torso 😊). I would say _regular_ reflects the typical road bike geometry. I fall into the _tall_ category, which means I have difficulties riding a standard road race bike. Only marathon geometries, with shorter top tubes and taller head tubes, work for me. And even then I have to tune the bike with 90mm stem instead of 100mm and using drop bars with a reach around 70 to 75mm. Everything else means I have less joy riding, not to mention marathons like the [Rhoen Marathon](https://www.rhoen-radmarathon.dehttps://www.rhoen-radmarathon.de), which is something I like doing on a road bike.
+Fairlights _tall_ frame option is for people with long legs and short torso, while the _regular_ is for people with short legs and long torso (or, regular legs and regular torso 😊). I would say _regular_ reflects the typical road bike geometry. I fall into the _tall_ category, which means I have difficulties riding a standard road race bike. Only marathon geometries, with shorter top tubes and taller head tubes, work for me. And even then I have to tune the bike with 90mm stem instead of 100mm and using drop bars with a reach around 70 to 75mm. Everything else means I have less joy riding, not to mention marathons like the [Rhoen Marathon](https://www.rhoen-radmarathon.dehttps://www.rhoen-radmarathon.de), which is something I like doing on a road bike.
 
 Now, imagine how lucky I was to see that a _tall_ Fairlight frame would do that: shorten the top tube and extending the head tube while keeping excellent frame handling. As I wrote before: that was when I was getting hooked into Fairlight, though there are [some other bikes](/2021-08-05-bike-geos/) I find interesting for that very reason.
 
@@ -157,7 +157,7 @@ The weight of the Shimano groupsets is competitive which makes a decision for ei
 
 Function-wise all derailleurs operate at the same speed and are able to shift 11-34 on the cassette. For the rings, the top gears can have up to 54 tooths with a max. step down of 16 tooths to the small ring. Mixing shifters and derailleurs across the two groupsets is possible according to Shimano´s [<cite>E-Tube Compatibility Chart</cite>](https://bike.shimano.com/content/dam/e-tube/assets/images/contents/project/compatibillity/pdf/en/HM-CC_5.0.1-00-EN.pdf).
 
-**My decision:** For the recreational cyclist, justifying the additional cost of 1660€ to save 249 grams of weight is difficult – to say the least. But, you know, one gram adds to the other and partially the weightsaving would compensate the weight of the steel frame. For the beauty of the Dura Ace finish, to know I´ve mounted the top-gear on my personal bike, and because I´m going to enjoy it whenever I look at it for years to come, I´m opting for Dura Ace. I cannot find another rationale for this decision.
+**My decision:** For the recreational cyclist, justifying the additional cost of 1660€ to save 249 grams of weight is difficult – to say the least. But, you know, one gram adds to the other and partially the weightsaving would compensate the weight of the steel frame. For the beauty of the Dura Ace finish, to know I´ve mounted the top-gear on my very personal bike, and because I´m going to enjoy it whenever I look at it for years to come, I´m opting for Dura Ace. I cannot find another rationale for this decision.
 
 ### The cassette
 
@@ -208,9 +208,7 @@ The Rotor cranksets allow a modular setup of different chainrings, look better i
   <li>ALDHU: <a href="https://rotorbike.com/catalog/default/rotor/road/cranks/aldhu.html">Rotor website</a></li>
   <li>VEGAST: <a href="https://rotorbike.com/catalog/default/rotor/road/cranks/vegast.html">Rotor website</a></li>
   <li>Dura Ace: <a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html">Shimano website</a></li>
-  <li>Ultegra: <a href="https://bike.shimano.com/en-US/product/component/ultegra-r8100.html">Shimano website</a></li>
-  <li>Red:</li>
-  <li>Force:</li>
+  <li>Ultegra: <a href="https://bike.shimano.com/en-US/product/component/ultegra-r8100.html">Shimano website</a></li>  
 </ul>
 </caption>
   <thead>
@@ -257,20 +255,20 @@ The Rovals cannot be used with tubeless tyres. I think that is not really a prob
 
 The Mavic is an allround wheel for even ASTM category 2 (road and offroad with jumps less than 15cm) at a weight of 1440g. Their Fore rim technology ensures the wheel can be used without rim tape. Very impressive. 
 
-The Reserve Wheels, like the Mavics, are designed for riding on a broad range of surfaces. I didn´t take the Reserve Wheels further into consideration because if there´s no support in Germany it doesn´t make sense in my view choose them. 
+The Reserve Wheels, like the Mavics, are designed for riding on a broad range of surfaces. The appearance without any branding is something I prefer. For all those reasons they were initially the number one on my list, but if there´s no support in Germany it doesn´t make sense to take them into further consideration, I believe.
 
-The Shimano wheelsets are highly competitive. In the past I overlooked Shimano wheels but the new 2021 wheels are very interesting. Shimano recommends the C50 to every kind of rider (<q>C50 is the best all-round wheel in Shimano’s history, our recommendation for all riders.</q>), and they recommend C36 for climbers. The Dura Ace wheels, as opposed to the Ultegra wheels, have the new ratchet *Direct Engagement* freewheel. For that reason the Ultegras are not on my shortlist. The weight of the C36 and the Roval Alpinist are pretty much the same, but the C36 can be ridden tubeless.
+The Shimano wheelsets are highly competitive. In the past I overlooked Shimano wheels but the new 2021 wheels are very interesting. Shimano recommends the C50 to every kind of rider (<q>C50 is the best all-round wheel in Shimano’s history, our recommendation for all riders.</q>) and the C36 for climbers. The Dura Ace wheels, as opposed to the Ultegra wheels, have the new ratchet *Direct Engagement* freewheel. For that reason the Ultegras are not on my shortlist. The weight of the C36 and the Roval Alpinist are pretty much the same, but the C36 can be ridden tubeless.
  
 **My decision:** Because I´m already in the Shimano Dura Ace system, I will go for Dura Ace wheels. The C36, even if meant for climbing, are as well excellent allround wheels in my view. I do not give much on the aero advantage of deeper wheels compared to the C36 rim because in practice I cannot recognize the difference anyway. What´s noticable to me in practice is how difficult deep rims can be handled in crosswinds. Another thing to recognize, is, lighter wheels are better to accelerate and reduce the overall bike weight, of course. Function-wise, for the average rider, the shallower rim is typically the better choice. But, I say it, choosing a deeper rim over a shallower rim has to do with aesthetics. The wheels should match the appearance of the bike. A carbon superbike with big sculptural tubes looks imbalanced with skinny rims. On the other hand, the steel tubes of the Strael frame are not as big, the top tube is even skinny. I believe the C36 will make a balanced appearence on the Strael frame – it´s not skinny and not overwhelming. Not to forget the real riding advantages of fast acceleration because the wheels weigh only 1350g, plus crosswind stability.
 
 
 ## The tyres and tubes
 
-I´ve been riding tubeless for several years and during that time I had only two punctures which sealed by themself. Still, I think tubeless has two drawbacks: It can be extremely difficult to get the tyre on and off the rim. Doing that during a ride I assume will not be a joy. Having to deal with sealant and inserting a tube because the sealing didn´t work is also something you don´t want to experience.
+I´ve been riding tubeless for several years and during that time I had only two punctures which sealed by themself. Still, I think tubeless has two drawbacks: It can be extremely difficult to get the tyre on and off the rim. Doing that during a ride when it´s raining and you are tired will not be a joy. Having to deal with sealant and inserting a tube because the sealing didn´t work is also something you don´t want to experience. When riding tubeless, I still carry two replacement tubes. With a tubed setup I carry only a single replacement tube because in that case I can achieve a lot with patching an alreeady punctured tube.
 
-Also, Shimano recommends not using tyre leavers with their new rims which might be impossible when using a tubeless setup. 
+Also, Shimano recommends not using tyre leavers with their new rims, which might be impossible when using a tubeless setup. 
 
-**My decision:** This time I will choose tyres that require tubes. Continental GP 5000 in a 30mm width or maybe even 32mm width.
+**My decision:** This time I will choose tyres that require tubes. Continental GP 5000 in a 30mm width or maybe even 32mm width. Inner tubes will be Continental Race 28 Wide with a 60mm valve.
 
 ## The seatpost, stem, handle bar and tape
 
