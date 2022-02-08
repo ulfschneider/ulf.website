@@ -182,6 +182,13 @@ hr.footnotes-sep::after {
     display: inline;
 }
 
+/* markdown-it-cooklang */
+
+.cooklang-ingredients .amount-and-unit {
+    font-weight: bold;
+    display: inline-block;
+}
+
 .skip-link {
     padding: var(--space-2);
     position: absolute;

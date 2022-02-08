@@ -5,6 +5,7 @@ const markdownItDefList = require('markdown-it-deflist');
 const markdownItContainer = require('markdown-it-container');
 const markdownItFitMedia = require('markdown-it-fitmedia');
 const markdownItTrimmer = require('markdown-it-trimmer');
+const markdownItCooklang = require('markdown-it-cooklang');
 const markdownItScrollTable = require('markdown-it-scrolltable');
 const markdownItAttrs = require('markdown-it-attrs');
 const markdownItFootnote = require('markdown-it-footnote');
@@ -256,7 +257,8 @@ module.exports = {
             .use(markdownItTrimmer)
             .use(markdownItFitMedia, {
                 imgDir: `./${site.input}`,
-            });
+            })
+            .use(markdownItCooklang);
 
 
         return mdlib;
