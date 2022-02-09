@@ -159,22 +159,20 @@ Function-wise all derailleurs operate at the same speed and are able to shift 11
 
 **My decision:** For the recreational cyclist, justifying the additional cost of 1660€ to save 249 grams of weight is difficult – to say the least. But, you know, one gram adds to the other and partially the weightsaving would compensate the weight of the steel frame. For the beauty of the Dura Ace finish, to know I´ve mounted the top-gear on my very personal bike, and because I´m going to enjoy it whenever I look at it for years to come, I´m opting for Dura Ace. I cannot find another rationale for this decision.
 
-https://si.shimano.com/api/publish/storage/pdf/en/dm/RAGN010/DM-RAGN010-00-ENG.pdf
-
-That leads to the following parts to order:
+That leads to the following parts to order (the [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/pdf/en/dm/RAGN010/DM-RAGN010-00-ENG.pdf) was very helpful for my understanding of the Di2 wiring):
 
 - @Dura Ace front brake set: Di2 hydraulic disc brake Dual Control Lever 2x12-speed left side (ST-R9270-L) + caliper front (BR-R9270) + brake hose front 1000mm (SM-BH90){}
 - @Dura Ace rear brake set: Di2 hydraulic disc brake Dual Control Lever 2x12-speed right side (ST-R9270-R) + caliper rear (BR-R9270) + brake hose rear 1700mm (SM-BH90){}
-- @Brake rotors{}
+- @<mark>Ultegra</mark> Brake rotors{}
 - @Dura Ace Di2 rear derailleur 12-speed (RD-R9250){}
 - @Dura Ace Di2 front derailleur 2x12-speed (FD-R9150){}
 - @Di2 battery (BT-DN300){},
 - @Di2 charging cable (ES-EC300){}
-- @Di2 cable to connect battery with front derailleur (EW-SD300-I){1500%mm verify}
-- @Di2 cable to connect battery with rear derailleur (EW-SD300-I){1700%mm verify}
+- @Di2 cable to connect battery with front derailleur (EW-SD300-I){1500*mm verify}
+- @Di2 cable to connect battery with rear derailleur (EW-SD300-I){1600*mm verify}
 - @Di2 junction between shifter cables and battery cable, can that be put into handlebars? (EW-JC304){}
-- @Di2 cables to wire the shifters to the junction (EW-SD300-I){2 * 300%mm verify}
-- @Di2 cable to connect the junction with battery (EW-SD300-I){2000%mm verify}
+- @Di2 cables to wire the shifters to the junction (EW-SD300-I){2 by 300*mm verify}
+- @Di2 cable to connect the junction with battery (EW-SD300-I){1600*mm verify}
 - @Di2 plug tool for cables (TL-EW02){}
 - @Chain{}
 
@@ -207,7 +205,7 @@ Every now and then I hear or read that 12-speed is not really necessary and 11-s
 </table>
 </div>
 
-**My decision:** Compared to my current 11-speed compact setup, the 12-speed 11-34 cassette would give me the exact same gearing – plus an additional climbing gear. That´s not bad. Or I can ride the 11-30, which has the same lowest gear than what I´m riding today plus tight gear steps 21-19-17-16-15. The tight gears in that sweet spot are important enough for me to choose the @11-30 Ultegra 12-speed cassette ().{} It´s made of steel, which is more durable than the partially titanium Dura Ace cassette and because it costs much less, it´s not too difficult to also swap it for an 11-34 if necessary.
+**My decision:** Compared to my current 11-speed compact setup, the 12-speed 11-34 cassette would give me the exact same gearing – plus an additional climbing gear. That´s not bad. Or I can ride the 11-30, which has the same lowest gear than what I´m riding today plus tight gear steps 21-19-17-16-15. The tight gears in that sweet spot are important enough for me to choose the @11-30 <mark>Ultegra</mark> 12-speed cassette ().{} It´s made of steel, which is more durable than the partially titanium Dura Ace cassette and because it costs much less, it´s not too difficult to also swap it for an 11-34 if necessary.
 
 ### The crankset
 
@@ -244,11 +242,11 @@ The Rotor cranksets allow a modular setup of different chainrings, look better i
 </table>
 </div>
 
-**My decision:** Because at the time of writing, during February 2022, whether Shimano nor Rotor say officially that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. For that reason I will go for the Dura Ace 34-50 crankset without powermeter. Otherwise I´d probably choosen the Rotor ALDHU DirectMount crankset with a 32-48 chainring combo, as it provides my preferred gear-ratio, can easily be changed to other gear-ratios, carries the least weight, and looks best.
+**My decision:** Because at the time of writing, during February 2022, whether Shimano nor Rotor say officially that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. For that reason I will go for the @Dura Ace 34-50 crankset without powermeter{}. Otherwise I´d probably choosen the Rotor ALDHU DirectMount crankset with a 32-48 chainring combo, as it provides my preferred gear-ratio, can easily be changed to other gear-ratios, carries the least weight, and looks best.
 
 ## The pedals
 
-**My decision:** I´m riding Shimano XTR PD-M9100 on all my bikes. I don´t need to swap shoes across bikes and the shoes are better suited for walking around.
+**My decision:** I´m riding @Shimano XTR PD-M9100 pedals{} on all my bikes. I don´t need to swap shoes across bikes and the shoes are better suited for walking around.
 
 ## The wheels
 
@@ -281,7 +279,7 @@ The Reserve Wheels, like the Mavics, are designed for riding on a broad range of
 
 The Shimano wheelsets are highly competitive. In the past I overlooked Shimano wheels but the new 2021 wheels are very interesting. Shimano recommends the C50 to every kind of rider (<q>C50 is the best all-round wheel in Shimano’s history, our recommendation for all riders.</q>) and the C36 for climbers. The Dura Ace wheels, as opposed to the Ultegra wheels, have the new ratchet *Direct Engagement* freewheel. For that reason the Ultegras are not on my shortlist. The weight of the C36 and the Roval Alpinist are pretty much the same, but the C36 can be ridden tubeless.
  
-**My decision:** Because I´m already in the Shimano Dura Ace system, I will go for Dura Ace wheels. The C36, even if meant for climbing, are as well excellent allround wheels in my view. I do not give much on the aero advantage of deeper wheels compared to the C36 rim because in practice I cannot recognize the difference anyway. What´s noticable to me in practice is how difficult deep rims are sometimes to be handled in crosswinds. Another thing to recognize, is, lighter wheels are better to accelerate and reduce the overall bike weight, of course. Function-wise, for the average rider, the shallower rim is typically the better choice. But, I say it, choosing a deeper rim over a shallower rim has to do with aesthetics. The wheels should match the appearance of the bike. A carbon superbike with big sculptural tubes looks imbalanced with skinny rims. On the other hand, the steel tubes of the Strael frame are not as big, the top tube is even skinny. I believe the C36 will make a balanced appearence on the Strael frame – it´s not skinny and not overwhelming. Not to forget the real riding advantages of fast acceleration because the wheels weigh only 1350g, plus crosswind stability.
+**My decision:** Because I´m already in the Shimano Dura Ace system, I will go for @Dura Ace C36 disc brake wheels{}. The C36, even if meant for climbing, are as well excellent allround wheels in my view. I do not give much on the aero advantage of deeper wheels compared to the C36 rim because in practice I cannot recognize the difference anyway. What´s noticable to me in practice is how difficult deep rims are sometimes to be handled in crosswinds. Another thing to recognize, is, lighter wheels are better to accelerate and reduce the overall bike weight, of course. Function-wise, for the average rider, the shallower rim is typically the better choice. But, I say it, choosing a deeper rim over a shallower rim has to do with aesthetics. The wheels should match the appearance of the bike. A carbon superbike with big sculptural tubes looks imbalanced with skinny rims. On the other hand, the steel tubes of the Strael frame are not as big, the top tube is even skinny. I believe the C36 will make a balanced appearence on the Strael frame – it´s not skinny and not overwhelming. Not to forget the real riding advantages of fast acceleration because the wheels weigh only 1350g, plus crosswind stability.
 
 
 ## The tyres and tubes
@@ -290,7 +288,7 @@ I´ve been riding tubeless for several years and during that time I had only two
 
 Also, Shimano recommends not using tyre leavers with their new rims, which might be impossible when using a tubeless setup. 
 
-**My decision:** This time I will choose tyres that require tubes. Continental GP 5000 is a no-brainer in that case. Probably in a 30mm width or maybe even 32mm width. Inner tubes will be Continental Race 28 Wide with a 60mm valve.
+**My decision:** This time I will choose tyres that require tubes. @Continental GP 5000{2} is a no-brainer in that case. Probably in a 30mm width or maybe even 32mm width and @Continental Race 28 Wide inner tubes with a 60mm valve{3}.
 
 ## The seatpost, stem, handle bar and tape
 
