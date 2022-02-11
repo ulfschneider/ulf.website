@@ -193,7 +193,8 @@ That concept leads to the following parts to order:
 - @500 mm Di2 cable to connect the two shifters (EW-SD300-I){}
 - @1200 mm Di2 cable to connect one shifter with the EW-JC302, which will get placed into the downtube near the bottom bracket (EW-SD300-I){}
 - @700 mm Di2 cable to connect the battery with the EW-JC302 (EW-SD300-I){}
-- #Di2 plug tool for cables (TL-EW02){}
+- 2 @Di2 Grommets (EW-GM300-S){2}
+- #Di2 Plug Tool for EW-SD300-I cables (TL-EW300){}
 
 
 ### The cassette
@@ -315,7 +316,7 @@ I start with the handlebars. They should allow for internal Di2 cable and brake 
 
 **My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Sport Comfort Bartape, black{}, will complete the handlebar.
 
-Because I want to stay with with one manufacturer, stem and seatpost will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon stem, 100 mm length{}, which weighs 139 g, and a @Ritchey Superlogic Link Seatpost, 15 mm setback{}, at a weight of 145 g. The stem will get a @Ritchey Di2 Battery Mount 2022{}. 
+Because I want to stay with with one manufacturer, stem and seatpost will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 100 mm length{}, which weighs 139 g, and a @Ritchey Superlogic Link Seatpost, 15 mm setback{}, at a weight of 145 g. The stem will get a @Ritchey Di2 Battery Mount 2022{}. 
 
 ## The saddle
 
@@ -335,7 +336,7 @@ It´s a steel frame, therefore metal cages should complement it. Ideally titaniu
       <tr><th>Model</th><th>Weight</th><th>Price</th><th>Comment</th>
     </thead>
     <tbody>
-      <tr><td><a href="https://kingcage.com/collections/water-bottle-cages/products/titanium-cage">King Titanium Cage</a></td><td>28</td><td>60 €</td><td>See how <a href="https://youtu.be/m0HqApJDVI0">the <em>King</em> is making them</a>.</td></tr>
+      <tr><td><a href="https://kingcage.com/collections/water-bottle-cages/products/titanium-cage">King Titanium Cage</a></td><td>28</td><td>60 €</td><td>See how <a href="https://youtu.be/m0HqApJDVI0"><em>The King</em> is making them</a>.</td></tr>
       <tr><td><a href="https://silca.cc/collections/bottle-cages1/products/sicuro-titanium-bottle-cage-black-cerakote-edition">Sicuro Titanium Bottle Cage V2</a></td><td>30</td><td>65 €</td><td>They are also available as a Cerakote Black Edition, which costs 95 €.</td></tr>
     </tbody>
   </table>
@@ -345,7 +346,7 @@ It´s a steel frame, therefore metal cages should complement it. Ideally titaniu
 
 ## The bell
 
-**My decision:** A @Spurcycle Original Bell, black{} - that thing weighs incredible 45 g!
+**My decision:** A @Spurcycle Original Bell, black{} - that thing weighs incredible 45 g, which is a lot, considering the Dura Ace front derailleur weights 96 g.
 
 ## The part list
 
