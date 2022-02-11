@@ -3,7 +3,7 @@ title: Training materials for the seahorse badge
 tags: journal
 updated: 2022-01-14
 ---
-<div class="full-bleed pdx flex justify-center justify-middle">
+<div class="full-bleed flex justify-center justify-middle">
 <dl class="inline-block timeline framed row">
   <dt>24 Dec 2021</dt>
   <dd><figure>
@@ -24,6 +24,6 @@ updated: 2022-01-14
 	</figure>
 	</dd>
 	<dt>6 Feb 2022</dt>
-	<dd>Today we jumped from aside into the water and tried to swim the entire 25 meters. Ring diving was also on our list. We didn´tswim the full distance, probably 15 meters, but we did that multiple times. And Emil starts <em>using</em> the water instead of just trying to stay at the surface. All in all a very pleasant session.</dd>
+	<dd>Today we jumped from aside into the water and tried to swim the entire 25 meters. Ring diving was also on our list. We didn´t swim the full distance, probably 15 meters, but we did that multiple times. And Emil starts <em>using</em> the water instead of just trying to stay at the surface. All in all a very pleasant session.</dd>
 </dl>
 </div>
