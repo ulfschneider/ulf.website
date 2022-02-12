@@ -182,8 +182,8 @@ That leads to the following parts to order:
 - @Dura Ace Rear Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed right side (ST-R9270-R) + Caliper rear (BR-R9270) + Brake Hose rear 1700 mm (SM-BH90){}
 - @<mark>Deore XT</mark> Brake Rotors 160 mm (RT-MT8100){}
 - @Dura Ace Di2 Rear Derailleur 12-speed (RD-R9250){}
-- @Dura Ace Di2 Front Derailleur 2x12-speed (FD-R9150){}
-- @Front Derailleur Clamp Band size SM for 28.6 mm diameter (SM-AD91){}
+- @Dura Ace Di2 Front Derailleur 2x12-speed (FD-R9250){}
+- @Front Derailleur Clamp Band, size SM for 28.6 mm diameter (SM-AD91){}
 - @Di2 Battery (BT-DN300){},
 - @Di2 Charging Cable (ES-EC300){}
 - @<mark>Deore XT</mark> Chain (CN-M8100){}
@@ -203,13 +203,13 @@ The [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/p
   <figcaption><strong>Diagram 2:</strong> This example of a complete internal wiring serves as my blueprint. Opposed to what´s shown in the diagram I will not use the EW-JC304 junction to connect the shifters with the battery. Instead, to comply with what´s shown in <em>Diagram 1</em>, I will use a EW-JC302 and place it near the bottom bracket. The diagram is taken from the Road Di2 Series General Guide.</figcaption>
 </figure>
 
-For the calculation of wire length, I´m referring to the geometry of the Strael 3.0 frame 56T. The seat tube is 557 mm, the chainstays 418 mm, head tube is 180 mm, the down tube plus head tube distance is approximately 1000 mm. I´m calculating wire length as follows:
+For the calculation of wire length, I´m referring to the geometry of the Strael 3.0 frame 56T. The seat tube is 557 mm, the chainstays 418 mm, the down tube is approximately 600 mm. I´m calculating wire length as follows:
 
-- Battery to front derailleur = 557 mm + 150 mm for outside frame = 700 mm
-- Battery to rear derailleur = 557 mm + 150 mm for outside frame + 418 mm + 150 mm for outside frame = 1300 mm
-- Battery to EW-JC302 = 557mm + 150 mm for outside frame + 100 mm into down tube = 700 mm
-- EW-JC302 to one shifter = 1000 mm + 150 mm outside the frame + 250 mm inside handlebar = 1400 mm
-- Shifter to shifter = 500 mm
+- **Battery to front derailleur:** 557 mm seat tube + 150 mm for outside frame ≈ **700 mm**
+- **Battery to rear derailleur:**  557 mm + 150 mm for outside frame + 418 mm + 150 mm for outside frame ≈ **1300 mm**
+- **Battery to EW-JC302:** 557mm + 150 mm for outside frame + 100 mm into down tube ≈ **700 mm**
+- **EW-JC302 to right shifter:** 600 mm + 400 mm outside frame + 300 mm inside handlebar ≈ **1300 mm**
+- **Shifter to shifter:** **550 mm**
 
 
 That concept leads to the following parts to order:
@@ -218,8 +218,8 @@ That concept leads to the following parts to order:
 - @1300 mm Di2 cable to connect the battery with the rear derailleur (EW-SD300-I){}
 - @700 mm Di2 cable to connect the battery with the EW-JC302 (EW-SD300-I){}
 - @Di2 connector to connect the wiring from the handlebars with the battery (EW-JC302){}
-- @1400 mm Di2 cable to connect one shifter with the EW-JC302, which will get placed into the downtube near the bottom bracket (EW-SD300-I){}
-- @500 mm Di2 cable to connect the two shifters (EW-SD300-I){}
+- @1300 mm Di2 cable to connect the right (rear) shifter with the EW-JC302, which will get placed into the downtube near the bottom bracket (EW-SD300-I){}
+- @550 mm Di2 cable to connect the two shifters (EW-SD300-I){}
 - 3 @Di2 Grommets (EW-GM300-S){2}
 - #Di2 Plug Tool for EW-SD300-I cables (TL-EW300){}
 
