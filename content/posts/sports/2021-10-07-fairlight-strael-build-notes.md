@@ -190,7 +190,7 @@ That leads to the following parts to order:
 
 ### Wiring
 
-The [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/pdf/en/dm/RAGN010/DM-RAGN010-00-ENG.pdf) was very helpful for my understanding of the Di2 wiring. 
+The [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/pdf/en/dm/RAGN010/DM-RAGN010-00-ENG.pdf) was very benefitial for my understanding of the Di2 wiring options. 
 
 <figure>
   <img src="/img/sports/wired-gear-shifting.png" alt="">
@@ -205,10 +205,10 @@ The [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/p
 
 For the calculation of wire length, I´m referring to the geometry of the Strael 3.0 frame 56T. The seat tube is 557 mm, the chainstays 418 mm, the down tube is approximately 600 mm. I´m calculating wire length as follows:
 
-- **Battery to front derailleur:** 557 mm seat tube + 150 mm for outside frame ≈ **700 mm**
-- **Battery to rear derailleur:**  557 mm + 150 mm for outside frame + 418 mm + 150 mm for outside frame ≈ **1300 mm**
+- **Battery to front derailleur:** 557 mm seat tube + 150 mm for outside frame ≈ **700 mm**. According to Shimano it must be ≤ 1500 mm.
+- **Battery to rear derailleur:**  557 mm + 150 mm for outside frame + 418 mm + 150 mm for outside frame ≈ **1300 mm**. According to Shimano it must be ≤ 1700 mm.
 - **Battery to EW-JC302:** 557mm + 150 mm for outside frame + 100 mm into down tube ≈ **700 mm**
-- **EW-JC302 to right shifter:** 600 mm + 400 mm outside frame + 300 mm inside handlebar ≈ **1300 mm**
+- **EW-JC302 to right shifter:** 600 mm + 400 mm outside frame + 300 mm inside handlebar ≈ **1300 mm**. According to Shimano the entire distance from the battery to the shifter must be ≤ 2200 mm.
 - **Shifter to shifter:** **550 mm**
 
 
