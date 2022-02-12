@@ -73,7 +73,8 @@ It took me four years from there to the point of ordering a Strael 3.0 frame in 
       <figcaption><a href="https://www.youtube.com/watch?v=ORQacAmVHBA&amp;t=12s"><cite>Fairlight Strael 3.0 Review</cite></a> by <a href="https://www.youtube.com/c/davidarthur/">David Arthur</a></figcaption>
     </figure>
 
--   **The sophistication:** Tubes are made by Reynolds in Birmingham, England. Frames are hand-built in Taiwan. Each tube is formed with an intentionally choosen steel. The top tube is custom 0.7/0.4/0.7 butted [Reynolds 853](https://www.reynoldstechnology.biz/materials/steel/s-853/), 20 x 30 mm oval. The down tube is custom 0.75/0.45/0.75 butted Reynolds 853, 30 x 40 mm bi-oval. The chainstys are [Reynolds 725](https://www.reynoldstechnology.biz/materials/steel/s-725/) 22.2 mm custom formed with 0.8/0.6 mm butting. Those chainstays have a very complex form to accomplish excellent power transfer while still providing comfort. The seat-stays are Reynolds 725 14 mm non-taper with 0.6 mm wall thickness. The head tube is 4130 chromoly CNC machined from a solid billet into a tube. The dropouts are CNC machined single pieces and can be replaced. From what I can say by looking at the pictures, the welding is excellent. It´s no question to me that this frame is high sophisticated and the ride quality seems to justify the thoughts and effort.
+-   **The sophistication:** Tubes are made by Reynolds in Birmingham, England. Frames are hand-built in Taiwan. Each tube is formed with an intentionally choosen steel. The top tube is custom 0.7/0.4/0.7 butted [Reynolds 853](https://www.reynoldstechnology.biz/materials/steel/s-853/), 20 x 30 mm oval. The down tube is custom 0.75/0.45/0.75 butted Reynolds 853, 30 x 40 mm bi-oval. The seat tube is 28.6 mm in diameter, where as the top section is externally butted to 29.8 mm to give the correct inner dimension for the seat post and
+to provide extra surface area for the top tube and seat stay welds. The tube is butted 0.9/0.6/1.2. The chainstays are [Reynolds 725](https://www.reynoldstechnology.biz/materials/steel/s-725/) 22.2 mm custom formed with 0.8/0.6 mm butting. Those chainstays have a very complex form to accomplish excellent power transfer while still providing comfort. The seat-stays are Reynolds 725 14 mm non-taper with 0.6 mm wall thickness. The head tube is 4130 chromoly CNC machined from a solid billet into a tube. The dropouts are CNC machined single pieces and can be replaced. From what I can say by looking at the pictures, the welding is excellent. It´s no question to me that this frame is high sophisticated and the ride quality seems to justify the thoughts and effort.
 -   **The standards:** The frame has standard thru axles with 12x100 mm front and 12x142mm rear, as well as an english – what else? – threaded 68 mm bottom bracket ^[[<cite>The complete guide to bottom bracket standards</cite>](https://www.bikeradar.com/advice/buyers-guides/the-complete-guide-to-bottom-bracket-standards/)] ^[The threaded english bottom bracket standard also <q>goes by other names, but they all mean the same thing. These are: BSA, BSC, BC, ISO, British, and Euro, the name used in BMX bike circles. The term BSA stands for Birmingham Small Arms, a British company that produced bicycles, cars and other durable goods. The term BSC stands for British Standard Cycle, which adopted the same standard. BSC is sometimes shortened to BC. The term ISO is refers to the International Standard Organization, which also adopted this same standard to be the ISO standard.</q> Source: [<cite>Bottom bracket standards and terminology</cite>](https://www.parktool.com/blog/repair-help/bottom-bracket-standards-and-terminology)], a 27.2mm seatpost, and maximum 160mm disc rotors front and rear (flatmount). It´s compatible with all double road chainsets, 46T max single. 28.6 band on front derailleur. SHIS headset ZS44/28.6 | EC44/40.
 -   **The versatility:** Whether it´s the CNC machined replaceable dropout design, the cable mounting guides, the bottle mounts for three bottles, internal light cable routing for dynamo lights (drive and non-drive side), internal Di2 routing, or 36 mm tyre clearance: it makes the bike very adjustable to all sorts of play. There are also mudguard eyelets, which I think I will not use, but for some it might be important.
 -   **The look and finish:** You can see each tube and how it´s designed to function. Everything is at display. There is no bling bling just for the sake of it. The frame has a timeless look. I like the _putty_ frame color and – new to the Strael 3.0 – the Anraed fork in frame color. The Fairlight logo is beautiful too. New to the Strael 3.0 is the solar pattern on the top tube, which should remind you <q>to look up and make shure you take it all in</q>. To quote the design notes:
@@ -84,7 +85,23 @@ It took me four years from there to the point of ordering a Strael 3.0 frame in 
  
 There is one thing left, _the weight of a steel frame._ The frame of the current Strael 3.0 weighs around 2200 g, including bolts, rear axle and dropout inserts, but without the fork. Say, a modern first class carbon frame will weigh under 1000 g including the rear axle, then the Strael frame is _at least_ 1000 g heavier than a carbon frame. It´s not something to take easily but all the advantages from above outweigh the weight in my view.
 
-**My decision:** @Strael 3.0 tall 56 frameset in color putty.{}
+**My decision:** @Strael 3.0 tall 56 frameset in color putty, including Hope Headset and Hope Seat Post Clamp in black{}. 
+
+<figure class="bleed">
+  <img src="/img/sports/strael-3-0-frameset-putty.png" alt="">
+  <figcaption>The Strael 3.0 frameset in color putty.<br>The image is taken from the Fairlight Strael 3.0 Lookbook.</figcaption>
+</figure>
+
+<figure class="rg:split bleed">
+  <figure class="rg:pdr-2">
+    <img src="/img/sports/strael-3-0-frame-parts.png" alt="">
+    <figcaption>Parts that come with the frame.<br>The image is taken from the Fairlight Strael 3.0 Design Notes.<br>As you might notice, you should decide upfront what kind of groupset you want to put on your bike and Fairlight would provide the correct 3D-printed cable guides. Because these are special parts from Fairlight which you cannot get somewhere else, and because I was not sure initially what groupset to use and to be more flexible for future frame usage, I asked Sebastian from Fairlights custoemr service if I could order all the cable guides in addition. Sebastian made sure I get all the cable guides with my frameset at no extra cost, excluding the parts that typically would also come with the frame but which I would get at any bike shop (e.g. Shimano Di2 grommets). I´m absolutely fine with that approach and I want to add that it was never an issue to reach Sebastian via mail and he always was very kind and supportive.</figcaption>
+  </figure>
+  <figure class="rg:pdl-3">
+    <img src="/img/sports/strael-3-0-fork-parts.png" alt="">
+    <figcaption>Parts that come with the fork.<br>The image is taken from the Fairlight Strael 3.0 Design Notes.</figcaption>
+  </figure>
+</figure>
 
 ## The groupset
 
@@ -95,7 +112,7 @@ With Shimano presenting their new Dura Ace and Ultegra groupsets in 2021, the cu
 ### Electronic shifting
 
 -   **SRAM´s eTap AXS** shifting is wireless. The bike will only need brake hoses and no cables for shifting. It´s quick to set up and the gearing range is absolutely interesting, with smaller chainrings front and a small 10 teeth sprocket on the cassette, which creates a broader gearing range. The smaller chainrings will lead to riding more often on the big chainring, which leads to less changing gears on the front. SRAM has been a huge innovator in the bike industry and when they bring something new it´s always interesting to look at it. I like almost everything about their groupsets, except, you have to take care of the charging status of four batteries. Each derailleur has its own battery, which should last for 400 km of riding. A battery can be charged within 60 minutes. Charging requires the battery to be removed from the bike and put into a charging cradle. Keep in mind, each derailleur has its own battery, they are both the same, so they can be swapped for each other, but there are two of them that require charging. In addition, each brake lever has a CR2032 battery to be able to send the wireless shifting signals to the derailleurs. The shifter batteries should last for two years. Four batteries with each one a different charging status is something that scares me off. On the other hand, replacing a battery is super quick and because they are small and of low weight, carrying a replacement part on longer rides is doable. Another point I do not like too much about SRAM, is, their hydraulic brakes use the more aggressive DOT fluid and not minaral oil, like Shimano. Theoretically, because DOT is hygroscopic, it should be replaced once a year and because the fluid is aggressive on bike surfaces you have do be careful when doing that. I admit, I never replace the DOT fluid on my bike in the past and my SRAM brakes are working fine.
--   **Shimano´s Di2 ([Digital Integrated Intelligence](https://bike.shimano.com/en-US/technologies/component/details/di2.html))** shifting approach is still mostly wired. There is a central battery that will be placed inside of the seatpost, which protects the battery as well as hiding it away. Both derailleurs are wired to the battery. A fully charged system would allow for around 1000 km of riding. Even if it´s less or more than 1000km, the Di2 battery will allow to ride at least double as far than the eTap AXS batteries before charging is required. To charge the battery, the rear dearailleur needs to get wired to a power supply, which means the entire bike needs to be near a power supply. There is the option to wire the brake levers with the central battery, which I prefer because then there´s only one battery in the system with a clear charging status. This option is claimed to even prolongue battery life by 50%, and to speed up shifting. The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which add´s two more batteries, shortens life of the central battery, and it makes shifting slower. Shifting of SRAM is good but shifting of Shimano is better, no matter if wireless or wired. While each system is a joy to use, Shimano is the fastest and most accurate.
+-   **Shimano´s Di2 ([Digital Integrated Intelligence](https://bike.shimano.com/en-US/technologies/component/details/di2.html))** shifting approach is still mostly wired. There is a central battery that will be placed inside of the seatpost, which protects the battery as well as hiding it away. Both derailleurs are wired to the battery. A fully charged system would allow for around 1000 km of riding. Even if it´s less or more than 1000km, the Di2 battery will allow to ride at least double as far than the eTap AXS batteries before charging is required. To charge the battery, the rear dearailleur needs to get wired to a power supply, which means the entire bike needs to be near a power supply. There is the option to wire the brake levers with the central battery, which I prefer because then there´s only one battery in the system with a clear charging status. This option is claimed to even prolongue battery life by 50%, and to speed up shifting. The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which add´s two more batteries, shortens life of the central battery, and it makes shifting slower. Shifting of SRAM is good but shifting of Shimano is better, no matter if wireless or wired. While each system is a joy to use, and I have a lot of respect for the hard work and achievements of the engineers in either company, on the road Shimano is the fastest and most accurate.
 -   **Campagnolo** has never been an option for me, because I dislike their brake lever ergonomics.
 
 **My decision:** For choosing an electronic shifting system, I lean towards Shimano for the following reasons: Di2 can be set up to have a single central battery for the entire system, which makes it easy to have a clear charging status. The battery has at least double the capacity of the SRAM batteries, and Shimano shifts faster and more accurate.
@@ -157,7 +174,7 @@ The weight of the Shimano groupsets is competitive which makes a decision for ei
 
 Function-wise all derailleurs operate at the same speed and are able to shift 11-34 on the cassette. For the rings, the top gears can have up to 54 tooths with a max. step down of 16 tooths to the small ring. Mixing shifters and derailleurs across the two groupsets is possible according to Shimano´s [<cite>E-Tube Compatibility Chart</cite>](https://bike.shimano.com/content/dam/e-tube/assets/images/contents/project/compatibillity/pdf/en/HM-CC_5.0.1-00-EN.pdf).
 
-**My decision:** For the recreational cyclist, justifying the additional cost of 1660 € to save 249 grams of weight is difficult – to say the least. But, you know, one gram adds to the other and partially the weightsaving would compensate the weight of the steel frame. For the beauty of the Dura Ace finish, to know I´ve mounted the top-gear on my very personal bike, and because I´m going to enjoy it whenever I look at it for years to come, I´m opting for Dura Ace. I cannot find another rationale for this decision.
+**My decision:** For the recreational cyclist, justifying the additional cost of 1660 € to save 249 grams of weight is difficult – to say the least. But, you know, one gram adds to the other and partially the weightsaving would compensate the weight of the steel frame. For the beauty of the Dura Ace finish, to know I´ve mounted the close to perfection top-gear on my very personal bike, and because I´m going to enjoy it whenever I look at it for years to come, I´m opting for Dura Ace. I cannot find another rationale for this decision.
 
 That leads to the following parts to order:
 
@@ -166,6 +183,7 @@ That leads to the following parts to order:
 - @<mark>Deore XT</mark> Brake Rotors 160 mm (RT-MT8100){}
 - @Dura Ace Di2 Rear Derailleur 12-speed (RD-R9250){}
 - @Dura Ace Di2 Front Derailleur 2x12-speed (FD-R9150){}
+- @Front Derailleur Clamp Band size SM for 28.6 mm diameter (SM-AD91){}
 - @Di2 Battery (BT-DN300){},
 - @Di2 Charging Cable (ES-EC300){}
 - @<mark>Deore XT</mark> Chain (CN-M8100){}
@@ -185,15 +203,24 @@ The [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/p
   <figcaption><strong>Diagram 2:</strong> This example of a complete internal wiring serves as my blueprint. Opposed to what´s shown in the diagram I will not use the EW-JC304 junction to connect the shifters with the battery. Instead, to comply with what´s shown in <em>Diagram 1</em>, I will use a EW-JC302 and place it near the bottom bracket. The diagram is taken from the Road Di2 Series General Guide.</figcaption>
 </figure>
 
+For the calculation of wire length, I´m referring to the geometry of the Strael 3.0 frame 56T. The seat tube is 557 mm, the chainstays 418 mm, head tube is 180 mm, the down tube plus head tube distance is approximately 1000 mm. I´m calculating wire length as follows:
+
+- Battery to front derailleur = 557 mm + 150 mm for outside frame = 700 mm
+- Battery to rear derailleur = 557 mm + 150 mm for outside frame + 418 mm + 150 mm for outside frame = 1300 mm
+- Battery to EW-JC302 = 557mm + 150 mm for outside frame + 100 mm into down tube = 700 mm
+- EW-JC302 to one shifter = 1000 mm + 150 mm outside the frame + 250 mm inside handlebar = 1400 mm
+- Shifter to shifter = 500 mm
+
+
 That concept leads to the following parts to order:
 
-- @550 mm Di2 cable to connect the battery with the front derailleur (EW-SD300-I){}
-- @1250 mm Di2 cable to connect the battery with the rear derailleur (EW-SD300-I){}
-- @Di2 connector to connect the wiring from the handlebars with the battery (EW-JC302){}
-- @500 mm Di2 cable to connect the two shifters (EW-SD300-I){}
-- @1200 mm Di2 cable to connect one shifter with the EW-JC302, which will get placed into the downtube near the bottom bracket (EW-SD300-I){}
+- @700 mm Di2 cable to connect the battery with the front derailleur (EW-SD300-I){}
+- @1300 mm Di2 cable to connect the battery with the rear derailleur (EW-SD300-I){}
 - @700 mm Di2 cable to connect the battery with the EW-JC302 (EW-SD300-I){}
-- 2 @Di2 Grommets (EW-GM300-S){2}
+- @Di2 connector to connect the wiring from the handlebars with the battery (EW-JC302){}
+- @1400 mm Di2 cable to connect one shifter with the EW-JC302, which will get placed into the downtube near the bottom bracket (EW-SD300-I){}
+- @500 mm Di2 cable to connect the two shifters (EW-SD300-I){}
+- 3 @Di2 Grommets (EW-GM300-S){2}
 - #Di2 Plug Tool for EW-SD300-I cables (TL-EW300){}
 
 
@@ -231,11 +258,9 @@ Every now and then I hear or read that 12-speed is not really necessary and 11-s
 
 Being able to route Di2 wires through the Strael frame requires a 24mm crankset axle and no larger. 24 mm is the axle diameter used by Shimano, for that reason it no problem to mount a standard Dura Ace or Ultegra crankset onto the frame – except having the option to mount sub-compact chainrings with 32-48 tooths or even 30-46 would be nice. The smaller chainrings would allow me to run smaller cassettes with tighter gear-steps and even less weight for the cassette. Under specific circumstances, when paired with a larger cassette, the lower chainrings will also allow for extreme climbing. The limit in top-speed that comes with smaller chainrings is not a concern for me because it´s anyway not often that I´m riding a 50-11 gear ratio but it´s much more often that I have to select gears down the range.
 
-At first I also didn´t like the look of the Shimano cranks too much, but I think the new 2021 cranks look better and I´m getting used to it.
+Being constraint to 24 mm in axle diameter limits the number of alternate crankset options apart from Shimano. The Rotor cranksets will typically come into play here. Currently they are officially only compatible with Shimano 11-speed groupsets but  according to [BETTERSHIFTING](https://bettershifting.com/12-speed-r9200-r8100-and-11-speed-di2-compatibility/#crankbasedpowermeters) it is possible to use current Rotor cranksets with the new Shimano 12-speed drivetrain. A question I filed as a support ticket to the Rotor people about their support of the 12-speed Shimano drivetrains remained unanswered. The other day I found [Rides of Japan](https://youtu.be/ZprEPXOokMU) using an Easton EC90 SL crank within the Dura Ace 9200 group because the EC90 weighs 100 g less. Overall, it looks like the new crankset can be replaced 3rd party cranks but I´m not sure if I´m ready for that experiment. 
 
-Being constraint to 24 mm in axle diameter limits the number of alternate crankset options apart from Shimano. The Rotor cranksets will typically come into play here. Currently they are officially only compatible with Shimano 11-speed groupsets but  according to [BETTERSHIFTING](https://bettershifting.com/12-speed-r9200-r8100-and-11-speed-di2-compatibility/#crankbasedpowermeters) it is possible to use current Rotor cranksets with the new Shimano 12-speed drivetrain. A question I filed as a support ticket to the Rotor people about their support of the 12-speed Shimano drivetrains remained unanswered.  I´m not sure if I´m ready for that experiment.
-
-The Rotor cranksets allow a modular setup of different chainrings, look better in my opinion, and weigh less. See the weight comparison below. Please note that I only found the total weights of the Shimano cranksets without differentiating into their parts. The Rotor ALDHU carbon cranks are not included into the comparison, because the carbon cranks are only available for a 30mm axle. For Rotor and Shimano I´m only comparing compact chainring sizes, because they are the smallest to get from Shimano. Because the SRAM AXS groupsets have a different approach with their gear ratios, I`m referring to 33-46 cranks, which I think comes closest to what is intended by a compact crank for the non-SRAM groupsets.
+The Rotor cranksets allow a modular setup of different chainrings, look better in my opinion, and weigh less. See the weight comparison below. Please note that I only found the total weights of the Shimano cranksets without differentiating into their parts. The Rotor ALDHU carbon cranks are not included into the comparison, because the carbon cranks are only available for a 30mm axle. For Rotor and Shimano I´m only comparing compact chainring sizes, because they are the smallest to get from Shimano. Because the SRAM AXS groupsets have a different approach with their gear ratios, I`m referring to 33-46 cranks, which I think comes close to what is intended by a compact crank for the non-SRAM groupsets.
 
 <div class="full-bleed">
   <table class="mrx-auto underline-rows">
