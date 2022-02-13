@@ -3,7 +3,7 @@ title: Fairlight Strael Build Notes
 tags: sports
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame.<br>This is my thought process for choosing the parts.
 draft: true
-updated: 2022-02-04
+updated: 2022-02-13
 ---
 
 [[toc]]
@@ -194,13 +194,13 @@ The [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/p
 
 <figure>
   <img src="/img/sports/wired-gear-shifting.png" alt="">
-  <figcaption><strong>Diagram 1:</strong> This example of a wired gear shifting setup is taken from the Road Di2 Series General Guide and I plan to follow that example.</figcaption>
+  <figcaption> This example of a wired gear shifting setup is taken from the Road Di2 Series General Guide and I plan to follow that example.</figcaption>
 </figure>
 
 
 <figure>
   <img src="/img/sports/internal-wiring.png" alt="">
-  <figcaption><strong>Diagram 2:</strong> This example of a complete internal wiring serves as my blueprint. Opposed to what´s shown in the diagram I will not use the EW-JC304 junction to connect the shifters with the battery. Instead, to comply with what´s shown in <em>Diagram 1</em>, I will use a EW-JC302 and place it near the bottom bracket. The diagram is taken from the Road Di2 Series General Guide.</figcaption>
+  <figcaption>This example of a complete internal wiring serves as my blueprint. Opposed to what´s shown in the diagram I will not use the EW-JC304 junction to connect the shifters with the battery. Instead, to comply with the wiring inside the handlebars I will use a EW-JC302 and place it near the bottom bracket. The diagram is taken from the Road Di2 Series General Guide.</figcaption>
 </figure>
 
 For the calculation of wire length, I´m referring to the geometry of the Strael 3.0 frame 56T. The seat tube is 557 mm, the chainstays 418 mm, the down tube is approximately 600 mm. I´m calculating wire length as follows:
@@ -258,9 +258,11 @@ Every now and then I hear or read that 12-speed is not really necessary and 11-s
 
 Being able to route Di2 wires through the Strael frame requires a 24mm crankset axle and no larger. 24 mm is the axle diameter used by Shimano, for that reason it no problem to mount a standard Dura Ace or Ultegra crankset onto the frame – except having the option to mount sub-compact chainrings with 32-48 tooths or even 30-46 would be nice. The smaller chainrings would allow me to run smaller cassettes with tighter gear-steps and even less weight for the cassette. Under specific circumstances, when paired with a larger cassette, the lower chainrings will also allow for extreme climbing. The limit in top-speed that comes with smaller chainrings is not a concern for me because it´s anyway not often that I´m riding a 50-11 gear ratio but it´s much more often that I have to select gears down the range.
 
-Being constraint to 24 mm in axle diameter limits the number of alternate crankset options apart from Shimano. The Rotor cranksets will typically come into play here. Currently they are officially only compatible with Shimano 11-speed groupsets but  according to [BETTERSHIFTING](https://bettershifting.com/12-speed-r9200-r8100-and-11-speed-di2-compatibility/#crankbasedpowermeters) it is possible to use current Rotor cranksets with the new Shimano 12-speed drivetrain. A question I filed as a support ticket to the Rotor people about their support of the 12-speed Shimano drivetrains remained unanswered. The other day I found [Rides of Japan](https://youtu.be/ZprEPXOokMU) using an Easton EC90 SL crank within the Dura Ace 9200 group because the EC90 weighs 100 g less. Overall, it looks like the new crankset can be replaced by 3rd party cranks but I´m not sure if I´m ready for that experiment. 
+Being constraint to 24 mm in axle diameter limits the number of alternate crankset options. The Rotor cranksets will typically come into play here. Currently they are officially only compatible with Shimano 11-speed groupsets but  according to [BETTERSHIFTING](https://bettershifting.com/12-speed-r9200-r8100-and-11-speed-di2-compatibility/#crankbasedpowermeters) it is possible to use current Rotor cranksets with the new Shimano 12-speed drivetrain. A question I filed as a support ticket to the Rotor people about their support of the 12-speed Shimano drivetrains remained unanswered. The other day I found [Rides of Japan](https://youtu.be/ZprEPXOokMU) successfully using an Easton EC90 SL crank within the Dura Ace 9200 group because the EC90 weighs 100 g less. Overall, it looks like the new crankset can still be replaced by 3rd party cranks. 
 
-The Rotor cranksets allow a modular setup of different chainrings, look better in my opinion, and weigh less. See the weight comparison below. Please note that I only found the total weights of the Shimano cranksets without differentiating into their parts. The Rotor ALDHU carbon cranks are not included into the comparison, because the carbon cranks are only available for a 30mm axle. For Rotor and Shimano I´m only comparing compact chainring sizes, because they are the smallest to get from Shimano. Because the SRAM AXS groupsets have a different approach with their gear ratios, I`m referring to 33-46 cranks, which I think comes close to what is intended by a compact crank for the non-SRAM groupsets.
+Then there seems to be an issue with Shimano Hollowtech cranks unbonding over time. Please refer to [<cite>Understanding an unusual Shimano crankset failure</cite>](https://www.bikeradar.com/features/shimano-crank-failure/) and [<cite>Why do Shimano cranks keep failing? Analysis.</cite>](https://www.youtube.com/watch?v=Rj__lexd_BI) I certainly can follow the line of thoughts.
+
+The Rotor cranksets allow a complete modular setup of axle, spider, and different chainrings. They look better in my opinion, weigh less, and are manufactured to impressive low tolerances, as explained by [Peak Torque](https://youtu.be/PX6nbV9s7SU). Please note that for the below weight comparison I only found the total weights of the Shimano cranksets without differentiating into their parts. The Rotor ALDHU carbon cranks are not included into the comparison, because the carbon cranks are only available for a 30mm axle. For Rotor and Shimano I´m only comparing compact chainring sizes, because they are the smallest to get from Shimano. Because the SRAM AXS groupsets have a different approach with their gear ratios, I`m referring to 33-46 cranks, which I think comes close to what is intended by a compact crank for the non-SRAM groupsets.
 
 <div class="full-bleed">
   <table class="mrx-auto underline-rows">
@@ -281,13 +283,13 @@ The Rotor cranksets allow a modular setup of different chainrings, look better i
 	  <tr><td>ALDHU DirectMount</td><td>645</td><td>350</td><td>0</td><td>150 /assumed</td><td>145</td></tr>
 	  <tr><td>ALDHU Spider</td><td>675.5</td><td>350</td><td>60 /assumed</td><td>30.5 + 90 </td><td>145</td></tr>
 	  <tr><td>Dura Ace 9200</td><td>685</td><td>←</td><td>←</td><td>←</td><td>←</td></tr>
-	  <tr><td>VEGAST DirectMount</td><td>694</td><td>399</td><td>0</td><td>150 /assumed</td><td>145</td></tr>
+	  <tr><td>VEGAST Direct Mount</td><td>694</td><td>399</td><td>0</td><td>150 /assumed</td><td>145</td></tr>
 	  <tr><td>Ultegra 8100</td><td>700</td><td>←</td><td>←</td><td>←</td><td>←</td></tr>
 	  <tr><td>VEGAST Spider</td><td>724.5</td><td>399</td><td>60 /assumed</td><td>30.5 + 90 </td><td>145</td></tr></tbody>
 </table>
 </div>
 
-**My decision:** Because at the time of writing, during February 2022, whether Shimano nor Rotor say officially that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. For that reason I will go for the @Dura Ace 34-50 Crankset (FC-R9200){} and a @Dura Ace Threaded Bottom Bracket (BB-R9100){}. Otherwise I´d probably choosen the Rotor ALDHU DirectMount crankset with a 32-48 chainring combo, as it provides my preferred gear-ratio, can easily be changed to other gear-ratios, carries the least weight, and looks best.
+**My decision:** At the time of writing, during February 2022, I couldn´t get a statement fro Rotor to state officially officially that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet I think it is possible. For that reason I will go for the @Rotor ALDHU 24 mm Crank Arms{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Rotor BSA Threaded Bottom Bracket for the 24 mm axle{}.
 
 ## The pedals
 
@@ -341,11 +343,11 @@ I start with the handlebars. They should allow for internal Di2 cable and brake 
 
 **My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Sport Comfort Bartape, black{}, will complete the handlebar.
 
-Because I want to stay with with one manufacturer, stem and seatpost will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 100 mm length{}, which weighs 139 g, and a @Ritchey Superlogic Link Seatpost, 15 mm setback{}, at a weight of 145 g. The stem will get a @Ritchey Di2 Battery Mount 2022{}. 
+Because I want to stay with with one manufacturer, stem and seatpost will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 100 mm length{}, which weighs 139 g, and a @Ritchey Superlogic Link Seatpost, 15 mm setback{}, at a weight of 145 g. The stem will get a @Ritchey Di2 Battery Mount **2022**{}. 
 
 ## The saddle
 
-**My decision:** @Specialized Phenom Expert 143mm{}.
+**My decision:** @Specialized Phenom Expert, 143 mm{}.
 
 ## The waterbottle cages
 
