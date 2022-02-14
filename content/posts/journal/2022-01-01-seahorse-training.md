@@ -25,5 +25,17 @@ updated: 2022-01-14
 	</dd>
 	<dt>6 Feb 2022</dt>
 	<dd>Today we jumped from aside into the water and tried to swim the entire 25 meters. Ring diving was also on our list. We didn´t swim the full distance, probably 15 meters, but we did that multiple times. And Emil starts <em>using</em> the water instead of just trying to stay at the surface. All in all a very pleasant session.</dd>
+	<dt>12 Feb 2022</dt>
+	<dd>Again, jumping from aside, swimmig 15 meters multiple times, and diving.</dd>
+	<dd>
+	<figure>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/0poXfKr_WII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<figcaption>I found this trainig video of which we will use some exercises.</figcaption></figure>
+	</dd>
+	<dd>
+	<figure>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/j6F_n8njtYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<figcaption>Also this video contains some ideas to try at home.</figcaption></figure>
+	</dd>
 </dl>
 </div>
