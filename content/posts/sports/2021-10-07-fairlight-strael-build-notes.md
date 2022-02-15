@@ -3,7 +3,7 @@ title: Fairlight Strael Build Notes
 tags: sports
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame.<br>This is my thought process for choosing the parts.
 draft: true
-updated: 2022-02-13
+updated: 2022-02-15
 ---
 
 [[toc]]
@@ -306,7 +306,7 @@ The Rotor cranksets allow a complete modular setup of axle, spider, and differen
 	<tr><th>Model</th><th>Weight</th><th>Rim depth</th><th>Internal width</th><th>Spokes front/rear</th><th>Hub</th><th>Ratchet freewheel</th><th>Hooked rim</th><th>Comment</th></tr>
 </thead>
 <tbody>
-	<tr><td><a href="https://rovalcomponents.com/collections/road/products/alpinist-cl">Roval Alpinist CL</a></td><td>1365 g</td><td>32 mm</td><td>21 mm</td><td>24F 24R</td><td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td>Not tubeless compatible</td></tr>
+ 	<tr><td><a href="https://rovalcomponents.com/collections/road/products/alpinist-cl">Roval Alpinist CL</a></td><td>1365 g</td><td>32 mm</td><td>21 mm</td><td>24F 24R</td><td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td>Not tubeless compatible</td></tr>
 	<tr><td><a href="https://rovalcomponents.com/collections/road/products/cl-50">Roval CL50</a></td><td>1515 g</td><td>50 mm</td><td>21 mm</td><td>21F 24R<td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td></td></tr>
 	<tr><td><a href="https://www.mavic.com/en-gb/cosmic-slr-45-disc-rr1330.html">Mavic Cosmic SLR 45</a></td><td>1440 g</td><td>45 mm</td><td>19 mm</td><td>24F 24R<td>Mavic Infinity</td><td>Yes</td><td>Yes</td><td>ASTM category 2! Mavic Fore rims don´t require rim tape.</td></tr>
 	<tr><td><a href="https://www.reservewheels.com/reserve-40-44-road-wheel">Reserve Wheels 40|44</a></td><td>1450 g</td><td>40 mm front<br>44 mm rear</td><td>25.5 mm front<br>25 mm rear</td><td>24F 24R<td>DT Swiss 240</td><td>Yes</td><td>Yes</td><td>I learned these wheels are not for the German market.</td></tr>	
@@ -331,11 +331,11 @@ The Shimano wheelsets are highly competitive. In the past I overlooked Shimano w
 
 ## The tyres and tubes
 
-I´ve been riding tubeless for several years and during that time I had only two punctures which sealed by themself. Still, I think tubeless has two drawbacks: It can be extremely difficult to get the tyre on and off the rim. Doing that during a ride when it´s raining and you are tired will not be a joy. Having to deal with sealant and inserting a tube because the sealing didn´t work is also something you don´t want to experience. When riding tubeless, I still carry two replacement tubes. With a tubed setup I carry only a single replacement tube because in that case I can achieve a lot with patching an already punctured tube.^[In the context of tyres and tubes, I recommend [<cite>How to change an inner tube</cite>](/2022-02-06-how-to-change-an-inner-tube/).]
+I´ve been riding tubeless for several years and during that time I had only two punctures which sealed by themself. Still, I think tubeless has two drawbacks: It can be extremely difficult to get the tyre on and off the rim. Doing that during a ride when it´s raining and you are tired will not be a joy. Having to deal with sealant and inserting a tube because the sealing didn´t work is also something you don´t want to experience. When riding tubeless, I still carry two replacement tubes. With a tubed setup I carry only a single replacement tube because in that case I can achieve a lot with patching an already punctured tube. A Continental GP 5000, 30 mm wide, weighs 255g. The suitable tube, a Continental Race 28 Wide, weighs 125 g. In total tube and tyre weigh 380 g. To compare the weight with a tubeless setup: A Continental GP 5000 S TR, 30 mm wide, weighs 320 g + 50 g sealant, wich equals to a total of 370 g. That makes the two setups weighing nearly the same. But for the tubed setup I will only carry a single spare tube and not two, like for the tubeless setup. That means, tubed *saves* 125 g!^[In the context of tyres and tubes, I recommend [<cite>How to change an inner tube</cite>](/2022-02-06-how-to-change-an-inner-tube/).]
 
 Also, Shimano recommends not using tyre leavers with their new rims, which might be impossible when using a tubeless setup. 
 
-**My decision:** This time I will choose tyres that require tubes. @Continental GP 5000, 30 mm wide{2}, each one weighing 255 g, and @Continental Race 28 Wide Inner Tubes with a 60mm valve{3}, each weighing 125 g, are a natural choice in that case, I believe. Tube and tyre weigh 380 g. To compare the weight with a tubeless setup: A Continental GP 5000 S TR, 30 mm wide, weighs 320 g + 50 g sealant, wich equals to a total of 370 g. That makes the two setups weighing nearly the same.
+**My decision:** This time I will choose tyres that require tubes. @Continental GP 5000, 30 mm wide{2}, each one weighing 255 g, and @Continental Race 28 Wide Inner Tubes with a 60mm valve{3}, each weighing 125 g, are a natural choice in that case, I believe. 
 
 ## The seatpost, stem, handlebars and bartape
 
@@ -343,15 +343,15 @@ I start with the handlebars. They should allow for internal Di2 cable and brake 
 
 **My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Sport Comfort Bartape, black{}, will complete the handlebar.
 
-Because I want to stay with with one manufacturer, stem and seatpost will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 100 mm length{}, which weighs 139 g, and a @Ritchey Superlogic Link Seatpost, 15 mm setback{}, at a weight of 145 g. The stem will get a @Ritchey Di2 Battery Mount **2022**{}. 
+Because I want to stay with with one manufacturer, stem and seatpost will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 100 mm length{}, which weighs 139 g, and a @Ritchey Superlogic Carbon Link Seatpost, 15 mm setback, 300 mm length{}, at a weight of 145 g. The stem will get a @Ritchey Di2 Battery Mount **2022**{}. 
 
 ## The saddle
 
-**My decision:** @Specialized Phenom Expert, 143 mm{}.
+**My decision:** @Specialized Phenom Expert, 143 mm{}, I ride it on most of my bikes.
 
 ## The waterbottle cages
 
-It´s a steel frame, therefore metal cages should complement it. Ideally titanium to save weight. 
+It´s a steel frame, therefore metal cages should complement it. Ideally titanium to save weight. The price of these cages is ridiculous when compared to the price of a crankset, for example.
 
 <div class="full-bleed">
   <table class="mrx-auto underline-rows">
@@ -364,16 +364,19 @@ It´s a steel frame, therefore metal cages should complement it. Ideally titaniu
     </thead>
     <tbody>
       <tr><td><a href="https://kingcage.com/collections/water-bottle-cages/products/titanium-cage">King Titanium Cage</a></td><td>28</td><td>60 €</td><td>See how <a href="https://youtu.be/m0HqApJDVI0"><em>The King</em> is making them</a>.</td></tr>
-      <tr><td><a href="https://silca.cc/collections/bottle-cages1/products/sicuro-titanium-bottle-cage-black-cerakote-edition">Sicuro Titanium Bottle Cage V2</a></td><td>30</td><td>65 €</td><td>They are also available as a Cerakote Black Edition, which costs 95 €.</td></tr>
+      <tr><td><a href="https://silca.cc/collections/bottle-cages1/products/sicuro-titanium-bottle-cage-black-cerakote-edition">Sicuro Titanium Bottle Cage V2</a></td><td>30</td><td>65 €</td><td>The baseplate allows to move the cage up and down by 21 mm. They are also available as a Cerakote Black Edition, which costs 95 €.</td></tr>
+      <tr><td><a href="https://www.wolftoothcomponents.com/collections/bottle-cages/products/morse-cage-ti">Wolftooth Morse Cage Ti</a></td><td>33</td><td>77 €</td><td>The baseplate is even more sophisticated than the Sicuro plate and allows for 32 mm vertical adjustment. I think the name <em>Morse</em> is derived from the drilling pattern on the baseplate. The Morse Cage actually is a King Cage (made by the King) with a Wolftooth baseplate! Wolftooth also has an interesting mounting system for bottles and other accessories that is named B-RAD. The cage is optional available as a Limited Edition Black, which costs 93 €.</td></tr>
     </tbody>
   </table>
 </div>
 
-**My decision:** 2 @Silca Sicuro Titanium Bottle Cages, V2, Cerakote Black Edition{2}, each one weighing 30 g. They allow to get moved up and down by 21 mm. 
+**My decision:** 2 @Wolftooth Morse Cage Ti{2}, each one weighing 33 g. They allow to get moved up and down by 31 mm. 
 
 ## The bell
 
-**My decision:** A @Spurcycle Original Bell, black{} - that thing weighs incredible 45 g, which is a lot, considering the Dura Ace front derailleur weights 96 g.
+https://www.spurcycle.com/products/better-bicycle-bell
+
+**My decision:** A @Spurcycle Original Bell, black{} - that thing weighs incredible 42 g, which is a lot, considering the Dura Ace front derailleur weights 96 g.
 
 ## The part list
 
