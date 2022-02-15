@@ -1,7 +1,7 @@
 ---
 title: Training materials for the seahorse badge
-tags: journal
-updated: 2022-01-14
+tags: [journal,sports]
+updated: 2022-02-14
 ---
 <div class="full-bleed flex justify-center justify-middle">
 <dl class="inline-block timeline framed row">
