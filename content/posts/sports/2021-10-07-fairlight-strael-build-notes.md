@@ -83,7 +83,7 @@ to provide extra surface area for the top tube and seat stay welds. The tube is 
 	> For us, this is a key characteristic of the Strael 3.0 and all Fairlight Cycles: they give you the smooth glides along country lanes, the happiness to be outside and breathe in the morning air. The daily rides, all year long, finding and keeping your own rhythm, harmony with yourself and nature.
 	><footer>from the <a href="https://fairlightcycles.com/wp-content/uploads/2021/06/Fairlight-Strael-3.0-Design-Notes.pdf"><cite>Strael 3.0 Design Notes</cite></a></footer>
  
-There is one thing left, _the weight of a steel frame._ The frame of the current Strael 3.0 weighs around 2200 g, including bolts, rear axle and dropout inserts, but without the fork. Say, a modern first class carbon frame will weigh under 1000 g including the rear axle, then the Strael frame is _at least_ 1000 g heavier than a carbon frame. It´s not something to take easily but all the advantages from above outweigh the weight in my view.
+There is one thing left, _the weight of a steel frame._ The frame of the current Strael 3.0 weighs around 2200 g, including bolts, rear axle and dropout inserts, but without the fork. Say, a modern first class carbon frame will weigh under 1000 g including the rear axle, then the Strael frame is _at least_ 1000 g heavier than a carbon frame. It´s not something to take easily but all the advantages from above outweigh the weight in my view. To put things into relation, watch the GCN Tec Video [<cite>How Much Difference Does 1kg Make On An Epic Climb?</cite>](https://youtu.be/q6KWyux0pCg).
 
 **My decision:** @Strael 3.0 tall 56 frameset in color putty, including Hope Headset and Hope Seat Post Clamp in black{}. 
 
@@ -220,7 +220,7 @@ That concept leads to the following parts to order:
 - @Di2 connector to connect the wiring from the handlebars with the battery (EW-JC302){}
 - @1300 mm Di2 cable to connect the right (rear) shifter with the EW-JC302, which will get placed into the downtube near the bottom bracket (EW-SD300-I){}
 - @550 mm Di2 cable to connect the two shifters (EW-SD300-I){}
-- 3 @Di2 Grommets (EW-GM300-S){2}
+- 3 @Di2 Grommets (EW-GM300-S){3}
 - #Di2 Plug Tool for EW-SD300-I cables (TL-EW300){}
 
 
@@ -331,7 +331,7 @@ The Shimano wheelsets are highly competitive. In the past I overlooked Shimano w
 
 ## The tyres and tubes
 
-I´ve been riding tubeless for several years and during that time I had only two punctures which sealed by themself. Still, I think tubeless has two drawbacks: It can be extremely difficult to get the tyre on and off the rim. Doing that during a ride when it´s raining and you are tired will not be a joy. Having to deal with sealant and inserting a tube because the sealing didn´t work is also something you don´t want to experience. When riding tubeless, I still carry two replacement tubes. With a tubed setup I carry only a single replacement tube because in that case I can achieve a lot with patching an already punctured tube. A Continental GP 5000, 30 mm wide, weighs 255g. The suitable tube, a Continental Race 28 Wide, weighs 125 g. In total tube and tyre weigh 380 g. To compare the weight with a tubeless setup: A Continental GP 5000 S TR, 30 mm wide, weighs 320 g + 50 g sealant, wich equals to a total of 370 g. That makes the two setups weighing nearly the same. But for the tubed setup I will only carry a single spare tube and not two, like for the tubeless setup. That means, tubed *saves* 125 g!^[In the context of tyres and tubes, I recommend [<cite>How to change an inner tube</cite>](/2022-02-06-how-to-change-an-inner-tube/).]
+I´ve been riding tubeless for several years and during that time I had only two punctures which sealed by themself. Still, I think tubeless has two drawbacks: It can be extremely difficult to get the tyre on and off the rim. Doing that during a ride when it´s raining and you are tired will not be a joy. Having to deal with sealant and inserting a tube because the sealing didn´t work is also something you don´t want to experience. When riding tubeless, I still carry two replacement tubes. With a tubed setup I carry only a single replacement tube because in that case I can achieve a lot with patching an already punctured tube. A Continental GP 5000, 30 mm wide, weighs 255g. The suitable tube, a Continental Race 28 Wide, weighs 125 g. In total tube and tyre weigh 380 g. To compare the weight with a tubeless setup: A Continental GP 5000 S TR, 30 mm wide, weighs 320 g + 50 g sealant, wich equals to a total of 370 g. That makes the two setups weighing nearly the same. But for the tubed setup I will only carry a single spare tube and not two, like for the tubeless setup. For the tubed setup I will also carry patches, which means tubed *saves* roughly 100 g!^[In the context of tyres and tubes, I recommend [<cite>How to change an inner tube</cite>](/2022-02-06-how-to-change-an-inner-tube/).]
 
 Also, Shimano recommends not using tyre leavers with their new rims, which might be impossible when using a tubeless setup. 
 
@@ -341,9 +341,9 @@ Also, Shimano recommends not using tyre leavers with their new rims, which might
 
 I start with the handlebars. They should allow for internal Di2 cable and brake hose routing. Also they should be made of aluminum because I want to be able to mount an Ortlieb Handlebar QR which is not possible with carbon handlebars/stem! Also, I need short reach, something between 70 mm to 75 mm. 
 
-**My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Sport Comfort Bartape, black{}, will complete the handlebar.
+**My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Race Comfort Bartape, black{} and @Hope Grip Doctor Barends, black{} will complete the handlebar.
 
-Because I want to stay with with one manufacturer, stem and seatpost will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 100 mm length{}, which weighs 139 g, and a @Ritchey Superlogic Carbon Link Seatpost, 15 mm setback, 300 mm length{}, at a weight of 145 g. The stem will get a @Ritchey Di2 Battery Mount **2022**{}. 
+Because I want to stay with with one manufacturer, stem and seatpost will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 100 mm length{}, which weighs 139 g, and a @Ritchey Superlogic Carbon Link Seatpost, 15 mm setback, 350 mm length{}, at a weight of 145 g. The stem will get a @Ritchey Di2 Battery Mount **2022**{}. 
 
 ## The saddle
 
@@ -374,7 +374,10 @@ It´s a steel frame, therefore metal cages should complement it. Ideally titaniu
 
 ## The bell
 
+In the past I was using a [Crane E-Ne-]
+
 https://www.spurcycle.com/products/better-bicycle-bell
+https://www.cranebellco.com/e-ne-bell
 
 **My decision:** A @Spurcycle Original Bell, black{} - that thing weighs incredible 42 g, which is a lot, considering the Dura Ace front derailleur weights 96 g.
 
