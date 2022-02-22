@@ -199,7 +199,7 @@ ul[class^=cooklang-] > li::before {
     right: 0;
     transform: translateY(-100%);
     transition: transform .3s ease-out;
-    background: var(--link-focus-color);
+    background: var(--primary);
     color: var(--base-background);
     font-family: var(--meta-font-family);
     text-align: center;

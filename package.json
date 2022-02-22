@@ -21,7 +21,7 @@
         "ansi-regex": "^6.0.1",
         "autoprefixer": "^9.8.8",
         "cheerio": "^1.0.0-rc.10",
-        "compose-css": "^27.5.1",
+        "compose-css": "^27.5.2",
         "concurrently": "^6.5.1",
         "cssnano": "^5.0.17",
         "dayjs": "^1.10.7",
