@@ -15,8 +15,6 @@
     --fs-h2: var(--fs-1);
     --fs-h3: var(--fs);
     --fs-h4: var(--fs);
-    --link-color: inherit;
-    --link-focus-color: var(--primary-d1);
 }
 
 p:not(blockquote p),
