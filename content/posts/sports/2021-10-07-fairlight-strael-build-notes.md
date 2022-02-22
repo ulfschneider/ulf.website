@@ -24,7 +24,12 @@ My first contact with the Fairlight Strael was through [road.cc](https://road.cc
 
 I was not particularly interested in a steel bike, actually I was far away of it. It was more out of curiosity that I wanted to know why someone would consider an *old school steel bike* as being top of the range, even compared to modern carbon bikes.
 
-The ride quality seemed to be impressive. Fast, direct, yet comfortable to be used as an endurance bike. The next thing to check was the geometry and that´s where the story started lifting off for me. [Fairlight](https://fairlightcycles.com) is a small bike brand based in London, founded by Dom Thomas and Jon Reid. All their bikes are designed around _[Proportional Geometry](https://fairlightcycles.com/proportional-geometry/)_, which means you can have each frame size in a _regular_ and a _tall_ option. That´s something I don´t see with other brands, even the big ones. The fact that Dom Thomas, the bike designer, is taking so much care about rider needs cannot be over-emphasized in my view 🙌.^[The big manufacturers sometimes claim they are using different carbon layups for differently sized bikes of the same model to create the exact same ride behavior, no matter what frame size. Well, is there a way for you and me to verify that claim? How are the manufacturers going to verify? I think that´s difficult.] 
+The ride quality seemed to be impressive. Fast, direct, yet comfortable to be used as an endurance bike. The next thing to check was the geometry and that´s where the story started lifting off for me. [Fairlight](https://fairlightcycles.com) is a small bike brand based in London, founded by Dom Thomas and Jon Reid. All their bikes are designed around [<cite>Proportional Geometry</cite>](https://fairlightcycles.com/proportional-geometry/), which means you can have each frame size in a _regular_ and a _tall_ option. That´s something I don´t see with other brands, even the big ones. The fact that Dom Thomas, the bike designer, is taking so much care about rider needs cannot be over-emphasized in my view 🙌.^[The big manufacturers sometimes claim they are using different carbon layups for differently sized bikes of the same model to create the exact same ride behavior, no matter what frame size. Well, is there a way for you and me to verify that claim? How are the manufacturers going to verify? I think that´s difficult.] 
+
+<figure class="md:bleed">
+  <img src="/img/sports/fairlight-proportional-geometry.jpg" alt ="">
+  <figcaption>See the shorter top tube and the shorter head tube of the <em>tall</em> geometry compared to the <em>regular</em> geometry of two 56 frames. Image is taken from <a href="https://fairlightcycles.com/proportional-geometry">Fairlight Proportional Geometry</a>.</figcaption>
+</figure>
 
 Fairlights _tall_ frame option is for people with long legs and short torso, while the _regular_ is for people with short legs and long torso (or, regular legs and regular torso 😊). I would say _regular_ reflects the typical road bike geometry. I fall into the _tall_ category, which means I have difficulties riding a standard road race bike. Only marathon geometries, with shorter top tubes and taller head tubes, work for me. And even then I have to tune the bike with 90mm stem instead of 100 mm and using drop bars with a reach around 70 to 75 mm. Everything else means I have less joy riding, not to mention marathons like the [Rhoen Marathon](https://www.rhoen-radmarathon.dehttps://www.rhoen-radmarathon.de), which is something I like doing on a road bike.
 
@@ -77,7 +82,7 @@ It took me four years from there to the point of ordering a Strael 3.0 frame in 
 
 -   **The sophistication:** Tubes are made by Reynolds in Birmingham, England. Frames are hand-built in Taiwan. Each tube is formed with an intentionally choosen steel. The top tube is custom 0.7/0.4/0.7 butted [Reynolds 853](https://www.reynoldstechnology.biz/materials/steel/s-853/), 20 x 30 mm oval. The down tube is custom 0.75/0.45/0.75 butted Reynolds 853, 30 x 40 mm bi-oval. The seat tube is 28.6 mm in diameter, where as the top section is externally butted to 29.8 mm to give the correct inner dimension for the seat post and
 to provide extra surface area for the top tube and seat stay welds. The tube is butted 0.9/0.6/1.2. The chainstays are [Reynolds 725](https://www.reynoldstechnology.biz/materials/steel/s-725/) 22.2 mm custom formed with 0.8/0.6 mm butting. Those chainstays have a very complex form to accomplish excellent power transfer while still providing comfort. The seat-stays are Reynolds 725 14 mm non-taper with 0.6 mm wall thickness. The head tube is 4130 chromoly CNC machined from a solid billet into a tube. The dropouts are CNC machined single pieces and can be replaced. From what I can say by looking at the pictures, the welding is excellent. It´s no question to me that this frame is high sophisticated and the ride quality seems to justify the thoughts and effort.
--   **The standards:** The frame has standard thru axles with 12x100 mm front and 12x142mm rear, as well as an english – what else? – threaded 68 mm bottom bracket ^[[<cite>The complete guide to bottom bracket standards</cite>](https://www.bikeradar.com/advice/buyers-guides/the-complete-guide-to-bottom-bracket-standards/)] ^[The threaded english bottom bracket standard also <q>goes by other names, but they all mean the same thing. These are: BSA, BSC, BC, ISO, British, and Euro, the name used in BMX bike circles. The term BSA stands for Birmingham Small Arms, a British company that produced bicycles, cars and other durable goods. The term BSC stands for British Standard Cycle, which adopted the same standard. BSC is sometimes shortened to BC. The term ISO is refers to the International Standard Organization, which also adopted this same standard to be the ISO standard.</q> Source: [<cite>Bottom bracket standards and terminology</cite>](https://www.parktool.com/blog/repair-help/bottom-bracket-standards-and-terminology)], a 27.2mm seatpost, and maximum 160mm disc rotors front and rear (flatmount). It´s compatible with all double road chainsets, 46T max single. 28.6 band on front derailleur. Headset SHIS ZS44/28.6 | EC44/40.
+-   **The standards:** The frame has standard thru axles with 12x100 mm front and 12x142mm rear, as well as an english – what else? – threaded 68 mm bottom bracket ^[[<cite>The complete guide to bottom bracket standards</cite>](https://www.bikeradar.com/advice/buyers-guides/the-complete-guide-to-bottom-bracket-standards/)] ^[The threaded english bottom bracket standard also <q>goes by other names, but they all mean the same thing. These are: BSA, BSC, BC, ISO, British, and Euro, the name used in BMX bike circles. The term BSA stands for Birmingham Small Arms, a British company that produced bicycles, cars and other durable goods. The term BSC stands for British Standard Cycle, which adopted the same standard. BSC is sometimes shortened to BC. The term ISO is refers to the International Standard Organization, which also adopted this same standard to be the ISO standard.</q> Source: [<cite>Bottom bracket standards and terminology</cite>](https://www.parktool.com/blog/repair-help/bottom-bracket-standards-and-terminology)], a 27.2mm seatpost, and maximum 160mm disc rotors front and rear (flatmount). It´s compatible with all double road chainsets, 46T max single. 28.6 band on front derailleur. Headset SHIS ZS44/28.6 | EC44/40. 
 -   **The versatility:** Whether it´s the CNC machined replaceable dropout design, the cable mounting guides, the bottle mounts for three bottles, internal light cable routing for dynamo lights (drive and non-drive side), internal Di2 routing, or 36 mm tyre clearance: it makes the bike very adjustable to all sorts of play. There are also mudguard eyelets, which I think I will not use, but for some it might be important.
 -   **The look and finish:** You can see each tube and how it´s designed to function. Everything is at display. There is no bling bling just for the sake of it. The frame has a timeless look. I like the _putty_ frame color and – new to the Strael 3.0 – the Anraed fork in frame color. The Fairlight logo is beautiful too. New to the Strael 3.0 is the solar pattern on the top tube, which should remind you <q>to look up and make shure you take it all in</q>. To quote the design notes:
 
@@ -182,13 +187,13 @@ That leads to the following parts to order:
 
 - @Dura Ace Front Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed left side (ST-R9270-L) + Caliper front (BR-R9270) + Brake Hose front 1000 mm (SM-BH90){}
 - @Dura Ace Rear Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed right side (ST-R9270-R) + Caliper rear (BR-R9270) + Brake Hose rear 1700 mm (SM-BH90){}
-- @<mark>Deore XT</mark> Brake Rotors 160 mm (RT-MT8100){}
+- @Deore XTR Brake Rotors 160 mm, Centerlock (RT-MT900){}
 - @Dura Ace Di2 Rear Derailleur 12-speed (RD-R9250){}
 - @Dura Ace Di2 Front Derailleur 2x12-speed (FD-R9250){}
 - @Front Derailleur Clamp Band, size SM for 28.6 mm diameter (SM-AD91){}
 - @Di2 Battery (BT-DN300){},
 - @Di2 Charging Cable (ES-EC300){}
-- @<mark>Deore XT</mark> Chain (CN-M8100){}
+- @Deore XTR Chain 116 links (CN-M9100){}
 
 ### Wiring
 
@@ -208,18 +213,17 @@ The [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/p
 For the calculation of wire length, I´m referring to the geometry of the Strael 3.0 frame 56T. The seat tube is 557 mm, the chainstays are 418 mm, the down tube is approximately 600 mm. I´m calculating wire length as follows:
 
 - **Battery to front derailleur:** 557 mm seat tube + 150 mm for outside frame ≈ **700 mm**. According to Shimano it must be ≤ 1500 mm.
-- **Battery to rear derailleur:**  557 mm + 100 mm outside frame ≈ **700 mm to connect the battery with EW-JC304** + 418 mm + 200 mm for outside frame ≈ **600 mm to connect EW-JC304 with the rear derailleur**. According to Shimano it must be in total ≤ 1700 mm.
-- **Battery to EW-JC304:** 557mm + 100 mm for outside frame ≈ **700 mm**
+- **Battery to rear derailleur:**  557 mm + 150 mm outside frame ≈ **700 mm to connect the battery with EW-JC304** + 418 mm + 200 mm for outside frame ≈ **700 mm to connect EW-JC304 with the rear derailleur**. According to Shimano it must be in total ≤ 1700 mm.
+- **Battery to EW-JC304:** 557mm + 150 mm for outside frame ≈ **700 mm**
 - **EW-JC304 to right shifter:** 600 mm + 400 mm outside frame + 300 mm inside handlebar ≈ **1300 mm**. According to Shimano the entire distance from the battery to the shifter must be ≤ 2200 mm.
-- **Shifter to shifter:** **550 mm**
+- **Shifter to shifter:** **600 mm**
 
 
 That concept leads to the following parts to order:
 
-- 3 x @700 mm Di2 cable (EW-SD300-I){3}, one to connect the battery with the front derailleur, the other two to connect the battery with the EW-JC304 for further routing.
-- @600 mm Di2 cable (EW-SD300-I){} to connect the EW-JC304 with the rear derailleur.
+- 4 x @700 mm Di2 cable (EW-SD300-I){4}, one to connect the battery with the front derailleur, two to connect the battery with the EW-JC304 for further routing, and a last to connect the EW-JC304 with the rear derailleur.
 - @1300 mm Di2 cable (EW-SD300-I){} to connect the EW-JC304 with the right shifter.
-- @550 mm Di2 cable(EW-SD300-I){} to connect the right shifter with the left shifter.
+- @600 mm Di2 cable(EW-SD300-I){} to connect the right shifter with the left shifter.
 - @Di2 junction to wire everything together (EW-JC304){}
 - 3 @Di2 Grommets (EW-GM300-S){3}
 - #Di2 Plug Tool for EW-SD300-I cables (TL-EW300){}
@@ -263,7 +267,7 @@ Being constraint to 24 mm in axle diameter limits the number of alternate cranks
 
 There seems to be an issue with Shimano Hollowtech cranks unbonding over time (but mostly in sub-tropical areas). Please refer to [<cite>Understanding an unusual Shimano crankset failure</cite>](https://www.bikeradar.com/features/shimano-crank-failure/) and [<cite>Why do Shimano cranks keep failing? Analysis.</cite>](https://www.youtube.com/watch?v=Rj__lexd_BI) I certainly can follow the line of thoughts but I never met anyone in person who faced this issue. I know people in my bike club cranking out 15000 km a year for multiple years in a row on the same Ultegra crank without any issues. I understand Shimano makes the cranks this way to stiffen the chainrings but that design decision comes at a price. 
 
-On the other hand the Rotor cranksets do not bond materials like Shimano does, they allow a complete modular setup of axle, spider, and different chainrings. They look better in my opinion, weigh less, and are manufactured to impressive low tolerances, as explained by [Peak Torque](https://youtu.be/PX6nbV9s7SU). Please note that for the below weight comparison I only found the total weights of the Shimano cranksets without differentiating into their parts. The Rotor ALDHU carbon cranks are not included into the comparison, because the carbon cranks are only available for a 30mm axle. For Rotor and Shimano I´m only comparing compact chainring sizes, because they are the smallest to get from Shimano. Because the SRAM AXS groupsets have a different approach with their gear ratios, I`m referring to 33-46 SRAM cranks, which I think comes close to what is intended by a compact crank for the non-SRAM groupsets.
+On the other hand the Rotor cranksets do not bond materials like Shimano does, they allow a complete modular setup of axle, spider, and different chainrings. They look better in my opinion, weigh less, and are manufactured to impressive low tolerances, as explained by [Peak Torque](https://youtu.be/PX6nbV9s7SU). Please note that for the below weight comparison I only found the total weights of the Shimano cranksets without differentiating into their parts. The Rotor ALDHU carbon cranks are not included into the comparison, because the carbon cranks are only available for a 30mm axle. For Rotor and Shimano I´m only comparing compact chainring sizes, because they are the smallest to get from Shimano. 
 
 <div class="full-bleed">
   <table class="mrx-auto underline-rows">
@@ -289,6 +293,7 @@ On the other hand the Rotor cranksets do not bond materials like Shimano does, t
 	  <tr><td>VEGAST Spider</td><td>724.5</td><td>399</td><td>60 /assumed</td><td>30.5 + 90 </td><td>145</td></tr></tbody>
 </table>
 </div>
+
 
 **My decision:** At the time of writing, during February 2022, I couldn´t get a statement fro Rotor to state officially officially that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet I think it is possible. For that reason I will go for the @Rotor ALDHU 24 mm Crank Arms{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Rotor BSA Threaded Bottom Bracket for the 24 mm axle{}.
 
@@ -348,7 +353,8 @@ Because I want to stay with with one manufacturer, stem and seatpost will also c
 
 ## The saddle
 
-**My decision:** @Specialized Phenom Expert, 143 mm{}, I ride it on most of my bikes.
+**My decision:** I want to try an @Ergon SR Allroad Core Pro Men
+{}.
 
 ## The waterbottle cages
 
@@ -371,7 +377,7 @@ It´s a steel frame, therefore metal cages should complement it. Ideally titaniu
   </table>
 </div>
 
-**My decision:** 2 @Wolftooth Morse Cage Ti{2}, each one weighing 33 g. They allow to get moved up and down by 31 mm. 
+**My decision:** 2 @King Cage Ti{2}, each one weighing 28 g. The prices of the others are too steep.
 
 ## The bell
 
