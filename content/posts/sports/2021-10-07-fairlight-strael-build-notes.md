@@ -263,11 +263,13 @@ Every now and then I hear or read that 12-speed is not really necessary and 11-s
 
 Being able to route Di2 wires through the Strael frame requires a 24mm crankset axle and no larger. 24 mm is the axle diameter used by Shimano, for that reason it no problem to mount a standard Dura Ace or Ultegra crankset onto the frame – except having the option to mount sub-compact chainrings with 32-48 tooths or even 30-46 would be nice. The smaller chainrings would allow me to run smaller cassettes with tighter gear-steps and even less weight for the cassette. Under specific circumstances, when paired with a larger cassette, the lower chainrings will also allow for extreme climbing. The limit in top-speed that comes with smaller chainrings is not a concern for me because it´s anyway not often that I´m riding a 50-11 gear ratio but it´s much more often that I have to select gears down the range.
 
-Being constraint to 24 mm in axle diameter limits the number of alternate crankset options. The Rotor cranksets will typically come into play here. Currently they are officially only compatible with Shimano 11-speed groupsets but  according to [BETTERSHIFTING](https://bettershifting.com/12-speed-r9200-r8100-and-11-speed-di2-compatibility/#crankbasedpowermeters) it is possible to use current Rotor cranksets with the new Shimano 12-speed drivetrain. A question I filed as a support ticket to the Rotor people about their support of the 12-speed Shimano drivetrains remained unanswered. The other day I found [Rides of Japan](https://youtu.be/ZprEPXOokMU) successfully using an Easton EC90 SL crank within the Dura Ace 9200 group because the EC90 weighs 100 g less. Overall, it looks like the new Dura Ace crankset can still be replaced by 3rd party cranks. 
+Being constraint to 24 mm in axle diameter limits the number of alternate crankset options. The Rotor cranksets will typically come into play here. With the new groups Shimano altered the chainline from 43.5 to 44.5 mm and for that reason currently the Rotors are officially only compatible with Shimano 11-speed groupsets. According to [BETTERSHIFTING](https://bettershifting.com/12-speed-r9200-r8100-and-11-speed-di2-compatibility/#crankbasedpowermeters) it should be possible to use current Rotor cranksets with the new Shimano 12-speed drivetrain. A question I filed as a support ticket to the Rotor people about the compatibility of Rotor cranks with the 12-speed Shimano drivetrains remained unanswered. The other day I found [Rides of Japan](https://youtu.be/ZprEPXOokMU) successfully using an Easton EC90 SL crank within the Dura Ace 9200 group because the EC90 weighs 100 g less than a Dura Ace crank. Overall, it looks like the new Dura Ace crankset can still be replaced by 3rd party cranks with a 43.5 mm chainline. 
 
-There seems to be an issue with Shimano Hollowtech cranks unbonding over time (but mostly in sub-tropical areas). Please refer to [<cite>Understanding an unusual Shimano crankset failure</cite>](https://www.bikeradar.com/features/shimano-crank-failure/) and [<cite>Why do Shimano cranks keep failing? Analysis.</cite>](https://www.youtube.com/watch?v=Rj__lexd_BI) I certainly can follow the line of thoughts but I never met anyone in person who faced this issue. I know people in my bike club cranking out 15000 km a year for multiple years in a row on the same Ultegra crank without any issues. I understand Shimano makes the cranks this way to stiffen the chainrings but that design decision comes at a price. 
+You might have heard of the possible issue with Shimano Hollowtech cranks unbonding over time (but mostly in sub-tropical areas). Please refer to [<cite>Understanding an unusual Shimano crankset failure</cite>](https://www.bikeradar.com/features/shimano-crank-failure/) and [<cite>Why do Shimano cranks keep failing? Analysis.</cite>](https://www.youtube.com/watch?v=Rj__lexd_BI) I certainly can follow the line of thoughts but I never met anyone in person who faced this issue. I know people in my bike club cranking out 15000 km a year for multiple years in a row on the same Ultegra crank without any issues. I understand Shimano makes the cranks this way to stiffen the chainrings but that design decision comes at a price. 
 
-On the other hand the Rotor cranksets do not bond materials like Shimano does, they allow a complete modular setup of axle, spider, and different chainrings. They look better in my opinion, weigh less, and are manufactured to impressive low tolerances, as explained by [Peak Torque](https://youtu.be/PX6nbV9s7SU). Please note that for the below weight comparison I only found the total weights of the Shimano cranksets without differentiating into their parts. The Rotor ALDHU carbon cranks are not included into the comparison, because the carbon cranks are only available for a 30mm axle. For Rotor and Shimano I´m only comparing compact chainring sizes, because they are the smallest to get from Shimano. 
+On the other hand the Rotor cranksets do not bond materials like Shimano does. Instead they have CNC machined parts and to save weight they drill holes into their cranks, which they coined the name Trinity Drilling for. The Rotor cranksets allow a complete modular setup of the cranks, axle, spider, and different chainrings. They look better in my opinion, weigh less, and are manufactured to impressive low tolerances, as explained by [Peak Torque](https://youtu.be/PX6nbV9s7SU). 
+
+Please note that for the below weight comparison I only found the total weights of the Shimano cranksets without differentiating into their parts. The Rotor ALDHU carbon cranks are not included into the comparison, because the carbon cranks are only available for a 30mm axle. For Rotor and Shimano I´m only comparing compact chainring sizes, because they are the smallest to get from Shimano. 
 
 <div class="full-bleed">
   <table class="mrx-auto underline-rows">
@@ -295,11 +297,11 @@ On the other hand the Rotor cranksets do not bond materials like Shimano does, t
 </div>
 
 
-**My decision:** At the time of writing, during February 2022, I couldn´t get a statement fro Rotor to state officially officially that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet I think it is possible. For that reason I will go for the @Rotor ALDHU 24 mm Crank Arms{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Rotor BSA Threaded Bottom Bracket for the 24 mm axle{}.
+**My decision:** At the time of writing, during February 2022, I couldn´t get anything from Rotor stating that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet I think it is possible. For that reason I will go for the @Rotor ALDHU 24 mm Crank Arms, 172 mm length{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Shimano BSA Threaded Bottom Bracket for the 24 mm axle (BB-R9100){}.
 
 ## The pedals
 
-**My decision:** I´m riding @Shimano XTR PD-M9100 Pedals{} on all my bikes. I don´t need to swap shoes across bikes and the shoes are better suited for walking around.
+**My decision:** I´m riding @Shimano XTR PD-M9100 Pedals{} on all my bikes. I don´t need to swap shoes across bikes and the shoes are a little bit better suited for walking around than road shoes.
 
 ## The wheels
 
@@ -322,7 +324,7 @@ On the other hand the Rotor cranksets do not bond materials like Shimano does, t
 </table>
 </div>
 
-I would be happy with any of theses wheelsets. All of them have a ratchet freewheel 🙌, hooked rims 🙌, and external nipples 🙌. In my experience a ratchet freewheel is sturdier and has quicker engagement. Hooked rims allow to use non-tubless tyres. I don´t know how the idea was born that internal nipples are a good thing? Eventually a wheel requires trueing and who wants to rip off the rim tape for that reason? 
+I would be happy with any of theses wheelsets. All of them have a ratchet freewheel 🙌, hooked rims 🙌, and external nipples 🙌. In my experience a ratchet freewheel is sturdier and has quicker engagement. Hooked rims allow to use non-tubeless tyres. I don´t know how the idea was born that internal nipples are a good thing? Eventually a wheel requires trueing and who wants to rip off the rim tape for that reason? 
 
 The Rovals cannot be used with tubeless tyres. I think that is not really a problem, but it´s interesting because for some time the move of manufacturers was towards tubeless and not away from it. I think both wheels are sturdy, probably the Alpinist CL even more so. The Alpinist has a nice low weight which brings it into the same class with the Shimano C36. 
 
@@ -332,12 +334,12 @@ The Reserve Wheels, like the Mavics, are designed for riding on a broad range of
 
 The Shimano wheelsets are highly competitive. In the past I overlooked Shimano wheels but the new 2021 wheels are very interesting. Shimano recommends the C50 to every kind of rider (<q>C50 is the best all-round wheel in Shimano’s history, our recommendation for all riders.</q>) and the C36 for climbers. The Dura Ace wheels, as opposed to the Ultegra wheels, have the new ratchet *Direct Engagement* freewheel. For that reason the Ultegras are not on my shortlist. The weight of the C36 and the Roval Alpinist are pretty much the same, but the C36 can be ridden tubeless.
  
-**My decision:** Because I´m already in the Shimano Dura Ace system, I will go for @Dura Ace C36 Disc Brake Wheels{}. The C36, even if meant for climbing, are as well excellent allround wheels in my view. I do not give much on the aero advantage of deeper wheels compared to the C36 rim because in practice I cannot recognize the difference anyway. What´s noticable to me in practice is how difficult deep rims are sometimes to be handled in crosswinds and for that reason also more secure when descending. Another thing to recognize, is, lighter wheels are better to accelerate and reduce the overall bike weight, of course. Function-wise, for the average rider, the shallower rim is typically the better choice. But, I say it, choosing a deeper rim over a shallower rim has to do with aesthetics. The wheels should match the appearance of the bike. A carbon superbike with big sculptural tubes looks imbalanced with skinny rims. On the other hand, the steel tubes of the Strael frame are not as big, the top tube is even skinny. I believe the C36 will make a balanced appearence on the Strael frame – it´s not skinny and not overwhelming. Not to forget the real riding advantages of fast acceleration because the wheels weigh only 1350g, plus crosswind stability.
+**My decision:** Because I´m already in the Shimano Dura Ace system, I will go for @Dura Ace C36 Disc Brake Wheels{}. The C36´s, even if meant for climbing, are as well excellent allround wheels in my view. I do not give much on the aero advantage of deeper wheels compared to the C36 rim because in practice I cannot recognize the difference anyway. What´s noticable to me in practice is how difficult deep rims are sometimes to be handled in crosswinds and for that reason can be secure issue when descending. Another thing to recognize, is, lighter wheels are better to accelerate and reduce the overall bike weight, of course. Function-wise, for the average rider, the shallower rim is typically the better choice, I believe. Also, I say it, choosing a specific rim depth has to do with aesthetics. The wheels should match the appearance of the bike. A carbon superbike with big sculptural tubes looks imbalanced with skinny rims. On the other hand, the steel tubes of the Strael frame are not as big, the top tube is even skinny. I believe the C36 will make a balanced appearence on the Strael frame – it´s not skinny and not overwhelming. Not to forget the real riding advantages of fast acceleration because the wheels weigh only 1350g, plus crosswind stability.
 
 
 ## The tyres and tubes
 
-I´ve been riding tubeless for several years and during that time I had only two punctures which sealed by themself. Still, I think tubeless has two drawbacks: It can be extremely difficult to get the tyre on and off the rim. Doing that during a ride when it´s raining and you are tired will not be a joy. Having to deal with sealant and inserting a tube because the sealing didn´t work is also something you don´t want to experience. When riding tubeless, I still carry two replacement tubes. With a tubed setup I carry only a single replacement tube because in that case I can achieve a lot with patching an already punctured tube. A Continental GP 5000, 30 mm wide, weighs 255g. The suitable tube, a Continental Race 28 Wide, weighs 125 g. In total tube and tyre weigh 380 g. To compare the weight with a tubeless setup: A Continental GP 5000 S TR, 30 mm wide, weighs 320 g + 50 g sealant, wich equals to a total of 370 g. That makes the two setups weighing nearly the same. But for the tubed setup I will only carry a single spare tube and not two, like for the tubeless setup. For the tubed setup I will also carry patches, which means tubed *saves* roughly 100 g!^[In the context of tyres and tubes, I recommend [<cite>How to change an inner tube</cite>](/2022-02-06-how-to-change-an-inner-tube/).]
+I´ve been riding tubeless for several years and during that time I had only two punctures which sealed by themself. Still, I think tubeless has two drawbacks: It can be extremely difficult to get the tyre on and off the rim. Doing that during a ride when it´s raining and you are tired will not be a joy. Having to deal with sealant and inserting a tube because the sealing didn´t work is also something you don´t want to experience. When riding tubeless, I still carry two replacement tubes. With a tubed setup I carry only a single replacement tube because in that case I can achieve a lot with patching of punctured tubes. A Continental GP 5000, 30 mm wide, weighs 255g. The suitable tube, a Continental Race 28 Wide, weighs 125 g. In total tube and tyre come at 380 g. For a tubeless setup: A Continental GP 5000 S TR, 30 mm wide, weighs 320 g + 50 g sealant, wich equals to a total of 370 g. That makes the two setups weighing nearly the same. But for the tubed setup I will only carry a single spare tube plus patches while the tubeless setup requires me to carry two spare tubes. That means tubed *saves* roughly 100 g!^[In the context of tyres and tubes, I recommend [<cite>How to change an inner tube</cite>](/2022-02-06-how-to-change-an-inner-tube/).]
 
 Also, Shimano recommends not using tyre leavers with their new rims, which might be impossible when using a tubeless setup. 
 
@@ -347,9 +349,22 @@ Also, Shimano recommends not using tyre leavers with their new rims, which might
 
 I start with the handlebars. They should allow for internal Di2 cable and brake hose routing. Also they should be made of aluminum because I want to be able to mount an Ortlieb Handlebar QR which is not possible with carbon handlebars/stem! Also, I need short reach, something between 70 mm to 75 mm. 
 
-**My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Race Comfort Bartape, black{} and @Hope Grip Doctor Barends, black{} will complete the handlebar. A @Ritchey WCS Carbon Spacer Set 3x5mm 3x10mm matte UD Carbon{} is necessary to set the correct height. 
+**My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Race Comfort Bartape, black{} and @Wolf Tooth Bar End Plugs, alloy black{} will complete the handlebar. A @Ritchey WCS Carbon Spacer Set 3x5mm 3x10mm matte UD Carbon{} is necessary to set the correct height. 
 
 Because I want to stay with with one manufacturer, stem and seatpost will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 90 mm length{}, which weighs 139 g, and a @Ritchey Superlogic Carbon Link Seatpost, 15 mm setback, 350 mm length{}, at a weight of 145 g. The seatpost will get a @Ritchey Di2 Battery Mount **2022**{}. 
+
+## The bell
+
+In the past I was using a [Crane E-Ne-]
+
+https://www.spurcycle.com/products/better-bicycle-bell
+https://www.cranebellco.com/e-ne-bell
+
+**My decision:** A @Spurcycle Original Bell, black{} - that thing weighs incredible 42 g, which is a lot, considering the Dura Ace front derailleur weights 96 g.
+
+## The computer mount
+
+**My decision:** @Rotor Garmin Mount, black{}, complemented by a @{Garmin Edge Tether}
 
 ## The saddle
 
@@ -379,14 +394,6 @@ It´s a steel frame, therefore metal cages should complement it. Ideally titaniu
 
 **My decision:** 2 @King Cage Ti{2}, each one weighing 28 g. The prices of the others are too steep.
 
-## The bell
-
-In the past I was using a [Crane E-Ne-]
-
-https://www.spurcycle.com/products/better-bicycle-bell
-https://www.cranebellco.com/e-ne-bell
-
-**My decision:** A @Spurcycle Original Bell, black{} - that thing weighs incredible 42 g, which is a lot, considering the Dura Ace front derailleur weights 96 g.
 
 ## The part list
 
