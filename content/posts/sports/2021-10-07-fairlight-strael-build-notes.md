@@ -297,7 +297,7 @@ Please note that for the below weight comparison I only found the total weights 
 </div>
 
 
-**My decision:** At the time of writing, during February 2022, I couldn´t get anything from Rotor stating that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet I think it is possible. For that reason I will go for the @Rotor ALDHU 24 mm Crank Arms, 172.5 mm length{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Shimano BSA Threaded Bottom Bracket for the 24 mm axle (BB-R9100){}. A future upgrade could be a [Hambini BSA 68 Bottom Bracket](https://www.hambini.com/product/bsa-68mm-shimano-bottom-bracket/) – but those are out of stock for now.
+**My decision:** At the time of writing, during February 2022, I couldn´t get anything from Rotor stating that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet I think it is possible. For that reason I will go for the @Rotor ALDHU 24 mm Crank Arms, 172.5 mm length{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Shimano BSA Threaded Bottom Bracket for the 24 mm axle (BB-R9100){}. A future luxury upgrade could be a [Hambini BSA 68 Bottom Bracket](https://www.hambini.com/product/bsa-68mm-shimano-bottom-bracket/) – but those are out of stock for now.
 
 ## The pedals
 
