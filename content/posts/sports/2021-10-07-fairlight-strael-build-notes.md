@@ -364,7 +364,7 @@ https://www.cranebellco.com/e-ne-bell
 
 ## The computer mount
 
-**My decision:** @Rotor Garmin Mount, black{}, complemented by a @{Garmin Edge Tether}
+**My decision:** @Rotor Garmin Mount, black{}, complemented by a @Garmin Edge Tether{}.
 
 ## The saddle
 
