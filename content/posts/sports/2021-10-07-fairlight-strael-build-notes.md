@@ -187,7 +187,7 @@ That leads to the following parts to order:
 
 - @Dura Ace Front Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed left side (ST-R9270-L) + Caliper front (BR-R9270) + Brake Hose front 1000 mm (SM-BH90){}
 - @Dura Ace Rear Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed right side (ST-R9270-R) + Caliper rear (BR-R9270) + Brake Hose rear 1700 mm (SM-BH90){}
-- @Deore XTR Brake Rotors 160 mm, Centerlock (RT-MT900){}
+- @Deore XTR Brake Rotors 160 mm, Centerlock (RT-MT900){2}
 - @Dura Ace Di2 Rear Derailleur 12-speed (RD-R9250){}
 - @Dura Ace Di2 Front Derailleur 2x12-speed (FD-R9250){}
 - @Front Derailleur Clamp Band, size SM for 28.6 mm diameter (SM-AD91){}
