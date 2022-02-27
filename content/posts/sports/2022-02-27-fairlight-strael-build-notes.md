@@ -413,5 +413,5 @@ It's a steel frame therefore metal cages should complement it. Ideally, titanium
 
 ## What´s next
 
-When publishing this article during end of February 2022, some parts from my list cannot be ordered. I even don´t have the frame – which will hopefully arrive end of March. I´m not sure when I can start building but I´m happy that I´ve found my setup. Stay tuned to know how the build itself goes :-).
+When publishing this article during end of February 2022, some parts from my list cannot be ordered. I even don´t have the frame – which will hopefully arrive end of March. I´m not sure when I can start building but I´m happy that I´ve found my setup. Stay tuned to know how the build itself goes 😊.
 
