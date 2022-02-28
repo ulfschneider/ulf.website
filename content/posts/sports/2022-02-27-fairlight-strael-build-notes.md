@@ -24,7 +24,7 @@ The ride quality seemed to be impressive. Fast, direct, yet comfortable to be us
 
 <figure class="md:bleed">
   <img src="/img/sports/fairlight-proportional-geometry.jpg" alt ="">
-  <figcaption>See the shorter top tube and the shorter head tube of the <em>tall</em> geometry compared to the <em>regular</em> geometry of two 56 frames. Image is taken from <a href="https://fairlightcycles.com/proportional-geometry">Fairlight Proportional Geometry</a>.</figcaption>
+  <figcaption>See the shorter top tube and the shorter head tube of the <em>Tall</em> geometry compared to the <em>Regular</em> geometry of two 56 frames. Image is taken from <a href="https://fairlightcycles.com/proportional-geometry">Fairlight Proportional Geometry</a>.</figcaption>
 </figure>
 
 Fairlights *Tall* frame option is for people with long legs and a short torso, while the *Regular* is for people with short legs and a long torso (or regular legs and regular torso 😊). I would say *Regula* reflects the typical road bike geometry. I fall into the *Tall* category, which means I have difficulties riding a standard road race bike. Only marathon geometries, with shorter top tubes and taller head tubes, work for me. And even then, I have to tune the bike with a 90 mm stem instead of 100 mm and use drop bars with a reach around 70 to 75 mm. Everything else means I have less joy riding, not to mention marathons like the [Rhoen Marathon](https://www.rhoen-radmarathon.dehttps://www.rhoen-radmarathon.de), which is something I enjoy doing on a road bike.
