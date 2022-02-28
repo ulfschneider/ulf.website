@@ -1,7 +1,6 @@
 ---
 title: Fairlight Strael Build Notes
-tags: sports
-article: true
+tags: [sports, articles]
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame.<br>This is my thought process for chosing the parts.
 hero: /img/sports/strael-3-0-top-tube.png
 herocaption: Fairlight Strael 3.0 Top Tube<br>Image taken from the Fairlight Strael 3.0 Lookbook
@@ -9,9 +8,7 @@ herocaption: Fairlight Strael 3.0 Top Tube<br>Image taken from the Fairlight Str
 
 [[toc]]
 
-## Fairlight Cycles
-
-My first contact with the Fairlight Strael was through [road.cc](https://road.cc/content/review/216171-fairlight-cycles-strael), around 2017 when Stu Kerton reviewed the bike and gave it an excellent rating.
+My first contact with the Fairlight Strael was through [road.cc](https://road.cc/content/review/216171-fairlight-cycles-strael), around 2017 when Stu Kerton reviewed the bike and gave it an excellent rating:
 
 > Taking everything into account, the Strael is pretty hard to knock, especially for the non-racer. If you want a bike you can train on, bimble about on, credit card tour on, or just get out there and wring the neck of for a full-on blast around the lanes while enjoying each and every mile, the Fairlight ticks all of the boxes.
 > 
@@ -23,7 +20,7 @@ My first contact with the Fairlight Strael was through [road.cc](https://road.cc
 
 I was not particularly interested in a steel bike; actually, I was far away from it. It was more out of curiosity that I wanted to know why someone would consider an *old school steel bike* as being top of the range, even compared to modern carbon bikes.
 
-The ride quality seemed to be impressive. Fast, direct, yet comfortable to be used as an endurance bike. The next thing to check was the geometry, and that's where the story started lifting off for me. [Fairlight](https://fairlightcycles.com) is a small bike brand based in London, founded by Dom Thomas and Jon Reid. All their bikes are designed around [<cite>Proportional Geometry</cite>](https://fairlightcycles.com/proportional-geometry/), which means you can have each frame size in a _regular_ and a _tall_ option. That's something I don't see with other brands, even the big ones. The fact that Dom Thomas, the bike designer, is taking so much care about rider needs cannot be over-emphasized in my view 🙌.^[The big manufacturers sometimes claim they are using different carbon layups for differently sized bikes of the same model to create the exact same ride behavior, no matter what frame size. Well, is there a way for you and me to verify that claim? How are the manufacturers going to prove? I think that's difficult.] 
+The ride quality seemed to be impressive. Fast, direct, yet comfortable to be used as an endurance bike. The next thing to check was the geometry, and that's where the story started lifting off for me. [Fairlight](https://fairlightcycles.com) is a small bike brand based in London, founded by Dom Thomas and Jon Reid. All their bikes are designed around what they call [Proportional Geometry](https://fairlightcycles.com/proportional-geometry/), which means you can have each frame size in a *Regular* and a *Tall* option. That's something I don't see with other brands, even the big ones. The fact that Dom Thomas, the bike designer, is taking so much care about rider needs cannot be over-emphasized in my view 🙌.^[The big manufacturers sometimes claim they are using different carbon layups for differently sized bikes of the same model to create the exact same ride behavior, no matter what frame size. Well, is there a way for you and me to verify that claim? How are the manufacturers going to prove? I think that's difficult.] 
 
 <figure class="md:bleed">
   <img src="/img/sports/fairlight-proportional-geometry.jpg" alt ="">
@@ -84,12 +81,11 @@ to provide extra surface area for the top tube and seat stay welds. The tube is 
 -   **The standards:** The frame has standard thru axles with 12x100 mm front and 12x142mm rear, as well as an english – what else? – threaded 68 mm bottom bracket ^[[<cite>The complete guide to bottom bracket standards</cite>](https://www.bikeradar.com/advice/buyers-guides/the-complete-guide-to-bottom-bracket-standards/)] ^[The threaded english bottom bracket standard also <q>goes by other names, but they all mean the same thing. These are: BSA, BSC, BC, ISO, British, and Euro, the name used in BMX bike circles. The term BSA stands for Birmingham Small Arms, a British company that produced bicycles, cars and other durable goods. The term BSC stands for British Standard Cycle, which adopted the same standard. BSC is sometimes shortened to BC. The term ISO refers to the International Standard Organization, which also adopted this same standard to be the ISO standard.</q> Source: [<cite>Bottom bracket standards and terminology</cite>](https://www.parktool.com/blog/repair-help/bottom-bracket-standards-and-terminology)], a 27.2 mm seatpost, and maximum 160mm disc rotors front and rear (flatmount). It's compatible with all double road chainsets, 46T max single. 28.6 band on front derailleur. Headset SHIS ZS44/28.6 | EC44/40. 
 -   **The versatility:** Whether it's the CNC machined replaceable dropout design, the cable mounting guides, the bottle mounts for three bottles, internal light cable routing for dynamo lights (drive and non-drive side), internal Di2 routing, or 36 mm tire clearance, mudguard eyelets: it makes the bike very adjustable to all sorts of play.
 -   **The look and finish:** You can see each tube and how it's designed to function. Everything is at display. There is no bling bling just for the sake of it. The frame has a timeless look. I like the _putty_ frame color and – new to the Strael 3.0 – the Anraed fork in frame color. The Fairlight logo is beautiful too. New to the Strael 3.0 is the solar pattern on the top tube, which should remind you <q>to look up and make sure you take it all in</q>. To quote the design notes:
-
-  > The Solar Pattern on your top tube serves a humble but poetic purpose: They remind you that no day is the same, that every day is worth getting out and rebalancing yourself with your surroundings. When you're head down and pushing hard, they remind you to look up and make sure you take it all in.
-  > For us, this is a key characteristic of the Strael 3.0 and all Fairlight Cycles: they give you the smooth glides along country lanes, the happiness to be outside and breathe in the morning air. The daily rides, all year long, finding and keeping your own rhythm, harmony with yourself and nature.
-  ><footer>from the <a href="https://fairlightcycles.com/wp-content/uploads/2021/06/Fairlight-Strael-3.0-Design-Notes.pdf"><cite>Strael 3.0 Design Notes</cite></a></footer>
+    > The Solar Pattern on your top tube serves a humble but poetic purpose: They remind you that no day is the same, that every day is worth getting out and rebalancing yourself with your surroundings. When you're head down and pushing hard, they remind you to look up and make sure you take it all in.
+    > For us, this is a key characteristic of the Strael 3.0 and all Fairlight Cycles: they give you the smooth glides along country lanes, the happiness to be outside and breathe in the morning air. The daily rides, all year long, finding and keeping your own rhythm, harmony with yourself and nature.
+    ><footer>from the <a href="https://fairlightcycles.com/wp-content/uploads/2021/06/Fairlight-Strael-3.0-Design-Notes.pdf"><cite>Strael 3.0 Design Notes</cite></a></footer>
  
-There is one thing left, _the weight of a steel frame._ The frame of the current Strael 3.0 weighs around 2200 g, including bolts, rear axle, and dropout inserts, but without the fork. Say a modern first-class carbon frame will weigh under 1000 g, including the rear axle, then the Strael frame is *at least* 1000 g heavier than a carbon frame. It's not something to take easily, but all the advantages from above outweigh the weight in my view. To put things into relation, watch the GCN Tec Video [<cite>How Much Difference Does 1 kg Make On An Epic Climb?</cite>](https://youtu.be/q6KWyux0pCg).
+There is one thing left: *the weight of a steel frame.* The frame of the current Strael 3.0 weighs around 2200 g, including bolts, rear axle, and dropout inserts, but without the fork. Say a modern first-class carbon frame will weigh under 1000 g, including the rear axle, then the Strael frame is *at least* 1000 g heavier than a carbon frame. It's not something to take easily, but all the advantages from above outweigh the weight in my view. To put things into relation, watch the GCN Tec Video [<cite>How Much Difference Does 1 kg Make On An Epic Climb?</cite>](https://youtu.be/q6KWyux0pCg).
 
 **My decision:** @Strael 3.0 Tall 56 frameset in color putty, including Hope Headset and Hope Seat Post Clamp in black{}. 
 
@@ -113,22 +109,14 @@ There is one thing left, _the weight of a steel frame._ The frame of the current
 
 My initial plan was to have a mechanical groupset on the bike because I dislike proper battery charging just to shift gears. Also, the environmental impact of batteries is something I prefer to avoid. From the very long term perspective, there might be a reliability drawback of electronic shifting: Would a 15-year-old electronic groupset still perform as well as a 15-year-old mechanical groupset? At least the battery (or batteries) need to be replaced. The derailleurs of electronic groupsets are much more complex than mechanical ones, so there is a greater chance of something breaking.
 
-With Shimano presenting their new Dura Ace and Ultegra groupsets in 2021, the current first tier and second tier groupsets of Shimano and SRAM are shifting electronically, and nothing else. It seems there is no path into the future for mechanical shifting anymore. 
+With Shimano presenting their new Dura-Ace and Ultegra groupsets in 2021, the current first tier and second tier groupsets of Shimano and SRAM are shifting electronically, and nothing else. It seems there is no path into the future for mechanical shifting anymore. 
 
 Electronic shifting has become faster, more accurate, and more comfortable than mechanical shifting. The rider experience is improved if everything works well – and sure, things work well most of the time. All that leads me to start thinking about electronic groupsets.
 
 ### Electronic shifting
 
--   **SRAM's eTap AXS** shifting is wireless. The bike will only need brake hoses and no cables for shifting. It's quick to set up, and the gearing range is interesting, with smaller chainrings front and a small 10 teeth sprocket on the cassette, which creates a broader gearing range. The smaller chainrings will lead to riding more often on the big chainring, which leads to less changing gears on the front. SRAM has been a huge innovator in the bike industry, and when they bring something new, it's always interesting to look at it. I like almost everything about their groupsets, except you have to take care of the charging status of four(!) batteries. Each derailleur has its own battery, which should last for 400 km of riding. A battery can be charged within 60 minutes. Charging requires the battery to be removed from the bike and put into a charging cradle. Keep in mind each derailleur has its own battery, and because they are both the same, they can be swapped for each other, but the two of them require charging. In addition, each brake lever has a CR2032 battery to send the wireless shifting signals to the derailleurs. The shifter batteries should last for two years. Four batteries with each one a different charging status scares me off. 
-
-On the other hand, replacing a battery is super quick, and because they are small and of low weight, carrying a replacement part on longer rides is doable. Another point I do not like too much about SRAM, is that their hydraulic brakes use the more aggressive DOT fluid and not mineral oil, like Shimano. Theoretically, because DOT is hygroscopic, it should be replaced once a year, and because the fluid is aggressive on bike surfaces, you have to be careful when doing that. I admit, I never replaced the DOT fluid on my bike in the past, and my SRAM brakes are working fine.
--   **Shimano´s Di2 ([Digital Integrated Intelligence](https://bike.shimano.com/en-US/technologies/component/details/di2.html))** shifting approach is still mostly wired. A central battery will be placed inside the seat post, which protects the battery and hides it away. Both derailleurs are wired to the battery. A fully charged system would allow for around 1000 km of riding. Even if it's less or more than 1000 km, the Di2 battery will allow riding at least double as far as the eTap AXS batteries before charging is required. The rear derailleur needs to get wired to a power supply to charge the battery, which means the entire bike needs to be near a power supply. 
-
-There is the option to wire the brake levers with the central battery, which I prefer because then there's only one battery in the entire system, which will provide a clear charging status. This option is claimed to prolong battery life by 50% and speed up the shifting. 
-
-The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which adds two more batteries, shortens the life of the central battery, and makes shifting slower. 
-
-Shifting of SRAM is good, but the shifting of Shimano is better, no matter if wireless or wired. While each system is a joy to use, and I have a lot of respect for the hard work and achievements of the engineers in either company, Shimano is the fastest and most accurate on the road.
+-   **SRAM's eTap AXS** shifting is wireless. The bike will only need brake hoses and no cables for shifting. It's quick to set up, and the gearing range is interesting, with smaller chainrings front and a small 10 teeth sprocket on the cassette, which creates a broader gearing range. The smaller chainrings will lead to riding more often on the big chainring, which leads to less changing gears on the front. SRAM has been a huge innovator in the bike industry, and when they bring something new, it's always interesting to look at it. I like almost everything about their groupsets, except you have to take care of the charging status of four(!) batteries. Each derailleur has its own battery, which should last for 400 km of riding. A battery can be charged within 60 minutes. Charging requires the battery to be removed from the bike and put into a charging cradle. Keep in mind each derailleur has its own battery, and because they are both the same, they can be swapped for each other, but the two of them require charging. In addition, each brake lever has a CR2032 battery to send the wireless shifting signals to the derailleurs. The shifter batteries should last for two years. Four batteries with each one a different charging status scares me off. On the other hand, replacing a battery is super quick, and because they are small and of low weight, carrying a replacement part on longer rides is doable. Another point I do not like too much about SRAM, is that their hydraulic brakes use the more aggressive DOT fluid and not mineral oil, like Shimano. Theoretically, because DOT is hygroscopic, it should be replaced once a year, and because the fluid is aggressive on bike surfaces, you have to be careful when doing that. I admit, I never replaced the DOT fluid on my bike in the past, and my SRAM brakes are working fine.
+-   **Shimano´s Di2 ([Digital Integrated Intelligence](https://bike.shimano.com/en-US/technologies/component/details/di2.html))** shifting approach is still mostly wired. A central battery will be placed inside the seat post, which protects the battery and hides it away. Both derailleurs are wired to the battery. A fully charged system would allow for around 1000 km of riding. Even if it's less or more than 1000 km, the Di2 battery will allow riding at least double as far as the eTap AXS batteries before charging is required. The rear derailleur needs to get wired to a power supply to charge the battery, which means the entire bike needs to be near a power supply. There is the option to wire the brake levers with the central battery, which I prefer because then there's only one battery in the entire system, which will provide a clear charging status. This option is claimed to prolong battery life by 50% and speed up the shifting. The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which adds two more batteries, shortens the life of the central battery, and makes shifting slower. Shifting of SRAM is good, but the shifting of Shimano is better, no matter if wireless or wired. While each system is a joy to use, and I have a lot of respect for the hard work and achievements of the engineers in either company, Shimano is the fastest and most accurate on the road.
 -   **Campagnolo** has never been an option for me because I dislike their brake lever ergonomics.
 
 **My decision:** For choosing an electronic shifting system, I lean towards Shimano for the following reasons: Di2 can be set up to have a single central battery for the entire system, which makes it easy to have clear charging status. The battery has at least double the capacity of the SRAM batteries, and Shimano shifts faster and more accurately.
@@ -137,14 +125,14 @@ Shifting of SRAM is good, but the shifting of Shimano is better, no matter if wi
 
 Now that Di2 is set let's compare the weights. To know the field, the SRAM groupsets are included. My sources of data are:
 
-- Di2 Dura Ace: [Shimano website](https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html)
+- Di2 Dura-Ace: [Shimano website](https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html)
 - Di2 Ultegra: [Shimano website](https://bike.shimano.com/en-US/product/component/ultegra-r8100.html)
 - eTap AXS Red: [Bikerumor website](https://bikerumor.com/sram-red-etap-axs-wireless-road-bike-group-first-ride-review-actual-weights/)
 - eTap AXS Force: [Bikerumor website](https://bikerumor.com/hands-on-actual-weight-of-the-new-sram-force-etap-axs-2x12-road-group/)
 
 For the weight of Shimano's brake hoses and their electronic wiring, I found some data on [Cyclingweekly](https://www.cyclingweekly.com/products/shimano-dura-ace-9200-12-speed-semi-wireless-groupset-launched). Those weights are separately added to the figures.
 
-The crankset weights are without Powermeter. The weights of the SRAM cranks are from [r2-bike](https://r2-bike.com/). Please note the AXS Red crankset is *more than 100 grams lighter than the Dura Ace* cranks. I don't know what part attributes to the smaller chainrings of AXS gearing, and what to the carbon crank arms. Anyway, that weight saving is impressive.
+The crankset weights are without Powermeter. The weights of the SRAM cranks are from [r2-bike](https://r2-bike.com/). Please note the AXS Red crankset is *more than 100 grams lighter than the Dura-Ace* cranks. I don't know what part attributes to the smaller chainrings of AXS gearing, and what to the carbon crank arms. Anyway, that weight saving is impressive.
 
 <div class="full-bleed">
   <table class="mrx-auto underline-rows">
@@ -154,7 +142,7 @@ The crankset weights are without Powermeter. The weights of the SRAM cranks are 
     <tr><th>Groupset</th><th>Total</th><th>Shifters</th><th>Calipers</th><th>Rotors</th><th>Front derailleur</th><th>Crankset</th><th>Rear derailleur</th><th>Cassette</th><th>Chain</th><th>Battery</th></tr>
   </thead>
   <tbody class="no-wrap">
-    <tr><td>Di2 Dura Ace</td><td>2383.5</td><td>350</td><td>230 + 60 hose</td><td>216</td><td>96</td><td>685 (34-50)</td><td>215</td><td>223 (11-30)</td><td>242</td><td>52 + 14.5 wiring</td></tr>
+    <tr><td>Di2 Dura-Ace</td><td>2383.5</td><td>350</td><td>230 + 60 hose</td><td>216</td><td>96</td><td>685 (34-50)</td><td>215</td><td>223 (11-30)</td><td>242</td><td>52 + 14.5 wiring</td></tr>
     <tr><td>eTap AXS Red</td><td>2470</td><td>466</td><td>316 inc hose</td><td>236</td><td>165 inc battery</td><td>577 (33-46)</td><td>247 inc battery</td><td>211 (10-33)</td><td>252</td><td>0</td></tr>
     <tr><td>Di2 Ultegra</td><td>2632.5</td><td>391</td><td>282 + 60 hose</td><td>218</td><td>110</td><td>700 (34-50)</td><td>262</td><td>291 (11-30)</td><td>252</td><td>52 + 14.5 wiring</td></tr>
     <tr><td>eTap AXS Force</td><td>2834</td><td>476</td><td>346 inc hose</td><td>236</td><td>199 inc battery</td><td>727 (33-46)</td><td>325 inc battery</td><td>266 (10-33)</td><td>259</td><td>0</td></tr>
@@ -162,7 +150,7 @@ The crankset weights are without Powermeter. The weights of the SRAM cranks are 
 </table>
 </div>
 
-The weight of the Shimano groupsets is competitive, making a decision for either one of Ultegra or Dura Ace a good move. The weight-saving of Dura Ace compared to Ultegra is 249g at an additional cost of 1660 €, judged by the pricing for the single components (not entire groupsets) of [bike24](https://www.bike24.de/radfahren/teile/fahrradschaltung/schaltgruppen?manufacturerId%5B0%5D=931) in January 2022. Let's have a look at the details:
+The weight of the Shimano groupsets is competitive, making a decision for either one of Ultegra or Dura-Ace a good move. The weight-saving of Dura-Ace compared to Ultegra is 249g at an additional cost of 1660 €, judged by the pricing for the single components (not entire groupsets) of [bike24](https://www.bike24.de/radfahren/teile/fahrradschaltung/schaltgruppen?manufacturerId%5B0%5D=931) in January 2022. Let's have a look at the details:
 
 <div class="full-bleed">
    <table class="mrx-auto underline-rows">
@@ -171,7 +159,7 @@ The weight of the Shimano groupsets is competitive, making a decision for either
       <p>Weights are provided in gram. Parts that are contained in both groupsets, like wiring and battery, are omitted.</p>
      </caption>
   <thead>
-    <tr><th>Component</th><th>Dura Ace weight</th><th>Ultegra weight</th><th class="bg-primary-5">Weight saving of Dura Ace</th><th class="bg-accent-four-5">Added cost of Dura Ace</th><th>Dura Ace cost</th><th>Ultegra cost</th></tr>
+    <tr><th>Component</th><th>Dura-Ace weight</th><th>Ultegra weight</th><th class="bg-primary-5">Weight saving of Dura-Ace</th><th class="bg-accent-four-5">Added cost of Dura-Ace</th><th>Dura-Ace cost</th><th>Ultegra cost</th></tr>
   </thead>
   <tbody class="no-wrap">
     <tr><td>Shifters</td><td>350</td><td>391</td><td class="bg-primary-5">-41</td><td class="bg-accent-four-5">280 €</td><td>940 €</td><td>660 €</td></tr>
@@ -186,19 +174,19 @@ The weight of the Shimano groupsets is competitive, making a decision for either
 </table>
 </div>
 
-*A thought experiment:* By mixing both groupsets, a weight saving of 161 g at an additional cost of 685 € is possible when using Dura Ace shifters, calipers, and the cassette – while taking everything else from Ultegra. The Dura Ace shifters and calipers alone would save 93 g at the additional cost of 460 €. The weight-savings of the Dura Ace derailleurs and chain is only 71 g at the cost of another 650 €. Even further, the Dura Ace front derailleur will save 14 g at the additional cost of 230 €, while it's also possible to save 10 g by using the Dura Ace chain at the additional cost of 10 € 😊. 
+*A thought experiment:* By mixing both groupsets, a weight saving of 161 g at an additional cost of 685 € is possible when using Dura-Ace shifters, calipers, and the cassette – while taking everything else from Ultegra. The Dura-Ace shifters and calipers alone would save 93 g at the additional cost of 460 €. The weight-savings of the Dura-Ace derailleurs and chain is only 71 g at the cost of another 650 €. Even further, the Dura-Ace front derailleur will save 14 g at the additional cost of 230 €, while it's also possible to save 10 g by using the Dura-Ace chain at the additional cost of 10 € 😊. 
 
-Function-wise all derailleurs operate at the same speed and can shift 11-34 on the cassette. For the rings, the fast gears can have up to 54 tooths (55 Dura Ace ) with a maximum step down of 16 tooths to the small ring. Mixing shifters and derailleurs across the two groupsets is possible according to Shimano's [<cite>E-Tube Compatibility Chart</cite>](https://bike.shimano.com/content/dam/e-tube/assets/images/contents/project/compatibillity/pdf/en/HM-CC_5.0.1-00-EN.pdf).
+Function-wise all derailleurs operate at the same speed and can shift 11-34 on the cassette. For the rings, the fast gears can have up to 54 tooths (55 Dura-Ace ) with a maximum step down of 16 tooths to the small ring. Mixing shifters and derailleurs across the two groupsets is possible according to Shimano's [<cite>E-Tube Compatibility Chart</cite>](https://bike.shimano.com/content/dam/e-tube/assets/images/contents/project/compatibillity/pdf/en/HM-CC_5.0.1-00-EN.pdf).
 
-**My decision:** For the recreational cyclist, justifying the additional cost of 1660 € to save 249 grams of weight is difficult – to say the least. But, you know, one gram adds to the other and partially the weightsaving would compensate the weight of the steel frame. For the beauty of the Dura Ace finish, to know I've mounted the close to perfection top-gear on my very personal bike, and because I'm going to enjoy it whenever I look at it for years to come, I'm opting for Dura Ace. I cannot find another rationale for this decision.
+**My decision:** For the recreational cyclist, justifying the additional cost of 1660 € to save 249 grams of weight is difficult – to say the least. But, you know, one gram adds to the other and partially the weightsaving would compensate the weight of the steel frame. For the beauty of the Dura-Ace finish, to know I've mounted the close to perfection top-gear on my very personal bike, and because I'm going to enjoy it whenever I look at it for years to come, I'm opting for Dura-Ace. I cannot find another rationale for this decision.
 
 That leads to the following parts to order:
 
-- @Dura Ace Front Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed left side (ST-R9270-L) + Caliper front (BR-R9270) + Brake Hose front 1000 mm (SM-BH90){}
-- @Dura Ace Rear Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed right side (ST-R9270-R) + Caliper rear (BR-R9270) + Brake Hose rear 1700 mm (SM-BH90){}
+- @Dura-Ace Front Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed left side (ST-R9270-L) + Caliper front (BR-R9270) + Brake Hose front 1000 mm (SM-BH90){}
+- @Dura-Ace Rear Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed right side (ST-R9270-R) + Caliper rear (BR-R9270) + Brake Hose rear 1700 mm (SM-BH90){}
 - @Deore XTR Brake Rotors 160 mm, Centerlock (RT-MT900){2}
-- @Dura Ace Di2 Rear Derailleur 12-speed (RD-R9250){}
-- @Dura Ace Di2 Front Derailleur 2x12-speed (FD-R9250){}
+- @Dura-Ace Di2 Rear Derailleur 12-speed (RD-R9250){}
+- @Dura-Ace Di2 Front Derailleur 2x12-speed (FD-R9250){}
 - @Front Derailleur Clamp Band, size SM for 28.6 mm diameter (SM-AD91){}
 - @Di2 Battery (BT-DN300){},
 - @Di2 Charging Cable (ES-EC300){}
@@ -265,13 +253,13 @@ Every now and then, I hear or read that 12-speed is unnecessary and 11-speed is 
 </table>
 </div>
 
-**My decision:** Compared to my current 11-speed compact setup, the 12-speed 11-34 cassette would give me the exact same gearing – plus an additional climbing gear. That's not bad. Or I can ride the 11-30, which has the same lowest gear as what I'm riding today, plus tight gear steps 21-19-17-16-15. The tight gears in that sweet spot are essential enough for me to choose the @11-30 <mark>Ultegra</mark> 12-speed Cassette (CS-R8100-12).{} It's made of steel, which is more durable than the partial titanium Dura Ace cassette, and because it costs much less, it's not too difficult to also swap it for an 11-34 if necessary.
+**My decision:** Compared to my current 11-speed compact setup, the 12-speed 11-34 cassette would give me the exact same gearing – plus an additional climbing gear. That's not bad. Or I can ride the 11-30, which has the same lowest gear as what I'm riding today, plus tight gear steps 21-19-17-16-15. The tight gears in that sweet spot are essential enough for me to choose the @11-30 <mark>Ultegra</mark> 12-speed Cassette (CS-R8100-12).{} It's made of steel, which is more durable than the partial titanium Dura-Ace cassette, and because it costs much less, it's not too difficult to also swap it for an 11-34 if necessary.
 
 ### The crankset
 
-Routing Di2 wires through the Strael frame requires a 24mm crankset axle and no larger. 24 mm is the axle diameter used by Shimano. For that reason, it is no problem to mount a standard Dura Ace or Ultegra crankset onto the frame – except having the option to mount sub-compact chainrings with 32-48 tooths or even 30-46 would be nice. The smaller chainrings would allow me to run smaller cassettes with tighter gear steps and even less weight for the cassette. Under specific circumstances, when paired with a larger cassette, the lower chainrings will also allow for extreme climbing. The limit in top speed that comes with smaller chainrings is not a concern for me because it's anyway not often that I'm riding a 50-11 gear ratio, but it's much more often I have to select gears down the range.
+Routing Di2 wires through the Strael frame requires a 24mm crankset axle and no larger. 24 mm is the axle diameter used by Shimano. For that reason, it is no problem to mount a standard Dura-Ace or Ultegra crankset onto the frame – except having the option to mount sub-compact chainrings with 32-48 tooths or even 30-46 would be nice. The smaller chainrings would allow me to run smaller cassettes with tighter gear steps and even less weight for the cassette. Under specific circumstances, when paired with a larger cassette, the lower chainrings will also allow for extreme climbing. The limit in top speed that comes with smaller chainrings is not a concern for me because it's anyway not often that I'm riding a 50-11 gear ratio, but it's much more often I have to select gears down the range.
 
-The 24 mm diameter for the axle constraints the number of alternate crankset options. The Rotor cranksets will typically come into play here. With the new groups, Shimano altered the chain line from 43.5 to 44.5 mm, and I think for that reason, currently, the Rotors are officially only compatible with Shimano 11-speed groupsets. According to [BETTERSHIFTING](https://bettershifting.com/12-speed-r9200-r8100-and-11-speed-di2-compatibility/#crankbasedpowermeters) it should be possible to use current Rotor cranksets with the new Shimano 12-speed drivetrain. A question I filed as a support ticket to the Rotor people about the compatibility of Rotor cranks with the 12-speed Shimano drivetrains remained unanswered. The other day I found [Rides of Japan](https://youtu.be/ZprEPXOokMU) successfully using an Easton EC90 SL crank within the Dura Ace 9200. Overall, it looks like the new Dura Ace crankset can still be replaced by 3rd party cranks with a 43.5 mm chain line. 
+The 24 mm diameter for the axle constraints the number of alternate crankset options. The Rotor cranksets will typically come into play here. With the new groups, Shimano altered the chain line from 43.5 to 44.5 mm, and I think for that reason, currently, the Rotors are officially only compatible with Shimano 11-speed groupsets. According to [BETTERSHIFTING](https://bettershifting.com/12-speed-r9200-r8100-and-11-speed-di2-compatibility/#crankbasedpowermeters) it should be possible to use current Rotor cranksets with the new Shimano 12-speed drivetrain. A question I filed as a support ticket to the Rotor people about the compatibility of Rotor cranks with the 12-speed Shimano drivetrains remained unanswered. The other day I found [Rides of Japan](https://youtu.be/ZprEPXOokMU) successfully using an Easton EC90 SL crank within the Dura-Ace 9200. Overall, it looks like the new Dura-Ace crankset can still be replaced by 3rd party cranks with a 43.5 mm chain line. 
 
 You might have heard of the possible issue with high-end Shimano Hollowtech cranks unbonding over time (but mostly in sub-tropical areas). I find [<cite>Shimano Crankset Failures: An Engineering Analysis</cite>](https://www.hambini.com/shimano-crankset-failures-an-engineering-analysis/) by Hambini very insightful. Also, please refer to [<cite>Why do Shimano cranks keep failing? Analysis</cite>](https://www.youtube.com/watch?v=Rj__lexd_BI) by Peak Torque. I certainly can follow the line of thoughts, but I never met anyone in person who faced this issue. I know people in my bike club cranking out 15000 km a year for multiple years in a row on the same Ultegra crank without any issues. I understand Shimano makes the cranks this way to stiffen the chainrings, but their design decisions comes at a price. 
 
@@ -287,7 +275,7 @@ Please note that I only found the total weights of the Shimano cranksets for the
   <ul>
   <li>ALDHU: <a href="https://rotorbike.com/catalog/default/rotor/road/cranks/aldhu.html">Rotor website</a></li>
   <li>VEGAST: <a href="https://rotorbike.com/catalog/default/rotor/road/cranks/vegast.html">Rotor website</a></li>
-  <li>Dura Ace: <a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html">Shimano website</a></li>
+  <li>Dura-Ace: <a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html">Shimano website</a></li>
   <li>Ultegra: <a href="https://bike.shimano.com/en-US/product/component/ultegra-r8100.html">Shimano website</a></li>  
 </ul>
 </caption>
@@ -297,7 +285,7 @@ Please note that I only found the total weights of the Shimano cranksets for the
   <tbody class="no-wrap">
     <tr><td>ALDHU DirectMount</td><td>645</td><td>350</td><td>0</td><td>150 /assumed</td><td>145</td></tr>
     <tr><td>ALDHU Spider</td><td>675.5</td><td>350</td><td>60 /assumed</td><td>30.5 + 90 </td><td>145</td></tr>
-    <tr><td>Dura Ace 9200</td><td>685</td><td>←</td><td>←</td><td>←</td><td>←</td></tr>
+    <tr><td>Dura-Ace 9200</td><td>685</td><td>←</td><td>←</td><td>←</td><td>←</td></tr>
     <tr><td>VEGAST Direct Mount</td><td>694</td><td>399</td><td>0</td><td>150 /assumed</td><td>145</td></tr>
     <tr><td>Ultegra 8100</td><td>700</td><td>←</td><td>←</td><td>←</td><td>←</td></tr>
     <tr><td>VEGAST Spider</td><td>724.5</td><td>399</td><td>60 /assumed</td><td>30.5 + 90 </td><td>145</td></tr></tbody>
@@ -326,8 +314,8 @@ Please note that I only found the total weights of the Shimano cranksets for the
   <tr><td><a href="https://rovalcomponents.com/collections/road/products/cl-50">Roval CL50</a></td><td>1515 g</td><td>50 mm</td><td>21 mm</td><td>21F 24R<td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td></td></tr>
   <tr><td><a href="https://www.mavic.com/en-gb/cosmic-slr-45-disc-rr1330.html">Mavic Cosmic SLR 45</a></td><td>1440 g</td><td>45 mm</td><td>19 mm</td><td>24F 24R<td>Mavic Infinity</td><td>Yes</td><td>Yes</td><td>ASTM category 2! Mavic Fore rims don´t require rim tape.</td></tr>
   <tr><td><a href="https://www.reservewheels.com/reserve-40-44-road-wheel">Reserve Wheels 40|44</a></td><td>1450 g</td><td>40 mm front<br>44 mm rear</td><td>25.5 mm front<br>25 mm rear</td><td>24F 24R<td>DT Swiss 240</td><td>Yes</td><td>Yes</td><td>I learned these wheels are not for the German market.</td></tr>  
-  <tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura Ace C36</a></td><td>1350 g</td><td>36 mm</td><td>21 mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>Cup and cone bearings</td></tr>  
-  <tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura Ace C50</a></td><td>1461 g</td><td>50 mm</td><td>21 mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>Cup and cone bearings</td></tr>  
+  <tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura-Ace C36</a></td><td>1350 g</td><td>36 mm</td><td>21 mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>Cup and cone bearings</td></tr>  
+  <tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura-Ace C50</a></td><td>1461 g</td><td>50 mm</td><td>21 mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>Cup and cone bearings</td></tr>  
 </tbody>
 </table>
 </div>
@@ -340,9 +328,9 @@ The Mavic is an all-round wheel for even ASTM category 2 (road and offroad with 
 
 The Reserve Wheels, like the Mavics, are designed for riding on a broad range of surfaces. The appearance without any branding is something I like. For all those reasons, they were initially the number one on my list, but if there's no support in Germany, I believe it doesn't make sense to take them into further consideration.
 
-The Shimano wheelsets are highly competitive. I overlooked Shimano wheels in the past, but the new 2021 wheels are exciting. Shimano recommends the C50s to every kind of rider (<q>C50 is the best all-round wheel in Shimano's history, our recommendation for all riders.</q>) and the C36s for climbers. Unlike the Ultegra wheels, the Dura Ace wheels have the new ratchet *Direct Engagement* freewheel. For that reason, the Ultegras are not on my shortlist. The weight of the C36s and the Roval Alpinists is pretty much the same, but the C36s can be ridden tubeless.
+The Shimano wheelsets are highly competitive. I overlooked Shimano wheels in the past, but the new 2021 wheels are exciting. Shimano recommends the C50s to every kind of rider (<q>C50 is the best all-round wheel in Shimano's history, our recommendation for all riders.</q>) and the C36s for climbers. Unlike the Ultegra wheels, the Dura-Ace wheels have the new ratchet *Direct Engagement* freewheel. For that reason, the Ultegras are not on my shortlist. The weight of the C36s and the Roval Alpinists is pretty much the same, but the C36s can be ridden tubeless.
  
-**My decision:** Because I'm already in the Shimano Dura Ace system, I will go for @Dura Ace C36 Disc Brake Wheels{}. The C36s, even if meant for climbing, are as well excellent all-round wheels in my view. I do not give much on the aero advantage of deeper wheels compared to the C36 rim because I cannot recognize the difference in practice anyway. What's noticeable to me in practice is how difficult deep rims are sometimes to be handled in crosswinds and, for that reason, can be a security issue when descending. Another thing to recognize is that lighter wheels are better to accelerate and reduce the overall bike weight. Function-wise, I believe the shallower rim is typically the better choice for the average rider. Also, I say it, choosing a specific rim depth has to do with aesthetics. The wheels should match the appearance of the bike. A carbon superbike with big sculptural tubes looks imbalanced with skinny rims. 
+**My decision:** Because I'm already in the Shimano Dura-Ace system, I will go for @Dura-Ace C36 Disc Brake Wheels{}. The C36s, even if meant for climbing, are as well excellent all-round wheels in my view. I do not give much on the aero advantage of deeper wheels compared to the C36 rim because I cannot recognize the difference in practice anyway. What's noticeable to me in practice is how difficult deep rims are sometimes to be handled in crosswinds and, for that reason, can be a security issue when descending. Another thing to recognize is that lighter wheels are better to accelerate and reduce the overall bike weight. Function-wise, I believe the shallower rim is typically the better choice for the average rider. Also, I say it, choosing a specific rim depth has to do with aesthetics. The wheels should match the appearance of the bike. A carbon superbike with big sculptural tubes looks imbalanced with skinny rims. 
 
 On the other hand, the steel tubes of the Strael frame are not as big. The top tube is even skinny. I believe the C36s will make a balanced appearance on the Strael frame – it's not skinny and not overwhelming. Not to forget the real riding advantages of fast acceleration because the wheels weigh only 1350g, plus crosswind stability.
 
@@ -365,9 +353,9 @@ Because I want to stay with one manufacturer, stem and seat post will also come 
 
 ## The bell
 
-In the past, I was using a [Crane E-Ne Bell](https://www.cranebellco.com/e-ne-bell), all black aluminum. It's seriously loud, and you can warn pedestrians from far away. I really have no issues with that bell; maybe the tone is a bit hard. This time I want to go for the bell that originated it all, the [Spurcycle Bell](https://www.spurcycle.com/products/better-bicycle-bell). I think the tone is more pleasant, and the bell is smaller than the E-Ne, which is always a good thing on drop handlebars. Unfortunately, as it's so often when I find something interesting, the Spurcycle cost double than the E-Ne.
+In the past, I was using a [Crane E-Ne Bell](https://www.cranebellco.com/e-ne-bell), all black aluminum. It's seriously loud, and you can warn pedestrians from far away. I really have no issues with that bell; maybe the tone is a bit hard. This time I want to go for the bell that originated the high-quality-small-bicycle-bell-thing, the [Spurcycle Bell](https://www.spurcycle.com/products/better-bicycle-bell). I think the tone is more pleasant, and the bell is smaller than the E-Ne, which is always a good thing on drop handlebars. Unfortunately, as it's so often when I find something interesting, the Spurcycle costs double than the E-Ne.
 
-**My decision:** A @Spurcycle Original Bell, black{} - that thing weighs an incredible 42 g, which is a lot, considering the Dura Ace front derailleur weights 96 g.
+**My decision:** A @Spurcycle Original Bell, black{} - that thing weighs an incredible 42 g, which is a lot, considering the Dura-Ace front derailleur weights 96 g.
 
 ## The computer mount
 
@@ -413,5 +401,5 @@ It's a steel frame therefore metal cages should complement it. Ideally, titanium
 
 ## What´s next
 
-When publishing this article during end of February 2022, some parts from my list cannot be ordered. I even don´t have the frame – which will hopefully arrive end of March. I´m not sure when I can start building but I´m happy that I´ve found my setup. Stay tuned to know how the build itself goes 😊.
+End of February 2022, at the time of publishing this article, parts from my list cannot be ordered. I even don´t have the frame – which will hopefully arrive end of March. I´m not sure when I can start building but I´m happy that I´ve found my setup. Stay tuned to know how the build itself goes 🔧.
 
