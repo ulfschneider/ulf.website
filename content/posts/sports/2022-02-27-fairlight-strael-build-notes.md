@@ -395,7 +395,7 @@ It's a steel frame therefore metal cages should complement it. Ideally, titanium
 
 [[ingredients]]
 
-**Tooling**
+**Tools**
 
 [[cookware]]
 
