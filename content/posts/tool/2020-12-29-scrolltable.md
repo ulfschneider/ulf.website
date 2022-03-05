@@ -16,6 +16,7 @@ Cell   | Cell
 
 will become 
 
+```
 <div class="scroll-table" style="overflow-x:auto">
     <table>
         <thead>
