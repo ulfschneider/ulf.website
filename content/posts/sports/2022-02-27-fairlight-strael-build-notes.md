@@ -89,7 +89,7 @@ There is one thing left: *the weight of a steel frame.* The frame of the current
 
 **My decision:** @Strael 3.0 Tall 56 frameset in color putty, including Hope Headset and Hope Seat Post Clamp in black{}. 
 
-<figure class="bleed">
+<figure class="md:bleed">
   <img src="/img/sports/strael-3-0-frameset-putty.png" alt="">
   <figcaption>The Strael 3.0 frameset in color putty.<br>The image is taken from the Fairlight Strael 3.0 Lookbook.</figcaption>
 </figure>
