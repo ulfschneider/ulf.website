@@ -1,7 +1,7 @@
 ---
 title: Training materials for the seahorse badge
 tags: [journal,sports]
-updated: 2022-02-14
+updated: 2022-03-07
 ---
 <div class="full-bleed flex justify-center justify-middle">
 <dl class="inline-block timeline framed row">
@@ -37,5 +37,18 @@ updated: 2022-02-14
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/j6F_n8njtYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<figcaption>Also this video contains some ideas to try at home.</figcaption></figure>
 	</dd>
+	<dt>27 Feb 2022</dt>
+	<dd>We were playing. Diving for rings, jumping into the water, and relaxing.</dd>
+	<dd><figure>
+		<img src="/img/journal/IMG_1735-sm.jpg" class="w-100" alt="">
+		<figcaption>Hair drying</figcaption>
+	</figure></dd>
+	<dt>6 Mar 2022</td>
+	<dd>
+	<figure class="fs-3">
+	🏆
+	</figure>
+	A day of great achievements. Right at the start Emil jumped into the water and swam 35 meters, did a short break, and completed the 50 meters. I asked him if he liked to do some jumps into the water to have some fun. He wanted to do the jumps from the other side of the pool. I thought we would walk around the pool to come to the other side but Emil wanted to swim all the 50 meters back, which he did without a break.
+	Then we went into a different pool for ring diving and that is a big fun, because with his goggles Emil is like a fish in the water when reaching for a ring.</dd>
 </dl>
 </div>
