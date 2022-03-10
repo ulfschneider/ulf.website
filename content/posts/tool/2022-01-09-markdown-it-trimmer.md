@@ -32,6 +32,12 @@ Instead, the markup will get trimmed into:
 </ul>
 ```
 
+## Install
+
+```shell
+npm i markdown-it-trimmer
+```
+
 ## Usage
 
 ```js

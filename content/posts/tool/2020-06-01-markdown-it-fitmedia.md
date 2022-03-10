@@ -63,6 +63,12 @@ will become
 </div>
 ```
 
+## Install
+
+```shell
+npm i markdown-it-fitmedia
+```
+
 ## Usage
 
 ```js

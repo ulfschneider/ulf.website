@@ -75,6 +75,11 @@ will be transformed into
 </div>
 ```
 
+## Install
+
+```shell
+npm i markdown-it-scrolltable
+```
 
 ## Usage
 
