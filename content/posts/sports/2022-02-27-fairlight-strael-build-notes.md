@@ -347,7 +347,7 @@ Also, Shimano recommends not using tire leavers with their new rims, which might
 
 I start with the handlebars. They should allow for internal Di2 cable and brake hose routing. Also, they should be made of aluminum because I want to mount an Ortlieb Handlebar QR, which is impossible with carbon handlebars/stem! Also, I need short reach, something between 70 mm to 75 mm. 
 
-**My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach, and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Race Comfort Bartape, black{} and @Wolf Tooth Bar End Plugs, alloy black{} will complete the handlebar. A @Ritchey WCS Carbon Spacer Set 3x5mm 3x10mm matte UD Carbon{} is necessary to set the correct height. 
+**My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach, and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Race Comfort Bartape in black{} and @Wolf Tooth Bar End Plugs, alloy black{}, will complete the handlebar. A @Ritchey WCS Carbon Spacer Set 3x5mm 3x10mm matte UD Carbon{} is necessary to set the correct height. 
 
 Because I want to stay with one manufacturer, stem and seat post will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 90 mm length{}, which weighs 139 g, and a @Ritchey Flexlogic Carbon Link Seatpost, 15 mm setback, 350 mm length{}, at a weight of 185 g. The seat post will get a @Ritchey Di2 Battery Mount **2022**{}. 
 
@@ -363,7 +363,7 @@ In the past, I was using a [Crane E-Ne Bell](https://www.cranebellco.com/e-ne-be
 
 ## The saddle
 
-I ride Specialized Phenom Expert on most of my bikes, and that saddle is working fine for me. It would be a natural decision to go for that saddle on this very bike. I'm not sure for now, because I would like to thy the new Ergon SR Allroad Core Pro Men.
+I ride Specialized Phenom Expert on most of my bikes, and that saddle is working fine for me. It would be a natural decision to go for that saddle on this very bike. I'm not sure for now, because I would like to try the new Ergon SR Allroad Core Pro Men.
 
 **My decision:** Not sure for now, probably I go with my tried and tested @Specialized Phenom Expert 143 mm{} and withstand to try an Ergon SR Allroad Core Pro Men.
 
