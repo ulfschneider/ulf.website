@@ -47,8 +47,8 @@ It was proof enough that the Strael steel frame had more to it than cycling folk
 
 It took me four years from there to the point of ordering a Strael 3.0 frame in late August 2021 to build up my personal bike. In particular, it's a Strael because of
 
--   **The fit:** There is a _tall_ frame geometry that fits me. Have a look at the [Fairlight Fit Calculator](https://fairlightcycles.com/calculator/).
--   **The details:** When you read through Dom's [design notes](https://fairlightcycles.com/wp-content/uploads/2021/06/Fairlight-Strael-3.0-Design-Notes.pdf) you'll get a sense of how he is taking care about everything. It's speaking to me, and I will enjoy riding a frame someone was so humble and courageous about. The way the bike is designed reminds me of the [10 principles of good design](/2020-05-04-10-principles-of-good-design/), by Dieter Rams.
+-   **The fit:** There is a _Tall_ frame geometry that fits me. Have a look at the [Fairlight Fit Calculator](https://fairlightcycles.com/calculator/).
+-   **The details:** When you read through Dom's [design notes](https://fairlightcycles.com/wp-content/uploads/2021/06/Fairlight-Strael-3.0-Design-Notes.pdf) you'll get a sense of how he is taking care about everything. It's speaking to me, and I will enjoy riding a frame someone was so humble and courageous about. The way the frame is designed reminds me of the [10 principles of good design](/2020-05-04-10-principles-of-good-design/), by Dieter Rams.
 -   **The durability:** I think a steel frame can take everyday use better than a carbon frame.
 -   **The ride:** Unfortunately, I couldn't do a test ride before ordering the frame. I'm relying on how riders describe it. Therefore I'm talking here about my expectations. The Strael is now in its third model iteration, and it seemingly got even better with each iteration: It's comfortable, it climbs, it gets to speed, the handling is balanced. Stu Kerton's characterization resonates with me. He describes what I like about a road bike – comfort without being mushy, predictability without being twitchy, plus pedaling performance.
 
