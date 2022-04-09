@@ -213,7 +213,7 @@ For the wire length calculation, I'm referring to the geometry of the Strael 3.0
 
 - **Battery to front derailleur:** 557 mm seat tube + 150 mm for outside frame ≈ **700 mm**. According to Shimano it must be ≤ 1500 mm.
 - **Battery to rear derailleur:**  557 mm + 150 mm outside frame ≈ **700 mm to connect the battery with EW-JC304** + 418 mm + 200 mm for outside frame ≈ **650 mm to connect EW-JC304 with the rear derailleur**. According to Shimano it must be ≤ 1700 mm.
-- **Battery to right shifter:** 557 mm + 150 mm outside frame ≈ **700 mm to connect the battery with EW-JC304** + 500 mm down tube + 500 mm outside frame + 200 mm inside handlebar ≈ **1200 mm to connect the EW-JC304 with the right shifter**. According to Shimano the entire distance from the battery to the shifter must be ≤ 2200 mm.
+- **Battery to right shifter:** Because for the rear derailleur the battery is already connected with the EW-JC304 I do not need cater for that again. But I need to connect the EW-JC304 with the right shifter. That requires 500 mm down tube + 500 mm outside frame + 200 mm inside handlebar ≈ **1200 mm to connect the EW-JC304 with the right shifter**. According to Shimano the entire distance from the battery to the shifter must be ≤ 2200 mm.
 - **Shifter to shifter: 600 mm**.
 
 The other day I found my above reasoning for wire length being backed by [<cite>Full Bike Build: OPEN U.P. Road Plus Gravel Bike</cite>](https://youtu.be/6Vv5TXBziHs) (I had great joy watching). Subsequently, the concept leads to the following parts to order:
