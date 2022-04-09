@@ -3,6 +3,7 @@ module.exports = {
     locale: "en",
     themecolor: "#ebebeb",
     url: "https://ulf.codes",
+    buildTime: new Date(),
     imgMaxWidth: 1024,
     imgMaxHeight: 700,
     imgSmallWidth: 400,
@@ -103,7 +104,5 @@ module.exports = {
     images: '/images/',
     rss: '/feed.xml',
     output: process.env.OUTPUT ? process.env.OUTPUT : '_site',
-    input: process.env.INPUT ? process.env.INPUT : 'content',
-
-    time: new Date()
+    input: process.env.INPUT ? process.env.INPUT : 'content'
 }
