@@ -4,6 +4,7 @@ tags: [sports, articles]
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame. Here is my thought process for choosing the parts.
 hero: /img/sports/strael-3-0-top-tube.png
 herocaption: Fairlight Strael 3.0 Top Tube<br>Image taken from the Fairlight Strael 3.0 Lookbook
+updated: 2022-04-09
 ---
 
 [[toc]]
@@ -217,13 +218,13 @@ For the wire length calculation, I'm referring to the geometry of the Strael 3.0
 
 The other day I found my above reasoning for wire length being backed by [<cite>Full Bike Build: OPEN U.P. Road Plus Gravel Bike</cite>](https://youtu.be/6Vv5TXBziHs) (I had great joy watching). Subsequently, the concept leads to the following parts to order:
 
-- 3 x @700 mm Di2 cable (EW-SD300-I){3}. Two for connecting the battery with the EW-JC304 junction and another one to connect the battery with the front derailleur.
+- A @Di2 junction to wire everything together (EW-JC304){1}
+- 2 x @700 mm Di2 cable (EW-SD300-I){2}. One for connecting the battery with the EW-JC304 junction and another one to connect the battery with the front derailleur.
 - A @650 mm Di2 cable (EW-SD300-I){1} to connect the EW-JC304 junction with the rear derailleur.
 - A @1200 mm Di2 cable (EW-SD300-I){1} to connect the EW-JC304 junction with the right shifter.
 - A @600 mm Di2 cable (EW-SD300-I){1} to connect the two shifters through the handlebars.
-- A @Di2 junction to wire everything together (EW-JC304){1}
 - 3 @Di2 Grommets (EW-GM300-S){3}
-- The #Di2 Plug Tool for EW-SD300-I cables (TL-EW300){}
+- The Di2 Plug Tool for EW-SD300-I cables (TL-EW300) will come with the rear derailleur.
 
 
 ### The cassette
@@ -395,10 +396,6 @@ It's a steel frame therefore metal cages should complement it. Ideally, titanium
 ## The part list
 
 [[ingredients]]
-
-**Tools**
-
-[[cookware]]
 
 ## What´s next
 
