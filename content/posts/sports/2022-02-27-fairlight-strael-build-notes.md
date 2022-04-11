@@ -365,9 +365,9 @@ In the past, I was using a [Crane E-Ne Bell](https://www.cranebellco.com/e-ne-be
 
 ## The saddle
 
-I ride Specialized Phenom Expert on most of my bikes, and that saddle is working fine for me. It would be a natural decision to go for that saddle on this very bike. I'm not sure for now, because I would like to try the new Ergon SR Allroad Core Pro Men.
+I ride Specialized Phenom Expert on most of my bikes, and that saddle is working fine for me. It would be a natural decision to go for that saddle on this very bike. For now I will use an Ergon SR Pro Men, which is a leftover from a previous bike.
 
-**My decision:** Not sure for now, probably I go with my tried and tested @Specialized Phenom Expert 143 mm{} and withstand to try an Ergon SR Allroad Core Pro Men.
+**My decision:** @Ergon SR Pro Men, small/medium{}.
 
 ## The waterbottle cages
 
