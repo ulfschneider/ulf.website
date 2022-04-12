@@ -200,7 +200,7 @@ The [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/p
 
 <figure>
   <img src="/img/sports/wired-gear-shifting.png" alt="">
-  <figcaption> This example of a wired gear shifting setup is taken from the Road Di2 Series General Guide and I plan to follow that example.</figcaption>
+  <figcaption> This example of a wired gear shifting setup is taken from the Road Di2 Series General Guide and I plan to follow that example (excluding the satellite shifters).</figcaption>
 </figure>
 
 
