@@ -171,7 +171,7 @@ The weight of the Shimano groupsets is competitive, making a decision for either
     <tr><td>Rear derailleur</td><td>215</td><td>262</td><td class="bg-primary-5">-47</td><td class="bg-accent-four-5">410 €</td><td>760 €</td><td>350 €</td></tr>
     <tr><td>Cassette 11-30</td><td>223</td><td>291</td><td class="bg-primary-5">-68</td><td class="bg-accent-four-5">225 €</td><td>340 €</td><td>115 €</td></tr>
     <tr><td>Chain</td><td>242</td><td>252</td><td class="bg-primary-5">-10</td><td class="bg-accent-four-5">10 €</td><td>50 €</td><td>40 €</td></tr>
-    <tr><td>Total</td><td>2317</td><td>2566</td><td class="bg-primary-5">-249</td><td class="bg-accent-four-5">1660 €</td><td>2960 €</td><td>1840 €</td></tr>
+    <tr><td>Total</td><td>2317</td><td>2566</td><td class="bg-primary-5">-249</td><td class="bg-accent-four-5">1660 €</td><td>3500 €</td><td>1840 €</td></tr>
 </table>
 </div>
 
