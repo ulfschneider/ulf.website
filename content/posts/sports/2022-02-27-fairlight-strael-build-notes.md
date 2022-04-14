@@ -4,7 +4,7 @@ tags: [sports, articles]
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame. Here is my thought process for choosing the parts.
 hero: /img/sports/strael-3-0-top-tube.png
 herocaption: Fairlight Strael 3.0 Top Tube<br>Image taken from the Fairlight Strael 3.0 Lookbook
-updated: 2022-04-09
+updated: 2022-04-14
 ---
 
 [[toc]]
@@ -399,5 +399,7 @@ It's a steel frame therefore metal cages should complement it. Ideally, titanium
 
 ## What´s next
 
-End of February 2022, at the time of publishing this article, parts from my list cannot be ordered. I even don´t have the frame – which will hopefully arrive end of March. I´m not sure when I can start building but I´m happy that I´ve found my setup. Stay tuned to know how the build itself goes 🔧.
+End of February 2022, at the time of publishing this article, parts from my list cannot be ordered. I even don´t have the frame – which will hopefully arrive end of March. I´m not sure when I can start building but I´m happy that I´ve found my setup. 
+
+Update 14 April 2022: See [how the build itself goes](/2022-04-14-fairlight-strael-build/) 🔧.
 
