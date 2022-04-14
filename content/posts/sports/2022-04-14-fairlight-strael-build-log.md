@@ -5,7 +5,7 @@ abstract: A log of my Fairlight Strael Build
 hero: /img/sports/strael-3-0-parts.jpg
 ---
 
-You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a>, which are the primer of this build. You get there the complete list of the parts I´m using for this build.
+You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a>, which are the primer of this build. You get there the complete list of parts I´m using for this build.
 
 [[toc]]
 
