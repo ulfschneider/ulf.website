@@ -4,7 +4,7 @@ tags: [sports, articles]
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame. Here is my thought process for choosing the parts.
 hero: /img/sports/strael-3-0-top-tube.png
 herocaption: Fairlight Strael 3.0 Top Tube<br>Image taken from the Fairlight Strael 3.0 Lookbook
-updated: 2022-04-14
+updated: 2022-04-17
 ---
 
 [[toc]]
@@ -116,7 +116,7 @@ Electronic shifting has become faster, more accurate, and more comfortable than 
 
 ### Electronic shifting
 
--   **SRAM's eTap AXS** shifting is wireless. The bike will only need brake hoses and no cables for shifting. It's quick to set up, and the gearing range is interesting, with smaller chainrings front and a small 10 teeth sprocket on the cassette, which creates a broader gearing range. The smaller chainrings will lead to riding more often on the big chainring, which leads to less changing gears on the front. SRAM has been a huge innovator in the bike industry, and when they bring something new, it's always interesting to look at it. I like almost everything about their groupsets, except you have to take care of the charging status of four(!) batteries. Each derailleur has its own battery, which should last for 400 km of riding. A battery can be charged within 60 minutes. Charging requires the battery to be removed from the bike and put into a charging cradle. Keep in mind each derailleur has its own battery, and because they are both the same, they can be swapped for each other, but the two of them require charging. In addition, each brake lever has a CR2032 battery to send the wireless shifting signals to the derailleurs. The shifter batteries should last for two years. Four batteries with each one a different charging status scares me off. On the other hand, replacing a battery is super quick, and because they are small and of low weight, carrying a replacement part on longer rides is doable. Another point I do not like too much about SRAM, is that their hydraulic brakes use the more aggressive DOT fluid and not mineral oil, like Shimano. Theoretically, because DOT is hygroscopic, it should be replaced once a year, and because the fluid is aggressive on bike surfaces, you have to be careful when doing that. I admit, I never replaced the DOT fluid on my bike in the past, and my SRAM brakes are working fine.
+-   **SRAM's eTap AXS** shifting is wireless. The bike will only need brake hoses and no wires for shifting. It's quick to set up, and the gearing range is interesting, with smaller chainrings front and a small 10 teeth sprocket on the cassette, which creates a broader gearing range. The smaller chainrings will lead to riding more often on the big chainring, which leads to less changing gears on the front. SRAM has been a huge innovator in the bike industry, and when they bring something new, it's always interesting to look at it. I like almost everything about their groupsets, except you have to take care of the charging status of four(!) batteries. Each derailleur has its own battery, which should last for 400 km of riding. A battery can be charged within 60 minutes. Charging requires the battery to be removed from the bike and put into a charging cradle. Keep in mind each derailleur has its own battery, and because they are both the same, they can be swapped for each other, but the two of them require charging. In addition, each brake lever has a CR2032 battery to send the wireless shifting signals to the derailleurs. The shifter batteries should last for two years. Four batteries with each one a different charging status scares me off. On the other hand, replacing a battery is super quick, and because they are small and of low weight, carrying a replacement part on longer rides is doable. Another point I do not like too much about SRAM, is that their hydraulic brakes use the more aggressive DOT fluid and not mineral oil, like Shimano. Theoretically, because DOT is hygroscopic, it should be replaced once a year, and because the fluid is aggressive on bike surfaces, you have to be careful when doing that. I admit, I never replaced the DOT fluid on my bike in the past, and my SRAM brakes are working fine.
 -   **Shimano´s Di2 ([Digital Integrated Intelligence](https://bike.shimano.com/en-US/technologies/component/details/di2.html))** shifting approach is still mostly wired. A central battery will be placed inside the seat post, which protects the battery and hides it away. Both derailleurs are wired to the battery. A fully charged system would allow for around 1000 km of riding. Even if it's less or more than 1000 km, the Di2 battery will allow riding at least double as far as the eTap AXS batteries before charging is required. The rear derailleur needs to get wired to a power supply to charge the battery, which means the entire bike needs to be near a power supply. There is the option to wire the brake levers with the central battery, which I prefer because then there's only one battery in the entire system, which will provide a clear charging status. This option is claimed to prolong battery life by 50% and speed up the shifting. The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which adds two more batteries, shortens the life of the central battery, and makes shifting slower. Shifting of SRAM is good, but the shifting of Shimano is better, no matter if wireless or wired. While each system is a joy to use, and I have a lot of respect for the hard work and achievements of the engineers in either company, Shimano is the fastest and most accurate on the road.
 -   **Campagnolo** has never been an option for me because I dislike their brake lever ergonomics.
 
@@ -209,22 +209,23 @@ The [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/p
   <figcaption>This example of complete internal wiring serves as my blueprint. As opposed to what's shown in the above diagram, I will put the EW-JC304 junction near the bottom bracket and wire the handlebars without any kind of junction. The diagram is taken from the Road Di2 Series General Guide.</figcaption>
 </figure>
 
-For the wire length calculation, I'm referring to the geometry of the Strael 3.0 frame 56T. The seat tube is 557 mm, the chainstays are 418 mm, the down tube is approximately 600 mm. I'm calculating wire length as follows:
+For the wire length calculation, I'm referring to the geometry of the Strael 3.0 frame 56T. The seat tube is 557 mm, the chainstays are 418 mm, the down tube is approximately 600 mm. My handlebars are 420 mm wide and have 73 mm reach. I'm calculating wire length as follows:
 
-- **Battery to front derailleur:** 557 mm seat tube + 150 mm for outside frame ≈ **700 mm**. According to Shimano it must be ≤ 1500 mm.
-- **Battery to rear derailleur:**  557 mm + 150 mm outside frame ≈ **700 mm to connect the battery with EW-JC304** + 418 mm + 200 mm for outside frame ≈ **650 mm to connect EW-JC304 with the rear derailleur**. According to Shimano it must be ≤ 1700 mm.
-- **Battery to right shifter:** Because for the rear derailleur the battery is already connected with the EW-JC304 I do not need cater for that again. But I need to connect the EW-JC304 with the right shifter. That requires 500 mm down tube + 500 mm outside frame + 200 mm inside handlebar ≈ **1200 mm to connect the EW-JC304 with the right shifter**. According to Shimano the entire distance from the battery to the shifter must be ≤ 2200 mm.
-- **Shifter to shifter: 600 mm**.
+- **Battery to EW-JC304 junction:** 557 mm seat tube + 150 mm for outside frame ≈ **700 mm**.
+- **EW-JC304 to rear derailleur: ** 418 mm + 200 mm outside frame ≈ **650 mm**
+- **EW-JC304 to front derailleur:** ≈ **200 mm**
+- **EW-JC304 to right shifter:** 500 mm routing through down tube + 500 mm outside frame + 200 mm inside handlebar ≈ **1200 mm**. 
+- **Shifter to shifter:** ≈ **650 mm**.
 
-The other day I found my above reasoning for wire length being backed by [<cite>Full Bike Build: OPEN U.P. Road Plus Gravel Bike</cite>](https://youtu.be/6Vv5TXBziHs) (I had great joy watching). Subsequently, the concept leads to the following parts to order:
+Subsequently, the concept leads to the following parts to order:
 
 - A @Di2 junction to wire everything together (EW-JC304){1}
-- 2 x @700 mm Di2 cable (EW-SD300-I){2}. One for connecting the battery with the EW-JC304 junction and another one to connect the battery with the front derailleur.
-- A @650 mm Di2 cable (EW-SD300-I){1} to connect the EW-JC304 junction with the rear derailleur.
-- A @1200 mm Di2 cable (EW-SD300-I){1} to connect the EW-JC304 junction with the right shifter.
-- A @600 mm Di2 cable (EW-SD300-I){1} to connect the two shifters through the handlebars.
+- A @700 mm Di2 wire (EW-SD300-I){1} to connect the battery with the EW-JC304 junction.
+- 2 @650 mm Di2 wires (EW-SD300-I){2}. One to connect the EW-JC304 junction with the rear derailleur and the other to connect the two shifters through the handlebars.
+- A @1200 mm Di2 wire (EW-SD300-I){1} to connect the EW-JC304 junction with the right shifter.
+- A @200 mm Di2 wire (ES-SD300-I){1} to connect the EW-JC304 junction with the front derailleur.
 - 3 @Di2 Grommets (EW-GM300-S){3}
-- The Di2 Plug Tool for EW-SD300-I cables (TL-EW300) will come with the rear derailleur.
+- The Di2 Plug Tool for EW-SD300-I wires (TL-EW300) will come with the rear derailleur.
 
 
 ### The cassette
@@ -347,7 +348,7 @@ Also, Shimano recommends not using tire leavers with their new rims, which might
 
 ## The seat post, stem, handlebars, and bar tape
 
-I start with the handlebars. They should allow for internal Di2 cable and brake hose routing. Also, they should be made of aluminum because I want to mount an Ortlieb Handlebar QR, which is impossible with carbon handlebars/stem! Also, I need short reach, something between 70 mm to 75 mm. 
+I start with the handlebars. They should allow for internal Di2 wire and brake hose routing. Also, they should be made of aluminum because I want to mount an Ortlieb Handlebar QR, which is impossible with carbon handlebars/stem! Also, I need short reach, something between 70 mm to 75 mm. 
 
 **My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach, and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Race Comfort Bartape in black{} and @Wolf Tooth Bar End Plugs, alloy black{}, will complete the handlebar. A @Ritchey WCS Carbon Spacer Set 3x5mm 3x10mm matte UD Carbon{} is necessary to set the correct height. 
 
