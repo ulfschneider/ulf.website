@@ -402,5 +402,5 @@ It's a steel frame therefore metal cages should complement it. Ideally, titanium
 
 End of February 2022, at the time of publishing this article, parts from my list cannot be ordered. I even don´t have the frame – which will hopefully arrive end of March. I´m not sure when I can start building but I´m happy that I´ve found my setup. 
 
-Update 14 April 2022: See [how the build itself goes](/2022-04-14-fairlight-strael-build/) 🔧.
+Update 14 April 2022: See [how the build itself goes](/2022-04-14-fairlight-strael-build-log/) 🔧.
 
