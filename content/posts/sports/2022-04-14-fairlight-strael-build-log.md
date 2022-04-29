@@ -84,7 +84,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    </figure>
 	
 	
-## Tools
+## Entire list of tools
 
 [[cookware]]
 
