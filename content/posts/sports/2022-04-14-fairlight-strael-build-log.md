@@ -104,7 +104,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
 
 Before cutting anything I assemble the fork into the frame and put as many spacers onto the steerer tube as I assume will be needed. I have the geometry of the new frame and can compare it to the geo of my old frame. Theoretically I can calculate the number of required spacers but cutting off something from my shiny new fork scares me in a way that I want to try things first. That in addition requires mounting the handlebars, the shifters, the wheels and the saddle.
 
-1. **Fork:** The headset comes with two small spacers. I found to get a tight outer seal for the rubber of the headset top cap one spacer was enough in my case.
+1. **Fork:** The headset top cap comes with two shims. I found to get a tight outer seal for the rubber of the headset top cap one spacer was enough in my case. The Hope headset has multiple convincing seals.
    <div class="split md:bleed">
    <figure>
    <img src="/img/sports/two-headset-spacers.jpg">
