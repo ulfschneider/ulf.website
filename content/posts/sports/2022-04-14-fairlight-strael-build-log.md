@@ -1,7 +1,7 @@
 ---
 title: Fairlight Strael Build
 tags: [sports, articles]
-abstract: A log of my Fairlight Strael Build 
+abstract: A Log of my Fairlight Strael Build 
 hero: /img/sports/strael-3-0-parts.jpg
 updated: 2021-04-29
 ---
