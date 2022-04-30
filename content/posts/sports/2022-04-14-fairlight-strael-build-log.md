@@ -148,7 +148,42 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
 - Tesa Crepe
 - #Hacksaw with Park Tool Carbon Cutting Saw Blade CSB-1. You do not need the Park Tool saw itself if you already have a hacksaw that can hold the 300 mm saw blade.{}
 - #Topeak Threadless Saw Guide{}
-- #Sanding Block with Sanding Paper{}
+- #Sanding Block with P120 Sanding Paper{}
+
+### Steps
+
+I´m mostly following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.globalcyclingnetwork.com/video/how-to-cut-a-road-bike-steerer-tube) as presented by the Global Cycling Network.
+
+1. After trying out the desired stem height I draw a line with a pencil around the 5 mm spacer that sits on top of the stem. For the compression bung to work properly I have to cut away additional 2 mm (I choose to not go for 3 mm as told in the GCN video). 
+   <figure>
+   <img src="/img/sports/steerer-cut-lines.jpg" alt="A steerer tube with three pencil lines to identify the final cut line">
+   <figcaption>On this image you see three lines on the steerer. From top to bottom: 
+   <ul>
+   <li>A thin line going aroung the steerer. That was my first line before noticing that I should take away one of the headset shims for a tighter seal.</li>
+   <li>A thicker line going around the steerer. That is the top height of the final 5 mm spacer that sits on top of the stem.</li>
+   <li>A very short line. That is the cut mark which is 2 mm below the top spacer height.</li>
+   </ul></figcaption>
+   </figure>
+2. I put a very short Tesa tape to mask the cut line and above and overlapping the short tape another Tesa around the entire steerer to improve the cut.
+   <figure>
+   <img src="/img/sports/cut-prepared-steerer.jpg" alt="">
+   <figcaption>The two Tesa tapes on top of each other and an additional pencil lines to identify the cut mark easily</figcaption>
+   </figure>
+3. The saw blade guide can be attached to the steerer just so that cut will go through the identified cut line.
+   <figure>
+   <img src="/img/sports/saw-blade-guide.jpg" alt="">
+   <figcaption>The saw blade guide attached to the steerer</figcaption>
+   </figure>
+4. It´s time to cut the steerer with the hacksaw. I´ve attached the Park Tool Carbon Blade to my plain old 300 mm hacksaw for the cutting. I´m wearing an FFP2 mask (easy to have one at hand during a pandemic) and I should have worn Nitril gloves (which I didn´t do). Because I do not own a vice I´m sitting down, laying the fork on my knees and do the sawing. Admittedly, it would be better to mount the sawing guide into a vice for this job. After the cut is made, I do some gentle sandpaper grinding of the cutting area. I use a sanding block and P120 sandpaper. Finally I remove the Tesa tape from the steerer. 
+   <figure>
+   <img src="/img/sports/sanding-block.jpg" alt="A sanding block with a piece of sanding paper hold in hand">
+   <figcaption>The sanding block with the P120 sanding papier</figcaption>
+   </figure>
+5. The result is an even and smooth steerer cut.
+   <figure>
+   <img src="/img/sports/smooth-steerer-cut.jpg" alt="The cut and sandpaper grinded steerer">
+   <figcaption>The smoothened steerer cut</figcaption>
+   </figure>
 
 	
 ## Entire list of tools in order of use
