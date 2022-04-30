@@ -33,8 +33,10 @@ I take the technical dealer manuals for Shimano components from the [Shimano Dur
 ### Tools
 
 - #Di2 Plug Tool for EW-SD300 wires (TL-EW300){}
+- #5 mm Hex Key{}
 - #Park Tool Repair Stand PCS-10.3{}. I´m happy with that. It is sturdy, has a secure and stable stand, can be adjusted in height, and the clamp mechanism works pretty well.
 - #Park Tool Handlebar Holder HBH-2{}
+- #Folding Meter{}
 - #My very high end do-it-yourself routing tool – a short and bent steel wire{}.
   <figure>
   <img src="/img/sports/high-end-routing-tool.jpg" alt="A hand holding a bent steel wire">
@@ -55,7 +57,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    <figcaption>The battery has to be pushed into the seat post (further than you see on this image)</figcaption>
    </figure>      
 2. **Seat tube wire:** I push a 700 mm Di2 wire into the seat tube from the top opening towards the bottom bracket shell. The wire has three wire holders attached to prevent it from moving inside the seat tube. I use a folding ruler to push the wire towards the bottom bracket shell. 
-3. **Mounting the seat post:** The seat post wire can now be connected to the battery by using the Shimano Plug Tool. As a next step the seat post can be mounted to the frame. Now the frame is ready to be taken into the repair stand by clamping the seat post. The Di2 wire plug has not been pulled out of the seat tube. With the frame inside the repair stand this is left to be done and I use my routing tool to fish the plug and pull it further trhough the bottom bracket shell. 
+3. **Mounting the seat post:** The seat post wire can now be connected to the battery by using the Shimano Plug Tool. As a next step the seat post can be mounted to the frame. Now the frame is ready to be taken into the repair stand by clamping the seat post with the 5 mm Hex Key. The Di2 wire plug has not been pulled out of the seat tube. With the frame inside the repair stand this is left to be done and I use my routing tool to fish the plug and pull it further trhough the bottom bracket shell. 
    <figure>
    <img src="/img/sports/seat-tube-plug.jpg" alt="Pulling the Di2 plug out of the seat tube into the bottom bracket shell">
    <figcaption>Pulling the Di2 plug out of the seat tube into the bottom bracket shell</figcaption>
@@ -83,8 +85,57 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    <figcaption>The Di2 wires tucked away in the bottom bracket shell. The EW-JC304 junction is inside the down tube.</figcaption>
    </figure>
 	
+## Cutting the steerer tube
+
+### Tools
+
+- #Hacksaw with Park Tool Carbon Cutting Saw Blade CSB-1. You do not need the Park Tool Saw itself if you already have a hacksaw that can hold the 300 mm Saw Blade.{}
+- #Topeak Threadless Saw Guide{}
+- #Sanding Block with Sanding Paper{}
+- #Pencil{}
+- #Tesa Crepe{}
+- Folding Meter
+- #Water Level{}
+- #4 mm Hex Key{}
+- 5 mm Hex Key
+- #6 mm Hex Key{}
+
+### Steps
+
+Before cutting anything I assemble the fork into the frame and put as many spacers onto the steerer tube as I assume will be needed. I have the geometry of the new frame and can compare it to the geo of my old frame. Theoretically I can calculate the number of spacers I will need. But cutting off something from my shiny new fork scares me in a way that I want to try things first. That in addition requires mounting the handlebars, the shifters, the wheels and the saddle.
+
+1. **Fork:** The headset comes with two small spacers. I found to get a tight outer seal for the rubber of the headset top cap one spacer was enough in my case.
+   <div class="split md:bleed">
+   <figure>
+   <img src="/img/sports/two-headset-spacers.jpg">
+   <figcaption>The headset comes with two optional shims</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/sports/one-headset-spacer.jpg">
+   <figcaption>Removing one of the shims to get a tight seal</figcaption>
+   </figure>
+   </div>
+   After putting the fork into the head tube, I´m mounting the headset and putting 3 x 1 cm spacers onto the steerer to lift the stem. I do not apply any grease at this point in time because everything will be disassembled again to cut the steerer tube. The stem is not fully tightened for now.
+   <figure>
+   <img src="/img/sports/stem-spacers.jpg">
+   <figcaption>Lifting the stem by 3 cm</figcaption>
+   </figure>
+2. **Handlebars with shifters:** I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolongue a straight top line for the upper handle bar.
+   <figure>
+   <img src="/img/sports/shifter-top-position.jpg">
+   <figcaption>Finding a shifter position</figcaption>
+   </figure>
+   I adjust the side rotation of the shifters by aligning a water level with the side of the handlebars and making shure the shifter level touches the edge of the water level ever so slightly.
+   <figure>
+   <img src="/img/sports/shifter-side-rotation.jpg">
+   <figcaption>Adjusting the side rotation of the shifers</figcaption>
+   </figure>
+   Once the shifters are in tune, I´m mounting the handlebars to the stem, center the handlebars, and tighten the stem to the steerer a little bit more, but not to the final torque.
+3. **Wheels:** The thru axles of the Strael require a 6 mm Hex key for mounting the wheels.
+4. **Saddle:** The saddle is mounted with a 5 mm Hex Key and put to the correct height, measuring from the center of the bottom bracket shell to the main sitting area. I´ve read that the Ritchey seat post makes it difficult to tune in the right saddle position but I did not experience any issues. I found it very clear, simple, and straightforward.
+
 	
-## Entire list of tools
+## Entire list of tools in order of use
 
 [[cookware]]
 

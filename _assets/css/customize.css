@@ -42,10 +42,6 @@ input[type=reset] {
     transition: color var(--transition-duration) ease-out, background-color var(--transition-duration) ease-out;
 }
 
-img {
-    max-height: max(80vh, var(--space-6));
-}
-
 img+img {
     margin-top: var(--space-2);
 }
