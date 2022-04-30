@@ -132,7 +132,7 @@ Before cutting anything I assemble the fork into the frame and put as many space
    </figure>
    Once the shifters are in tune, I´m mounting the handlebars to the stem, center the handlebars, and tighten the stem to the steerer a little bit more, but not to the final torque.
 3. **Wheels:** The thru axles of the Strael require a 6 mm Hex key for mounting the wheels.
-4. **Saddle:** The saddle is mounted with a 5 mm Hex Key and put to the correct height, measuring from the center of the bottom bracket shell to the main sitting area. I´ve read that the Ritchey seat post makes it difficult to tune in the right saddle position but I did not experience any issues. I found it very clear, simple, and straightforward.
+4. **Saddle:** The saddle is mounted with a 5 mm Hex Key and put to the correct height, measuring from the center of the bottom bracket shell to the main sitting area. I´ve read that the Ritchey Link seat post makes it difficult to tune in the right saddle position but I found it quite the opposite. It´s a clear, simple, and straightforward interface and I couldn´t ask for more.
 
 	
 ## Entire list of tools in order of use
