@@ -89,7 +89,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
 
 ### Tools
 
-- #Hacksaw with Park Tool Carbon Cutting Saw Blade CSB-1. You do not need the Park Tool Saw itself if you already have a hacksaw that can hold the 300 mm Saw Blade.{}
+- #Hacksaw with Park Tool Carbon Cutting Saw Blade CSB-1. You do not need the Park Tool saw itself if you already have a hacksaw that can hold the 300 mm saw blade.{}
 - #Topeak Threadless Saw Guide{}
 - #Sanding Block with Sanding Paper{}
 - #Pencil{}
