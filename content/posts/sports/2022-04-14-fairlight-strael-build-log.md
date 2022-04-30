@@ -152,9 +152,9 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
 
 ### Steps
 
-I´m mostly following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.globalcyclingnetwork.com/video/how-to-cut-a-road-bike-steerer-tube) as presented by the Global Cycling Network.
+I´m mostly following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.globalcyclingnetwork.com/video/how-to-cut-a-road-bike-steerer-tube) as presented by the Global Cycling Network. After trying out the desired stem height I draw a line with a pencil around the 5 mm spacer that sits on top of the stem. Then I take away the wheels and disassemble the fork from the bike frame.
 
-1. After trying out the desired stem height I draw a line with a pencil around the 5 mm spacer that sits on top of the stem. For the compression bung to work properly I have to cut away additional 2 mm (I choose to not go for 3 mm as told in the GCN video). 
+1. For the compression bung to work properly I have to cut away additional 2 mm (I choose to not go for 3 mm as told in the GCN video). 
    <figure>
    <img src="/img/sports/steerer-cut-lines.jpg" alt="A steerer tube with three pencil lines to identify the final cut line">
    <figcaption>On this image you see three lines on the steerer. From top to bottom: 
@@ -184,6 +184,10 @@ I´m mostly following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https:/
    <img src="/img/sports/smooth-steerer-cut.jpg" alt="The cut and sandpaper grinded steerer">
    <figcaption>The smoothened steerer cut</figcaption>
    </figure>
+   
+### Mounting the fork to the frame
+
+
 
 	
 ## Entire list of tools in order of use
