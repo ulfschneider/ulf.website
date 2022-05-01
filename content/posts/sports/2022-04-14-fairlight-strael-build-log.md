@@ -256,10 +256,11 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
    <figcaption>The attached top cap</figcaption>
    </figure>
 8. I attach the wheels to take the frame out of the repair stand and straighten the steering unit. Every headset screw receives 4 Nm of torque, except the steerer top cap wich remains hand tight. Ritchey allows a maximum torque of 5 Nm for their 4-bolt-stems ^[[<cite>Ritchey Tech Info</cite>](https://eu.ritcheylogic.com/eu_en/support/tech-info)]. The result starts looking like a bike.
-   <figure class="md:bleed">
-   <img src="/img/strael/it-starts-looking-like-a-bicycle.jpg" alt="The Streal leaning on a wall. It is yet missing the crankset, derailleurs and brakes.">
-   <figcaption>Just enough parts to recognize a bicycle</figcaption>
-   </figure>
+
+<figure class="md:bleed">
+<img src="/img/strael/it-starts-looking-like-a-bicycle.jpg" alt="The Streal leaning on a wall. It is yet missing the crankset, derailleurs and brakes.">
+<figcaption>Just enough parts to recognize a bicycle</figcaption>
+</figure>
 
    
 
