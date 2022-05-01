@@ -199,7 +199,7 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
    <figcaption>The smoothened steerer cut</figcaption>
    </figure>
    
-### Mounting the fork to the frame
+## Mounting the fork to the frame
 
 ### Tools
 
@@ -261,10 +261,6 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 <img src="/img/strael/it-starts-looking-like-a-bicycle.jpg" alt="The Streal leaning on a wall. It is yet missing the crankset, derailleurs and brakes.">
 <figcaption>Just enough parts to recognize a bicycle</figcaption>
 </figure>
-
-   
-
-
 	
 ## Entire list of tools in order of use
 
