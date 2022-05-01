@@ -124,11 +124,11 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
 1. **Fork:** The headset top cap comes with two shims. I found to get a tight outer seal for the rubber of the headset top cap one spacer was enough in my case. The Hope headset has three convincing seals (two top, one bottom).
    <div class="split md:bleed">
    <figure>
-   <img src="/img/strael/two-headset-spacers.jpg">
+   <img src="/img/strael/two-headset-shims.jpg">
    <figcaption>The headset comes with two optional shims</figcaption>
    </figure>
    <figure>
-   <img src="/img/strael/one-headset-spacer.jpg">
+   <img src="/img/strael/one-headset-shim.jpg">
    <figcaption>Removing one of the shims to get a tight seal</figcaption>
    </figure>
    </div>
@@ -236,7 +236,12 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
    <figcaption>I´m wiping away any excess grease carefully</figcaption>
    </figure>
 4. The headset bottom cup will also receive a thin layer of grease, similar to the top cup.
-5. With the bottom bearing onto the fork steerer tube I insert the fork into the frame and slide the coned ring, the top cup shim,  and the headseat top cap over the steerer tube. The headset top cap sits so tight that the fork will stay in the frame. Finally I´m attaching the three stem spacers, followed by the stem.
+5. With the bottom bearing onto the fork steerer tube I insert the fork into the frame and slide the coned ring, the top cup shim,  and the headseat top cap over the steerer tube. 
+    <figure>
+   <img src="/img/strael/one-headset-shim.jpg">
+   <figcaption>After the fork is inserted into the head tube the coned ring, top cup shim, and headset top cap go from bottom to top order onto the steerer</figcaption>
+   </figure>
+   The headset top cap sits so tight that the fork will stay in the frame. Finally I´m attaching the three stem spacers, followed by the stem.
    <figure>
    <img src="/img/strael/inserted-fork-with-spacers-and-stem.jpg" alt="The fork with all top spacers and stem">
    <figcaption>The fork with all top spacers and stem</figcaption> 
