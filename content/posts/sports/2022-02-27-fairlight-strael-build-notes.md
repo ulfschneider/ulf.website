@@ -186,6 +186,8 @@ That leads to the following parts to order:
 - @Dura-Ace Front Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed left side (ST-R9270-L) + Caliper front (BR-R9270) + Brake Hose front 1000 mm (SM-BH90){}
 - @Dura-Ace Rear Brake Set: Di2 Hydraulic Disc Brake Dual Control Lever 2x12-speed right side (ST-R9270-R) + Caliper rear (BR-R9270) + Brake Hose rear 1700 mm (SM-BH90){}
 - 2 @Deore XTR Brake Rotors 160 mm, Centerlock (RT-MT900){2}
+- @Shimano [SM-MA-R160D Flat-Mount Adapter](https://si.shimano.com/pdfs/si/SI-8NU0A-001-00-ENG.pdf) rear to install the 160 mm rotor. Without the adapter the Strael can take 150 mm rear brake rotors only.{}
+- 2 @Type C Screw for Flat-Mount Caliper for 15 mm frame to mount the SM-MA-R160D Adapter{2}
 - @Dura-Ace Di2 Rear Derailleur 12-speed (RD-R9250){}
 - @Dura-Ace Di2 Front Derailleur 2x12-speed (FD-R9250){}
 - @Front Derailleur Clamp Band, size SM for 28.6 mm diameter (SM-AD91){}
