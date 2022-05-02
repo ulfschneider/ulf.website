@@ -239,7 +239,7 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 5. With the bottom bearing onto the fork steerer tube I insert the fork into the frame and slide the coned ring, the top cup shim,  and the headseat top cap over the steerer tube. 
     <figure>
    <img src="/img/strael/one-headset-shim.jpg">
-   <figcaption>After the fork is inserted into the head tube the coned ring, top cup shim, and headset top cap go from bottom to top order onto the steerer</figcaption>
+   <figcaption>After the fork is inserted into the head tube the coned ring, the top cup shim, and the headset top cap go from bottom to top order onto the steerer</figcaption>
    </figure>
    The headset top cap sits so tight that the fork will stay in the frame. Finally I´m attaching the three stem spacers, followed by the stem.
    <figure>
@@ -266,6 +266,13 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 <img src="/img/strael/it-starts-looking-like-a-bicycle.jpg" alt="The Streal leaning on a wall. It is yet missing the crankset, derailleurs and brakes.">
 <figcaption>Just enough parts to recognize a bicycle</figcaption>
 </figure>
+
+## Installing the front caliper
+   
+## Installing the rear caliper
+
+https://www.youtube.com/watch?v=8OJXFA1fLSM
+
 	
 ## Entire list of tools in order of use
 
