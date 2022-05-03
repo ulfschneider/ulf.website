@@ -216,14 +216,14 @@ For the wire length calculation, I'm referring to the geometry of the Strael 3.0
 - **Battery to EW-JC304 junction:** 557 mm seat tube + 150 mm for outside frame ≈ **700 mm**.
 - **EW-JC304 to rear derailleur: ** 418 mm + 200 mm outside frame ≈ **700 mm**
 - **EW-JC304 to front derailleur:** ≈ **300 mm**
-- **EW-JC304 to right shifter:** 500 mm routing through down tube + 500 mm outside frame + 200 mm inside handlebar ≈ **1200 mm**. 
+- **EW-JC304 to right shifter:** 500 mm routing through down tube + 500 mm outside frame + 300 mm inside handlebar ≈ **1400 mm**. 
 - **Shifter to shifter:** ≈ **700 mm**.
 
 Subsequently, the concept leads to the following parts to order:
 
 - A @Di2 junction to wire everything together (EW-JC304){1}
 - 3 @700 mm Di2 wires (EW-SD300-I){3}. One to connect the battery with the EW-JC304 junction. Another ne to connect the EW-JC304 junction with the rear derailleur, and the third to connect the two shifters through the handlebars.
-- A @1200 mm Di2 wire (EW-SD300-I){1} to connect the EW-JC304 junction with the right shifter.
+- A @1400 mm Di2 wire (EW-SD300-I){1} to connect the EW-JC304 junction with the right shifter.
 - A @300 mm Di2 wire (ES-SD300-I){1} to connect the EW-JC304 junction with the front derailleur.
 - 3 @Di2 Grommets (EW-GM300-S){3}
 - The Di2 Plug Tool for EW-SD300-I wires (TL-EW300) will come with the rear derailleur.
