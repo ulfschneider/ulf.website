@@ -19,7 +19,7 @@ I take the technical manuals for Shimano components from the [Shimano Manuals & 
 
 ### Steps
 
-1. **Tubes and tires:** Because I do not run tubeless, I have to remove the tubeless valves first. From that point on I´m following [<cite>How to change an innertube</cite>](/2022-02-06-how-to-change-an-inner-tube/). Shimano recommends not to use tire leavers with the C36s, and fortunately, the GP5000s didn´t require it. Tires are inflated to 60 PSI.
+1. **Tubes and tires:** Because I do not run tubeless I have to remove the tubeless valves first. From that point on I´m following [<cite>How to change an innertube</cite>](/2022-02-06-how-to-change-an-inner-tube/). Shimano recommends not to use tire leavers with the C36s, and fortunately, the GP5000s didn´t require it. Tires are inflated to 60 PSI.
 3. **Brake rotors:** Once the rim is protected by the inflated tire it´s save to mount the brake rotors and torque them with 40 Nm. I do not use anti-seize nor grease for the direct mount connection and the lockring threads of the rotors. The parts are all aluminium and the given torque spec is for dry torque (without grease or anything similar). Putting anti-seize or grease on the thread would increase tension on the thread when torquing it to 40 Nm. Also, I avoid using grease near the brakes.
 4. **Cassette:** Be careful when mounting the cassette. It will fall apart all too easily and you might have difficulties putting everything back in the right order. I put a thin film of anti-seize on the freehub body to help demounting the cassette later on. It could well be that´s not necessary because the sprockets are on an aluminium spider and the freehub body is also alumunium. Again, no anti-seize on the lockring thread which will be torqued down to 40 Nm.
 
@@ -267,12 +267,29 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 <figcaption>Just enough parts to recognize a bicycle</figcaption>
 </figure>
 
-## Installing the front caliper
+## Installing the brakes
+
+The [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) is an essential source for setting up the brakes.
+
+### Tools
+
+- #8 mm Wrench{}
+- Hazet 5280-3CT Torque Wrench with #8 mm Torque Wrench Insert{}
+- 4 mm Hex Key
+- #Park Tool  HBT-1 Hydraulic Barb Tool{}
+- #Isopropyl Alcohol{}
+- #Cleaning Paper{}
+- #Electric Tape{}
+
+### Steps
    
 ## Installing the rear caliper
 
 https://www.youtube.com/watch?v=8OJXFA1fLSM
 
+## Installing the derailleurs and complete the wiring
+
+For the wiring of the handlebars it´s crucial that the link between the left and the right shifter is using the <mark>lower satellite ports</mark> of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) has to use the <mark>upper port</mark> of the shifter. If you do not follow this wiring model, your firmware updates as well as the triggering of the derailleurs will not function properly!
 	
 ## Entire list of tools in order of use
 
@@ -288,12 +305,14 @@ https://www.youtube.com/watch?v=8OJXFA1fLSM
 </thead>
 <tbody>
 <tr><td>Brake Rotor Centerlock</td><td>40</td></tr>
+<tr><td>Calipers to to the fork or frame</td><td>6<br>(max. allowed 6 - 8)</td></tr>
 <tr><td>Cassette to freehub body</td><td>40</td></tr>
 <tr><td>Compression bung</td><td>6<br>(max. allowed 10)</td></tr>
 <tr><td>Dual Control Lever clamp</td><td>6</td></tr>
+<tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<br>(max. allowed 5 - 6)</td></tr>
 <tr><td>Ritchey stem bolts (not the top cap screw)</td><td class="no-wrap">4<br>(max. allowed 5)</td></tr>
 <tr><td>Ritchey seatpost saddle clamp</td><td class="no-wrap">10<br>(max. allowed 16)</td></tr>
-<tr><td>Seatpost collar</td><td>4</td></tr>
-</tr>
+<tr><td>Seatpost collar</td><td>4</td></tr></tr>
+<tr><td>Shifter to handlebar clamp screw</td><td>4<br>(max. allowed 6 - 8)</td></tr></tr>
 </tbody>
 </table>
