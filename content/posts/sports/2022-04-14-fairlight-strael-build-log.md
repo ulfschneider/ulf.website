@@ -289,7 +289,7 @@ https://www.youtube.com/watch?v=8OJXFA1fLSM
 
 ## Installing the derailleurs and complete the wiring
 
-<mark>Heads Up:</mark> For the Di2 wire connection of the two shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!
+<blockquote><mark>Heads Up:</mark> For the Di2 wire connection of the two shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!</blockquote>
 	
 ## Entire list of tools in order of use
 
