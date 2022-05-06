@@ -289,7 +289,7 @@ https://www.youtube.com/watch?v=8OJXFA1fLSM
 
 ## Installing the derailleurs and complete the wiring
 
-For the wiring of the handlebars it´s crucial that the link between the left and the right shifter is using the <mark>lower satellite ports</mark> of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) has to use the <mark>upper port</mark> of the shifter. If you do not follow this wiring model, your firmware updates as well as the triggering of the derailleurs will not function properly!
+<mark>Heads Up:</mark> For the Di2 wire connection of the two shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!
 	
 ## Entire list of tools in order of use
 
