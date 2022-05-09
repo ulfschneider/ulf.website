@@ -227,6 +227,7 @@ Subsequently, the concept leads to the following parts to order:
 - A @300 mm Di2 wire (ES-SD300-I){1} to connect the EW-JC304 junction with the front derailleur.
 - 3 @Di2 Grommets (EW-GM300-S){3}
 - The Di2 Plug Tool for EW-SD300-I wires (TL-EW300) will come with the rear derailleur.
+- 1 m of @Shrink Tube 6.4 mm → 3.2 mm to route the rear brake hose together with the Di2 wire from the down tube to the handlebars{1 m}.
 
 
 ### The cassette

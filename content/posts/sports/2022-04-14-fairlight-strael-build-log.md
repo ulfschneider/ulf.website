@@ -43,6 +43,7 @@ I take the technical manuals for Shimano components from the [Shimano Manuals & 
 - #Park Tool Repair Stand PCS-10.3{}. I´m happy with that. It is sturdy, has a secure and stable stand, can be adjusted in height, and the clamp mechanism works pretty well.
 - #Park Tool Handlebar Holder HBH-2{}
 - #Tesa Crepe{}
+- #Electrical Tape{}
 
 
 ### Steps
@@ -100,7 +101,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    <img src="/img/strael/all-wires-tucked-away.jpg" alt="The Di2 wires tucked away in the bottom bracket shell">
    <figcaption>The Di2 wires tucked away in the bottom bracket shell. The EW-JC304 junction is wrapped with the packaging and pushed into the down tube.</figcaption>
    </figure>
-9. All dangling Di2 wires are fixated with Tesa Crepe.
+9. All dangling Di2 wires are fixated with Tesa Crepe. The wires are only plugged into the EW-JC304 junction and not into any of the Dura-Components.
    <figure>
    <img src="/img/strael/di2-wire-fixation.jpg" alt="A Di2 wire fixated to the frame with Tesa Crepe">
    <figcaption>The Di2 dangling wire fixation</figcaption>
@@ -137,7 +138,7 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
    <img src="/img/strael/stem-spacers.jpg">
    <figcaption>Lifting the stem by 3 cm</figcaption>
    </figure>
-2. **Handlebars with shifters:** I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolongue a straight top line for the upper handle bar.
+2. **Handlebars with shifters:** Please refer to the [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) to see how you can mount the shifters to the handlebars. I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolongue a straight top line for the upper handle bar.
    <figure>
    <img src="/img/strael/shifter-top-position.jpg">
    <figcaption>Finding a shifter position</figcaption>
@@ -163,6 +164,8 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
 - #Hacksaw with Park Tool Carbon Cutting Saw Blade CSB-1. You do not need the Park Tool saw itself if you already have a hacksaw that can hold the 300 mm saw blade.{}
 - #Topeak Threadless Saw Guide{}
 - #Sanding Block with P120 Sanding Paper{}
+- #FFP2 Mask{}
+- #Nitril Gloves{}
 
 ### Steps
 
@@ -204,7 +207,8 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 ### Tools
 
 - #Shimano Premium Grease{}
-- #Carbon Fitting Paste for the Compression Bung (came with the Strael frame){}
+- Nitril Gloves
+- #Carbon Fitting Paste (came with the Strael frame){}
 - 4 mm Hex Key
 - 5 mm Hex Key
 - 6 mm Hex Key
@@ -267,9 +271,13 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 <figcaption>Just enough parts to recognize a bicycle</figcaption>
 </figure>
 
-## Installing the brakes
+## Installing the calipers
 
-The [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) is an essential source for setting up the brakes.
+The [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with then whatever you want without the risk of spilling hydraulic oil.
+
+I have the wheels attached to the bike prior to installing ghe calipers.
+
+<blockquote><mark>Heads Up:</mark> Do not connect the brake hoses with the shifters until you verified the Di2 setup is working fine.</blockquote>
 
 ### Tools
 
@@ -279,17 +287,96 @@ The [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/
 - #Park Tool  HBT-1 Hydraulic Barb Tool{}
 - #Isopropyl Alcohol{}
 - #Cleaning Paper{}
-- #Electric Tape{}
+- Electrical Tape
 
-### Steps
    
-## Installing the rear caliper
+### Installing the rear caliper
 
-https://www.youtube.com/watch?v=8OJXFA1fLSM
+The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm rotors. Therefore I have to attach an adapter. The video [<cite>Shimano Flat Mount Caliper Adapter 140 mm to 160 mm Disc Fitting Guide</cite>](https://www.youtube.com/watch?v=8OJXFA1fLSM) explains very well how the rear caliper will be set up for 160 mm rotors. 
 
-## Installing the derailleurs and complete the wiring
+1. I mount the Flat-Mount adapter (SM-MA-R160D) to the rear caliper. Use the Type A and Type C bolts that are supplied with the adapter. Torque is 6 Nm. Attach the retention clip that came with the caliper by pushing it completely into the caliper.
+   <figure>
+   <img src="/img/strael/flat-mount-adapter.jpg">
+   <figcaption>The Flat Mount Adapter (SM-MA-R160D) with Type A and Type C bolt that came with the adapter</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/rear-caliper-with-adapter.jpg">
+   <figcaption>The rear caliper with the attached Flat-Mount adapter. The retention clip is not yet installed.</figcaption>
+   </figure>
+   
+2. Then I mount the rear caliper to the frame. 
+   <figure>
+   <img src="/img/strael/attaching-the-rear-caliper.jpg">
+   <figcaption>Attaching the rear caliper to the frame</figcaption>
+   </figure>
+   The Strael comes with two Type A screws that can be used but I use one Type A and another Type C. Do not forget the two distance washers that came with the adapter, otherwise you will damage the caliper. I  do not tighten the bolts because later the caliper will get adjusted to the brake rotor. The retention clip can still be attached to the Type C screw.
+   <figure>
+   <img src="/img/strael/type-a-and-c.jpg">
+   <figcaption>The Type A and Type C screw with retention clip and distance washers</figcaption>
+   </figure>
+3. I route the brake hose along the frame and fixate it with the C-clips. 
+   <figure>
+   <div class="split">
+   <img src="/img/strael/c-clips.jpg">
+   <img src="/img/strael/c-clip-routing.jpg">
+   </div>
+   <figcaption>C-clips</figcaption>
+   </figure>
+4. From the upper end of the down tube I push the Di2 wire completely through the provided shrink tube. It´s important to begin with the Di2 wire first and not with the brake hose!<mark>shrink tube length</mark> 
+5. Then I push the brake hose through the shrink tube. The shrink tube has a diameter of 6.4 mm →  3.2 mm but it is not required to shrink the tube. If you leave it like it is it will just look fine.
+   <figure>
+   <div class="split">
+   <img src="/img/strael/shrink-tube-sign.jpg" alt="A sign indicating the type of shrink type">
+   <img src="/img/strael/shrink-tube.jpg" alt="A hand holding the shrink tube">
+   </div>
+   <figcaption>The shrink tube I´m using – I get it from the construction market</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/di2-and-brake-hose.jpg">
+   <figcaption>The Di2 wire and the brake hose pushed through the shrink tube</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/di2-routing-with-shrink-tube.jpg">
+   <figcaption>Routing Di2 wire and brake hose from the down tube to the handlebars</figcaption>
+   </figure>
+6. I fixate the shrink tube that contains the brake hose and the Di2 wire to the handlebars with Tesa Crepe. I´m not cutting the brake hose yet and I do not connect the brake hose to the shifter because I first want a proof Di2 is working properly. 
 
-<blockquote><mark>Heads Up:</mark> For the Di2 wire connection of the two shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!</blockquote>
+### Installing the front caliper
+
+1. It´s straightforward to attach the caliper to the fork because it comes pre-installed with an adapter for 160 mm rotors.
+   <figure>
+   <img src="/img/strael/front-caliper.jpg">
+   <figcaption>The front caliper with adapter for 160 mm rotors</figcaption>
+   </figure>
+2. I attach the caliper to the fork but I do not tighten the bolts because later the caliper will get adjusted to the rotor.
+   <figure>
+   <img src="/img/strael/installing-the-front-caliper.jpg">
+   <figcaption>Installing the front caliper</figcaption>
+   </figure>
+3. The brake hose can easily get pushed through the fork up to the handlebars.
+   <figure>
+   <img src="/img/strael/pushing-the-hose-through-the-fork.jpg">
+   <figcaption>Pushing the brake hose through the fork</figcaption>
+   </figure>
+4. I fixate the brake hose with Tesa Crepe at the handlebars in the desired position. The brake hose is not cut yet and not connected to the shifter.
+   <figure>
+   <img src="/img/strael/taped-brake-hoses.jpg">
+   <figcaption>The brake hoses are put into position</figcaption>
+   </figure>
+
+## Installing the derailleurs and completing the wiring
+
+<blockquote><p><mark>Heads Up:</mark> For the Di2 wire connection of the two Dual Control Shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!</p><p>Also make sure to use blind plugs for the ports you don´t use.</p></blockquote>
+
+### Tools
+
+### Rear derailleur
+
+### Front derailleur
+
+### Dual Control Shifters
+
+## Cutting the brake hoses
 	
 ## Entire list of tools in order of use
 
