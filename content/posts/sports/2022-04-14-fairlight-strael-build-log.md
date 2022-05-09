@@ -6,7 +6,7 @@ hero: /img/strael/strael-3-0-parts.jpg
 updated: 2022-05-01
 ---
 
-You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a>, which are the primer of this build. You get there the complete list of parts I´m using for this build.
+You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a> which are the primer of this build. You get there the complete list of parts I´m using for this build.
 
 I take the technical manuals for Shimano components from the [Shimano Manuals & Technical Documents ](https://si.shimano.com/).
 
@@ -19,8 +19,8 @@ I take the technical manuals for Shimano components from the [Shimano Manuals & 
 
 ### Steps
 
-1. **Tubes and tires:** Because I do not run tubeless, I have to remove the tubeless valves first. From that point on I´m following [<cite>How to change an innertube</cite>](/2022-02-06-how-to-change-an-inner-tube/). Shimano recommends not to use tire leavers with the C36s, and fortunately, the GP5000s didn´t require it. Tires are inflated to 60 PSI.
-3. **Brake rotors:** Once the rim is protected by the inflated tire it´s save to mount the brake rotors and torque them with 40 Nm. I do not use anti-seize nor grease for the direct mount connection and the lockring threads of the rotors. The parts are all aluminium and the given torque spec is for dry torque (without grease or anything similar). Putting anti-seize or grease on the thread would increase tension on the thread when torquing it to 40 Nm. Also, I avoid using grease near the brakes.
+1. **Tubes and tires:** Because I do not run tubeless I have to remove the tubeless valves first. From that point on I´m following [<cite>How to change an innertube</cite>](/2022-02-06-how-to-change-an-inner-tube/). Shimano recommends not to use tire leavers with the C36s, and fortunately, the GP5000s didn´t require it. Tires are inflated to 60 PSI.
+3. **Brake rotors:** Once the rim is protected by the inflated tire it´s save to mount the brake rotors and torque them to 40 Nm. I do not use anti-seize nor grease for the direct mount connection and the lockring threads of the rotors. The parts are all aluminium and the given torque spec is for dry torque (without grease or anything similar). Putting anti-seize or grease on the thread would increase thread-tension when torquing it to 40 Nm. Generally I avoid using grease near the brakes.
 4. **Cassette:** Be careful when mounting the cassette. It will fall apart all too easily and you might have difficulties putting everything back in the right order. I put a thin film of anti-seize on the freehub body to help demounting the cassette later on. It could well be that´s not necessary because the sprockets are on an aluminium spider and the freehub body is also alumunium. Again, no anti-seize on the lockring thread which will be torqued down to 40 Nm.
 
 <figure class="md:bleed">
@@ -43,6 +43,7 @@ I take the technical manuals for Shimano components from the [Shimano Manuals & 
 - #Park Tool Repair Stand PCS-10.3{}. I´m happy with that. It is sturdy, has a secure and stable stand, can be adjusted in height, and the clamp mechanism works pretty well.
 - #Park Tool Handlebar Holder HBH-2{}
 - #Tesa Crepe{}
+- #Electrical Tape{}
 
 
 ### Steps
@@ -100,7 +101,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    <img src="/img/strael/all-wires-tucked-away.jpg" alt="The Di2 wires tucked away in the bottom bracket shell">
    <figcaption>The Di2 wires tucked away in the bottom bracket shell. The EW-JC304 junction is wrapped with the packaging and pushed into the down tube.</figcaption>
    </figure>
-9. All dangling Di2 wires are fixated with Tesa Crepe.
+9. All dangling Di2 wires are fixated with Tesa Crepe. The wires are only plugged into the EW-JC304 junction and not into any of the Dura-Components.
    <figure>
    <img src="/img/strael/di2-wire-fixation.jpg" alt="A Di2 wire fixated to the frame with Tesa Crepe">
    <figcaption>The Di2 dangling wire fixation</figcaption>
@@ -137,7 +138,7 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
    <img src="/img/strael/stem-spacers.jpg">
    <figcaption>Lifting the stem by 3 cm</figcaption>
    </figure>
-2. **Handlebars with shifters:** I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolongue a straight top line for the upper handle bar.
+2. **Handlebars with shifters:** Please refer to the [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) to see how you can mount the shifters to the handlebars. I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolongue a straight top line for the upper handle bar.
    <figure>
    <img src="/img/strael/shifter-top-position.jpg">
    <figcaption>Finding a shifter position</figcaption>
@@ -163,6 +164,8 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
 - #Hacksaw with Park Tool Carbon Cutting Saw Blade CSB-1. You do not need the Park Tool saw itself if you already have a hacksaw that can hold the 300 mm saw blade.{}
 - #Topeak Threadless Saw Guide{}
 - #Sanding Block with P120 Sanding Paper{}
+- #FFP2 Mask{}
+- #Nitril Gloves{}
 
 ### Steps
 
@@ -178,10 +181,10 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
    <li>A very short line. That is the cut mark that must be 3 mm below the top spacer height but was only 2 mm in my case – which was not enough.</li>
    </ul></figcaption>
    </figure>
-2. I put a very short Tesa tape to mask the cut line and above and overlapping the short tape another Tesa around the entire steerer to improve the cut.
+2. I put a very short Tesa tape to mask the cut line. Above and and overlapping the short tape comes another Tesa around the entire steerer to improve the cut.
    <figure>
    <img src="/img/strael/cut-prepared-steerer.jpg" alt="">
-   <figcaption>The two Tesa tapes on top of each other and an additional pencil lines to identify the cut mark easily</figcaption>
+   <figcaption>The two Tesa tapes on top of each other and an additional pencil line to identify the cut mark easily</figcaption>
    </figure>
 3. The saw blade guide can be attached to the steerer just so that cut will go through the identified cut line.
    <figure>
@@ -204,7 +207,8 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 ### Tools
 
 - #Shimano Premium Grease{}
-- #Carbon Fitting Paste for the Compression Bung (came with the Strael frame){}
+- Nitril Gloves
+- #Carbon Fitting Paste (came with the Strael frame){}
 - 4 mm Hex Key
 - 5 mm Hex Key
 - 6 mm Hex Key
@@ -215,7 +219,7 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 1. I´m applying a thin layer of grease to the headset top cup. The upper bearing will be placed inside the greased cup. It´s only a thin layer because too much grease would attract dirt and the Hope headset is nicely sealed with two rubbers therefore I think  not much grease is required to protect the headset – I use it only as an anti corrosive and to simplify getting the bearing out of the top cup if maintenance would be required. The bearing itself is a greased cartridge bearing that doesn´t require any additional grease.
    <figure>
    <img src="/img/strael/shimano-grease.jpg" alt="A plastic can with Shimano quality grease">
-   <figcaption>The Shimano grease I´m using. You do not need much of it.</figcaption>
+   <figcaption>The Shimano grease I´m using. You don´t need much of it.</figcaption>
    </figure>
    <figure>
    <img src="/img/strael/greasing-the-top-cup.jpg" alt="A hand applying grease to the headset top cup">
@@ -267,12 +271,112 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 <figcaption>Just enough parts to recognize a bicycle</figcaption>
 </figure>
 
-## Installing the front caliper
+## Installing the calipers
+
+The [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with then whatever you want without the risk of spilling hydraulic oil.
+
+I have the wheels attached to the bike prior to installing ghe calipers.
+
+<blockquote><mark>Heads Up:</mark> Do not connect the brake hoses with the shifters until you verified the Di2 setup is working fine.</blockquote>
+
+### Tools
+
+- #8 mm Wrench{}
+- Hazet 5280-3CT Torque Wrench with #8 mm Torque Wrench Insert{}
+- 4 mm Hex Key
+- #Park Tool  HBT-1 Hydraulic Barb Tool{}
+- #Isopropyl Alcohol{}
+- #Cleaning Paper{}
+- Electrical Tape
+
    
-## Installing the rear caliper
+### Installing the rear caliper
 
-https://www.youtube.com/watch?v=8OJXFA1fLSM
+The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm rotors. Therefore I have to attach an adapter. The video [<cite>Shimano Flat Mount Caliper Adapter 140 mm to 160 mm Disc Fitting Guide</cite>](https://www.youtube.com/watch?v=8OJXFA1fLSM) explains very well how the rear caliper will be set up for 160 mm rotors. 
 
+1. I mount the Flat-Mount adapter (SM-MA-R160D) to the rear caliper and use the Type A and Type C bolts that are supplied with the adapter. Torque is 6 Nm. then I attach the retention clip that came with the caliper by pushing it completely into the caliper.
+   <figure>
+   <img src="/img/strael/flat-mount-adapter.jpg">
+   <figcaption>The Flat Mount Adapter (SM-MA-R160D) with Type A and Type C bolt that came with the adapter</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/rear-caliper-with-adapter.jpg">
+   <figcaption>The rear caliper with the attached Flat-Mount adapter. The retention clip is not yet installed.</figcaption>
+   </figure>
+   
+2. I mount the rear caliper to the frame. 
+   <figure>
+   <img src="/img/strael/attaching-the-rear-caliper.jpg">
+   <figcaption>Attaching the rear caliper to the frame</figcaption>
+   </figure>
+   The Strael comes with two Type A screws that can be used but I use one Type A and another Type C. Do not forget the two distance washers that came with the adapter, otherwise you will damage the caliper. I  do not tighten the bolts because later the caliper will get adjusted to the brake rotor. The retention clip can still be attached to the Type C screw.
+   <figure>
+   <img src="/img/strael/type-a-and-c.jpg">
+   <figcaption>The Type A and Type C screw with retention clip and distance washers</figcaption>
+   </figure>
+3. I route the brake hose along the frame and fixate it with the C-clips. 
+   <figure>
+   <div class="split">
+   <img src="/img/strael/c-clips.jpg">
+   <img src="/img/strael/c-clip-routing.jpg">
+   </div>
+   <figcaption>C-clips</figcaption>
+   </figure>
+4. From the upper end of the down tube I push the Di2 wire completely through a 50 cm long shrink tube. It´s important to begin with the Di2 wire first and not with the brake hose! 
+5. Then I push the brake hose through the shrink tube. The shrink tube has a diameter of 6.4 mm →  3.2 mm. It´s not required to shrink the tube and keep the 6.4 mm in diameter. If you leave it like that it will just look fine in my view.
+   <figure>
+   <div class="split">
+   <img src="/img/strael/shrink-tube-sign.jpg" alt="A sign indicating the type of shrink type">
+   <img src="/img/strael/shrink-tube.jpg" alt="A hand holding the shrink tube">
+   </div>
+   <figcaption>The shrink tube I´m using – I get it from the construction market</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/di2-and-brake-hose.jpg">
+   <figcaption>The Di2 wire and the brake hose pushed through the shrink tube</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/di2-routing-with-shrink-tube.jpg">
+   <figcaption>Routing Di2 wire and brake hose from the down tube to the handlebars</figcaption>
+   </figure>
+6. I fixate the shrink tube that contains the brake hose and the Di2 wire to the handlebars with Tesa Crepe. I´m not cutting the brake hose yet and I do not connect the brake hose to the shifter because I first want a proof Di2 is working properly. 
+
+### Installing the front caliper
+
+1. It´s straightforward to attach the caliper to the fork because it comes pre-installed with an adapter for 160 mm rotors.
+   <figure>
+   <img src="/img/strael/front-caliper.jpg">
+   <figcaption>The front caliper with adapter for 160 mm rotors</figcaption>
+   </figure>
+2. I attach the caliper to the fork but I do not tighten the bolts because later the caliper will get adjusted to the rotor.
+   <figure>
+   <img src="/img/strael/installing-the-front-caliper.jpg">
+   <figcaption>Installing the front caliper</figcaption>
+   </figure>
+3. The brake hose can easily get pushed through the fork up to the handlebars.
+   <figure>
+   <img src="/img/strael/pushing-the-hose-through-the-fork.jpg">
+   <figcaption>Pushing the brake hose through the fork</figcaption>
+   </figure>
+4. I fixate the brake hose with Tesa Crepe at the handlebars in the desired position. The brake hose is not cut yet and not connected to the shifter.
+   <figure>
+   <img src="/img/strael/taped-brake-hoses.jpg">
+   <figcaption>The brake hoses are put into position</figcaption>
+   </figure>
+
+## Installing the derailleurs and completing the wiring
+
+<blockquote><p><mark>Heads Up:</mark> For the Di2 wire connection of the two Dual Control Shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!</p><p>Also make sure to use blind plugs for the ports you don´t use.</p></blockquote>
+
+### Tools
+
+### Rear derailleur
+
+### Front derailleur
+
+### Dual Control Shifters
+
+## Cutting the brake hoses
 	
 ## Entire list of tools in order of use
 
@@ -288,12 +392,13 @@ https://www.youtube.com/watch?v=8OJXFA1fLSM
 </thead>
 <tbody>
 <tr><td>Brake Rotor Centerlock</td><td>40</td></tr>
+<tr><td>Calipers to to the fork or frame</td><td>6<br>(max. allowed 6 - 8)</td></tr>
 <tr><td>Cassette to freehub body</td><td>40</td></tr>
 <tr><td>Compression bung</td><td>6<br>(max. allowed 10)</td></tr>
-<tr><td>Dual Control Lever clamp</td><td>6</td></tr>
+<tr><td>Dual Control Lever clamp screw</td><td>4<br>(max. allowed 6 - 8)</td></tr></tr>
+<tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<br>(max. allowed 5 - 6)</td></tr>
 <tr><td>Ritchey stem bolts (not the top cap screw)</td><td class="no-wrap">4<br>(max. allowed 5)</td></tr>
 <tr><td>Ritchey seatpost saddle clamp</td><td class="no-wrap">10<br>(max. allowed 16)</td></tr>
-<tr><td>Seatpost collar</td><td>4</td></tr>
-</tr>
+<tr><td>Seatpost collar</td><td>4</td></tr></tr>
 </tbody>
 </table>
