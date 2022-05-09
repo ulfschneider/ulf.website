@@ -227,6 +227,7 @@ Subsequently, the concept leads to the following parts to order:
 - A @300 mm Di2 wire (ES-SD300-I){1} to connect the EW-JC304 junction with the front derailleur.
 - 3 @Di2 Grommets (EW-GM300-S){3}
 - The Di2 Plug Tool for EW-SD300-I wires (TL-EW300) will come with the rear derailleur.
+- 1 m of @Shrink Tube 6.4 mm → 3.2 mm to route the rear brake hose together with the Di2 wire from the down tube to the handlebars{1 m}.
 
 
 ### The cassette
@@ -297,7 +298,7 @@ Please note that I only found the total weights of the Shimano cranksets for the
 </div>
 
 
-**My decision:** At the time of writing, during February 2022, I couldn't get anything from Rotor stating that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet, I think it is possible. For that reason, I will go for the @Rotor ALDHU 24 mm Crank Arms, 172.5 mm length{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Shimano BSA Threaded Bottom Bracket for the 24 mm axle (BB-R9100){}. A future luxury upgrade could be a [Hambini BSA 68 Bottom Bracket](https://www.hambini.com/product/bsa-68mm-shimano-bottom-bracket/) – but those are out of stock for now.
+**My decision:** At the time of writing, during February 2022, I couldn't get anything from Rotor stating that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet, I think it is possible. For that reason, I will go for the @Rotor ALDHU 24 mm Crank Arms, 172.5 mm length{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Rotor BB1 BSA Threaded Bottom Bracket{}. A Shimano BSA Threaded Bottom Bracket (BB-R9100) doesn´t allow routing the Di2 wires through the bottom bracket shell because the plastic shell of the BB-R9100 is too large to get everything in – the Rotor BB1 works better with this regards. 
 
 ## The pedals
 

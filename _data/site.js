@@ -10,7 +10,6 @@ module.exports = {
     imgSmallHeight: 300,
     imgSmallPostfix: '-sm',
     imgQuality: 80,
-    instantPage: true,
     excerptWordCount: 25,
     title: "Ulf Schneider – Developer and Agile Coach",
     description: "Hi, I´m Ulf Schneider, a developer and agile coach living in Paderborn, Germany.",
