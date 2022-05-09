@@ -3,7 +3,7 @@ title: Fairlight Strael Build
 tags: [sports, articles]
 abstract: A Log of my Fairlight Strael Build 
 hero: /img/strael/strael-3-0-parts.jpg
-updated: 2022-05-01
+updated: 2022-05-09
 ---
 
 You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a> which are the primer of this build. You get there the complete list of parts I´m using for this build.
