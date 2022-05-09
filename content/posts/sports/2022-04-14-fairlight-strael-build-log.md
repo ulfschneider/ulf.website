@@ -6,7 +6,7 @@ hero: /img/strael/strael-3-0-parts.jpg
 updated: 2022-05-01
 ---
 
-You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a>, which are the primer of this build. You get there the complete list of parts I´m using for this build.
+You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a> which are the primer of this build. You get there the complete list of parts I´m using for this build.
 
 I take the technical manuals for Shimano components from the [Shimano Manuals & Technical Documents ](https://si.shimano.com/).
 
@@ -20,7 +20,7 @@ I take the technical manuals for Shimano components from the [Shimano Manuals & 
 ### Steps
 
 1. **Tubes and tires:** Because I do not run tubeless I have to remove the tubeless valves first. From that point on I´m following [<cite>How to change an innertube</cite>](/2022-02-06-how-to-change-an-inner-tube/). Shimano recommends not to use tire leavers with the C36s, and fortunately, the GP5000s didn´t require it. Tires are inflated to 60 PSI.
-3. **Brake rotors:** Once the rim is protected by the inflated tire it´s save to mount the brake rotors and torque them with 40 Nm. I do not use anti-seize nor grease for the direct mount connection and the lockring threads of the rotors. The parts are all aluminium and the given torque spec is for dry torque (without grease or anything similar). Putting anti-seize or grease on the thread would increase tension on the thread when torquing it to 40 Nm. Also, I avoid using grease near the brakes.
+3. **Brake rotors:** Once the rim is protected by the inflated tire it´s save to mount the brake rotors and torque them to 40 Nm. I do not use anti-seize nor grease for the direct mount connection and the lockring threads of the rotors. The parts are all aluminium and the given torque spec is for dry torque (without grease or anything similar). Putting anti-seize or grease on the thread would increase thread-tension when torquing it to 40 Nm. Generally I avoid using grease near the brakes.
 4. **Cassette:** Be careful when mounting the cassette. It will fall apart all too easily and you might have difficulties putting everything back in the right order. I put a thin film of anti-seize on the freehub body to help demounting the cassette later on. It could well be that´s not necessary because the sprockets are on an aluminium spider and the freehub body is also alumunium. Again, no anti-seize on the lockring thread which will be torqued down to 40 Nm.
 
 <figure class="md:bleed">
@@ -181,10 +181,10 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
    <li>A very short line. That is the cut mark that must be 3 mm below the top spacer height but was only 2 mm in my case – which was not enough.</li>
    </ul></figcaption>
    </figure>
-2. I put a very short Tesa tape to mask the cut line and above and overlapping the short tape another Tesa around the entire steerer to improve the cut.
+2. I put a very short Tesa tape to mask the cut line. Above and and overlapping the short tape comes another Tesa around the entire steerer to improve the cut.
    <figure>
    <img src="/img/strael/cut-prepared-steerer.jpg" alt="">
-   <figcaption>The two Tesa tapes on top of each other and an additional pencil lines to identify the cut mark easily</figcaption>
+   <figcaption>The two Tesa tapes on top of each other and an additional pencil line to identify the cut mark easily</figcaption>
    </figure>
 3. The saw blade guide can be attached to the steerer just so that cut will go through the identified cut line.
    <figure>
@@ -219,7 +219,7 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 1. I´m applying a thin layer of grease to the headset top cup. The upper bearing will be placed inside the greased cup. It´s only a thin layer because too much grease would attract dirt and the Hope headset is nicely sealed with two rubbers therefore I think  not much grease is required to protect the headset – I use it only as an anti corrosive and to simplify getting the bearing out of the top cup if maintenance would be required. The bearing itself is a greased cartridge bearing that doesn´t require any additional grease.
    <figure>
    <img src="/img/strael/shimano-grease.jpg" alt="A plastic can with Shimano quality grease">
-   <figcaption>The Shimano grease I´m using. You do not need much of it.</figcaption>
+   <figcaption>The Shimano grease I´m using. You don´t need much of it.</figcaption>
    </figure>
    <figure>
    <img src="/img/strael/greasing-the-top-cup.jpg" alt="A hand applying grease to the headset top cup">
@@ -294,7 +294,7 @@ I have the wheels attached to the bike prior to installing ghe calipers.
 
 The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm rotors. Therefore I have to attach an adapter. The video [<cite>Shimano Flat Mount Caliper Adapter 140 mm to 160 mm Disc Fitting Guide</cite>](https://www.youtube.com/watch?v=8OJXFA1fLSM) explains very well how the rear caliper will be set up for 160 mm rotors. 
 
-1. I mount the Flat-Mount adapter (SM-MA-R160D) to the rear caliper. Use the Type A and Type C bolts that are supplied with the adapter. Torque is 6 Nm. Attach the retention clip that came with the caliper by pushing it completely into the caliper.
+1. I mount the Flat-Mount adapter (SM-MA-R160D) to the rear caliper and use the Type A and Type C bolts that are supplied with the adapter. Torque is 6 Nm. then I attach the retention clip that came with the caliper by pushing it completely into the caliper.
    <figure>
    <img src="/img/strael/flat-mount-adapter.jpg">
    <figcaption>The Flat Mount Adapter (SM-MA-R160D) with Type A and Type C bolt that came with the adapter</figcaption>
@@ -304,7 +304,7 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <figcaption>The rear caliper with the attached Flat-Mount adapter. The retention clip is not yet installed.</figcaption>
    </figure>
    
-2. Then I mount the rear caliper to the frame. 
+2. I mount the rear caliper to the frame. 
    <figure>
    <img src="/img/strael/attaching-the-rear-caliper.jpg">
    <figcaption>Attaching the rear caliper to the frame</figcaption>
@@ -322,8 +322,8 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    </div>
    <figcaption>C-clips</figcaption>
    </figure>
-4. From the upper end of the down tube I push the Di2 wire completely through the provided shrink tube. It´s important to begin with the Di2 wire first and not with the brake hose!<mark>shrink tube length</mark> 
-5. Then I push the brake hose through the shrink tube. The shrink tube has a diameter of 6.4 mm →  3.2 mm but it is not required to shrink the tube. If you leave it like it is it will just look fine.
+4. From the upper end of the down tube I push the Di2 wire completely through a 50 cm long shrink tube. It´s important to begin with the Di2 wire first and not with the brake hose! 
+5. Then I push the brake hose through the shrink tube. The shrink tube has a diameter of 6.4 mm →  3.2 mm. It´s not required to shrink the tube and keep the 6.4 mm in diameter. If you leave it like that it will just look fine in my view.
    <figure>
    <div class="split">
    <img src="/img/strael/shrink-tube-sign.jpg" alt="A sign indicating the type of shrink type">
@@ -395,11 +395,10 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
 <tr><td>Calipers to to the fork or frame</td><td>6<br>(max. allowed 6 - 8)</td></tr>
 <tr><td>Cassette to freehub body</td><td>40</td></tr>
 <tr><td>Compression bung</td><td>6<br>(max. allowed 10)</td></tr>
-<tr><td>Dual Control Lever clamp</td><td>6</td></tr>
+<tr><td>Dual Control Lever clamp screw</td><td>4<br>(max. allowed 6 - 8)</td></tr></tr>
 <tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<br>(max. allowed 5 - 6)</td></tr>
 <tr><td>Ritchey stem bolts (not the top cap screw)</td><td class="no-wrap">4<br>(max. allowed 5)</td></tr>
 <tr><td>Ritchey seatpost saddle clamp</td><td class="no-wrap">10<br>(max. allowed 16)</td></tr>
 <tr><td>Seatpost collar</td><td>4</td></tr></tr>
-<tr><td>Shifter to handlebar clamp screw</td><td>4<br>(max. allowed 6 - 8)</td></tr></tr>
 </tbody>
 </table>
