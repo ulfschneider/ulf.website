@@ -275,7 +275,7 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 
 The [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with then whatever you want without the risk of spilling hydraulic oil.
 
-I have the wheels attached to the bike prior to installing ghe calipers.
+I have the wheels attached to the bike prior to installing the calipers.
 
 <blockquote><mark>Heads Up:</mark> Do not connect the brake hoses with the shifters until you verified the Di2 setup is working fine.</blockquote>
 
@@ -294,14 +294,14 @@ I have the wheels attached to the bike prior to installing ghe calipers.
 
 The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm rotors. Therefore I have to attach an adapter. The video [<cite>Shimano Flat Mount Caliper Adapter 140 mm to 160 mm Disc Fitting Guide</cite>](https://www.youtube.com/watch?v=8OJXFA1fLSM) explains very well how the rear caliper will be set up for 160 mm rotors. 
 
-1. I mount the Flat-Mount adapter (SM-MA-R160D) to the rear caliper and use the Type A and Type C bolts that are supplied with the adapter. Torque is 6 Nm. then I attach the retention clip that came with the caliper by pushing it completely into the caliper.
+1. I connect the Flat-Mount adapter (SM-MA-R160D) to the rear caliper and use the caliper fixing screws (Type B) that are supplied with the adapter. Torque is 6 Nm. Then I attach the screw fixing pin that came with the caliper by pushing it completely into the caliper until it is fully inserted.
    <figure>
    <img src="/img/strael/flat-mount-adapter.jpg">
-   <figcaption>The Flat Mount Adapter (SM-MA-R160D) with Type A and Type C bolt that came with the adapter</figcaption>
+   <figcaption>The Flat Mount Adapter (SM-MA-R160D) with Type B caliper fixing screws that came with the adapter</figcaption>
    </figure>
    <figure>
    <img src="/img/strael/rear-caliper-with-adapter.jpg">
-   <figcaption>The rear caliper with the attached Flat-Mount adapter. The retention clip is not yet installed.</figcaption>
+   <figcaption>The rear caliper with the attached Flat-Mount adapter. The screw fixing pin is not yet installed.</figcaption>
    </figure>
    
 2. I mount the rear caliper to the frame. 
@@ -309,10 +309,10 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <img src="/img/strael/attaching-the-rear-caliper.jpg">
    <figcaption>Attaching the rear caliper to the frame</figcaption>
    </figure>
-   The Strael comes with two Type A screws that can be used but I use one Type A and another Type C. Do not forget the two distance washers that came with the adapter, otherwise you will damage the caliper. I  do not tighten the bolts because later the caliper will get adjusted to the brake rotor. The retention clip can still be attached to the Type C screw.
+   The Strael comes with two Type A screws for a 15 mm frame that can be used but I use one Type A and another Type C. Do not forget the two distance washers that came with the adapter, otherwise you will damage the caliper. I  do not tighten the bolts because later the caliper will get adjusted to the brake rotor. The retaining clip can still be attached to the Type C screw.
    <figure>
    <img src="/img/strael/type-a-and-c.jpg">
-   <figcaption>The Type A and Type C screw with retention clip and distance washers</figcaption>
+   <figcaption>The Type A and Type C screw with retaining clip and distance washers</figcaption>
    </figure>
 3. I route the brake hose along the frame and fixate it with the C-clips. 
    <figure>
@@ -348,7 +348,7 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <img src="/img/strael/front-caliper.jpg">
    <figcaption>The front caliper with adapter for 160 mm rotors</figcaption>
    </figure>
-2. I attach the caliper to the fork but I do not tighten the bolts because later the caliper will get adjusted to the rotor.
+2. I attach the caliper to the fork but I do not tighten the Type A screws that come with the caliper because later the caliper will get adjusted to the rotor.
    <figure>
    <img src="/img/strael/installing-the-front-caliper.jpg">
    <figcaption>Installing the front caliper</figcaption>
