@@ -50,5 +50,7 @@ updated: 2022-03-07
 	</p>
 	<p>A day of great achievements. Right at the start Emil jumped into the water and swam 35 meters, did a short break, and completed the 50 meters. I asked him if he liked to do some jumps into the water to have some fun. He wanted to do the jumps from the other side of the pool. I thought we would walk around the pool to come to the other side but Emil wanted to swim all the 50 meters back, which he did without a break.</p>
 	<p>Then we went into a different pool for ring diving and that is a big fun, because with his goggles Emil is like a fish in the water when reaching for a ring.</p></dd>
+	<dt>14 May 2022</dt>
+	<dd>Emil is now pretty good at swimming 50 meters and diving for rings. The only thing we have to work on is to breath out into the water. I think that´s asking a lot from a 6 year old but the seahorse badge requires it. So we are now working on that breathing rhythm.</dd>
 </dl>
 </div>
