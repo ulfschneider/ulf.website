@@ -20,7 +20,7 @@ Hi, my name is Ulf Schneider and this is my website. I´m a software developer a
 <dt>2006 – 2014 Self-employment</dt>
 <dd>Seven years self-employed as an agile coach, architect and trainer.</dd>
 <dt>2014 – today Diebold Nixdorf</dt>
-<dd>Since 2014 I am employed as an agile coach at Diebold Nixdorf.</dd>
+<dd>Since 2014 I am employed as an agile coach at Diebold Nixdorf, heading the Processes & Quality team.</dd>
 </dl>
 
 <h2>Connect with me</h2>
