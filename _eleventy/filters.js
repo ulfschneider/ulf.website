@@ -39,6 +39,22 @@ module.exports = {
         }
     },
 
+    //this is very slow due to utils.commitDate
+    //return a date if the latest commit date is available and differs from the page.date by at least one day
+    //otherwise return empty string
+    changeDate: function(page) {
+        let date = page.date; 
+        let humanDate = utils.humanDate(date);
+        let commitDate = utils.commitDate(page.inputPath);
+        let humanCommitDate = utils.humanDate(commitDate);
+
+        if (humanCommitDate && humanDate != humanCommitDate) {
+            return commitDate;
+        } else {
+            return '';
+        }
+    },
+
     contentIndex: function(collection) {
         let result = [];
         for (let item of collection) {
@@ -179,6 +195,8 @@ module.exports = {
     humanDateTime: function(d) {
         return utils.humanDateTime(d);
     },
+
+
 
     isoDate: function(d) {
         return utils.isoDate(d);

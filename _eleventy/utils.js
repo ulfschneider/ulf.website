@@ -14,6 +14,7 @@ const cheerio = require('cheerio');
 const stripHtml = require('string-strip-html');
 const fs = require('fs');
 const path = require('path');
+const spawn = require('cross-spawn')
 
 const dayjs = require('dayjs');
 const advancedFormat = require('dayjs/plugin/advancedFormat');
@@ -28,7 +29,7 @@ const site = require('../_data/site.js');
 
 module.exports = {
 
-    excerptFromItem: function(item) {
+    excerptFromItem: function (item) {
         let excerpt = this.removeHtml(item.templateContent);
         if (excerpt) {
             excerpt = excerpt.split(' ')
@@ -38,7 +39,7 @@ module.exports = {
         return excerpt;
     },
 
-    firstImageTag: function(html) {
+    firstImageTag: function (html) {
 
         if (html) {
             const match = html.match(/<img\s+([^>]*)src="(.*?)"(.*?)[^>]*>/);
@@ -48,7 +49,7 @@ module.exports = {
         }
     },
 
-    getAttr: function(html, attr) {
+    getAttr: function (html, attr) {
         if (html) {
             const match = html.match(new RegExp(`${attr}="(.*?)"`));
             if (match) {
@@ -57,42 +58,42 @@ module.exports = {
         }
     },
 
-    srcAttr: function(html) {
+    srcAttr: function (html) {
         return this.getAttr(html, 'src');
     },
 
-    srcsetAttr: function(html) {
+    srcsetAttr: function (html) {
         return this.getAttr(html, 'srcset');
     },
 
-    altAttr: function(html) {
+    altAttr: function (html) {
         return this.getAttr(html, 'alt');
     },
 
-    widthAttr: function(html) {
+    widthAttr: function (html) {
         return this.getAttr(html, 'width');
     },
 
-    heightAttr: function(html) {
+    heightAttr: function (html) {
         return this.getAttr(html, 'height');
     },
 
-    getDimensions: function(src) {
+    getDimensions: function (src) {
         return sizeOf(src);
     },
 
-    isLiveItem: function(item) {
+    isLiveItem: function (item) {
         const now = new Date();
         return item.date <= now &&
             item.data.draft !== true &&
             item.data.draft !== 'yes';
     },
 
-    isPost: function(item) {
+    isPost: function (item) {
         return item.inputPath.startsWith(`./${site.input}/posts/`);
     },
 
-    tagUrl: function(tag) {
+    tagUrl: function (tag) {
         let standard = {
             tag: '*',
             url: '*'
@@ -125,24 +126,24 @@ module.exports = {
         }
     },
 
-    isSearchAble: function(item) {
+    isSearchAble: function (item) {
         if (item.templateContent && item.templateContent.trim()) {
             return item.data.nosearch == null;
         }
         return false;
     },
 
-    removeHtml: function(text) {
+    removeHtml: function (text) {
         const $ = cheerio.load(text);
 
         //remove anchors
-        $('a.anchor').each(function() {
+        $('a.anchor').each(function () {
             $(this).remove();
         });
         return stripHtml($('body').html());
     },
 
-    mapItem: function(item) {
+    mapItem: function (item) {
         let tagsWithUrls = [];
         if (item.data.tags) {
             for (let tag of item.data.tags) {
@@ -170,11 +171,11 @@ module.exports = {
         }
     },
 
-    compareItemDate: function(a, b) {
+    compareItemDate: function (a, b) {
         return a.date - b.date;
     },
 
-    ensureDirectory: function(filePath) {
+    ensureDirectory: function (filePath) {
         let dirName = path.dirname(filePath);
         if (fs.existsSync(dirName)) {
             return;
@@ -183,26 +184,40 @@ module.exports = {
         }
     },
 
-    isResponsive: function(filePath) {
+    //get the latest commit date for the given file path
+    //if the file is not committed yet, return null
+    commitDate: function (filePath) {
+        let commitDate = null;
+        try {
+            commitDate = parseInt(spawn.sync(
+                'git',
+                ['log', '-1', '--format=%at', path.basename(filePath)],
+                { cwd: path.dirname(filePath) }
+            ).stdout.toString('utf-8')) * 1000
+        } catch (e) { /* do not handle for now */ }
+        return commitDate;
+    },
+
+    isResponsive: function (filePath) {
         let fileName = path.basename(filePath);
         return /@picture|@responsive/i.test(fileName);
     },
 
-    clearResponsive: function(filePath) {
+    clearResponsive: function (filePath) {
         return filePath.replace(/@picture|@responsive/ig, '');
     },
 
-    compareInputFileName: function(a, b) {
+    compareInputFileName: function (a, b) {
         const aFileName = path.basename(a.inputPath);
         const bFileName = path.basename(b.inputPath);
         return aFileName.localeCompare(bFileName);
     },
 
-    isoDate: function(d) {
+    isoDate: function (d) {
         return dayjs(d).toISOString();
     },
 
-    humanDate: function(d) {
+    humanDate: function (d) {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
             let dt = dayjs(d).locale(locale);
@@ -212,7 +227,7 @@ module.exports = {
         }
     },
 
-    humanDateTime: function(d) {
+    humanDateTime: function (d) {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
             let dt = dayjs(d).locale(locale);
@@ -222,7 +237,7 @@ module.exports = {
         }
     },
 
-    extractTags: function(collection) {
+    extractTags: function (collection) {
         let tagSet = new Set();
         for (let post of collection) {
             if (post.data.tags) {
@@ -234,13 +249,13 @@ module.exports = {
         return [...tagSet].sort();
     },
 
-    getMarkdownLib: function() {
+    getMarkdownLib: function () {
         const mdlib = markdownIt({
-                html: true,
-                breaks: true,
-                linkify: false,
-                typographer: true
-            })
+            html: true,
+            breaks: true,
+            linkify: false,
+            typographer: true
+        })
             .use(markdownItContainer)
             .use(markdownItAnchor, {
                 permalink: true,
@@ -264,7 +279,7 @@ module.exports = {
         return mdlib;
     },
 
-    hashCode: function(value, seed = 0) {
+    hashCode: function (value, seed = 0) {
         //from https://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript/52171480#52171480
         let h1 = 0xdeadbeef ^ seed,
             h2 = 0x41c6ce57 ^ seed;
@@ -279,15 +294,7 @@ module.exports = {
         return 4294967296 * (2097151 & h2) + (h1 >>> 0);
     },
 
-    stat: function(path) {
+    stat: function (path) {
         return fs.statSync(path);
-    },
-
-    ctimeMs: function(path) {
-        return fs.statSync(path).ctimeMs;
-    },
-
-    mtimeMs: function(path) {
-        return fs.statSync(path).mtimeMs;
     }
 }

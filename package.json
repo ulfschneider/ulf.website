@@ -23,6 +23,7 @@
         "cheerio": "^1.0.0-rc.10",
         "compose-css": "^27.5.10",
         "concurrently": "^6.5.1",
+        "cross-spawn": "^7.0.3",
         "cssnano": "^5.1.7",
         "dayjs": "^1.11.1",
         "del": "^6.0.0",

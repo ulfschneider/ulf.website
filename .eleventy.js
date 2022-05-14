@@ -8,7 +8,7 @@ const utils = require('./_eleventy/utils.js');
 const filters = require('./_eleventy/filters.js');
 const transforms = require('./_eleventy/transforms.js');
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
     addLayoutAliases(eleventyConfig);
     addCollections(eleventyConfig);
     addFilters(eleventyConfig);
@@ -54,49 +54,46 @@ function addLayoutAliases(eleventyConfig) {
 }
 
 function addCollections(eleventyConfig) {
-
-
-
     eleventyConfig.addCollection('usedSiteTags', collectionAPI => {
+        console.log('derive used site tags');
         let usedSiteTags = utils.extractTags([
             ...collectionAPI.getFilteredByGlob('content/posts/**')
-            .map(item => {
-                if (item.data.tags && item.data.tags.includes(site.starTag)) {
-                    item.data.starred = site.starTag;
-                } else {
-                    item.data.starred = '';
-                }
-                return item;
-            })
-            .filter(utils.isLiveItem)
+                .map(item => {
+                    if (item.data.tags && item.data.tags.includes(site.starTag)) {
+                        item.data.starred = site.starTag;
+                    } else {
+                        item.data.starred = '';
+                    }
+                    return item;
+                })
+                .filter(utils.isLiveItem)
         ]);
         filters.createColorMap(usedSiteTags);
         return usedSiteTags;
     });
-
-
-
     eleventyConfig.addCollection('livePosts', collectionAPI => {
+        console.log('derive live posts');
         return [
             ...collectionAPI.getFilteredByGlob('content/**')
-            .map(item => {
-                if (item.data.tags && item.data.tags.includes(site.starTag)) {
-                    item.data.starred = site.starTag;
-                } else {
-                    item.data.starred = '';
-                }
-                return item;
-            })
-            .filter(utils.isLiveItem)
-            .filter(utils.isPost)
-            .sort(utils.compareItemDate)
+                .filter(utils.isLiveItem)
+                .filter(utils.isPost)
+                .map(item => {
+                    if (item.data.tags && item.data.tags.includes(site.starTag)) {
+                        item.data.starred = site.starTag;
+                    } else {
+                        item.data.starred = '';
+                    }
+                    return item;
+                })
+                .sort(utils.compareItemDate)
         ];
     });
     eleventyConfig.addCollection('liveContent', collectionAPI => {
+        console.log('derive live content');
         return [
             ...collectionAPI.getFilteredByGlob('content/**')
-            .filter(utils.isLiveItem)
-            .sort(utils.compareItemDate)
+                .filter(utils.isLiveItem)
+                .sort(utils.compareItemDate)
         ];
     });
 }
@@ -117,6 +114,7 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('imgAspectRatio', filters.imgAspectRatio);
     eleventyConfig.addFilter('authorEmail', filters.authorEmail);
     eleventyConfig.addFilter('authorName', filters.authorName);
+    eleventyConfig.addFilter('changeDate', filters.changeDate);
     eleventyConfig.addFilter('tagUrl', filters.tagUrl);
     eleventyConfig.addFilter('tagColor', filters.tagColor);
 }
@@ -124,7 +122,7 @@ function addFilters(eleventyConfig) {
 function addBrowserSync404(eleventyConfig) {
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {
-            ready: function(err, bs) {
+            ready: function (err, bs) {
 
                 bs.addMiddleware("*", (req, res) => {
                     const content_404 = fs.readFileSync('_site/404.html');

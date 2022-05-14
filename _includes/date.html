@@ -1,20 +1,18 @@
 {%- if date or page.date and nodate == nil %}
 {%- assign hasDate = true -%}
 {%- endif -%}
-{%- if updated or page.updated and nodate == nil %}
-{%- assign isUpdated = true -%}
+{%- if nodate == nil %}
+{%- assign changeDate = page | changeDate | humanDate -%}
 {%- endif -%}
-{%- if hasDate or isUpdated -%}
+{%- if hasDate or changeDate -%}
     {%- if date -%}
         <time datetime="{{date | isoDate}}" class="inline-block">{{ date | humanDate }}</time>
         {%- elsif nodate == nil and page.date -%}
         <span>Posted</span>
-        <time datetime="{{page.date | isoDate}}" class="inline-block">{{ page.date | humanDate }}</time>
-        {%- if isUpdated -%}<span>, updated </span>{%- endif -%}
+        <time datetime="{{page.date | isoDate}}" class="inline-block">{{ page.date | humanDate }}</time>        
+        {%- if changeDate != '' -%}<span>, updated </span>{%- endif -%}
     {%- endif -%}
-    {%- if updated -%}
-        <time datetime="{{date | isoDate}}" class="inline-block">{{ updated | humanDate }}</time>
-        {%- elsif nodate == nil and page.updated -%}
-        <time datetime="{{page.updated | isoDate}}" class="inline-block">{{ page.updated | humanDate }}</time>
+    {%- if changeDate != '' -%}
+        <time datetime="{{date | isoDate}}" class="inline-block">{{ changeDate | humanDate }}</time>        
     {%- endif -%}
 {%- endif -%}

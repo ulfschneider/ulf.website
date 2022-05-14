@@ -5,12 +5,12 @@
 		{% include head.html %}
 	</head>
 
-    {%- assign isArticle = tags | hasTag: "articles" -%}
+	{%- assign isArticle = tags | hasTag: "articles" -%}
 
-	<body class="default break-word bg-neutral-5 flex-column{% if isArticle == true %} article{%-endif-%}">	
+	<body class="default break-word bg-neutral-5 flex-column{% if isArticle == true %} article{%-endif-%}">
 		{% include header.html %}
 		<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
-			{% include hero.html %}			
+			{% include hero.html %}
 			<main id="main" class="indent mrb-2 mrt-3 mxw-rg mrx-auto">
 				{%- if title != "notitle" and title != nil and notitle == nil   -%}
 					<header class="title mry-3 bleed-right">
@@ -29,14 +29,14 @@
 								{{abstract}}
 							</div>
 						{%- endif -%}
+						<aside class="mrb-2">
+							{% include date-tags.html %}
+						</aside>
 					</header>
 				{%- endif -%}
 				<div {% if outline == true %}class="outline"{% endif %}>
 					{{ content }}
 				</div>
-				<aside class="mry-2">
-					{% include date-tags.html %}
-				</aside>
 			</main>
 		</div>
 		{% include footer.html %}
