@@ -23,13 +23,12 @@
 							{%- elsif author -%}
 							<div class="mrt">{{author}}</div>
 						{%- endif -%}
-
 						{%- if abstract -%}
 							<div class="fs-1 lh-2 mry-3">
 								{{abstract}}
 							</div>
 						{%- endif -%}
-						<aside class="mrb-2">
+						<aside class="mrb-2 meta">
 							{% include date-tags.html %}
 						</aside>
 					</header>

@@ -399,6 +399,6 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
 <tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<br>(max. allowed 5 - 6)</td></tr>
 <tr><td>Ritchey stem bolts (not the top cap screw)</td><td class="no-wrap">4<br>(max. allowed 5)</td></tr>
 <tr><td>Ritchey seatpost saddle clamp</td><td class="no-wrap">10<br>(max. allowed 16)</td></tr>
-<tr><td>Seatpost collar</td><td>4</td></tr></tr>
+<tr><td>Seatpost collar</td><td>4<br>(max. allowed 8)</td></tr></tr>
 </tbody>
 </table>
