@@ -9,6 +9,7 @@ const markdownItCooklang = require('markdown-it-cooklang');
 const markdownItScrollTable = require('markdown-it-scrolltable');
 const markdownItAttrs = require('markdown-it-attrs');
 const markdownItFootnote = require('markdown-it-footnote');
+const markdownItMark = require('markdown-it-mark');
 const sizeOf = require('image-size');
 const cheerio = require('cheerio');
 const stripHtml = require('string-strip-html');
@@ -264,6 +265,7 @@ module.exports = {
                 permalinkBefore: false,
                 permalinkSpace: true
             })
+            .use(markdownItMark)
             .use(markdownItTableOfContents)
             .use(markdownItDefList)
             .use(markdownItScrollTable)

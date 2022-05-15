@@ -258,7 +258,7 @@ Every now and then, I hear or read that 12-speed is unnecessary and 11-speed is 
 </table>
 </div>
 
-**My decision:** Compared to my current 11-speed compact setup, the 12-speed 11-34 cassette would give me the exact same gearing – plus an additional climbing gear. That's not bad. Or I can ride the 11-30, which has the same lowest gear as what I'm riding today, plus tight gear steps 21-19-17-16-15. The tight gears in that sweet spot are essential enough for me to choose the @11-30 <mark>Ultegra</mark> 12-speed Cassette (CS-R8100-12).{} It's made of steel, which is more durable than the partial titanium Dura-Ace cassette, and because it costs much less, it's not too difficult to also swap it for an 11-34 if necessary.
+**My decision:** Compared to my current 11-speed compact setup, the 12-speed 11-34 cassette would give me the exact same gearing – plus an additional climbing gear. That's not bad. Or I can ride the 11-30, which has the same lowest gear as what I'm riding today, plus tight gear steps 21-19-17-16-15. The tight gears in that sweet spot are essential enough for me to choose the @11-30 ==Ultegra== 12-speed Cassette (CS-R8100-12).{} It's made of steel, which is more durable than the partial titanium Dura-Ace cassette, and because it costs much less, it's not too difficult to also swap it for an 11-34 if necessary.
 
 ### The crankset
 

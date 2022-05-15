@@ -277,7 +277,7 @@ The [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/
 
 I have the wheels attached to the bike prior to installing the calipers.
 
-<blockquote><mark>Heads Up:</mark> Do not connect the brake hoses with the shifters until you verified the Di2 setup is working fine.</blockquote>
+> ==Heads Up:== Do not connect the brake hoses with the shifters until you verified the Di2 setup is working fine.
 
 ### Tools
 
@@ -366,7 +366,8 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
 
 ## Installing the derailleurs and completing the wiring
 
-<blockquote><p><mark>Heads Up:</mark> For the Di2 wire connection of the two Dual Control Shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!</p><p>Also make sure to use blind plugs for the ports you don´t use.</p></blockquote>
+> ==Heads Up:== For the Di2 wire connection of the two Dual Control Shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!
+> Also make sure to use blind plugs for the ports you don´t use.
 
 ### Tools
 
