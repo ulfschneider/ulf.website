@@ -21,7 +21,7 @@
       <entry>
         <title>{{ p.data.title }}</title>
         <link href="{{ absolutePostUrl }}"/>
-        <updated>{{ p | commitDate | rssDate }}</updated>
+        <updated>{{ p | modifiedDate | rssDate }}</updated>
         <id>{{ absolutePostUrl }}</id>
         <content type="html">
           <![CDATA[{{ p.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}  

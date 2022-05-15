@@ -3,8 +3,9 @@
 {%- endif -%}
 {%- if nodate == nil %}
 {%- assign indicateModifiedDate = page | indicateModifiedDate | humanDate -%}
+{%- assign modifiedDate = page | modifiedDate -%}
 {%- endif -%}
-{%- if hasDate or indicateModifiedDate -%}
+{%- if hasDate or indicateModifiedDate != '' -%}
     {%- if date -%}
         <time datetime="{{date | isoDate}}" class="inline-block">{{ date | humanDate }}</time>
         {%- elsif nodate == nil and page.date -%}
@@ -13,6 +14,6 @@
         {%- if indicateModifiedDate != '' -%}<span>, updated </span>{%- endif -%}
     {%- endif -%}
     {%- if indicateModifiedDate != '' -%}
-        <time datetime="{{date | isoDate}}" class="inline-block">{{ indicateModifiedDate | humanDate }}</time>        
+        <time datetime="{{modifiedDate | isoDate}}" class="inline-block">{{ indicateModifiedDate }}</time>        
     {%- endif -%}
 {%- endif -%}

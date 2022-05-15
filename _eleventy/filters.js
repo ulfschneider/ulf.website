@@ -55,7 +55,7 @@ module.exports = {
         }
     },
 
-    commitDate: function(page) {
+    modifiedDate: function(page) {
         let commitDate = utils.commitDate(page.inputPath);
         if (commitDate) {
             return commitDate;

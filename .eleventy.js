@@ -115,7 +115,7 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('authorEmail', filters.authorEmail);
     eleventyConfig.addFilter('authorName', filters.authorName);
     eleventyConfig.addFilter('indicateModifiedDate', filters.indicateModifiedDate);
-    eleventyConfig.addFilter('commitDate', filters.commitDate);
+    eleventyConfig.addFilter('modifiedDate', filters.modifiedDate);
     eleventyConfig.addFilter('tagUrl', filters.tagUrl);
     eleventyConfig.addFilter('tagColor', filters.tagColor);
 }
