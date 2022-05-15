@@ -189,11 +189,11 @@ module.exports = {
     commitDate: function (filePath) {
         let commitDate = null;
         try {
-            commitDate = parseInt(spawn.sync(
+            commitDate = new Date(parseInt(spawn.sync(
                 'git',
                 ['log', '-1', '--format=%at', path.basename(filePath)],
                 { cwd: path.dirname(filePath) }
-            ).stdout.toString('utf-8')) * 1000
+            ).stdout.toString('utf-8')) * 1000);
         } catch (e) { /* do not handle for now */ }
         return commitDate;
     },

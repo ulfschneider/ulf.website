@@ -42,7 +42,7 @@ module.exports = {
     //this is very slow due to utils.commitDate
     //return a date if the latest commit date is available and differs from the page.date by at least one day
     //otherwise return empty string
-    changeDate: function(page) {
+    indicateModifiedDate: function(page) {
         let date = page.date; 
         let humanDate = utils.humanDate(date);
         let commitDate = utils.commitDate(page.inputPath);
@@ -52,6 +52,15 @@ module.exports = {
             return commitDate;
         } else {
             return '';
+        }
+    },
+
+    commitDate: function(page) {
+        let commitDate = utils.commitDate(page.inputPath);
+        if (commitDate) {
+            return commitDate;
+        } else {
+            return page.date;
         }
     },
 

@@ -5,7 +5,7 @@
   <link href="{{ site.url }}{{ site.feed }}" rel="self"/>
   <link href="{{ site.url }}/"/>
   {%- if collections.livePosts | length -%}
-    <updated>{{ collections.livePosts | rssLastUpdatedDate }}</updated>
+    <updated>{{ site.buildTime | rssDate }}</updated>
   {%- endif -%}
   <id>{{ site.url }}</id>
   {%- if site.ownership -%}
@@ -21,7 +21,7 @@
       <entry>
         <title>{{ p.data.title }}</title>
         <link href="{{ absolutePostUrl }}"/>
-        <updated>{{ p.date | rssDate }}</updated>
+        <updated>{{ p | commitDate | rssDate }}</updated>
         <id>{{ absolutePostUrl }}</id>
         <content type="html">
           <![CDATA[{{ p.templateContent | safe }}           

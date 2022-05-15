@@ -114,7 +114,8 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('imgAspectRatio', filters.imgAspectRatio);
     eleventyConfig.addFilter('authorEmail', filters.authorEmail);
     eleventyConfig.addFilter('authorName', filters.authorName);
-    eleventyConfig.addFilter('changeDate', filters.changeDate);
+    eleventyConfig.addFilter('indicateModifiedDate', filters.indicateModifiedDate);
+    eleventyConfig.addFilter('commitDate', filters.commitDate);
     eleventyConfig.addFilter('tagUrl', filters.tagUrl);
     eleventyConfig.addFilter('tagColor', filters.tagColor);
 }
