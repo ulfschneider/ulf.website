@@ -24,7 +24,7 @@
         <updated>{{ p | commitDate | rssDate }}</updated>
         <id>{{ absolutePostUrl }}</id>
         <content type="html">
-          <![CDATA[{{ p.templateContent | safe }}           
+          <![CDATA[{{ p.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}  
           {%- if authorEmail -%}<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>{%- endif -%}]]>
         </content>
       </entry>

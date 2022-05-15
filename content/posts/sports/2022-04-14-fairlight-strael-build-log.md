@@ -50,7 +50,7 @@ I take the technical manuals for Shimano components from the [Shimano Manuals & 
 
 I use the following process for the wiring: Pushing the Di2 wire through a tube into the desired direction. When the Di2 wire plug becomes visible at the target opening I use my do-it-yourself routing tool to fish the Di2 wire out of the target opening and pull the Di2 wire by hand  further. It´s not necessary to have anything more.
 
-1. **Battery:** The wiring starts by inserting the Di2 battery into the seatpost. The Ritchey Battery Mount surrounds the battery nicely and fits well into the Ritchey seat post. 
+1. **Battery:** The wiring starts by inserting the Di2 battery into the seatpost. The Ritchey Battery Mount surrounds the battery nicely and fits well into the Ritchey seat post.
    <figure>
    <img src="/img/strael/half-battery-mount.jpg" alt="One half of the Ritchey Battery Mount surrounding the battery">
    <figcaption>Ritchey Battery Mount</figcaption>
