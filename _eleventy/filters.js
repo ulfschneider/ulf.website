@@ -1,5 +1,6 @@
 const lunr = require('lunr');
 const path = require('path');
+const ccd = require('cached-commit-date');
 const utils = require('./utils.js');
 const site = require('../_data/site.js');
 
@@ -39,13 +40,13 @@ module.exports = {
         }
     },
 
-    //this is very slow due to utils.commitDate
+    //this is very slow due to commitDate
     //return a date if the latest commit date is available and differs from the page.date by at least one day
     //otherwise return empty string
     indicateModifiedDate: function(page) {
         let date = page.date; 
         let humanDate = utils.humanDate(date);
-        let commitDate = utils.commitDate(page.inputPath);
+        let commitDate = ccd.commitDate(page.inputPath);
         let humanCommitDate = utils.humanDate(commitDate);
 
         if (humanCommitDate && humanDate != humanCommitDate) {
@@ -56,7 +57,7 @@ module.exports = {
     },
 
     modifiedDate: function(page) {
-        let commitDate = utils.commitDate(page.inputPath);
+        let commitDate = ccd.commitDate(page.inputPath);
         if (commitDate) {
             return commitDate;
         } else {

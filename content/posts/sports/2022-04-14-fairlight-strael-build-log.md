@@ -273,7 +273,7 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 
 ## Installing the calipers
 
-The [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with then whatever you want without the risk of spilling hydraulic oil.
+The [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with them whatever you want without the risk of spilling hydraulic oil.
 
 I have the wheels attached to the bike prior to installing the calipers.
 

@@ -55,7 +55,7 @@ function addLayoutAliases(eleventyConfig) {
 
 function addCollections(eleventyConfig) {
     eleventyConfig.addCollection('usedSiteTags', collectionAPI => {
-        console.log('derive used site tags');
+        console.log('Derive used site tags');
         let usedSiteTags = utils.extractTags([
             ...collectionAPI.getFilteredByGlob('content/posts/**')
                 .map(item => {
@@ -72,12 +72,15 @@ function addCollections(eleventyConfig) {
         return usedSiteTags;
     });
     eleventyConfig.addCollection('livePosts', collectionAPI => {
-        console.log('derive live posts');
+        console.log('Derive live posts');
         return [
             ...collectionAPI.getFilteredByGlob('content/**')
                 .filter(utils.isLiveItem)
                 .filter(utils.isPost)
                 .map(item => {
+                    item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
+                    item.data.modifiedDate = filters.modifiedDate(item);
+
                     if (item.data.tags && item.data.tags.includes(site.starTag)) {
                         item.data.starred = site.starTag;
                     } else {
@@ -89,10 +92,15 @@ function addCollections(eleventyConfig) {
         ];
     });
     eleventyConfig.addCollection('liveContent', collectionAPI => {
-        console.log('derive live content');
+        console.log('Derive live content');
         return [
             ...collectionAPI.getFilteredByGlob('content/**')
                 .filter(utils.isLiveItem)
+                .map(item => {
+                    item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
+                    item.data.modifiedDate = filters.modifiedDate(item);
+                    return item;
+                })
                 .sort(utils.compareItemDate)
         ];
     });

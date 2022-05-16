@@ -15,7 +15,6 @@ const cheerio = require('cheerio');
 const stripHtml = require('string-strip-html');
 const fs = require('fs');
 const path = require('path');
-const spawn = require('cross-spawn')
 
 const dayjs = require('dayjs');
 const advancedFormat = require('dayjs/plugin/advancedFormat');
@@ -183,20 +182,6 @@ module.exports = {
         } else {
             fs.mkdirSync(dirName, { recursive: true });
         }
-    },
-
-    //get the latest commit date for the given file path
-    //if the file is not committed yet, return null
-    commitDate: function (filePath) {
-        let commitDate = null;
-        try {
-            commitDate = new Date(parseInt(spawn.sync(
-                'git',
-                ['log', '-1', '--format=%at', path.basename(filePath)],
-                { cwd: path.dirname(filePath) }
-            ).stdout.toString('utf-8')) * 1000);
-        } catch (e) { /* do not handle for now */ }
-        return commitDate;
     },
 
     isResponsive: function (filePath) {
