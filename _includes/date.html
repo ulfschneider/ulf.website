@@ -7,7 +7,7 @@
     {%- endif -%}
 {%- endif -%}
 
-{%- if updated or indicateModifiedDate and modifiedDate and nodate == nil %}
+{%- if updated or indicateModifiedDate != '' and modifiedDate and nodate == nil %}
     {%- if section == false -%}
         {%- assign updated = modifiedDate -%}
     {%- endif -%}
