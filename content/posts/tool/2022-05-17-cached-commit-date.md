@@ -2,13 +2,7 @@
 title: cached-commit-date
 tags: tools
 ---
-A [npm package](https://www.npmjs.com/package/cached-commit-date) to get the latest commit date for a given file path.
-
-As getting the commit date is a time consuming step (like 100 ms) those dates are cached so that subsequent queries for a commit date of the same file path would use the cache.
-
-Will return null and not throw an exception if the file doesn´t exist or is not under git control.
-
-I´m using it in my 11ty-powered website to show a posts date of modification.
+A [npm package](https://www.npmjs.com/package/cached-commit-date) to get the latest commit date for a given file path. As getting the commit date is a time consuming step (like 100 ms) those dates are cached so that subsequent queries for a commit date of the same file path would use the cache. Will return null and not throw an exception if the file doesn´t exist or is not under git control. I´m using it in my 11ty-powered website to show a posts date of modification.
 
 ## Install
 
