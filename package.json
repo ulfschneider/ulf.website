@@ -20,7 +20,7 @@
         "Base64": "^1.1.0",
         "ansi-regex": "^6.0.1",
         "autoprefixer": "^9.8.8",
-        "cached-commit-date": "^0.1.0",
+        "cached-commit-date": "^0.5.0",
         "cheerio": "^1.0.0-rc.10",
         "compose-css": "^27.5.10",
         "concurrently": "^6.5.1",
