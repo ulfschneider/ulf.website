@@ -54,7 +54,6 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
-
 .article main>div>p:first-of-type::first-letter {
     font-size: 5.95rem;
     font-weight: bold;
@@ -179,7 +178,7 @@ hr.footnotes-sep::after {
 
 /* markdown-it-cooklang */
 
-ul[class^=cooklang-] > li::before {
+ul[class^=cooklang-]>li::before {
     content: "▢";
 }
 

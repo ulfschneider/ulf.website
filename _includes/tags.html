@@ -1,7 +1,7 @@
 {%- if tags and notags == nil -%}
     {% assign sortedTags = tags | uniq | sort %}
     <span class="inline-block">
-        <span>in</span>
+        <span>In</span>
         <span class="tag-list comma-list">
             {% for tag in sortedTags %}
                 {% if tag == site.starTag %}
