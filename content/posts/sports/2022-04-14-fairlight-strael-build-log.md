@@ -3,12 +3,11 @@ title: Fairlight Strael Build
 tags: [sports, articles]
 abstract: A Log of my Fairlight Strael Build 
 hero: /img/strael/strael-3-0-parts.jpg
-updated: 2022-05-09
 ---
 
 You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a> which are the primer of this build. You get there the complete list of parts I´m using for this build.
 
-I take the technical manuals for Shimano components from the [Shimano Manuals & Technical Documents ](https://si.shimano.com/).
+I take the technical information for Shimano components from the [Shimano Manuals & Technical Documents ](https://si.shimano.com/). The [<cite>Line-up chart</cite>](https://productinfo.shimano.com/#/lc/dura-ace_r9250/2x12) is giving a quick overview and links into more details.
 
 [[toc]]
 
@@ -16,6 +15,8 @@ I take the technical manuals for Shimano components from the [Shimano Manuals & 
 
 ### Tools
 - #Wera Click-Torque X 3 Torque Wrench{}
+- #24 mm Hex Socket for the Torque Wrench{}
+- #Shimano TL-LR15 Cassette Removal Tool for HG Cassettes and CenterLock Brake Rotors{}
 
 ### Steps
 
@@ -107,7 +108,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    <figcaption>The Di2 dangling wire fixation</figcaption>
    </figure>
 	
-## Determine desired stem height
+## Determine the desired stem height
 
 ### Tools
 
@@ -156,7 +157,7 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
    <figcaption>The Ritchey Link seatpost clamp works pretty fine</figcaption>
    </figure>
 
-## Cutting the steerer tube
+## Cut the steerer tube
 
 ### Tools
 
@@ -202,7 +203,7 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
    <figcaption>The smoothened steerer cut</figcaption>
    </figure>
    
-## Mounting the fork to the frame
+## Mount the fork to the frame
 
 ### Tools
 
@@ -271,9 +272,9 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
 <figcaption>Just enough parts to recognize a bicycle</figcaption>
 </figure>
 
-## Installing the calipers
+## Install the calipers
 
-The [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with them whatever you want without the risk of spilling hydraulic oil.
+The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake / Dual Control Lever (Di2)</cite>](https://si.shimano.com/#/en/iDM/RADBR10) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with them whatever you like without the risk of spilling hydraulic oil.
 
 I have the wheels attached to the bike prior to installing the calipers.
 
@@ -290,9 +291,14 @@ I have the wheels attached to the bike prior to installing the calipers.
 - Electrical Tape
 
    
-### Installing the rear caliper
+### Install the rear caliper
 
-The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm rotors. Therefore I have to attach an adapter. The video [<cite>Shimano Flat Mount Caliper Adapter 140 mm to 160 mm Disc Fitting Guide</cite>](https://www.youtube.com/watch?v=8OJXFA1fLSM) explains very well how the rear caliper will be set up for 160 mm rotors. 
+The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm rotors. Therefore I have to attach an adapter. 
+
+<figure class="md:bleed">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8OJXFA1fLSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figcaption>The video <a href="(https://www.youtube.com/watch?v=8OJXFA1fLSM)"><cite>Shimano Flat Mount Caliper Adapter 140 mm to 160 mm Disc Fitting Guide</cite></a> explains very well how the rear caliper will be set up for 160 mm rotors </figcaption>
+</figure>
 
 1. I connect the Flat-Mount adapter (SM-MA-R160D) to the rear caliper and use the caliper fixing screws (Type B) that are supplied with the adapter. Torque is 6 Nm. Then I attach the screw fixing pin that came with the caliper by pushing it completely into the caliper until it is fully inserted.
    <figure>
@@ -339,9 +345,9 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <img src="/img/strael/di2-routing-with-shrink-tube.jpg">
    <figcaption>Routing Di2 wire and brake hose from the down tube to the handlebars</figcaption>
    </figure>
-6. I fixate the shrink tube that contains the brake hose and the Di2 wire to the handlebars with Tesa Crepe. I´m not cutting the brake hose yet and I do not connect the brake hose to the shifter because I first want a proof Di2 is working properly. 
+6. I fixate the shrink tube that contains the brake hose and the Di2 wire to the handlebars with Tesa Crepe. ==I´m not cutting the brake hose yet and I do not connect the brake hose to the shifter because I first want a proof Di2 is working properly==. 
 
-### Installing the front caliper
+### Install the front caliper
 
 1. It´s straightforward to attach the caliper to the fork because it comes pre-installed with an adapter for 160 mm rotors.
    <figure>
@@ -358,26 +364,184 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <img src="/img/strael/pushing-the-hose-through-the-fork.jpg">
    <figcaption>Pushing the brake hose through the fork</figcaption>
    </figure>
-4. I fixate the brake hose with Tesa Crepe at the handlebars in the desired position. The brake hose is not cut yet and not connected to the shifter.
+4. I fixate the brake hose with Tesa Crepe at the handlebars in the desired position. ==The brake hose is not cut yet and not connected to the shifter==.
    <figure>
    <img src="/img/strael/taped-brake-hoses.jpg">
    <figcaption>The brake hoses are put into position</figcaption>
    </figure>
 
-## Installing the derailleurs and completing the wiring
+
+## Install the derailleurs and complete the wiring
 
 > ==Heads Up:== For the Di2 wire connection of the two Dual Control Shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!
 > Also make sure to use blind plugs for the ports you don´t use.
 
 ### Tools
 
+- Hazet 5280-3CT Torque Wrench
+- Di2 Plug Tool for EW-SD300 wires (TL-EW300)
+- 5 mm Hex Key
+- #2 mm Hex Key{}
+
 ### Rear derailleur
+
+Follow the [Rear Derailleur (Di2) Dealer Manual](https://si.shimano.com/#/en/iDM/RARD010) step by step to install the rear derailleur (standard type) and connect the Di2 wire with the derailleur. The rubber cover and the cable guide for the wire are part of the derailleur packaging.
+
+<figure>
+<img src="/img/strael/mounting-rear-derailleur.jpg" alt="A hex key screwing in the attach-screw to mount the rear derailleur">
+<figcaption>Mounting the rear derailleur (standard type) with a max torque of 8 - 10 Nm</figcaption>
+</figure>
+
+<figure>
+<img src="/img/strael/rear-derailleur-b-tension-stop.jpg" alt="The backside of the derailleur showing the b-tension stop">
+<figcaption>The B-tension stop of the rear derailleur</figcaption>
+</figure>
+
+<figure>
+<img src="/img/strael/rear-derailleur.jpg" alt="The rear derailleur attached to the frame">
+<figcaption>The rear derailleur attached to the frame</figcaption>
+</figure>
 
 ### Front derailleur
 
+Follow the [Front Derailleur (Di2) Dealer Manual](https://si.shimano.com/#/en/iDM/RAFD010/) step by step to temporarily install the front derailleur with a band adapter to the frame and connect the Di2 wire with the derailleur. The plug cover for the Di2 wire is part of the derailleur packaging.
+
+The final position of the front derailleur cannot be set at this point because the crankset is not installed yet. Attach the band adapter somewhere in the middle of the two bottle cage screws to the seat tube. The final positioning will be done after proper operation of the electronic shifters is verified and the crankset is installed.
+
 ### Dual Control Shifters
 
-## Cutting the brake hoses
+1. Connect the two shifters with each other with the wire that´s routed through the handlebars. ==Use the lower satellite ports of the two shifters!== 
+2. Then connect the wire dangling out of the down tube with the right shifter by ==plugging it into the upper E-Tube port of the right shifter==.
+3. Charge the battery with an USB AC charging adapter. The battery will be charged after 1.5 to 2 hours. Refer to the [<cite>Rear Derailleur (Di2) / Battery Charger</cite>](https://si.shimano.com/#/en/iUM/3GK0A/charg_ing_method-title/TOC_CHARG_ING_METHOD-TITLE) handbook.
+
+## Verify Di2
+
+With all Di2 wires connected and the battery charged the Di2 system is ready to be paired. As described in [Rear Derailleur (Di2) Dealer Manual](https://si.shimano.com/#/en/iDM/RARD010) under *System pairing (wired)* this is done by pressing and holding the function button of the rear derailleur until the LED changes from yellow to flashing blue (5 - 8 seconds). The LED flashes green if system pairing succeeds, or flashes red if pairing fails.
+
+After pairing, signals sent from the shifters to the derailleurs should be functioning. Try the shift switches of the two shifters and verify the derailleurs are moving each in their both shifting directions.
+
+Download and install the [E-Tube Project App](https://bike.shimano.com/en-US/e-tube/project.html) onto your phone. The app will be necessary later to make gear shifting adjustments and to install software updates into the gearing system. Follow the [<cite>E-Tube Project Cyclist</cite>](https://si.shimano.com/#/en/iUM/7J4MA) manual to set up the app and create an entry for the bike. Then connect the bike with the app:
+
+1. Start E-Tube App (Bluetooth must be activated on the phone).
+2. Press the function button of the rear derailleur until the LED flashes blue (0.5 - 2 seconds). The bicycle side is ready to connect. The unit name is displayed on the E-TUBE PROJECT screen.
+3. Select the unit name displayed on screen.
+
+## Install the bottom bracket
+
+### Tools
+
+- Wera Click-Torque X 3 Torque Wrench
+- 24 mm Hex Socket for the Torque Wrench
+- #Pedro´s Bottom Bracket Socket for 16-notch x 44mm External Bearing BB Cups and Disc Brake Lockrings{}
+- Isopropyl Alcohol
+- Anti-seize
+- Paper Towel
+
+### Steps
+
+1. Clean the bottom bracket shell with a paper and isopropyl alcohol.
+   <figure>
+   <img src="/img/strael/clean-shell.jpg" alt="A hand with a paper tower cleaning the bottom bracket shell">
+   <figcaption>Preparing the bottom bracket shell with isopropyl alcohol</figcaption>
+   </figure>
+2. Tuck away the Di2 wires and push the plastic cover of the Rotor BB1 bottom bracket into the bottom bracket shell. Be careful with the Di2 wires. My first attempt was to install the Shimano Dura Ace Bottom Bracket but the plastic cover is a millimeter too wide in diameter which made it impossible for me to get it into past the Di2 wires into its place. The Rotor BB1 works just fine.
+   <figure>
+   <img src="/img/strael/insert-plastic-cover.jpg" alt="A hand holding the Rotor BB1 plastic cover aside of the bottom bracket shell">
+   <figcaption>Insert the Rotor BB1 plastic cover</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/inserted-plastic-cover.jpg" alt="A view into the bottom bracket shell with the BB1 plastic cover inserted">
+   <figcaption>The inserted Rotor BB1 plastic cover. The Di2 wires go around that cover.</figcaption>
+   </figure>
+3. Prepare the BB1 cups with anti seize and screw them in. I tighten them to 40 Nm with the Wera Torque Wrench.
+   <figure>
+   <img src="/img/strael/bottom-bracket-cup-anti-seize.jpg" alt="A hand holding the BB1 Bottom Bracket Cup. The cup is prepared with anti seize">
+   <figcaption>A BB1 Cup prepared to be screwed into the bottom bracket shell</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/two-cups-screwed-in.jpg" alt="The bottom bracket shell with the two installed bottom bracket cups">
+   <figcaption>The two cups screwed into the BB shell</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/wera-x-torque-bb.jpg" alt="A hand holding a huge torque wrench">
+   <figcaption>The Wera X Torque is ready to tighten the bottom bracket cups to 40 Nm</figcaption>
+   </figure>
+   
+## Assemble and install the crankset
+
+### Tools
+
+- #10 mm Hex Key{}
+- #2.5 mm Hex Key{}
+- Anti-seize
+- Wera Click-Torque X 3 Torque Wrench
+
+### Steps 
+
+1. Assemble Rotor ALDHU drive-side crankarm with the chainring and the axle. 
+   <figure class="md:bleed">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/F2nT7JLdsC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <figcaption>The video <a href="https://youtu.be/F2nT7JLdsC4"><cite>ALDHU crankset assembly with Q RINGS® Direct Mount Chainrings</cite></a> will give an impression about the assembly of the crankset</figcaption>
+   </figure>
+   First I mount the 32-48 chainring to the axle by center-aligning the axle imprint "531" with the tiny chainring hole (I think the tiny hole is called OCP indicator – for Optimum Chainring Position). 
+   <figure>
+   <img src="/img/strael/crank-axle.jpg" alt="A hand holding the Rotor Road Crank Axle">
+   <figcaption>The Rotor 24 mm Road Crank Axle. <mark>Mind the two O-Rings: the drive-side O-Ring is thinner than the non-drive-side O-Ring</mark>. The Rotor axle comes with  additional spacers but none of them is needed for the installation to the Strael.</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/ocp-indicator.jpg" alt="The OCP indicator of the chainring aligned with the 531 mark on the axle">
+   <figcaption>The NoQ chainring centered on the axle</figcaption>
+   </figure>
+   The chainring is kept in place by mounting the drive-side crank arm on top of it. The crankarm must be centered above the metal pin sticking out the outer chainring and should be tightened with a 10 mm hex key to 35 - 40 Nm. In my case 35 Nm was not enough because the chainring then was sitting wobbly on the axle. Once tightened to 40 Nm the parts were without any play. I use anti-seize on the crankarm thread before screwing it into the axle.  
+2. Before pushing the axle through the bottom bracket take away the non-drive-side O-Ring from the axle and push the drive-side O-Ring as far as possible on the axle into the direction of the chainrings. Then push the axle completely through the bottom bracket (you might apply gentle force) and <mark>re-attach the non-drive-side O-Ring</mark> to the axle. 
+   <figure>
+   <img src="/img/strael/drive-side.jpg" alt="The drive-side of the crankset">
+   <figcaption>The drive-side of the crankset. The front derailleur is not in its final position.</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/non-drive-side.jpg" alt="The non-dirve-side of the crankset without the crankarm mounted">
+   <figcaption>The non-drive-side. <mark>On the picture the crank axle is not fully pushed through the bottom bracket – it can be pushed around one centimeter further</mark> but I did not recognize that when taking the picture.</figcaption>
+   </figure>
+   <figure>
+   <img src="/img/strael/re-attach-non-drive-side-o-ring.jpg">
+   <figcaption>Do not forget to re-attach the non-drive-side O-Ring to the axle</figcaption>
+   </figure>
+3. Loosen the preload nut bolt of the non-drive-side crankarm with the 2.5 mm hex key and thread the preload nut clock-wise into the crankarm until it bottoms out.
+4. Mount the non-drive-side crankarm to the axle with a 10 mm hey key and torque it to 40 Nm. I use anti-seize before screwing the crankarm onto the axle.
+5. Screw the preload nut anti-clock-wise and hand-tighten it until there is no play in the crank/axle/bottom bracket system. Tighten the preload nut bolt to 1 Nm (not much!).
+   
+## Mount pedals
+
+### Tools
+
+- #8 mm Hex Key{}
+- Hazet 5280-3CT Torque Wrench
+
+### Steps
+
+There is not much. I use anti-seize on the pedal threads and screw them into the crankarms. I´m aware the pedals should be torqued to 30 - 40 Nm generally but I torque it to 15 Nm which is already so tight that loosen it later is sometimes difficult.
+<figure>
+<img src="/img/strael/pedals.jpg" alt="A hand holding two Shimano XTR pedals">
+<figcaption>The pedals I´m using on all of my bikes</figcaption>
+</figure>
+   
+## Install chain
+
+## Adjust gear shifting
+
+### Tools
+- #Shimano GG Adjustment Gauge to set the B-screw of the Rear Derailleur{}
+- #Phone with E-Tube Project App installed{}
+
+## Cut the brake hoses
+
+## Wrap the handlebars
+
+## Install bell
+
+## Install computer mount
+
+## Install bottle cages
 	
 ## Entire list of tools in order of use
 
@@ -388,18 +552,24 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
 <table>
 <thead>
 <tr>
-<th>Component</th><th>Torque in Nm</th></tr>
+<th class="no-wrap">Component</th><th class="no-wrap">Torque I used in Nm<div class="smaller">Max allowed Torque in Nm</div></th></tr>
 </tr>
 </thead>
 <tbody>
+<tr><td>Bottom Bracket Cups</td><td>40</td></tr>
 <tr><td>Brake Rotor Centerlock</td><td>40</td></tr>
-<tr><td>Calipers to to the fork or frame</td><td>6<br>(max. allowed 6 - 8)</td></tr>
+<tr><td>Calipers to to the fork or frame</td><td>6<div class="smaller no-wrap">max 6 - 8</div></td></tr>
 <tr><td>Cassette to freehub body</td><td>40</td></tr>
-<tr><td>Compression bung</td><td>6<br>(max. allowed 10)</td></tr>
-<tr><td>Dual Control Lever clamp screw</td><td>4<br>(max. allowed 6 - 8)</td></tr></tr>
-<tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<br>(max. allowed 5 - 6)</td></tr>
-<tr><td>Ritchey stem bolts (not the top cap screw)</td><td class="no-wrap">4<br>(max. allowed 5)</td></tr>
-<tr><td>Ritchey seatpost saddle clamp</td><td class="no-wrap">10<br>(max. allowed 16)</td></tr>
-<tr><td>Seatpost collar</td><td>4<br>(max. allowed 8)</td></tr></tr>
+<tr><td>Compression bung</td><td>6<div class="smaller no-wrap">max 10</div></td></tr>
+<tr><td>Dual Control Lever clamp screw</td><td>4<div class="smaller no-wrap">max 6 - 8</div></td></tr></tr>
+<tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<div class="smaller no-wrap">max 5 - 6</div></td></tr>
+<tr><td>Front derailleur clamp screw to mount the clamp to the frame</td><td>5<div class="smaller no-wrap">max 5 - 7</div></td></tr>
+<tr><td>Front derailleur fixing screw to attach the derailleur to the clamp band</td><td>5<div class="smaller no-wrap">max 5 - 7</div></td></tr>
+<tr><td>Pedals to crankarms</td><td>15<div class="smaller no-wrap">max 35 - 40</div></td></tr>
+<tr><td>Rear Derailleur Hanger</td><td>8<div class="smaller" no-wrap>max 8 - 10</div></td></tr>
+<tr><td>Ritchey stem bolts (not the top cap screw)</td><td>4<div class="smaller no-wrap">max 5</div></td></tr>
+<tr><td>Ritchey seatpost saddle clamp</td><td>10<div class="smaller no-wrap">max 16</div></td></tr>
+<tr><td>Rotor crankarms to axle</td><td>40<div class="smaller no-wrap">max 35 - 40</div></td></tr>
+<tr><td>Seatpost collar</td><td>4<div class="smaller no-wrap">max 8</div></td></tr></tr>
 </tbody>
 </table>
