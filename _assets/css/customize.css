@@ -17,6 +17,7 @@
     --fs-h4: var(--fs);
 }
 
+
 p:not(blockquote p),
 td,
 ul,
@@ -62,6 +63,13 @@ nav ul li:last-child {
     padding: var(--space-d2) var(--space-d2) 0 0;
 }
 
+.delimiter-before::before {
+    content: " · ";
+}
+
+.delimiter-after::after {
+    content: " · ";
+}
 
 /* markdown-it toc */
 

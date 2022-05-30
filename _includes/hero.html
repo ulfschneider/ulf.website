@@ -1,8 +1,8 @@
 {%- if hero != nil and hero != ""-%}
-    <figure class="mry-0 mrx-auto mxw-lg-breakpoint">
-        {{hero | responsiveHero}}
-        {%- if herocaption and herocaption != "" -%}
-            <figcaption class="small mrl-auto right">{{herocaption}}</figcaption>
-        {%- endif -%}
-    </figure>
+<figure class="mry-0 mrx-auto mxw-lg-breakpoint">
+    {{hero | responsiveHero}}
+    {%- if herocaption and herocaption != "" -%}
+    <figcaption class="small mrl-auto right">{{herocaption}}</figcaption>
+    {%- endif -%}
+</figure>
 {%- endif -%}

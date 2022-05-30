@@ -52,8 +52,7 @@
             {%- endif -%}
         </section>
         <aside class="meta md:fs-d1 md:pdr-1 md:mrl-auto md:right md:flex-column {{p.data.starred}}">
-            {% include date.html posted: p.date %}
-            {% include tags.html tags: p.data.tags notags: p.data.notags %}
+            {% include date-tags.html posted: p.date tags: p.data.tags notags: p.data.notags %}            
         </aside>
     </article>
 
