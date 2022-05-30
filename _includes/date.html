@@ -19,8 +19,7 @@
     {%- endif -%}
     <time datetime="{{date | isoDate}}" class="inline-block">{{ posted | humanDate }}</time>
     {%- if updated -%}
-        <span aria-hidden="true"> · </span>    
-        <span>Updated </span>
+        <span>, updated </span>    
     {%- endif -%}
 {%- endif -%}
 {%- if updated -%}

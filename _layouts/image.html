@@ -33,9 +33,11 @@
 				<div {% if outline == true %}class="outline"{% endif %}>
 					{{ content }}
 				</div>
+				{%- if nodate == nil -%}						
 				<aside class="mry-2 meta bleed-right">
 					{% include date-tags.html %}
 				</aside>
+				{%- endif -%}
 			</main>
 		</div>
 		{% include footer.html %}

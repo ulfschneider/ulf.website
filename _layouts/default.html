@@ -28,9 +28,11 @@
 								{{abstract}}
 							</div>
 						{%- endif -%}
+						{%- if nodate == nil -%}
 						<aside class="mrb-2 meta">
 							{% include date-tags.html %}
 						</aside>
+						{%- endif -%}
 					</header>
 				{%- endif -%}
 				<div {% if outline == true %}class="outline"{% endif %}>
