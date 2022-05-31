@@ -16,7 +16,7 @@
 			<header class="title mry-3 bleed-right">
 				<h1 class="mry-0 rg:fs-4 lsp-d1">{{ title }}</h1>
 				{%- if subtitle -%}
-				<h2 class="mry normal">{{subtitle}}</h2>
+				<h2 class="mry-1">{{subtitle}}</h2>
 				{% endif %}
 				{%- if refer -%}
 				<div class="mrt">{{refer}}</div>
@@ -24,12 +24,12 @@
 				<div class="mrt">{{author}}</div>
 				{%- endif -%}
 				{%- if abstract -%}
-				<div class="fs-1 lh-2 mry-3">
+				<div class="fs-1 lh-2 mry-1">
 					{{abstract}}
 				</div>
 				{%- endif -%}
 				{%- if nodate == nil -%}
-				<aside class="mrb-2 meta">
+				<aside class="mrt-1 mrb-2 meta">
 					{% include date-tags.html %}
 				</aside>
 				{%- endif -%}

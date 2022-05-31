@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html id="{{site.backToTop.id}}" lang="{{site.locale}}">
 
-	<head>
-		{% include head.html %}
-	</head>
+<head>
+	{% include head.html %}
+</head>
 
-	<body class="default break-word bg-neutral-5 flex-column">
-		{% include header.html %}
-		<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
-			<main id="main" class="indent mrb-2 mrt-3 mxw-rg mrx-auto">
+<body class="default break-word bg-neutral-5 flex-column">
+	{% include header.html %}
+	<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
+		<main id="main" class="indent mrb-2 mrt-3 mxw-rg mrx-auto">
 
-				{%- if title != "notitle" and title != nil and notitle == nil -%}
-					<header class="title mry-3">
+			{%- if title != "notitle" and title != nil and notitle == nil -%}
+			<header class="title mry-3">
 
-						<h1 class="fs lh-default mry-0">{{ title }}</h1>
-						{%- if subtitle -%}
-							<h2 class="mr-0 normal fs lh-default">{{subtitle}}</h2>
-						{% endif %}
-						{%- if refer -%}
-							<div class="mrt">{{refer}}</div>
-							{%- elsif author -%}
-							<div class="mrt">{{author}}</div>
-						{%- endif -%}
-
-						{%- if abstract -%}
-							<div class="mrt-2">
-								{{abstract}}
-							</div>
-						{%- endif -%}
-					</header>
+				<h1 class="fs lh-default mry-0">{{ title }}</h1>
+				{%- if subtitle -%}
+				<h2 class="mry-1 normal fs lh-default">{{subtitle}}</h2>
+				{% endif %}
+				{%- if refer -%}
+				<div class="mrt">{{refer}}</div>
+				{%- elsif author -%}
+				<div class="mrt">{{author}}</div>
 				{%- endif -%}
-				<div {% if outline == true %}class="outline"{% endif %}>
-					{{ content }}
+
+				{%- if abstract -%}
+				<div class="mry-1">
+					{{abstract}}
 				</div>
-				{%- if nodate == nil -%}						
-				<aside class="mry-2 meta bleed-right">
-					{% include date-tags.html %}					
-				</aside>
 				{%- endif -%}
-			</main>
-		</div>
-		{% include footer.html %}
-	</body>
+			</header>
+			{%- endif -%}
+			<div {% if outline==true %}class="outline" {% endif %}>
+				{{ content }}
+			</div>
+			{%- if nodate == nil -%}
+			<aside class="mry-2 meta bleed-right">
+				{% include date-tags.html %}
+			</aside>
+			{%- endif -%}
+		</main>
+	</div>
+	{% include footer.html %}
+</body>
+
 </html>
