@@ -11,8 +11,14 @@
 {%- assign updated = modifiedDate -%}
 {%- endif -%}
 
+{% if wordy == true or updated %}
+{% assign style = "block" %}
+{% else %}
+{% assign style = "inline-block" %}
+{% endif %}
+
 {% if posted %}
-<span class="inline-block">
+<span class="{{style}}">
     {% if wordy == true or updated %}
     <span>Posted</span>
     {% endif %}
@@ -21,7 +27,7 @@
 {% endif %}
 
 {% if updated %}
-<span class="inline-block{% if posted %} delimiter-before{% endif %}">
+<span class="{{style}}">
     {% if wordy == true or posted %}
     <span>Updated</span>
     {% endif %}
@@ -31,7 +37,7 @@
 
 {%- if tags and notags == nil -%}
 {% assign sortedTags = tags | uniq | sort %}
-<span class="inline-block{% if posted and updated %} delimiter-before{% endif %}">
+<span class="{{style}}">
     {% if posted and updated %}
     <span>In</span>
     {% else %}
