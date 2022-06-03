@@ -79,7 +79,7 @@ nav.table-of-contents::before {
 }
 
 nav.table-of-contents {
-    margin: var(--space-3) 0;
+    margin: var(--vertical-rhythm-plus) 0;
 }
 
 nav.table-of-contents a {
@@ -216,15 +216,11 @@ ul[class^=cooklang-]>li::before {
 }
 
 .image .date-tags {
-    margin-bottom: var(--space-1);
+    margin-bottom: var(--vertical-rhythm-plus);
 }
 
 .image main * {
     font-family: var(--meta-font-family);
-}
-
-table.sotable caption p.indicator {
-    margin-top: var(--vertical-rhythm);
 }
 
 [class*="bleed"]>img {

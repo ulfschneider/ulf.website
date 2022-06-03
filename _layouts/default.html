@@ -11,25 +11,25 @@
 	{% include header.html %}
 	<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
 		{% include hero.html %}
-		<main id="main" class="indent mrb-2 mrt-3 mxw-rg mrx-auto">
+		<main id="main" class="indent mrb-vrplus mrt-3 mxw-rg mrx-auto">
 			{%- if title != "notitle" and title != nil and notitle == nil -%}
 			<header class="title mry-3 bleed-right">
 				<h1 class="mry-0 rg:fs-4 lsp-d1">{{ title }}</h1>
 				{%- if subtitle -%}
-				<h2 class="mry-1">{{subtitle}}</h2>
+				<h2 class="mry-vrplus">{{subtitle}}</h2>
 				{% endif %}
 				{%- if refer -%}
-				<div class="mrt">{{refer}}</div>
+				<div class="mrt-vrplus">{{refer}}</div>
 				{%- elsif author -%}
-				<div class="mrt">{{author}}</div>
+				<div class="mrt-vrplus">{{author}}</div>
 				{%- endif -%}
 				{%- if abstract -%}
-				<div class="fs-1 lh-2 mry-1">
+				<div class="fs-1 lh-2 mry-vrplus">
 					{{abstract}}
 				</div>
 				{%- endif -%}
 				{%- if nodate == nil -%}
-				<aside class="mrt-1 mrb-2 meta">
+				<aside class="mry-vrplus meta">
 					{% include date-tags.html %}
 				</aside>
 				{%- endif -%}
