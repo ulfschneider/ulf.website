@@ -73,8 +73,8 @@ permalink: '{{site.search.url}}'
                         .split(' ')
                         .slice(0, (
                             parseInt('{{site.excerptWordCount}}')
-                            ? parseInt('{{site.excerptWordCount}}')
-                            : 25))
+                                ? parseInt('{{site.excerptWordCount}}')
+                                : 25))
                         .join(' ') + ' …';
                 }
             }
@@ -103,7 +103,7 @@ permalink: '{{site.search.url}}'
                 }
 
                 if (friend.tags.length && !friend.notags) {
-                    let tags = document.createElement('span');                    
+                    let tags = document.createElement('span');
                     aside.appendChild(tags);
 
                     let label = document.createElement('span');
@@ -217,7 +217,7 @@ permalink: '{{site.search.url}}'
         if (query) {
             printSearching();
         }
-        fetch('/search-index.json', {credentials: 'same-origin'})
+        fetch('/search-index.json', { credentials: 'same-origin' })
             .then(response => {
                 return response.json()
             })
@@ -225,7 +225,7 @@ permalink: '{{site.search.url}}'
                 searchIndex = lunr
                     .Index
                     .load(rawIndex);
-                return fetch('/excerpt-index.json', {credentials: 'same-origin'});
+                return fetch('/excerpt-index.json', { credentials: 'same-origin' });
             })
             .then(response => {
                 return response.json();
@@ -246,7 +246,10 @@ permalink: '{{site.search.url}}'
             });
     });
 </script>
-{% include search-field.html, focus: true, onsubmit: "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value); history.replaceState(null, '', location.pathname + '?query=' + event.target[SEARCH_QUERY_ID].value)" %}
-
+<section class="mry-vrplus">
+    {% include search-field.html, focus: true, onsubmit: "event.preventDefault();
+    search(event.target[SEARCH_QUERY_ID].value); history.replaceState(null, '', location.pathname + '?query=' +
+    event.target[SEARCH_QUERY_ID].value)" %}
+</section>
 <div id="search-results"></div>
 <script src="/js/lunr.js"></script>
