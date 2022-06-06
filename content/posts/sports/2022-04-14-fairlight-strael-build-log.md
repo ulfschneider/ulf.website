@@ -7,7 +7,7 @@ hero: /img/strael/strael-3-0-parts.jpg
 
 You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a> which are the primer of this build. You get there the complete list of parts I´m using for this build.
 
-I take the technical information for Shimano components from the [Shimano Manuals & Technical Documents ](https://si.shimano.com/). The [<cite>Line-up chart</cite>](https://productinfo.shimano.com/#/lc/dura-ace_r9250/2x12) is giving a quick overview and links into more details.
+I take the technical information for Shimano components from the @[<cite>Shimano Manuals & Technical Documents</cite>](https://si.shimano.com/){}. The @[<cite>Shimano Dura-Ace Line-up chart</cite>](https://productinfo.shimano.com/#/lc/dura-ace_r9250/2x12){} is giving a quick overview and links into more details.
 
 [[toc]]
 
@@ -20,7 +20,7 @@ I take the technical information for Shimano components from the [Shimano Manual
 
 ### Steps
 
-1. **Tubes and tires:** Because I do not run tubeless I have to remove the tubeless valves first. From that point on I´m following [<cite>How to change an innertube</cite>](/2022-02-06-how-to-change-an-inner-tube/). Shimano recommends not to use tire leavers with the C36s, and fortunately, the GP5000s didn´t require it. Tires are inflated to 60 PSI.
+1. **Tubes and tires:** Because I do not run tubeless I have to remove the tubeless valves first. From that point on I´m following @[<cite>How to change an innertube</cite>](/2022-02-06-how-to-change-an-inner-tube/){}. Shimano recommends not to use tire leavers with the C36s, and fortunately, the GP5000s didn´t require it. Tires are inflated to 60 PSI.
 2. **Brake rotors:** Once the rim is protected by the inflated tire it´s save to mount the brake rotors and torque them to 40 Nm. I do not use anti-seize nor grease for the direct mount connection and the lockring threads of the rotors. The parts are all aluminium and the given torque spec is for dry torque (without grease or anything similar). Putting anti-seize or grease on the thread would increase thread-tension when torquing it to 40 Nm. Generally I avoid using grease near the brakes.
 3. **Cassette:** Be careful when mounting the cassette. It will fall apart all too easily and you might have difficulties putting everything back in the right order. I put a thin film of anti-seize on the freehub body to help demounting the cassette later on. It could well be that´s not necessary because the sprockets are on an aluminium spider and the freehub body is also alumunium. Again, no anti-seize on the lockring thread which will be torqued down to 40 Nm.
 
@@ -139,7 +139,7 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
    <img src="/img/strael/stem-spacers.jpg">
    <figcaption>Lifting the stem by 3 cm</figcaption>
    </figure>
-2. **Handlebars with shifters:** Please refer to the [Shimano Dealer Manual for Hydraulic Disc Brake](https://si.shimano.com/api/publish/storage/pdf/en/dm/RADBR10/DM-RADBR10-01-ENG.pdf) to see how you can mount the shifters to the handlebars. I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolongue a straight top line for the upper handle bar.
+2. **Handlebars with shifters:** Please refer to the @[<cite>Shimano Dealer Manual for Hydraulic Disc Brake</cite>](https://si.shimano.com/#/en/iDM/RADBR10){} to see how you can mount the shifters to the handlebars. I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolongue a straight top line for the upper handle bar.
    <figure>
    <img src="/img/strael/shifter-top-position.jpg">
    <figcaption>Finding a shifter position</figcaption>
@@ -170,7 +170,7 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
 
 ### Steps
 
-I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.globalcyclingnetwork.com/video/how-to-cut-a-road-bike-steerer-tube) as presented by the Global Cycling Network. After trying out the desired stem height I draw a line with a pencil around the 5 mm spacer that sits on top of the stem. Then I take away the wheels and disassemble the fork from the bike frame.
+I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.globalcyclingnetwork.com/video/how-to-cut-a-road-bike-steerer-tube){} as presented by the Global Cycling Network. After trying out the desired stem height I draw a line with a pencil around the 5 mm spacer that sits on top of the stem. Then I take away the wheels and disassemble the fork from the bike frame.
 
 1. For the compression bung to work properly I have to cut away  3 mm in addition. Make sure it´s exactly 3 mm because cutting only additional 2 mm is too less and will lead to the compression bung not function. If you cut 2 mm initially you can imagine it´s difficult to cut another 1 mm. I know what I´m talking about because that´s exactly what happened to me.
    <figure>
@@ -265,7 +265,7 @@ I´m following [<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.gl
    <img src="/img/strael/attached-top-cap.jpg" alt="The top cap attached to the steerer">
    <figcaption>The attached top cap</figcaption>
    </figure>
-8. I attach the wheels to take the frame out of the repair stand and straighten the steering unit. Every headset screw receives 4 Nm of torque, except the steerer top cap wich remains hand tight. Ritchey allows a maximum torque of 5 Nm for their 4-bolt-stems ^[[<cite>Ritchey Tech Info</cite>](https://eu.ritcheylogic.com/eu_en/support/tech-info)]. The result starts looking like a bike.
+8. I attach the wheels to take the frame out of the repair stand and straighten the steering unit. Every headset screw receives 4 Nm of torque, except the steerer top cap wich remains hand tight. Ritchey allows a maximum torque of 5 Nm for their 4-bolt-stems, see @[<cite>Ritchey Tech Info</cite>](https://eu.ritcheylogic.com/eu_en/support/tech-info){}. The result starts looking like a bike.
 
 <figure class="md:bleed">
 <img src="/img/strael/it-starts-looking-like-a-bicycle.jpg" alt="The Streal leaning on a wall. It is yet missing the crankset, derailleurs and brakes.">
@@ -293,12 +293,7 @@ I have the wheels attached to the bike prior to installing the calipers.
    
 ### Install the rear caliper
 
-The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm rotors. Therefore I have to attach an adapter. 
-
-<figure class="md:bleed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8OJXFA1fLSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<figcaption>The video <a href="(https://www.youtube.com/watch?v=8OJXFA1fLSM)"><cite>Shimano Flat Mount Caliper Adapter 140 mm to 160 mm Disc Fitting Guide</cite></a> explains very well how the rear caliper will be set up for 160 mm rotors </figcaption>
-</figure>
+The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm rotors. Therefore I have to attach an adapter. The @[<cite>Shimano Flat Mount Caliper Adapter 140 mm to 160 mm Disc Fitting Guide</cite>](https://www.youtube.com/watch?v=8OJXFA1fLSM){} explains very well how the rear caliper will be set up for 160 mm rotors.
 
 1. I connect the Flat-Mount adapter (SM-MA-R160D) to the rear caliper and use the caliper fixing screws (Type B) that are supplied with the adapter. Torque is 6 Nm. Then I attach the screw fixing pin that came with the caliper by pushing it completely into the caliper until it is fully inserted.
    <figure>
@@ -320,13 +315,13 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <img src="/img/strael/type-a-and-c.jpg">
    <figcaption>The Type A and Type C screw with retaining clip and distance washers</figcaption>
    </figure>
-3. I route the brake hose along the frame and fixate it with the C-clips. 
+3. I route the brake hose along the frame and fixate it with the C-Clips. 
    <figure>
    <div class="split">
    <img src="/img/strael/c-clips.jpg">
    <img src="/img/strael/c-clip-routing.jpg">
    </div>
-   <figcaption>C-clips</figcaption>
+   <figcaption>C-Clips</figcaption>
    </figure>
 4. From the upper end of the down tube I push the Di2 wire completely through a 50 cm long shrink tube. It´s important to begin with the Di2 wire first and not with the brake hose! 
 5. Then I push the brake hose through the shrink tube. The shrink tube has a diameter of 6.4 mm →  3.2 mm. It´s not required to shrink the tube and keep the 6.4 mm in diameter. If you leave it like that it will just look fine in my view.
@@ -385,7 +380,7 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
 
 ### Rear derailleur
 
-Follow the [Rear Derailleur (Di2) Dealer Manual](https://si.shimano.com/#/en/iDM/RARD010) step by step to install the rear derailleur (standard type) and connect the Di2 wire with the derailleur. The rubber cover and the cable guide for the wire are part of the derailleur packaging.
+Follow the @[<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010){} step by step to install the rear derailleur (standard type) and connect the Di2 wire with the derailleur. The rubber cover and the cable guide for the wire are part of the derailleur packaging.
 
 <figure>
 <img src="/img/strael/mounting-rear-derailleur.jpg" alt="A hex key screwing in the attach-screw to mount the rear derailleur">
@@ -404,7 +399,7 @@ Follow the [Rear Derailleur (Di2) Dealer Manual](https://si.shimano.com/#/en/iDM
 
 ### Front derailleur
 
-Follow the [Front Derailleur (Di2) Dealer Manual](https://si.shimano.com/#/en/iDM/RAFD010/) step by step to temporarily install the front derailleur with a band adapter to the frame and connect the Di2 wire with the derailleur. The plug cover for the Di2 wire is part of the derailleur packaging.
+Follow the @[<cite>Front Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RAFD010/){} step by step to temporarily install the front derailleur with a band adapter to the frame and connect the Di2 wire with the derailleur. The plug cover for the Di2 wire is part of the derailleur packaging.
 
 The final position of the front derailleur cannot be set at this point because the crankset is not installed yet. Attach the band adapter somewhere in the middle of the two bottle cage screws to the seat tube. The final positioning will be done after proper operation of the electronic shifters is verified and the crankset is installed.
 
@@ -412,7 +407,7 @@ The final position of the front derailleur cannot be set at this point because t
 
 1. Connect the two shifters with each other with the wire that´s routed through the handlebars. ==Use the lower satellite ports of the two shifters!== 
 2. Then connect the wire dangling out of the down tube with the right shifter by ==plugging it into the upper E-Tube port of the right shifter==.
-3. Charge the battery with an USB AC charging adapter. The battery will be charged after 1.5 to 2 hours. Refer to the [<cite>Rear Derailleur (Di2) / Battery Charger</cite>](https://si.shimano.com/#/en/iUM/3GK0A/charg_ing_method-title/TOC_CHARG_ING_METHOD-TITLE) handbook.
+3. Charge the battery with an USB AC charging adapter. The battery will be charged after 1.5 to 2 hours. Refer to the @[<cite>Rear Derailleur (Di2) / Battery Charger</cite>](https://si.shimano.com/#/en/iUM/3GK0A/charg_ing_method-title/TOC_CHARG_ING_METHOD-TITLE){} handbook.
 
 ## Verify Di2
 
@@ -420,7 +415,7 @@ With all Di2 wires connected and the battery charged the Di2 system is ready to 
 
 After pairing, signals sent from the shifters to the derailleurs should be functioning. Try the shift switches of the two shifters and verify the derailleurs are moving each in their both shifting directions.
 
-Download and install the [E-Tube Project App](https://bike.shimano.com/en-US/e-tube/project.html) onto your phone. The app will be necessary later to make gear shifting adjustments and to install software updates into the gearing system. Follow the [<cite>E-Tube Project Cyclist</cite>](https://si.shimano.com/#/en/iUM/7J4MA) manual to set up the app and create an entry for the bike. Then connect the bike with the app:
+Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-tube/project.html){} onto your phone. The app will be necessary later to make gear shifting adjustments and to install software updates into the gearing system. Follow the @[<cite>E-Tube Project Cyclist</cite>](https://si.shimano.com/#/en/iUM/7J4MA){} manual to set up the app and create an entry for the bike. Then connect the bike with the app:
 
 1. Start E-Tube App (Bluetooth must be activated on the phone).
 2. Press the function button of the rear derailleur until the LED flashes blue (0.5 - 2 seconds). The bicycle side is ready to connect. The unit name is displayed on the E-TUBE PROJECT screen.
@@ -542,6 +537,10 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 ## Install computer mount
 
 ## Install bottle cages
+
+## Manuals used for this build
+
+[[ingredients]]
 	
 ## Entire list of tools in order of use
 
@@ -552,7 +551,7 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 <table>
 <thead>
 <tr>
-<th class="no-wrap">Component</th><th class="no-wrap">Torque I used in Nm<div class="smaller">Max allowed Torque in Nm</div></th></tr>
+<th class="no-wrap">Component</th><th>Torque I used in Nm<div class="smaller">Max allowed Torque in Nm</div></th></tr>
 </tr>
 </thead>
 <tbody>

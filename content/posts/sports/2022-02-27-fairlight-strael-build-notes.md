@@ -354,7 +354,7 @@ I start with the handlebars. They should allow for internal Di2 wire and brake h
 
 **My decision:** The @Ritchey WCS Streem Handlebars, 42 cm wide{}, is my choice to take. It has 73 mm reach, and 128 mm drop at a weight of 287 g. It has a beautiful and modern shape, internal routing, and Ritchey has a reputation for doing these things right. Basically, I found no other handlebar suiting me as well as the Streem. @Pro Race Comfort Bartape in black{} and @Wolf Tooth Bar End Plugs, alloy black{}, will complete the handlebar. A @Ritchey WCS Carbon Spacer Set 3x5mm 3x10mm matte UD Carbon{} is necessary to set the correct height. 
 
-Because I want to stay with one manufacturer, stem and seat post will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 90 mm length{}, which weighs 139 g, and a @Ritchey Flexlogic Carbon Link Seatpost, 15 mm setback, 350 mm length{}, at a weight of 185 g. The seat post will get a @Ritchey Di2 Battery Mount **2022**{}. 
+Because I want to stay with one manufacturer, stem and seat post will also come from Ritchey. I complete the setup with the @Ritchey WCS Toyon Stem, 90 mm length{}, which weighs 139 g, and a @Ritchey Flexlogic Carbon Link Seatpost, 15 mm setback, 350 mm length{}, at a weight of 185 g. The seat post will get a @Ritchey Di2 Battery Mount ==2022=={}. 
 
 ## The bell
 
