@@ -56,7 +56,7 @@ nav ul li:last-child {
 }
 
 .article main>div>p:first-of-type::first-letter {
-    font-size: 5.95rem;
+    font-size: 3.65rem; /*was 5.95rem for 3 lines*/
     font-weight: bold;
     float: left;
     line-height: .65;
