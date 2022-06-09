@@ -519,14 +519,14 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 
 - #TOPEAK All Speeds Chain Tool{}
 - #Radon Foldable Chain Holder{}
-- #Quick Link Chain Tool{}
+- #Quick Link Chain Lock Tool{}
 
 ### Steps
 
 1. Determine the chain length by following the [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010). Please read the chapters <strong>Installing the chain</strong> and <strong>Checking the chain length</strong> under <strong>Adjustment</strong>. It´s basically wrapping the chain around the largest sprocket as well as the largest chainring to identify the zero point. Then adding two or three links plus the Quick-Link to the zero point. 
 2. Shorten the chain with the TOPEAK Chain Tool.
 3. Position the front derailleur so that the chain can get routed without rubbing through the the derailleur cage. This is still a temporary positioning – the final position is set when the gear shifting will be adjusted. 
-4. Only now route the chain through the front derailleur and through the rear derailleur and link it with the Quick Link. The Foldable Chain Holder as well as the Quick Link Chain Tool  simplify installing the Quick Link.
+4. Only now route the chain through the front derailleur and through the rear derailleur, take care of the chain direction, and link it with the Quick Link chain lock. The Foldable Chain Holder as well as the Quick Link Chain Tool simplify installing the Quick Link.
 
 ## Adjust gear shifting
 
@@ -552,17 +552,17 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 
 ## Wrap the handlebars
 
-## Install bell
+## Install the bell
 
-## Install computer mount
+## Install the computer mount
 
-## Install bottle cages
+## Install the bottle cages
 
-## Manuals used for this build
+## Manuals in order of use
 
 [[ingredients]]
 	
-## Entire list of tools in order of use
+## Tools in order of use
 
 [[cookware]]
 
@@ -571,7 +571,7 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 <table>
 <thead>
 <tr>
-<th class="no-wrap">Component</th><th>Torque I used in Nm<div class="smaller">Max allowed Torque in Nm</div></th></tr>
+<th>Component</th><th>Torque I used in Nm<div class="smaller">Max allowed Torque in Nm</div></th></tr>
 </tr>
 </thead>
 <tbody>
