@@ -7,8 +7,6 @@ hero: /img/strael/strael-3-0-parts.jpg
 
 You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a> which are the primer of this build. You get there the complete list of parts I´m using for this build.
 
-I take the technical information for Shimano components from the @[<cite>Shimano Manuals & Technical Documents</cite>](https://si.shimano.com/){}. The @[<cite>Shimano Dura-Ace Line-up chart</cite>](https://productinfo.shimano.com/#/lc/dura-ace_r9250/2x12){} is giving a quick overview and links into more details.
-
 [[toc]]
 
 ## Wheels
@@ -473,12 +471,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
 
 ### Steps 
 
-1. Assemble Rotor ALDHU drive-side crankarm with the chainring and the axle. 
-   <figure class="md:bleed">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/F2nT7JLdsC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   <figcaption>The video <a href="https://youtu.be/F2nT7JLdsC4"><cite>ALDHU crankset assembly with Q RINGS® Direct Mount Chainrings</cite></a> will give an impression about the assembly of the crankset</figcaption>
-   </figure>
-   First I mount the 32-48 chainring to the axle by center-aligning the axle imprint "531" with the tiny chainring hole (I think the tiny hole is called OCP indicator – for Optimum Chainring Position). 
+1. Assemble Rotor ALDHU drive-side crankarm with the chainring and the axle. The video @[<cite>ALDHU crankset assembly with Q RINGS® Direct Mount Chainrings</cite>](ttps://youtu.be/F2nT7JLdsC4){} will give an impression about the assembly of the crankset. First I mount the 32-48 chainring to the axle by center-aligning the axle imprint "531" with the tiny chainring hole (I think the tiny hole is called OCP indicator – for Optimum Chainring Position). 
    <figure>
    <img src="/img/strael/crank-axle.jpg" alt="A hand holding the Rotor Road Crank Axle">
    <figcaption>The Rotor 24 mm Road Crank Axle. <mark>Mind the two O-Rings: the drive-side O-Ring is thinner than the non-drive-side O-Ring</mark>. The Rotor axle comes with  additional spacers but none of them is needed for the installation to the Strael.</figcaption>
@@ -505,7 +498,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
 4. Mount the non-drive-side crankarm to the axle with a 10 mm hey key and torque it to 40 Nm. I use anti-seize before screwing the crankarm onto the axle.
 5. Screw the preload nut anti-clock-wise and hand-tighten it until there is no play in the crank/axle/bottom bracket system. Tighten the preload nut bolt to 1 Nm (not much!).
    
-## Mount pedals
+## Mount the pedals
 
 ### Tools
 
@@ -520,13 +513,28 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 <figcaption>The pedals I´m using on all of my bikes</figcaption>
 </figure>
    
-## Install chain
+## Install the chain
+
+### Tools
+
+- #TOPEAK All Speeds Chain Tool{}
+- #Radon Foldable Chain Holder{}
+- #Quick Link Chain Tool{}
+
+### Steps
+
+1. Determine the chain length by following the [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010). Please read the chapters <cite>Installing the chain</cite> and <cite>Checking the chain length</cite> under <cite>Adjustment</cite>. It´s basically wrapping the chain around the largest sprocket as well as the largest chainring to identify the zero point. Then adding two or three links plus the Quick-Link to the zero point. 
+2. Shorten the chain with the TOPEAK Chain Tool.
+3. Position the front derailleur so that the chain can get routed without rubbing through the the derailleur cage. This is still a temporary positioning – the final position is set when the gear shifting will be adjusted. 
+4. Only now route the chain through the front derailleur and through the rear derailleur and link it with the Quick Link. The Foldable Chain Holder as well as the Quick Link Chain Tool  simplify installing the Quick Link.
 
 ## Adjust gear shifting
 
 ### Tools
 - #Shimano GG Adjustment Gauge to set the B-screw of the Rear Derailleur{}
 - #Phone with E-Tube Project App installed{}
+
+### Steps
 
 ## Cut the brake hoses
 
