@@ -523,7 +523,7 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 
 ### Steps
 
-1. Determine the chain length by following the [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010). Please read the chapters <cite>Installing the chain</cite> and <cite>Checking the chain length</cite> under <cite>Adjustment</cite>. It´s basically wrapping the chain around the largest sprocket as well as the largest chainring to identify the zero point. Then adding two or three links plus the Quick-Link to the zero point. 
+1. Determine the chain length by following the [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010). Please read the chapters <strong>Installing the chain</strong> and <strong>Checking the chain length</strong> under <strong>Adjustment</strong>. It´s basically wrapping the chain around the largest sprocket as well as the largest chainring to identify the zero point. Then adding two or three links plus the Quick-Link to the zero point. 
 2. Shorten the chain with the TOPEAK Chain Tool.
 3. Position the front derailleur so that the chain can get routed without rubbing through the the derailleur cage. This is still a temporary positioning – the final position is set when the gear shifting will be adjusted. 
 4. Only now route the chain through the front derailleur and through the rear derailleur and link it with the Quick Link. The Foldable Chain Holder as well as the Quick Link Chain Tool  simplify installing the Quick Link.
@@ -539,13 +539,13 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 
 ### Steps
 
-1. Set the final position of the front derailleur by following [<cite>Front Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RAFD010/). Torque the fixing screw to 5 Nm and screw in the support screw. Torque the screw also to 5 Nm.
-2. I do the adjustment of the high limit and low limit of the front derailleur with the E-Tube Project App on my phone in a later step.
-3. Adjust the the B-screw of the rear derailleur by following [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
-4. Adjust the rear derailleur gear shifting by following [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
+1. Set the final position of the front derailleur by following the chapters <strong>Installation/Removal</strong> and <strong>Securing</strong> of [<cite>Front Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RAFD010/). Torque the fixing screw to 5 Nm and screw in the support screw. Torque the screw also to 5 Nm.
+2. I do the adjustment of the high limit and low limit of the front derailleur with the E-Tube Project App on my phone in a later step. The front derailleur doesn´t have limit bolts!
+3. Adjust the the B-screw of the rear derailleur by following the chapter <strong>Adjusting the B-screw</strong> of [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
+4. Adjust the rear derailleur gear shifting by following the chapter <strong>Gear shifting adjustment</strong> of [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
 5. Set the high and low limits for the rear derailleur by following [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
-6. Connect the E-Tube Project App on your phone with the rear derailleur. Start the E-Tube App (Bluetooth must be activated on the phone). Press the function button of the rear derailleur until the LED flashes blue (0.5 - 2 seconds). The bicycle is ready to connect. Select the unit name displayed on screen.
-7. Set the high and low limits of the front derailleur with the E-Tube Project App. The bike needs to be in a repair stand so that you can rotate the cranks by hand.
+6. Set the high and low limits of the front derailleur with the E-Tube Project App. The bike needs to be in a repair stand so that you can rotate the cranks by hand. Connect the E-Tube Project App on your phone with the rear derailleur. Start the E-Tube App (Bluetooth must be activated on the phone). Press the function button of the rear derailleur until the LED flashes blue (0.5 - 2 seconds). The bicycle is ready to connect. Select the unit name displayed on screen.
+7. Open the <strong>Maintenance</strong> tab and under <strong>Derailleur adjustment</strong> select <strong>Front</strong> and follow the instructions of the app.
 
 
 ## Cut the brake hoses
