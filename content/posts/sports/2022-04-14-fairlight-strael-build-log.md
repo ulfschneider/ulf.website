@@ -539,8 +539,8 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 
 ### Steps
 
-1. Set the final position of the front derailleur by following the chapters <strong>Installation/Removal</strong> and <strong>Securing</strong> of [<cite>Front Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RAFD010/). Torque the fixing screw to 5 Nm and screw in the support screw. Torque the screw also to 5 Nm.
-2. I do the adjustment of the high limit and low limit of the front derailleur with the E-Tube Project App on my phone in a later step. The front derailleur doesn´t have limit bolts!
+1. Set the final position of the front derailleur by following the chapters <strong>Installation/Removal</strong> and <strong>Securing</strong> of the [<cite>Front Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RAFD010/). Torque the fixing screw to 5 Nm and screw in the support screw. Torque the clamp screw also to 5 Nm.
+2. I do the adjustment of the high limit and the low limit of the front derailleur with the E-Tube Project App on my phone in a later step. The front derailleur doesn´t have limit bolts!
 3. Adjust the the B-screw of the rear derailleur by following the chapter <strong>Adjusting the B-screw</strong> of [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
 4. Adjust the rear derailleur gear shifting by following the chapter <strong>Gear shifting adjustment</strong> of [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
 5. Set the high and low limits for the rear derailleur by following [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
