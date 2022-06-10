@@ -55,8 +55,14 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
+main>div>pre {
+    width: auto;
+    margin-right: max(50% - 50vw + var(--bleed-padding), 50% - var(--bleed-width) / 2);
+}
+
 .article main>div>p:first-of-type::first-letter {
-    font-size: 3.65rem; /*was 5.95rem for 3 lines*/
+    font-size: 3.65rem;
+    /*was 5.95rem for 3 lines*/
     font-weight: bold;
     float: left;
     line-height: .65;

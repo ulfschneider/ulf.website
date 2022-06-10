@@ -22,7 +22,7 @@
         "autoprefixer": "^9.8.8",
         "cached-commit-date": "^0.5.0",
         "cheerio": "^1.0.0-rc.11",
-        "compose-css": "^28.2.3",
+        "compose-css": "^28.2.5",
         "concurrently": "^6.5.1",
         "cssnano": "^5.1.11",
         "dayjs": "^1.11.3",
