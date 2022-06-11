@@ -137,7 +137,7 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
    <img src="/img/strael/stem-spacers.jpg">
    <figcaption>Lifting the stem by 3 cm</figcaption>
    </figure>
-2. **Handlebars with shifters:** Please refer to the @[<cite>Shimano Dealer Manual for Hydraulic Disc Brake</cite>](https://si.shimano.com/#/en/iDM/RADBR10){} to see how you can mount the shifters to the handlebars. I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolongue a straight top line for the upper handle bar.
+2. **Handlebars with shifters:** Please refer to the @[<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10){} to see how you can mount the shifters to the handlebars. I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolongue a straight top line for the upper handle bar.
    <figure>
    <img src="/img/strael/shifter-top-position.jpg">
    <figcaption>Finding a shifter position</figcaption>
@@ -272,7 +272,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
 
 ## Install the calipers
 
-The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake / Dual Control Lever (Di2)</cite>](https://si.shimano.com/#/en/iDM/RADBR10) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with them whatever you like without the risk of spilling hydraulic oil.
+The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake / Dual Control Lever (Di2) R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with them whatever you like without the risk of spilling hydraulic oil.
 
 I have the wheels attached to the bike prior to installing the calipers.
 
@@ -397,7 +397,7 @@ Follow the @[<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shiman
 
 ### Front derailleur
 
-Follow the @[<cite>Front Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RAFD010/){} step by step to temporarily install the front derailleur with a band adapter to the frame and connect the Di2 wire with the derailleur. The plug cover for the Di2 wire is part of the derailleur packaging.
+Follow the @[<cite>Front Derailleur (Di2) Dealer Manual R9250</cite>](https://si.shimano.com/#/en/iDM/RAFD010/){} step by step to temporarily install the front derailleur with a band adapter to the frame and connect the Di2 wire with the derailleur. The plug cover for the Di2 wire is part of the derailleur packaging.
 
 The final position of the front derailleur cannot be set at this point because the crankset is not installed yet. Attach the band adapter somewhere in the middle of the two bottle cage screws to the seat tube. The final positioning will be done after proper operation of the electronic shifters is verified and the crankset is installed.
 
@@ -409,7 +409,7 @@ The final position of the front derailleur cannot be set at this point because t
 
 ## Verify Di2
 
-With all Di2 wires connected and the battery charged the Di2 system is ready to be paired. As described in [Rear Derailleur (Di2) Dealer Manual](https://si.shimano.com/#/en/iDM/RARD010) under *System pairing (wired)* this is done by pressing and holding the function button of the rear derailleur until the LED changes from yellow to flashing blue (5 - 8 seconds). The LED flashes green if system pairing succeeds, or flashes red if pairing fails.
+With all Di2 wires connected and the battery charged the Di2 system is ready to be paired. As described in [Rear Derailleur (Di2) Dealer Manual R9250](https://si.shimano.com/#/en/iDM/RARD010) under *System pairing (wired)* this is done by pressing and holding the function button of the rear derailleur until the LED changes from yellow to flashing blue (5 - 8 seconds). The LED flashes green if system pairing succeeds, or flashes red if pairing fails.
 
 After pairing, signals sent from the shifters to the derailleurs should be functioning. Try the shift switches of the two shifters and verify the derailleurs are moving each in their both shifting directions.
 
@@ -539,11 +539,11 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 
 ### Steps
 
-1. Set the final position of the front derailleur by following the chapters <strong>Installation/Removal</strong> and <strong>Securing</strong> of the [<cite>Front Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RAFD010/). Torque the fixing screw to 5 Nm and screw in the support screw. Torque the clamp screw also to 5 Nm.
+1. Set the final position of the front derailleur by following the chapters <strong>Installation/Removal</strong> and <strong>Securing</strong> of the [<cite>Front Derailleur (Di2) Dealer Manual R9250</cite>](https://si.shimano.com/#/en/iDM/RAFD010/). Torque the fixing screw to 5 Nm and screw in the support screw. Torque the clamp screw also to 5 Nm.
 2. I do the adjustment of the high limit and the low limit of the front derailleur with the E-Tube Project App on my phone in a later step. The front derailleur doesn´t have limit bolts!
-3. Adjust the the B-screw of the rear derailleur by following the chapter <strong>Adjusting the B-screw</strong> of [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
-4. Adjust the rear derailleur gear shifting by following the chapter <strong>Gear shifting adjustment</strong> of [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
-5. Set the high and low limits for the rear derailleur by following [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010).
+3. Adjust the the B-screw of the rear derailleur by following the chapter <strong>Adjusting the B-screw</strong> of [<cite>Rear Derailleur (Di2) Dealer Manual R9250</cite>](https://si.shimano.com/#/en/iDM/RARD010).
+4. Adjust the rear derailleur gear shifting by following the chapter <strong>Gear shifting adjustment</strong> of [<cite>Rear Derailleur (Di2) Dealer Manual R9250</cite>](https://si.shimano.com/#/en/iDM/RARD010).
+5. Set the high and low limits for the rear derailleur by following [<cite>Rear Derailleur (Di2) Dealer Manual R9250</cite>](https://si.shimano.com/#/en/iDM/RARD010).
 6. Set the high and low limits of the front derailleur with the E-Tube Project App. The bike needs to be in a repair stand so that you can rotate the cranks by hand. Connect the E-Tube Project App on your phone with the rear derailleur. Start the E-Tube App (Bluetooth must be activated on the phone). Press the function button of the rear derailleur until the LED flashes blue (0.5 - 2 seconds). The bicycle is ready to connect. Select the unit name displayed on screen.
 7. Open the <strong>Maintenance</strong> tab and under <strong>Derailleur adjustment</strong> select <strong>Front</strong> and follow the instructions of the app.
 
