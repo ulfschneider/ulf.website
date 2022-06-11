@@ -184,6 +184,28 @@ module.exports = {
         }
     },
 
+    imgAspectRatio: function (src) {
+        try {
+            dimensions = this.getDimensions(`${site.output}${src}`);
+            if (dimensions.height > 0 && dimensions.width > 0) {
+                return `aspect-ratio:${dimensions.width}/${dimensions.height};`;
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    },
+
+    imgSizeHint: function (src) {
+        try {
+            dimensions = this.getDimensions(`${site.output}${src}`);
+            if (dimensions.height > 0 && dimensions.width > 0) {
+                return `width="${dimensions.width}" height="${dimensions.height}"`;
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    },
+
     isResponsive: function (filePath) {
         let fileName = path.basename(filePath);
         return /@picture|@responsive/i.test(fileName);

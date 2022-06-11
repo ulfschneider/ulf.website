@@ -8,23 +8,23 @@ let colorMap;
 
 module.exports = {
 
-    live: function(collection) {
+    live: function (collection) {
         return collection ? collection.filter(utils.isLiveItem) : collection;
     },
 
-    post: function(collection) {
+    post: function (collection) {
         return collection ? collection.filter(utils.isPost) : collection;
     },
 
-    searchAble: function(collection) {
+    searchAble: function (collection) {
         return collection ? collection.filter(utils.isSearchAble) : collection;
     },
 
-    rssAble: function(collection) {
+    rssAble: function (collection) {
         return collection ? collection.filter(utils.isRssAble) : collection;
     },
 
-    authorEmail: function(page) {
+    authorEmail: function (page) {
         if (page && page.data.author && page.data.author.email) {
             return page.data.author.email;
         } else if (site.ownership && site.ownership.email) {
@@ -32,7 +32,7 @@ module.exports = {
         }
     },
 
-    authorName: function(page) {
+    authorName: function (page) {
         if (page && page.data.author && page.data.author.name) {
             return page.data.author.name;
         } else if (site.ownership && site.ownership.name) {
@@ -43,8 +43,8 @@ module.exports = {
     //this is very slow due to commitDate
     //return a date if the latest commit date is available and differs from the page.date by at least one day
     //otherwise return empty string
-    indicateModifiedDate: function(page) {
-        let date = page.date; 
+    indicateModifiedDate: function (page) {
+        let date = page.date;
         let humanDate = utils.humanDate(date);
         let commitDate = ccd.commitDate(page.inputPath);
         let humanCommitDate = utils.humanDate(commitDate);
@@ -56,7 +56,7 @@ module.exports = {
         }
     },
 
-    modifiedDate: function(page) {        
+    modifiedDate: function (page) {
         let commitDate = ccd.commitDate(page.inputPath);
         if (commitDate) {
             return commitDate;
@@ -65,7 +65,7 @@ module.exports = {
         }
     },
 
-    contentIndex: function(collection) {
+    contentIndex: function (collection) {
         let result = [];
         for (let item of collection) {
             result.push(utils.mapItem(item));
@@ -73,7 +73,7 @@ module.exports = {
         return JSON.stringify(result);
     },
 
-    tagIntro: function(collection, tagintro) {
+    tagIntro: function (collection, tagintro) {
         for (let item of collection) {
             if (item.data.tagintro == tagintro) {
                 return item.templateContent;
@@ -82,8 +82,8 @@ module.exports = {
         return '';
     },
 
-    searchIndex: function(collection) {
-        const index = lunr(function() {
+    searchIndex: function (collection) {
+        const index = lunr(function () {
             this.ref('id');
             this.field('title', { boost: 10 });
             this.field('subtitle', { boost: 10 });
@@ -102,7 +102,7 @@ module.exports = {
         return JSON.stringify(index);
     },
 
-    excerptIndex: function(collection) {
+    excerptIndex: function (collection) {
         let result = [];
         for (let item of collection) {
             let mappedItem = utils.mapItem(item);
@@ -113,7 +113,7 @@ module.exports = {
         return JSON.stringify(result);
     },
 
-    firstImage: function(collection) {
+    firstImage: function (collection) {
         let result = [];
         for (let item of collection) {
             let img = utils.firstImageTag(item.templateContent);
@@ -147,33 +147,18 @@ module.exports = {
         return JSON.stringify(result);
     },
 
-    imgAspectRatio: function(src) {
-        try {
-            dimensions = utils.getDimensions(`${site.output}${src}`);
-            if (dimensions.height > 0 && dimensions.width > 0) {
-                return `aspect-ratio:${dimensions.width}/${dimensions.height};`;
-            }
-        } catch (e) {
-            console.log(e);
-        }
+    imgAspectRatio: function (src) {
+        return utils.imgAspectRatio(src);
     },
 
-    responsiveHero: function(src) {
+    imgSizeHint: function (src) {
+        return utils.imgSizeHint(src);
+    },
 
-
-        const imgAspectRatio = function() {
-            try {
-                dimensions = utils.getDimensions(`${site.output}${clearSrc}`);
-                if (dimensions.height > 0 && dimensions.width > 0) {
-                    return `aspect-ratio:${dimensions.width}/${dimensions.height};`;
-                }
-            } catch (e) {
-                console.log(e);
-            }
-        }
-
+    responsiveHero: function (src) {
         let clearSrc = utils.clearResponsive(src);
-        let img = `<img src="${clearSrc}" alt="" class="w-100 fit-cover fit-center" style="max-height: unset; ${imgAspectRatio()}" loading="eager">`;
+
+        let img = `<img src="${clearSrc}" alt="" class="w-100 h-unset fit-cover fit-center" style="${utils.imgAspectRatio(clearSrc)}" ${utils.imgSizeHint(clearSrc)} loading="eager">`;
         if (utils.isResponsive(src)) {
             let extname = path.extname(clearSrc);
             let stem = path.basename(clearSrc, extname);
@@ -187,40 +172,27 @@ module.exports = {
         }
     },
 
-    imgSizeHint: function(src) {
-        try {
-            dimensions = utils.getDimensions(`${site.output}${src}`);
-            if (dimensions.height > 0 && dimensions.width > 0) {
-                return `width="${dimensions.width}" height="${dimensions.height}"`;
-            }
-        } catch (e) {
-            console.log(e);
-        }
-    },
-
-    humanDate: function(d) {
+    humanDate: function (d) {
         return utils.humanDate(d);
     },
 
-    humanDateTime: function(d) {
+    humanDateTime: function (d) {
         return utils.humanDateTime(d);
     },
 
-
-
-    isoDate: function(d) {
+    isoDate: function (d) {
         return utils.isoDate(d);
     },
 
-    tagUrl: function(tag) {
+    tagUrl: function (tag) {
         return utils.tagUrl(tag);
     },
 
-    hasTag: function(tags, tag) {
+    hasTag: function (tags, tag) {
         return tags && tag && tags.includes(tag);
     },
 
-    createColorMap: function(values) {
+    createColorMap: function (values) {
 
         colorMap = new Map();
         if (site.tagColors && site.tagColors.length) {
@@ -232,7 +204,7 @@ module.exports = {
         return colorMap;
     },
 
-    tagColor: function(tag) {
+    tagColor: function (tag) {
         if (!colorMap) {
             console.error('ColorMap has not been initialized. Please call createColorMap once before calling tagColor.');
             return '';
