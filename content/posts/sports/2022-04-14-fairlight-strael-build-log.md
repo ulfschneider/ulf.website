@@ -378,7 +378,7 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
 
 ### Rear derailleur
 
-Follow the @[<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010){} step by step to install the rear derailleur (standard type) and connect the Di2 wire with the derailleur. The rubber cover and the cable guide for the wire are part of the derailleur packaging.
+Follow the @[<cite>Rear Derailleur (Di2) Dealer Manual R9250</cite>](https://si.shimano.com/#/en/iDM/RARD010){} step by step to install the rear derailleur (standard type) and connect the Di2 wire with the derailleur. The rubber cover and the cable guide for the wire are part of the derailleur packaging.
 
 <figure>
 <img src="/img/strael/mounting-rear-derailleur.jpg" alt="A hex key screwing in the attach-screw to mount the rear derailleur">
