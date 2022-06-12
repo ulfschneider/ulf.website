@@ -3,7 +3,8 @@ layout: default
 nodate: true
 permalink: '{{site.search.url}}'
 ---
-<script>
+<script defer src="/js/lunr.js"></script>
+<script defer>
 
     const SEARCH_RESULTS_ID = 'search-results';
     const SEARCH_QUERY_ID = 'search-query';
@@ -252,4 +253,3 @@ permalink: '{{site.search.url}}'
     event.target[SEARCH_QUERY_ID].value)" %}
 </section>
 <div id="search-results"></div>
-<script src="/js/lunr.js"></script>
