@@ -471,7 +471,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
 
 ### Steps 
 
-1. Assemble Rotor ALDHU drive-side crankarm with the chainring and the axle. The video @[<cite>ALDHU crankset assembly with Q RINGS® Direct Mount Chainrings</cite>](ttps://youtu.be/F2nT7JLdsC4){} will give an impression about the assembly of the crankset. First I mount the 32-48 chainring to the axle by center-aligning the axle imprint "531" with the tiny chainring hole (I think the tiny hole is called OCP indicator – for Optimum Chainring Position). 
+1. Assemble Rotor ALDHU drive-side crankarm with the chainring and the axle. The video @[<cite>ALDHU crankset assembly with Q RINGS® Direct Mount Chainrings</cite>](https://youtu.be/F2nT7JLdsC4){} will give an impression about the assembly of the crankset. First I mount the 32-48 chainring to the axle by center-aligning the axle imprint "531" with the tiny chainring hole (I think the tiny hole is called OCP indicator – for Optimum Chainring Position). 
    <figure>
    <img src="/img/strael/crank-axle.jpg" alt="A hand holding the Rotor Road Crank Axle">
    <figcaption>The Rotor 24 mm Road Crank Axle. <mark>Mind the two O-Rings: the drive-side O-Ring is thinner than the non-drive-side O-Ring</mark>. The Rotor axle comes with  additional spacers but none of them is needed for the installation to the Strael.</figcaption>
