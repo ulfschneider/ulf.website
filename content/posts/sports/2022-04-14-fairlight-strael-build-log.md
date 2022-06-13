@@ -547,8 +547,11 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 6. Set the high and low limits of the front derailleur with the E-Tube Project App. The bike needs to be in a repair stand so that you can rotate the cranks by hand. Connect the E-Tube Project App on your phone with the rear derailleur. Start the E-Tube App (Bluetooth must be activated on the phone). Press the function button of the rear derailleur until the LED flashes blue (0.5 - 2 seconds). The bicycle is ready to connect. Select the unit name displayed on screen.
 7. Open the <strong>Maintenance</strong> tab and under <strong>Derailleur adjustment</strong> select <strong>Front</strong> and follow the instructions of the app.
 
-
 ## Cut the brake hoses
+
+### Tools
+
+### Steps
 
 ## Wrap the handlebars
 
