@@ -155,10 +155,10 @@ module.exports = {
         return utils.imgSizeHint(src);
     },
 
-    responsiveHero: function (src) {
+    responsiveHero: function (src, alt) {
         let clearSrc = utils.clearResponsive(src);
 
-        let img = `<img src="${clearSrc}" alt="" class="w-100 h-unset fit-cover fit-center" style="${utils.imgAspectRatio(clearSrc)}" ${utils.imgSizeHint(clearSrc)} loading="eager">`;
+        let img = `<img src="${clearSrc}" ${alt ? 'alt="'+alt+'"' : 'alt=""'} class="w-100 h-unset fit-cover fit-center" style="${utils.imgAspectRatio(clearSrc)}" ${utils.imgSizeHint(clearSrc)} loading="eager">`;
         if (utils.isResponsive(src)) {
             let extname = path.extname(clearSrc);
             let stem = path.basename(clearSrc, extname);
