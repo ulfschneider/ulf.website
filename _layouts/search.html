@@ -190,7 +190,7 @@ permalink: '{{site.search.url}}'
     }
 
     function search(query) {
-        if (searchIndex) {
+        if (searchIndex && friendlyMap) {
             let resultSet = [];
             if (query && query.trim().length) {
                 resultSet = searchIndex.search(query);
