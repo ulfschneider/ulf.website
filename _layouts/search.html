@@ -220,7 +220,7 @@ permalink: '{{site.search.url}}'
         }
         fetch('/search-index.json', { credentials: 'same-origin' })
             .then(response => {
-                return response.json()
+                return response.json();
             })
             .then(rawIndex => {
                 searchIndex = lunr
