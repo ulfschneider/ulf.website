@@ -544,10 +544,10 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 
 ## Cut the brake hoses
 
-### Tools
-
 When cutting a brake hose it is essential to have all tools and materials available and prepared upfront. You don´t want to search for a tool while holding a cut-off brake hose filled up with mineral oil in your hand!
 The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10) explains how to cut and install the brake hoses. The Shimano Brake Hose Easy Joint system, which you will use when the calipers come pre-bled and with the hose installed, is a breeze to set up. Because of the Easy Joint system you probably do not need to bleed the brakes after your brake hoses are cut-off and installed.
+
+### Tools
 
 - 4 mm Hex Key
 - #8 mm Wrench{}
