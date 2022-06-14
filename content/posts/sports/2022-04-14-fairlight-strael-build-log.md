@@ -276,19 +276,13 @@ The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake / Dual Control Lever (
 
 I have the wheels attached to the bike prior to installing the calipers.
 
-> ==Heads Up:== Do not connect the brake hoses with the shifters until you verified the Di2 setup is working fine.
+==Heads Up:== Do not connect the brake hoses with the shifters until you verified the Di2 setup is working fine.
 
 ### Tools
 
-- #8 mm Wrench{}
-- Hazet 5280-3CT Torque Wrench with #8 mm Torque Wrench Insert{}
 - 4 mm Hex Key
-- #Park Tool  HBT-1 Hydraulic Barb Tool{}
-- #Isopropyl Alcohol{}
-- #Cleaning Paper{}
-- Electrical Tape
+- Hazet 5280-3CT Torque Wrench
 
-   
 ### Install the rear caliper
 
 The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm rotors. Therefore I have to attach an adapter. The @[<cite>Shimano Flat Mount Caliper Adapter 140 mm to 160 mm Disc Fitting Guide</cite>](https://www.youtube.com/watch?v=8OJXFA1fLSM){} explains very well how the rear caliper will be set up for 160 mm rotors.
@@ -366,8 +360,9 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
 
 ## Install the derailleurs and complete the wiring
 
-> ==Heads Up:== For the Di2 wire connection of the two Dual Control Shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!
-> Also make sure to use blind plugs for the ports you don´t use.
+==Heads Up:== For the Di2 wire connection of the two Dual Control Shifters it´s crucial to use the lower satellite ports of the shifters! The connection from one shifter to the junction in the down tube (in my case it´s the right shifter) must go through the upper port of the shifter. If you do not follow this wiring model your shifter firmware updates and the triggering of the derailleurs through the shifters will not function properly!
+
+Also make sure to use blind plugs for the ports you don´t use.
 
 ### Tools
 
@@ -413,11 +408,11 @@ With all Di2 wires connected and the battery charged the Di2 system is ready to 
 
 After pairing, signals sent from the shifters to the derailleurs should be functioning. Try the shift switches of the two shifters and verify the derailleurs are moving each in their both shifting directions.
 
-Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-tube/project.html){} onto your phone. The app will be necessary later to make gear shifting adjustments and to install software updates into the gearing system. Follow the @[<cite>E-Tube Project Cyclist</cite>](https://si.shimano.com/#/en/iUM/7J4MA){} manual to set up the app and create an entry for the bike. Then connect the bike with the app:
+Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-tube/project.html){} onto your phone. The app will be necessary later to make gear shifting adjustments and to install software updates into the gearing system. 
 
-1. Start the E-Tube App (Bluetooth must be activated on the phone).
-2. Press the function button of the rear derailleur until the LED flashes blue (0.5 - 2 seconds). The bicycle side is ready to connect. The unit name is displayed on the E-TUBE PROJECT screen.
-3. Select the unit name displayed on screen.
+1. Press the function button of the rear derailleur until the LED flashes blue (0.5 - 2 seconds). The bicycle side is ready to connect. The unit name is displayed on the E-TUBE PROJECT screen.
+2. Start the E-Tube App (Bluetooth must be activated on the phone).
+3. Select the unit name displayed on screen. Follow the @[<cite>E-Tube Project Cyclist</cite>](https://si.shimano.com/#/en/iUM/7J4MA/starting_for_the_first_time/TOC_STARTING_FOR_THE_FIRST_TIME){} manual to set up the app and create an entry for the bike for the first time.  
 
 ## Install the bottom bracket
 
@@ -551,7 +546,55 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 
 ### Tools
 
+When cutting a brake hose it is essential to have all tools and materials available and prepared upfront. You don´t want to search for a tool while holding a cut-off brake hose filled up with mineral oil in your hand!
+The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10) explains how to cut and install the brake hoses. The Shimano Brake Hose Easy Joint system, which you will use when the calipers come pre-bled and with the hose installed, is a breeze to set up. Because of the Easy Joint system you probably do not need to bleed the brakes after your brake hoses are cut-off and installed.
+
+- 4 mm Hex Key
+- #8 mm Wrench{}
+- Hazet 5280-3CT Torque Wrench with #8 mm Torque Wrench Insert{}
+- #Park Tool  HBT-1 Hydraulic Barb Tool{}
+- #Isopropyl Alcohol{}
+- #Cleaning Paper{}
+- Connector Insert for the Brake Hose (SM-BH90-JK-SSR)
+
+<figure>
+<img src="/img/strael/cutting-brake-hose-tools.jpg" alt="An alignment of the tools needed for cutting the brake hose">
+<figcaption>My prepared tools for cutting the brake hoses. See the tiny connector insert in the middle of the arrangement.</figcaption>
+</figure>
+
 ### Steps
+
+Repeat the steps for each brake hose. 
+
+1. Measure the desired length of the brake hoses. The hose will be inserted 21 mm into the connector port of the lever - consider that and make two marks on the hose: one where to cut and another witness mark 21 mm behind the cut mark. I do it so that  there is some slack around the handlebars and at the same time the hoses are not rubbing each other or a part of the bike. 
+   <figure>
+   <img src="/img/strael/measure-brake-hose-length.jpg" alt="The handlebars with two loose brake hoses only fixated with Tesa Crepe">
+   <figcaption>The bike prepared for measuring</figcaption>
+   </figure>
+2. Put the bike within the repair stand into a position so that the hose connectors of the the shifters (the ones with the yellow plugs inside) are pointing upwards.
+   <figure>
+   <img src="/img/strael/brake-hose-connectors-upwards.jpg" alt="The bike in the repair stand with the front wheel pointing down and the back wheel pointing up">
+   <figcaption>The hose connectors of the shifters are pointing upwards</figcaption>
+   </figure>
+3. Pull the hose seal plug out of the brake hose connector.
+4. Cut off the brake hose with the Hydraulic Barb Tool.
+   <figure>
+   <img src="/img/strael/cut-the-brake-hose.jpg" alt="A hand holding the ParkTool HBT-1 while cutting a bake hose">
+   <figcaption>The cutting of the brake hose with the ParkTool HBT-1. The witness mark is the Tesa Crepe while the cut mark is difficult to see (but still there).</figcaption>
+   </figure>
+5. Use the Hydraulic Barb Tool to press the connector insert into the brake hose.
+6. The shifter comes with a pre-installed olive. Push the cut-off brake hose into the brake hose connector port of the shifter until it bottoms out (the witness mark should now be aligned with the outer casing of the hose connector). Wrap a paper towel around the connector port while doing this.
+7. Tighten the flare nut – first with the 8 mm wrench and then with the torque wrench to 6 Nm – while pushing the hose into the connector port.
+   <figure>
+   <img src="/img/strael/torque-the-brake-hose.jpg" alt="The Hazet torque wrench fixating the Flare Nut">
+   <figcaption>Torque the flare nut to 6 Nm</figcaption>
+   </figure>
+8. Wipe away any excess oil with Isopropyl alcohol and a paper towel.
+   <figure>
+   <img src="/img/strael/wipe-away-excess-oil.jpg" alt="A hand holding a paper towel wiping away oil from the brake shifter">
+   <figcaption>Wipe away excess oil</figcaption>
+   </figure>
+9. ==Do not forget:== Take away the lever stopper and align the caliper with the brake rotor by loosening the caliper fixing screws, pulling the brake lever and then ==torqueing the caliper fixing screws to 6 Nm==. The front caliper will then get a snap ring installed while the rear calipers gets a screw fixing pin. Look that up in the [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10). 
 
 ## Wrap the handlebars
 
