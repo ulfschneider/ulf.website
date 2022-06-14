@@ -584,10 +584,10 @@ Repeat the steps for each brake hose.
    </figure>
 5. Use the Hydraulic Barb Tool to press the connector insert into the brake hose.
 6. The shifter comes with a pre-installed olive. Push the cut-off brake hose into the brake hose connector port of the shifter until it bottoms out (the witness mark should now be aligned with the outer casing of the hose connector). Wrap a paper towel around the connector port while doing this.
-7. Tighten the flare nut – first with the 8 mm wrench and then with the torque wrench to 6 Nm – while pushing the hose into the connector port.
+7. Tighten the flare nut – first with the 8 mm wrench and then with the torque wrench to 5 Nm – while pushing the hose into the connector port.
    <figure>
    <img src="/img/strael/torque-the-brake-hose.jpg" alt="The Hazet torque wrench fixating the Flare Nut">
-   <figcaption>Torque the flare nut to 6 Nm</figcaption>
+   <figcaption>Torque the flare nut to 5 Nm</figcaption>
    </figure>
 8. Wipe away any excess oil with Isopropyl alcohol and a paper towel.
    <figure>
