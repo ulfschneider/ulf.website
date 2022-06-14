@@ -545,7 +545,7 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 ## Cut the brake hoses
 
 When cutting a brake hose it is essential to have all tools and materials available and prepared upfront. You don´t want to search for a tool while holding a cut-off brake hose filled up with mineral oil in your hand!
-The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10) explains how to cut and install the brake hoses. The Shimano Brake Hose Easy Joint system, which you will use when the calipers come pre-bled and with the hose installed, is a breeze to set up. Because of the Easy Joint system you probably do not need to bleed the brakes after your brake hoses are cut-off and installed.
+The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10) explains how to cut and install the brake hoses. The Shimano Brake Hose Easy Joint system, which you will use when the calipers come pre-bled and with the hose installed, is a breeze to set up. Because of the Easy Joint system you probably do not need to bleed the brakes after your brake hoses are installed.
 
 ### Tools
 
@@ -586,7 +586,7 @@ Repeat the steps for each brake hose.
 6. The shifter comes with a pre-installed olive. Push the cut-off brake hose into the brake hose connector port of the shifter until it bottoms out (the witness mark should now be aligned with the outer casing of the hose connector). Wrap a paper towel around the connector port while doing this.
 7. Tighten the flare nut – first with the 8 mm wrench and then with the torque wrench to 5 Nm – while pushing the hose into the connector port.
    <figure>
-   <img src="/img/strael/torque-the-brake-hose.jpg" alt="The Hazet torque wrench fixating the Flare Nut">
+   <img src="/img/strael/torque-the-brake-hose.jpg" alt="The Hazet torque wrench fixating the flare nut">
    <figcaption>Torque the flare nut to 5 Nm</figcaption>
    </figure>
 8. Wipe away any excess oil with Isopropyl alcohol and a paper towel.
