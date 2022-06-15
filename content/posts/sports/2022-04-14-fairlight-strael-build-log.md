@@ -598,7 +598,11 @@ Repeat the steps for each brake hose.
 
 ## Wrap the handlebars
 
+I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://youtu.be/5MzIiv7pewE){}. Because I´m using Pro Race Comfort Bartape with an adhesive silicone strip re-wrapping to get the perfect result is no issue. 
+
 ## Install the bell
+
+I´m following @[<cite>Spurcycle Bell Install</cite>](https://vimeo.com/spurcycle/bellinstall).
 
 ## Install the computer mount
 
