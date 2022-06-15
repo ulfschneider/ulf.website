@@ -598,15 +598,20 @@ Repeat the steps for each brake hose.
 
 ## Wrap the handlebars
 
-I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://youtu.be/5MzIiv7pewE){}. Because I´m using Pro Race Comfort Bartape with an adhesive silicone strip re-wrapping to get the perfect result is no issue. 
+I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://youtu.be/5MzIiv7pewE){}. Because I´m using Pro Race Comfort Bartape with an adhesive silicone strip re-wrapping to get the perfect result is no issue. The tape could be a little bit longer. Unfortunately I cannot install the Wolf Tooth Bar End Plugs because they do not stay in place. The plugs that come with the Pro bartape are working fine instead.
+
+<figure>
+<img src="/img/strael/wolf-tooth-bar-end-plugs.jpg" alt="A hand holding the Wolf Tooth Bar End Plugs">
+<figcaption>Unfortunately the Wolf Tooth Bar End Plags do not stay in place and I cannot use them</figcaption>
+</figure>
 
 ## Install the bell
 
-I´m following @[<cite>Spurcycle Bell Install</cite>](https://vimeo.com/spurcycle/bellinstall).
-
-## Install the computer mount
+I´m following @[<cite>Spurcycle Bell Install</cite>](https://vimeo.com/spurcycle/bellinstall){}.
 
 ## Install the bottle cages
+
+## Protect the chainstay
 
 ## Manuals in order of use
 
