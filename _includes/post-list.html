@@ -19,13 +19,13 @@
     {%- assign href = p.url -%}
 
     {%- if indexYear != pageYear and limit == nil -%}
-        <time datetime="{{pageYear}}" class="bleed-left larger meta mry-1 block year sticky top-0 bg-base-background">{{pageYear}}</time>
+        <time datetime="{{pageYear}}" class="bleed-left larger meta mry-vrplus block year sticky top-0 bg-base-background">{{pageYear}}</time>
         {%- assign indexYear = pageYear -%}
     {%- endif -%}
 
     {%- assign count = count | plus: 1 -%}
 
-    <article class="mry-1 md:bleed-left md:flex-row-reverse md:align-baseline">
+    <article class="mry-vrplus md:bleed-left md:flex-row-reverse md:align-baseline">
 
         <section class="md:w-rg md:flex-shrink-0">
             {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
@@ -52,8 +52,7 @@
             {%- endif -%}
         </section>
         <aside class="meta md:fs-d1 md:pdr-1 md:mrl-auto md:right md:flex-column {{p.data.starred}}">
-            {% include date.html posted: p.date %}
-            {% include tags.html tags: p.data.tags notags: p.data.notags %}
+            {% include date-tags.html posted: p.date tags: p.data.tags notags: p.data.notags %}            
         </aside>
     </article>
 

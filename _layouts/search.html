@@ -3,6 +3,7 @@ layout: default
 nodate: true
 permalink: '{{site.search.url}}'
 ---
+<script defer src="/js/lunr.js"></script>
 <script>
 
     const SEARCH_RESULTS_ID = 'search-results';
@@ -43,7 +44,7 @@ permalink: '{{site.search.url}}'
             let friend = friendlyMap.get(entry.ref);
 
             let article = document.createElement('article');
-            article.classList = 'mry-1 md:bleed-left md:flex-row-reverse md:align-baseline';
+            article.classList = 'mry-vrplus md:bleed-left md:flex-row-reverse md:align-baseline';
             parent.appendChild(article);
 
             let section = document.createElement('section');
@@ -73,8 +74,8 @@ permalink: '{{site.search.url}}'
                         .split(' ')
                         .slice(0, (
                             parseInt('{{site.excerptWordCount}}')
-                            ? parseInt('{{site.excerptWordCount}}')
-                            : 25))
+                                ? parseInt('{{site.excerptWordCount}}')
+                                : 25))
                         .join(' ') + ' …';
                 }
             }
@@ -104,13 +105,13 @@ permalink: '{{site.search.url}}'
 
                 if (friend.tags.length && !friend.notags) {
                     let tags = document.createElement('span');
-                    tags.classList = "inline-block";
                     aside.appendChild(tags);
 
                     let label = document.createElement('span');
                     label.innerHTML = 'in';
                     tags.appendChild(document.createTextNode(' '));
                     tags.appendChild(label);
+                    tags.appendChild(document.createTextNode(' '));
                     for (let tag of friend.tags) {
                         if (tag.name == '{{site.starTag}}') {
                             let tagLink = document.createElement('a');
@@ -189,7 +190,7 @@ permalink: '{{site.search.url}}'
     }
 
     function search(query) {
-        if (searchIndex) {
+        if (searchIndex && friendlyMap) {
             let resultSet = [];
             if (query && query.trim().length) {
                 resultSet = searchIndex.search(query);
@@ -217,15 +218,15 @@ permalink: '{{site.search.url}}'
         if (query) {
             printSearching();
         }
-        fetch('/search-index.json', {credentials: 'same-origin'})
+        fetch('/search-index.json', { credentials: 'same-origin' })
             .then(response => {
-                return response.json()
+                return response.json();
             })
             .then(rawIndex => {
                 searchIndex = lunr
                     .Index
                     .load(rawIndex);
-                return fetch('/excerpt-index.json', {credentials: 'same-origin'});
+                return fetch('/excerpt-index.json', { credentials: 'same-origin' });
             })
             .then(response => {
                 return response.json();
@@ -246,7 +247,9 @@ permalink: '{{site.search.url}}'
             });
     });
 </script>
-{% include search-field.html, focus: true, onsubmit: "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value); history.replaceState(null, '', location.pathname + '?query=' + event.target[SEARCH_QUERY_ID].value)" %}
-
+<section class="mry-vrplus">
+    {% include search-field.html, focus: true, onsubmit: "event.preventDefault();
+    search(event.target[SEARCH_QUERY_ID].value); history.replaceState(null, '', location.pathname + '?query=' +
+    event.target[SEARCH_QUERY_ID].value)" %}
+</section>
 <div id="search-results"></div>
-<script src="/js/lunr.js"></script>

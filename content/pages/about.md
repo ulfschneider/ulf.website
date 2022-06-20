@@ -5,11 +5,10 @@ nodate: true
 notags: true
 tags: articles
 id: about
+hero: /img/ulf/ulf-16x9-900.jpg
+heroalt: Portrait of Ulf Schneider
+herocss: mxw-rg
 ---
-<figure class="mxw-rg">
-<img class="w-100 fit-cover" src="/img/ulf/ulf-16x9-900.jpg" alt="Portrait of Ulf Schneider">
-</figure>
-
 Hi, my name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently heading the Processes & Quality team of Diebold Nixdorf Professional Services. My path through 30 years of software went like this:
 
 <dl class="timeline">

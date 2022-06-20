@@ -1,28 +1,29 @@
-<footer id="footer" class="flex-shrink-0 bg-neutral-5 pdx pdy-1">
+<footer id="footer" class="flex-shrink-0 bg-neutral-5 pdx pdy-vrplus">
 	<nav class="meta-font mxw-rg mrx-auto">
 		<ul class="reset mr-0">
 			{%- for p in site.footernav -%}
-				<li class="inline-block">
-					{%- if id == p.id and id -%}
-						<a class="meta-font no-deco bold heading-color no-wrap" aria-current="page" href="{{ p.url }}">{{p.label}}</a>
-						{%- elsif p.id == 'editOnGitHub' %}
-						<a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-deco no-wrap">{{p.label}}</a>
-					{%- else -%}
-						<a class="no-deco no-wrap" href="{{ p.url }}">{{p.label}}</a>
-					{%- endif -%}
-				</li>
+			<li class="inline-block">
+				{%- if id == p.id and id -%}
+				<a class="meta-font no-deco bold heading-color no-wrap" aria-current="page"
+					href="{{ p.url }}">{{p.label}}</a>
+				{%- elsif p.id == 'editOnGitHub' %}
+				<a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-deco no-wrap">{{p.label}}</a>
+				{%- else -%}
+				<a class="no-deco no-wrap" href="{{ p.url }}">{{p.label}}</a>
+				{%- endif -%}
+			</li>
 			{%- endfor -%}
 		</ul>
 		{%- if site.backToTop and site.backToTop.id %}
-			<div id="back-to-start" class="mrt right no-wrap bleed-right" style="display:none;" >
-				<a  href="#{{site.backToTop.id}}">
-					{%- if site.backToTop.label -%}
-						{{site.backToTop.label}}
-					{%- else -%}
-					  Back to Top
-					{%- endif -%}
-				</a>
-			</div>
+		<div id="back-to-start" class="mrt right no-wrap bleed-right" style="display:none;">
+			<a href="#{{site.backToTop.id}}">
+				{%- if site.backToTop.label -%}
+				{{site.backToTop.label}}
+				{%- else -%}
+				Back to Top
+				{%- endif -%}
+			</a>
+		</div>
 		{%- endif %}
 	</nav>
 </footer>

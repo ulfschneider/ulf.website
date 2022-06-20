@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html id="{{site.backToTop.id}}" lang="{{site.locale}}">
 
-	<head>
-		{% include head.html %}
-	</head>
+<head>
+	{% include head.html %}
+</head>
 
-	{%- assign isArticle = tags | hasTag: "articles" -%}
+{%- assign isArticle = tags | hasTag: "articles" -%}
 
-	<body class="default break-word bg-neutral-5 flex-column{% if isArticle == true %} article{%-endif-%}">
-		{% include header.html %}
-		<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
-			{% include hero.html %}
-			<main id="main" class="indent mrb-2 mrt-3 mxw-rg mrx-auto">
-				{%- if title != "notitle" and title != nil and notitle == nil   -%}
-					<header class="title mry-3 bleed-right">
-						<h1 class="mry-0 rg:fs-4 lsp-d1">{{ title }}</h1>
-						{%- if subtitle -%}
-							<h2 class="mry normal">{{subtitle}}</h2>
-						{% endif %}
-						{%- if refer -%}
-							<div class="mrt">{{refer}}</div>
-							{%- elsif author -%}
-							<div class="mrt">{{author}}</div>
-						{%- endif -%}
-						{%- if abstract -%}
-							<div class="fs-1 lh-2 mry-3">
-								{{abstract}}
-							</div>
-						{%- endif -%}
-						<aside class="mrb-2 meta">
-							{% include date-tags.html %}
-						</aside>
-					</header>
+<body class="default break-word bg-neutral-5 flex-column{% if isArticle == true %} article{%-endif-%}">
+	{% include header.html %}
+	<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
+		{% include hero.html %}
+		<main id="main" class="indent mry-3 mxw-rg mrx-auto">
+			{%- if title != "notitle" and title != nil and notitle == nil -%}
+			<header class="title mry-3 bleed-right">
+				<h1 class="mry-0 rg:fs-4 lsp-d1">{{ title }}</h1>
+				{%- if subtitle -%}
+				<h2 class="mry-vrplus">{{subtitle}}</h2>
+				{% endif %}
+				{%- if refer -%}
+				<div class="mrt-vrplus">{{refer}}</div>
+				{%- elsif author -%}
+				<div class="mrt-vrplus">{{author}}</div>
 				{%- endif -%}
-				<div {% if outline == true %}class="outline"{% endif %}>
-					{{ content }}
+				{%- if abstract -%}
+				<div class="fs-1 lh-2 mry-vrplus">
+					{{abstract}}
 				</div>
-			</main>
-		</div>
-		{% include footer.html %}
-	</body>
+				{%- endif -%}
+				{%- if nodate == nil -%}
+				<aside class="mry-vrplus meta">
+					{% include date-tags.html %}
+				</aside>
+				{%- endif -%}
+			</header>
+			{%- endif -%}
+			<div {% if outline==true %}class="outline" {% endif %}>
+				{{ content }}
+			</div>
+		</main>
+	</div>
+	{% include footer.html %}
+</body>
 
 </html>

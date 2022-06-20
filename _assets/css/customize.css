@@ -17,6 +17,7 @@
     --fs-h4: var(--fs);
 }
 
+
 p:not(blockquote p),
 td,
 ul,
@@ -54,15 +55,19 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
+main>div>pre {
+    width: auto;
+    margin-right: max(50% - 50vw + var(--bleed-padding), 50% - var(--bleed-width) / 2);
+}
 
 .article main>div>p:first-of-type::first-letter {
-    font-size: 5.95rem;
+    font-size: 3.65rem;
+    /*was 5.95rem for 3 lines*/
     font-weight: bold;
     float: left;
     line-height: .65;
     padding: var(--space-d2) var(--space-d2) 0 0;
 }
-
 
 /* markdown-it toc */
 
@@ -80,7 +85,7 @@ nav.table-of-contents::before {
 }
 
 nav.table-of-contents {
-    margin: var(--space-3) 0;
+    margin: var(--vertical-rhythm-plus) 0;
 }
 
 nav.table-of-contents a {
@@ -179,7 +184,7 @@ hr.footnotes-sep::after {
 
 /* markdown-it-cooklang */
 
-ul[class^=cooklang-] > li::before {
+ul[class^=cooklang-]>li::before {
     content: "▢";
 }
 
@@ -217,15 +222,11 @@ ul[class^=cooklang-] > li::before {
 }
 
 .image .date-tags {
-    margin-bottom: var(--space-1);
+    margin-bottom: var(--vertical-rhythm-plus);
 }
 
 .image main * {
     font-family: var(--meta-font-family);
-}
-
-table.sotable caption p.indicator {
-    margin-top: var(--vertical-rhythm);
 }
 
 [class*="bleed"]>img {
