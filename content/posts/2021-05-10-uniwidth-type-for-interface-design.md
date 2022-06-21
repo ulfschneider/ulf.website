@@ -1,6 +1,6 @@
 ---
 title: Uniwidth typefaces for interface design
-tags: type
+tags: fonts
 ---
 Uniwidth is not the same as monospace! Monospace is non-proportional, meaning each letter occupies the same amount of space. Uniwidth is proportionally spaced, meaning each letter occupies a different amount of space, but the space for each letter is the same across all font-weights and font-styles.
 

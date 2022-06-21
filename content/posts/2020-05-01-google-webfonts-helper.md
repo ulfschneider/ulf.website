@@ -1,6 +1,6 @@
 ---
 title: Google Webfonts Helper
-tags: [type, star]
+tags: [fonts, star]
 ---
 [Mario Ranftl](https://mranftl.com) has written the [Google Webfonts Helper](https://google-webfonts-helper.herokuapp.com/fonts), which makes self-hosting Google fonts as simple as it  can be. 
 

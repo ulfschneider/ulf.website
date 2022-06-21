@@ -1,7 +1,7 @@
 ---
 title: How we read
 refer: A List Apart article by Jason Santa Maria, Aug 5, 2014
-tags: type
+tags: fonts
 ---
 <blockquote>
 The term readability doesn´t ask simply "Can you read it?" or "How fast can you read it?" It also asks "Do you want to read it?"

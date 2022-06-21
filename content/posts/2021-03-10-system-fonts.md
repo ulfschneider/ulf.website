@@ -1,6 +1,6 @@
 ---
 title: System fonts
-tags: type
+tags: fonts
 ---
 Iain Bean writes in his article [<cite>System fonts don’t have to be ugly</cite>](https://iainbean.com/posts/2021/system-fonts-dont-have-to-be-ugly/) about system fonts vs. web fonts. He is giving an overview of available system fonts on different platforms, like Georgia, Charter, Palatino, Hoefler Text, San Francisco, and Segoe UI. That alone is valuable to know. In addition, Iain has a comprehensive list of reference links in the footer of his text, which by itself is a gem, especially 
 
