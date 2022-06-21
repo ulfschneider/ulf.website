@@ -1,6 +1,6 @@
 ---
 title: Die Pflanzen und ihre Rechte
-tags: star, journal
+tags: [star, journal]
 ---
 <figure class="bleed-right rg:split">
 <img src="/img/journal/die-pflanzen-und-ihre-rechte.jpg" alt="Book title of 'Die Pflanzen und ihre Rechte">
