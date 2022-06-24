@@ -432,7 +432,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
    <img src="/img/strael/clean-shell.jpg" alt="A hand with a paper tower cleaning the bottom bracket shell">
    <figcaption>Preparing the bottom bracket shell with isopropyl alcohol</figcaption>
    </figure>
-2. Tuck away the Di2 wires and push the plastic cover of the Rotor BB1 bottom bracket into the bottom bracket shell. Be careful with the Di2 wires. My first attempt was to install the Shimano Dura Ace Bottom Bracket but the plastic cover is a millimeter too wide in diameter which made it impossible for me to get it into past the Di2 wires into its place. The Rotor BB1 works just fine.
+2. Tuck away the Di2 wires and push the plastic cover of the Rotor BB1 bottom bracket into the bottom bracket shell. Be careful with the Di2 wires. My first attempt was to install the Shimano Dura-Ace Bottom Bracket but the plastic cover that would shield the axle is a millimeter too wide in diameter which made it impossible for me to get it  past the Di2 wires into its place. The Rotor BB1 plastic cover is ever so slightly smaller and therefore works just fine.
    <figure>
    <img src="/img/strael/insert-plastic-cover.jpg" alt="A hand holding the Rotor BB1 plastic cover aside of the bottom bracket shell">
    <figcaption>Insert the Rotor BB1 plastic cover</figcaption>
