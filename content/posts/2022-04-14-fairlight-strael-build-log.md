@@ -598,28 +598,53 @@ Repeat the steps for each brake hose.
 
 ## Wrap the handlebars
 
+### Tools
+- Scissors
+- Electrical Tape
+
+### Steps
 I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://youtu.be/5MzIiv7pewE){}. Because I´m using Pro Race Comfort Bartape with an adhesive silicone strip re-wrapping to get the perfect result is no issue. The tape could be a little bit longer. Unfortunately I cannot install the Wolf Tooth Bar End Plugs because they do not stay in place which might be because the bartape is a bit thicker. The plugs that come with the Pro Race Comfort bartape are working fine instead.
 
 <figure>
 <img src="/img/strael/wolf-tooth-bar-end-plugs.jpg" alt="A hand holding the Wolf Tooth Bar End Plugs">
-<figcaption>Unfortunately the Wolf Tooth Bar End Plags do not stay in place and I cannot use them</figcaption>
+<figcaption>Unfortunately the Wolf Tooth Bar End Plugs do not stay in place and I cannot use them</figcaption>
 </figure>
 
 ## Install the bell
+
+### Tools
+- 2.5 mm Hex Key
+
+### Steps
 
 I´m following @[<cite>Spurcycle Bell Install</cite>](https://vimeo.com/spurcycle/bellinstall){}.
 
 ## Install the bottle cages
 
+### Tools
+- 4 mm Hex Key
+
+### Steps
+
+Straight forward. The Strael frame comes with suitable cage bolts which even include spacers to mount a cage on top of the front derailleur clamp.
+
 <figure>
 <img src="/img/strael/bottle-cages.jpg" alt="A hand holding two King Cage titanium bottle cages">
-<figcaption>The King Cages</figcaption>
+<figcaption>The King Cages – they are satisfyingly light</figcaption>
 </figure>
 
 
 ## Protect the chainstay
 
-I´m using 3M Scotchgard Paint Protection Film
+### Tools
+- Scissors
+- Isopropyl Alcohol
+- Paper Towels
+
+### Steps
+
+1. Clean the chainstay with isopropyl alcoholl
+2. Cut a piece of 3M Scotchgard Paint Protection Film to the right size and apply it to the chainstay.
 
 <figure>
 <img src="/img/strael/protecting-the-chainstay.jpg" alt="A hand holding the 3M Film role	">
