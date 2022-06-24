@@ -598,7 +598,7 @@ Repeat the steps for each brake hose.
 
 ## Wrap the handlebars
 
-I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://youtu.be/5MzIiv7pewE){}. Because I´m using Pro Race Comfort Bartape with an adhesive silicone strip re-wrapping to get the perfect result is no issue. The tape could be a little bit longer. Unfortunately I cannot install the Wolf Tooth Bar End Plugs because they do not stay in place. The plugs that come with the Pro bartape are working fine instead.
+I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://youtu.be/5MzIiv7pewE){}. Because I´m using Pro Race Comfort Bartape with an adhesive silicone strip re-wrapping to get the perfect result is no issue. The tape could be a little bit longer. Unfortunately I cannot install the Wolf Tooth Bar End Plugs because they do not stay in place which might be because the bartape is a bit thicker. The plugs that come with the Pro Race Comfort bartape are working fine instead.
 
 <figure>
 <img src="/img/strael/wolf-tooth-bar-end-plugs.jpg" alt="A hand holding the Wolf Tooth Bar End Plugs">
