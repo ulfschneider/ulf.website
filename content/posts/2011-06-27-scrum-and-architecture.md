@@ -7,9 +7,7 @@ tags: [articles, agile]
 
 [[toc]] 
 
-Iterations
----
-Scrum is team-oriented and separates the delivery process into subsequent iterations, so-called Sprints. The question arises how a conceptual integer architecture, an architecture that is intuitively understandable for users, developers and operators, easy to use even after many iterations, can be achieved while the team is focusing on the microcosm and solution patterns of current iterations. 
+Scrum is team-oriented and separates the delivery process into subsequent iterations, so-called Sprints. The question arises how an architecture with conceptual integrity, an architecture that is intuitively understandable for users, developers and operators, an architecture that is easy to use even after many iterations, can be achieved while the team is focusing on the microcosm and the solution patterns of current iterations. 
 
 To achieve conceptual integrity, it has to be considered during the entire design and delivery process of a software solution. In this essay, you will find organizational and manual suggestions with the purpose to support conceptual integrity in the Scrum process. I will emphasize the role of the architect as an essential player with heavy responsibilities for the conceptual integrity of the software product.
 
