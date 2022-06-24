@@ -1,0 +1,19 @@
+---
+title: Fairlight Strael Learnings
+tags: [sports, strael]
+hero: /img/strael/strael-in-the-wild.jpg
+---
+A short summary of what I´ve learned from my [Fairlight Strael Build](/2022-04-14-fairlight-strael-build-log/).
+
+- **Ride quality:** The ride quality of the Strael frame is beautiful. The *tall* frame geometry fits me very well so that I can find exactly my correct position on the bike. The handling is stable, comfortable, and direct. At the same time it is not nervous or squishy. Once on the bike everything feels naturally. I´m not a racer and I wouldn´t want to change anything.
+- **Frame build quality:** The quality of the Strael frame is very high. It comes securely packaged, has a high quality finish and the tolerances are accurate. It´s a high quality product. 
+- **Shimano manuals:** The [Shimano technical manuals](https://si.shimano.com/#/en/search/Series?name=DURA-ACE%20DI2&generation=R9250&type=ROAD) are well made and have been of exceptional help while building up the bike.
+- **Shimano shifter reach:** The reach of the new Dura-Ace 9200 Shimano Dual Control Shifters is much longer than my old Sram Red Mechanical Shifters (for non-hydraulic rim brake). Even with the 7 mm shorter frame reach of the Strael (the Strael has 380 mm of reach while my old bike has 387 mm) I had to use a 10 mm shorter stem to compensate the reach of the Shimano shifters.
+- **Semi-synchronized shifting:** Shimano semi-synchronized shifting with a compensation of three gears up and down works perfect for me. I´m riding 32-48 on the front and a 30-11 cassette. The cassette gears are so tight that after switching a chainring a compensation jump of three sprockets provides in almost all cases the correct gear ratio. I was experimenting with a two-gear compensation which was not to my taste. I wouldn´t have expected that it makes such a big difference how many sprockets you let the system compensate for you. I also tried synchronized shift where you only shift up and down and the system will change the chainring automatically. I found that interesting but in the end the usage of the cassette was too limited in my view and letting the system decide when to switch chainrings was also not always what I liked.
+- **Di2 wire length:** When ordering the Di2 wires multiple times I ordered a little too short wires. E.g. to connect the two shifters with a wire through the handlebar I assumed a 650 mm wire for a 42 cm handlebar should be fine but I learned that is not ideal and changed that to a 700 mm wire. Especially as the Shimano manual recommends to have a *slack loop* near the shifter.  Yout get the final wire lengths I used for my 56T frame under my [wiring build notes](/2022-02-27-fairlight-strael-build-notes/#wiring).
+  <figure>
+  <img src="/img/strael/handlebar-di2-wire.jpg" alt="A Shimano Dual Control Shifter with removed rubber hood so that the ingoing Di2 wire is visible. The wire doesn´t go straight into the shifter but with a 2 cm loop.">
+  <figcaption>The <em>slack loop</em> Shimano recommends when connecting Di2 wires to shifters</figcaption>
+  </figure>
+- **Ergon SR Pro S/M:** The Ergon saddle works surprisingly well for me. It´s important to align the seating area with a water level horizontally. It´s the short area in the middle of the saddle where you end up seating. It´s not the entire saddle length. I used that same saddle in the past on a different bike but was not satisfied. Because during the Strael build the saddle was laying around I gave it another try and I think this time it works so well because I applied the leveling to the shorter seating area instead to the entire saddle length.
+- **Getting connected:** Because I´m writing about the build process kind people who have an interest in the Strael wrote back to me. I found those connections very satisfying. 
