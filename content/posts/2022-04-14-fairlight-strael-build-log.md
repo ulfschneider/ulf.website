@@ -1,7 +1,7 @@
 ---
 title: Fairlight Strael Build Log
 tags: [sports, articles, strael]
-abstract: A Log of my Fairlight Strael Build 
+abstract: A Log of my Fairlight Strael Build Process 
 hero: /img/strael/strael-3-0-parts.jpg
 ---
 
