@@ -677,7 +677,7 @@ Straight forward. The Strael frame comes with suitable cage bolts which even inc
 <tbody>
 <tr><td>Bottom Bracket Cups</td><td>40</td></tr>
 <tr><td>Brake Rotor Centerlock</td><td>40</td></tr>
-<tr><td>Calipers to to the fork or frame</td><td>6<div class="smaller no-wrap">max 6 - 8</div></td></tr>
+<tr><td>Calipers to the fork or frame</td><td>6<div class="smaller no-wrap">max 6 - 8</div></td></tr>
 <tr><td>Cassette to freehub body</td><td>40</td></tr>
 <tr><td>Compression bung</td><td>6<div class="smaller no-wrap">max 10</div></td></tr>
 <tr><td>Dual Control Lever clamp screw</td><td>4<div class="smaller no-wrap">max 6 - 8</div></td></tr></tr>
