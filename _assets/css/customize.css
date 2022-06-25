@@ -69,6 +69,7 @@ main>div>pre {
     padding: var(--space-d2) var(--space-d2) 0 0;
 }
 
+
 /* markdown-it toc */
 
 .anchor {
@@ -85,7 +86,7 @@ nav.table-of-contents::before {
 }
 
 nav.table-of-contents {
-    margin: var(--vertical-rhythm-plus) 0;
+    margin: var(--space-3) 0;
 }
 
 nav.table-of-contents a {
