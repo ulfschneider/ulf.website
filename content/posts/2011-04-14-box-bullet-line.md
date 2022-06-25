@@ -1,5 +1,5 @@
 ---
-title: The Box-Bullet-Line (BBL
+title: The Box-Bullet-Line (BBL)
 abstract: Many important aspects of software development are invisible. When creating software we work through different abstraction layers by analyzing symbols and writing code.
 tags: [articles, agile]
 ---
