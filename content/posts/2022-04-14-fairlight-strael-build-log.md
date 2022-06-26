@@ -1,11 +1,11 @@
 ---
-title: Fairlight Strael Build
-tags: [sports, articles]
-abstract: A Log of my Fairlight Strael Build 
+title: Fairlight Strael Build Log
+tags: [sports, articles, strael]
+abstract: A Log of my Fairlight Strael Build Process 
 hero: /img/strael/strael-3-0-parts.jpg
 ---
 
-You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a> which are the primer of this build. You get there the complete list of parts I´m using for this build.
+You might also be interested in my [Fairlight Strael Build Notes](/2022-02-27-fairlight-strael-build-notes/) which are the primer of this build. You get there the complete list of parts I´m using for this build.
 
 [[toc]]
 
@@ -432,7 +432,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
    <img src="/img/strael/clean-shell.jpg" alt="A hand with a paper tower cleaning the bottom bracket shell">
    <figcaption>Preparing the bottom bracket shell with isopropyl alcohol</figcaption>
    </figure>
-2. Tuck away the Di2 wires and push the plastic cover of the Rotor BB1 bottom bracket into the bottom bracket shell. Be careful with the Di2 wires. My first attempt was to install the Shimano Dura Ace Bottom Bracket but the plastic cover is a millimeter too wide in diameter which made it impossible for me to get it into past the Di2 wires into its place. The Rotor BB1 works just fine.
+2. Tuck away the Di2 wires and push the plastic cover of the Rotor BB1 bottom bracket into the bottom bracket shell. Be careful with the Di2 wires. My first attempt was to install the Shimano Dura-Ace Bottom Bracket but the plastic cover that would shield the axle is a millimeter too wide in diameter which made it impossible for me to get it  past the Di2 wires into its place. The Rotor BB1 plastic cover is ever so slightly smaller and therefore works just fine.
    <figure>
    <img src="/img/strael/insert-plastic-cover.jpg" alt="A hand holding the Rotor BB1 plastic cover aside of the bottom bracket shell">
    <figcaption>Insert the Rotor BB1 plastic cover</figcaption>
@@ -598,28 +598,53 @@ Repeat the steps for each brake hose.
 
 ## Wrap the handlebars
 
+### Tools
+- Scissors
+- Electrical Tape
+
+### Steps
 I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://youtu.be/5MzIiv7pewE){}. Because I´m using Pro Race Comfort Bartape with an adhesive silicone strip re-wrapping to get the perfect result is no issue. The tape could be a little bit longer. Unfortunately I cannot install the Wolf Tooth Bar End Plugs because they do not stay in place which might be because the bartape is a bit thicker. The plugs that come with the Pro Race Comfort bartape are working fine instead.
 
 <figure>
 <img src="/img/strael/wolf-tooth-bar-end-plugs.jpg" alt="A hand holding the Wolf Tooth Bar End Plugs">
-<figcaption>Unfortunately the Wolf Tooth Bar End Plags do not stay in place and I cannot use them</figcaption>
+<figcaption>Unfortunately the Wolf Tooth Bar End Plugs do not stay in place and I cannot use them</figcaption>
 </figure>
 
 ## Install the bell
+
+### Tools
+- 2.5 mm Hex Key
+
+### Steps
 
 I´m following @[<cite>Spurcycle Bell Install</cite>](https://vimeo.com/spurcycle/bellinstall){}.
 
 ## Install the bottle cages
 
+### Tools
+- 4 mm Hex Key
+
+### Steps
+
+Straight forward. The Strael frame comes with suitable cage bolts which even include spacers to mount a cage on top of the front derailleur clamp.
+
 <figure>
 <img src="/img/strael/bottle-cages.jpg" alt="A hand holding two King Cage titanium bottle cages">
-<figcaption>The King Cages</figcaption>
+<figcaption>The King Cages – they are satisfyingly light</figcaption>
 </figure>
 
 
 ## Protect the chainstay
 
-I´m using 3M Scotchgard Paint Protection Film
+### Tools
+- Scissors
+- Isopropyl Alcohol
+- Paper Towels
+
+### Steps
+
+1. Clean the chainstay with isopropyl alcoholl
+2. Cut a piece of 3M Scotchgard Paint Protection Film to the right size and apply it to the chainstay.
 
 <figure>
 <img src="/img/strael/protecting-the-chainstay.jpg" alt="A hand holding the 3M Film role	">
@@ -652,7 +677,7 @@ I´m using 3M Scotchgard Paint Protection Film
 <tbody>
 <tr><td>Bottom Bracket Cups</td><td>40</td></tr>
 <tr><td>Brake Rotor Centerlock</td><td>40</td></tr>
-<tr><td>Calipers to to the fork or frame</td><td>6<div class="smaller no-wrap">max 6 - 8</div></td></tr>
+<tr><td>Calipers to the fork or frame</td><td>6<div class="smaller no-wrap">max 6 - 8</div></td></tr>
 <tr><td>Cassette to freehub body</td><td>40</td></tr>
 <tr><td>Compression bung</td><td>6<div class="smaller no-wrap">max 10</div></td></tr>
 <tr><td>Dual Control Lever clamp screw</td><td>4<div class="smaller no-wrap">max 6 - 8</div></td></tr></tr>

@@ -7,9 +7,7 @@ tags: [articles, agile]
 
 [[toc]] 
 
-Iterations
----
-Scrum is team-oriented and separates the delivery process into subsequent iterations, so-called Sprints. The question arises how a conceptual integer architecture, an architecture that is intuitively understandable for users, developers and operators, easy to use even after many iterations, can be achieved while the team is focusing on the microcosm and solution patterns of current iterations. 
+Scrum is team-oriented and separates the delivery process into subsequent iterations, so-called Sprints. The question arises how an architecture with conceptual integrity, an architecture that is intuitively understandable for users, developers and operators, an architecture that is easy to use even after many iterations, can be achieved while the team is focusing on the microcosm and the solution patterns of current iterations. 
 
 To achieve conceptual integrity, it has to be considered during the entire design and delivery process of a software solution. In this essay, you will find organizational and manual suggestions with the purpose to support conceptual integrity in the Scrum process. I will emphasize the role of the architect as an essential player with heavy responsibilities for the conceptual integrity of the software product.
 
@@ -160,7 +158,7 @@ How important the knowledge of architectural goals are, can be seen in the follo
 <figcaption>Figure: The importance of architecture goals</figcaption>
 </figure>
 
-Sometimes an Architecture Overview Diagram is part of the Architecture Vision. The [Box-Bullet-Line]({{site.url}}/bbl) notation can be of help to draw the diagram and visualize process flows between architecture components.
+Sometimes an Architecture Overview Diagram is part of the Architecture Vision. The [Box-Bullet-Line]({{site.url}}/2011-04-14-box-bullet-line/) notation can be of help to draw the diagram and visualize process flows between architecture components.
 
 System Context Diagram
 ---
@@ -219,7 +217,7 @@ These resources give the fundamental limits that determine the performance of th
 As an example:
 2,500,000 data records need to be processed within one hour. Currently achieved value is 1,800,000.
 
-> To identify the critical limit, make it visible and establish an environment to measure continuously the current ability of the system to achieve the target, is a significant task for the architect.
+> The architet has to identify critical system limits, make them visible and establish an environment to measure continuously the current ability of the system to achieve the target.
 
 The achievement of the target should be checked and communicated daily. This information will give direction for the delivery team and will foster self-organization towards the completion of the objective.
 
@@ -227,11 +225,11 @@ Box-Bullet-Line (BBL)
 ---
 The Box-Bullet-Line diagram is a pragmatic way to visualize flows between components. It can be used to model the Architecture Overview (see above, Product Vision or Architecture Vision) or to model some details of the system.
 
-> The strength of the notation is, that it is intuitively understandable by the members of the project team so that the diagram can foster communication and is supporting a shared understanding of the inner system structure and behavior.
+> The notation is intuitively understandable by the members of the project team. It fosters communication and is supporting a shared understanding of the systems structure and behavior.
 
 Unlike the System Context diagram, which gives a black box perspective on the system, the BBL is a white box view. We want to understand what parts are essential and how the data and control flows between these parts.
 
-Please refer to [Box-Bullet-Line]({{site.url}}/bbl) to get more details.
+Please refer to [Box-Bullet-Line]({{site.url}}/2011-04-14-box-bullet-line/) to get more details.
 
 The BBL diagram can be used as a starting point for Storyboards and End-To-End-Skeletons.
 

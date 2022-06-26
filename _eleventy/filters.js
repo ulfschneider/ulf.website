@@ -58,6 +58,7 @@ module.exports = {
 
     modifiedDate: function (page) {
         let commitDate = ccd.commitDate(page.inputPath);
+        console.log(page.inputPath);
         if (commitDate) {
             return commitDate;
         } else {
