@@ -2,7 +2,7 @@ const CACHE_VERSION = 'v40'; //version is used to remove old caches
 
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
-const CSSCACHE = 'css';
+const CSSCACHE = 'css-1';
 const IMAGE = 'image';
 const FONT = 'font';
 const JSONCACHE = 'json';

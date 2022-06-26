@@ -9,8 +9,7 @@
     --heading-font-family: 'iA Writer Quattro', sans-serif;
     --form-font-family: 'iA Writer Quattro', sans-serif;
     --meta-font-family: 'iA Writer Quattro', sans-serif;
-    --mono-font-family: 'iA Writer Quattro', monospace;
-    --font-weight-bold: 700;
+    --mono-font-family: 'iA Writer Quattro', monospace;    
     --fs-h1: var(--fs-3);
     --fs-h2: var(--fs-1);
     --fs-h3: var(--fs);
@@ -209,8 +208,8 @@ ul[class^=cooklang-]>li::before {
 }
 
 .skip-link a {
-    color: var(--base-background);
-    outline-color: var(--base-background);
+    color: var(--neutral-4);
+    outline-color: var(--neutral-4);
 }
 
 .skip-link:focus-within {

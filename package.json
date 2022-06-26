@@ -22,7 +22,7 @@
         "autoprefixer": "^9.8.8",
         "cached-commit-date": "^0.5.1",
         "cheerio": "^1.0.0-rc.11",
-        "compose-css": "^28.3.0",
+        "compose-css": "^28.4.5",
         "concurrently": "^6.5.1",
         "cssnano": "^5.1.12",
         "dayjs": "^1.11.3",
@@ -66,7 +66,7 @@
         "postcss-import": "^12.0.1",
         "postcss-purgecss": "^2.0.3",
         "purgecss-from-html": "^2.2.0",
-        "sharp": "^0.28.3",
+        "sharp": "^0.30.7",
         "sizeof": "^1.0.0",
         "string-strip-html": "^4.5.1",
         "through2": "^4.0.2"
