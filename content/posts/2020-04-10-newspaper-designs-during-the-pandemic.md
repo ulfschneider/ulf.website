@@ -1,6 +1,5 @@
 ---
 title: Newspaper designs during the pandemic
-layout: image
 tags: [journal, design]
 ---
 
