@@ -15,7 +15,7 @@ const processingRoot = () => {
     console.log(`Processing root from ${SOURCE} into ${DEST}`);
     return src(SOURCE)
         .pipe(changed(DEST))
-        .pipe(gulpif(isManifest, replace(/{{site.themecolor}}/g, site.themecolor)))
+        .pipe(gulpif(isManifest, replace(/{{site.themeColor}}/g, site.themeColor)))
         .pipe(dest(DEST));
 };
 
