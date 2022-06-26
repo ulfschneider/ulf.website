@@ -17,12 +17,8 @@ const processingCSS = () => {
     return src(SOURCE)
         .pipe(postcss([
             postcssImport(),
-            postcssCustomMedia({
-                preserve: false
-            }),
-            postcssCustomProperties({
-                preserve: false
-            }),
+            postcssCustomMedia(),
+            postcssCustomProperties(),
             postcssCalc(),
             postcssPurgeCSS({
                 content: [
