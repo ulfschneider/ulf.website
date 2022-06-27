@@ -202,14 +202,14 @@ ul[class^=cooklang-]>li::before {
     transform: translateY(-100%);
     transition: transform .3s ease-out;
     background: var(--primary);
-    color: var(--base-background);
+    color: white;
     font-family: var(--meta-font-family);
     text-align: center;
 }
 
 .skip-link a {
-    color: var(--neutral-4);
-    outline-color: var(--neutral-4);
+    color: white;
+    outline-color: white;
 }
 
 .skip-link:focus-within {
