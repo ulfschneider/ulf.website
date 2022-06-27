@@ -241,8 +241,3 @@ ul[class^=cooklang-]>li::before {
     }
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        background: var(--neutral-5);
-    }
-}

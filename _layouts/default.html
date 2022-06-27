@@ -7,7 +7,7 @@
 
 {%- assign isArticle = tags | hasTag: "articles" -%}
 
-<body class="default break-word bg-neutral-5 d:bg-neutral-d5 flex-column{% if isArticle == true %} article{%-endif-%}">
+<body class="default break-word flex-column{% if isArticle == true %} article{%-endif-%}">
 	{% include header.html %}
 	<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
 		{% include hero.html %}
