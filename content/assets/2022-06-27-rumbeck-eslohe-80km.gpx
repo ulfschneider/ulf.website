@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- track-length = 80745 filtered ascend = 1204 plain-ascend = 2 cost=148626 energy=0.6kwh time=5h 47m 55s -->
+<!-- track-length = 80999 filtered ascend = 1204 plain-ascend = 8 cost=148093 energy=0.6kwh time=5h 48m 25s -->
 <gpx 
  xmlns="http://www.topografix.com/GPX/1/1" 
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -7,7 +7,7 @@
  version="1.1" 
  creator="BRouter-Web 0.18.0">
  <trk>
-  <name>Rumbeck Eslohe (80,7 km)</name>
+  <name>Rumbeck (81 km)</name>
   <trkseg>
    <trkpt lat="51.386011" lon="8.106819"><ele>256.5</ele></trkpt>
    <trkpt lat="51.386011" lon="8.106819"><ele>256.5</ele></trkpt>
@@ -2477,12 +2477,21 @@
    <trkpt lat="51.386764" lon="8.097902"><ele>260.25</ele></trkpt>
    <trkpt lat="51.386735" lon="8.098422"><ele>260.75</ele></trkpt>
    <trkpt lat="51.386729" lon="8.09851"><ele>261</ele></trkpt>
-   <trkpt lat="51.387979" lon="8.099355"><ele>246</ele></trkpt>
-   <trkpt lat="51.38787" lon="8.100084"><ele>247.75</ele></trkpt>
-   <trkpt lat="51.387773" lon="8.100658"><ele>248</ele></trkpt>
-   <trkpt lat="51.387335" lon="8.100377"><ele>252.75</ele></trkpt>
-   <trkpt lat="51.387223" lon="8.101038"><ele>254</ele></trkpt>
-   <trkpt lat="51.387223" lon="8.101038"><ele>254</ele></trkpt>
+   <trkpt lat="51.386617" lon="8.100109"><ele>262.25</ele></trkpt>
+   <trkpt lat="51.38657" lon="8.100951"><ele>263.25</ele></trkpt>
+   <trkpt lat="51.386559" lon="8.101366"><ele>263.75</ele></trkpt>
+   <trkpt lat="51.386561" lon="8.1018"><ele>264.25</ele></trkpt>
+   <trkpt lat="51.386584" lon="8.102243"><ele>264</ele></trkpt>
+   <trkpt lat="51.386622" lon="8.102694"><ele>264</ele></trkpt>
+   <trkpt lat="51.386761" lon="8.103901"><ele>262</ele></trkpt>
+   <trkpt lat="51.386819" lon="8.104539"><ele>260.5</ele></trkpt>
+   <trkpt lat="51.386841" lon="8.104926"><ele>259.75</ele></trkpt>
+   <trkpt lat="51.386852" lon="8.105262"><ele>258.25</ele></trkpt>
+   <trkpt lat="51.386856" lon="8.105653"><ele>256.5</ele></trkpt>
+   <trkpt lat="51.386852" lon="8.105815"><ele>255.75</ele></trkpt>
+   <trkpt lat="51.386456" lon="8.105902"><ele>259.75</ele></trkpt>
+   <trkpt lat="51.386318" lon="8.105914"><ele>261</ele></trkpt>
+   <trkpt lat="51.386215" lon="8.106216"><ele>259.5</ele></trkpt>
   </trkseg>
  </trk>
 </gpx>
