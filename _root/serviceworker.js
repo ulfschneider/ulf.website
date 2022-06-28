@@ -2,7 +2,7 @@ const CACHE_VERSION = 'v40'; //version is used to remove old caches
 
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
-const CSSCACHE = 'css-1';
+const CSSCACHE = 'css';
 const IMAGE = 'image';
 const FONT = 'font';
 const JSONCACHE = 'json';
@@ -12,7 +12,7 @@ const CACHE_NAME = 'cache';
 const SCRIPT_CACHE_NAME = `${SCRIPT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const FONT_CACHE_NAME = `${FONT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const IMAGE_CACHE_NAME = `${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
-const CSS_CACHE_NAME = `${CSSCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
+const CSS_CACHE_NAME = `${CSSCACHE}-${CACHE_NAME}-${CACHE_VERSION}-1`;
 const JSON_CACHE_NAME = `${JSONCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
 const SEARCH_CACHE_NAME = `${SEARCH}-${CACHE_NAME}-${CACHE_VERSION}`;
 const RUNTIME_CACHE_NAME = `${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;

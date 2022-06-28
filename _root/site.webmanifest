@@ -3,8 +3,6 @@
     "name": "Ulf Schneider",
     "short_name": "Ulf Schneider",
     "description": "",
-    "theme_color": "{{site.themeColor}}",
-    "background_color": "#ffffff",
     "start_url": "/",
     "scope": "/",
     "display": "minimal-ui",
