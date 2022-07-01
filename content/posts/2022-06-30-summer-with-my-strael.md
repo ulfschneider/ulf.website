@@ -1,5 +1,5 @@
 ---
-title: A sommer evening with my Strael
+title: A summer evening with my Strael
 tags: [sports, strael]
 layout: image
 ---
