@@ -79,7 +79,7 @@ main>div>pre {
 }
 
 nav.table-of-contents::before {
-    content: "Table of contents";
+    content: "Contents";
     display: block;
     font-weight: bold;
 }
