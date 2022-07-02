@@ -219,7 +219,7 @@ and when he tried to feel the place with one of his legs he drew it quickly back
 it he was overcome by a cold</p>    
 
 </div>
-<script src="/js/active-toc.js"></script>
+<script defer src="/js/active-toc.js"></script>
 <script>
 ActiveToc.init({tocContainer: '#toc'});
 </script>
