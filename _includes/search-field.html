@@ -1,68 +1,55 @@
 {%- if site.search and site.search.url -%}
-    {%- if onsubmit == nil or onsubmit == "" -%}
-        {%- assign onsubmit = "submitQuery(event);"%}
-    {%- endif -%}
-    {%- if focus -%}
-        {%- assign autofocus = "autofocus" -%}
-    {%- endif -%}
-    <form onsubmit="{{onsubmit}}">
-        {%- if site.search.kbd -%}
-            <label id="search-label" class="base-color" for="search-query">Search <em>{{site.name}},</em> press <kbd class="inline">{{site.search.kbd}}</kbd> to focus:</label>
-        {%- else -%}
-            <label id="search-label" class="base-color" for="search-query">Search <em>{{site.name}}</em>:</label>
-        {%- endif -%}
-        <div class="flex mxw-rg mry-d2">
-            <input id="search-query" {{autofocus}} type="text" class="flex-grow-1 align-stretch" type="text"/>
-            <input type="submit" id="search-submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="Search"/>
-        </div>
-        <details>
-            <summary>Search help</summary>
-            <dl class="mr-0 pdy small brb">
-                <dt>
-                    <code>foo*</code>
-                </dt>
-                <dd>Will match documents with words <em>beginning</em> with “foo”.</dd>
-                <dt>
-                    <code>foo bar</code>
-                </dt>
-                <dd>Will match documents that contain “foo” <em>or</em> “bar”.</dd>
-                <dt>
-                    <code>+foo bar -baz</code>
-                </dt>
-                <dd>Will match documents that <em>must</em> contain “foo”, <em>might</em> contain “bar” and <em>must not</em> contain “baz”.</dd>
-                <dt>
-                    <code>foo~1</code>
-                </dt>
-                <dd>Will match “boo”, as it requires a single (~1) edit (replacing “f” with “b”), but “boot” would not as it also requires an additional “t” at the end.</dd>
-            </dl>
-        </details>
-    </form>
+{%- if onsubmit == nil or onsubmit == "" -%}
+{%- assign onsubmit = "submitQuery(event);"%}
+{%- endif -%}
+{%- if focus -%}
+{%- assign autofocus = "autofocus" -%}
+{%- endif -%}
+<form onsubmit="{{onsubmit}}">
+    <label id="search-label" class="base-color" for="search-query">Search <em>{{site.name}}</em>:</label>
+    <div class="flex mxw-rg mry-d2">
+        <input id="search-query" {{autofocus}} type="text" class="flex-grow-1 align-stretch" type="text" />
+        <input type="submit" id="search-submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;"
+            value="Search" />
+    </div>
+    <details>
+        <summary>Search help</summary>
+        <dl class="mr-0 pdy small brb">
+            <dt>
+                <code>foo*</code>
+            </dt>
+            <dd>Will match documents with words <em>beginning</em> with “foo”.</dd>
+            <dt>
+                <code>foo bar</code>
+            </dt>
+            <dd>Will match documents that contain “foo” <em>or</em> “bar”.</dd>
+            <dt>
+                <code>+foo bar -baz</code>
+            </dt>
+            <dd>Will match documents that <em>must</em> contain “foo”, <em>might</em> contain “bar” and <em>must
+                    not</em> contain “baz”.</dd>
+            <dt>
+                <code>foo~1</code>
+            </dt>
+            <dd>Will match “boo”, as it requires a single (~1) edit (replacing “f” with “b”), but “boot” would not as it
+                also requires an additional “t” at the end.</dd>
+        </dl>
+    </details>
+</form>
 
-    <script>
-        let keylessLabel = 'Search <em>{{site.name}}</em>:';
-        let keyLabel = keylessLabel;
-        let key = '{{site.search.kbd}}';
-        if (key) {
-            keyLabel = 'Search <em>{{site.name}},</em> press <kbd class="inline">{{site.search.kbd}}</kbd> to focus:'
+<script>
+    let query = document.querySelector('#search-query');
+
+    function submitQuery(event) {
+        event.preventDefault();
+        let query = event
+            .target['search-query']
+            .value;
+        if (query && query.trim()) {
+            location.href = '{{site.search.url}}?query=' + encodeURIComponent(query.trim());
+        } else {
+            location.href = '{{site.search.url}}';
         }
-        let query = document.querySelector('#search-query');
-        let label = document.querySelector('#search-label');
-        query.addEventListener('focus', event => {
-            label.innerHTML = keylessLabel;
-        });
-        query.addEventListener('blur', event => {
-            label.innerHTML = keyLabel;
-        });
-        function submitQuery(event) {
-            event.preventDefault();
-            let query = event
-                .target['search-query']
-                .value;
-            if (query && query.trim()) {
-                location.href = '{{site.search.url}}?query=' + encodeURIComponent(query.trim());
-            } else {
-                location.href = '{{site.search.url}}';
-            }
-        }
-    </script>
+    }
+</script>
 {%- endif -%}

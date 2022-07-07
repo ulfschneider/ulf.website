@@ -201,13 +201,16 @@ permalink: '{{site.search.url}}'
 
     function maintainInputState() {
         let submit = document.getElementById(SEARCH_SUBMIT_ID);
-        if (searchIndex && friendlyMap) {
-            submit.disabled = false;
-        } else {
-            submit.disabled = true;
+        if (submit) {
+            if (lunr && searchIndex && friendlyMap) {
+                submit.disabled = false;
+            } else {
+                submit.disabled = true;
+            }
         }
     }
 
+    maintainInputState();
     addEventListener('load', function (event) {
         maintainInputState();
         let query = getParameterByName('query');
