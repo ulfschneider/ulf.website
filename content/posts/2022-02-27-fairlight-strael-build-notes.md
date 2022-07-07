@@ -108,7 +108,7 @@ There is one thing left: *the weight of a steel frame.* The frame of the current
 
 ## The groupset
 
-My initial plan was to have a mechanical groupset on the bike because I dislike proper battery charging just to shift gears. Also, the environmental impact of batteries is something I prefer to avoid. From the very long term perspective, there might be a reliability drawback of electronic shifting: Would a 15-year-old electronic groupset still perform as well as a 15-year-old mechanical groupset? At least the battery (or batteries) need to be replaced. The derailleurs of electronic groupsets are much more complex than mechanical ones, so there is a greater chance of something breaking.
+My initial plan was to have a mechanical groupset on the bike because I dislike battery charging just to shift gears. Also, the environmental impact of batteries is something I prefer to avoid. From the very long term perspective, there might be a reliability drawback of electronic shifting: Would a 15-year-old electronic groupset still perform as well as a 15-year-old mechanical groupset? At least the battery (or batteries) need to be replaced. The derailleurs of electronic groupsets are much more complex than mechanical ones, so there is a greater chance of something breaking.
 
 With Shimano presenting their new Dura-Ace and Ultegra groupsets in 2021, the current first tier and second tier groupsets of Shimano and SRAM are shifting electronically, and nothing else. It seems there is no path into the future for mechanical shifting anymore. 
 
