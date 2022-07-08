@@ -1,6 +1,6 @@
 ---
 title: How to picture a bicycle
-tags: [sports, strael]
+tags: strael
 ---
 I´m planning to take pictures of my Fairlight Strael. Here are my thoughts to prepare the *shooting*:
 
@@ -15,6 +15,8 @@ I´m planning to take pictures of my Fairlight Strael. Here are my thoughts to p
   </div>
   <figcaption>My DIY minimalistic mobile bike stand(s)</figcaption>
   </figure>
+- Before taking the pictures set the chain into a desired gear and position the drive side crank arm horizontally pointing to the front
+- Maybe position the wheels with valves at the bottom
 - Have the camera prepared with lenses and charged batteries. A longer lense is better suited to frame the entire bike than a short lense.
 - An open aperture will be the correct camera setting for most of the photos
 - Think about what to picture, for me it is
@@ -32,8 +34,6 @@ I´m planning to take pictures of my Fairlight Strael. Here are my thoughts to p
 	- Derailleurs
 	- Calipers
 	- Experiment at the location and move around, maybe you get additional ideas
-- Before taking the pictures set the chain into a desired gear and position the drive side crank arm horizontally pointing to the front
-- Maybe position the wheels with valves at the bottom
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uSaXT4kpunE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
