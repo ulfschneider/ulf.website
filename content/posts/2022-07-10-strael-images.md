@@ -32,16 +32,17 @@ subtitle: My Strael without its rider
 </figure>
 
 <figure class="bleed rg:split">
-<img src="/img/strael/strael-part-of-back-wheel.jpg">
+<img src="/img/strael/strael-part-of-rear-wheel.jpg">
 <img src="/img/strael/strael-saddle.jpg">
 </figure>
 
 <figure class="bleed rg:split">
-<img src="/img/strael/strael-back-wheel.jpg">
+<img src="/img/strael/strael-rear-wheel.jpg">
 <img src="/img/strael/strael-front-wheel-and-frame.jpg">
 </figure>
 
-The images are a result of my first *bicycle photo session.* I did some [planning and preparation](/2022-07-08-how-to-picture-a-bicycle/), which I think helped a lot. Still, I´m lacking the routine to find the right viewing angles and to securely position the bike with a minimalistic bike stand. It is not as easy as it looks – like so often. E.g., you can see the *stopper-stones* at the wheels which should help the bike staying in place. Ideally the pictures should be taken without them. And by the way, the chain could be one or two links longer.
+The images are a result of my first *bicycle photo session.* I did some [planning and preparation](/2022-07-08-how-to-picture-a-bicycle/), which I think helped a lot. Still, I´m lacking the routine to find the right viewing angles and to securely position the bike with a minimalistic bike stand. It is not as easy as it looks – like so often. E.g., you can see the *stopper-stones* at the wheels which should help the bike staying in place. Ideally the pictures should be taken without them. 
 
-I have been using Adobe Ligthroom with the Cinema Preset CP11 to edit the pictures.
+And by the way, the chain could be one or two links longer.
+
 
