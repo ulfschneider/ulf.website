@@ -680,7 +680,7 @@ Straight forward. The Strael frame comes with suitable cage bolts which even inc
 <tr><td>Calipers to the fork or frame</td><td>6<div class="smaller no-wrap">max 6 - 8</div></td></tr>
 <tr><td>Cassette to freehub body</td><td>40</td></tr>
 <tr><td>Compression bung</td><td>6<div class="smaller no-wrap">max 10</div></td></tr>
-<tr><td>Dual Control Lever clamp screw</td><td>4<div class="smaller no-wrap">max 6 - 8</div></td></tr></tr>
+<tr><td>Dual Control Lever clamp screw</td><td>5<div class="smaller no-wrap">max 6 - 8</div></td></tr></tr>
 <tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<div class="smaller no-wrap">max 5 - 6</div></td></tr>
 <tr><td>Front derailleur clamp screw to mount the clamp to the frame</td><td>5<div class="smaller no-wrap">max 5 - 7</div></td></tr>
 <tr><td>Front derailleur fixing screw to attach the derailleur to the clamp band</td><td>5<div class="smaller no-wrap">max 5 - 7</div></td></tr>
