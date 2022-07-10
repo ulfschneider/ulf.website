@@ -3,6 +3,7 @@ const path = require('path');
 const ccd = require('cached-commit-date');
 const utils = require('./utils.js');
 const site = require('../_data/site.js');
+const { data } = require('cheerio/lib/api/attributes.js');
 
 let colorMap;
 
@@ -117,13 +118,22 @@ module.exports = {
     firstImage: function (collection) {
         let result = [];
         for (let item of collection) {
-            let img = utils.firstImageTag(item.templateContent);
-            if (img) {
-                let src = utils.clearResponsive(utils.srcAttr(img));
+            let src;
+            let alt;
+            if (item.data.hero) {
+                src = utils.clearResponsive(item.data.hero);
+                if (item.data.herocaption) {
+                    alt = item.data.herocaption;
+                }
+            } else {
+                let img = utils.firstImageTag(item.templateContent);
+                src = utils.clearResponsive(utils.srcAttr(img));
+                alt = utils.altAttr(img);
+            }
+            if (src) {
                 let extname = path.extname(src);
                 let stem = path.basename(src, extname);
                 let dirname = path.dirname(src);
-                let alt = utils.altAttr(img);
                 let humanDate = utils.humanDate(item.date);
                 let dimensions;
                 try {
@@ -159,7 +169,7 @@ module.exports = {
     responsiveHero: function (src, alt) {
         let clearSrc = utils.clearResponsive(src);
 
-        let img = `<img src="${clearSrc}" ${alt ? 'alt="'+alt+'"' : 'alt=""'} class="w-100 h-unset fit-cover fit-center" style="${utils.imgAspectRatio(clearSrc)}" ${utils.imgSizeHint(clearSrc)} loading="eager">`;
+        let img = `<img src="${clearSrc}" ${alt ? 'alt="' + alt + '"' : 'alt=""'} class="w-100 h-unset fit-cover fit-center" style="${utils.imgAspectRatio(clearSrc)}" ${utils.imgSizeHint(clearSrc)} loading="eager">`;
         if (utils.isResponsive(src)) {
             let extname = path.extname(clearSrc);
             let stem = path.basename(clearSrc, extname);
