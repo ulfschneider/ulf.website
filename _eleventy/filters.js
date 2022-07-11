@@ -127,8 +127,10 @@ module.exports = {
                 }
             } else {
                 let img = utils.firstImageTag(item.templateContent);
-                src = utils.clearResponsive(utils.srcAttr(img));
-                alt = utils.altAttr(img);
+                if (img) {
+                    src = utils.clearResponsive(utils.srcAttr(img));
+                    alt = utils.altAttr(img);
+                }
             }
             if (src) {
                 let extname = path.extname(src);
