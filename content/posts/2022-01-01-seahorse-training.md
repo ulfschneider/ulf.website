@@ -52,5 +52,19 @@ updated: 2022-03-07
 	<p>Then we went into a different pool for ring diving and that is a big fun, because with his goggles Emil is like a fish in the water when reaching for a ring.</p></dd>
 	<dt>14 May 2022</dt>
 	<dd>Emil is now pretty good at swimming 50 meters and diving for rings. The only thing we have to work on is to breath out into the water. I think that´s asking a lot from a 6 year old but the seahorse badge requires it. So we are now working on that breathing rhythm.</dd>
+	<dt>7 August 2022</dt>
+	<dd>Emil has done it! It was not planned at that day. We went to the open air pool and because we have not been practicing much for the seahorse recently we made a <em>dry</em> run of the exam. It went so well that both of us were curious if the life guard would take the exam with Emil. The life guard was immediately ready for the endeavor – as well as Emil. The only slight difficulty which we didn´t practice for upfront was the diving. Emil was used to dive with goggles but in the exam the diving needs to happen without goggles (I was not aware). In the end also that one went well!
+	</dd>
+	<dd><figure>
+	<img src="/img/journal/seahorse-exam.jpg">
+	<img src="/img/journal/seahorse-exam-2.jpg">
+	<figcaption>Emil during the seahorse exam</figcaption>
+	</figure>
+	</dd>
+	<dd><figure>
+	<img src="/img/journal/seahorse-diploma.jpg">
+	<figcaption>The seahorse diploma. Congratulations Emil!</figcaption>
+	</figure>
+	</dd>
 </dl>
 </div>
