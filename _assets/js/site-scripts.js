@@ -1,12 +1,12 @@
 /* Service Worker */
 if (navigator.serviceWorker) {
-    navigator
-        .serviceWorker
-        .register('/serviceworker.js')
-        .catch(error => {
-            console.error(error);
-        });
-    addEventListener("load", function() {
+    addEventListener('load', function () {
+        navigator
+            .serviceWorker
+            .register('/serviceworker.js')
+            .catch(error => {
+                console.error(error);
+            });
         if (navigator.serviceWorker.controller) {
             navigator
                 .serviceWorker
@@ -15,6 +15,7 @@ if (navigator.serviceWorker) {
         }
     });
 }
+
 
 /* Back to top */
 function maintainBackToStartVisibility() {

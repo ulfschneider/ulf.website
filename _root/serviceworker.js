@@ -250,7 +250,7 @@ async function fetchAndCache(request, options) {
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/\/.*\.json$/i.test(url.pathname)) {
+            } else if (/\/.*\.(json|[web]manifest)$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: JSON_CACHE_NAME,
                     request: request,
