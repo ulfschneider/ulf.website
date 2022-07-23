@@ -15,7 +15,7 @@ The solution was described by Théo Attali on [stackoverflow](https://stackoverf
 -r
 : Allow recursive removal when a leading directory name is given.
 
---cached
+- - cached
 : Use this option to unstage and remove paths only from the index. Working tree files, whether modified or not, will be left alone.
 
 .
