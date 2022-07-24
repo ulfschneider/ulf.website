@@ -12,11 +12,11 @@ I accidentially committed a folder that is generated during each build automatic
 
 The solution was described by Théo Attali on [stackoverflow](https://stackoverflow.com/a/43142955) in 2017.The [git-rm documentation](https://git-scm.com/docs/git-rm) explains the used options:
 
--r
+`-r`
 : Allow recursive removal when a leading directory name is given.
 
-- - cached
+`-- cached`
 : Use this option to unstage and remove paths only from the index. Working tree files, whether modified or not, will be left alone.
 
-.
+`.`
 : All files
