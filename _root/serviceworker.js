@@ -232,6 +232,16 @@ async function fetchAndCache(request, options) {
         //we have no cache and therefore have
         //to fetch a response from the network
         log(`Responding from network ${url}`);
+    }  for (let n of NO_CACHE_URLS) {
+        if (n instanceof RegExp) {
+            if (n.test(url.pathname)) {
+                log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
+                return false;
+            }
+        } else if (n == url.pathname) {
+            log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
+            return false;
+        }
     }
     return fetch(request)
         .then(async responseFromNetwork => {
@@ -250,7 +260,7 @@ async function fetchAndCache(request, options) {
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/\/.*\.json$/i.test(url.pathname)) {
+            } else if (/\/.*\.(json|[web]manifest)$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: JSON_CACHE_NAME,
                     request: request,
@@ -377,9 +387,16 @@ async function trimCache({ cacheName, maxItems }) {
 
 function isValidToCache({ request, response }) {
     const url = new URL(request.url);
-    if (NO_CACHE_URLS.includes(url.pathname)) {
-        log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
-        return false;
+    for (let n of NO_CACHE_URLS) {
+        if (n instanceof RegExp) {
+            if (n.test(url.pathname + url.search)) {
+                log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
+                return false;
+            }
+        } else if (n == url.pathname + url.search) {
+            log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
+            return false;
+        }
     }
     if (/^\/browser-sync\//.test(url.pathname)) {
         log(`Refusing to cache because of browser-sync request: ${request.url}`);
