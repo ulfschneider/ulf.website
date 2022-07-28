@@ -22,13 +22,17 @@ const SERVE_HTML_CACHE_FIRST = false;
 const CACHE_FIRST_FOR_EXPIRED = true;
 const NO_REVALIDATE_WITHIN_MINUTES = 10;
 
+//maxAgeMinutes < 0: do not use the cache
+//maxAgeMinutes = 0: cache forever
+//maxAgeMinutes > 0: cache for the amount of minutes
+
 const CACHE_SETTINGS = {
 
     [SCRIPT_CACHE_NAME]: {
-        maxAgeMinutes: 0 //expire script never
+        maxAgeMinutes: 60 * 24 * 30 //expire scripts after 30 days
     },
     [FONT_CACHE_NAME]: {
-        maxAgeMinutes: 0 //expire fonts never
+        maxAgeMinutes: 60 * 24 * 300 //expire fonts after 300 days
     },
     [RUNTIME_CACHE_NAME]: {
         maxAgeMinutes: 60 * 24 //expire runtime entries after one day
@@ -58,7 +62,7 @@ const NO_CACHE_URLS = [
     '/rss.xml'
 ]
 
-const PRECACHE_URLS = [
+const PRE_CACHE_URLS = [
     OFFLINE_URL,
     '/',
     '/css/main.css',
@@ -143,7 +147,7 @@ function isHtmlRequest(request) {
 }
 
 async function preCache() {
-    for (let url of PRECACHE_URLS) {
+    for (let url of PRE_CACHE_URLS) {
         try {
             await fetchAndCache(makeURL(url));
         } catch (err) {
@@ -385,18 +389,55 @@ async function trimCache({ cacheName, maxItems }) {
     }
 }
 
-function isValidToCache({ request, response }) {
+function isPreCacheUrl({ request, response }) {
+    let url = new URL(request.url);
+ 
+    for (let p of PRE_CACHE_URLS) {
+        if (p instanceof RegExp) {
+            if (p.test(url.pathname + url.search)) {
+                log(`Pre-caching: ${request.url}`);
+                return true;
+            }
+        } else if (p == url.pathname + url.search) {
+            log(`Pre-caching: ${request.url}`);
+            return true;
+        }
+    }
+    return false;
+}
+ 
+function isValidToCache({ request, response, cacheName, options }) {
+    if (isPreCacheUrl({ request: request, response: response })) {
+        //pre cache urls are always valid to cahce
+        return true;
+    }
+ 
+    if (!options.maxAgeMinutes && CACHE_SETTINGS[cacheName]) {
+        options.maxAgeMinutes = CACHE_SETTINGS[cacheName].maxAgeMinutes;
+    }
+ 
+    if (options.maxAgeMinutes < 0) {
+        log(`Refusing to cache because ${cacheName} has maxAgeMinutes is negative: ${request.url}`)
+        return false;
+    }
+ 
+
     const url = new URL(request.url);
     for (let n of NO_CACHE_URLS) {
         if (n instanceof RegExp) {
             if (n.test(url.pathname + url.search)) {
                 log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
+ 
                 return false;
             }
         } else if (n == url.pathname + url.search) {
             log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
             return false;
         }
+    }
+    if (NO_CACHE_URLS.includes(url.pathname)) {
+        log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
+        return false;
     }
     if (/^\/browser-sync\//.test(url.pathname)) {
         log(`Refusing to cache because of browser-sync request: ${request.url}`);
@@ -420,18 +461,13 @@ function isValidToCache({ request, response }) {
     }
     return true;
 }
-
-//put the response into the cache 
+ 
+//put the response into the cache
 //if it is valid to cache
 async function stashInCache({ request, response, cacheName, options }) {
     options = options ? options : {};
     try {
-        if (isValidToCache({ request: request, response: response })) {
-
-            if (!options.maxAgeMinutes && CACHE_SETTINGS[cacheName]) {
-                options.maxAgeMinutes = CACHE_SETTINGS[cacheName].maxAgeMinutes;
-            }
-
+        if (isValidToCache({ request: request, response: response, cacheName: cacheName, options: options })) {
             let metaResponse = await maintainExpiration({ response: response, maxAgeMinutes: options.maxAgeMinutes })
             let cache = await caches.open(cacheName);
             log(`Putting into ${cacheName}: ${request.url}`);
