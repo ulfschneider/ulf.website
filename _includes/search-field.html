@@ -6,7 +6,7 @@
 {%- assign autofocus = "autofocus" -%}
 {%- endif -%}
 <form onsubmit="{{onsubmit}}">
-    <label id="search-label" class="base-color" for="search-query">Search <em>{{site.name}}</em>:</label>
+    <label id="search-label" class="base-color" for="search-query">Search <em>{{site.name}}</em></label>
     <div class="flex mxw-rg mry-d2">
         <input id="search-query" {{autofocus}} type="text" class="flex-grow-1 align-stretch" type="text" />
         <input type="submit" id="search-submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;"
