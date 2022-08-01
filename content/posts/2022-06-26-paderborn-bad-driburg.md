@@ -8,7 +8,7 @@ Road bike tour: 82.16 km and 1391 m up. A very beautiful ride. Calm streets most
 - [GPX Track](/assets/2022-06-26-paderborn-bad-driburg-82km.gpx)
 
 <figure>
-<img src="/img/sports/IMG_2528X.jpg" alt="A yellow corn field and blue sky with a few white clouds">
-<img src="/img/sports/IMG_2523X.jpg" alt="A dark green field with gray and cloudy sky">
-<img src="/img/sports/IMG_2521X.jpg" alt="A straigh road climbing up surrounded by fields and forrests">
+<img src="/img/routes/IMG_2528X.jpg" alt="A yellow corn field and blue sky with a few white clouds">
+<img src="/img/routes/IMG_2523X.jpg" alt="A dark green field with gray and cloudy sky">
+<img src="/img/routes/IMG_2521X.jpg" alt="A straigh road climbing up surrounded by fields and forrests">
 </figure>
