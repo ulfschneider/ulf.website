@@ -1,5 +1,5 @@
 {%- if hero != nil and hero != "" -%}
-<figure class="mry-0 mrx-auto {% if herocss != nil and herocss != ""%}{{herocss}}{%else%}mxw-rg{% endif %}">
+<figure class="mry-0 mrx-auto {% if herocss != nil and herocss != ""%}{{herocss}}{%else%}mxw-md{% endif %}">
     {{hero | responsiveHero: heroalt}}
     {%- if herocaption != nil and herocaption != "" -%}
     <figcaption class="small mrl-auto right">{{herocaption}}</figcaption>
