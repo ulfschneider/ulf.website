@@ -42,7 +42,7 @@ I want to explore this field, develop my skills and make better, *accessible* we
 
 ## What do I have to accept
 
-To imagine my future self as someone who is not so quick anymore is one thing, but it must be a different experience of not being able to see the contents of a page and still navigating the web. I don´t have that experience and it´s frightening me. Considering how many years it took me to develop a desired direction, an understanding and a style for my website designs, I have to accept that it takes probably years to develop the necessary skills to build accessible websites. If I can say so, I´m not a *native* in that field and I believe the results of my work will reveal that.
+To imagine my future self as someone who is not so quick anymore is one thing, but it must be a different experience of not being able to see the contents of a page and still navigating the web. I don´t have that experience and it´s frightening me. Considering how many years it took me to develop a desired direction, an understanding and a style for my website designs, I have to accept that it takes probably years to develop the necessary skills to build accessible websites. 
 
 ## What I want to do about it
 
