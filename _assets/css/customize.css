@@ -17,6 +17,8 @@
     --fs-h4: var(--fs);
 }
 
+@custom-media --outdent-breakpoint (min-width: 769px);
+
 
 p:not(blockquote p),
 td,
