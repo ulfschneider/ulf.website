@@ -1,6 +1,6 @@
 ---
 title: .gitignore an already committed folder
-tags: code
+tags: [code, shell]
 ---
 I accidentially committed a folder that is generated during each build automatically. It´s not necessary to have that folder under git control. To not have that folder tracked in the future anymore the following process can be applied:
 
