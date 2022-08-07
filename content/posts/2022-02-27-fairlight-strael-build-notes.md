@@ -4,7 +4,7 @@ tags: [sports, articles, strael]
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame. Here is my thought process for choosing the parts.
 hero: /img/strael/strael-3-0-top-tube.png
 herocaption: Fairlight Strael 3.0 Top Tube<br>Image taken from the Fairlight Strael 3.0 Lookbook
-updated: 2022-04-17
+outline: true
 ---
 
 [[toc]]

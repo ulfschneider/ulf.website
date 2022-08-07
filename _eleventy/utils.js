@@ -262,7 +262,8 @@ module.exports = {
             html: true,
             breaks: true,
             linkify: false,
-            typographer: true
+            typographer: true,
+            quotes: "„“‚‘"
         })
             .use(markdownItContainer)
             .use(markdownItAnchor, {

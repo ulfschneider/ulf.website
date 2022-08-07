@@ -18,6 +18,7 @@
 }
 
 @custom-media --outdent-breakpoint (min-width: 769px);
+@custom-media --outdent-outline-breakpoint (min-width: 850px);
 
 
 p:not(blockquote p),
