@@ -1,9 +1,9 @@
 :root {
-    --base-font-size: 18px;
-    --font-size-sm-breakpoint: 18px;
-    --font-size-rg-breakpoint: 19px;
-    --font-size-md-breakpoint: 19px;
-    --font-size-lg-breakpoint: 20px;
+    --base-font-size: 19px;
+    --font-size-sm-breakpoint: 19px;
+    --font-size-rg-breakpoint: 20px;
+    --font-size-md-breakpoint: 20px;
+    --font-size-lg-breakpoint: 21px;
     --font-family: 'iA Writer Quattro', sans-serif;
     --figcaption-font-family: 'iA Writer Quattro', sans-serif;
     --heading-font-family: 'iA Writer Quattro', sans-serif;
@@ -17,8 +17,8 @@
     --fs-h4: var(--fs);
 }
 
-@custom-media --outdent-breakpoint (min-width: 769px);
-@custom-media --outdent-outline-breakpoint (min-width: 850px);
+@custom-media --outdent-breakpoint (min-width: 801px);
+@custom-media --outdent-outline-breakpoint (min-width: 900px);
 
 
 p:not(blockquote p),

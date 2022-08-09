@@ -74,9 +74,11 @@ The purpose of the service must be clear to users at the start of using the serv
 
 Communicate the purpose of your service by telling your users
 
-- what your service does
-- why it does it
-- how it does it
-- who it´s for
+- *what* your service does
+- *why* it does it
+- *how* it does it
+- *who* it´s for
 
 ### A good service sets the expectations a user has of it
+
+A good service must clearly explain what is needed from the user to complete the service and what that user can expect from the service provider in return. This includes how long it will take how much it will cost or if there are restrictions on the types of people who can use the service.
