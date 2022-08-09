@@ -2,6 +2,8 @@
     "lang": "en",
     "name": "Ulf Schneider",
     "short_name": "Ulf Schneider",
+    "theme_color": "{{theme_color}}",
+    "background_color": "{{background_color}}",
     "description": "",
     "start_url": "/",
     "scope": "/",

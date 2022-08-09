@@ -1,7 +1,8 @@
 module.exports = {
     name: "ulf.codes",
     locale: "en",
-    themeColor: "",
+    theme_color: "#ebebeb",
+    background_color: '#ebebeb',
     url: "https://ulf.codes",
     buildTime: new Date(),
     imgMaxWidth: 1024,
