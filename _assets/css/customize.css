@@ -1,8 +1,8 @@
 :root {
     --base-font-size: 19px;
     --font-size-sm-breakpoint: 19px;
-    --font-size-rg-breakpoint: 20px;
-    --font-size-md-breakpoint: 20px;
+    --font-size-rg-breakpoint: 19px;
+    --font-size-md-breakpoint: 19px;
     --font-size-lg-breakpoint: 21px;
     --font-family: 'iA Writer Quattro', sans-serif;
     --figcaption-font-family: 'iA Writer Quattro', sans-serif;
