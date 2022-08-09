@@ -203,9 +203,9 @@ ul[class^=cooklang-]>li::before {
     top: 0;
     left: 0;
     right: 0;
-    transform: translateY(-100%);
+    transform: translateY(-110%);
     transition: transform .3s ease-out;
-    background: transparent;
+    background: var(--primary);
     color: white;
     font-family: var(--meta-font-family);
     text-align: center;
@@ -217,7 +217,6 @@ ul[class^=cooklang-]>li::before {
 }
 
 .skip-link:focus-within {
-    background: var(--primary);
     transform: translateY(0);
 }
 
