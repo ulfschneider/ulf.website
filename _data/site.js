@@ -4,6 +4,7 @@ module.exports = {
     theme_color: "#ebebeb",
     background_color: '#ebebeb',
     url: "https://ulf.codes",
+    base: "/",
     buildTime: new Date(),
     imgMaxWidth: 1024,
     imgMaxHeight: 700,

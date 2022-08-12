@@ -8,10 +8,10 @@ const postcssCalc = require('postcss-calc');
 const postcssPurgeCSS = require('@fullhuman/postcss-purgecss');
 const cssNano = require('cssnano');
 const site = require('../_data/site.js');
-
+const utils = require('../_eleventy/utils.js');
 
 const SOURCE = ['_assets/css/main.css', '_assets/css/compose.css'];
-const DEST = `${site.output}/css/`;
+const DEST = `${site.output}${utils.getBase()}css/`;
 
 const processingCSS = () => {
     console.log(`Processing CSS from ${SOURCE} into ${DEST}`);

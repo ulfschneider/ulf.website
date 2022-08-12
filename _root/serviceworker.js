@@ -1,5 +1,7 @@
 const CACHE_VERSION = 'v40'; //version is used to remove old caches
 
+const PREFIX = '{{trimBase}}' ? '{{trimBase}}-' : '';
+const IGNORE_CACHE_PATTERN = undefined; //must be a regular expression if defined
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
 const CSSCACHE = 'css';
@@ -9,13 +11,13 @@ const JSONCACHE = 'json';
 const SEARCH = 'search';
 const CACHE_NAME = 'cache';
 
-const SCRIPT_CACHE_NAME = `${SCRIPT}-${CACHE_NAME}-${CACHE_VERSION}`;
-const FONT_CACHE_NAME = `${FONT}-${CACHE_NAME}-${CACHE_VERSION}`;
-const IMAGE_CACHE_NAME = `${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
-const CSS_CACHE_NAME = `${CSSCACHE}-${CACHE_NAME}-${CACHE_VERSION}-5`;
-const JSON_CACHE_NAME = `${JSONCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
-const SEARCH_CACHE_NAME = `${SEARCH}-${CACHE_NAME}-${CACHE_VERSION}`;
-const RUNTIME_CACHE_NAME = `${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
+const SCRIPT_CACHE_NAME = `${PREFIX}${SCRIPT}-${CACHE_NAME}-${CACHE_VERSION}`;
+const FONT_CACHE_NAME = `${PREFIX}${FONT}-${CACHE_NAME}-${CACHE_VERSION}`;
+const IMAGE_CACHE_NAME = `${PREFIX}${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
+const CSS_CACHE_NAME = `${PREFIX}${CSSCACHE}-${CACHE_NAME}-${CACHE_VERSION}-5`;
+const JSON_CACHE_NAME = `${PREFIX}${JSONCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
+const SEARCH_CACHE_NAME = `${PREFIX}${SEARCH}-${CACHE_NAME}-${CACHE_VERSION}`;
+const RUNTIME_CACHE_NAME = `${PREFIX}${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
 const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME, JSON_CACHE_NAME, SEARCH_CACHE_NAME];
 
 const SERVE_HTML_CACHE_FIRST = false;
@@ -81,7 +83,7 @@ addEventListener('install', async event => {
 
 //remove old static caches on activate  
 addEventListener('activate', async event => {
-    const activate = async function() {
+    const activate = async function () {
         await clearOldCaches();
         await clients.claim(); //let this service worker set itself 
         //as the controller for all clients within its scope        
@@ -117,7 +119,7 @@ addEventListener("message", event => {
 addEventListener('fetch', event => {
     const request = event.request;
 
-    const handleEvent = async function() {
+    const handleEvent = async function () {
         if (isHtmlRequest(request)) {
             if (SERVE_HTML_CACHE_FIRST) {
                 return cacheFirst(event, { revalidate: true });
@@ -160,7 +162,18 @@ async function preCache() {
 async function clearOldCaches() {
     return caches
         .keys()
-        .then(cacheNames => cacheNames.filter(name => CACHE_NAMES.indexOf(name) == -1))
+        .then(cacheNames => cacheNames.filter(name => {
+            if (IGNORE_CACHE_PATTERN && IGNORE_CACHE_PATTERN.test(name) == false) {
+                //if the given cache name contains the ignore pattern, well, ignore it
+                return false;
+            }
+            if (name.indexOf(PREFIX) != 0) {
+                //if the given cache name does not start with PREFIX, ignore it
+                return false;
+            }
+            //if the cache name is not part of the cache names of this service workers, delete the cache
+            return CACHE_NAMES.indexOf(name) == -1;
+        }))
         .then(cacheNames => Promise.all(cacheNames.map(name => caches.delete(name))));
 }
 
@@ -236,7 +249,7 @@ async function fetchAndCache(request, options) {
         //we have no cache and therefore have
         //to fetch a response from the network
         log(`Responding from network ${url}`);
-    }  for (let n of NO_CACHE_URLS) {
+    } for (let n of NO_CACHE_URLS) {
         if (n instanceof RegExp) {
             if (n.test(url.pathname)) {
                 log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
@@ -338,7 +351,7 @@ function getDateTimestamp(response) {
 
 async function maintainExpiration({ response, maxAgeMinutes }) {
 
-    cloneHeaders = function(response) {
+    cloneHeaders = function (response) {
         let headers = new Headers();
         for (var kv of response.headers.entries()) {
             headers.append(kv[0], kv[1]);
@@ -346,7 +359,7 @@ async function maintainExpiration({ response, maxAgeMinutes }) {
         return headers;
     }
 
-    cloneResponse = async function(response) {
+    cloneResponse = async function (response) {
         try {
             let headers = cloneHeaders(response);
 
@@ -391,7 +404,7 @@ async function trimCache({ cacheName, maxItems }) {
 
 function isPreCacheUrl({ request, response }) {
     let url = new URL(request.url);
- 
+
     for (let p of PRE_CACHE_URLS) {
         if (p instanceof RegExp) {
             if (p.test(url.pathname + url.search)) {
@@ -405,29 +418,29 @@ function isPreCacheUrl({ request, response }) {
     }
     return false;
 }
- 
+
 function isValidToCache({ request, response, cacheName, options }) {
     if (isPreCacheUrl({ request: request, response: response })) {
         //pre cache urls are always valid to cahce
         return true;
     }
- 
+
     if (!options.maxAgeMinutes && CACHE_SETTINGS[cacheName]) {
         options.maxAgeMinutes = CACHE_SETTINGS[cacheName].maxAgeMinutes;
     }
- 
+
     if (options.maxAgeMinutes < 0) {
         log(`Refusing to cache because ${cacheName} has maxAgeMinutes is negative: ${request.url}`)
         return false;
     }
- 
+
 
     const url = new URL(request.url);
     for (let n of NO_CACHE_URLS) {
         if (n instanceof RegExp) {
             if (n.test(url.pathname + url.search)) {
                 log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
- 
+
                 return false;
             }
         } else if (n == url.pathname + url.search) {
@@ -461,7 +474,7 @@ function isValidToCache({ request, response, cacheName, options }) {
     }
     return true;
 }
- 
+
 //put the response into the cache
 //if it is valid to cache
 async function stashInCache({ request, response, cacheName, options }) {

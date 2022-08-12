@@ -6,8 +6,8 @@ const fs = require('fs');
 const path = require('path');
 const site = require('../_data/site.js');
 const utils = require('../_eleventy/utils.js');
-const SOURCE = `${site.input}/img/**/*`;
-const DEST = `${site.output}/img/`;
+const SOURCE = `${site.input}${utils.getBase()}img/**/*`;
+const DEST = `${site.output}${utils.getBase()}img/`;
 
 
 const MAX_WIDTH = site.imgMaxWidth;

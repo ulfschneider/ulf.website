@@ -306,5 +306,23 @@ module.exports = {
 
     stat: function (path) {
         return fs.statSync(path);
+    },
+
+    getTrimBase: function() {
+        let base = site.base;
+        if (base) {
+            return base.replace(/\//g, '');
+        } else {
+            return '';
+        }
+    },
+
+    getBase: () => {
+        let base = site.base;
+        if (base && base != '/') {
+            return `/${base.replace(/\//g, '')}/`;
+        } else {
+            return '/';
+        }
     }
 }
