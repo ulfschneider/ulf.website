@@ -5,27 +5,27 @@
     "theme_color": "{{theme_color}}",
     "background_color": "{{background_color}}",
     "description": "",
-    "start_url": "/",
-    "scope": "/",
+    "start_url": "{{base}}",
+    "scope": "{{base}}",
     "display": "minimal-ui",
     "orientation": "natural",
     "icons": [{
-            "src": "/favicon.ico",
+            "src": "{{base}}favicon.ico",
             "sizes": "48x48",
             "type": "image/x-icon"
         },
         {
-            "src": "/apple-touch-icon.png",
+            "src": "{{base}}apple-touch-icon.png",
             "sizes": "180x180",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "{{base}}android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png",
+            "src": "{{base}}android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
