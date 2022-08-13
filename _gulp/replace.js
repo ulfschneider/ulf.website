@@ -34,30 +34,32 @@ function replace() {
 
 
     return through.obj(function (file, encoding, callback) {
-        if (file.isStream()) {
-            for (let r of replacements) {
-                const replaceFunction = function (match) {
-                    log(file, r.search, r.replace);
-                    return r.replace;
+        if (['.js', '.webmanifest', '.json', '.html', '.css'].includes(file.extname)) {
+            if (file.isStream()) {
+                for (let r of replacements) {
+                    const replaceFunction = function (match) {
+                        log(file, r.search, r.replace);
+                        return r.replace;
+                    }
+                    file.contents = file.contents.pipe(rs(r.search, replaceFunction));
                 }
-                file.contents = file.contents.pipe(rs(r.search, replaceFunction));
-            }
 
-            return callback(null, file);
-        }
-        if (file.isBuffer()) {
-            let contents = String(file.contents);
-            for (let r of replacements) {
-                let idx = 0;
-                while (idx = contents.indexOf(r.search, idx) >= 0) {
-                    log(file, r.search, r.replace);
-                    idx = idx + r.replace.length;
-                    contents = contents.replace(r.search, r.replace);
+                return callback(null, file);
+            }
+            if (file.isBuffer()) {
+                let contents = String(file.contents);
+                for (let r of replacements) {
+                    let idx = 0;
+                    while (idx = contents.indexOf(r.search, idx) >= 0) {
+                        log(file, r.search, r.replace);
+                        idx = idx + r.replace.length;
+                        contents = contents.replace(r.search, r.replace);
+                    }
                 }
-            }
 
-            file.contents = Buffer.from(contents);
-            return callback(null, file);
+                file.contents = Buffer.from(contents);
+                return callback(null, file);
+            }
         }
 
         callback(null, file);
