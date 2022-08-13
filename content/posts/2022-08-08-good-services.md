@@ -6,7 +6,7 @@ draft: true
 ---
 [<cite>Good Services</cite>](https://good.services/home) is a book by Lou Down, who is the founder of The School of Good Services. Lou spent six years in the UK Government establishing the cross-government standards for good services. Did you know that about 80% of the cost of UK Government is spent on services? Of the 10,000 recorded services, some are over 200 years old. Again 60% of the cost of these services is spent on service failure – phone calls asking government how to do something, or pieces of casework where forms aren´t filled in correctly.
 
-I liked the book so much that I gave it a *star-rating.* How did I come to read this book? The UK Government is known by web folks because of their excellent [GOV.UK Design System](https://design-system.service.gov.uk/) which is a posterchild for this kind of work. 
+I liked the book so much that I gave it a *star-rating.* How did I come to read it? The UK Government is known by web folks because of their excellent [GOV.UK Web Design System](https://design-system.service.gov.uk/) which is a posterchild for this kind of work. 
 
 Lou Downe´s book is not about web design systems. It touches the web because todays services have to be designed to work well on the internet and for that reason Lou´s book is important for web people. Knowing about the GOV.UK Design System and knowing that Lou worked in the UK Government to define service standards was reason enough for me to be curious about the book. Lou´s book is also praised by Adam Silver who is one of the designers behind the GOV.UK Design System and who has written an excellent book on [<cite>Form Design Patterns</cite>](https://formdesignpatterns.com/). 
 

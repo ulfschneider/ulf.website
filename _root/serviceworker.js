@@ -54,8 +54,7 @@ const CACHE_SETTINGS = {
     }
 }
 
-//!!!! if you change the url, change it also in the URLS_TO_IGNORE in the offline page !!!!
-const OFFLINE_URL = '/offline/';
+const OFFLINE_URL = '{{offline}}';
 
 const NO_CACHE_URLS = [
     '/feed.xml/',

@@ -7,6 +7,8 @@ const postcssCustomProperties = require('postcss-custom-properties');
 const postcssCalc = require('postcss-calc');
 const postcssPurgeCSS = require('@fullhuman/postcss-purgecss');
 const cssNano = require('cssnano');
+
+const replace = require('./replace.js');
 const site = require('../_data/site.js');
 const utils = require('../_eleventy/utils.js');
 
@@ -37,6 +39,7 @@ const processingCSS = () => {
             }),
             cssNano()
         ]))
+        .pipe(replace())
         .pipe(dest(DEST));
 };
 

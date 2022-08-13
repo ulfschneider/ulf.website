@@ -1,17 +1,19 @@
 <table>
-    <caption><strong>Shortcuts to navigate <em>{{site.name}}</em> with the keyboard</strong></caption>
+    <caption>
+        <strong>Shortcuts to navigate <em>{{site.name}}</em> with the keyboard</strong>
+    </caption>
     <tr>
-        <th>Pressing key</th>
-        <th>will navigate you to</th>
+        <th>Navigate to</th>
+        <th>by pressing key</th>        
     </tr>
     {%- for nav in site.mainnav -%}
         {%- if nav.kbd != nil and nav.kbd != '' %}
             <tr>
                 <td>
-                    <kbd>{{nav.kbd}}</kbd>
+                    <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
                 </td>
                 <td>
-                    <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
+                    <kbd>{{nav.kbd}}</kbd>
                 </td>
             </tr>
         {%- endif -%}
@@ -20,19 +22,16 @@
         {%- if nav.kbd != nil and nav.kbd != '' %}
             <tr>
                 <td>
-                    <kbd>{{nav.kbd}}</kbd>
+                    <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
                 </td>
                 <td>
-                    <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
+                    <kbd>{{nav.kbd}}</kbd>
                 </td>
             </tr>
         {%- endif -%}
     {%- endfor -%}
     {%- if site.backToTop and site.backToTop.kbd and site.backToTop.id -%}
         <tr>
-            <td>
-                <kbd>{{site.backToTop.kbd}}</kbd>
-            </td>
             <td>
                 <a class="no-deco" href="#{{site.backToTop.id}}">
                     {%- if site.backToTop.label -%}
@@ -41,6 +40,9 @@
                         Back to Top
                     {%- endif -%}
                 </a>
+            </td>
+            <td>
+                <kbd>{{site.backToTop.kbd}}</kbd>
             </td>
         </tr>
     {%- endif -%}
