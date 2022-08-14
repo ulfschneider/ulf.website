@@ -10,6 +10,8 @@ const markdownItScrollTable = require('markdown-it-scrolltable');
 const markdownItAttrs = require('markdown-it-attrs');
 const markdownItFootnote = require('markdown-it-footnote');
 const markdownItMark = require('markdown-it-mark');
+const markdownItMathJax = require('markdown-it-mathjax3');
+const markdownItEmoji = require('markdown-it-emoji');
 const sizeOf = require('image-size');
 const cheerio = require('cheerio');
 const stripHtml = require('string-strip-html');
@@ -273,7 +275,7 @@ module.exports = {
                 permalinkBefore: false,
                 permalinkSpace: true
             })
-            .use(markdownItMark)
+            .use(markdownItMark)            
             .use(markdownItTableOfContents)
             .use(markdownItDefList)
             .use(markdownItScrollTable)
@@ -283,6 +285,8 @@ module.exports = {
             .use(markdownItFitMedia, {
                 imgDir: `./${site.input}`,
             })
+            .use(markdownItMathJax)
+            .use(markdownItEmoji)
             .use(markdownItCooklang);
 
 
