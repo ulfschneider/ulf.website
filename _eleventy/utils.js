@@ -275,7 +275,7 @@ module.exports = {
                 permalinkBefore: false,
                 permalinkSpace: true
             })
-            .use(markdownItMark)            
+            .use(markdownItMark)
             .use(markdownItTableOfContents)
             .use(markdownItDefList)
             .use(markdownItScrollTable)
@@ -285,7 +285,27 @@ module.exports = {
             .use(markdownItFitMedia, {
                 imgDir: `./${site.input}`,
             })
-            .use(markdownItMathJax)
+            .use(markdownItMathJax, {
+                options: {
+                    enableMenu: true,
+                    menuOptions: {
+                        settings: {
+                            assistiveMml: false,   // true to enable assitive MathML
+                            collapsible: true,   // true to enable collapsible math
+                            explorer: true,     // true to enable the expression explorer
+                            semantics: true     //put original format in <semantic> tag
+                        }
+                    },
+                    enableEnrichment: true,   // false to disable enrichment
+                    sre: {
+                        speech: 'none',         // or 'shallow', or 'deep'
+                        domain: 'mathspeak',    // speech rules domain
+                        style: 'default',       // speech rules style
+                        locale: 'en'            // the language to use (en, fr, es, de, it)
+                    },
+                    enrichError: (doc, math, err) => doc.enrichError(doc, math, err),  // function to call if enrichment fails
+                }
+            })
             .use(markdownItEmoji)
             .use(markdownItCooklang);
 
@@ -312,7 +332,7 @@ module.exports = {
         return fs.statSync(path);
     },
 
-    getTrimBase: function() {
+    getTrimBase: function () {
         let base = site.base;
         if (base) {
             return base.replace(/\//g, '');

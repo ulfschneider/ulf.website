@@ -35,8 +35,4 @@ to get the SVG:
 
 $$\sqrt{3x-1}+(1+x)^2$$
 
-
-
-
-
-
+That output as you see it is not accessible. markdown-it-mathjax3 can consume the MathJax configuration object but my takes of configuring accessibility support were not successful so far.
