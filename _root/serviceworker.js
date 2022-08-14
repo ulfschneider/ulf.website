@@ -248,17 +248,7 @@ async function fetchAndCache(request, options) {
         //we have no cache and therefore have
         //to fetch a response from the network
         log(`Responding from network ${url}`);
-    } for (let n of NO_CACHE_URLS) {
-        if (n instanceof RegExp) {
-            if (n.test(url.pathname)) {
-                log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
-                return false;
-            }
-        } else if (n == url.pathname) {
-            log(`Refusing to cache because of NO_CACHE_URL: ${request.url}`);
-            return false;
-        }
-    }
+    } 
     return fetch(request)
         .then(async responseFromNetwork => {
 
