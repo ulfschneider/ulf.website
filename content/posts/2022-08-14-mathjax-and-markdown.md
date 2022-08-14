@@ -1,5 +1,5 @@
 ---
-title: MathJax and Markdown on the server
+title: MathJax on the server with Markdown
 tags: code
 ---
 Eric Meyer^[See [Recreating “The Effects of Nuclear Weapons” for the Web](https://meyerweb.com/eric/thoughts/2022/08/09/recreating-the-effects-of-nuclear-weapons-for-the-web/)] made me aware of [<cite>MathJax</cite>](https://www.mathjax.org). On their site you find the claim:
