@@ -2,7 +2,7 @@
 title: MathJax on the server with Markdown
 tags: code
 ---
-Eric Meyer^[See [Recreating “The Effects of Nuclear Weapons” for the Web](https://meyerweb.com/eric/thoughts/2022/08/09/recreating-the-effects-of-nuclear-weapons-for-the-web/)] made me aware of [<cite>MathJax</cite>](https://www.mathjax.org). On their site you find the claim:
+Eric Meyer^[See [Recreating "The Effects of Nuclear Weapons" for the Web](https://meyerweb.com/eric/thoughts/2022/08/09/recreating-the-effects-of-nuclear-weapons-for-the-web/).] made me aware of [<cite>MathJax</cite>](https://www.mathjax.org). On their site you find the claim:
 
 <blockquote class="bleed-right">
 A JavaScript display engine for mathematics that works in all browsers. 
@@ -25,7 +25,7 @@ var md = require('markdown-it')(),
 md.use(mathjax3);
 ``` 
 
-You can then write in your Markdown 
+You can then write in your Markdown MatJax Tex syntax^[On PhysicsOverflow is a [MathJax basic tutorial and quick reference](https://www.physicsoverflow.org/15329/mathjax-basic-tutorial-and-quick-reference) that can serve as a quickstarter.]
 
 ```markdown
 $$\sqrt{3x-1}+(1+x)^2$$
@@ -36,3 +36,4 @@ to get the SVG:
 $$\sqrt{3x-1}+(1+x)^2$$
 
 That output as you see it is not accessible. markdown-it-mathjax3 can consume the MathJax configuration object but my takes of configuring accessibility support were not successful so far.
+
