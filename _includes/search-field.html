@@ -18,21 +18,21 @@
             <dt>
                 <code>foo*</code>
             </dt>
-            <dd>Will match documents with words <em>beginning</em> with “foo”.</dd>
+            <dd>Will match documents with words <em>beginning</em> with <q>foo</q>.</dd>
             <dt>
                 <code>foo bar</code>
             </dt>
-            <dd>Will match documents that contain “foo” <em>or</em> “bar”.</dd>
+            <dd>Will match documents that contain <q>foo</q> <em>or</em> <q>bar</q>.</dd>
             <dt>
                 <code>+foo bar -baz</code>
             </dt>
-            <dd>Will match documents that <em>must</em> contain “foo”, <em>might</em> contain “bar” and <em>must
-                    not</em> contain “baz”.</dd>
+            <dd>Will match documents that <em>must</em> contain <q>foo</q>, <em>might</em> contain <q>bar</q> and <em>must
+                    not</em> contain <q>baz</q>.</dd>
             <dt>
                 <code>foo~1</code>
             </dt>
-            <dd>Will match “boo”, as it requires a single (~1) edit (replacing “f” with “b”), but “boot” would not as it
-                also requires an additional “t” at the end.</dd>
+            <dd>Will match <q>boo</q>, as it requires a single (~1) edit (replacing <q>f</q> with <q>b</q>), but <q>boot</q> would not as it
+                also requires an additional <q>t</q> at the end.</dd>
         </dl>
     </details>
 </form>
