@@ -44,7 +44,7 @@ subtitle: Highlight the entries of your table of contents while scrolling
 
 </style>
 
-<div id="toc" class="meta">
+<div id="toc">
 <a href="/blog/tools/" class="mrb-2">ulf.codes</a>
 <a href="#one-morning">One morning</a>
 <a href="#he-thought">He thought</a>
