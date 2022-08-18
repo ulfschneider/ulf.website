@@ -5,7 +5,7 @@ draft: true
 tags: fonts
 ---
 <figure>
-<img src="/img/type/shake-typeface.jpg" alt="">
+<img src="/img/fonts/shake-typeface.jpg" alt="">
 <figcaption>Shake poster from <a href="https://writewithparkinsons.com">writewithparkinsons.com</figcaption>
 </figure>
 

@@ -13,7 +13,7 @@ The term readability doesn´t ask simply "Can you read it?" or "How fast can you
 Did you know, for example, upper parts of characters convey more information than their lower parts?
 
 <figure>
-<img src="/img/type/upper-and-lower-characters.png">
+<img src="/img/fonts/upper-and-lower-characters.png">
 <figcaption>Upper and lower parts of characters. Covering the lower part keeps the text readable, while covering the upper part makes it nearly impossible to read the text. Image taken from "<a href="https://alistapart.com/article/how-we-read/">How we read</a>."</figcaption>
 </figure>
 
