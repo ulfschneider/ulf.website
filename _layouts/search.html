@@ -44,11 +44,11 @@ permalink: '{{site.search.url}}'
             let friend = friendlyMap.get(entry.ref);
 
             let article = document.createElement('article');
-            article.classList = 'mry-vrplus md:bleed-left md:flex-row-reverse md:align-baseline';
+            article.classList = 'mry-vrplus lg:bleed-left lg:flex-row-reverse lg:align-baseline';
             parent.appendChild(article);
 
             let section = document.createElement('section');
-            section.classList = 'md:w-rg md:flex-shrink-0';
+            section.classList = 'lg:w-rg lg:flex-shrink-0';
             article.appendChild(section);
 
             if (friend.title && friend.title != 'notitle') {
@@ -89,7 +89,7 @@ permalink: '{{site.search.url}}'
 
             if (friend.date || (friend.tags.length && !friend.notags)) {
                 let aside = document.createElement('aside');
-                aside.classList = `meta md:fs-d1 md:pdr-1 md:mrl-auto md:right md:flex-column ${friend.starred
+                aside.classList = `meta lg:fs-d1 lg:pdr-1 lg:mrl-auto lg:right lg:flex-column ${friend.starred
                     ? friend.starred
                     : ''}`;
                 article.innerHTML += ' ';

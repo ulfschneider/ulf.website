@@ -25,9 +25,9 @@
 
     {%- assign count = count | plus: 1 -%}
 
-    <article class="mry-vrplus md:bleed-left md:flex-row-reverse md:align-baseline">
+    <article class="mry-vrplus lg:bleed-left lg:flex-row-reverse lg:align-baseline">
 
-        <section class="md:w-rg md:flex-shrink-0">
+        <section class="lg:w-rg lg:flex-shrink-0">
             {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
                 <h2 class="mry-0 fs lh-default">
                     <a href="{{p.url}}">
@@ -51,7 +51,7 @@
                 <a href="{{p.url}}">Read more</a>
             {%- endif -%}
         </section>
-        <aside class="meta md:fs-d1 md:pdr-1 md:mrl-auto md:right md:flex-column {{p.data.starred}}">
+        <aside class="meta lg:fs-d1 lg:pdr-1 lg:mrl-auto lg:right lg:flex-column {{p.data.starred}}">
             {% include date-tags.html posted: p.date tags: p.data.tags notags: p.data.notags %}            
         </aside>
     </article>

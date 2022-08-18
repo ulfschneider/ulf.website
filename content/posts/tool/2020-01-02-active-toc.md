@@ -2,7 +2,7 @@
 layout: blank
 title: active-toc
 tags: tools
-subtitle: Highlight your TOC entries while scrolling
+subtitle: Highlight the entries of your table of contents while scrolling
 ---
 
 <style>
@@ -39,12 +39,13 @@ subtitle: Highlight your TOC entries while scrolling
 
     .content {
         margin-left: 10rem;
+        max-width: var(--rg-width);
     }
 
 </style>
 
-<div id="toc" class="meta">
-<a href="/blog/tool/" class="mrb-2">ulf.codes</a>
+<div id="toc">
+<a href="/blog/tools/" class="mrb-2">ulf.codes</a>
 <a href="#one-morning">One morning</a>
 <a href="#he-thought">He thought</a>
 <a href="#gregor-then">Gregor then</a>
