@@ -10,7 +10,7 @@ I liked the book so much that I gave it a *star-rating.* How did I come to read 
 
 Lou Downe´s book is not about web design systems. It touches the web because todays services have to be designed to work well on the internet and for that reason Lou´s book is important for web people. Knowing about the GOV.UK Design System and knowing that Lou worked in the UK Government to define service standards was reason enough for me to be curious about the book. Lou´s book is also praised by Adam Silver who is one of the designers behind the GOV.UK Design System and who has written an excellent book on [<cite>Form Design Patterns</cite>](https://formdesignpatterns.com/). 
 
-Below are my notes about Good Services, which are mostly quotes from the book.
+Below are my notes about Good Services, which are mostly quotes from the book and help me to recall the content and to get a quick overview.
 
 [[toc]]
 
@@ -160,3 +160,22 @@ Enable collaboration and communication through:
 
 Because the design that occurs first is almost never the best possible, the prevailing system or concept may need to change. Therefore, flexibility of organizations is important to effective design.
 
+## A good service requires as few steps as possible to complete
+
+Regardless of whether we want to achieve something enjoyable like going on holiday or something less enjoyable like paying tax you want to get that thing as efficiently as possible.
+
+Every step in a service is a transitional moment. The difference between choosing and buying, or between buying and returning.
+
+<blockquote>
+The number of steps your service needs should be equal to the number of decisions your user has to make.
+<footer>Good Services</footer>
+</blockquote>
+
+It´s helpful to think about two types of services:
+
+- **Involved services:** where either more time, consideration or mindfulness is called for. Such services tend to have more and slower steps.
+- **Transactional services:** Need to be done quickly and with as less interaction as possible. Such services tend to have fewer and quicker steps.
+
+## A good service is consistent throughout
+
+The service should look and feel like one service throughout. The language should be consistent, as schould visual styles and interaction patterns.
