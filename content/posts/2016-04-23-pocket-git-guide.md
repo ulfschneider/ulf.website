@@ -169,7 +169,7 @@ A `git log` of commit messages should give an idea of how the project has evolve
 
 A properly formed commit subject line should complete the following sentence:
 
-> If applied, this commit will <code>&lt; your commit subject line&gt; </code>
+> If applied, this commit will `<your commit subject line>`
 
 The commit messages reveal whether a committer is a good collaborator or not.
 
@@ -677,7 +677,7 @@ git checkout <pathspec>
 git push [-u] <remote> <remote-branch-name>
 ```
 
-to push from current branch to remote branch, where <code>-u</code> can be used once to track the remote branch from the current branch. After setting the upstream with <code>-u</code>, it can be pushed and pulled from the current branch without specifying <code>&lt; remote&gt; </code> and <code>&lt; remote-branch-name&gt; </code>.
+to push from current branch to remote branch, where `-u` can be used once to track the remote branch from the current branch. After setting the upstream with `-u`, it can be pushed and pulled from the current branch without specifying `<remote>` and `<remote-branch-name>`.
 
 ### Pull from server
 
@@ -685,7 +685,7 @@ to push from current branch to remote branch, where <code>-u</code> can be used 
 git pull <remote> <remote-branch-name>
 ```
 
-to pull from remote branch into current branch. If remote branch tracking has been activated before via <code>-u</code> in a <code>git push</code>, it can be pulled from the remote branch without specifying <code>&lt; remote&gt; </code> and <code>&lt; remote-branch-name&gt; </code>.
+to pull from remote branch into current branch. If remote branch tracking has been activated before via `-u` in a `git push`, it can be pulled from the remote branch without specifying `<remote>` and `<remote-branch-name>`.
 
 ### Tell Git who you are
 
