@@ -75,15 +75,15 @@ git config [--global] user.email ["your email address"]
 
 Use the `--global` option to tell Git that the given configuration will be the default for all of your projects on your computer. After these settings have been made, your user data will be added to your commits. When you then push commits to a shared server, your name and email address will also appear on that server.
 
-Detect your configuration settings with `git config --list` .
+Detect your configuration settings with `git config --list`.
 
 ## Get help from Git
 
-You can type `git help <command>` to get access to user documentation about the specified `<command>` . To only get short info about the command syntax, use `git <command> -h` .
+You can type `git help <command>` to get access to user documentation about the specified `<command>`. To only get short info about the command syntax, use `git <command> -h`.
 
 ## Create a new local repository
 
-Move to the folder which should contain your project `cd /path/to/your/prj/` , then initialize the Git repository for the project with `git init` .
+Move to the folder which should contain your project `cd /path/to/your/prj/` , then initialize the Git repository for the project with `git init`.
 
 ## Status of your repository
 
@@ -113,7 +113,7 @@ While you are working, Git divides your content into three main sections. Your w
 
 ## Stage to tell Git what to refer to
 
-To prepare a snapshot of your current work, which will be stored in the Git repository, call `git add <pathspec>` .
+To prepare a snapshot of your current work, which will be stored in the Git repository, call `git add <pathspec>`.
 
 `<pathspec>` specifies the files to be put into the staging area (the index). Wildcards are allowed.
 
@@ -121,9 +121,9 @@ If a version of a file is not staged, Git doesn´t know how to refer to that ver
 
 If you omit the `<pathspec>` , use `git add --all` which will ensure all untracked files in your current project are being added to your staging area.
 
-The opposite of `git add` is `git reset <pathspec>` . With `git reset` you can un-stage contents.
+The opposite of `git add` is `git reset <pathspec>`. With `git reset` you can un-stage contents.
 
-If you created files or directories without staging them, and you want to get rid of them, use `git clean [-ifd]` .
+If you created files or directories without staging them, and you want to get rid of them, use `git clean [-ifd]`.
 
 `-i` show what would be done and clean files interactively.
 
@@ -139,21 +139,21 @@ Do not commit half-done, not-functioning work. Any commit should be a small solu
 
 Contents which have been staged must be committed to produce a snapshot of your current work in the Git repository. Any commit is self-contained, it does not only reference your current changes but everything which makes up the state of your current project at the time you are committing. This is because each commit contains a pointer to its direct predecessor, the parent commit. Beginning at the most recent commit, the _tip_, the list of commits is a sequence pointing to the past, defining your entire project at the current time.
 
-Commit with `git commit [-a] [-m "your commit message"]` .
+Commit with `git commit [-a] [-m "your commit message"]`.
 
 `-a` is a nice shorthand option even to stage content which has been modified or deleted without a previous `git add` command. New contents still need to be staged with the `git add` command. With `-m "your commit message"` you tell your co-workers and probably yourself why you made the commit.
 
-An even shorter form of committing, in that case, is `git commit -am "your commit message"` .
+An even shorter form of committing, in that case, is `git commit -am "your commit message"`.
 
-Here the option to stage modified and deleted contents and the option to provide a commit message are combined in one option `-am` . You can combine multiple options in a single one like here, the only restriction is that only the last option can take an argument, like the commit message.
+Here the option to stage modified and deleted contents and the option to provide a commit message are combined in one option `-am`. You can combine multiple options in a single one like here, the only restriction is that only the last option can take an argument, like the commit message.
 
-If you don´t specify a commit message when firing the commit command, an editor will be opened where you have to provide the commit message. You can configure the editor of your preference with `git config --global core.editor <editor-name>` .
+If you don´t specify a commit message when firing the commit command, an editor will be opened where you have to provide the commit message. You can configure the editor of your preference with `git config --global core.editor <editor-name>`.
 
-[help.github.com/articles/associating-text-editors-with-git](https://help.github.com/articles/associating-text-editors-with-git/) provides a brief guide to setting up several editors. To see the currently configured editor, type `git config [--global] core.editor` .
+[help.github.com/articles/associating-text-editors-with-git](https://help.github.com/articles/associating-text-editors-with-git/) provides a brief guide to setting up several editors. To see the currently configured editor, type `git config [--global] core.editor`.
 
-Once you configured your preferred editor, you can not only write your commit messages by using it, you can also edit all of your configurations easily with the command `git config [--global] --edit` .
+Once you configured your preferred editor, you can not only write your commit messages by using it, you can also edit all of your configurations easily with the command `git config [--global] --edit`.
 
-To see the history of commits use `git log` . The output of a `git log` can be filtered and formatted with `git log [--oneline] [--pretty] [<branch-name>]` .
+To see the history of commits use `git log`. The output of a `git log` can be filtered and formatted with `git log [--oneline] [--pretty] [<branch-name>]`.
 
 For example `git log --oneline` will display most recent commits organized into one single line per commit.
 
@@ -196,13 +196,13 @@ In other words, follow the seven rules of a great Git commit message
 
 ## Removing files
 
-To delete a file from the working copy and the staging index, use `git rm <pathspec>` .
+To delete a file from the working copy and the staging index, use `git rm <pathspec>`.
 
 `<pathspec>` describes the file or even files (wildcards allowed), which should be deleted. `git rm` will remove the file in your working copy and will stage the remove so that the removal can be committed in a subsequent commit. If you forgot to use `git rm` at first hand and instead removed the file with your usual remove command in the shell, the file will be removed from the working copy, but not from the staging index. In that case, you can even call `git rm <pathspec>` afterward, to have the file be removed from the index, as it is already removed from the file system.
 
 ## Renaming files
 
-If you rename a file in your command shell with `mv a.txt b.txt` , it will produce a similar situation as if you would remove a file with just the shell command `rm a.txt` and creating a new file `b.txt` . Git would still try to keep track of `a.txt` . To fix this, you would have to
+If you rename a file in your command shell with `mv a.txt b.txt` , it will produce a similar situation as if you would remove a file with just the shell command `rm a.txt` and creating a new file `b.txt`. Git would still try to keep track of `a.txt`. To fix this, you would have to
 
 ```shell
 git rm a.txt
@@ -288,7 +288,7 @@ Git has figured out a difference between your local branch and its counterpart, 
 
 Remote tracking branches are named _origin/<branch-name>_. Don´t checkout such a branch via `git checkout origin/<branch-name>` – instead, do `git checkout <branch-name>` to make the remote tracking branch a local branch.
 
-To see the history of commits in a branch-oriented tree format, use `git log --graph --oneline` .
+To see the history of commits in a branch-oriented tree format, use `git log --graph --oneline`.
 
 The `--graph` option will produce the branch tree, and the `--oneline` option leads to each commit being displayed in a single line of the tree structure.
 
@@ -296,7 +296,7 @@ The `--graph` option will produce the branch tree, and the `--oneline` option le
 
 `git diff` will indicate the differences between your working directory and your staging area.
 
-`git diff [<branch-name or commit]` compares your working directory with `<branch-name or commit>` .
+`git diff [<branch-name or commit]` compares your working directory with `<branch-name or commit>`.
 
 `git diff <older-commit> <newer-commit>` will indicate the differences between the two commits.
 
@@ -379,13 +379,13 @@ and put a _conflict marker_ into the file of the destination branch, indicating 
 
 ```
 
-To resolve the conflict, this entire section, including the angle brackets, needs to be edited and refactored into the final version you want to see in the file. After that, you can commit the merge with `commit -am "your merge commit message"` .
+To resolve the conflict, this entire section, including the angle brackets, needs to be edited and refactored into the final version you want to see in the file. After that, you can commit the merge with `commit -am "your merge commit message"`.
 
 ## Remove or rename a branch
 
-Sometimes you want to remove a branch, e.g., after all work is done and the branch has been merged into the master. In order to go ahead, use `git branch -d <branch-to-delete>` to remove your local branch. To remove a remote branch (refer to [Working with remotes to share with a team](#working-with-remotes-to-share-with-a-team)), use `git push origin --delete <branch-to-delete>` .
+Sometimes you want to remove a branch, e.g., after all work is done and the branch has been merged into the master. In order to go ahead, use `git branch -d <branch-to-delete>` to remove your local branch. To remove a remote branch (refer to [Working with remotes to share with a team](#working-with-remotes-to-share-with-a-team)), use `git push origin --delete <branch-to-delete>`.
 
-A rename of the current local branch can be achieved by `git branch -m <new-branch-name>` .
+A rename of the current local branch can be achieved by `git branch -m <new-branch-name>`.
 
 To have the renamed branch on the server, do
 
@@ -439,7 +439,7 @@ A remote may be on [GitHub](https://github.com) or on a self-hosted system you w
 
 ## Clone a remote repository to local
 
-On your local machine move to the folder under which the remote repository should be cloned `cd /path/to/parent/` . Then clone the remote repository into the parent `git clone <repo> [<new-folder-name>]` .
+On your local machine move to the folder under which the remote repository should be cloned `cd /path/to/parent/`. Then clone the remote repository into the parent `git clone <repo> [<new-folder-name>]`.
 
 `<new-folder-name>` is the optional folder name of the cloned project on your computer.
 
@@ -461,7 +461,7 @@ cd /path/to/your/repo
 git config http.sslVerify false
 ```
 
-As a global setting for your entire Git: `git config --global http.sslVerify false` .
+As a global setting for your entire Git: `git config --global http.sslVerify false`.
 
 Once you have cloned the remote to your computer, Git already configured the _origin_ for your project. You can check that by
 
@@ -474,23 +474,23 @@ which will display the _fetch_ and _push_ addresses being bound to the symbolic 
 
 ## Push data to remote
 
-If you are working on your local project and committed your changes to a branch you want to bring to the remote repository now; the general Git command format is `git push <remote> <remote-branch-name>` . This will push the contents of the local branch, your current working copy, into the `<remote-branch-name>` on the remote repository.
+If you are working on your local project and committed your changes to a branch you want to bring to the remote repository now; the general Git command format is `git push <remote> <remote-branch-name>`. This will push the contents of the local branch, your current working copy, into the `<remote-branch-name>` on the remote repository.
 
-Assuming you worked on a branch named _lazyload_ and are currently on that local branch, your command is `git push origin lazyload` .
+Assuming you worked on a branch named _lazyload_ and are currently on that local branch, your command is `git push origin lazyload`.
 
 As already mentioned, remote repositories do not have working copies or staging areas and no humans who will resolve merge conflicts. Therefore, if you push to a remote and Git can not merge with a simple _fast-forward_, Git will reject the push. The situation needs to be fixed by pulling down the changes from the remote and then trying to push again.
 
 The local branch names and the remote branch names are not related in Git. Even though they share the same name, Git doesn´t know that they logically represent the same piece of work. Therefore in each push, you have to tell Git to what branch on the remote you want to push. You can configure each local branch of your Git to _track_ its remote counterpart. Once you have done it for a branch, you can push and pull against the remote just by typing `git push` and `git pull` without further specifying the remote and remote branch name.
 
-Specify the tracking with `git push -u origin lazyload` or, generally `git push -u <remote> <remote-branch-name>` .
+Specify the tracking with `git push -u origin lazyload` or, generally `git push -u <remote> <remote-branch-name>`.
 
 `-u` (alternatively `--set-upstream` ) is the option which will set up the tracking relationship between your current local branch and the remote branch. You only need to do it once per local branch.
 
-A particular case of pushing is to remove a branch from the remote, as the removing of the local branch doesn´t remove the branch on the remote. The command goes `git push origin --delete <remote-branch-name>` .
+A particular case of pushing is to remove a branch from the remote, as the removing of the local branch doesn´t remove the branch on the remote. The command goes `git push origin --delete <remote-branch-name>`.
 
 ## Pull data from remote
 
-If you want to get the latest changes, e.g. from the _lazyload_ branch on the remote repository, into your local branch, call `git pull origin lazyload` or, in general, `git pull <remote> <remote-branch-name>` .
+If you want to get the latest changes, e.g. from the _lazyload_ branch on the remote repository, into your local branch, call `git pull origin lazyload` or, in general, `git pull <remote> <remote-branch-name>`.
 
 Git will automatically merge the remote changes into your local branch. In case of a merge conflict, resolve the conflict marker in your local branch, stage, commit your change and push to the remote.
 
