@@ -146,7 +146,7 @@ hr.footnotes-sep {
     width: var(--space-3);
     margin-right: auto;
     margin-left: 0;
-    border-top: var(--blockquote-border-width) solid var(--li-prefix-color);
+    border-top: var(--typographic-line-width) solid var(--li-prefix-color);
     margin-top: var(--mrt-h2);
     margin-bottom: var(--mrb-h2);
 }
