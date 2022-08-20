@@ -18,7 +18,7 @@ Below are my notes about Good Services, which are mostly quotes from the book an
 
 Services are the things that connect other things, like choosing a new car and having it delivered. In this sense a service is not a product – like the car in the previous example. *We barely notice them until we encounter something that stands out as good or bad.* They exist in the background by their nature. For the organizations that provide them, services are often barely more visible than they are for their users. Sometimes there are so many pieces to this puzzle, or they stretch across such a long period of time, that we struggle to see them as a whole. And yet it´s services that are the interface of so much of our experience of the world. From having children, getting married, moving house and, ultimately, death, services facilitate some of the most important moments in our lives.
 
-<blockquote class="bleed-right">
+<blockquote>
 A service is something that helps someone to do something
 <footer>Good Services</footer>
 </blockquote>
@@ -42,7 +42,7 @@ Your user defines what your service is
 
 A better service for users is generally a better service for an organization to supply. By not designing our services, we´re accepting that they will evolve to the conditions around them, regardless of whether or not that means a service meets user needs, is financially sustainable or achieves a certain outcome.
 
-<blockquote class="bleed-right">
+<blockquote>
 Good services are designed
 <footer>Good Services</footer>
 </blockquote>
@@ -110,7 +110,7 @@ Crucially though, changes to expected ways of working in your service require a 
 
 A good service helps the user to achieve a goal. This starts from the moment that a user is considering doing something to the moment they have achieved their goal, including any steps needed to support the user after they have reached their goal. 
 
-<blockquote class="bleed-right">
+<blockquote>
 … If you can´t make something self-evident, you at least need to make it self-explanatory… It doesn´t matter how many times I have to click, as long as each click is a mindless, unambiguous choice.
 <footer>Steve Krug</footer>
 </blockquote>

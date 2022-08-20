@@ -4,7 +4,7 @@ tags: code
 ---
 Eric Meyer^[See [Recreating "The Effects of Nuclear Weapons" for the Web](https://meyerweb.com/eric/thoughts/2022/08/09/recreating-the-effects-of-nuclear-weapons-for-the-web/).] made me aware of [<cite>MathJax</cite>](https://www.mathjax.org). On their site you find the claim:
 
-<blockquote class="bleed-right">
+<blockquote>
 A JavaScript display engine for mathematics that works in all browsers. 
 No more setup for readers. It just works.
 <footer><a href="https://www.mathjax.org">MathJax</a></footer>
