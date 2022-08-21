@@ -9,6 +9,10 @@ const replacements = [
         replace: site.theme_color
     },
     {
+        search: '{{dark_theme_color}}',
+        replace: site.dark_theme_color
+    },    
+    {
         search: '{{background_color}}',
         replace: site.background_color
     },

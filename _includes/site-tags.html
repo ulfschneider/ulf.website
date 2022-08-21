@@ -45,14 +45,14 @@
                         <span aria-current="page" >all content</span>
                     </li>
                 {%- else -%}
-                    <li class="inline-block mr-d2 pdy-d4 pdx-d2 bg-neutral-5 d:bg-neutral-d3 rounded no-wrap">
+                    <li class="inline-block mr-d2 pdy-d4 pdx-d2 bg-neutral-5 dk:bg-neutral-d3 rounded no-wrap">
                         <a class="no-deco" href="{{site.blog}}">all content</a>
                     </li>
                 {%- endif -%}
                 {%- for siteTag in currentTags -%}
                     {%- if siteTag == site.starTag -%}
                         {%- if tag != siteTag -%}
-                            <li class="inline-block mr-d2 bg-neutral-5 d:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap">
+                            <li class="inline-block mr-d2 bg-neutral-5 dk:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap">
                                 <a class="no-deco" href="{{siteTag | tagUrl}}">{{site.starTagSymbol}}</a>
                             </li>
                         {%- else -%}
@@ -65,7 +65,7 @@
                 {%- for siteTag in currentTags -%}
                     {%-if siteTag != site.starTag -%}
                         {%- if tag != siteTag -%}
-                            <li class="inline-block mr-d2 bg-neutral-5 d:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap">
+                            <li class="inline-block mr-d2 bg-neutral-5 dk:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap">
                                 <a class="no-deco" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
                             </li>
                         {%- else -%}
