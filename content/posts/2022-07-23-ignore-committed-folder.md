@@ -7,11 +7,12 @@ I accidentially committed a folder that is generated during each build automatic
 1. Commit the uncommitted changes in the repo 
 2. Edit `.gitignore` to ignore the folder
 3. Issue the following three git commands 
-    ```shell
-    git rm -r --cached .  
-    git add .  
-    git commit -m "Have working .gitignore"
-    ```
+    
+```shell
+git rm -r --cached .  
+git add .  
+git commit -m "Have working .gitignore"
+```
 
 The solution was described by Théo Attali on [stackoverflow](https://stackoverflow.com/a/43142955) in 2017.The [git-rm documentation](https://git-scm.com/docs/git-rm) explains the used options:
 
