@@ -11,7 +11,6 @@
     --meta-font-family: 'iA Writer Quattro', sans-serif;
     --mono-font-family: 'iA Writer Mono', 'iA Writer Quattro', monospace;    
     --font-weight-bold: 700;
-    --pre-code-horizontal-padding: var(--space);
     --fs-h1: var(--fs-3);
     --fs-h2: var(--fs-1);
     --fs-h3: var(--fs);
@@ -60,6 +59,7 @@ nav ul li:last-child {
 }
 
 main>div>pre {
+    --pre-code-horizontal-padding: var(--space);
     margin-left: calc(-1 * var(--pre-code-horizontal-padding));
     margin-right: calc(-1 * var(--pre-code-horizontal-padding));
 }
