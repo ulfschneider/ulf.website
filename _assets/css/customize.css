@@ -10,7 +10,8 @@
     --form-font-family: 'iA Writer Quattro', sans-serif;
     --meta-font-family: 'iA Writer Quattro', sans-serif;
     --mono-font-family: 'iA Writer Mono', 'iA Writer Quattro', monospace;    
-    --font-weight-bold: 600;
+    --font-weight-bold: 700;
+    --pre-code-horizontal-padding: var(--space);
     --fs-h1: var(--fs-3);
     --fs-h2: var(--fs-1);
     --fs-h3: var(--fs);
@@ -59,13 +60,13 @@ nav ul li:last-child {
 }
 
 main>div>pre {
-    width: auto;
-    margin-right: max(50% - 50vw + var(--bleed-padding), 50% - var(--bleed-width) / 2);
+    margin-left: calc(-1 * var(--pre-code-horizontal-padding));
+    margin-right: calc(-1 * var(--pre-code-horizontal-padding));
 }
 
 .article main>div>p:first-of-type::first-letter {
     font-size: 3.65rem;
-    /*was 5.95rem for 3 lines*/
+    /*would be 5.95rem for 3 lines*/
     font-weight: bold;
     float: left;
     line-height: .65;
