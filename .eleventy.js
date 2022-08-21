@@ -26,7 +26,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
 
     eleventyConfig.addPlugin(rss);
-    eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(syntaxHighlight, {
+        preAttributes: {     
+            // Added in 4.1.0 you can use callback functions too
+            "data-language": function({ language, content, options }) {
+              return language;
+            }
+          },
+          codeAttributes: {},
+    });
 
     return {
         dir: {

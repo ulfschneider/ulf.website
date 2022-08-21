@@ -64,6 +64,10 @@ main>div>pre {
     margin-right: calc(-1 * var(--pre-code-horizontal-padding));
 }
 
+main>div>pre[data-language]::before {
+    padding-left: var(--pre-code-horizontal-padding);
+}
+
 .article main>div>p:first-of-type::first-letter {
     font-size: 3.65rem;
     /*would be 5.95rem for 3 lines*/
