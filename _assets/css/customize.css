@@ -237,9 +237,16 @@ ul[class^=cooklang-]>li::before {
 }
 
 .tweet-bird {
-    margin-left: var(--horizontal-rhythm);
-    display: inline-flex;
-    align-self: center;
+    display: inline-flex;    
+    align-self: flex-end;
+    justify-self: end;
+    font-style: normal;
+
+}
+
+.tweet-bird::before {
+    content: "View on Twitter";    
+    margin-right: var(--space-d1);
 }
 
 .tweet-bird-icon {
@@ -248,6 +255,7 @@ ul[class^=cooklang-]>li::before {
     height: var(--space-1);
     background-size: contain;
     background-repeat: no-repeat;
+    vertical-align: text-bottom;
 }
 
 .tweet-footer {
