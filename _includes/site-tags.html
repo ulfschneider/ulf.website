@@ -5,23 +5,23 @@
         <ul class="mry-0 reset">
             {%- if site.tagColors and site.tagColors.length %}
                 {%- if tag == nil and page.url == site.blog -%}
-                    <li class="inline-block mr-d2 pdy-d4 pdx-d2 bg-base-color white rounded no-wrap">
-                        <span aria-current="page" >all content</span>
+                    <li class="inline-block mr-d2">
+                        <span class="pdy-d4 pdx-d2 bg-base-color white rounded no-wrap" aria-current="page" >all content</span>
                     </li>
                 {%- else -%}
-                    <li class="inline-block mr-d2 pdy-d4 pdx-d2 rounded no-wrap">
-                        <a style="color: inherit;" href="{{site.blog}}">all content</a>
+                    <li class="inline-block mr-d2">
+                        <a class="pdy-d4 pdx-d2 rounded no-wrap" style="color: inherit;" href="{{site.blog}}">all content</a>
                     </li>
                 {%- endif -%}
                 {%- for siteTag in currentTags -%}
                     {%- if siteTag == site.starTag %}
                         {%- if tag != siteTag -%}
-                            <li class="inline-block mr-d2 pdy-d4 pdx-d2 rounded no-wrap">
-                                <a style="color: {{siteTag | tagColor}}" href="{{siteTag | tagUrl}}">{{site.starTagSymbol}}</a>
+                            <li class="inline-block mr-d2">
+                                <a class="pdy-d4 pdx-d2 rounded no-wrap" style="color: {{siteTag | tagColor}}" href="{{siteTag | tagUrl}}">{{site.starTagSymbol}}</a>
                             </li>
                         {%- else -%}
-                            <li class="inline-block pdy-d4 pdx-d2 rounded mr-d2 no-wrap white" style="background: {{siteTag || tagColor}};">
-                                <span aria-current="page" >{{site.starTagSymbol}}</span>
+                            <li class="inline-block mr-d2" style="background: {{siteTag || tagColor}};">
+                                <span class="pdy-d4 pdx-d2 rounded no-wrap white" aria-current="page" >{{site.starTagSymbol}}</span>
                             </li>
                         {%- endif -%}
                     {%- endif -%}
@@ -29,35 +29,35 @@
                 {%- for siteTag in currentTags -%}
                     {%- if siteTag != site.starTag -%}
                         {%- if tag != siteTag -%}
-                            <li class="inline-block mr-d2 pdy-d4 pdx-d2 rounded no-wrap">
-                                <a style="color: {{siteTag | tagColor}}" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
+                            <li class="inline-block mr-d2">
+                                <a class="pdy-d4 pdx-d2 rounded no-wrap" style="color: {{siteTag | tagColor}}" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
                             </li>
                         {%- else -%}
-                            <li class="inline-block pdy-d4 pdx-d2 rounded mr-d2 no-wrap white" style="background: {{siteTag || tagColor}};">
-                                <span aria-current="page" >{{siteTag}}</span>
+                            <li class="inline-block mr-d2" style="background: {{siteTag || tagColor}};">
+                                <span class="pdy-d4 pdx-d2 rounded no-wrap white" aria-current="page" >{{siteTag}}</span>
                             </li>
                         {%- endif -%}
                     {%- endif -%}
                 {%- endfor -%}
             {%- else -%}
                 {%- if tag == nil and page.url == site.blog -%}
-                    <li class="inline-block mr-d2 bg-neutral-5 pdy-d4 pdx-d2 rounded bg-primary white no-wrap">
-                        <span aria-current="page" >all content</span>
+                    <li class="inline-block mr-d2">
+                        <span class="bg-neutral-5 pdy-d4 pdx-d2 rounded bg-primary white no-wrap" aria-current="page" >all content</span>
                     </li>
                 {%- else -%}
-                    <li class="inline-block mr-d2 pdy-d4 pdx-d2 bg-neutral-5 dk:bg-neutral-d3 rounded no-wrap">
-                        <a class="no-deco" href="{{site.blog}}">all content</a>
+                    <li class="inline-block mr-d2">
+                        <a class="no-deco pdy-d4 pdx-d2 bg-neutral-5 dk:bg-neutral-d3 rounded no-wrap" href="{{site.blog}}">all content</a>
                     </li>
                 {%- endif -%}
                 {%- for siteTag in currentTags -%}
                     {%- if siteTag == site.starTag -%}
                         {%- if tag != siteTag -%}
-                            <li class="inline-block mr-d2 bg-neutral-5 dk:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap">
-                                <a class="no-deco" href="{{siteTag | tagUrl}}">{{site.starTagSymbol}}</a>
+                            <li class="inline-block mr-d2">
+                                <a class="no-deco bg-neutral-5 dk:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap" href="{{siteTag | tagUrl}}">{{site.starTagSymbol}}</a>
                             </li>
                         {%- else -%}
-                            <li class="inline-block mr-d2 bg-primary white pdy-d4 pdx-d2 rounded no-wrap">
-                                <span aria-current="page" >{{site.starTagSymbol}}</span>
+                            <li class="inline-block mr-d2">
+                                <span class="bg-primary white pdy-d4 pdx-d2 rounded no-wrap" aria-current="page" >{{site.starTagSymbol}}</span>
                             </li>
                         {%- endif -%}
                     {%- endif -%}
@@ -65,12 +65,12 @@
                 {%- for siteTag in currentTags -%}
                     {%-if siteTag != site.starTag -%}
                         {%- if tag != siteTag -%}
-                            <li class="inline-block mr-d2 bg-neutral-5 dk:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap">
-                                <a class="no-deco" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
+                            <li class="inline-block mr-d2">
+                                <a class="no-deco bg-neutral-5 dk:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
                             </li>
                         {%- else -%}
-                            <li class="inline-block mr-d2 bg-primary white pdy-d4 pdx-d2 rounded no-wrap">
-                                <span aria-current="page" >{{siteTag}}</span>
+                            <li class="inline-block mr-d2">
+                                <span class="bg-primary white pdy-d4 pdx-d2 rounded no-wrap" aria-current="page" >{{siteTag}}</span>
                             </li>
                         {%- endif -%}
                     {%- endif -%}
