@@ -64,11 +64,6 @@ main>div>pre {
     margin-right: calc(-1 * var(--pre-code-horizontal-padding));
 }
 
-pre[data-language]::before {
-    position: absolute;
-    margin-top: calc(-1em - var(--pre-code-vertical-padding));
-}
-
 main>div>pre[data-language]::before {
     margin-left: var(--pre-code-horizontal-padding);
 }
