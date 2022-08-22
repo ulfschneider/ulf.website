@@ -212,12 +212,12 @@ ul[class^=cooklang-]>li::before {
 
 .tweet-header {
     display: flex;
-    gap: var(--space-d1);
 }
 
 .tweet-profile {
     display: inline-flex;
     align-self: center;
+    margin-right: var(--space-d1);
 }
 
 .tweet-profile img {
@@ -229,6 +229,7 @@ ul[class^=cooklang-]>li::before {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    margin-right: var(--space-d1);
 }
 
 .tweet-author-name {
