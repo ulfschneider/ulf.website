@@ -212,11 +212,10 @@ ul[class^=cooklang-]>li::before {
 
 .tweet-header {
     display: flex;
-    gap: var(--space);
+    gap: var(--space-d1);
 }
 
 .tweet-profile {
-    margin-right: var(--space);
     display: inline-flex;
     align-self: center;
 }
@@ -248,7 +247,6 @@ ul[class^=cooklang-]>li::before {
     height: var(--space-1);
     background-size: contain;
     background-repeat: no-repeat;
-    vertical-align: text-bottom;
 }
 
 .tweet-footer {
