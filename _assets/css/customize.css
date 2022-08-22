@@ -237,29 +237,22 @@ ul[class^=cooklang-]>li::before {
 }
 
 .tweet-bird {
-    display: inline-flex;    
-    align-self: flex-end;
-    justify-self: end;
     font-style: normal;
-
+    text-align: right;
+    font-size: smaller;
 }
 
-.tweet-bird::before {
-    content: "View on Twitter";    
-    margin-right: var(--space-d1);
+.tweet-bird::after {
+    content: "View on Twitter";
 }
 
 .tweet-bird-icon {
-    background-image: url("/img/twitter.svg");
-    width: var(--space-1);
-    height: var(--space-1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: text-bottom;
+    display: none;
 }
 
 .tweet-footer {
     font-style: normal;
+    font-size: smaller;
 }
 
 .tweet-like-count {
