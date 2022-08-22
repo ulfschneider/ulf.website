@@ -1,5 +1,6 @@
 const rss = require('@11ty/eleventy-plugin-rss');
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const pluginEmbedTweet = require('eleventy-plugin-embed-tweet');
 
 const fs = require('fs');
 
@@ -27,13 +28,18 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPlugin(rss);
     eleventyConfig.addPlugin(syntaxHighlight, {
-        preAttributes: {     
+        preAttributes: {
             // Added in 4.1.0 you can use callback functions too
-            "data-language": function({ language, content, options }) {
-              return language;
+            "data-language": function ({ language, content, options }) {
+                return language;
             }
-          },
-          codeAttributes: {},
+        },
+        codeAttributes: {},
+    });
+    eleventyConfig.addPlugin(pluginEmbedTweet, {
+        cacheDirectory: '_tweets',
+        useInlineStyles: false,
+        autoEmbed: true
     });
 
     return {

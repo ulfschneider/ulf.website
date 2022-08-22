@@ -1,0 +1,36 @@
+{
+  "1473251189181591554": {
+    "id_str": "1473251189181591554",
+    "htmlText": "Here is WebKit trunk with 320 rules like “<a href=\"https://twitter.com/hashtag/container\">#container</a>:has(.r123:hover) .tr123 { … }” and 25600 divs ",
+    "images": [
+      "https://pbs.twimg.com/ext_tw_video_thumb/1473251164896600072/pu/img/cAMYHLN8_KBzKj2o.jpg"
+    ],
+    "favorite_count": 94,
+    "created_at": {
+      "display": "12:17 PM · Dec 21, 2021",
+      "meta": "Dec 21, 2021 11:17:09 (UTC)"
+    },
+    "user": {
+      "name": "Antti Koivisto",
+      "screen_name": "anttikoivisto",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1532748888/climb_normal.png"
+    },
+    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/anttikoivisto\"><img src=\"https://pbs.twimg.com/profile_images/1532748888/climb_normal.png\" alt=\"Avatar for anttikoivisto\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/anttikoivisto\">Antti Koivisto </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/anttikoivisto\">@anttikoivisto</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/anttikoivisto/status/1473251189181591554\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">Here is WebKit trunk with 320 rules like “<a href=\"https://twitter.com/hashtag/container\">#container</a>:has(.r123:hover) .tr123 { … }” and 25600 divs</p><div class=\"tweet-images\"><img alt=\"Image from Tweet\" src=\"https://pbs.twimg.com/ext_tw_video_thumb/1473251164896600072/pu/img/cAMYHLN8_KBzKj2o.jpg\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1473251189181591554\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">94 </span></a><a class=\"tweet-date\" title=\"Time Posted: Dec 21, 2021 11:17:09 (UTC)\" href=\"https://twitter.com/anttikoivisto/status/1473251189181591554\">12:17 PM · Dec 21, 2021</a></div></blockquote>"
+  },
+  "1541449081591144449": {
+    "id_str": "1541449081591144449",
+    "htmlText": "☀️🌙<br/>I’m collecting blog posts, articles, and other resources about dark mode toggle implementations in the replies to this tweet. Feel free to add your own or any post you know of!<br/>1/x",
+    "images": [],
+    "favorite_count": 11,
+    "created_at": {
+      "display": "05:51 PM · Jun 27, 2022",
+      "meta": "Jun 27, 2022 03:51:14 (UTC)"
+    },
+    "user": {
+      "name": "Matthias Ott",
+      "screen_name": "m_ott",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1343102302358536192/xdtCGwSB_normal.jpg"
+    },
+    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/m_ott\"><img src=\"https://pbs.twimg.com/profile_images/1343102302358536192/xdtCGwSB_normal.jpg\" alt=\"Avatar for m_ott\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/m_ott\">Matthias Ott </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/m_ott\">@m_ott</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/m_ott/status/1541449081591144449\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">☀️🌙<br>I’m collecting blog posts, articles, and other resources about dark mode toggle implementations in the replies to this tweet. Feel free to add your own or any post you know of!<br>1/x</p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1541449081591144449\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">11 </span></a><a class=\"tweet-date\" title=\"Time Posted: Jun 27, 2022 03:51:14 (UTC)\" href=\"https://twitter.com/m_ott/status/1541449081591144449\">05:51 PM · Jun 27, 2022</a></div></blockquote>"
+  }
+}

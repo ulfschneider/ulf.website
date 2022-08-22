@@ -202,6 +202,72 @@ ul[class^=cooklang-]>li::before {
     display: inline-block;
 }
 
+/* tweets */
+/* purgecss start ignore */
+
+.tweet-card::before {
+    content: "";
+    display: none;
+}
+
+.tweet-header {
+    display: flex;
+    gap: var(--space);
+}
+
+.tweet-profile {
+    margin-right: var(--space);
+    display: inline-flex;
+    align-self: center;
+}
+
+.tweet-profile img {
+    border-radius: 50%;
+}
+
+.tweet-author {
+    font-style: normal;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-author-name {
+    font-weight: var(--font-weight-bold);
+}
+
+.tweet-bird {
+    margin-left: var(--horizontal-rhythm);
+    display: inline-flex;
+    align-self: center;
+}
+
+.tweet-bird-icon {
+    background-image: url("/img/twitter.svg");
+    width: var(--space-1);
+    height: var(--space-1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: text-bottom;
+}
+
+.tweet-footer {
+    font-style: normal;
+}
+
+.tweet-like-count {
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+}
+
+.tweet-like-count::after {
+    content: "Likes";
+    font-weight: normal;
+    margin-right: var(--space);
+}
+
+/* purgecss end ignore */
+
 .skip-link {
     padding: var(--space-2);
     position: absolute;
