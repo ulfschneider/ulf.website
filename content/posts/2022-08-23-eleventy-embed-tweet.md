@@ -3,7 +3,7 @@ title: eleventy-embed-tweet
 tags: [code, css]
 outline: true
 ---
-Kyle Mitofsky wrote the <cite><a href="https://eleventy-embed-tweet.netlify.app">eleventy-embed-tweet</a></cite> plugin to fetch tweets during buildtime, optionally cache the tweets on the file system, and render them by accessing the static resources that came out of the build. I learned two things while integrating the plugin into my 11ty-powered blog.
+Kyle Mitofsky wrote the <cite><a href="https://eleventy-embed-tweet.netlify.app">eleventy-embed-tweet</a></cite> plugin to fetch tweets during build time, optionally cache the tweets on the file system, and render them by accessing the static resources that came out of the build. I learned two things while integrating the plugin into my 11ty-powered blog.
 
 ## Wrap the tweet URL in `<p>` tags when using it within a Markdown element
 
