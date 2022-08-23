@@ -1,10 +1,14 @@
 /* markdown-it toc */
-
+/* purgecss start ignore */
 .anchor {
     text-decoration: none;
     font-weight: normal;
     font-size: var(--fs);
     color: var(--neutral);
+}
+
+nav.table-of-contents a {
+    text-decoration: none;
 }
 
 nav.table-of-contents::before {
@@ -43,3 +47,4 @@ nav.table-of-contents:not(.outline nav.table-of-contents) ol li::before {
     margin: 0 !important;
     padding: 0 !important;
 }
+/* purgecss end ignore */

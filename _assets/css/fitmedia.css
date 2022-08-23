@@ -1,5 +1,8 @@
 /*markdown-it fitmedia*/
+/* purgecss start ignore */
 
 .fit-media {
     background: var(--neutral-5);
 }
+
+/* purgecss end ignore */

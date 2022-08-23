@@ -1,4 +1,5 @@
 /* markdown-it-cooklang */
+/* purgecss start ignore */
 
 ul[class^=cooklang-]>li::before {
     content: "▢";
@@ -8,3 +9,5 @@ ul[class^=cooklang-]>li::before {
     font-weight: bold;
     display: inline-block;
 }
+
+/* purgecss end ignore */
