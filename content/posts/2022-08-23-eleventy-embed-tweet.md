@@ -57,7 +57,7 @@ eleventyConfig.addPlugin(pluginEmbedTweet, {
   });
 ```
 
-Then I´m using CSS to adjust the styling of the tweet to my blog layout. There is nothing fancy, except I´m using `display:flex` here and there, and change the order of display by leveraging the `order` property. The default value for the `order` property `0`. Keep in mind, the change of order is only visual, the HTML remains untouched and assistive technology like screen readers will follow the order of the HTML. Below you see the order of the HTML and the order of display.
+Then I´m using CSS to adjust the styling of the tweet to my blog layout. There is nothing fancy, except I´m using `display:flex` here and there, and change the order of display by leveraging the `order` property. The default value for the `order` property is `0`. Keep in mind, the change of order is only visual, the HTML remains untouched and assistive technology like screen readers will follow the order of the HTML. Below you see the order of the HTML and the order of display.
 
 <figure class="md:split md:bleed">
 <figure>
