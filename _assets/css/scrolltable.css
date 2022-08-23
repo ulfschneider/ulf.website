@@ -1,0 +1,13 @@
+
+/* markdown-it scrolltable */
+/* purgecss start ignore */
+.scroll-table {
+    margin-top: var(--mrt-table);
+    margin-bottom: var(--mrb-table);
+}
+
+.scroll-table>table {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* purgecss end ignore */

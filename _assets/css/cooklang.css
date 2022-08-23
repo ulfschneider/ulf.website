@@ -1,0 +1,13 @@
+/* markdown-it-cooklang */
+/* purgecss start ignore */
+
+ul[class^=cooklang-]>li::before {
+    content: "▢";
+}
+
+.cooklang-ingredients .amount-and-unit {
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* purgecss end ignore */
