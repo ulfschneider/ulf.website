@@ -1,0 +1,12 @@
+
+/* markdown-it scrolltable */
+
+.scroll-table {
+    margin-top: var(--mrt-table);
+    margin-bottom: var(--mrb-table);
+}
+
+.scroll-table>table {
+    margin-top: 0;
+    margin-bottom: 0;
+}

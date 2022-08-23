@@ -1,0 +1,45 @@
+/* markdown-it toc */
+
+.anchor {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: var(--fs);
+    color: var(--neutral);
+}
+
+nav.table-of-contents::before {
+    content: "Contents";
+    display: block;
+    font-weight: bold;
+}
+
+nav.table-of-contents {
+    margin: var(--space-3) 0;
+}
+
+nav.table-of-contents a {
+    text-decoration: none;
+}
+
+nav.table-of-contents>* {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+nav.table-of-contents:not(.outline nav.table-of-contents)>* {
+    padding: 0;
+}
+
+nav.table-of-contents ol li::before {
+    content: "";
+}
+
+.outline nav.table-of-contents ol li::before {
+    content: var(--h-counter);
+}
+
+nav.table-of-contents:not(.outline nav.table-of-contents) ol li::before {
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}

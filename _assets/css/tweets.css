@@ -1,0 +1,69 @@
+/* tweets */
+/* purgecss start ignore */
+
+.tweet-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-header {
+    order: 1;
+    display: flex;
+}
+
+.tweet-profile {
+    display: none;
+    order: 2;
+}
+
+.tweet-author {
+    font-style: normal;
+    order: 1;
+}
+
+.tweet-author-name {
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+}
+
+.tweet-author-handle {
+    font-size: smaller;
+    text-decoration: none;
+}
+
+.tweet-bird {
+    order: 0;
+}
+
+.tweet-bird-icon {
+    background-image: url(/img/twitter.svg);
+    width: 1em;
+    height: calc(1em * var(--lh-default));
+    background-size: contain;  
+    background-repeat: no-repeat;
+    background-position: center left;
+    margin-right: var(--space-d1);
+}
+
+.tweet-body {
+    order: 0;
+}
+
+
+.tweet-footer {
+    order: 2;
+    font-style: normal;
+    font-size: smaller;
+    text-decoration: none;
+}
+
+.tweet-like {
+    display: none;
+}
+
+.tweet-date {
+    text-decoration: none;
+}
+
+
+/* purgecss end ignore */

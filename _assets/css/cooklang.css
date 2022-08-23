@@ -1,0 +1,10 @@
+/* markdown-it-cooklang */
+
+ul[class^=cooklang-]>li::before {
+    content: "▢";
+}
+
+.cooklang-ingredients .amount-and-unit {
+    font-weight: bold;
+    display: inline-block;
+}
