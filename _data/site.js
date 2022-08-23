@@ -2,7 +2,7 @@ module.exports = {
     name: "ulf.codes",
     locale: "en",
     theme_color: "#ebebeb",
-    dark_theme_color: "#313131",
+    dark_theme_color: "#3a3a3a",
     background_color: '#ebebeb',
     url: "https://ulf.codes",    
     base: "/",
