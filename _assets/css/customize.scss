@@ -77,6 +77,15 @@ main>div>pre[data-language]::before {
     padding: var(--space-d2) var(--space-d2) 0 0;
 }
 
+main article blockquote {
+    /*address blockquotes (from tweets) in post list*/
+    margin: 0;   
+    
+    &::before {
+        display: none;
+    }
+}
+
 
 .skip-link {
     padding: var(--space-2);
