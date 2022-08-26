@@ -79,11 +79,11 @@ main>div>pre[data-language]::before {
 
 main article blockquote {
     /*address blockquotes (from tweets) in post list*/
-    margin: 0;   
-    
-    &::before {
-        display: none;
-    }
+    margin: 0;
+}
+
+main article blockquote::before {
+    display: none;
 }
 
 
