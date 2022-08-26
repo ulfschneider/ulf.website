@@ -17,9 +17,9 @@ A User Story can cover vast amounts of functionality with a single sentence, whi
 - Your daily scrums become far more exciting and useful. Instead of "yeah, I'm 20% done adding all of the new schemas to the DB," you get "for that story we got the time stamps working in the UI, and today we're going to make the data persist."
 - A smaller size tends to make estimates more accurate (though estimates are not too important, as your stories should be small anyway).
 
-## JIRA is time-consuming for splitting
+## Jira is time-consuming for splitting
 
-Trying to break down a User Story within JIRA is very time-consuming and sometimes counter-intuitive. Not to mention that interaction and conversations among people are to be avoided when following this approach, which is the opposite of what you should thrive for. Use a whiteboard or a wall and sticky notes to do the split work, be prepared to change quickly, sketch, refactor and enhance. Only after you have understood what the story is about and how to split in a good way, bring the parts into JIRA.
+Trying to break down a User Story within Jira is very time-consuming and sometimes counter-intuitive. Not to mention that interaction and conversations among people are to be avoided when following this approach, which is the opposite of what you should thrive for. Use a whiteboard or a wall and sticky notes to do the split work, be prepared to change quickly, sketch, refactor and enhance. Only after you have understood what the story is about and how to split in a good way, bring the parts into Jira.
 
 ## Layers
 
