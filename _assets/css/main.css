@@ -1,6 +1,6 @@
 @import "fonts";
 @import "compose";
-@import "customize";
+@import "customize.scss";
 @import "toc";
 @import "fitmedia";
 @import "scrolltable";

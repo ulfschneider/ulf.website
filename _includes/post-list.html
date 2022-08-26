@@ -29,11 +29,11 @@
 
         <section class="lg:w-rg lg:flex-shrink-0">
             {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
-                <h2 class="mry-0 fs lh-default">
+                <h3 class="mry-0 fs lh-default">
                     <a href="{{p.url}}">
                         {{ p.data.title }}
                     </a>
-                </h2>
+                </h3>
             {%- endif -%}
             {%- if p.data.subtitle -%}
                 <p>{{p.data.subtitle}}</p>
