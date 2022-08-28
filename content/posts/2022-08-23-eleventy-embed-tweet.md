@@ -169,7 +169,4 @@ The change in order of display, as well as the hiding of content, is achieved th
 }
 ```
 
-You could say, that´s what CSS is for, and you are right. But when I look at what can be achieved with *a few* lines of CSS I´m satisfied because of the possibilities. Finally, here is Jen´s tweet I was using as an example thoughout the text. It is processed by Kyle Mitofsky´s [<cite>eleventy-embed-tweet</cite>](https://eleventy-embed-tweet.netlify.app) plugin, and embedded and styled by applying the above code:
-
-https://twitter.com/jensimmons/status/1561060139523874820
-
+You could say, that´s what CSS is for, and you are right. But when I look at what can be achieved with *a few* lines of CSS I´m satisfied because of the possibilities. 
