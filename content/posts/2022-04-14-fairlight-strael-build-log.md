@@ -656,7 +656,7 @@ Straight forward. The Strael frame comes with suitable cage bolts which even inc
 
 <figure class="md:bleed">
 <img src="/img/strael/it-is-done.jpg" alt="The completed Strael bike">
-<figcaption>It is done</figcaption>
+<figcaption>It is done. Here are some <a href="/2022-07-10-strael-images/"> images of my Strael in the wild</a>.</figcaption>
 </figure>
 
 ## Manuals in order of use
