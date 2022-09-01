@@ -231,7 +231,7 @@ module.exports = {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
             let dt = dayjs(d).locale(locale);
-            return dt.format('MMM Do, YYYY')
+            return dt.format('MMM DD, YYYY')
         } else {
             return '';
         }
@@ -241,7 +241,7 @@ module.exports = {
         if (d) {
             const locale = site.locale ? site.locale : 'en';
             let dt = dayjs(d).locale(locale);
-            return dt.format('MMM Do YYYY hh:mm a Z');
+            return dt.format('MMM DD, YYYY HH:mm');
         } else {
             return '';
         }

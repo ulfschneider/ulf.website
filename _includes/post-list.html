@@ -51,7 +51,7 @@
                 <a href="{{p.url}}">Read more</a>
             {%- endif -%}
         </section>
-        <aside class="meta lg:fs-d1 lg:pdr-1 lg:mrl-auto lg:right lg:flex-column {{p.data.starred}}">
+        <aside class="meta lg:smaller lg:pdr-1 lg:mrl-auto lg:right lg:flex-column {{p.data.starred}}">
             {% include date-tags.html posted: p.date tags: p.data.tags notags: p.data.notags %}            
         </aside>
     </article>
