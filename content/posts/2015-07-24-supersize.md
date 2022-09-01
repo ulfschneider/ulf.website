@@ -133,11 +133,11 @@ If you have not achieved this way of working for a single team in your organizat
 Transparency
 ---
 
-You don´t solve problems by making them harder to see. You have to use the fast failure that is being promoted by agile instead of hiding it under an additional process layer. A thing like [SAFe](http://www.scaledagileframework.com)  (Scaled Agile Framework) will put such layer between the delivery folks and the management. It allows the management to ignore change and see the world as they have always seen it – only with a different decoration. And yet (or because of), there is a market for this kind of stuff. SAFe is not alone, to get an impression I´d like to point you to this [article][jeffries2015] by Ron Jeffries. One of the best scaling frameworks is the [LAFABLE][lafable] process, which [Mike Cohn][cohn2014] introduced on the 1st of April 2014.
+You don´t solve problems by making them harder to see. You have to use the fast failure that is being promoted by agile instead of hiding it under an additional process layer. A thing like [SAFe](http://www.scaledagileframework.com)  (Scaled Agile Framework) will put such layer between the delivery folks and the management. It allows the management to ignore change and see the world as they have always seen it – only with a different decoration. And yet (or because of), there is a market for this kind of stuff. SAFe is not alone, to get an impression I´d like to point you to this [article][jeffries2015] by Ron Jeffries. The [LAFABLE][lafable] process, which [Mike Cohn][cohn2014] introduced on the 1st of April 2014, is making a joke of scaling frameworks.
 
-Even the simple Scrum framework, in the wrong hands or misunderstood, so that the enforced transparency is used to take control over the team, will lead to micromanagement and annoyed developers. 
+But seriously, even the simple Scrum framework, in the wrong hands or misunderstood, so that the enforced transparency is used to take control over the team, will lead to micromanagement and annoyed developers. 
 
-Ken Schwaber once suggested using a transition team to address the organizational change which is being demanded by the delivery units [Schwaber 2007]. 
+Ken Schwaber once suggested using a transition team to address the organizational change which is being demanded by the delivery units [Schwaber 2007], and that makes a lot of sense to me.
 
 <figure>
 <img src="/img/agile/transition_team.jpg"/>
