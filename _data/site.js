@@ -3,7 +3,7 @@ module.exports = {
     locale: "en",
     theme_color: "#ebebeb",
     dark_theme_color: "#3a3a3a",
-    background_color: '#ebebeb',
+    background_color: "#3a3a3a",
     url: "https://ulf.codes",    
     base: "/",
     offline: "/offline/",
