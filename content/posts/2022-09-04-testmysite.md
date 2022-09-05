@@ -15,7 +15,7 @@ The results for my site are:
 
 <figure>
 <img src="/img/journal/2022-09-04-site-speed-ulf-codes.png">
-<figcaption>Site speed results for {{site.name}} on 04 Sep, 2022</figcaption>
+<figcaption>Site speed results for {{site.name}} as of 04 Sep, 2022</figcaption>
 </figure>
 
 The tool will give hints for possible improvements. In my case it is:
