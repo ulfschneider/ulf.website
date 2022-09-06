@@ -57,19 +57,18 @@
 
         if (typeof config.tocContainer == 'string' || config.tocContainer instanceof String) {
             containerSelector = config.tocContainer;
-        } else {
+        } else if (config.tocContainer) {
             tocContainer = config.tocContainer;
+        } else {
+            containerSelector = 'header';
         }
 
         if (document.querySelector && window.IntersectionObserver) {
             if (containerSelector) {
-                tocContainer = document.querySelector(containerSelector);
-                if (!tocContainer) {
-                    tocContainer = document.querySelector('header');
-                }
+                tocContainer = document.querySelector(containerSelector);                
 
                 if (!tocContainer) {
-                    console.error('A toc container with id=[' + containerSelector + '] or the tag=<header> could not be found in the document');
+                    console.warn('A toc container with selector=[' + containerSelector + '] could not be found in the document');
                     return;
                 }
             }
@@ -115,36 +114,40 @@
             links.forEach(link => {
                 link.classList.remove('is-visible');
                 link.classList.remove('is-active');
+                link.classList.remove('is-highlight');
             });
         }
     }
 
     function handleObserver(entries, observer) {
         entries.forEach(entry => {
-            let href = `#${entry.target.getAttribute('id')}`;
-
-            links.forEach(link => {
-                link.classList.remove('is-highlight');
-                link.classList.remove('is-active');
-
-                if (link.getAttribute('href') === href) {
-                    if (entry.isIntersecting) {
-                        link.classList.add('is-visible')
-                        if (config.onVisible) {
-                            config.onVisible(link);
-                        }
-                    } else {
-                        link.classList.remove('is-visible');
-                    }
-                }
-            });
-
-            indicateActive();
-            indicateHighlight();
+            indicateVisible(entry);
+            indicateActive(entry);
+            indicateHighlight(entry);
         });
     }
 
-    function indicateActive() {
+    function indicateVisible(entry) {
+        let href = `#${entry.target.getAttribute('id')}`;
+        links.forEach(link => {
+            link.classList.remove('is-highlight');
+            link.classList.remove('is-active');
+
+            if (link.getAttribute('href') === href) {
+
+                if (entry.isIntersecting) {
+                    link.classList.add('is-visible')
+                    if (config.onVisible) {
+                        config.onVisible(link, entry);
+                    }
+                } else {
+                    link.classList.remove('is-visible');
+                }
+            }
+        });
+    }
+
+    function indicateActive(entry) {
         for (let i = headings.length - 1; i >= 0; i--) {
             if (headings[i] && headings[i].offsetTop <= window.pageYOffset) {
                 let actives = tocContainer.querySelectorAll(
@@ -153,7 +156,7 @@
                 actives.forEach(active => {
                     active.classList.add('is-active');
                     if (config.onActive) {
-                        config.onActive(active);
+                        config.onActive(active, entry);
                     }
                 })
                 break;
@@ -161,7 +164,7 @@
         }
     }
 
-    function indicateHighlight() {
+    function indicateHighlight(entry) {
         let firstMatch;
         for (let link of links) {
             //check if a visible link exists 
@@ -175,7 +178,7 @@
                 if (firstMatch == link.href) {
                     link.classList.add('is-highlight');
                     if (config.onHighlight) {
-                        config.onHighlight(link);
+                        config.onHighlight(link, entry);
                     }
                 }
             }
@@ -188,7 +191,7 @@
             actives.forEach(active => {
                 active.classList.add('is-highlight');
                 if (config.onHighlight) {
-                    config.onHighlight(active);
+                    config.onHighlight(active, entry);
                 }
             });
             if (actives.length == 0 && config.offHighlight) {
@@ -202,7 +205,6 @@
     return {
         init: function (settings) {
             init(settings);
-            console.log(config);
         },
         unobserve: function () {
             unobserve();
@@ -225,15 +227,15 @@ try {
             * When scrolling contents or resizing the window, the links in the tocContainer will be assigned a combination of the CSS classes  
             * <ul>
             * <li><code>is-visible</code> if the associated heading of the link is visible</li>
-            * <li>><code>is-active</code> if the heading is not visible, but still can be considered active</li>
-            * <li>><code>is-highlight</code> as the single one that´s suggested to be highlighted (to avoid highlighting multiple entries)</li>
+            * <li><code>is-active</code> if the heading is not visible, but still can be considered active</li>
+            * <li><code>is-highlight</code> as the single one that´s suggested to be highlighted (to avoid highlighting multiple entries)</li>
             * </ul>
             * @param {(string|Object)} [settings] – Optional: Can be empty, a String, or a settings object. A String will be interpreted as a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">selector</a> for the toc container. A settings object must contain a tocContainer property that will store the selector for the toc container.
             * @param {String} [settings.tocContainer] - Optional: Specify the selector of the container that holds the links to the headings inside of your document. Default id is <code>#header</code>. If not specified the first html <code>header</code> tag will be used.
             * @param {IntersectionOptions} [settings.intersectionOptions] - Optional: The Intersection observer options as defined by the intersection observer API
-            * @param {function(Object)} [settings.onVisible] - Optional: A function that will be called when an element receives visible status. The visible element will be passed as an argument into the function. 
-            * @param {function(Object)} [settings.onActive] - Optional: A function that will be called when an element receives active status. The active element will be passed as an argument into the function. 
-            * @param {function(Object)} [settings.onHighlight] - Optional: A function that will be called when an element receives highlight status. The highlighted element will be passed as an argument into the function. 
+            * @param {function(Object, Object)} [settings.onVisible] - Optional: A function that will be called when an element receives visible status. The toc entry that received visible status and the associated heading will be passed as arguments into the function. 
+            * @param {function(Object, Object)} [settings.onActive] - Optional: A function that will be called when an element receives active status. The toc entry that received active status and the associated heading will be passed as arguments into the function. 
+            * @param {function(Object, Object)} [settings.onHighlight] - Optional: A function that will be called when an element receives highlight status. The toc entry that received visible status and the associated heading will be passed as arguments into the function. 
             * @param {function()} [settings.offHighlight] - Optional: A function that will be called when a highlighted element looses the highlight status and no new highlighted element is available. 
             */
             init: function (settings) {
