@@ -25,5 +25,5 @@ The tool will give hints for possible improvements. In my case it is:
 	A CNAME will let Netlify direct the user to the closest CDN point of presence, which improves performance by an order of magnitude.
 	Most DNS providers won’t allow CNAME records for a “naked domain”, since this is not well supported by the DNS spec.
 	If you stay with a DNS provider that requires an A record on the naked domain, we recommend that you use the www domain as your primary address.
-	
-	
+		
+Because of this kind of recommendation I think [testmysite.io](https://testmysite.io) complements the well known [Google Lighthouse](https://pagespeed.web.dev/) test very well.
