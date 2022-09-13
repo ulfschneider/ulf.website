@@ -7,7 +7,7 @@ With the HTML attribute [`capture`](https://developer.mozilla.org/en-US/docs/Web
 ```html
 <div>
     <label for="sound">Capture sound for upload:</label>
-    <input type="file" id="sound" capture accept="audio/*">
+    <input type="file" id="sound" capture="microphone" accept="audio/*">
 </div>
 <div>
     <label for="environment">Capture a video of your environment for upload:</label>
@@ -24,7 +24,7 @@ to get:
 <figure>
 <div class="mry">
     <label for="sound">Capture sound for upload:</label>
-    <input type="file" id="sound" capture accept="audio/*">
+    <input type="file" id="sound" capture="microphone" accept="audio/*">
 </div>
 <div class="mry">
     <label for="environment">Capture a video of your environment for upload:</label>
