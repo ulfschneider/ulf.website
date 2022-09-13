@@ -22,15 +22,15 @@ With the HTML attribute [`capture`](https://developer.mozilla.org/en-US/docs/Web
 to get:
 
 <figure>
-<div>
+<div class="mry">
     <label for="sound">Capture sound for upload:</label>
-    <input type="file" id="sound" capture="user" accept="audio/*">
+    <input type="file" id="sound" capture accept="audio/*">
 </div>
-<div>
+<div class="mry">
     <label for="environment">Capture a video of your environment for upload:</label>
     <input type="file" id="environment" capture="environment" accept="video/*">
 </div>
-<div>
+<div class="mry">
     <label for="user">Capture a picture of yourself for upload:</label>
     <input type="file" id="user" capture="user" accept="image/*">
 </div>
