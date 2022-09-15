@@ -27,6 +27,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
 
     eleventyConfig.addPlugin(rss);
+    eleventyConfig.addLiquidFilter("dateToRfc3339", rss.dateToRfc3339);
+    eleventyConfig.addLiquidFilter("dateToRfc822", rss.dateToRfc822);
+
     eleventyConfig.addPlugin(syntaxHighlight, {
         preAttributes: {
             // Added in 4.1.0 you can use callback functions too
