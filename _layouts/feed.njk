@@ -23,7 +23,7 @@
         <id>{{ absolutePostUrl }}</id>
         <content type="html" language="{{site.locale}}" >
           {{ p.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}  
-          {%- if authorEmail -%}<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>{%- endif -%}]]>
+          {%- if authorEmail -%}<![CDATA[<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>]]>{%- endif -%}
         </content>
       </entry>
     {%- endif -%}
