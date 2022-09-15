@@ -2,11 +2,11 @@
 <html class="auto-dark-mode hover-rows bg-neutral-5 dk:bg-neutral-d4 " id="{{site.backToTop.id}}" lang="{{site.locale}}">
 
 <head>
-	{% include head.html %}
+	{% include "head.html" %}
 </head>
 
 <body class="default break-word flex-column">
-	{% include header.html %}
+	{% include "header.html" %}
 	<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
 		<main id="main" class="indent outdent mry-3 mxw-rg mrx-auto">
 
@@ -35,12 +35,12 @@
 			</div>
 			{%- if nodate == nil -%}
 			<aside class="mrt-3 mrb-vrplus meta smaller">
-				{% include date-tags.html %}
+				{% include "date-tags.html" %}
 			</aside>
 			{%- endif -%}
 		</main>
 	</div>
-	{% include footer.html %}
+	{% include "footer.html" %}
 </body>
 
 </html>

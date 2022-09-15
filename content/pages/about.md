@@ -29,7 +29,7 @@ My path through 30 years of software went like this:
 </dl>
 
 <h2>Connect with me</h2>
-{% include connect.html %}
+{% include "connect.html" %}
 
 <h2>Content ownership</h2>
 
