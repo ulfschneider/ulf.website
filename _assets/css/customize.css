@@ -134,8 +134,8 @@ main article blockquote::before {
     content: "";
     margin-top: var(--vertical-rhythm-plus);
     margin-bottom: var(--vertical-rhythm-plus);
-    width: var(--space-d1);
-    height: var(--space-d1);
+    width: var(--space-2);
+    height: var(--space-2);
     background: var(--base-color);
 }
 
