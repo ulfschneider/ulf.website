@@ -132,10 +132,10 @@ main article blockquote::before {
 .eoc::after {
     display: block;
     content: "";
-    margin-top: var(--vertical-rhythm-plus);
-    margin-bottom: var(--vertical-rhythm-plus);
-    width: var(--space-2);
-    height: var(--space-2);
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+    width: var(--space-d1);
+    height: var(--space-d1);
     background: var(--base-color);
 }
 
