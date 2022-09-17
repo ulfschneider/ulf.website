@@ -129,6 +129,16 @@ main article blockquote::before {
     height: unset;
 }
 
+.eoc::after {
+    display: block;
+    content: "";
+    margin-top: var(--vertical-rhythm-plus);
+    margin-bottom: var(--vertical-rhythm-plus);
+    width: var(--space-d1);
+    height: var(--space-d1);
+    background: var(--base-color);
+}
+
 @media print {
     .anchor {
         display: none;
