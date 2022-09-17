@@ -38,9 +38,10 @@
 			<div {% if outline==true %}class="outline" {% endif %}>
 				{{ content }}
 			</div>
+			{% include "end-of-content.html" %}
 		</main>
 	</div>
-	{% include footer.html %}
+	{% include "footer.html" %}
 </body>
 
 </html>
