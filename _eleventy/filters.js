@@ -3,7 +3,6 @@ const path = require('path');
 const ccd = require('cached-commit-date');
 const utils = require('./utils.js');
 const site = require('../_data/site.js');
-const { data } = require('cheerio/lib/api/attributes.js');
 
 let colorMap;
 

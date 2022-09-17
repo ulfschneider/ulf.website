@@ -2,15 +2,15 @@
 <html class="auto-dark-mode hover-rows bg-neutral-5 dk:bg-neutral-d4" id="{{site.backToTop.id}}" lang="{{site.locale}}">
 
 <head>
-	{% include head.html %}
+	{% include "head.html" %}
 </head>
 
 {%- assign isArticle = tags | hasTag: "articles" -%}
 
 <body class="default break-word flex-column{% if isArticle == true %} article{%-endif-%}">
-	{% include header.html %}
+	{% include "header.html" %}
 	<div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
-		{% include hero.html %}
+		{% include "hero.html" %}
 		<main id="main" class="indent outdent mry-3 mxw-rg mrx-auto">
 			{%- if title != "notitle" and title != nil and notitle == nil -%}
 			<header class="title mry-3 bleed-right">
@@ -30,7 +30,7 @@
 				{%- endif -%}
 				{%- if nodate == nil -%}
 				<aside class="mry-vrplus meta smaller">
-					{% include date-tags.html %}
+					{% include "date-tags.html" %}
 				</aside>
 				{%- endif -%}
 			</header>

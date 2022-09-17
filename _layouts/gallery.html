@@ -2,15 +2,15 @@
 <html class="auto-dark-mode hover-rows bg-neutral-5 dk:bg-neutral-d4 " id="{{site.backToTop.id}}" lang="{{site.locale}}">
 
     <head>
-        {% include head.html %}
+        {% include "head.html" %}
     </head>
 
     <body class="default break-word flex-column">
-        {% include header.html %}
+        {% include "header.html" %}
         <div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
             <main id="main" class="indent outdent mry-3 mxw-rg mrx-auto">
                 <div class="mry-3">
-                    {% include site-tags.html %}
+                    {% include "site-tags.html" %}
                 </div>
                 <div {% if outline==true %}class="outline"{% endif %}>
                     {{ content }}
@@ -26,7 +26,7 @@
 
             </main>
         </div>
-        {% include footer.html %}
+        {% include "footer.html" %}
     </body>
 
     <script>

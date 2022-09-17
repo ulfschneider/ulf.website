@@ -4,30 +4,29 @@
   <subtitle></subtitle>
   <link href="{{ site.url }}{{ site.feed }}" rel="self"/>
   <link href="{{ site.url }}/"/>
-  {%- if collections.livePosts | length -%}
-    <updated>{{ site.buildTime | rssDate }}</updated>
-  {%- endif -%}
+  <updated>{{ site.buildTime | dateToRfc3339 }}</updated>
   <id>{{ site.url }}</id>
-  {%- if site.ownership -%}
-    <author>
-      <name>{{ site.ownership.name }}</name>
-      <email>{{ site.ownership.email }}</email>
-    </author>
-  {%- endif -%}
-  {%- for p in collections.livePosts -%}
-    {%- if p.data.norss == nil -%}
+  {%- if site.ownership %}
+  <author>
+    <name>{{ site.ownership.name }}</name>
+    <email>{{ site.ownership.email }}</email>
+  </author>
+  {% endif -%}
+  {%- for p in collections.livePosts | reverse %}
+    {%- if p.data.norss == nil %}
       {%- set absolutePostUrl -%}{{ site.url }}{{ p.url | url }}{%- endset -%}
       {%- set authorEmail -%}{{ p | authorEmail }}{%- endset -%}
-      <entry>
-        <title>{{ p.data.title }}</title>
-        <link href="{{ absolutePostUrl }}"/>
-        <updated>{{ p | modifiedDate | rssDate }}</updated>
-        <id>{{ absolutePostUrl }}</id>
-        <content type="html">
-          <![CDATA[{{ p.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}  
-          {%- if authorEmail -%}<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>{%- endif -%}]]>
-        </content>
-      </entry>
-    {%- endif -%}
-  {%- endfor %}
+  <entry>
+    <title>{{ p.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ p | modifiedDate | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html" language="{{site.locale}}" >
+      {{ p.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}  
+      {%- if authorEmail %}<![CDATA[<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>]]>{% endif -%}
+    </content>
+  </entry>
+    {% endif -%}
+  {% endfor -%}
 </feed>
+
