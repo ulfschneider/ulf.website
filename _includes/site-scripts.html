@@ -9,7 +9,7 @@
         }
 
         if (!(event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)) {
-            if ('{{site.search}}' && '{{site.search.url}}' && event.key == '{{site.search.kbd}}') {
+            if ('{{site.search.url}}' && event.key === '{{site.search.kbd}}') {
                 let queryField = document.querySelector('#search-query');
                 if (queryField && queryField != focus) {
                     queryField.focus();
@@ -22,12 +22,12 @@
                 }
             }
 
-            if ('{{site.backToTop}}' && '{{site.backToTop.id}}' && event.key == '{{site.backToTop.kbd}}') {
+            if ('{{site.backToTop.id}}' && event.key === '{{site.backToTop.kbd}}') {
                 location.href = '#{{site.backToTop.id}}';
                 event.preventDefault();
             }
 
-            for (let nav of {{site.mainnav}}) {
+            for (let nav of {{site.mainnav | json}}) {
                 if (event.key == nav.kbd && nav.url) {
                     if (nav.id == 'editOnGitHub') {
                         window.open(nav.url + '{{page.inputPath}}', '_blank');
