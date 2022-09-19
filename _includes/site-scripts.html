@@ -27,7 +27,7 @@
                 event.preventDefault();
             }
 
-            for (let nav of JSON.parse('{{site.mainnav}}')) {
+            for (let nav of {{site.mainnav}}) {
                 if (event.key == nav.kbd && nav.url) {
                     if (nav.id == 'editOnGitHub') {
                         window.open(nav.url + '{{page.inputPath}}', '_blank');
@@ -39,7 +39,7 @@
                 }
             }
 
-            for (let nav of JSON.parse('{{site.footernav}}')) {
+            for (let nav of {{site.footernav | json}}) {
                 if (event.key == nav.kbd && nav.url) {
                     event.preventDefault();
                     if (nav.id == 'editOnGitHub') {
