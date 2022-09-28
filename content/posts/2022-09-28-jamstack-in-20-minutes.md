@@ -115,7 +115,9 @@ I always think of *Progressive Web Apps (PWAs)* as:
 
 > You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.
 
-Have a look at [MishiPay´s](https://mishipay.com) Scan and Go app, which empowers shoppers to scan and pay for their shopping with their smartphones, rather than wasting time queuing at the checkout. Users often want to understand the value that an application gives them before they download it. The hassle of downloading an Android or iOS application made users not choose MishiPay´s native apps despite the value. It was a growing challenge for MishiPay, and they wanted to increase user adoption with a lower barrier of entry and choose to implement their app as a PWA. They increased their transactions by a factor of 10. As of March 2022, the majority of transactions ran through their PWA:^[[<cite>MishiPay's PWA increases transactions 10 times and saves 2.5 years of queuing</cite>](https://web.dev/mishipay/)]
+Have a look at [MishiPay´s](https://mishipay.com) Scan and Go app, which empowers shoppers to scan and pay for their shopping with their smartphones, rather than wasting time queuing at the checkout. 
+
+But there was a problem: Users often want to understand the value that an application gives them before they download it. The hassle of downloading an Android or iOS application made users not choose MishiPay´s native apps despite the value. It was a growing challenge for MishiPay, and they wanted to increase user adoption with a lower barrier of entry and choose to implement their app as a PWA. This change increased their transactions by a factor of 10. As of March 2022, the majority of transactions ran through their PWA:^[[<cite>MishiPay's PWA increases transactions 10 times and saves 2.5 years of queuing</cite>](https://web.dev/mishipay/)]
 
 - iOS: 3.98%
 - Android: 3.34%
