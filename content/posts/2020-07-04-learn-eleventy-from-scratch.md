@@ -6,7 +6,7 @@ tags: [code, courses]
 [Learn Eleventy From Scratch](
 https://piccalil.li/course/learn-eleventy-from-scratch/) is a training made by Andy Bell. It´s a practical, well organized, and well written course that allows you to get a state-of-the-art, [11ty-powered](https://www.11ty.dev) website up and running.  
 
-If you are not already on the [JAMStack](https://jamstack.org), this is a fast-paced track to get there!
+If you are not already on the [JAMstack](https://jamstack.org), this is a fast-paced track to get there!
 
 The course covers all the 11ty essentials in a concise way. Andy is taking you on a route where each step carries a meaningful learning that allows you to do something more with your website. You will recognize how well the training is crafted and how much love Andy has put into details that will support you – so you don´t get lost on your path.
 

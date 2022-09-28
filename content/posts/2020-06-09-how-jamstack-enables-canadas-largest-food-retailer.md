@@ -17,7 +17,7 @@ Loblaw is Canada´s largest retailer:
 - 12m loyalty members with over 600m transactions every year
 - 1.3m products in the grocery catalogue alone
 
-By moving to the JAMStack for one of their core businesses ("Shop like a mother") they recognized extreme website improvements:
+By moving to the JAMstack for one of their core businesses ("Shop like a mother") they recognized extreme website improvements:
   
 - 17.5x faster contentful paint (from 12.3s down to 0.7s)
 - 8.2x faster meaningful paint
