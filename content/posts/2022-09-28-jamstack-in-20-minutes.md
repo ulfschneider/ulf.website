@@ -21,9 +21,8 @@ That´s a bold a claim. **JAM**stack stands for **J**avaScript, **A**PI, and **M
 
 The JAMstack will eliminate the web application server and the load balancer by *prerendering* the contents of the website, which results in *static* HTML files (the **M**arkup), CSS, JavaScript, and data files, like XML and JSON. Those static files are stored on a file system which allows to move that content to a Content Delivery Network (CDN) with ease. 
 
-<blockquote>A Content Delivery Network is a global network of servers where you can deploy your application to get it closer to users. Without a CDN, If you have a server in London, and you deploy your application on that server, your users in London will have a great experience. That's because the server is close to them so the request-to-response trip is short, hence giving them a very fast experience.
-
-However, that is not the case for your users in other parts of the world farther from London. This is the problem that CDNs solve. Hosting providers like AWS, Azure, Netlify etc have CDNs scattered all over the world. This means that if your site is deployed on their platform, they will respond to your user's requests from the CDN closest to them. Giving everyone the same fast experience, irrespective of their location.
+<blockquote><p>A Content Delivery Network is a global network of servers where you can deploy your application to get it closer to users. Without a CDN, If you have a server in London, and you deploy your application on that server, your users in London will have a great experience. That's because the server is close to them so the request-to-response trip is short, hence giving them a very fast experience.</p>
+<p>However, that is not the case for your users in other parts of the world farther from London. This is the problem that CDNs solve. Hosting providers like AWS, Azure, Netlify etc have CDNs scattered all over the world. This means that if your site is deployed on their platform, they will respond to your user's requests from the CDN closest to them. Giving everyone the same fast experience, irrespective of their location.</p>
 <footer>From: <cite><a href="https://www.netlify.com/blog/edge-cdn-serverless-cloud-meaaning/">What is Edge, CDN, Serverless, Cloud, and all the fancy words you don´t really understand</a></cite></footer>
 </blockquote>
 
