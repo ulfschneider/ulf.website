@@ -71,7 +71,7 @@ Using netlifiy for their operations resulted in
 
 ## Portability
 
-Static files can be hosted almost anywhere and on any platform. You depend on how your provider offers serverless functions, which would require adjustment in case you want to change your provider and that might not be a small task. In fact, serverless functions create a tight coupling with your CDN provider.^[[<cite>Facing the Unplanned Migration of Serverless Applications: A Study on Portability Problems, Solutions, and Dead Ends</cite>](https://www.iaas.uni-stuttgart.de/publications/Yussupov2019_FaaSPortability.pdf), by Vladimir Yussupov, Uwe Breitenbücher, Frank Leymann, Christian Müller, December 2019]
+Static files can be hosted almost anywhere and on any platform. You wouldn´t have an issue here. A different story is the use of serverless functions. You depend on how your provider offers serverless functions, which would require adjustment in case you want to change your provider and that might not be a small task. In fact, serverless functions create a tight coupling with your CDN provider.^[[<cite>Facing the Unplanned Migration of Serverless Applications: A Study on Portability Problems, Solutions, and Dead Ends</cite>](https://www.iaas.uni-stuttgart.de/publications/Yussupov2019_FaaSPortability.pdf), by Vladimir Yussupov, Uwe Breitenbücher, Frank Leymann, Christian Müller, December 2019]
 
 ## Scaling
 
