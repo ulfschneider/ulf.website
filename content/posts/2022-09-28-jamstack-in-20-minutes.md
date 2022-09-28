@@ -13,7 +13,7 @@ The JAMstack can bring huge advantages to the process of building websites, as w
 - allows deployments with confidence,
 - has an improved developer experience.
 
-That´s a bold a claim. **JAM**stack stands for **J**avaScript, **A**PI, and **M**arkup. Those elements are part of any website, how can a JAMstack site be different from a *traditional* site that is powered by a web application server? A *traditional* architecture would consist of a database, a web application server to carry out the application logic, a load balancer, and web browser clients.
+That´s a bold a claim. **JAM**stack stands for **J**avaScript, **A**PI, and **M**arkup.^[Nowadays the spelling has evolved into Jamstack and JAMstack seems to be used more seldom. For the purpose of this explanation I keep the original JAMstack spelling.] Those elements are part of any website, how can a JAMstack site be different from a *traditional* site that is powered by an web application server? A *traditional* architecture would consist of a database, a web application server to carry out the application logic, a load balancer, and web browser clients.
 
 <figure>
 <img src="/img/jamstack/traditional-stack.png">
@@ -73,7 +73,7 @@ Using netlifiy for their operations resulted in
 
 ## Portability
 
-Static files can be hosted almost anywhere and on any platform. You depend on how your provider offers serverless functions which would require adjustment in case you want to change your provider.
+Static files can be hosted almost anywhere and on any platform. You depend on how your provider offers serverless functions which would require adjustment in case you want to change your provider and that might not be a small task. In fact, serverless functions create a tight coupling with your CDN provider.^[[Facing the Unplanned Migration of Serverless Applications: A Study on Portability Problems, Solutions, and Dead Ends](https://www.iaas.uni-stuttgart.de/publications/Yussupov2019_FaaSPortability.pdf), by Vladimir Yussupov, Uwe Breitenbücher, Frank Leymann, Christian Müller, December 2019]
 
 ## Scaling
 
@@ -117,7 +117,7 @@ I always think of *Progressive Web Apps (PWAs)* as:
 
 > You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.
 
-Did you know, the [Starbucks app](https://app.starbucks.com/) is a PWA? Or have a look at [MishiPay´s](https://mishipay.com) Scan and Go app, which empowers shoppers to scan and pay for their shopping with their smartphones, rather than wasting time queuing at the checkout. The hassle of downloading an Android or iOS application made users not choose MishiPay´s native apps despite the value. It was a growing challenge for MishiPay, and they wanted to increase user adoption with a lower barrier of entry. They increased their transactions by a factor of 10. As of March 2022, the majority of transactions run through their PWA:^[[Mishipay case study on web.dev](https://web.dev/mishipay/)]
+Have a look at [MishiPay´s](https://mishipay.com) Scan and Go app, which empowers shoppers to scan and pay for their shopping with their smartphones, rather than wasting time queuing at the checkout. Users often want to understand the value that an application gives them before they download it. The hassle of downloading an Android or iOS application made users not choose MishiPay´s native apps despite the value. It was a growing challenge for MishiPay, and they wanted to increase user adoption with a lower barrier of entry and choose to implement their app as a PWA. They increased their transactions by a factor of 10. As of March 2022, the majority of transactions ran through their PWA:^[[Mishipay case study on web.dev](https://web.dev/mishipay/)]
 
 - iOS: 3.98%
 - Android: 3.34%
