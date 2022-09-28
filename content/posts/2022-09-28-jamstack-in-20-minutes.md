@@ -13,7 +13,7 @@ The JAMstack can bring huge advantages to the process of building websites, as w
 - allows deployments with confidence,
 - has an improved developer experience.
 
-That´s a bold a claim. **JAM**Stack stands for **J**avaScript, **A**PI, and **M**arkup. Those elements are part of any website, how can a JAMstack site be different from a *traditional* site that is powered by a web application server? A *traditional* architecture would consist of a database, a web application server to carry out the application logic, a load balancer, and web browser clients.
+That´s a bold a claim. **JAM**stack stands for **J**avaScript, **A**PI, and **M**arkup. Those elements are part of any website, how can a JAMstack site be different from a *traditional* site that is powered by a web application server? A *traditional* architecture would consist of a database, a web application server to carry out the application logic, a load balancer, and web browser clients.
 
 <figure>
 <img src="/img/jamstack/traditional-stack.png">
