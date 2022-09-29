@@ -3,7 +3,7 @@ title: How the JAMstack enables Canada´s largest food retailer
 refer: A talk by Justin Watts at JAMstack_conf_sf 2019
 tags: [video, code]
 ---
-<figure>
+<figure class="bleed-right">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6VGu4PvEBag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>"What got us here, won´t get us there", by Justin Watts from Loblaw</figcaption>
 </figure>
@@ -17,11 +17,11 @@ Loblaw is Canada´s largest retailer:
 - 12m loyalty members with over 600m transactions every year
 - 1.3m products in the grocery catalogue alone
 
-By moving to the JAMStack for one of their core businesses ("Shop like a mother") they recognized extreme website improvements:
+By moving to the JAMstack for one of their core businesses ("Shop like a mother") they recognized extreme website improvements:
   
 - 17.5x faster contentful paint (from 12.3s down to 0.7s)
 - 8.2x faster meaningful paint
-- 9.4x faster to interactive
+- 9.4x faster time to interactive
 
 Using netlifiy for their operations resulted in
 
@@ -35,14 +35,4 @@ They organize teams around
 - Content
 - Components
 - Features
-
-They are driving change with what they call "Rainbow of Death"
-
-- Intervene
-- Validate
-- Inform
-- Inspire
-- Mentor
-- Empower
-
 
