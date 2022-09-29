@@ -15,7 +15,7 @@ The Jamstack can bring huge advantages to the process of building websites, as w
 That´s a bold a claim. **Jam**stack stands for **J**avaScript, **A**PI, and **M**arkup. Those elements are part of any website, how can a Jamstack site be different from a *traditional* site that is powered by an web application server? A *traditional* architecture would consist of a database, a web application server to carry out the application logic, a load balancer, and web browser clients.
 
 <figure>
-<img src="/img/jamstack/traditional-stack.png">
+<img src="/img/jamstack/traditional-stack.png" alt="A traditional website stack represented by a box for the web browsers, a box for the load balancer, a box for the web application servers, and a box for the databases. The elements are connected with bi-directional arrows in the way: the web browser is connected with the load balancer, the load balancer is connected with the web application server, and the application server is connected with the database.">
 <figcaption>A <em>traditional</em> website stack</figcaption>
 </figure>
 
@@ -29,7 +29,7 @@ The Jamstack will eliminate the web application server and the load balancer by 
 A CDN is not a must for the Jamstack – you can use your own servers – but CDNs are *made* to deliver static files across the globe and therefore in many cases it makes sense to use them.
 
 <figure>
-<img src="/img/jamstack/jamstack.png">
+<img src="/img/jamstack/jamstack.png" alt="The Jamstack represented by a box for the web browsers, a box for the Content Delivey Network, and a differently colored box for the build process. The web browsers are connected with a bi-directional arrow to the Content Delivery Network and the build process is pointing with a uni-directional arrow to the Content Delivey Network.">
 <figcaption>A Jamstack to serve static contents through the Content Delivery Network. If you <em>only</em> have static contents, like for a blog, it is as simple as that.</figcaption>
 </figure>
 
@@ -40,14 +40,14 @@ Dynamic reaction to user input will be achieved by JavaScript (the **J** of the 
 Your services have to run on a server, how is that different from a web application server? Jamstack services run as *serverless functions* on the infrastructure of your CDN provider, like AWS, Azure, Cloudflare, or Netlify. Of course, there is a server, but you don´t have to deal with it, you don´t have to maintain it, you will not patch it, you will not take care of scaling, and the developers don´t recognize it. All the operations are done by the provider. Because providers are focusing on those aspects they can do that most likely better than you can. In my view, when you want to leverage serverless functions, you have reached the point where you should rely on a CDN provider and not host the site by yourself.
 
 <figure>
-<img src="/img/jamstack/jamstack-with-database.png">
+<img src="/img/jamstack/jamstack-with-database.png" alt="The Jamstack represented by a box for the web browsers, a box for the Content Delivey Network including the serverless functions, a box for the database that might be third party, and a differently colored box for the build process. The web browsers are connected with a bi-directional arrow to the Content Delivery Network, the database is also connected with a bi-drectional arrow to the Content Delivery Network, and the build process is pointing with a uni-directional arrow to the Content Delivey Network.">
 <figcaption>The Jamstack including serverless functions and database</figcaption>
 </figure>
 
 For example, to perform the payment during checkout of a shopping basket, a 3rd party payment service like [**stripe**](https://stripe.com/de) could be integrated. 
 
 <figure>
-<img src="/img/jamstack/jamstack-with-3rd-party-service.png">
+<img src="/img/jamstack/jamstack-with-3rd-party-service.png" alt="The Jamstack represented by a box for the web browsers, a box for the Content Delivey Network including the serverless functions, a box for third party services like stripe, a box for the database that might be third party, and a differently colored box for the build process. The web browsers are connected with a bi-directional arrow to the Content Delivery Network and with a bi-directional arrow to the third party services. The database is connected with a bi-drectional arrow to the Content Delivery Network, and the build process is pointing with a uni-directional arrow to the Content Delivey Network.">
 <figcaption>The Jamstack including 3rd party services</figcaption>
 </figure>
 
