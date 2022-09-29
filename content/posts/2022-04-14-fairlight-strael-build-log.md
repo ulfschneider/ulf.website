@@ -654,6 +654,8 @@ Straight forward. The Strael frame comes with suitable cage bolts which even inc
 
 ## It is done
 
+The weight of the bike is 9.1 kg including pedals.
+
 <figure class="md:bleed">
 <img src="/img/strael/it-is-done.jpg" alt="The completed Strael bike">
 <figcaption>It is done. Here are some <a href="/2022-07-10-strael-images/"> images of my Strael in the wild</a>.</figcaption>

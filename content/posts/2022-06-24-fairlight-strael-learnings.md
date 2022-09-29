@@ -5,6 +5,7 @@ hero: /img/strael/strael-in-the-wild.jpg
 ---
 A short summary of what I´ve learned from my [Fairlight Strael Build](/2022-04-14-fairlight-strael-build-log/).
 
+- **Weight:** My setup weighs 9.1 kg including pedals.
 - **Ride quality:** The ride quality of the Strael frame is beautiful. The *tall* frame geometry fits me very well so that I can find exactly my correct position on the bike. The handling is stable, comfortable, and direct. At the same time it is not nervous or squishy. Once on the bike everything feels naturally. During my first rides I thought the bike is slower than my old carbon bike but in fact it is as fast – it only *feels* slower because it rides so calm. I wouldn´t want to change anything. 
 - **Frame build quality:** The quality of the Strael frame is very high. It comes securely packaged, has a high quality finish and the tolerances are accurate. It´s a high quality product. 
 - **Shimano manuals:** The [Shimano technical manuals](https://si.shimano.com/#/en/search/Series?name=DURA-ACE%20DI2&generation=R9250&type=ROAD) are well made and have been of exceptional help while building up the bike.
