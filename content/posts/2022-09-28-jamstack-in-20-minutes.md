@@ -111,16 +111,18 @@ JavaScript can be used for the building of the static artifacts on the server as
 
 ## Progressive Web Apps
 
-I always think of *Progressive Web Apps (PWAs)* as: 
+Before going into how the Jamstack and *Progressive Web Apps (PWAs)* can play together, let´s have a look at what a PWA is. I always think of a PWA as:
 
 > You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.
 
 Have a look at [MishiPay´s](https://mishipay.com) Scan and Go app, which empowers shoppers to scan and pay for their shopping with their smartphones, rather than wasting time queuing at the checkout. 
 
-MishiPay had a problem: Users often want to understand the value that an application gives them before they download it. The hassle of downloading an Android or iOS application made users not choose MishiPay´s native apps despite the value. It was a growing challenge for MishiPay, and they wanted to increase user adoption with a lower barrier of entry and choose to implement their app as a PWA. This change increased their transactions by a factor of 10. As of March 2022, the majority of transactions ran through their PWA:^[[<cite>MishiPay's PWA increases transactions 10 times and saves 2.5 years of queuing</cite>](https://web.dev/mishipay/)]
+MishiPay had a problem: Users want to understand the value that an application gives them *before* they download it. In a store, where MishiPay saves shoppers time and improves their experience, it is counterintuitive for users to wait for a download of a native app before they can use the application. The hassle of downloading an Android or iOS application made users not choose MishiPay´s native apps despite the value. It was a growing challenge for MishiPay, and they wanted to *increase user adoption with a lower barrier of entry* and decided to implement their app as a PWA. This change increased their transactions by a factor of 10. As of March 2022, the majority of transactions ran through their PWA:^[[<cite>MishiPay's PWA increases transactions 10 times and saves 2.5 years of queuing</cite>](https://web.dev/mishipay/)]
 
 - iOS: 3.98%
 - Android: 3.34%
 - Web/PWA: 92.68%
+
+The low entry barrier of a PWA, combined with the user experience being close to a native app, makes many well known brands like [Starbucks](https://app.starbucks.com) and [Spotify](https://open.spotify.com) implementing their web/app presences as PWAs.
 
 A PWA will work without a Jamstack and vice versa. But, static artifacts, when delivered to the web browser, can nicely be injected into a PWA, where the browser will cache those artifacts under the control of a *service worker.* This will speed up the application once more, and, depending on your use case, will even make it offline-capable. The message is: The Jamstack and PWAs allow for excellent pairing. 
