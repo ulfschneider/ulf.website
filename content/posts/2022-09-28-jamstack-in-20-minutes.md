@@ -113,7 +113,7 @@ JavaScript can be used for the building of the static artifacts on the server as
 
 Before going into how the Jamstack and *Progressive Web Apps (PWAs)* can play together, let´s have a look at what a PWA is. I always think of a PWA as: <q>You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.</q>
 
-<blockquote>PWAs start with a great web experience and then enahnce that experience for performance, resilience, installation, and engagement.
+<blockquote>PWAs start with a great web experience and then enhance that experience for performance, resilience, installation, and engagement.
 <footer>Aaron Gustafson, <cite><a href="https://aneventapart.com/news/post/progressive-web-apps-where-do-i-begin-aea-video">Progressive Web Apps: Where Do I Begin?</a></cite></footer>
 </blockquote>
 
