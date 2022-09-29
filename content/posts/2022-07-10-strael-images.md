@@ -1,6 +1,6 @@
 ---
 title: Strael images
-tags: strael
+tags: [sports, strael]
 layout: image
 subtitle: My Strael without its rider
 --- 
