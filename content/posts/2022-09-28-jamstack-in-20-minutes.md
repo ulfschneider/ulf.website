@@ -142,4 +142,4 @@ A PWA will work without a Jamstack and vice versa. But, static artifacts, when d
 
 ## Conclusion
 
-The Jamstack allows to build websites that are fast, robust, scale well, and are a joy to work with for both, users and developers. In my view it´s the most current approach to deliver content on the web. The Jamstack might not be suitable for *every* case but if it fits to your problem you cannot do wrong bo choosing it.
+The Jamstack allows to build websites that are fast, robust, scale well, and are a joy to work with for both, users and developers. In my view it´s the most current approach to deliver content on the web. The Jamstack might not be suitable for *every* case, but if it fits to your problem you cannot do wrong by choosing it.
