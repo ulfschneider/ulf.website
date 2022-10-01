@@ -113,10 +113,10 @@ Serverless functions are liberating developers. It´s a fast and comfy way of pr
 
 The building of the static artifacts works well on a developer machine in the sense that every developer will build the complete files of the website on his/her machine, and that file output can be served with a local http server by issuing a single command. 
 
-The skills to work with semantic HTML will never be outdated. HTML is a building block of the world wide web and learning HTML is a good investment for any developer who is making websites.^[[<cite>resilientwebdesign.com</cite>](https://resilientwebdesign.com) by Jeremy Keith is an excellent resource to understand how a website should be build with layers in the order HTML, CSS, JavaScript. And at a side note, Resilient Web Design is an offline-capable Progressive Web App.] 
+The skills to work with semantic HTML will never be outdated. HTML is a building block of the world wide web and learning HTML is a good investment for any developer who is making websites.^[[<cite>resilientwebdesign.com</cite>](https://resilientwebdesign.com) by Jeremy Keith is an excellent resource to understand how a website should be built with layers in the order HTML, CSS, JavaScript. At a side note, Resilient Web Design is an offline-capable Progressive Web App.] 
 
 > If you build pages with the idea that parts other than HTML are optional, you’ll create a better and stronger web page.
-> <footer>Jeremy Keith in <cite>Resilient Web Design</cite></footer>
+> <footer>Jeremy Keith, <cite>Resilient Web Design</cite></footer>
 
 JavaScript can be used for the building of the static artifacts on the server as well as on the local dev environment. [11ty](https://www.11ty.dev) is an excellent tool for the task. Having the same language for the frontend and the backend allows developers to use the same paradigms and toolings, and they can move more easily between the front and the back.
 
