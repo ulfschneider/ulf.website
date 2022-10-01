@@ -63,7 +63,7 @@ Loblaw, Canada´s largest food retailer, is another great example. Justin Watts,
 - 17.5x faster contentful paint (from 12.3s down to 0.7s)
 - 9.4x faster time to interactive
 
-Using netlifiy for their operations resulted in
+Using Netlify for their operations resulted in
 - 10x reduction in time to market
 - 38k monthly cost savings
 - fewer attack vectors
@@ -77,7 +77,7 @@ Static files can be hosted almost anywhere and on any platform. You wouldn´t ha
 
 Serving of static files is easy to scale, and the CDN will do that for you. Your provider will also scale up your serverless functions, which is more difficult to do but you will not recognize that.
 
-An excellent example of how well a Jamstack site will scale is the United States [COVID Tracking Project](https://covidtracking.com) which was co-founded by [Erin Kissane](https://twitter.com/kissane). 
+An excellent example of how well a Jamstack site scales is the United States [COVID Tracking Project](https://covidtracking.com) which was co-founded by [Erin Kissane](https://twitter.com/kissane). 
 
 In late February 2020 the US Federal Centers for Disease Control (CDC) stopped sharing the total number of COVID-19 tests while the CDC still published the number of positive tests. Without knowing the total number of tests it’s impossible to discern the percentage of infected people at a point in time (the positivity rate). That´s how the COVID Tracking Project started life: As a private initiative of volunteers gathering COVID data for deeper insights into the pandemic.
 
