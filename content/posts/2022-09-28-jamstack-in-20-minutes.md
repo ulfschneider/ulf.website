@@ -14,7 +14,7 @@ The Jamstack can bring huge advantages to the process of building websites, as w
 
 **Jam**stack stands for **J**avaScript, **A**PI, and **M**arkup. Those elements are part of any website, how can a Jamstack site be different from a *traditional* site that is powered by an web application server? 
 
-A *traditional* architecture would consist of a database, a web application servers to carry out the application logic, a load balancer, and web browser clients.
+A *traditional* architecture would consist of a database, web application servers to carry out the application logic, a load balancer, and web browser clients.
 
 <figure>
 <img src="/img/jamstack/traditional-stack.png" alt="A traditional website stack represented by a box for the web browsers, a box for the load balancer, a box for the web application servers, and a box for the databases. The elements are connected with bi-directional arrows in the way: the web browser is connected with the load balancer, the load balancer is connected with the web application server, and the application server is connected with the database.">
