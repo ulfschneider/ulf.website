@@ -1,7 +1,7 @@
 ---
 title: Jamstack in 20 minutes
 tags: [code, articles]
-abstract: The Jamstack comes with the promise to make websites faster, more secure, and provide a better developer experience. Why is that the case?
+abstract: The Jamstack comes with the promise to make websites faster, more secure, and to provide a better developer experience. Why is that the case?
 ---
 The Jamstack can bring huge advantages to the process of building websites, as well as to the way these websites are carried out to users. Namely, a Jamstack site
 
@@ -49,7 +49,7 @@ Your services have to run on a server, how is that different from a web applicat
 For example, to perform the payment during checkout of a shopping basket, a 3rd party payment service like [**stripe**](https://stripe.com/de) could be integrated. 
 
 <figure>
-<img src="/img/jamstack/jamstack-with-3rd-party-service.png" alt="The Jamstack represented by a box for the web browsers, a box for the Content Delivey Network including the serverless functions, a box for third party services like stripe, a box for the database that might be third party, and a differently colored box for the build process. The web browsers are connected with a bi-directional arrow to the Content Delivery Network and with a bi-directional arrow to the third party services. The database is connected with a bi-drectional arrow to the Content Delivery Network, and the build process is pointing with a uni-directional arrow to the Content Delivey Network.">
+<img src="/img/jamstack/jamstack-with-3rd-party-service.png" alt="The Jamstack represented by a box for the web browsers, a box for the Content Delivey Network including the serverless functions, a box for third party services like stripe, a box for the database that might be third party, and a differently colored box for the build process. The web browsers are connected with a bi-directional arrow to the Content Delivery Network and with a bi-directional arrow to the third party services. The third party services are also connected with a bi-directional arrow to the Content Delivery Networ. The database is connected with a bi-drectional arrow to the Content Delivery Network, and the build process is pointing with a uni-directional arrow to the Content Delivey Network.">
 <figcaption>The Jamstack including 3rd party services</figcaption>
 </figure>
 
@@ -61,11 +61,11 @@ The contents served to users are static files that can be handed over extremely 
 
 To give an example, after [Smashing Magazine](https://www.smashingmagazine.com) moved away from five different technical platforms (including WordPress) to the Jamstack with the Netlify CDN^[[<cite>How Smashing Magazine Manages Content: Migration From WordPress To Jamstack</cite>](https://www.smashingmagazine.com/2020/01/migration-from-wordpress-to-jamstack/)], their time to first load went down from 800ms to 80ms – a factor of 10! You might want to verify that by yourself and visit [testmysite.io](https://testmysite.io/), key in the address `smashingmagazine.com` and see the impressive HTML download times for different continents. Smashing Magazine had 2.5 million visits each month (80,000 each day) at the time of running the project. 
 
-Loblaw, Canada´s largest food retailer, is another great example. Justin Watts, Engineering Director at Loblaw Digital, points out in his [talk on Jamstack_conf_sf 2019](https://youtu.be/6VGu4PvEBag) that by moving to the Jamstack for one of their core businesses, <q>[Shop like a mother](https://youtu.be/qT4asha9cRA),</q> they recognized extreme website improvements:^[[<cite>Loblaw Digital, Launching sites and campaigns in minutes with no-ops.</cite>](https://www.netlify.com/customers/loblaw/)]
+Loblaw, Canada´s largest food retailer, is another great example. Justin Watts, Engineering Director at Loblaw Digital, points out in his talk [<cite>What got us here, won’t get us there</cite>](https://youtu.be/6VGu4PvEBag) on Jamstack_conf_sf 2019, that by moving to the Jamstack for one of their core businesses, <q>[Shop like a mother](https://youtu.be/qT4asha9cRA),</q> they recognized extreme website improvements:^[[<cite>Loblaw Digital, Launching sites and campaigns in minutes with no-ops.</cite>](https://www.netlify.com/customers/loblaw/)]
 - 17.5x faster contentful paint (from 12.3s down to 0.7s)
 - 9.4x faster time to interactive
 
-Using netlifiy for their operations resulted in
+Using Netlify for their operations resulted in
 - 10x reduction in time to market
 - 38k monthly cost savings
 - fewer attack vectors
@@ -78,6 +78,12 @@ Static files can be hosted almost anywhere and on any platform. You wouldn´t ha
 ## Scaling
 
 Serving of static files is easy to scale, and the CDN will do that for you. Your provider will also scale up your serverless functions, which is more difficult to do but you will not recognize that.
+
+An excellent example of how well a Jamstack site scales is the United States [COVID Tracking Project](https://covidtracking.com) which was co-founded by [Erin Kissane](https://twitter.com/kissane). 
+
+In late February 2020 the US Federal Centers for Disease Control (CDC) stopped sharing the total number of COVID-19 tests while the CDC still published the number of positive tests. Without knowing the total number of tests it’s impossible to discern the percentage of infected people at a point in time (the positivity rate). That´s how the COVID Tracking Project started life: As a private initiative of volunteers gathering COVID data for deeper insights into the pandemic.
+
+The COVID Tracking project became an invaluable resource for citizens, journalists, and even state governments looking for COVID data. What started as a Google Sheet became within three months a Jamstack site able to handle two million requests each day. Erin Kissane explains in her talk [<cite>The COVID Tracking Project: 0 to 2M API Requests in 3 Months</cite>](https://youtu.be/ryngYoHXNfQ) on the Jamstack Conf 2020 how the project team achieved to set up a super fast and super stable website. Their site is hosted by Netlify and built with Gatsby. The data resides in Google Sheets and Contentful. One day, after the White House cited the COVID Tracking Project, the traffic went from 250,000 requests a day up to 1,500,000 requests within 24 hours and there was no slow down or any technical issues with the website. The admins even didn´t notice the amount of traffic!^[[<cite>How The COVID Tracking Project Scaled From 0 to 2M API Requests in 3 Months</cite>](https://www.netlify.com/blog/2020/07/06/how-the-covid-tracking-project-scaled-from-0-to-2m-api-requests-in-3-months/)]
 
 ## Security
 
@@ -109,6 +115,11 @@ Serverless functions are liberating developers. It´s a fast and comfy way of pr
 
 The building of the static artifacts works well on a developer machine in the sense that every developer will build the complete files of the website on his/her machine, and that file output can be served with a local http server by issuing a single command. 
 
+The skills to work with semantic HTML will never be outdated. HTML is a building block of the world wide web and learning HTML is a good investment for any developer who is making websites.^[[<cite>resilientwebdesign.com</cite>](https://resilientwebdesign.com) by Jeremy Keith is an excellent resource to understand how a website should be built with layers in the order HTML, CSS, JavaScript. At a side note, Resilient Web Design is an offline-capable Progressive Web App.] 
+
+> If you build pages with the idea that parts other than HTML are optional, you’ll create a better and stronger web page.
+> <footer>Jeremy Keith, <cite>Resilient Web Design</cite></footer>
+
 JavaScript can be used for the building of the static artifacts on the server as well as on the local dev environment. [11ty](https://www.11ty.dev) is an excellent tool for the task. Having the same language for the frontend and the backend allows developers to use the same paradigms and toolings, and they can move more easily between the front and the back.
 
 ## Progressive Web Apps
@@ -130,3 +141,7 @@ MishiPay had a problem: Users want to understand the value that an application g
 The low entry barrier of a PWA, combined with the user experience being close to a native app, makes many well known brands like [Starbucks](https://app.starbucks.com) and [Spotify](https://open.spotify.com) implementing their web/app presences as PWAs.
 
 A PWA will work without a Jamstack and vice versa. But, static artifacts, when delivered to the web browser, can nicely be injected into a PWA, where the browser will cache those artifacts under the control of a *service worker.* This will speed up the application once more, and, depending on your use case, will even make it offline-capable. The message is: The Jamstack and PWAs allow for excellent pairing. 
+
+## Conclusion
+
+The Jamstack allows to build websites that are fast, robust, scale well, and are a joy to work with for both, users and developers. In my view it´s the most current approach to deliver content on the web. The Jamstack might not be suitable for *every* case, but if it fits to your problem you cannot do wrong by choosing it.

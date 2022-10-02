@@ -3,7 +3,7 @@ title: How the JAMstack enables Canada´s largest food retailer
 refer: A talk by Justin Watts at JAMstack_conf_sf 2019
 tags: [video, code]
 ---
-<figure class="bleed-right">
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6VGu4PvEBag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>"What got us here, won´t get us there", by Justin Watts from Loblaw</figcaption>
 </figure>
