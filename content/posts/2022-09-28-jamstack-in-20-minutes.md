@@ -99,7 +99,7 @@ It´s hard to overemphasize the benefit of *atomic* deployments. A deployment wi
 2. Build the static contents on the developer machine locally
 3. Run the automatic tests locally
 4. If no failures occurred, commit the changes of your source code – not the output of your build – into Git. You might want to ensure successful testing with a Git pre-commit hook. 
-5. Push your Git content to make it available to the CDN (you might have a previous step to push to your local test environment)
+5. Push your Git content to make it available to the CDN. You might have a previous step to push to your local test environment.
 6. The CDN will build the static contents
 7. The CDN will run the automatic tests
 8. If no failure occurred, your site goes online. If a failure occured, no deployment will take place and instead the previous version of your site will remain online.
