@@ -55,7 +55,7 @@
         "markdown-it-fitmedia": "^0.5.2",
         "markdown-it-footnote": ">=3.0.3",
         "markdown-it-mark": "^3.0.1",
-        "markdown-it-mathjax3": "^4.3.1",
+        "markdown-it-mathjax3": "^4.3.2",
         "markdown-it-scrolltable": ">=0.1.6",
         "markdown-it-toc-done-right": ">=4.2.0",
         "markdown-it-trimmer": "^0.1.5",
