@@ -122,7 +122,11 @@ JavaScript can be used for the building of the static artifacts on the server as
 
 ## Progressive Web Apps
 
-Before going into how the Jamstack and *Progressive Web Apps (PWAs)* can play together, let´s have a look at what a PWA is. I always think of a PWA as: <q>You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.</q>
+A Progressive Web App (PWA) will work without a Jamstack and vice versa – it´s two concepts that can stand each on their own. But, static artifacts, when delivered to the web browser, can nicely be injected into a PWA, where the browser will cache those artifacts under the control of a *service worker.* This will speed up the application once more, and, depending on your use case, will even make it offline-capable. The message is: The Jamstack and PWAs allow for excellent pairing. 
+
+Let´s have a look at what a PWA is. I always think of a PWA as: <q>You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.</q>
+
+To quote [Aaron Gustafson](https://www.aaron-gustafson.com), Principal Accessibility Innovation Strategist at Microsoft:
 
 <blockquote>PWAs start with a great web experience and then enhance that experience for performance, resilience, installation, and engagement.
 <footer>Aaron Gustafson, <cite><a href="https://aneventapart.com/news/post/progressive-web-apps-where-do-i-begin-aea-video">Progressive Web Apps: Where Do I Begin?</a></cite></footer>
@@ -137,8 +141,6 @@ MishiPay had a problem: Users want to understand the value that an application g
 - Web/PWA: 92.68%
 
 The low entry barrier of a PWA, combined with the user experience being close to a native app, makes many well known brands like [Starbucks](https://app.starbucks.com) and [Spotify](https://open.spotify.com) implementing their web/app presences as PWAs.
-
-A PWA will work without a Jamstack and vice versa. But, static artifacts, when delivered to the web browser, can nicely be injected into a PWA, where the browser will cache those artifacts under the control of a *service worker.* This will speed up the application once more, and, depending on your use case, will even make it offline-capable. The message is: The Jamstack and PWAs allow for excellent pairing. 
 
 ## Conclusion
 
