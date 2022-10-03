@@ -128,7 +128,7 @@ A Progressive Web App (PWA) will work without a Jamstack and vice versa – it´
 
 Let´s have a look at what a PWA is. I always think of a PWA as: <q>You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.</q>
 
-To quote [Aaron Gustafson](https://www.aaron-gustafson.com), Principal Accessibility Innovation Strategist at Microsoft:
+To quote [Aaron Gustafson](https://www.aaron-gustafson.com), Accessibility Strategist at Microsoft:
 
 <blockquote>PWAs start with a great web experience and then enhance that experience for performance, resilience, installation, and engagement.
 <footer>Aaron Gustafson, <cite><a href="https://aneventapart.com/news/post/progressive-web-apps-where-do-i-begin-aea-video">Progressive Web Apps: Where Do I Begin?</a></cite></footer>
