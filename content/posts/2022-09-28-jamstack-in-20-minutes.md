@@ -120,7 +120,7 @@ As the build output is static HTML, the developer needs to know HTML. The skills
 > If you build pages with the idea that parts other than HTML are optional, you’ll create a better and stronger web page.
 > <footer>Jeremy Keith, <cite>Resilient Web Design</cite></footer>
 
-JavaScript can be used for the building of the static artifacts on the server as well as on the local dev environment. [11ty](https://www.11ty.dev) is an excellent tool for the task. Having the same language for the frontend and the backend allows developers to use the same paradigms and toolings, and they can move more easily between the front and the back.
+JavaScript can be used for the building of the static artifacts on the server and on the local dev environment. [11ty](https://www.11ty.dev) is an excellent tool for the task. JavaScript will also be used to add interaction to the HTML pages. Having the same language for the frontend and the backend allows developers to use the same paradigms and toolings, and they can move more easily between the front and the back.
 
 ## Progressive Web Apps
 
