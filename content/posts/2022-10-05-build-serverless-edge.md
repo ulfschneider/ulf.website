@@ -24,7 +24,8 @@ Edge functions differ from serverless functions in the following way:
 Edge Functions allow you to serve content from the CDN server closest to the user. The region closest to the request will run the function. The immediate benefits that are associated with edge functions include, but are not limited to:
 <ul>
 <li><strong>Decreased latency:</strong> Running logic closer to the end user can reduce not only the volume of data, but the distance that data needs to travel. If a user were sending a request in Arizona, a response time from a local node would be lower than one in London.</li>
-<li><strong>Reduction in cold start boot times:</strong> For serverless functions, cold start boot times average anywhere from 50-500ms. Take into consideration, research shows that the new standard for 2022 for the time an online shopper will wait for your page to load is 2-3 seconds. The cold start average for edge functions, on the other hand, is drastically reduced (50-200ms).</li>
+<li><strong>Reduction in cold start boot times:</strong> For serverless functions, cold start boot times average anywhere from 50-500ms. Take into consideration, research shows that the new standard for 2022 for the time an online shopper will wait for your page to load is 2-3 seconds. The cold start average for edge functions, on the other hand, is drastically reduced (50-200ms).
+</li>
 </ul>
 <footer>from: <a href="https://www.netlify.com/blog/edge-functions-explained/"><cite>Understanding Edge Functions: The Edge and Beyond</cite></a></footer>
 </blockquote>
