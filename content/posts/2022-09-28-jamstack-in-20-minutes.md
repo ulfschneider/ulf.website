@@ -46,7 +46,7 @@ Your services have to run on a server, how is that different from a web applicat
 <figcaption>The Jamstack including serverless functions and database</figcaption>
 </figure>
 
-For example, to perform the payment during checkout of a shopping basket, a 3rd party payment service like [**stripe**](https://stripe.com/de) could be integrated. 
+It´s not all about *your own* serverless functions. You can call services written by others. E.g., to perform the payment during checkout of a shopping basket, a 3rd party payment service like [**stripe**](https://stripe.com/de) could be integrated. 
 
 <figure>
 <img src="/img/jamstack/jamstack-with-3rd-party-service.png" alt="The Jamstack represented by a box for the web browsers, a box for the Content Delivey Network including the serverless functions, a box for third party services like stripe, a box for the database that might be third party, and a differently colored box for the build process. The web browsers are connected with a bi-directional arrow to the Content Delivery Network and with a bi-directional arrow to the third party services. The third party services are also connected with a bi-directional arrow to the Content Delivery Networ. The database is connected with a bi-drectional arrow to the Content Delivery Network, and the build process is pointing with a uni-directional arrow to the Content Delivey Network.">
@@ -61,7 +61,7 @@ The contents served to users are static files that can be handed over extremely 
 
 To give an example, after [Smashing Magazine](https://www.smashingmagazine.com) moved away from five different technical platforms (including WordPress) to the Jamstack with the Netlify CDN^[[<cite>How Smashing Magazine Manages Content: Migration From WordPress To Jamstack</cite>](https://www.smashingmagazine.com/2020/01/migration-from-wordpress-to-jamstack/)], their time to first load went down from 800ms to 80ms – a factor of 10! You might want to verify that by yourself and visit [testmysite.io](https://testmysite.io/), key in the address `smashingmagazine.com` and see the impressive HTML download times for different continents. Smashing Magazine had 2.5 million visits each month (80,000 each day) at the time of running the project. 
 
-Loblaw, Canada´s largest food retailer with 2,800 stores nationwide, where 85% of canadians shop at at least once a week, is another great example. Justin Watts, Engineering Director at Loblaw Digital, points out in his talk [<cite>What got us here, won’t get us there</cite>](https://youtu.be/6VGu4PvEBag) that by moving to the Jamstack for one of their core businesses, [Shop like a mother](https://slam.realcanadiansuperstore.ca), they recognized extreme website improvements:^[[<cite>Loblaw Digital, Launching sites and campaigns in minutes with no-ops.</cite>](https://www.netlify.com/customers/loblaw/)]
+Loblaw, Canada´s largest food retailer with 2,800 stores nationwide, where 85% of canadians shop at at least once a week, is another great example. Justin Watts, Engineering Director at Loblaw Digital, points out in his talk [<cite>What got us here, won’t get us there</cite>](https://youtu.be/6VGu4PvEBag) that by moving to the Jamstack for one of their core businesses, [Shop like a mother](https://www.youtube.com/watch?v=qT4asha9cRA), they recognized extreme website improvements:^[[<cite>Loblaw Digital, Launching sites and campaigns in minutes with no-ops.</cite>](https://www.netlify.com/customers/loblaw/)]
 - 17.5x faster contentful paint (from 12.3s down to 0.7s)
 - 9.4x faster time to interactive
 
@@ -99,7 +99,7 @@ It´s hard to overemphasize the benefit of *atomic* deployments. A deployment wi
 2. Build the static contents on the developer machine locally
 3. Run the automatic tests locally
 4. If no failures occurred, commit the changes of your source code – not the output of your build – into Git. You might want to ensure successful testing with a Git pre-commit hook. 
-5. Push your Git content to make it available to the CDN (you might have a previous step to push to your local test environment)
+5. Push your Git content to make it available to the CDN. You might have a previous step to push to your local test environment.
 6. The CDN will build the static contents
 7. The CDN will run the automatic tests
 8. If no failure occurred, your site goes online. If a failure occured, no deployment will take place and instead the previous version of your site will remain online.
@@ -120,11 +120,15 @@ As the build output is static HTML, the developer needs to know HTML. The skills
 > If you build pages with the idea that parts other than HTML are optional, you’ll create a better and stronger web page.
 > <footer>Jeremy Keith, <cite>Resilient Web Design</cite></footer>
 
-JavaScript can be used for the building of the static artifacts on the server as well as on the local dev environment. [11ty](https://www.11ty.dev) is an excellent tool for the task. Having the same language for the frontend and the backend allows developers to use the same paradigms and toolings, and they can move more easily between the front and the back.
+JavaScript can be used for the building of the static artifacts on the server and on the local dev environment. [11ty](https://www.11ty.dev) is an excellent tool for the task. JavaScript will also be used to add interaction to the HTML pages. Having the same language for the frontend and the backend allows developers to use the same paradigms and toolings, and they can move more easily between the front and the back.
 
 ## Progressive Web Apps
 
-Before going into how the Jamstack and *Progressive Web Apps (PWAs)* can play together, let´s have a look at what a PWA is. I always think of a PWA as: <q>You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.</q>
+A Progressive Web App (PWA) will work without a Jamstack and vice versa – it´s two concepts that can stand each on their own. But, static artifacts, when delivered to the web browser, can nicely be injected into a PWA, where the browser will cache those artifacts under the control of a *service worker.* This will speed up the application once more, and, depending on your use case, will even make it offline-capable. The message is: The Jamstack and PWAs allow for excellent pairing. 
+
+Let´s have a look at what a PWA is. I always think of a PWA as: <q>You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.</q>
+
+To quote [Aaron Gustafson](https://www.aaron-gustafson.com), Accessibility Strategist at Microsoft:
 
 <blockquote>PWAs start with a great web experience and then enhance that experience for performance, resilience, installation, and engagement.
 <footer>Aaron Gustafson, <cite><a href="https://aneventapart.com/news/post/progressive-web-apps-where-do-i-begin-aea-video">Progressive Web Apps: Where Do I Begin?</a></cite></footer>
@@ -139,8 +143,6 @@ MishiPay had a problem: Users want to understand the value that an application g
 - Web/PWA: 92.68%
 
 The low entry barrier of a PWA, combined with the user experience being close to a native app, makes many well known brands like [Starbucks](https://app.starbucks.com) and [Spotify](https://open.spotify.com) implementing their web/app presences as PWAs.
-
-A PWA will work without a Jamstack and vice versa. But, static artifacts, when delivered to the web browser, can nicely be injected into a PWA, where the browser will cache those artifacts under the control of a *service worker.* This will speed up the application once more, and, depending on your use case, will even make it offline-capable. The message is: The Jamstack and PWAs allow for excellent pairing. 
 
 ## Conclusion
 
