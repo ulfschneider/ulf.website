@@ -4,7 +4,7 @@ tags: code
 ---
 Zach explains the difference of build, serverless, and edge for 11ty rendering modes. Video is taken from [<cite>ELEVENTY: BUILD VS. SERVERLESS VS. EDGE</cite>](https://www.zachleat.com/web/eleventy-rendering-modes/) where Zach´s slidedeck is also available.
 
-11ty a build-first, static-first tool – serverless and edge are to *supplement* the build of 11ty. Static-first should keep everything as fast as possible and as portable as possible for 11ty.
+11ty is a build-first, static-first tool – serverless and edge are to *supplement* the build of 11ty. Static-first should keep everything as fast and as portable as possible for 11ty.
 
 - Everything starts with the *build,* where data is taken from different sources to create static files. The output of the build is fastest to use, most portable, simplest to host. 
 - [*Serverless*](https://www.11ty.dev/docs/plugins/serverless/) allows to build pages *on request* when the site is already online. A little bit more risk, a little bit slower. Serverless can be Netlify functions, which run on every request and take at least 100 ms, or on-demand builders, which run on the first request and are cached for very fast subsequent requests. Install 11ty 1.0 to use serverless functions.
