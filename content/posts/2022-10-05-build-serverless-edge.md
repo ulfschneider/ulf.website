@@ -18,7 +18,7 @@ Zach explains the difference of build, serverless, and edge for 11ty rendering m
 <footer>from: <a href="https://www.netlify.com/blog/edge-functions-explained/"><cite>Understanding Edge Functions: The Edge and Beyond</cite></a></footer>
 </blockquote>
 
-Other than serverless functions, edge functions have the following advantages:
+Edge functions differ from serverless functions in the following way:
 
 <blockquote>
 Edge Functions allow you to serve content from the CDN server closest to the user. The region closest to the request will run the function. The immediate benefits that are associated with edge functions include, but are not limited to:
