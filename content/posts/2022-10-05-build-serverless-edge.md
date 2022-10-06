@@ -2,7 +2,7 @@
 title: 11ty build vs. serverless vs. edge
 tags: code
 ---
-Zach explains the difference of build, serverless, and edge for 11ty rendering modes. Video is taken from [<cite>ELEVENTY: BUILD VS. SERVERLESS VS. EDGE</cite>](https://www.zachleat.com/web/eleventy-rendering-modes/) where Zach´s slidedeck is also available.
+Zach explains the difference of build, serverless, and edge for 11ty rendering modes. The video is taken from [<cite>ELEVENTY: BUILD VS. SERVERLESS VS. EDGE</cite>](https://www.zachleat.com/web/eleventy-rendering-modes/) where Zach´s slidedeck is also available.
 
 11ty is a build-first, static-first tool – serverless and edge are to *supplement* the build of 11ty. Static-first should keep everything as fast and as portable as possible for 11ty.
 
