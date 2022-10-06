@@ -19,51 +19,94 @@ if (navigator.serviceWorker) {
 
 /* Back to top */
 function maintainBackToStartVisibility() {
-    let backToStart = document.getElementById('back-to-start');
+    let backToStart = document.querySelector('#back-to-start');
+
     if (backToStart) {
+        let footerNav = document.querySelector('#footer nav');
         let windowHeight = window.innerHeight;
         let documentHeight = document.body.scrollHeight;
+        let scrollY = window.scrollY;
 
-        if (windowHeight * 1.5 < documentHeight) {
-            backToStart.style.display = '';
+        if (windowHeight * 1.5 < documentHeight && scrollY >= .5 * windowHeight) {
+            backToStart.style.display = 'flex';
+            backToStart.style.position = 'fixed';
+            backToStart.style.paddingRight = '.5rem';
+            backToStart.style.paddingLeft = '.5rem';
+            backToStart.style.right = '1rem';
+            backToStart.style.bottom = '0';            
+            backToStart.style.border = '1px solid currentColor';
+            if (footerNav) {
+                footerNav.classList.add('mrb-3');
+            }
         } else {
             backToStart.style.display = 'none';
+            backToStart.style.position = 'static';
+            backToStart.style.border = 'none';
+            backToStart.style.padding = 'none';
+
+            if (footerNav) {
+                footerNav.classList.remove('mrb-3');
+            }
         }
     }
 }
 
 /* Page load time */
 function displayLoadTime() {
-    let loadTime = document.getElementById('load-time');
-
-    if (!loadTime) {
-        return;
-    }
-
-    //PerformanceNavigationTiming API
-    let entries = performance.getEntriesByType("navigation")
-    if (entries && entries.length) {
-        duration = entries[0].loadEventStart;
-    }
-
-    if (duration) {
-        let seconds = (duration / 1000).toFixed(2);
-        let templateString = loadTime.innerText;
-        if (templateString) {
-            templateString = templateString.replace('${seconds}', seconds);
-        } else {
-            templateString = `This page loaded in ${seconds} seconds`;
+    if (performance) {
+        //PerformanceNavigationTiming API
+        let loadTime = document.querySelector('#load-time');
+        let templateString = loadTime ? loadTime.innerText : 'This page loaded in ${seconds} seconds';
+        let duration = 0;
+        let entries = performance.getEntriesByType("navigation")
+        if (entries && entries.length) {
+            duration = entries[0].loadEventStart;
         }
-        loadTime.innerHTML = templateString;
-        loadTime.style.display = '';
-    } else {
-        loadTime.style.display = 'none';
+
+        if (duration) {
+            let seconds = (duration / 1000).toFixed(2);
+            templateString = templateString.replace('${seconds}', seconds);
+            console.log(templateString);
+
+            if (loadTime) {
+                loadTime.innerHTML = templateString;
+                loadTime.style.display = '';
+            }
+        } else {
+            if (loadTime) {
+                loadTime.style.display = 'none';
+            }
+        }
     }
 }
-
 
 addEventListener('load', maintainBackToStartVisibility);
 addEventListener('scroll', maintainBackToStartVisibility);
 addEventListener('resize', maintainBackToStartVisibility);
+
+/* ActiveToc */
+addEventListener('load', function () {
+    ActiveToc.init({
+        tocContainer: 'nav.table-of-contents',
+        onHighlight: function (tocEntry, heading) {
+            let headingHint = document.querySelector('#heading-hint');
+
+            if (headingHint && tocEntry) {
+                let headingHintLink = headingHint.querySelector('a');
+                if (headingHintLink) {
+                    headingHint.style.display = 'block';
+                    headingHintLink.href = tocEntry.href;
+                    headingHintLink.innerText = tocEntry.innerText;
+                }
+            }
+        },
+        offHighlight: function () {
+            let headingHint = document.querySelector('#heading-hint');
+            if (headingHint) {
+                headingHint.style.display = 'none';
+            }
+        }
+    })
+});
 
 addEventListener('load', displayLoadTime);
