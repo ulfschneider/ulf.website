@@ -30,20 +30,21 @@ function maintainBackToStartVisibility() {
         if (windowHeight * 1.5 < documentHeight && scrollY >= .5 * windowHeight) {
             backToStart.style.display = 'flex';
             backToStart.style.position = 'fixed';
-            backToStart.style.paddingRight = '.5rem';
-            backToStart.style.paddingLeft = '.5rem';
-            backToStart.style.right = '1rem';
+
+            backToStart.classList.add('mr', 'pdx-d1');
+            backToStart.style.right= '0';
             backToStart.style.bottom = '0';            
             backToStart.style.border = '1px solid currentColor';
             if (footerNav) {
                 footerNav.classList.add('mrb-3');
+                
             }
         } else {
             backToStart.style.display = 'none';
             backToStart.style.position = 'static';
             backToStart.style.border = 'none';
             backToStart.style.padding = 'none';
-
+            backToStart.classList.remove('mr', 'pdy-d1');
             if (footerNav) {
                 footerNav.classList.remove('mrb-3');
             }
@@ -94,7 +95,7 @@ addEventListener('load', function () {
             if (headingHint && tocEntry) {
                 let headingHintLink = headingHint.querySelector('a');
                 if (headingHintLink) {
-                    headingHint.style.display = 'block';
+                    headingHint.style.display = 'inline';
                     headingHintLink.href = tocEntry.href;
                     headingHintLink.innerText = tocEntry.innerText;
                 }
