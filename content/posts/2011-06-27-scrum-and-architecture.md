@@ -157,7 +157,7 @@ How important the knowledge of architectural goals are, can be seen in the follo
 <figcaption>Figure: The importance of architecture goals</figcaption>
 </figure>
 
-Sometimes an Architecture Overview Diagram is part of the Architecture Vision. The [Box-Bullet-Line]({{site.url}}/2011-04-14-box-bullet-line/) notation can be of help to draw the diagram and visualize process flows between architecture components.
+Sometimes an Architecture Overview Diagram is part of the Architecture Vision. The [Box-Bullet-Line](/2011-04-14-box-bullet-line/) notation can be of help to draw the diagram and visualize process flows between architecture components.
 
 System Context Diagram
 ---
@@ -228,7 +228,7 @@ The Box-Bullet-Line diagram is a pragmatic way to visualize flows between compon
 
 Unlike the System Context diagram, which gives a black box perspective on the system, the BBL is a white box view. We want to understand what parts are essential and how the data and control flows between these parts.
 
-Please refer to [Box-Bullet-Line]({{site.url}}/2011-04-14-box-bullet-line/) to get more details.
+Please refer to [Box-Bullet-Line](/2011-04-14-box-bullet-line/) to get more details.
 
 The BBL diagram can be used as a starting point for Storyboards and End-To-End-Skeletons.
 
@@ -334,7 +334,7 @@ References
 : Business Model Canvas, <http://businessmodelgeneration.com/book?_ga=1.264929356.2127012834.1431598082>
 
 [Schneider 2011] 
-: [U. Schneider, "Scrum und Architektur, konzeptionelle Integrität im Scrum Prozess," OBJEKTspektrum, Ausgabe 4, 2011]({{site.url}}/assets/schneider_os_04_11.pdf)
+: [U. Schneider, "Scrum und Architektur, konzeptionelle Integrität im Scrum Prozess," OBJEKTspektrum, Ausgabe 4, 2011](/assets/schneider_os_04_11.pdf)
 
 [Zörner 2009] 
 : S. Zörner, "Historisch gewachsen? – Entscheidungen festhalten," Java Magazin 04/2009

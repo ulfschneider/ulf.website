@@ -22,7 +22,7 @@ Authority is a central part of the leadership process in agile organizations. It
 
 ## Self-organization
 
-Now [self-organization]({{site.url}}/self-organization), in dissociation to centralized control, comes into play. Jurgen Appelo very clearly shows that most things in this world come along without a central controlling instance [Appelo 2011:99]. The functioning of life is self-organized. The origin of species, of the world, went well without management and will go ahead even without management. With that background we have to realize that masterminded, centrally controlled large organizations are the exception and not the normal case. The thought is valuable, that self-organization of teams, which is of such importance in agile procedures, is the default behavior.
+Now [self-organization](/2013-03-26-self-organization/), in dissociation to centralized control, comes into play. Jurgen Appelo very clearly shows that most things in this world come along without a central controlling instance [Appelo 2011:99]. The functioning of life is self-organized. The origin of species, of the world, went well without management and will go ahead even without management. With that background we have to realize that masterminded, centrally controlled large organizations are the exception and not the normal case. The thought is valuable, that self-organization of teams, which is of such importance in agile procedures, is the default behavior.
 
 ## Constraints
 

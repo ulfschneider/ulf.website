@@ -11,22 +11,26 @@ subtitle: Highlight the entries of your table of contents while scrolling
         scroll-behavior: smooth;
     }
 
-    #toc {
+    .table-of-contents {
         margin-top: 2.5rem;
     }
 
-  #toc a {
+  .table-of-contents a {
 
       color: unset;
         text-decoration: unset;
         display: block;
     }
      
-    #toc .is-highlight {
+    .table-of-contents .is-highlight {
         font-weight: bold;
     }
 
-    #toc {
+    .table-of-contents .is-highlight::after {
+        content: "*";
+    }
+
+    .table-of-contents {
         position: fixed;
         width: 9rem;
         top: 0;
@@ -36,15 +40,19 @@ subtitle: Highlight the entries of your table of contents while scrolling
         padding-left: 1rem;
     }
 
-
     .content {
         margin-left: 10rem;
         max-width: var(--rg-width);
     }
 
+    @media (prefers-color-scheme: dark) {
+        .table-of-contents .is-highlight {
+            color: var(--primary);
+        }
+    }
 </style>
 
-<div id="toc">
+<nav class="table-of-contents">
 <a href="/blog/tools/" class="mrb-2">ulf.codes</a>
 <a href="#one-morning">One morning</a>
 <a href="#he-thought">He thought</a>
@@ -61,7 +69,7 @@ subtitle: Highlight the entries of your table of contents while scrolling
 <a href="#he-lay">He lay</a>
 <a href="#a-collection">A collection</a>
 <a href="#however-hard">However hard</a>
-</div>
+</nav>
 
 <div class="content">
 <h1 >active-toc</h1>
@@ -143,8 +151,6 @@ hearing.</p>
 
 <h2 id="well">Well</h2>
 
-      
-
 <p>Well, there's still some hope; once I've got the money together to pay off my parents' debt to him – another five
 or six years I suppose – that's definitely what I'll do. That's when I'll make the big change. First of allthough, 
 I've got to get up, my train leaves at five. " And he looked over at the alarm clock, ticking on the
@@ -184,8 +190,6 @@ transformed in his bed into a horrible vermin.</p>
 
 <h2 id="he-lay">He lay</h2>
 
-        
-
 <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly
 domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide
 off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly
@@ -205,8 +209,6 @@ used to sleeping on his right, and in his present state couldn't get into that p
 
 <h2 id="however-hard">However hard</h2>
 
-        
-
 <p>However hard he threw himself onto his right, he always rolled back to where he was. He must have tried it a
 hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when
 he began to feel a mild, dull pain there that he had never felt before. "Oh, God, " he thought, "what a strenuous
@@ -217,10 +219,6 @@ get to know anyone or become friendly with them. It can all go to Hell! " He fel
 pushed himself slowly up on his back towards the headboard so that he could lift his head better; found
 where the itch was, and saw that it was covered with lots of little white spots which he didn't know what to make of; 
 and when he tried to feel the place with one of his legs he drew it quickly back because as soon as he touched
-it he was overcome by a cold</p>    
+it he was overcome by a cold</p>
 
 </div>
-<script src="/js/active-toc.js"></script>
-<script>
-ActiveToc.init({tocContainer: '#toc'});
-</script>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.name }}</title>
-  <subtitle></subtitle>
-  <link href="{{ site.url }}{{ site.feed }}" rel="self"/>
-  <link href="{{ site.url }}/"/>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="{{ site.origin }}{{ site.rss }}" rel="self"/>
+  <link href="{{ site.url }}"/>
   <updated>{{ site.buildTime | dateToRfc3339 }}</updated>
   <id>{{ site.url }}</id>
   {%- if site.ownership %}
@@ -14,14 +14,14 @@
   {% endif -%}
   {%- for p in collections.livePosts | reverse %}
     {%- if p.data.norss == nil %}
-      {%- set absolutePostUrl -%}{{ site.url }}{{ p.url | url }}{%- endset -%}
+      {%- set absolutePostUrl -%}{{ site.origin }}{{ p.url | url }}{%- endset -%}
       {%- set authorEmail -%}{{ p | authorEmail }}{%- endset -%}
   <entry>
     <title>{{ p.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ p | modifiedDate | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html" language="{{site.locale}}" >
+    <content type="html" xml:lang="{{site.locale}}" >
       {{ p.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}  
       {%- if authorEmail %}<![CDATA[<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>]]>{% endif -%}
     </content>
