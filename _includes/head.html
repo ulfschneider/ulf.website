@@ -19,7 +19,9 @@
 <link rel="stylesheet" href="/css/main.css" />
 <link rel="preload" href="/fonts/iAWriterQuattroS-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 <link rel="preload" href="/fonts/iAWriterQuattroS-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-<link rel="alternate" type="application/rss+xml" title="{{site.title}}" href="{{site.feed}}">
+<!-- SEO/feed -->
+<link rel="canonical" href="{{site.url}}">
+<link rel="alternate" href="{{site.origin}}{{site.rss}}" title="{{site.title}}" type="application/atom+xml">
 <title>
     {%- if title and title != "notitle" %}{{ title }}
     {% else %}
