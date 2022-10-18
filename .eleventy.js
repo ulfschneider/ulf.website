@@ -173,6 +173,7 @@ function addCollections(eleventyConfig) {
         let usedSiteTags = utils.extractTags(items);
         for (let tagName of usedSiteTags) {
             let tagItems = collectionAPI.getFilteredByTag(tagName)
+                .filter(utils.isLiveItem)
                 .filter(utils.isPost)
                 .sort(utils.compareItemDate)
                 .reverse();
