@@ -86,7 +86,7 @@ module.exports = {
 
     isLiveItem: function (item) {
         const now = new Date();
-        return item.date <= now &&
+        return item.date <= now &&            
             item.data.draft !== true &&
             item.data.draft !== 'yes';
     },
@@ -257,6 +257,42 @@ module.exports = {
             }
         }
         return [...tagSet].sort();
+    },
+
+
+    chunk: function (arr = [], chunkSize = 1) {
+        let chunks = [];
+        let tmp = [...arr];
+        if (chunkSize <= 0) return chunks;
+        while (tmp.length) {
+            chunks.push(tmp.splice(0, chunkSize));
+        }
+        return chunks
+    },
+
+    previousPage: function (path, currentIndex) {
+        if (currentIndex > 1) {
+            return path + currentIndex + '/';
+        } else if (currentIndex == 1) {
+            return path;
+        } else {
+            return '';
+        }
+    },
+
+    currentPage: function (path, currentIndex) {
+        if (currentIndex >= 1) {
+            return path + (currentIndex + 1) + '/';
+        } else
+            return path;
+    },
+
+    nextPage: function (path, currentIndex, max) {
+        if (currentIndex < max - 1) {
+            return path + (currentIndex + 2) + '/';
+        } else {
+            return '';
+        }
     },
 
     getMarkdownLib: function () {

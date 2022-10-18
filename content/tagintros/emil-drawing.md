@@ -1,7 +1,5 @@
 ---
-tagintro: emil-drawing
-outline: false
-nosearch: true
+tags: emil-drawing
 ---
 A collection of drawings made by
 <figure class="mxw-rg">

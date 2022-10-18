@@ -1,14 +1,12 @@
 ---
 layout: list
-sitetags: true
 pagination:
-  data: collections
+  data: collections.doublePagination
   size: 1
-  alias: tag
-permalink: '{{site.blog}}{{ tag }}/'
+  alias: pagedItems
+permalink: '{{pagedItems.permalink}}'
 id: blog
-title: Blog
 nosearch: true
 notitle: true
 ---
-{{collections.liveContent | tagIntro: tag }}
+{{collections.tagIntros | tagIntro: pagedItems.tag }}

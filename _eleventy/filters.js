@@ -74,12 +74,16 @@ module.exports = {
         return JSON.stringify(result);
     },
 
-    tagIntro: function (collection, tagintro) {
+    tagIntro: function (collection, tag) {
         for (let item of collection) {
-            if (item.data.tagintro == tagintro) {
+            if (!tag && (!item.data.tags || item.data.tags.length == 0)) {
+                return item.templateContent;
+            }
+            if (item.data?.tags?.includes(tag)) {
                 return item.templateContent;
             }
         }
+
         return '';
     },
 

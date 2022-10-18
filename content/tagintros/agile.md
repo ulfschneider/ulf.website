@@ -1,6 +1,5 @@
 ---
-tagintro: agile
-nosearch: true
+tags: agile
 ---
 Articles about my experiences within the agile movement and the agile value system. Popular:
 

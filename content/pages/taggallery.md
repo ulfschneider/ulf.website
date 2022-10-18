@@ -11,4 +11,4 @@ outline: '{{outline}}'
 nosearch: true
 title: Images
 ---
-{{collections.liveContent | tagIntro: tag }}
+{{collections.tagIntros | tagIntro: tag }}

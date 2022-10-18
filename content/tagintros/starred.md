@@ -1,5 +1,4 @@
 ---
-tagintro: star
-nosearch: true
+tags: star
 ---
 I like these things especially.

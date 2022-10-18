@@ -71,12 +71,13 @@ function addLayoutAliases(eleventyConfig) {
 }
 
 function addCollections(eleventyConfig) {
+    //used site tags
     eleventyConfig.addCollection('usedSiteTags', collectionAPI => {
         console.log('Derive used site tags');
         let usedSiteTags = utils.extractTags([
             ...collectionAPI.getFilteredByGlob('content/posts/**')
                 .map(item => {
-                    if (item.data.tags && item.data.tags.includes(site.starTag)) {
+                    if (item.data?.tags?.includes(site.starTag)) {
                         item.data.starred = site.starTag;
                     } else {
                         item.data.starred = '';
@@ -88,17 +89,17 @@ function addCollections(eleventyConfig) {
         filters.createColorMap(usedSiteTags);
         return usedSiteTags;
     });
+    //live posts
     eleventyConfig.addCollection('livePosts', collectionAPI => {
         console.log('Derive live posts');
         return [
-            ...collectionAPI.getFilteredByGlob('content/**')
+            ...collectionAPI.getFilteredByGlob('content/posts/**')
                 .filter(utils.isLiveItem)
-                .filter(utils.isPost)
                 .map(item => {
                     item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
                     item.data.modifiedDate = filters.modifiedDate(item);
 
-                    if (item.data.tags && item.data.tags.includes(site.starTag)) {
+                    if (item.data?.tags?.includes(site.starTag)) {
                         item.data.starred = site.starTag;
                     } else {
                         item.data.starred = '';
@@ -106,12 +107,14 @@ function addCollections(eleventyConfig) {
                     return item;
                 })
                 .sort(utils.compareItemDate)
+                .reverse()
         ];
     });
+    //live content
     eleventyConfig.addCollection('liveContent', collectionAPI => {
         console.log('Derive live content');
         return [
-            ...collectionAPI.getFilteredByGlob('content/**')
+            ...collectionAPI.getFilteredByGlob(['content/**', '!content/tagintros/**'])
                 .filter(utils.isLiveItem)
                 .map(item => {
                     item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
@@ -119,7 +122,74 @@ function addCollections(eleventyConfig) {
                     return item;
                 })
                 .sort(utils.compareItemDate)
+                .reverse()
         ];
+    });
+    //tag intros
+    eleventyConfig.addCollection('tagIntros', collectionAPI => {
+        console.log('Derive tag intros');
+        return [
+            ...collectionAPI.getFilteredByGlob('content/tagintros/**')                
+                .map(item => {
+                    item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
+                    item.data.modifiedDate = filters.modifiedDate(item);
+                    return item;
+                })                
+        ];
+    });
+    //double pagination
+    eleventyConfig.addCollection('doublePagination', collectionAPI => {
+        console.log('Derive double pagination');
+        let items = [
+            ...collectionAPI.getFilteredByGlob('content/posts/**')
+                .map(item => {
+                    if (item.data?.tags?.includes(site.starTag)) {
+                        item.data.starred = site.starTag;
+                    } else {
+                        item.data.starred = '';
+                    }
+                    return item;
+                })
+                .filter(utils.isLiveItem)
+                .sort(utils.compareItemDate)
+                .reverse()
+        ];
+
+        let tagMap = [];
+        let pagedItems = utils.chunk(items, site.paginationSize);
+        for (let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
+            tagMap.push({
+                tag: '',
+                pageNumber: pageNumber,
+                permalink: utils.currentPage(site.blog, pageNumber),
+                previous: utils.previousPage(site.blog, pageNumber),
+                next: utils.nextPage(site.blog, pageNumber, max),
+                itemCount: items.length,
+                pageCount: pagedItems.length,
+                pageData: pagedItems[pageNumber]
+            });
+        }
+
+        let usedSiteTags = utils.extractTags(items);
+        for (let tagName of usedSiteTags) {
+            let tagItems = collectionAPI.getFilteredByTag(tagName);
+            let pagedItems = utils.chunk(tagItems, site.paginationSize);
+
+            for (let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
+                tagMap.push({
+                    tag: tagName,
+                    pageNumber: pageNumber,
+                    permalink: utils.currentPage(`${site.blog}${tagName}/`, pageNumber),
+                    previous: utils.previousPage(`${site.blog}${tagName}/`, pageNumber),
+                    next: utils.nextPage(`${site.blog}${tagName}/`, pageNumber, max),
+                    itemCount: tagItems.length,
+                    pageCount: pagedItems.length,
+                    pageData: pagedItems[pageNumber]
+                });
+            }
+        }
+
+        return tagMap;
     });
 }
 
@@ -130,8 +200,8 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('firstImage', filters.firstImage);
     eleventyConfig.addFilter('live', filters.live);
     eleventyConfig.addFilter('post', filters.post);
-    eleventyConfig.addFilter('tagIntro', filters.tagIntro);
     eleventyConfig.addFilter('hasTag', filters.hasTag);
+    eleventyConfig.addFilter('tagIntro', filters.tagIntro);
     eleventyConfig.addFilter('humanDate', filters.humanDate);
     eleventyConfig.addFilter('humanDateTime', filters.humanDateTime);
     eleventyConfig.addFilter('isoDate', filters.isoDate);
