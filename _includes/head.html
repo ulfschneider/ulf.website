@@ -12,6 +12,7 @@
 {%- endif -%}
 <meta name="description" content="{%- if title and title != "notitle" and subtitle == nil and abstract == nil %}{{ title }}. {%
     endif %}{% if subtitle != nil %}{{subtitle}}. {% endif %}{% if abstract != nil %}{{abstract}}{% endif %}">
+<link rel="canonical" href="{{site.url}}"/>
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
