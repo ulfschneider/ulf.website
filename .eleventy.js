@@ -172,7 +172,7 @@ function addCollections(eleventyConfig) {
 
         let usedSiteTags = utils.extractTags(items);
         for (let tagName of usedSiteTags) {
-            let tagItems = collectionAPI.getFilteredByTag(tagName);
+            let tagItems = collectionAPI.getFilteredByTag(tagName).reverse();
             let pagedItems = utils.chunk(tagItems, site.paginationSize);
 
             for (let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
