@@ -129,12 +129,12 @@ function addCollections(eleventyConfig) {
     eleventyConfig.addCollection('tagIntros', collectionAPI => {
         console.log('Derive tag intros');
         return [
-            ...collectionAPI.getFilteredByGlob('content/tagintros/**')                
+            ...collectionAPI.getFilteredByGlob('content/tagintros/**')
                 .map(item => {
                     item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
                     item.data.modifiedDate = filters.modifiedDate(item);
                     return item;
-                })                
+                })
         ];
     });
     //double pagination
@@ -172,7 +172,9 @@ function addCollections(eleventyConfig) {
 
         let usedSiteTags = utils.extractTags(items);
         for (let tagName of usedSiteTags) {
-            let tagItems = collectionAPI.getFilteredByTag(tagName).reverse();
+            let tagItems = collectionAPI.getFilteredByTag(tagName)
+                .sort(utils.compareItemDate)
+                .reverse();
             let pagedItems = utils.chunk(tagItems, site.paginationSize);
 
             for (let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
