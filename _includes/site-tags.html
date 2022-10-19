@@ -1,10 +1,13 @@
 {%-assign currentTags = collections.usedSiteTags -%}
+{%- if pagedItems.tag != nil -%}
+    {%-assign tag = pagedItems.tag -%}
+{%- endif -%}
 
 {%- if currentTags.length -%}
     <nav class="mrln-d2 mrrn-d2 site-tags">
         <ul class="mry-0 reset">
             {%- if site.tagColors and site.tagColors.length %}
-                {%- if pagedItems.tag == "" -%}
+                {%- if tag == "" -%}
                     <li class="inline-block mr-d2">
                         <span class="pdy-d4 pdx-d2 bg-base-color white rounded no-wrap" aria-current="page" >all content</span>
                     </li>
@@ -15,7 +18,7 @@
                 {%- endif -%}
                 {%- for siteTag in currentTags -%}
                     {%- if siteTag == site.starTag %}
-                        {%- if pagedItems.tag != siteTag -%}
+                        {%- if tag != siteTag -%}
                             <li class="inline-block mr-d2">
                                 <a class="pdy-d4 pdx-d2 rounded no-wrap" style="color: {{siteTag | tagColor}}" href="{{siteTag | tagUrl}}">{{site.starTagSymbol}}</a>
                             </li>
@@ -28,7 +31,7 @@
                 {%- endfor -%}
                 {%- for siteTag in currentTags -%}
                     {%- if siteTag != site.starTag -%}
-                        {%- if pagedItems.tag != siteTag -%}
+                        {%- if tag != siteTag -%}
                             <li class="inline-block mr-d2">
                                 <a class="pdy-d4 pdx-d2 rounded no-wrap" style="color: {{siteTag | tagColor}}" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
                             </li>
@@ -40,7 +43,7 @@
                     {%- endif -%}
                 {%- endfor -%}
             {%- else -%}
-                {%- if pagedItems.tag == ""  -%}
+                {%- if tag == ""  -%}
                     <li class="inline-block mr-d2">
                         <span class="bg-neutral-5 pdy-d4 pdx-d2 rounded bg-primary white no-wrap" aria-current="page" >all content</span>
                     </li>
@@ -51,7 +54,7 @@
                 {%- endif -%}
                 {%- for siteTag in currentTags -%}
                     {%- if siteTag == site.starTag -%}
-                        {%- if pagedItems.tag != siteTag -%}
+                        {%- if tag != siteTag -%}
                             <li class="inline-block mr-d2">
                                 <a class="no-deco bg-neutral-5 dk:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap" href="{{siteTag | tagUrl}}">{{site.starTagSymbol}}</a>
                             </li>
@@ -64,7 +67,7 @@
                 {%- endfor -%}
                 {%- for siteTag in currentTags -%}
                     {%-if siteTag != site.starTag -%}
-                        {%- if pagedItems.tag != siteTag -%}
+                        {%- if tag != siteTag -%}
                             <li class="inline-block mr-d2">
                                 <a class="no-deco bg-neutral-5 dk:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
                             </li>
