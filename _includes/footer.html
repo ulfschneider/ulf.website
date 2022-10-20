@@ -1,8 +1,8 @@
 <footer id="footer" class="flex-shrink-0 bg-neutral-5 dk:bg-neutral-d4 pdx pdy-vrplus">
-	<nav class="meta-font mxw-rg mrx-auto">
-		<ul class="reset mr-0">
+	<nav class="meta-font mxw-rg mrx-auto fluid-columns-5">
+		<ul class="mr-0 reset">
 			{%- for p in site.footernav -%}
-			<li class="inline-block">
+			<li>
 				{%- if id == p.id and id -%}
 				<a class="meta-font no-deco bold heading-color no-wrap" aria-current="page"
 					href="{{ p.url }}">{{p.label}}</a>
