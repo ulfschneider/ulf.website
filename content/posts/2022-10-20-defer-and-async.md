@@ -23,6 +23,9 @@ JavaScript loading without async nor defer.
 <tr><th class="normal">(4) The script has been executed. The browser will continue parsing HTML.</th><td class="bg-primary white">Parse HTML</td><td></td><td></td></tr>
 </table>
 
+`async` is ignored when the script tag does not have a `src` attribute (inline script).
+
+
 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) says:
 
 For classic scripts, if the `async` attribute is present, then the classic script will be fetched in parallel to parsing and evaluated as soon as it is available.
@@ -37,6 +40,8 @@ For module scripts, if the `async` attribute is present then the scripts and all
 <tr><th class="normal"> The parsing of HTML is not paused while downloading the script and will continue until the parsing is finished.</th><td class="bg-primary white"></td><td></td><td></td></tr>
 <tr><th class="normal">(3) When the parsing of the HTML is finished and the script is downloaded the script will be executed.</th><td></td><td></td><td class="bg-accent-four white">Execute script</td></tr>
 </table>
+
+`defer` is ignored when the script tag does not have a `src` attribute (inline script).
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) says:
 
