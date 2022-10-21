@@ -3,6 +3,8 @@ title: JavaScript defer and async
 abstract: Diagrams to explain how JavaScript defer and async loading works in the browser
 tags: code
 ---
+[[toc]]
+
 ## `<script src="script.js">`
 
 JavaScript loading without async nor defer.
@@ -68,8 +70,8 @@ I mostly find myself using `defer` instead of `async` and start using the deferr
 
 - [<cite>Asynchronous vs Deferred JavaScript</cite>](https://bitsofco.de/async-vs-defer/) by Ire Aderinokun
 - [<cite>async vs defer attributes</cite>](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html) by Daniel Imms
-- [Scripts: async, defer](https://javascript.info/script-async-defer) on javascript.info
-- [The Script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) on MDN
+- [<cite>Scripts: async, defer</cite>](https://javascript.info/script-async-defer) on javascript.info
+- [<cite>The Script element</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) on MDN
 
 
 
