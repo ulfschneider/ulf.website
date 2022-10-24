@@ -9,8 +9,6 @@ tags: code
 
 `<script src="script.js">`
 
-JavaScript loading without async nor defer.
-
 <table>
 <tr><td>(1) Parsing of the HTML document starts.</td><td class="bg-primary white">Parse HTML</td><td></td><td></td></tr>
 <tr><td>(2) A script tag is found while parsing the HTML. Parsing is paused and the browser downloads the script.</td><td class="bg-neutral-4 neutral-d5">Pause HTML parsing</td><td class="bg-accent-four white">Load script</td><td></td></tr>
