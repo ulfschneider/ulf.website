@@ -5,7 +5,9 @@ tags: code
 ---
 [[toc]]
 
-## `<script src="script.js">`
+## script
+
+`<script src="script.js">`
 
 JavaScript loading without async nor defer.
 
@@ -18,7 +20,9 @@ JavaScript loading without async nor defer.
 
 Page contents will only show up in the browser after scripts have been loaded and executed.
 
-## `<script async src="script.js">`
+## script async
+
+`<script async src="script.js">`
 
 <table>
 <tr><td>(1) Parsing of the HTML document starts.</td><td class="bg-primary white">Parse HTML</td><td></td><td></td></tr>
@@ -35,7 +39,9 @@ Page contents will show up immediately in the browser and HTML parsing is not bl
 
 For classic scripts, if the `async` attribute is present, then the classic script will be fetched in parallel to parsing and evaluated as soon as it is available. For module scripts, if the `async` attribute is present then the scripts and all their dependencies will be executed in the defer queue, therefore they will get fetched in parallel to parsing and evaluated as soon as they are available. [^mdn]
 
-## `<script defer src="script.js">`
+## script defer
+
+`<script defer src="script.js">`
 
 <table>
 <tr><td>(1) Parsing of the HTML document starts.</td><td class="bg-primary white">Parse HTML</td><td></td><td></td></tr>
