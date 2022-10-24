@@ -5,6 +5,7 @@ const URL = ORIGIN + BASE;
 module.exports = {
     name: "ulf.codes",
     locale: "en",
+    direction: "ltr",
     theme_color: "#ebebeb",
     dark_theme_color: "#3a3a3a",
     background_color: "#3a3a3a",
