@@ -6,7 +6,7 @@ hero: /img/strael/strael-in-the-wild.jpg
 A short summary of what I´ve learned from my [Fairlight Strael Build](/2022-04-14-fairlight-strael-build-log/).
 
 - **Weight:** My setup weighs 9.1 kg including pedals.
-- **Ride quality:** The ride quality of the Strael frame is beautiful. The handling is stable, calm, comfortable, and direct. At the same time it is not squishy. Once on the bike everything feels naturally. I wouldn´t want to change anything. 
+- **Ride quality:** The ride quality of the Strael frame is beautiful. The handling is stable, calm, comfortable, and direct. At the same time it is not squishy. Once on the bike everything feels natural. I wouldn´t want to change anything. 
 - **Acceleration:** The acceleration and climbing capabilities of the bike are good but not on the same level as a good carbon bike (read: lighter bike, stiffer bottom bracket). It is not an issue for my style of riding but you should be aware.
 - **Frame build quality:** The quality of the Strael frame is very high. It comes securely packaged, has a high quality finish and the tolerances are accurate. It´s a high quality product. 
 - **Geometry:** The *tall* frame geometry works well for me. A comfortable ride starts with a correct fit and Fairlight helps you achieving it with their *regular* and *tall* geometries. 
