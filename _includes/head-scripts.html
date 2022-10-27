@@ -1,4 +1,8 @@
+<script defer src="/js/site-scripts.js"></script>
+<script defer src="/js/sotable.js"></script>
+<script defer src="/js/active-toc.js"></script>
 <script>
+    addEventListener('load', () => sotable());
     addEventListener('keydown', event => {
         let focus = document.querySelector(':focus');
 
@@ -52,10 +56,4 @@
             }
         }
     });
-</script>
-<script defer src="/js/site-scripts.js"></script>
-<script defer src="/js/sotable.js"></script>
-<script defer src="/js/active-toc.js"></script>
-<script>
-    addEventListener('load', () => sotable());
 </script>
