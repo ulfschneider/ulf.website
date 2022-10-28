@@ -2,5 +2,8 @@
 title: Sturgeon´s law
 tags: journal
 ---
-> Ninety percent of everything is crap.
-  <footer>Sturgeon´s law</footer>
+That sounds true:
+
+<blockquote><span class="fs-4">Ninety percent of everything is crap.</span>
+<footer>Sturgeon´s law</footer>
+</blockquote>
