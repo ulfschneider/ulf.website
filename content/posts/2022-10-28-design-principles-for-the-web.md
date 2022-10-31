@@ -2,7 +2,7 @@
 title: Design principles for the web
 tags: [design, star]
 ---
-A great talk by Jeremy Keith about design principles. Jeremy refers to <cite>Design Squiggle</cite> and the <cite>Double Design Diamond</cite> (which is two Design Squiggles after each other):
+A great talk by Jeremy Keith about design principles. Jeremy refers to <cite>Design Squiggle</cite> and the <cite>Double Design Diamond</cite> (which can be seen as two Design Squiggles after each other):
 
 <figure>
 <img src="/img/design/design-squiggle.jpeg">
