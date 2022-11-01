@@ -305,3 +305,13 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_0959D.jpg">
 <img src="/img/house/IMG_0960D.jpg">
 </figure>
+
+## Planting a beech hedge
+
+<figure>
+<figcaption>Nov 1, 2022: At the end of the summer we started to erect an angle retaining wall, filled everything up with soil, and planted a beech hedge.</figcaption>
+<img src="/img/house/IMG_2952.jpg">
+<img src="/img/house/IMG_2968X.jpg">
+<img src="/img/house/IMG_2969X.jpg">
+</figure>
+
