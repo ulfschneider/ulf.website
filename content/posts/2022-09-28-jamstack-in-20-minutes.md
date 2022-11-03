@@ -3,7 +3,7 @@ title: Jamstack in 20 minutes
 tags: [code, articles]
 abstract: The Jamstack comes with the promise to make websites faster, more secure, and to provide a better developer experience. Why is that the case?
 ---
-The Jamstack can bring huge advantages to the process of building websites, as well as to the way these websites are carried out to users. Namely, a Jamstack site
+The Jamstack can bring huge advantages to the process of building websites, as well as to the way these websites are carried out to users. A Jamstack site
 
 - is fast (probably nothing can be faster than a Jamstack site),
 - can run on any infrastructure and a variety of hosting services,
@@ -62,14 +62,16 @@ The contents served to users are static files that can be handed over extremely 
 To give an example, after [Smashing Magazine](https://www.smashingmagazine.com) moved away from five different technical platforms (including WordPress) to the Jamstack with the Netlify CDN^[[<cite>How Smashing Magazine Manages Content: Migration From WordPress To Jamstack</cite>](https://www.smashingmagazine.com/2020/01/migration-from-wordpress-to-jamstack/)], their time to first load went down from 800ms to 80ms – a factor of 10! You might want to verify that by yourself and visit [testmysite.io](https://testmysite.io/), key in the address `smashingmagazine.com` and see the impressive HTML download times for different continents. Smashing Magazine had 2.5 million visits each month (80,000 each day) at the time of running the project. 
 
 Loblaw, Canada´s largest food retailer with 2,800 stores nationwide, where 85% of canadians shop at at least once a week, is another great example. Justin Watts, Engineering Director at Loblaw Digital, points out in his talk [<cite>What got us here, won’t get us there</cite>](https://youtu.be/6VGu4PvEBag) that by moving to the Jamstack for one of their core businesses, [Shop like a mother](https://www.youtube.com/watch?v=qT4asha9cRA), they recognized extreme website improvements:^[[<cite>Loblaw Digital, Launching sites and campaigns in minutes with no-ops.</cite>](https://www.netlify.com/customers/loblaw/)]
-- 17.5x faster contentful paint (from 12.3s down to 0.7s)
-- 9.4x faster time to interactive
+
+- 17.5x faster contentful paint (from 12.3s down to 0.7s), and
+- 9.4x faster time to interactive.
 
 Using Netlify for their operations resulted in
-- 10x reduction in time to market
-- 38k monthly cost savings
-- fewer attack vectors
-- a happier team
+
+- 10x reduction in time to market,
+- 38k monthly cost savings,
+- fewer attack vectors,
+- a happier team.
 
 ## Portability
 
