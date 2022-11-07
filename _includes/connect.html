@@ -1,5 +1,12 @@
 <ul class="reset mry-0">
-{% if site.ownership.email != "" and site.ownership.email != nil %}<li>Email: <a href="mailto:{{site.ownership.email}}">{{site.ownership.email}}</a></li>{% endif %}
-{% if site.ownership.twitter != "" and site.ownership.twitter != nil %}<li>Twitter: <a href="{{site.ownership.twitter}}">@{{site.ownership.twitter}}</li>{% endif %}
-{% if site.ownership.phone != "" and site.ownership.phone != nil %}<li>Phone: {{site.ownership.phone}}</li>{% endif %}
-</ul>
+    {% if site.ownership.email != "" and site.ownership.email != nil %}
+        <li>Email: <a href="mailto:{{site.ownership.email}}">{{site.ownership.email}}</a>
+        </li>
+    {% endif %}
+    {% if site.ownership.twitter != "" and site.ownership.twitter != nil %}
+        <li>Twitter: <a href="{{site.ownership.twitter}}">@{{site.ownership.twitter}}</li>
+        {% endif %}
+        {% if site.ownership.phone != "" and site.ownership.phone != nil %}
+            <li>Phone: {{site.ownership.phone}}</li>
+        {% endif %}
+    </ul>

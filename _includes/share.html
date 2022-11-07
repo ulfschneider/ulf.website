@@ -12,11 +12,7 @@
 
             shareAction.addEventListener('click', async () => {
                 try {
-                    await navigator.share({
-                        title: '',
-                        text: '{{title}}',
-                        url: location.href
-                    });
+                    await navigator.share({title: '', text: '{{title}}', url: location.href});
                 } catch (err) {
                     console.error('Error: ' + err);
                 }

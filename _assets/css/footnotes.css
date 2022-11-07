@@ -2,50 +2,50 @@
 /* purgecss start ignore */
 
 hr.footnotes-sep {
-    width: var(--space-4);
-    margin-right: auto;
-    margin-left: 0;
-    border-top: var(--typographic-line-width) solid var(--li-prefix-color);
-    margin-top: var(--mrt-h2);
-    margin-bottom: var(--mrb-h2);
-    text-align: left;
+  width: var(--space-4);
+  margin-right: auto;
+  margin-left: 0;
+  border-top: var(--typographic-line-width) solid var(--li-prefix-color);
+  margin-top: var(--mrt-h2);
+  margin-bottom: var(--mrb-h2);
+  text-align: left;
 }
 
 hr.footnotes-sep::after {
-    content: "Footnotes";
-    font-weight: normal;
-    font-size: var(--fs);
-    white-space: nowrap;
-    word-break: keep-all;
-    overflow: visible;
-    text-align: left;
+  content: "Footnotes";
+  font-weight: normal;
+  font-size: var(--fs);
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow: visible;
+  text-align: left;
 }
 
 .footnote-ref a,
 .footnote-backref {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .footnotes-list {
-    counter-reset: footnote-counter;
-    margin: 0;
+  counter-reset: footnote-counter;
+  margin: 0;
 }
 
 .footnotes-list :target {
-    outline: var(--outline);
-    outline-offset: var(--outline-offset);
+  outline: var(--outline);
+  outline-offset: var(--outline-offset);
 }
 
 .footnotes-list li {
-    counter-increment: footnote-counter;
+  counter-increment: footnote-counter;
 }
 
 .footnotes-list li::before {
-    content: counter(footnote-counter);
+  content: counter(footnote-counter);
 }
 
-.footnotes-list li>p {
-    display: inline;
+.footnotes-list li > p {
+  display: inline;
 }
 
 /* purgecss end ignore */

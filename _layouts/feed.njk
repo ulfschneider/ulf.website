@@ -7,26 +7,27 @@
   <updated>{{ site.buildTime | dateToRfc3339 }}</updated>
   <id>{{ site.url }}</id>
   {%- if site.ownership %}
-  <author>
-    <name>{{ site.ownership.name }}</name>
-    <email>{{ site.ownership.email }}</email>
-  </author>
+    <author>
+      <name>{{ site.ownership.name }}</name>
+      <email>{{ site.ownership.email }}</email>
+    </author>
   {% endif -%}
-  {%- for p in collections.livePosts | reverse %}
+  {%- for p in collections.livePosts | reverse -%}
     {%- if p.data.norss == nil %}
       {%- set absolutePostUrl -%}{{ site.origin }}{{ p.url | url }}{%- endset -%}
       {%- set authorEmail -%}{{ p | authorEmail }}{%- endset -%}
-  <entry>
-    <title>{{ p.data.title }}</title>
-    <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ p | modifiedDate | dateToRfc3339 }}</updated>
-    <id>{{ absolutePostUrl }}</id>
-    <content type="html" xml:lang="{{site.locale}}" >
-      {{ p.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}  
-      {%- if authorEmail %}<![CDATA[<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>]]>{% endif -%}
-    </content>
-  </entry>
+      <entry>
+        <title>{{ p.data.title }}</title>
+        <link href="{{ absolutePostUrl }}"/>
+        <updated>{{ p | modifiedDate | dateToRfc3339 }}</updated>
+        <id>{{ absolutePostUrl }}</id>
+        <content type="html" xml:lang="{{site.locale}}" >
+          {{ p.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+          {%- if authorEmail %}
+            <![CDATA[<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>]]>
+          {% endif -%}
+        </content>
+      </entry>
     {% endif -%}
   {% endfor -%}
 </feed>
-

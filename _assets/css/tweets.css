@@ -2,67 +2,65 @@
 /* purgecss start ignore */
 
 .tweet-card {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .tweet-header {
-    order: 1;
-    display: flex;
+  order: 1;
+  display: flex;
 }
 
 .tweet-profile {
-    display: none;
-    order: 2;
+  display: none;
+  order: 2;
 }
 
 .tweet-author {
-    font-style: normal;
-    order: 1;
+  font-style: normal;
+  order: 1;
 }
 
 .tweet-author-name {
-    font-weight: var(--font-weight-bold);
-    text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
 }
 
 .tweet-author-handle {
-    font-size: smaller;
-    text-decoration: none;
+  font-size: smaller;
+  text-decoration: none;
 }
 
 .tweet-bird {
-    order: 0;
+  order: 0;
 }
 
 .tweet-bird-icon {
-    background-image: url(/img/twitter.svg);
-    width: var(--horizontal-rhythm);
-    height: calc(1em * var(--lh-default));
-    background-size: calc(var(--horizontal-rhythm) - var(--space-d1)) auto;  
-    background-repeat: no-repeat;
-    background-position: center left;
+  background-image: url(/img/twitter.svg);
+  width: var(--horizontal-rhythm);
+  height: calc(1em * var(--lh-default));
+  background-size: calc(var(--horizontal-rhythm) - var(--space-d1)) auto;
+  background-repeat: no-repeat;
+  background-position: center left;
 }
 
 .tweet-body {
-    order: 0;
+  order: 0;
 }
 
-
 .tweet-footer {
-    order: 2;
-    font-style: normal;
-    font-size: smaller;
-    text-decoration: none;
+  order: 2;
+  font-style: normal;
+  font-size: smaller;
+  text-decoration: none;
 }
 
 .tweet-like {
-    display: none;
+  display: none;
 }
 
 .tweet-date {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 
 /* purgecss end ignore */
