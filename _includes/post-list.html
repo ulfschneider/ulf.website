@@ -14,15 +14,7 @@
         {%- continue -%}
     {%- endif -%}
 
-    {%- assign pageYear = p.date | date: '%Y' -%}
-
     {%- assign href = p.url -%}
-
-    {%- if indexYear != pageYear and limit == nil -%}
-        <time datetime="{{pageYear}}"
-    class="bleed-left larger meta mry-vrplus block year sticky top-0 bg-base-background">{{pageYear}}</time>
-        {%- assign indexYear = pageYear -%}
-    {%- endif -%}
 
     {%- assign count = count | plus: 1 -%}
 
