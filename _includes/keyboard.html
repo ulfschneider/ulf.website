@@ -1,49 +1,51 @@
 <table>
-    <caption>
-        <strong>Shortcuts to navigate <em>{{site.name}}</em> with the keyboard</strong>
-    </caption>
-    <tr>
-        <th>Navigate to</th>
-        <th>by pressing key</th>
-    </tr>
-    {%- for nav in site.mainnav -%}
-        {%- if nav.kbd != nil and nav.kbd != '' %}
-            <tr>
-                <td>
-                    <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
-                </td>
-                <td>
-                    <kbd>{{nav.kbd}}</kbd>
-                </td>
-            </tr>
-        {%- endif -%}
-    {%- endfor -%}
-    {%- for nav in site.footernav -%}
-        {%- if nav.kbd != nil and nav.kbd != '' %}
-            <tr>
-                <td>
-                    <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
-                </td>
-                <td>
-                    <kbd>{{nav.kbd}}</kbd>
-                </td>
-            </tr>
-        {%- endif -%}
-    {%- endfor -%}
-    {%- if site.backToTop and site.backToTop.kbd and site.backToTop.id -%}
-        <tr>
-            <td>
-                <a class="no-deco" href="#{{site.backToTop.id}}">
-                    {%- if site.backToTop.label -%}
-                        {{site.backToTop.label}}
-                    {%- else -%}
-                        Back to Top
-                    {%- endif -%}
-                </a>
-            </td>
-            <td>
-                <kbd>{{site.backToTop.kbd}}</kbd>
-            </td>
-        </tr>
+  <caption>
+    <strong>Shortcuts to navigate
+      <em>{{site.name}}</em>
+      with the keyboard</strong>
+  </caption>
+  <tr>
+    <th>Navigate to</th>
+    <th>by pressing key</th>
+  </tr>
+  {%- for nav in site.mainnav -%}
+    {%- if nav.kbd != nil and nav.kbd != '' %}
+      <tr>
+        <td>
+          <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
+        </td>
+        <td>
+          <kbd>{{nav.kbd}}</kbd>
+        </td>
+      </tr>
     {%- endif -%}
+  {%- endfor -%}
+  {%- for nav in site.footernav -%}
+    {%- if nav.kbd != nil and nav.kbd != '' %}
+      <tr>
+        <td>
+          <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
+        </td>
+        <td>
+          <kbd>{{nav.kbd}}</kbd>
+        </td>
+      </tr>
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if site.backToTop and site.backToTop.kbd and site.backToTop.id -%}
+    <tr>
+      <td>
+        <a class="no-deco" href="#{{site.backToTop.id}}">
+          {%- if site.backToTop.label -%}
+            {{site.backToTop.label}}
+          {%- else -%}
+            Back to Top
+          {%- endif -%}
+        </a>
+      </td>
+      <td>
+        <kbd>{{site.backToTop.kbd}}</kbd>
+      </td>
+    </tr>
+  {%- endif -%}
 </table>

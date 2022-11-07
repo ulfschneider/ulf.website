@@ -12,6 +12,7 @@ const markdownItFootnote = require('markdown-it-footnote');
 const markdownItMark = require('markdown-it-mark');
 const markdownItMathJax = require('markdown-it-mathjax3');
 const markdownItEmoji = require('markdown-it-emoji');
+const markdownItInclude = require('markdown-it-include');
 const sizeOf = require('image-size');
 const cheerio = require('cheerio');
 const stripHtml = require('string-strip-html');
@@ -323,6 +324,7 @@ module.exports = {
             })
             .use(markdownItMathJax)
             .use(markdownItEmoji)
+            .use(markdownItInclude)
             .use(markdownItCooklang);
 
 

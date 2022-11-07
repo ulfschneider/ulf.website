@@ -2,58 +2,58 @@
 <script defer src="/js/sotable.js"></script>
 <script defer src="/js/active-toc.js"></script>
 <script>
-    addEventListener('load', () => sotable());
-    addEventListener('keydown', event => {
-        let focus = document.querySelector(':focus');
+  addEventListener('load', () => sotable());
+  addEventListener('keydown', event => {
+    let focus = document.querySelector(':focus');
 
-        if (focus && 'INPUT' == focus.tagName && 'submit' != focus.type && 'reset' != focus.type) {
-            return;
-        } else if (focus && 'TEXTAREA' == focus.tagName) {
-            return;
+    if (focus && 'INPUT' == focus.tagName && 'submit' != focus.type && 'reset' != focus.type) {
+      return;
+    } else if (focus && 'TEXTAREA' == focus.tagName) {
+      return;
+    }
+
+    if (!(event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)) {
+      if ('{{site.search.url}}' && event.key === '{{site.search.kbd}}') {
+        let queryField = document.querySelector('#search-query');
+        if (queryField && queryField != focus) {
+          queryField.focus();
+          event.preventDefault();
+          return;
+        } else if (! queryField) {
+          location.href = '{{site.search.url}}';
+          event.preventDefault();
+          return;
         }
+      }
 
-        if (!(event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)) {
-            if ('{{site.search.url}}' && event.key === '{{site.search.kbd}}') {
-                let queryField = document.querySelector('#search-query');
-                if (queryField && queryField != focus) {
-                    queryField.focus();
-                    event.preventDefault();
-                    return;
-                } else if (!queryField) {
-                    location.href = '{{site.search.url}}';
-                    event.preventDefault();
-                    return;
-                }
-            }
+      if ('{{site.backToTop.id}}' && event.key === '{{site.backToTop.kbd}}') {
+        location.href = '# {{site.backToTop.id}}';
+        event.preventDefault();
+      }
 
-            if ('{{site.backToTop.id}}' && event.key === '{{site.backToTop.kbd}}') {
-                location.href = '#{{site.backToTop.id}}';
-                event.preventDefault();
-            }
-
-            for (let nav of {{site.mainnav | json}}) {
-                if (event.key == nav.kbd && nav.url) {
-                    if (nav.id == 'editOnGitHub') {
-                        window.open(nav.url + '{{page.inputPath}}', '_blank');
-                    } else {
-                        location.href = nav.url;
-                    }
-                    event.preventDefault();
-                    return;
-                }
-            }
-
-            for (let nav of {{site.footernav | json}}) {
-                if (event.key == nav.kbd && nav.url) {
-                    event.preventDefault();
-                    if (nav.id == 'editOnGitHub') {
-                        window.open(nav.url + '{{page.inputPath}}', '_blank');
-                    } else {
-                        location.href = nav.url;
-                    }
-                    return;
-                }
-            }
+      for (let nav of {{site.mainnav | json}}) {
+        if (event.key == nav.kbd && nav.url) {
+          if (nav.id == 'editOnGitHub') {
+            window.open(nav.url + '{{page.inputPath}}', '_blank');
+          } else {
+            location.href = nav.url;
+          }
+          event.preventDefault();
+          return;
         }
-    });
+      }
+
+      for (let nav of {{site.footernav | json}}) {
+        if (event.key == nav.kbd && nav.url) {
+          event.preventDefault();
+          if (nav.id == 'editOnGitHub') {
+            window.open(nav.url + '{{page.inputPath}}', '_blank');
+          } else {
+            location.href = nav.url;
+          }
+          return;
+        }
+      }
+    }
+  });
 </script>

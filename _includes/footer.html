@@ -1,34 +1,33 @@
 <footer id="footer" class="flex-shrink-0 bg-neutral-5 dk:bg-neutral-d4 pdx pdy-vrplus">
-	<nav class="meta-font mxw-rg mrx-auto fluid-columns-5">
-		<ul class="mr-0 reset">
-			{%- for p in site.footernav -%}
-				<li>
-					{%- if id == p.id and id -%}
-						<a class="meta-font no-deco bold heading-color no-wrap" aria-current="page"
-					href="{{ p.url }}">{{p.label}}</a>
-						{%- elsif p.id == 'editOnGitHub' %}
-						<a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-deco no-wrap">{{p.label}}</a>
-					{%- else -%}
-						<a class="no-deco no-wrap" href="{{ p.url }}">{{p.label}}</a>
-					{%- endif -%}
-				</li>
-			{%- endfor -%}
-		</ul>
-		{%- if site.backToTop and site.backToTop.id %}
-			<div id="back-to-start" class="mry flex-column justify-end bg-neutral-5 dk:bg-neutral-d4">
-				<strong id="heading-hint" class="right">
-					<a href="#" class="no-deco"></a>
-				</strong>
-				<div class="right">
-					<a href="#{{site.backToTop.id}}">
-						{%- if site.backToTop.label -%}
-							{{site.backToTop.label}}
-						{%- else -%}
-					Back to Top
-					{%- endif -%}
-					</a>
-				</div>
-			</div>
-		{%- endif %}
-	</nav>
+  <nav class="meta-font mxw-rg mrx-auto fluid-columns-5">
+    <ul class="mr-0 reset">
+      {%- for p in site.footernav -%}
+        <li>
+          {%- if id == p.id and id -%}
+            <a class="meta-font no-deco bold heading-color no-wrap" aria-current="page" href="{{ p.url }}">{{p.label}}</a>
+          {%- elsif p.id == 'editOnGitHub' %}
+            <a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-deco no-wrap">{{p.label}}</a>
+          {%- else -%}
+            <a class="no-deco no-wrap" href="{{ p.url }}">{{p.label}}</a>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+    {%- if site.backToTop and site.backToTop.id %}
+      <div id="back-to-start" class="mry flex-column justify-end bg-neutral-5 dk:bg-neutral-d4">
+        <strong id="heading-hint" class="right">
+          <a href="#" class="no-deco"></a>
+        </strong>
+        <div class="right">
+          <a href="#{{site.backToTop.id}}">
+            {%- if site.backToTop.label -%}
+              {{site.backToTop.label}}
+            {%- else -%}
+              Back to Top
+            {%- endif -%}
+          </a>
+        </div>
+      </div>
+    {%- endif %}
+  </nav>
 </footer>

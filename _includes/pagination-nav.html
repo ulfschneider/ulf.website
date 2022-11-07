@@ -1,10 +1,10 @@
 {%-if pagedItems.pageCount > 1 -%}
-    <nav class="mry-2">
-        {%-if pagedItems.previous != "" and pagedItems.previous != nil -%}
-            <a href="{{pagedItems.previous}}" class="meta mrr-2">Newer posts</a>
-        {%- endif -%}
-        {%-if pagedItems.next != "" and pagedItems.next != nil -%}
-            <a href="{{pagedItems.next}}" class="meta">Older posts</a>
-        {%- endif -%}
-    </nav>
+  <nav class="mry-2">
+    {%-if pagedItems.previous != "" and pagedItems.previous != nil -%}
+      <a href="{{pagedItems.previous}}" class="meta mrr-2">Newer posts</a>
+    {%- endif -%}
+    {%-if pagedItems.next != "" and pagedItems.next != nil -%}
+      <a href="{{pagedItems.next}}" class="meta">Older posts</a>
+    {%- endif -%}
+  </nav>
 {%- endif -%}
