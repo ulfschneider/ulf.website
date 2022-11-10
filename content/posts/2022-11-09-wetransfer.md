@@ -10,4 +10,4 @@ You can share files with up to 2 GB of data for free with [<cite>WeTransfer</cit
 - Copy the transfer link
 - Send the link with your own mail
 
-There are similar services. Among all of them, one alternative for me is [HiDrive Share](https://share.hidrive.com/) by german internet provider Strato. It offers similar features as WeTransfer, the servers are located in Germany and your data is secured by the German implementation of the European data protection laws (DSGVO), which are among the strictest in the world.
+There are similar services. Among all of them, one alternative for me is [<cite>HiDrive Share</cite>](https://share.hidrive.com/) by german internet provider Strato. It offers similar features as WeTransfer, the servers are located in Germany and your data is secured by the German implementation of the European data protection laws (DSGVO), which are among the strictest in the world.
