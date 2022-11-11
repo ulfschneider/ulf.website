@@ -4,7 +4,7 @@
       {%- for p in site.footernav -%}
         <li>
           {%- if id == p.id and id -%}
-            <a class="meta-font no-deco bold heading-color no-wrap" aria-current="page" href="{{ p.url }}">{{p.label}}</a>
+            <a class="meta-font no-deco strong heading-color no-wrap" aria-current="page" href="{{ p.url }}">{{p.label}}</a>
           {%- elsif p.id == 'editOnGitHub' %}
             <a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-deco no-wrap">{{p.label}}</a>
           {%- else -%}

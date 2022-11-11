@@ -3,7 +3,7 @@
     {%- for p in site.mainnav -%}
       <li class="inline-block">
         {%- if id == p.id -%}
-          <a aria-current="page" class="no-deco bold heading-color no-wrap" href="{{ p.url }}">{{p.label}}</a>
+          <a aria-current="page" class="no-deco strong heading-color no-wrap" href="{{ p.url }}">{{p.label}}</a>
         {%- elsif p.id == 'editOnGitHub' %}
           <a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-deco no-wrap">{{p.label}}</a>
         {%- else -%}
