@@ -4,9 +4,11 @@ layout: default
 
 {{content}}
 
-<section class="mry-vrplus">
-  <h2 class="normal fs lh-default">Below are my recent notes.</h2>
-  {%- include "post-list.html" limit: 5-%}
-</section>
 
-<section class="mry-vrplus">{%- include "search-field.html" -%}</section>
+<h2 class="normal fs lh-default mry-vrplus">Below are my recent notes.</h2>
+{%- include "post-list.html" limit: 5-%}
+
+
+<section class="mry-vrplus">
+  {%- include "search-field.html" -%}
+</section>
