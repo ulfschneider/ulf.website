@@ -38,10 +38,15 @@ hr.footnotes-sep::after {
 
 .footnotes-list li {
   counter-increment: footnote-counter;
+  position: relative;
 }
 
 .footnotes-list li::before {
-  content: counter(footnote-counter);
+  content: "[" counter(footnote-counter) "]";
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  top: -0.5em;
 }
 
 .footnotes-list li > p {

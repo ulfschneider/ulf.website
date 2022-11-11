@@ -14,7 +14,7 @@ const CACHE_NAME = 'cache';
 const SCRIPT_CACHE_NAME = `${PREFIX}${SCRIPT}-${CACHE_NAME}-${CACHE_VERSION}-3`;
 const FONT_CACHE_NAME = `${PREFIX}${FONT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const IMAGE_CACHE_NAME = `${PREFIX}${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
-const CSS_CACHE_NAME = `${PREFIX}${CSSCACHE}-${CACHE_NAME}-${CACHE_VERSION}-33`;
+const CSS_CACHE_NAME = `${PREFIX}${CSSCACHE}-${CACHE_NAME}-${CACHE_VERSION}-34`;
 const JSON_CACHE_NAME = `${PREFIX}${JSONCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
 const SEARCH_CACHE_NAME = `${PREFIX}${SEARCH}-${CACHE_NAME}-${CACHE_VERSION}`;
 const RUNTIME_CACHE_NAME = `${PREFIX}${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
@@ -248,7 +248,7 @@ async function fetchAndCache(request, options) {
         //we have no cache and therefore have
         //to fetch a response from the network
         log(`Responding from network ${url}`);
-    } 
+    }
     return fetch(request)
         .then(async responseFromNetwork => {
 

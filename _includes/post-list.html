@@ -22,11 +22,11 @@
 
     <section class="lg:w-rg lg:flex-shrink-0">
       {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
-        <h3 class="mry-0 fs lh-default">
+        <h2 class="mry-0 fs lh-default">
           <a href="{{p.url}}">
             {{ p.data.title }}
           </a>
-        </h3>
+        </h2>
       {%- endif -%}
       {%- if p.data.subtitle -%}
         <p>{{p.data.subtitle}}</p>
@@ -54,11 +54,13 @@
 {%- include "pagination-nav.html" -%}
 
 {%- if livePosts.length > limit and limit > 0 -%}
-  {%-assign currentTags = collections.usedSiteTags -%}
-  {%- if currentTags.length > 1 -%}
-    <h2 class="normal fs lh-default mry-vrplus">There are more posts. Choose a tag:</h2>
-    {%- include "site-tags.html" -%}
-  {%- else -%}
-    <a href="{{site.blog}}">There are more posts …</a>
-  {%- endif %}
+  <section class="mry-2">
+    {%-assign currentTags = collections.usedSiteTags -%}
+    {%- if currentTags.length > 1 -%}
+      <h2 class="fs lh-default mr-0">There are more posts. Choose a tag:</h2>
+      {%- include "site-tags.html" -%}
+    {%- else -%}
+      <a href="{{site.blog}}">There are more posts …</a>
+    {%- endif %}
+  </section>
 {%- endif -%}

@@ -148,8 +148,10 @@ module.exports = {
 
     mapItem: function (item) {
         let tagsWithUrls = [];
+
         if (item.data.tags) {
-            for (let tag of item.data.tags) {
+            let tags = [...new Set(item.data.tags)].sort();
+            for (let tag of tags) {
                 tagsWithUrls.push({
                     name: tag,
                     url: this.tagUrl(tag)
