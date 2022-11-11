@@ -214,7 +214,7 @@ The [Road Di2 Series General Guide](https://si.shimano.com/api/publish/storage/p
 For the wire length calculation, I'm referring to the geometry of the Strael 3.0 frame 56T. The seat tube is 557 mm, the chainstays are 418 mm, the down tube is approximately 600 mm. My handlebars are 420 mm wide and have 73 mm reach. I'm calculating wire length as follows:
 
 - **Battery to EW-JC304 junction:** 557 mm seat tube + 150 mm for outside frame ≈ **700 mm**.
-- **EW-JC304 to rear derailleur: ** 418 mm + 200 mm outside frame ≈ **700 mm**
+- **EW-JC304 to rear derailleur:** 418 mm + 200 mm outside frame ≈ **700 mm**
 - **EW-JC304 to front derailleur:** ≈ **300 mm**
 - **EW-JC304 to right shifter:** 500 mm routing through down tube + 500 mm outside frame + 300 mm inside handlebar ≈ **1400 mm**. 
 - **Shifter to shifter:** ≈ **700 mm**.
