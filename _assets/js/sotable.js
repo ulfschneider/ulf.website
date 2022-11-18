@@ -125,7 +125,7 @@ function isColumnAsc(table, columnIndex) {
 
 function comparer(columnIndex, asc) {
     //compare table cell values of two rows for the given column index
-    return function(row1, row2) {
+    return function (row1, row2) {
         return compareValues(getIndexedRowValue(asc ? row1 : row2, columnIndex), getIndexedRowValue(asc ? row2 : row1, columnIndex));
     }
 }
@@ -252,7 +252,7 @@ function sotable(options) {
     document.querySelectorAll('tr:first-child>th:not(.noso):not(.no-so)').forEach(th => {
 
         let table = th.closest('table');
-        if (!isBlacklisted(table) && isWhitelisted(table)) {
+        if (!isBlacklisted(table) && isWhitelisted(table) && getBodyRows(table) > 1) {
             let columnIndex = getColumnIndex(th);
             if (canColumnSort(table, columnIndex)) {
                 storeOrigTableOrder(table);
