@@ -100,7 +100,11 @@ function getBodyRows(table) {
     let container = getBodyRowsContainer(table);
     return Array.from(container.querySelectorAll(ROW_SELECTOR))
         .filter(tr => !tr.querySelector('th:not(table table th)'));
+}
 
+function getBodyRowCount(table) {
+    let bodyRows = getBodyRows(table);
+    return bodyRows.length;
 }
 
 function getCellValue(cell) {
@@ -252,7 +256,7 @@ function sotable(options) {
     document.querySelectorAll('tr:first-child>th:not(.noso):not(.no-so)').forEach(th => {
 
         let table = th.closest('table');
-        if (!isBlacklisted(table) && isWhitelisted(table) && getBodyRows(table) > 1) {
+        if (!isBlacklisted(table) && isWhitelisted(table) && getBodyRowCount(table) > 1) {
             let columnIndex = getColumnIndex(th);
             if (canColumnSort(table, columnIndex)) {
                 storeOrigTableOrder(table);
