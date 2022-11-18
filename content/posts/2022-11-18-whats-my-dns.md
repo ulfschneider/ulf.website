@@ -10,6 +10,6 @@ A call to [<cite>whatsmydns.net/dns-lookup/</cite>](https://www.whatsmydns.net/d
 <tr><td>ulf.codes</td><td>MX</td><td>5</td><td>smtpin.rzone.de</td><td>150</td></tr>
 </table>
 
-Using Netlify name servers for my personal site, which is hosted by Netlify, is a *huge* performance booster. Measured in my current environment, the times for a complete page load improved from 120 ms to 66 ms!  Also the load times on a global scale are now lightning fast. You can verify that by navigating running [testmysite.io for {{site.name}}](https://testmysite.io/63778b292114640078d10be2/ulf.codes).
+Using Netlify name servers for my personal site, which is hosted by Netlify, is a *huge* performance booster. Measured in my current environment, the times for a complete page load improved from 1.2 s to 0.6 s!  Also the load times on a global scale are now lightning fast. You can verify that by navigating running [testmysite.io for {{site.name}}](https://testmysite.io/63778b292114640078d10be2/ulf.codes).
 
 
