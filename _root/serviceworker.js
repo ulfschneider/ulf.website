@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v40'; //version is used to remove old caches
+const CACHE_VERSION = 'v41'; //version is used to remove old caches
 
 const PREFIX = '{{trimBase}}' ? '{{trimBase}}-' : '';
 const IGNORE_CACHE_PATTERN = undefined; //must be a regular expression if defined
@@ -11,10 +11,10 @@ const JSONCACHE = 'json';
 const SEARCH = 'search';
 const CACHE_NAME = 'cache';
 
-const SCRIPT_CACHE_NAME = `${PREFIX}${SCRIPT}-${CACHE_NAME}-${CACHE_VERSION}-5`;
+const SCRIPT_CACHE_NAME = `${PREFIX}${SCRIPT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const FONT_CACHE_NAME = `${PREFIX}${FONT}-${CACHE_NAME}-${CACHE_VERSION}`;
 const IMAGE_CACHE_NAME = `${PREFIX}${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
-const CSS_CACHE_NAME = `${PREFIX}${CSSCACHE}-${CACHE_NAME}-${CACHE_VERSION}-35`;
+const CSS_CACHE_NAME = `${PREFIX}${CSSCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
 const JSON_CACHE_NAME = `${PREFIX}${JSONCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
 const SEARCH_CACHE_NAME = `${PREFIX}${SEARCH}-${CACHE_NAME}-${CACHE_VERSION}`;
 const RUNTIME_CACHE_NAME = `${PREFIX}${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
