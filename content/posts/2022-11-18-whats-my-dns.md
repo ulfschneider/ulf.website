@@ -12,6 +12,6 @@ A call of [<cite>whatsmydns.net/dns-lookup/</cite>](https://www.whatsmydns.net/d
 
 Using Netlify name servers for my personal site, which is hosted by Netlify, is a *huge* performance booster. Measured in my current environment, the times for a page load improved from 1.2 s down to 0.6 s! I´m measuring with the [PerformanceNavigationTiming API](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming) the `loadEventStart`, which is <q>representing the time value equal to the time immediately before the load event of the current document is fired.</q>
 
-Also the load times on a global scale are now lightning fast. You can verify that by navigating to [testmysite.io for ulf.codes](https://testmysite.io/63790e6405fb047d45a84011/ulfschneider.io).
+Also the load times on a global scale are now lightning fast. You can verify that by navigating to [testmysite.io for ulf.codes](https://testmysite.io/637a79d4ccca0b63641bb7ed/ulf.codes).
 
 
