@@ -3,7 +3,7 @@ title: What´s my DNS?
 tags: journal
 ---
 Today I was [delegating](https://docs.netlify.com/domains-https/netlify-dns/delegate-to-netlify/) DNS adminstration for ulf.codes from Strato to [Netlify](https://www.netlify.com). During the process I needed to know what´s my DNS MX value and I couldn´t read it from the Strato settings because Strato was only saying <q>Strato Mailserver.</q>
-A call of [<cite>whatsmydns.net/dns-lookup/</cite>](https://www.whatsmydns.net/dns-lookup/) for {{site.name}} revealed, the Strato mail server setting is:
+A call of [<cite>whatsmydns.net/dns-lookup/</cite>](https://www.whatsmydns.net/dns-lookup/) for ulf.codes revealed, the Strato mail server setting is:
 
 <table>
 <tr><th>Record</th><th>Type</th><th>Priority</th><th>Target</th><th>TTL</th></tr>
