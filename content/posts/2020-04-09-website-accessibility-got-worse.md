@@ -20,7 +20,7 @@ I quote some lowlights of the report as mentioned on their [summary page](https:
 
 WebAIM provides a [Web Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org), which is *"… a suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities. WAVE can identify many accessibility and Web Content Accessibility Guideline (WCAG) errors, but also facilitates human evaluation of web content."*
 
-I immediately [checked my site](https://wave.webaim.org/report#/https://ulf.codes/) by using the tool and got hints for improvements.
+I immediately [checked my site](https://wave.webaim.org/report#/{{site.origin}}) by using the tool and got hints for improvements.
 
 The accessibility situation also seems to resonate with others. For example, Ethan Marcotte explains his approach of writing an [Accessibility Statement](https://ethanmarcotte.com/wrote/an-accessibility-statement/) for his site. 
 

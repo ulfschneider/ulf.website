@@ -53,7 +53,7 @@ subtitle: Highlight the entries of your table of contents while scrolling
 </style>
 
 <nav class="table-of-contents">
-<a href="/blog/tools/" class="mrb-2">ulf.codes</a>
+<a href="/blog/tools/" class="mrb-2">{{site.name}}</a>
 <a href="#one-morning">One morning</a>
 <a href="#he-thought">He thought</a>
 <a href="#gregor-then">Gregor then</a>

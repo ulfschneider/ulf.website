@@ -1,9 +1,9 @@
-const ORIGIN = "https://ulf.codes";
+const ORIGIN = "https://ulfschneider.io";
 const BASE = "/";
 const URL = ORIGIN + BASE;
 
 module.exports = {
-    name: "ulf.codes",
+    name: "ulfschneider.io",
     locale: "en",
     direction: "ltr",
     theme_color: "#ebebeb",
@@ -25,7 +25,7 @@ module.exports = {
     description: "Hi, I´m Ulf Schneider, a developer and agile coach living in Paderborn, Germany.",
     ownership: {
         name: "Ulf Schneider",
-        email: "mail@ulf.codes",
+        email: "mail@ulfschneider.io",
         phone: "+49 163 2505164",
         twitter: ""
     },

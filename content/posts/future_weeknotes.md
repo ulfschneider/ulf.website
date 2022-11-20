@@ -30,7 +30,7 @@ draft: true
 - aspect-ratio is around the corner
 - https://github.com/jeffbski/markdown-it-modify-token
 - instant page
-- https://ulf.codes/2020-05-09-fluid-videos-with-my-adaption-of-fitvids/
+- /2020-05-09-fluid-videos-with-my-adaption-of-fitvids/
 - https://css-tricks.com/font-display-masses/
 - https://www.jonathan-harrell.com/blog/better-typography-with-font-variants/
 - https://blurha.sh

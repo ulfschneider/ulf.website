@@ -2,7 +2,7 @@
   *
  * Make your table of contents (toc) active.
  * 
- * Please visit <a href="https://ulf.codes/tools/active-toc/">ulf.codes/tools/active-toc</a> to see ActiveToc in action or 
+ * Please visit <a href="https://ulfschneider.io/tools/active-toc/">ulfschneider.io/tools/active-toc</a> to see ActiveToc in action or 
  * download the <a href="https://github.com/ulfschneider/active-toc">GitHub repo</a> and open the file <code>index.html</code> to see the usage.
  * 
  * Embed the script <code>active-toc.min.js</code> in your web page.
