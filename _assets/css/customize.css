@@ -1,5 +1,6 @@
 :root {
   --base-font-size: 19px;
+  --fs-mono: 0.9em;
   --font-size-sm-breakpoint: 19px;
   --font-size-rg-breakpoint: 20px;
   --font-size-md-breakpoint: 21px;
