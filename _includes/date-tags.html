@@ -46,7 +46,7 @@
           {% if color != '' %}
             <a style="color: {{color}}" class="no-deco pdx-d3" href="{{tag | tagUrl}}">{{site.starTagSymbol}}</a>
           {% else %}
-            <a href="{{tag | tagUrl}}" class="no-deco base-color pdx-d3">{{site.starTagSymbol}}</a>
+            <a href="{{tag | tagUrl}}" class="no-deco pdx-d3">{{site.starTagSymbol}}</a>
           {% endif %}
         {% endif %}
       {% endfor %}
@@ -56,7 +56,7 @@
           {% if color != '' %}
             <a style="color: {{color}}" class="inline-block" href="{{tag | tagUrl}}">{{tag}}</a>
           {% else %}
-            <a href="{{tag | tagUrl}}" class="inline-block base-color">{{tag}}</a>
+            <a href="{{tag | tagUrl}}" class="inline-block">{{tag}}</a>
           {% endif %}
         {% endif %}
       {% endfor %}
