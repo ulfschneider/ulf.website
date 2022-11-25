@@ -121,7 +121,7 @@ permalink: "{{site.search.url}}"
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
               tagLink.innerHTML = "{{site.starTagSymbol}}";
-              tagLink.classList = "pdx-d3";
+              tagLink.classList = "no-deco base-color pdx-d3";
               tags.appendChild(document.createTextNode(" "));
               tags.appendChild(tagLink);
               break;
@@ -132,7 +132,7 @@ permalink: "{{site.search.url}}"
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
               tagLink.innerHTML = tag.name;
-              tagLink.classList = "inline-block";
+              tagLink.classList = "inline-block base-color";
               tags.appendChild(document.createTextNode(" "));
               tags.appendChild(tagLink);
             }
