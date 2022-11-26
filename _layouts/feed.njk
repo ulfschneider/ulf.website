@@ -23,9 +23,11 @@
         <id>{{ absolutePostUrl }}</id>
         <content type="html" xml:lang="{{site.locale}}" >
           {{ p.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
-          {%- if authorEmail %}
-            <![CDATA[<p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>]]>
-          {% endif -%}
+          <![CDATA[<p><strong><a href="{{absolutePostURL}}">{{ p.data.title }}</a></strong> appeared originally on <a href="{{site.origin}}">{{site.name}}</a>.</p>
+          {%- if authorEmail -%}
+            <p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>
+          {%- endif -%}
+          ]]>
         </content>
       </entry>
     {% endif -%}
