@@ -110,12 +110,8 @@ permalink: "{{site.search.url}}"
         if (friend.tags.length && ! friend.notags) {
           let tags = document.createElement("span");
           aside.appendChild(tags);
+          tags.appendChild(document.createTextNode(" "));
 
-          let label = document.createElement("span");
-          label.innerHTML = "in";
-          tags.appendChild(document.createTextNode(" "));
-          tags.appendChild(label);
-          tags.appendChild(document.createTextNode(" "));
           for (let tag of friend.tags) {
             if (tag.name == "{{site.starTag}}") {
               let tagLink = document.createElement("a");
