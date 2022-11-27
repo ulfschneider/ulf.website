@@ -117,6 +117,10 @@ main article blockquote::before {
   background: var(--base-color);
 }
 
+.tag-list * + * {
+  margin-left: 1em;
+}
+
 @media print {
   .anchor {
     display: none;
