@@ -101,6 +101,16 @@ module.exports = {
         url: BASE + "blog/"
     }
     ],
+    navPrevious: {
+        label: 'Newer posts',
+        id: 'nav-previous',
+        kbd: '-'
+    },
+    navNext: {
+        label: 'Older posts',
+        id: 'nav-next',
+        kbd: '+',
+    },
     backToTop: {
         label: "Back to Top",
         id: "start",

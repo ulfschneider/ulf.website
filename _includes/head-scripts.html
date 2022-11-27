@@ -25,6 +25,23 @@
         }
       }
 
+      if ('{{site.navNext.id}}' && event.key === '{{site.navNext.kbd}}') {
+        let navNext = document.querySelector(`#{{site.navNext.id}}`);
+        if (navNext) {
+          location.href = navNext.href;
+          event.preventDefault();
+        }
+      }
+
+
+      if ('{{site.navPrevious.id}}' && event.key === '{{site.navPrevious.kbd}}') {
+        let navPrevious = document.querySelector(`#{{site.navPrevious.id}}`);
+        if (navPrevious) {
+          location.href = navPrevious.href;
+          event.preventDefault();
+        }
+      }
+
       if ('{{site.backToTop.id}}' && event.key === '{{site.backToTop.kbd}}') {
         location.href = `#{{site.backToTop.id}}`;
         event.preventDefault();

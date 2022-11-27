@@ -48,4 +48,32 @@
       </td>
     </tr>
   {%- endif -%}
+  {%- if site.navNext and site.navNext.kbd and site.navNext.id -%}
+    <tr>
+      <td>
+        {%- if site.navNext.label -%}
+          {{site.navNext.label}} (for paginated content)
+        {%- else -%}
+          Older posts (for paginated content)
+        {%- endif -%}
+      </td>
+      <td>
+        <kbd>{{site.navNext.kbd}}</kbd>
+      </td>
+    </tr>
+  {%- endif -%}
+  {%- if site.navPrevious and site.navPrevious.kbd and site.navPrevious.id -%}
+    <tr>
+      <td>
+        {%- if site.navPrevious.label -%}
+          {{site.navPrevious.label}} (for paginated content)
+        {%- else -%}
+          Newer posts (for paginated content)
+        {%- endif -%}
+      </td>
+      <td>
+        <kbd>{{site.navPrevious.kbd}}</kbd>
+      </td>
+    </tr>
+  {%- endif -%}
 </table>

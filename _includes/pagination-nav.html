@@ -1,10 +1,18 @@
 {%-if pagedItems.pageCount > 1 -%}
   <nav class="mry-vrplus">
     {%-if pagedItems.previous != "" and pagedItems.previous != nil -%}
-      <a href="{{pagedItems.previous}}" class="strong fs mrr-2">Newer posts</a>
+      <a id="nav-previous" href="{{pagedItems.previous}}" class="strong fs mrr-2">
+        {%-if site.navPrevious.label -%}
+          {{site.navPrevious.label}}
+          {%-else-%}Newer posts{%-endif-%}
+      </a>
     {%- endif -%}
     {%-if pagedItems.next != "" and pagedItems.next != nil -%}
-      <a href="{{pagedItems.next}}" class="strong fs">Older posts</a>
+      <a id="nav-next" href="{{pagedItems.next}}" class="strong fs">
+        {%-if site.navNext.label -%}
+          {{site.navNext.label}}
+          {%-else-%}Older posts{%-endif-%}
+      </a>
     {%- endif -%}
   </nav>
 {%- endif -%}
