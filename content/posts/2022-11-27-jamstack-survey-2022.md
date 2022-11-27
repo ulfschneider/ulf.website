@@ -19,7 +19,7 @@ Interesting results of the [<cite>2022 Jamstack survey</cite>](https://jamstack.
 	7. my manager
 	8. technology choices
 	9. environmental impact
-- [Why did you leave your job?](https://jamstack.org/survey/2022/#why-people-leave) People left voluntarily. Number one: being able to work remotely. Further reasons given, in that order: 
+- [Why did you leave your job?](https://jamstack.org/survey/2022/#why-people-leave) People left voluntarily. Number one: Being able to work remotely. Further reasons given, in that order: 
 	1. being able to work remotely in the new job
 	2. career growth
 	3. company culture
