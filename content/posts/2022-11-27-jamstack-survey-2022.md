@@ -1,6 +1,6 @@
 ---
 title: Jamstack Survey 2022
-tags: journal
+tags: [code, journal]
 ---
 Interesting results of the [<cite>2022 Jamstack survey</cite>](https://jamstack.org/survey/2022/)!
 
