@@ -2,6 +2,7 @@ const { dest, src } = require('gulp');
 const postcss = require('gulp-postcss');
 const postcssImport = require('postcss-import');
 const postcssNested = require('postcss-nested');
+const postcssHexRgba = require('postcss-hexrgba');
 const postcssCustomMedia = require('postcss-custom-media');
 const postcssCustomProperties = require('postcss-custom-properties');
 const postcssCalc = require('postcss-calc');
@@ -24,6 +25,7 @@ const processingCSS = () => {
             postcssCustomMedia(),
             postcssCustomProperties(),
             postcssCalc(),
+            postcssHexRgba(),
             postcssPurgeCSS({
                 content: [
                     'content/pages/**/*',

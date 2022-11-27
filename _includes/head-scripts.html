@@ -2,7 +2,6 @@
 <script defer src="/js/sotable.js"></script>
 <script defer src="/js/active-toc.js"></script>
 <script>
-  addEventListener('load', () => sotable());
   addEventListener('keydown', event => {
     let focus = document.querySelector(':focus');
 
@@ -27,7 +26,7 @@
       }
 
       if ('{{site.backToTop.id}}' && event.key === '{{site.backToTop.kbd}}') {
-        location.href = '# {{site.backToTop.id}}';
+        location.href = `#{{site.backToTop.id}}`;
         event.preventDefault();
       }
 
@@ -55,5 +54,8 @@
         }
       }
     }
+  });
+  addEventListener('load', () => {
+    sotable()
   });
 </script>

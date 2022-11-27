@@ -88,29 +88,6 @@ main article blockquote::before {
   display: none;
 }
 
-.skip-link {
-  padding: var(--space-2);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  transform: translateY(-110%);
-  transition: transform 0.3s ease-out;
-  background: var(--primary);
-  color: white;
-  font-family: var(--meta-font-family);
-  text-align: center;
-}
-
-.skip-link a {
-  color: white;
-  outline-color: white;
-}
-
-.skip-link:focus-within {
-  transform: translateY(0);
-}
-
 #image-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--space-5), 1fr));

@@ -1,4 +1,4 @@
 # Homepage of Ulf Schneider
 
-[{{site.name}}]({{site.origin}}) 
+[ulfschneider.io](https://ulfschneider.io)
 
