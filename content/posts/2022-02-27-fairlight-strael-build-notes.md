@@ -1,6 +1,6 @@
 ---
 title: Fairlight Strael Build Notes
-tags: [sports, articles, strael]
+tags: [sports, strael]
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame. Here is my thought process for choosing the parts.
 hero: /img/strael/strael-3-0-top-tube.png
 herocaption: Fairlight Strael 3.0 Top Tube<br>Image taken from the Fairlight Strael 3.0 Lookbook
@@ -135,26 +135,26 @@ For the weight of Shimano's brake hoses and their electronic wiring, I found som
 
 The crankset weights are without Powermeter. The weights of the SRAM cranks are from [r2-bike](https://r2-bike.com/). Please note the AXS Red crankset is *more than 100 grams lighter than the Dura-Ace* cranks. I don't know what part attributes to the smaller chainrings of AXS gearing, and what to the carbon crank arms. Anyway, that weight saving is impressive.
 
-<div class="full-bleed">
-  <table class="mrx-auto underline-rows">
+
+<table>
   <caption><strong>Weight comparison of first and second tier electronic groupsets from Shimano and SRAM</strong><p>Weights are provided in gram.</p>
 </caption>
   <thead>
     <tr><th>Groupset</th><th>Total</th><th>Shifters</th><th>Calipers</th><th>Rotors</th><th>Front derailleur</th><th>Crankset</th><th>Rear derailleur</th><th>Cassette</th><th>Chain</th><th>Battery</th></tr>
   </thead>
-  <tbody class="no-wrap">
+  <tbody class="whitespace-nowrap">
     <tr><td>Di2 Dura-Ace</td><td>2383.5</td><td>350</td><td>230 + 60 hose</td><td>216</td><td>96</td><td>685 (34-50)</td><td>215</td><td>223 (11-30)</td><td>242</td><td>52 + 14.5 wiring</td></tr>
     <tr><td>eTap AXS Red</td><td>2470</td><td>466</td><td>316 inc hose</td><td>236</td><td>165 inc battery</td><td>577 (33-46)</td><td>247 inc battery</td><td>211 (10-33)</td><td>252</td><td>0</td></tr>
     <tr><td>Di2 Ultegra</td><td>2632.5</td><td>391</td><td>282 + 60 hose</td><td>218</td><td>110</td><td>700 (34-50)</td><td>262</td><td>291 (11-30)</td><td>252</td><td>52 + 14.5 wiring</td></tr>
     <tr><td>eTap AXS Force</td><td>2834</td><td>476</td><td>346 inc hose</td><td>236</td><td>199 inc battery</td><td>727 (33-46)</td><td>325 inc battery</td><td>266 (10-33)</td><td>259</td><td>0</td></tr>
   </tbody>
 </table>
-</div>
+
 
 The weight of the Shimano groupsets is competitive, making a decision for either one of Ultegra or Dura-Ace a good move. The weight-saving of Dura-Ace compared to Ultegra is 249g at an additional cost of 1660 €, judged by the pricing for the single components (not entire groupsets) of [bike24](https://www.bike24.de/radfahren/teile/fahrradschaltung/schaltgruppen?manufacturerId%5B0%5D=931) in January 2022. Let's have a look at the details:
 
-<div class="full-bleed">
-   <table class="mrx-auto underline-rows">
+
+<table>
      <caption>
       <strong>Shimano groupset comparison in terms of weight and cost</strong>
       <p>Weights are provided in gram. Parts that are contained in both groupsets, like wiring and battery, are omitted.</p>
@@ -162,7 +162,7 @@ The weight of the Shimano groupsets is competitive, making a decision for either
   <thead>
     <tr><th>Component</th><th>Dura-Ace weight</th><th>Ultegra weight</th><th class="bg-primary-5 dk:bg-primary-d4">Weight saving of Dura-Ace</th><th class="bg-accent-four-5 dk:bg-accent-four-d4">Added cost of Dura-Ace</th><th>Dura-Ace cost</th><th>Ultegra cost</th></tr>
   </thead>
-  <tbody class="no-wrap">
+  <tbody class="whitespace-nowrap">
     <tr><td>Shifters</td><td>350</td><td>391</td><td class="bg-primary-5 dk:bg-primary-d4">-41</td><td class="bg-accent-four-5 dk:bg-accent-four-d4">280 €</td><td>940 €</td><td>660 €</td></tr>
     <tr><td>Calipers</td><td>290</td><td>342</td><td class="bg-primary-5 dk:bg-primary-d4">-52</td><td class="bg-accent-four-5 dk:bg-accent-four-d4">180 €</td><td>320 €</td><td>140 €</td></tr>
     <tr><td>Rotors</td><td>216</td><td>218</td><td class="bg-primary-5 dk:bg-primary-d4">-2</td><td class="bg-accent-four-5 dk:bg-accent-four-d4">35 €</td><td>120 €</td><td>85 €</td></tr>
@@ -173,7 +173,7 @@ The weight of the Shimano groupsets is competitive, making a decision for either
     <tr><td>Chain</td><td>242</td><td>252</td><td class="bg-primary-5 dk:bg-primary-d4">-10</td><td class="bg-accent-four-5  dk:bg-accent-four-d4">10 €</td><td>50 €</td><td>40 €</td></tr>
     <tr><td>Total</td><td>2317</td><td>2566</td><td class="bg-primary-5 dk:bg-primary-d4">-249</td><td class="bg-accent-four-5  dk:bg-accent-four-d4">1660 €</td><td>3500 €</td><td>1840 €</td></tr>
 </table>
-</div>
+
 
 *A thought experiment:* By mixing both groupsets, a weight saving of 161 g at an additional cost of 685 € is possible when using Dura-Ace shifters, calipers, and the cassette – while taking everything else from Ultegra. The Dura-Ace shifters and calipers alone would save 93 g at the additional cost of 460 €. The weight-savings of the Dura-Ace derailleurs and chain is only 71 g at the cost of another 650 €. Even further, the Dura-Ace front derailleur will save 14 g at the additional cost of 230 €, while it's also possible to save 10 g by using the Dura-Ace chain at the additional cost of 10 € 😊. 
 
@@ -236,27 +236,27 @@ When using a compact 34-50 crank, a jump on the cassette from 22 to 19 is bother
 
 Every now and then, I hear or read that 12-speed is unnecessary and 11-speed is as good. I cannot follow that line of thought. At least from my point of view, 12-speed brings an improvement in a particular area that's important to me. 
 
-<div class="full-bleed">
-   <table class="mrx-auto noso">
+
+<table class="noso">
   <caption>
     <strong>Gear steps of different cassettes</strong>
     <dl>
       <dt>Color-coding for tooth-jumps:</dt>
-      <dd><span class="bg-accent-one-4 dk:bg-accent-one-d4 pdx-d3">1 tooth</span> <span class="bg-accent-four-4 dk:bg-accent-four-d4 pdx-d3">2 tooths</span> <span class="bg-accent-three-4 dk:bg-accent-three-d4 pdx-d3">3 tooths</span> <span class="bg-accent-two-4 dk:bg-accent-two-d2 white pdx-d3">4 tooths</span> <span class="bg-accent-two-3 dk:bg-accent-two white pdx-d3">5 tooths</span></dd>
+      <dd><span class="bg-accent-one-4 dk:bg-accent-one-d4 px-1">1 tooth</span> <span class="bg-accent-four-4 dk:bg-accent-four-d4 px-1">2 tooths</span> <span class="bg-accent-three-4 dk:bg-accent-three-d4 px-1">3 tooths</span> <span class="bg-accent-two-4 dk:bg-accent-two-d2 white px-1">4 tooths</span> <span class="bg-accent-two-3 dk:bg-accent-two white px-1">5 tooths</span></dd>
     </dl>
     <p>My current cassette is <span class="underline">SRAM 11-30 11-speed</span>.</p>
   </caption>
   <thead>
     <tr><th>Manufacturer and range</th><th colspan="12">Steps</th></tr>
   </thead>
-  <tbody class="no-wrap">
+  <tbody class="whitespace-nowrap">
     <tr><td>Shimano 11-30 (12 speed)</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">11</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">12</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">13</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">14</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">15</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">16</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">17</td><td class="bg-accent-four-4 dk:bg-accent-four-d4 dk:bg-accent-four-d4 dk:bg-accent-four-d4">19</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">21</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">24</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">27</td><td  class="bg-accent-three-4 dk:bg-accent-three-d4">30</td></tr>
     <tr><td>Shimano 11-34 (12 speed)</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">11</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">12</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">13</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">14</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">15</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">17</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">19</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">21</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">24</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">27</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">30</td><td class="bg-accent-two-4 dk:bg-accent-two-d2 white">34</td></tr>
     <tr><td>SRAM 10-33 (12 speed)</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">10</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">11</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">12</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">13</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">14</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">15</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">17</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">19</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">21</td><td  class="bg-accent-three-4 dk:bg-accent-three-d4">24</td><td  class="bg-accent-two-4 dk:bg-accent-two-d2 white">28</td><td class="bg-accent-two-3 dk:bg-accent-two white">33</td></tr> 
 <tr class="brb br-base-color"><td>SRAM 11-30 (11 speed)</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">11</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">12</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">13</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">14</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">15</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">17</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">19</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">21</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">24</td><td  class="bg-accent-three-4 dk:bg-accent-three-d4">27</td><td  class="bg-accent-three-4 dk:bg-accent-three-d4">30</td><td class="center">X</td></tr>           
   </tbody>
 </table>
-</div>
+
 
 **My decision:** Compared to my current 11-speed compact setup, the 12-speed 11-34 cassette would give me the exact same gearing – plus an additional climbing gear. That's not bad. Or I can ride the 11-30, which has the same lowest gear as what I'm riding today, plus tight gear steps 21-19-17-16-15. The tight gears in that sweet spot are essential enough for me to choose the @11-30 ==Ultegra== 12-speed Cassette (CS-R8100-12).{} It's made of steel, which is more durable than the partial titanium Dura-Ace cassette, and because it costs much less, it's not too difficult to also swap it for an 11-34 if necessary.
 
@@ -272,8 +272,8 @@ Rotor cranksets don't have bonded materials as Shimano cranksets. Instead, they 
 
 Please note that I only found the total weights of the Shimano cranksets for the below-given weight comparison without differentiating into their parts. The Rotor ALDHU carbon cranks are not included in the comparison because the carbon cranks are only available for a 30mm axle. I'm only comparing compact chainring sizes for Rotor and Shimano because they are the smallest to get from Shimano. 
 
-<div class="full-bleed">
-  <table class="mrx-auto underline-rows">
+
+<table>
   <caption>
   <strong>Weight comparison of cranksets</strong>
   <p>Weights are provided in grams. Sources of data:</p>
@@ -287,7 +287,7 @@ Please note that I only found the total weights of the Shimano cranksets for the
   <thead>
     <tr><th>Crank</th><th>Total</th><th>Crank arms 172.5mm</th><th>Spider</th><th>Chainrings 34-50</th><th>Axle 24mm</th></tr>
   </thead>
-  <tbody class="no-wrap">
+  <tbody class="whitespace-nowrap">
     <tr><td>ALDHU DirectMount</td><td>645</td><td>350</td><td>0</td><td>150 /assumed</td><td>145</td></tr>
     <tr><td>ALDHU Spider</td><td>675.5</td><td>350</td><td>60 /assumed</td><td>30.5 + 90 </td><td>145</td></tr>
     <tr><td>Dura-Ace 9200</td><td>685</td><td>←</td><td>←</td><td>←</td><td>←</td></tr>
@@ -295,7 +295,6 @@ Please note that I only found the total weights of the Shimano cranksets for the
     <tr><td>Ultegra 8100</td><td>700</td><td>←</td><td>←</td><td>←</td><td>←</td></tr>
     <tr><td>VEGAST Spider</td><td>724.5</td><td>399</td><td>60 /assumed</td><td>30.5 + 90 </td><td>145</td></tr></tbody>
 </table>
-</div>
 
 
 **My decision:** At the time of writing, during February 2022, I couldn't get anything from Rotor stating that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet, I think it is possible. For that reason, I will go for the @Rotor ALDHU 24 mm Crank Arms, 172.5 mm length{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Rotor BB1 BSA Threaded Bottom Bracket{}. A Shimano BSA Threaded Bottom Bracket (BB-R9100) doesn´t allow routing the Di2 wires through the bottom bracket shell because the plastic shell of the BB-R9100 is too large to get everything in – the Rotor BB1 works better with this regards. 
@@ -306,8 +305,7 @@ Please note that I only found the total weights of the Shimano cranksets for the
 
 ## The wheels
 
-<div class="full-bleed">
-<table class="mrx-auto underline-rows">
+<table>
   <caption>
     <strong>My shortlist of wheels</caption>
   </caption>
@@ -323,7 +321,6 @@ Please note that I only found the total weights of the Shimano cranksets for the
   <tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura-Ace C50</a></td><td>1461 g</td><td>50 mm</td><td>21 mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>Cup and cone bearings</td></tr>  
 </tbody>
 </table>
-</div>
 
 I would be happy with any of these wheelsets. They all have a ratchet freewheel 🙌, hooked rims 🙌, and external nipples 🙌. In my experience, a ratchet freewheel is sturdier and has quicker engagement. Hooked rims allow using non-tubeless tires. I don't know how the idea was born that internal nipples are a good thing? Eventually, a wheel requires trueing, and who wants to rip off the rim tape for that reason? 
 
@@ -376,8 +373,8 @@ I ride Specialized Phenom Expert on most of my bikes, and that saddle is working
 
 It's a steel frame therefore metal cages should complement it. Ideally, titanium to save weight. The price of these cages is ridiculous when compared to the price of a crankset, for example.
 
-<div class="full-bleed">
-  <table class="mrx-auto underline-rows">
+
+<table>
     <caption>
       <strong>An overview of titanium bottle cages</strong>
       <p>Weights are in grams.</p>
@@ -391,7 +388,6 @@ It's a steel frame therefore metal cages should complement it. Ideally, titanium
       <tr><td><a href="https://www.wolftoothcomponents.com/collections/bottle-cages/products/morse-cage-ti">Wolftooth Morse Cage Ti</a></td><td>33</td><td>77 €</td><td>The baseplate is even more sophisticated than the Sicuro plate and allows for 32 mm vertical adjustment. I think the name <em>Morse</em> is derived from the drilling pattern on the baseplate. The Morse Cage actually is a King Cage (made by the King) with a Wolftooth baseplate! Wolftooth also has an interesting mounting system for bottles and other accessories that is named B-RAD. The cage is optional available as a Limited Edition Black, which costs 93 €.</td></tr>
     </tbody>
   </table>
-</div>
 
 **My decision:** 2 @King Cage Ti{2}, each one weighing 28 g. The prices of the others are too steep, and I do not need the sophisticated baseplate of the Wolftooth to slide the cages up and down. Dom Thomas certainly took care to place the cage mounts on his frame so that two cages with bottles would not create issues with touching each other.
 

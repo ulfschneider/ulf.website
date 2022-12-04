@@ -94,7 +94,7 @@ main article blockquote::before {
 }
 
 .image .date-tags {
-  margin-bottom: var(--vertical-rhythm-plus);
+  margin-bottom: var(--vertical-ryt-plus);
 }
 
 .image main * {

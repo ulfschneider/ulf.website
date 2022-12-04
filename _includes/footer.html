@@ -1,33 +1,37 @@
-<footer id="footer" class="flex-shrink-0 bg-neutral-5 dk:bg-neutral-d4 pdx pdy-vrplus">
-  <nav class="meta-font mxw-rg mrx-auto fluid-columns-5">
-    <ul class="mr-0 reset">
-      {%- for p in site.footernav -%}
-        <li>
-          {%- if id == p.id and id -%}
-            <a class="meta-font no-deco strong heading-color no-wrap" aria-current="page" href="{{ p.url }}">{{p.label}}</a>
-          {%- elsif p.id == 'editOnGitHub' %}
-            <a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-deco no-wrap">{{p.label}}</a>
-          {%- else -%}
-            <a class="no-deco no-wrap" href="{{ p.url }}">{{p.label}}</a>
-          {%- endif -%}
-        </li>
-      {%- endfor -%}
-    </ul>
-    {%- if site.backToTop and site.backToTop.id %}
-      <div id="back-to-start" class="mry flex-column justify-end bg-neutral-5 dk:bg-neutral-d4">
-        <strong id="heading-hint" class="right">
-          <a href="#" class="no-deco"></a>
-        </strong>
-        <div class="right">
-          <a href="#{{site.backToTop.id}}">
-            {%- if site.backToTop.label -%}
-              {{site.backToTop.label}}
+<footer id="footer" class="shrink-0 bg-light py-ryt-lg px-ryt">
+  <div class="max-w-lg mx-auto">
+    <nav class="max-w-rg columns-3xs">
+      <ul class="mr-0 reset">
+        {%- for p in site.footernav -%}
+          <li class="max-sm:my-2">
+            {%- if id == p.id and id -%}
+              <a class="no-underline whitespace-nowrap font-bold" aria-current="page" href="{{ p.url }}">
+                {{p.label}}
+              </a>
+            {%- elsif p.id == 'editOnGitHub' %}
+              <a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-underline whitespace-nowrap">{{p.label}}</a>
             {%- else -%}
-              Back to Top
+              <a class="no-underline whitespace-nowrap" href="{{ p.url }}">{{p.label}}</a>
             {%- endif -%}
-          </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+      {%- if site.backToTop and site.backToTop.id %}
+        <div id="back-to-start" class="my-ryt flex-col justify-end bg-light">
+          <div id="heading-hint" class="right font-bold hidden max-sm:mb-2">
+            <a href="#" class="no-underline"></a>
+          </div>
+          <div class="text-right">
+            <a href="#{{site.backToTop.id}}">
+              {%- if site.backToTop.label -%}
+                {{site.backToTop.label}}
+              {%- else -%}
+                Back to Top
+              {%- endif -%}
+            </a>
+          </div>
         </div>
-      </div>
-    {%- endif %}
-  </nav>
+      {%- endif %}
+    </nav>
+  </div>
 </footer>

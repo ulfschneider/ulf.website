@@ -44,7 +44,7 @@ permalink: "{{site.search.url}}"
       let friend = friendlyMap.get(entry.ref);
 
       let article = document.createElement("article");
-      article.classList = "mry-vrplus lg:bleed-left lg:flex-row-reverse lg:align-baseline";
+      article.classList = "my-ryt-2xl lg:bleed-left lg:flex-row-reverse lg:align-baseline";
       parent.appendChild(article);
 
       let section = document.createElement("section");
@@ -117,7 +117,7 @@ permalink: "{{site.search.url}}"
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
               tagLink.innerHTML = "{{site.starTagSymbol}}";
-              tagLink.classList = "no-deco pdx-d3";
+              tagLink.classList = "no-underline px-1";
               tags.appendChild(document.createTextNode(" "));
               tags.appendChild(tagLink);
               break;
@@ -247,7 +247,7 @@ permalink: "{{site.search.url}}"
       });
   });
 </script>
-<section class="mry-vrplus">
+<section class="my-ryt-2xl">
   {% include "search-field.html", focus: true, onsubmit:
    "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value);
    history.replaceState(null, '', location.pathname + '?query=' +

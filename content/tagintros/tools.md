@@ -1,8 +1,7 @@
 ---
 tags: tools
----
 I build and share these tools. Some are just tiny npm packages, some are complete applications. You may want to have a quick look at:
-
+---
 [<cite>Letter for iA Writer</cite>](/tools/ia-letter/)
 : An iA Writer template to create letters with correctly positioned address fields.
 
@@ -24,4 +23,4 @@ I build and share these tools. Some are just tiny npm packages, some are complet
 [<cite>somap</cite>](/tools/somap/)
 : A npm package with a sorted map and sorted set, implemented as a binary tree.
 
-Below are all tools in the chronological order of their appearance.
+## Below are all the tools in the chronological order of their appearance.

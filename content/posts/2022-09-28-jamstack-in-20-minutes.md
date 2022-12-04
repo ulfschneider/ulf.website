@@ -1,6 +1,6 @@
 ---
 title: Jamstack in 20 minutes
-tags: [code, articles]
+tags: code
 abstract: The Jamstack comes with the promise to make websites faster, more secure, and to provide a better developer experience. Why is that the case?
 ---
 The Jamstack can bring huge advantages to the process of building websites, as well as to the way these websites are carried out to users. A Jamstack site

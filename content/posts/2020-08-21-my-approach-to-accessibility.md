@@ -1,10 +1,8 @@
 ---
 title: My approach to accessibility
-tags: [accessibility, articles]
+tags: accessibility
 ---
 Through a [post from Ethan Marcotte](https://ethanmarcotte.com/wrote/an-accessibility-statement/) I got drawn into the accessibility topic. Web accessibility, like  defined by the W3C, was not on my radar until then and that is not good. 
-
-## Accessibility
 
 <blockquote><p>The power of the Web is in its universality.
 Access by everyone regardless of disability is an essential aspect.</p>
@@ -19,7 +17,7 @@ To quote the Mozilla Developer Network:
 
 <blockquote>
 <p>Accessibility is the practice of making your websites usable by as many people as possible. We traditionally think of this as being about people with disabilities, but the practice of making sites accessible also benefits other groups such as those using mobile devices, or those with slow network connections.</p>
-<footer>MDN Web Docs, in <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility</a></cite></footer>
+<footer>MDN Web Docs, <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility</a></cite></footer>
 </blockquote>
 
 I want to explore this field, develop my skills and make better, *accessible* websites.

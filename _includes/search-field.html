@@ -6,8 +6,8 @@
     {%- assign autofocus = "autofocus" -%}
   {%- endif -%}
   <form onsubmit="{{onsubmit}}">
-    <label id="search-label" for="search-query">Search
-      <em>{{site.name}}</em>
+    <label id="search-label" for="search-query" class="block h2 mb-ryt-sm">Search
+      <span class="italic font-mono">{{site.name}}</span>
     </label>
     <div class="flex mxw-rg mry-d2">
       <input id="search-query" {{autofocus}} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="flex-grow-1 align-stretch" type="text"/>
@@ -15,7 +15,7 @@
     </div>
     <details>
       <summary>Search help</summary>
-      <dl class="mr-0 pdy small">
+      <dl class="mr-0 text-small">
         <dt>
           <code>foo*</code>
         </dt>

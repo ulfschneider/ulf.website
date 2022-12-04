@@ -2,7 +2,7 @@
 title: Self-organization
 subtitle: A force of life
 abstract: Self-organization is the determining element for agile teams and companies. To think and act accordingly requires the acceptance of evolutionary forces which are an inherent part of any social system, whether we like it or not.
-tags: [articles, agile]
+tags: agile
 ---
 
 [[toc]]
@@ -19,7 +19,7 @@ Leaders in agile organizations have the vital function of actively giving self-o
 </blockquote>
 
 <blockquote>
-<p>… the only possibility of transcending the capacity of individual minds is to rely on those super personal, 'self-organizing' forces which create spontaneous orders. </p>
+<p>... the only possibility of transcending the capacity of individual minds is to rely on those super personal, 'self-organizing' forces which create spontaneous orders. </p>
 <footer>Friedrich A. von Hayek</footer>
 </blockquote>
 

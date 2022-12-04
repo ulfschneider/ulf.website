@@ -6,7 +6,7 @@ module.exports = {
     name: "ulfschneider.io",
     locale: "en",
     direction: "ltr",
-    theme_color: "#ebebeb",
+    theme_color: "#e7e5e4",
     dark_theme_color: "#3a3a3a",
     background_color: "#3a3a3a",
     origin: ORIGIN,
@@ -32,7 +32,6 @@ module.exports = {
     paginationSize: 10,
     starTag: "star",
     starTagSymbol: "★",
-    /*tagColors: ["#2b7296", "#94322d", "#2a9754", "#7e761d", "#1d7d76", "#761d7d"],*/
     mainnav: [{
         label: "Ulf Schneider",
         url: BASE,

@@ -1,126 +1,101 @@
-<!DOCTYPE html>
-<html class="auto-dark-mode hover-rows bg-neutral-5 dk:bg-neutral-d4 " id="{{site.backToTop.id}}" lang="{{site.locale}}" dir="{{site.direction}}">
+---
+layout: default
+nodate: true
+---
+{%- include "site-tags.html" -%}
+{%- include "title.html" tagIntro: tag -%}
+{{content}}
+<div id="image-container"></div>
+<button id="load-more" class="block my-ryt-2xl mx-auto">Load more images</button>
 
-  <head>
-    {% include "head.html" %}
-  </head>
+{%- if tag != nil -%}
+  {% assign imageData = collections[tag] | live | post | reverse | firstImage %}
+{%- else -%}
+  {% assign imageData = collections.livePosts | firstImage %}
+{%- endif %}
 
-  <body class="default break-word flex-column">
-    {% include "header.html" %}
-    <div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
-      <main id="main" class="indent outdent mry-3 mxw-rg mrx-auto">
-        <div class="mry-3">
-          {% include "site-tags.html" %}
-        </div>
-        <div {% if outline==true %}class="outline"{% endif %}>
-          {{ content }}
-        </div>
-        <div id="image-container" class="gp-2 md:bleed"></div>
-        <button id="load-more" class="block mrt-2 mrb-3 mrx-auto">Load more images</button>
 
-        {%- if tag != nil -%}
-          {% assign imageData = collections[tag] | live | post | reverse | firstImage %}
-        {%- else -%}
-          {% assign imageData = collections.livePosts | firstImage %}
-        {%- endif %}
+<script>
+  var imageData = {{ imageData }};
+  var index = getIndex();
+  var year;
+  var increment = {{site.paginationSize}};
+  var container = document.getElementById('image-container');
 
-      </main>
-    </div>
-    {% include "footer.html" %}
-  </body>
+  function appendImageCard(imgData) {
 
-  <script>
-    var imageData = {{ imageData }};
-    var index = getIndex();
-    var year;
-    var increment = {{site.paginationSize}};
-    var container = document.getElementById('image-container');
+    let figure = document.createElement('figure');
+    figure.classList = 'm-0';
+    container.appendChild(figure);
 
-    function appendImageCard(imgData) {
+    let anchor = document.createElement('a');
+    anchor.classList = 'no-underline inline-block';
+    anchor.href = imgData.url;
+    figure.appendChild(anchor);
 
-      let imgYear = new Date(imgData.date).getFullYear();
-      if (year != imgYear) {
-        year = imgYear;
-        let yearContainer = document.createElement('time');
-        yearContainer.setAttribute('style', 'grid-column: 1 / -1;'); // take the entire row of the grid
-        yearContainer.classList = "larger meta year mrt-vrplus";
-        yearContainer.innerHTML = year;
-        container.appendChild(yearContainer);
-      }
+    let img = document.createElement('img');
+    img.src = imgData.smallSrc;
+    img.alt = imgData.alt;
+    img.classList = 'fit-contain';
+    img.setAttribute('loading', 'lazy');
+    if (imgData.width && imgData.height) {
+      img.setAttribute('width', imgData.width);
+      img.setAttribute('height', imgData.height);
+      img.setAttribute('style', `aspect-ratio:${
+        imgData.width
+      }/${
+        imgData.height
+      }`);
+    }
+    anchor.appendChild(img);
 
-      let figure = document.createElement('figure');
-      figure.classList = 'mr-0';
-      container.appendChild(figure);
-
-      let anchor = document.createElement('a');
-      anchor.classList = 'no-deco inline-block';
-      anchor.href = imgData.url;
-      figure.appendChild(anchor);
-
-      let img = document.createElement('img');
-      img.src = imgData.smallSrc;
-      img.alt = imgData.alt;
-      img.classList = 'fit-contain mxh-6 md:mxh-5';
-      img.setAttribute('loading', 'lazy');
-      if (imgData.width && imgData.height) {
-        img.setAttribute('width', imgData.width);
-        img.setAttribute('height', imgData.height);
-        img.setAttribute('style', `aspect-ratio:${
-          imgData.width
-        }/${
-          imgData.height
-        }`);
-      }
-      anchor.appendChild(img);
-
-      if (imgData.title) {
-        let figcaption = document.createElement('figcaption');
-        figcaption.classList = `small lh-2 ${
-          imgData.starred
-            ? imgData.starred
-            : ''
-          }`;
-        figcaption.innerHTML = imgData.title;
-        anchor.appendChild(figcaption);
-      }
-
+    if (imgData.title) {
+      let figcaption = document.createElement('figcaption');
+      figcaption.classList = `${
+        imgData.starred
+          ? imgData.starred
+          : ''
+        }`;
+      figcaption.innerHTML = imgData.title;
+      anchor.appendChild(figcaption);
     }
 
-    function getIndex() {
-      let queryString = location.search;
-      let params = new URLSearchParams(queryString);
-      let index = parseInt(params.get("index"));
-      return index
-        ? index
-        : 0;
+  }
+
+  function getIndex() {
+    let queryString = location.search;
+    let params = new URLSearchParams(queryString);
+    let index = parseInt(params.get("index"));
+    return index
+      ? index
+      : 0;
+  }
+
+  function loadImages({start, end}) {
+    start = start
+      ? start
+      : 0;
+    end = end
+      ? end + increment
+      : start + increment;
+
+    for (let i = start; i < end && i < imageData.length; i++) {
+      appendImageCard(imageData[i]);
     }
+  }
 
-    function loadImages({start, end}) {
-      start = start
-        ? start
-        : 0;
-      end = end
-        ? end + increment
-        : start + increment;
+  loadImages({start: 0, end: getIndex()});
 
-      for (let i = start; i < end && i < imageData.length; i++) {
-        appendImageCard(imageData[i]);
-      }
-    }
-
-    loadImages({start: 0, end: getIndex()});
-
-    let loadMore = document.getElementById('load-more');
-    if (index + increment > imageData.length) {
+  let loadMore = document.getElementById('load-more');
+  if (index + increment > imageData.length) {
+    loadMore.style = 'display:none;';
+  }
+  loadMore.addEventListener('click', event => {
+    index += increment;
+    history.replaceState(null, '', location.pathname + '?index=' + index);
+    loadImages({start: index});
+    if (index + increment >= imageData.length) {
       loadMore.style = 'display:none;';
     }
-    loadMore.addEventListener('click', event => {
-      index += increment;
-      history.replaceState(null, '', location.pathname + '?index=' + index);
-      loadImages({start: index});
-      if (index + increment >= imageData.length) {
-        loadMore.style = 'display:none;';
-      }
-    });
-  </script>
-</html>
+  });
+</script>

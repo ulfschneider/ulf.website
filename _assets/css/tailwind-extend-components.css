@@ -1,0 +1,144 @@
+@layer components {
+  .indent {
+    p {
+      @apply my-0;
+    }
+    p + p {
+      @apply indent-ryt-lg;
+    }
+  }
+
+  .legible-rem-width-descendants:not(
+      .legible-rem-width-descendants .pause-legible-width
+    ) {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    th,
+    td,
+    figcaption,
+    caption,
+    summary,
+    blockquote {
+      @apply max-w-rg;
+    }
+    figure {
+      @apply max-w-md;
+    }
+  }
+  *.legible-rem-width {
+    @apply max-w-rg;
+  }
+
+  .legible-ch-width-descendants:not(
+      .legible-ch-width-descendants .pause-legible-width
+    ) {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    th,
+    td,
+    figcaption,
+    caption,
+    summary,
+    blockquote {
+      max-width: 60ch;
+    }
+    figure {
+      @apply max-w-md;
+    }
+  }
+  *.legible-ch-width {
+    max-width: 60ch;
+  }
+
+  /* table of contents */
+  /* markdown-it toc */
+  /* purgecss start ignore */
+  .anchor {
+    @apply font-normal text-base text-meta;
+  }
+
+  nav.table-of-contents {
+    @apply ml-ryt-lg max-w-[14rem] text-sm max-md:hidden float-right;
+  }
+
+  nav.table-of-contents::before {
+    content: "Contents";
+    @apply block font-bold;
+  }
+
+  nav.table-of-contents a {
+    @apply no-underline;
+  }
+
+  nav.table-of-contents > ol {
+    @apply m-0 p-0;
+  }
+
+  nav.table-of-contents ol > li {
+    @apply p-0 my-ryt-sm leading-tight;
+  }
+  nav.table-of-contents ol > li::before {
+    content: "";
+    @apply hidden;
+  }
+
+  nav.table-of-contents ol > li > ol {
+    @apply pl-ryt-lg;
+  }
+  /* purgecss end ignore */
+
+  /*scroll-table*/
+  /* purgecss start ignore */
+  .scroll-table {
+    @apply my-ryt-xl;
+    table {
+      @apply my-0;
+    }
+  }
+  /* purgecss end ignore */
+  table {
+    caption {
+      .restore-hint {
+        .restore-order {
+          @apply font-bold;
+        }
+      }
+    }
+  }
+
+  /* tags */
+  nav .tag {
+    @apply no-underline px-ryt-xs py-ryt-2xs rounded bg-light whitespace-nowrap;
+  }
+  nav .tag.current {
+    @apply px-ryt-xs py-ryt-2xs rounded bg-primary text-white whitespace-nowrap;
+  }
+
+  /* image container */
+  #image-container {
+    @apply grid gap-ryt-xl my-ryt-2xl grid-flow-dense;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

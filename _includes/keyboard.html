@@ -12,7 +12,7 @@
     {%- if nav.kbd != nil and nav.kbd != '' %}
       <tr>
         <td>
-          <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
+          <a class="no-underline" href="{{nav.url}}">{{nav.label}}</a>
         </td>
         <td>
           <kbd>{{nav.kbd}}</kbd>
@@ -24,7 +24,7 @@
     {%- if nav.kbd != nil and nav.kbd != '' %}
       <tr>
         <td>
-          <a class="no-deco" href="{{nav.url}}">{{nav.label}}</a>
+          <a class="no-underline" href="{{nav.url}}">{{nav.label}}</a>
         </td>
         <td>
           <kbd>{{nav.kbd}}</kbd>
@@ -35,7 +35,7 @@
   {%- if site.backToTop and site.backToTop.kbd and site.backToTop.id -%}
     <tr>
       <td>
-        <a class="no-deco" href="#{{site.backToTop.id}}">
+        <a class="no-underline" href="#{{site.backToTop.id}}">
           {%- if site.backToTop.label -%}
             {{site.backToTop.label}}
           {%- else -%}

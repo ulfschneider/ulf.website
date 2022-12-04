@@ -1,0 +1,31 @@
+{%- if reducetitle -%}
+  {%- assign reducedTitleStyle = "text-base legible-rem-width" -%}
+{%- endif -%}
+<header class="max-sm:my-ryt-xl my-ryt-2xl legible-ch-width-descendants">
+  {%- if title != "" and title != nil and title != "notitle" and notitle == nil -%}
+    <h1 class="my-0 {{reducedTitleStyle}}">{{title}}</h1>
+  {%- elsif tagIntro != "" and tagIntro != nil -%}
+    <h1 class="my-0 {{reducedTitleStyle}}">Posts tagged
+      <span class="italic font-mono">{{tagIntro}}</span>
+    </h1>
+  {%- elsif tagIntro == ""  -%}
+    <h1 class="my-0 {{reducedTitleStyle}}">All posts</h1>
+  {%- endif -%}
+  {%- if abstract -%}
+    <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}text-lg legible-ch-width{% endif %} my-ryt-lg">
+      {{abstract}}
+    </div>
+  {%- elsif subtitle -%}
+    <h2 class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}legible-ch-width my-ryt-lg{% endif %}">{{subtitle}}</h2>
+  {%- endif -%}
+  {%- if refer -%}
+    <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}legible-ch-width my-ryt-lg{% endif %}">{{refer}}</div>
+  {%- elsif author -%}
+    <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}legible-ch-width my-ryt-lg{% endif %}">{{author}}</div>
+  {%- endif -%}
+  {%- if nodate == nil -%}
+    <aside class="my-ryt-lg text-sm">
+      {% include "date-tags.html" %}
+    </aside>
+  {%- endif -%}
+</header>

@@ -1,6 +1,7 @@
 const markdownIt = require('markdown-it');
+const slugify = require('slugify');
 const markdownItAnchor = require('markdown-it-anchor');
-const markdownItTableOfContents = require('markdown-it-toc-done-right');
+const markdonItTOC = require('markdown-it-toc-done-right');
 const markdownItDefList = require('markdown-it-deflist');
 const markdownItContainer = require('markdown-it-container');
 const markdownItFitMedia = require('markdown-it-fitmedia');
@@ -26,6 +27,10 @@ const utc = require('dayjs/plugin/utc')
 dayjs.extend(utc);
 const timezone = require('dayjs/plugin/timezone');
 dayjs.extend(timezone);
+
+function mySlugify(s) {
+    return slugify(s, { lower: true });
+}
 
 
 const site = require('../_data/site.js');
@@ -312,10 +317,11 @@ module.exports = {
                 permalinkClass: 'anchor',
                 permalinkSymbol: '#',
                 permalinkBefore: false,
-                permalinkSpace: true
+                permalinkSpace: true,
+                slugify: mySlugify
             })
+            .use(markdonItTOC, { slugify: mySlugify })
             .use(markdownItMark)
-            .use(markdownItTableOfContents)
             .use(markdownItDefList)
             .use(markdownItScrollTable)
             .use(markdownItAttrs)

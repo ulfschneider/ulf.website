@@ -44,7 +44,7 @@ I think the course is like a condensed version of Matej´s book *[Better web typ
 
 ## Rhythm in web typography
 
-- [Why is Vertical Rhythm an Important Typography Practice?](https://zellwk.com/blog/why-vertical-rhythms/) *– article by Zell*
+- [Why is Vertical Rhythm an Important Typography Practice?](https://zellwk.com/blog/why-vertical-ryts/) *– article by Zell*
 - [Kern Type, the kerning game](https://type.method.ac/) *– game by Mark MacKay*
 - [Gutenberg – A Meaningful Web Typography Starter Kit](http://matejlatin.github.io/Gutenberg/) *– CSS tool by Matej Latin*
 - [Grid Lover](https://www.gridlover.net/try) *– tool*

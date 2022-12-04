@@ -160,6 +160,7 @@ function addCollections(eleventyConfig) {
         for (let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
             tagMap.push({
                 tag: '',
+                title: 'All posts',
                 pageNumber: pageNumber,
                 permalink: utils.currentPage(site.blog, pageNumber),
                 previous: utils.previousPage(site.blog, pageNumber),

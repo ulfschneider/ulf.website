@@ -1,15 +1,15 @@
 ---
 title: Pocket Git Guide
 subtitle: A short entry-level approach to Git
-tags: [code, articles]
+tags: code
 outline: true
 ---
 
 [[toc]]
 
-Git will help you doing the following things with a computer:
-
 ## Reasons to use Git
+
+Git will help you doing the following things with a computer:
 
 <figure class="bleed rg:split align-start">
 <div>

@@ -3,11 +3,10 @@ permalink: /about/
 title: About me
 nodate: true
 notags: true
-tags: articles
 id: about
 hero: /img/ulf/ulf-16x9-900.jpg
+herocss: legible-rem-width
 heroalt: Portrait of Ulf Schneider
-herocss: mxw-rg
 ---
 Hi, my name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently heading the Processes & Quality team of Diebold Nixdorf Professional Services.
 
@@ -28,10 +27,10 @@ My path through 30 years of software went like this:<dl class="timeline">
 
 <h2>Connect with me</h2>
 
-Email: 
+Email
 : [{{site.ownership.email}}](mailto:{{site.ownership.email}})
 
-Phone: 
+Phone 
 : {{site.ownership.phone}}
 
 <h2>Content ownership</h2>

@@ -1,7 +1,9 @@
 const { dest, src } = require('gulp');
 const postcss = require('gulp-postcss');
 const postcssImport = require('postcss-import');
-const postcssNested = require('postcss-nested');
+const tailwindCSSNesting = require('tailwindcss/nesting');
+const tailwindCSS = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
 const postcssHexRgba = require('postcss-hexrgba');
 const postcssCustomMedia = require('postcss-custom-media');
 const postcssCustomProperties = require('postcss-custom-properties');
@@ -13,7 +15,7 @@ const replace = require('./replace.js');
 const site = require('../_data/site.js');
 const utils = require('../_eleventy/utils.js');
 
-const SOURCE = ['_assets/css/main.css', '_assets/css/compose.css'];
+const SOURCE = ['_assets/css/main.css'];
 const DEST = `${site.output}${utils.getBase()}css/`;
 
 const processingCSS = () => {
@@ -21,24 +23,13 @@ const processingCSS = () => {
     return src(SOURCE)
         .pipe(postcss([
             postcssImport(),
-            postcssNested(),
+            tailwindCSSNesting(),
+            tailwindCSS('tailwind.config.js'),
+            autoprefixer(),
             postcssCustomMedia(),
-            postcssCustomProperties(),
+            postcssCustomProperties({ preserve: false }),
             postcssCalc(),
             postcssHexRgba(),
-            postcssPurgeCSS({
-                content: [
-                    'content/pages/**/*',
-                    'content/posts/**/*',
-                    '!content/**/*compose.html',
-                    '_includes/**/*',
-                    '_layouts/**/*',
-                    '_eleventy/**/*',
-                    '_assets/js/**/*',
-                    '_assets/css/customize.css'
-                ],
-                defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] //check https://flaviocopes.com/tailwind-setup/
-            }),
             cssNano()
         ]))
         .pipe(replace())
@@ -46,3 +37,18 @@ const processingCSS = () => {
 };
 
 module.exports = processingCSS;
+
+
+//postcssPurgeCSS({
+//content: [
+//    'content/pages/**/*',
+//    'content/posts/**/*',
+//    '!content/**/*compose.html',
+//    '_includes/**/*',
+//    '_layouts/**/*',
+//    '_eleventy/**/*',
+//    '_assets/js/**/*',
+//    '_assets/css/customize.css'
+//],
+//    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] //check https://flaviocopes.com/tailwind-setup/
+//            }),

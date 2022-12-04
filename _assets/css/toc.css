@@ -28,21 +28,17 @@ nav.table-of-contents a {
 nav.table-of-contents > * {
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0;
 }
 
-nav.table-of-contents:not(.outline nav.table-of-contents) > * {
-  padding: 0;
+nav.table-of-contents > * {
 }
 
 nav.table-of-contents ol li::before {
   content: "";
 }
 
-.outline nav.table-of-contents ol li::before {
-  content: var(--h-counter);
-}
-
-nav.table-of-contents:not(.outline nav.table-of-contents) ol li::before {
+nav.table-of-contents ol li::before {
   min-width: 0 !important;
   margin: 0 !important;
   padding: 0 !important;

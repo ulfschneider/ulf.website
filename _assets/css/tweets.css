@@ -37,9 +37,9 @@
 
 .tweet-bird-icon {
   background-image: url(/img/twitter.svg);
-  width: var(--horizontal-rhythm);
+  width: var(--horizontal-ryt);
   height: calc(1em * var(--lh-default));
-  background-size: calc(var(--horizontal-rhythm) - var(--space-d1)) auto;
+  background-size: calc(var(--horizontal-ryt) - var(--space-d1)) auto;
   background-repeat: no-repeat;
   background-position: center left;
 }

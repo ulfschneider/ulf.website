@@ -31,22 +31,22 @@ function maintainBackToStartVisibility() {
             backToStart.style.display = 'flex';
             backToStart.style.position = 'fixed';
 
-            backToStart.classList.add('mr', 'pdx-d1');
-            backToStart.style.right= '0';
-            backToStart.style.bottom = '0';            
+            backToStart.classList.add('mr-4', 'mt-ryt', 'px-ryt');
+            backToStart.style.right = '0';
+            backToStart.style.bottom = '0';
             backToStart.style.border = '1px solid currentColor';
             if (footerNav) {
-                footerNav.classList.add('mrb-3');
-                
+                footerNav.classList.add('pb-ryt-xl');
+
             }
         } else {
             backToStart.style.display = 'none';
             backToStart.style.position = 'static';
             backToStart.style.border = 'none';
             backToStart.style.padding = 'none';
-            backToStart.classList.remove('mr', 'pdy-d1');
+            backToStart.classList.remove('mr-4', 'p-hr');
             if (footerNav) {
-                footerNav.classList.remove('mrb-3');
+                footerNav.classList.remove('pb-ryt-xl');
             }
         }
     }

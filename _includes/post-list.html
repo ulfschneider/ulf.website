@@ -18,34 +18,32 @@
 
   {%- assign count = count | plus: 1 -%}
 
-  <article class="mry-vrplus lg:bleed-left lg:flex-row-reverse lg:align-baseline">
+  <article>
+    {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
+      <h2 class="mb-ryt-sm">
+        <a href="{{p.url}}">
+          {{ p.data.title }}
+        </a>
+      </h2>
+    {%- endif -%}
+    {%- if p.data.subtitle -%}
+      <p>{{p.data.subtitle }}</p>
+    {%- elsif p.data.abstract -%}
+      <p>{{p.data.abstract}}</p>
+    {%- else -%}
+      {% assign abstract = p.templateContent | strip_html | strip | truncatewords : 25
+       , "&nbsp;…" %}
+      {%- if abstract != "" -%}
+        <p>{{ abstract }}</p>
+      {%- endif -%}
+    {%- endif -%}
 
-    <section class="lg:w-rg lg:flex-shrink-0">
-      {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
-        <h2 class="mry-0 fs lh-default">
-          <a href="{{p.url}}">
-            {{ p.data.title }}
-          </a>
-        </h2>
-      {%- endif -%}
-      {%- if p.data.subtitle -%}
-        <p>{{p.data.subtitle}}</p>
-      {%- elsif p.data.abstract -%}
-        <p>{{p.data.abstract}}</p>
-      {%- else -%}
-        {% assign abstract = p.templateContent | strip_html | strip | truncatewords : 25
-         , "&nbsp;…" %}
-        {%- if abstract != "" -%}
-          <p>{{ abstract }}</p>
-        {%- endif -%}
-      {%- endif -%}
+    {%- if p.data.title == "" or p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil -%}
+      <a href="{{p.url}}">Read more</a>
+    {%- endif -%}
 
-      {%- if p.data.title == "" or p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil -%}
-        <a href="{{p.url}}">Read more</a>
-      {%- endif -%}
-    </section>
-    <aside class="meta lg:smaller lg:pdr-1 lg:mrl-auto lg:right lg:flex-column {{p.data.starred}}">
-      {% include "date-tags.html" posted: p.date tags: p.data.tags notags: p.data.notags %}
+    <aside class="mt-ryt-sm {{p.data.starred}}">
+      {%- include "date-tags.html" posted: p.date tags: p.data.tags notags: p.data.notags -%}
     </aside>
   </article>
 
@@ -54,10 +52,10 @@
 {%- include "pagination-nav.html" -%}
 
 {%- if livePosts.length > limit and limit > 0 -%}
-  <section class="mry-vrplus">
+  <section>
     {%-assign currentTags = collections.usedSiteTags -%}
     {%- if currentTags.length > 1 -%}
-      <h2 class="fs lh-default mr-0">There are more posts. Choose a tag:</h2>
+      <h2 class="mb-ryt-sm">There are more posts. Choose a tag:</h2>
       {%- include "site-tags.html" -%}
     {%- else -%}
       <a href="{{site.blog}}">There are more posts …</a>
@@ -65,6 +63,6 @@
   </section>
 {%- endif -%}
 
-<section class="mry-">
+<section>
   {%- include "search-field.html" -%}
 </section>

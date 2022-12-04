@@ -7,7 +7,6 @@ pagination:
 permalink: '{{pagedItems.permalink}}'
 id: blog
 nosearch: true
-notitle: true
 ---
 {{collections.tagIntros | tagIntro: pagedItems.tag }}
 

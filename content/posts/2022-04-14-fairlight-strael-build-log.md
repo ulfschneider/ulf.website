@@ -1,12 +1,11 @@
 ---
 title: Fairlight Strael Build Log
-tags: [sports, articles, strael]
-abstract: A Log of my Fairlight Strael Build Process 
+tags: [sports, strael]
+abstract: This is a documentation of my Fairlight Strael build process. You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a>, which are the primer of this build. 
 hero: /img/strael/strael-3-0-parts.jpg
 outline: true
 ---
 
-This is a documentation of my Fairlight Strael Build. You might also be interested in my [Fairlight Strael Build Notes](/2022-02-27-fairlight-strael-build-notes/) which are the primer of this build. You get there the complete list of parts.
 
 [[toc]]
 
@@ -680,18 +679,18 @@ The weight of the bike is 9.1 kg including pedals.
 <tbody>
 <tr><td>Bottom Bracket Cups</td><td>40</td></tr>
 <tr><td>Brake Rotor Centerlock</td><td>40</td></tr>
-<tr><td>Calipers to the fork or frame</td><td>6<div class="smaller no-wrap">max 6 - 8</div></td></tr>
+<tr><td>Calipers to the fork or frame</td><td>6<div class="smaller whitespace-nowrap">max 6 - 8</div></td></tr>
 <tr><td>Cassette to freehub body</td><td>40</td></tr>
-<tr><td>Compression bung</td><td>6<div class="smaller no-wrap">max 10</div></td></tr>
-<tr><td>Dual Control Lever clamp screw</td><td>5<div class="smaller no-wrap">max 6 - 8</div></td></tr></tr>
-<tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<div class="smaller no-wrap">max 5 - 6</div></td></tr>
-<tr><td>Front derailleur clamp screw to mount the clamp to the frame</td><td>5<div class="smaller no-wrap">max 5 - 7</div></td></tr>
-<tr><td>Front derailleur fixing screw to attach the derailleur to the clamp band</td><td>5<div class="smaller no-wrap">max 5 - 7</div></td></tr>
-<tr><td>Pedals to crankarms</td><td>15<div class="smaller no-wrap">max 35 - 40</div></td></tr>
-<tr><td>Rear Derailleur Hanger</td><td>8<div class="smaller" no-wrap>max 8 - 10</div></td></tr>
-<tr><td>Ritchey stem bolts (not the top cap screw)</td><td>4<div class="smaller no-wrap">max 5</div></td></tr>
-<tr><td>Ritchey seatpost saddle clamp</td><td>10<div class="smaller no-wrap">max 16</div></td></tr>
-<tr><td>Rotor crankarms to axle</td><td>40<div class="smaller no-wrap">max 35 - 40</div></td></tr>
-<tr><td>Seatpost collar</td><td>4<div class="smaller no-wrap">max 8</div></td></tr></tr>
+<tr><td>Compression bung</td><td>6<div class="smaller whitespace-nowrap">max 10</div></td></tr>
+<tr><td>Dual Control Lever clamp screw</td><td>5<div class="smaller whitespace-nowrap">max 6 - 8</div></td></tr></tr>
+<tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<div class="smaller whitespace-nowrap">max 5 - 6</div></td></tr>
+<tr><td>Front derailleur clamp screw to mount the clamp to the frame</td><td>5<div class="smaller whitespace-nowrap">max 5 - 7</div></td></tr>
+<tr><td>Front derailleur fixing screw to attach the derailleur to the clamp band</td><td>5<div class="smaller whitespace-nowrap">max 5 - 7</div></td></tr>
+<tr><td>Pedals to crankarms</td><td>15<div class="smaller whitespace-nowrap">max 35 - 40</div></td></tr>
+<tr><td>Rear Derailleur Hanger</td><td>8<div class="smaller" whitespace-nowrap>max 8 - 10</div></td></tr>
+<tr><td>Ritchey stem bolts (not the top cap screw)</td><td>4<div class="smaller whitespace-nowrap">max 5</div></td></tr>
+<tr><td>Ritchey seatpost saddle clamp</td><td>10<div class="smaller whitespace-nowrap">max 16</div></td></tr>
+<tr><td>Rotor crankarms to axle</td><td>40<div class="smaller whitespace-nowrap">max 35 - 40</div></td></tr>
+<tr><td>Seatpost collar</td><td>4<div class="smaller whitespace-nowrap">max 8</div></td></tr></tr>
 </tbody>
 </table>

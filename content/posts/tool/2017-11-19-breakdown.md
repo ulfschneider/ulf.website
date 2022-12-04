@@ -6,5 +6,6 @@ Breakdown is a [package](http://atom.io/packages/breakdown) to be added to your 
 
 <figure>
 <img src="/img/breakdown/breakdown.gif" />
+<figcaption>Using Breakdown in the Atom editor</figcaption>
 </figure>
 
