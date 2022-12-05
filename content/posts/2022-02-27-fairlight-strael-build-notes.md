@@ -55,7 +55,7 @@ It took me four years from there to the point of ordering a Strael 3.0 frame in 
 
     > The comfort levels are absolutely spot on and well balanced too. When you are seated, regardless of pace, the rear end really takes the bumps and vibrations out of the road; the racer becomes a cruiser.
     >
-    > ...
+    > …
     >
     > Everything you need to know is coming through the frame and fork from the tires, and it's this level of interaction that allows you to ride the Fairlight as though it's a much more performance-orientated bike than it is.
     >

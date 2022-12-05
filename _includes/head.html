@@ -10,7 +10,7 @@
   <meta name="msapplication-TileColor" content="{{site.theme_color}}">
   <meta name="theme-color" content="{{site.theme_color}}">
 {%- endif -%}
-<meta name="description" content="{%- if title and title != 'notitle' and subtitle == nil and abstract == nil %}{{ title }}. {%endif %}{% if subtitle != nil %}{{subtitle | strip_html}}. {% endif %}{% if abstract != nil %}{{abstract | strip_html}}{% endif %}">
+<meta name="description" content="{%- if title and title != 'notitle' and abstract == nil %}{{ title }}. {%endif %}{% if abstract != nil %}{{abstract | strip_html}}{% endif %}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{site.base}}apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="{{site.base}}favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{site.base}}favicon-16x16.png">

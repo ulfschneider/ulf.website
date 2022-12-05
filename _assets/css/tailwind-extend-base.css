@@ -93,19 +93,19 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display font-bold max-sm:text-2xl text-3xl mt-ryt-2xl mb-ryt-xl tracking-tight;
+    @apply font-display font-bold text-3xl mt-ryt-2xl mb-ryt-xl tracking-tight;
   }
   h2,
   .h2 {
-    @apply font-display font-bold max-sm:text-xl text-2xl mt-ryt-xl mb-ryt-lg tracking-tight;
+    @apply font-display font-bold text-2xl mt-ryt-xl mb-ryt-lg tracking-tight;
   }
   h3,
   .h3 {
-    @apply font-display font-bold max-sm:text-lg text-xl mt-ryt-xl mb-ryt-lg tracking-tight;
+    @apply font-display font-bold text-xl mt-ryt-xl mb-ryt-lg tracking-tight;
   }
   h4,
   .h4 {
-    @apply font-display font-bold max-sm:text-base text-lg mt-ryt-lg mb-ryt;
+    @apply font-display font-bold text-lg mt-ryt-lg mb-ryt;
   }
   h5,
   h6,
@@ -197,7 +197,7 @@
   figure,
   pre,
   blockquote {
-    @apply my-ryt-xl;
+    @apply my-ryt-lg;
   }
   img + img {
     @apply my-ryt-lg;
@@ -206,10 +206,22 @@
     @apply my-ryt;
   }
 
+  /* img */
   img {
     @apply object-contain object-left;
     max-height: 80vh;
   }
+
+  /* hr */
+  hr {
+    @apply legible-rem-width border-0 m-0 block;
+  }
+
+  hr::before {
+    content: "* * *";
+    @apply legible-rem-width my-ryt-lg text-center block;
+  }
+
   /* table */
   table {
     @apply text-sm border-collapse border-y-2 border-y-current;
@@ -265,7 +277,7 @@
 
   /* kbd */
   kbd {
-    @apply font-mono bg-light text-center text-sm px-ryt-xs inline-block border-[1px] border-current rounded-sm;
+    @apply font-mono bg-light text-center text-sm px-ryt-xs inline-block border border-current rounded-sm;
   }
 
   /* pre and pre code */

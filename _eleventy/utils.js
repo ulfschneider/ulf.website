@@ -169,7 +169,6 @@ module.exports = {
             title: item.data.title,
             date: item.date,
             humanDate: this.humanDate(item.date),
-            subtitle: item.data.subtitle,
             abstract: item.data.abstract,
             author: item.data.author,
             refer: item.data.refer,

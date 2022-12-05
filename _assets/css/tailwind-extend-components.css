@@ -8,75 +8,11 @@
     }
   }
 
-  .legible-rem-width-descendants:not(
-      .legible-rem-width-descendants .pause-legible-width
-    ) {
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    dl,
-    dt,
-    dd,
-    ul,
-    ol,
-    li,
-    th,
-    td,
-    figcaption,
-    caption,
-    summary,
-    blockquote {
-      @apply max-w-rg;
-    }
-    figure {
-      @apply max-w-md;
-    }
-  }
-  *.legible-rem-width {
-    @apply max-w-rg;
-  }
-
-  .legible-ch-width-descendants:not(
-      .legible-ch-width-descendants .pause-legible-width
-    ) {
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    dl,
-    dt,
-    dd,
-    ul,
-    ol,
-    li,
-    th,
-    td,
-    figcaption,
-    caption,
-    summary,
-    blockquote {
-      max-width: 60ch;
-    }
-    figure {
-      @apply max-w-md;
-    }
-  }
-  *.legible-ch-width {
-    max-width: 60ch;
-  }
-
   /* table of contents */
   /* markdown-it toc */
   /* purgecss start ignore */
   .anchor {
-    @apply font-normal text-base text-meta;
+    @apply font-normal text-base text-meta no-underline;
   }
 
   nav.table-of-contents {
@@ -138,7 +74,138 @@
 
   /* image container */
   #image-container {
-    @apply grid gap-ryt-xl my-ryt-2xl grid-flow-dense;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    @apply grid gap-ryt-xl my-ryt-xl grid-flow-dense;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
+  /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+bash+git+json+jsstacktrace+markdown+matlab */
+  /**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #8292a2;
+  }
+
+  .token.punctuation {
+    color: #f8f8f2;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #f92672;
+  }
+
+  .token.boolean,
+  .token.number {
+    color: #ae81ff;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #a6e22e;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string,
+  .token.variable {
+    color: #f8f8f2;
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.function,
+  .token.class-name {
+    color: #e6db74;
+  }
+
+  .token.keyword {
+    color: #66d9ef;
+  }
+
+  .token.regex,
+  .token.important {
+    color: #fd971f;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  /* markdown-it footnotes */
+  /* purgecss start ignore */
+
+  .footnote-ref a,
+  .footnote-backref {
+    @apply no-underline;
+  }
+
+  .footnotes-list {
+    counter-reset: footnote-counter;
+    @apply m-0;
+  }
+
+  .footnotes-list :target {
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
+  }
+
+  .footnotes-list li {
+    counter-increment: footnote-counter;
+    position: relative;
+  }
+
+  .footnotes-list li::before {
+    content: "[" counter(footnote-counter) "]";
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    top: -0.5em;
+  }
+
+  .footnotes-list li > p {
+    display: inline;
+  }
+
+  /* purgecss end ignore */
 }

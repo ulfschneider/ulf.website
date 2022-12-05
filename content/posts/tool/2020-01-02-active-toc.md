@@ -2,7 +2,7 @@
 layout: blank
 title: active-toc
 tags: tools
-subtitle: Highlight the entries of your table of contents while scrolling
+abstract: Highlight the entries of your table of contents while scrolling
 ---
 
 <style>

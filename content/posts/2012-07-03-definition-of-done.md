@@ -1,6 +1,5 @@
 ---
 title: Definition of Done
-subtitle: A contract to begin your agile journey with
 abstract: The Definition of Done (DoD) is not only a checklist that has to be executed to get a piece of work delivered. The DoD and the path to its determination opens a space for agile thinking and acting which can actively be leveraged by the delivery team and the surrounding organization. It is a great entry point for agile delivery, and it can be used in Scrum, Kanban or any other procedure with iterated delivery.
 tags: agile
 ---

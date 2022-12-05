@@ -9,4 +9,3 @@ id: blog
 nosearch: true
 ---
 {{collections.tagIntros | tagIntro: pagedItems.tag }}
-

@@ -3,66 +3,43 @@
 {%- else -%}
   {%- assign livePosts = collections.livePosts -%}
 {%- endif -%}
+<div class="my-ryt-xl">
+  {%- for p in livePosts  -%}
 
-{%- for p in livePosts  -%}
-
-  {%- if limit > 0 and forloop.index > limit -%}
-    {%- break -%}
-  {%- endif -%}
-
-  {%- if p.url == page.url -%}
-    {%- continue -%}
-  {%- endif -%}
-
-  {%- assign href = p.url -%}
-
-  {%- assign count = count | plus: 1 -%}
-
-  <article>
-    {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
-      <h2 class="mb-ryt-sm">
-        <a href="{{p.url}}">
-          {{ p.data.title }}
-        </a>
-      </h2>
+    {%- if limit > 0 and forloop.index > limit -%}
+      {%- break -%}
     {%- endif -%}
-    {%- if p.data.subtitle -%}
-      <p>{{p.data.subtitle }}</p>
-    {%- elsif p.data.abstract -%}
-      <p>{{p.data.abstract}}</p>
-    {%- else -%}
-      {% assign abstract = p.templateContent | strip_html | strip | truncatewords : 25
-       , "&nbsp;…" %}
-      {%- if abstract != "" -%}
-        <p>{{ abstract }}</p>
+
+    {%- if p.url == page.url -%}
+      {%- continue -%}
+    {%- endif -%}
+
+    {%- assign href = p.url -%}
+
+    {%- assign count = count | plus: 1 -%}
+
+    <article>
+      {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
+        <h2 class="mt-ryt mb-0">
+          <a class="no-underline" href="{{p.url}}">
+            {{ p.data.title }}
+          </a>
+        </h2>
+      {%- else -%}
+        <p>{{ p.templateContent | strip_html | strip | truncatewords : 25
+ , "&nbsp;…" }}
+          <a href="{{p.url}}">Read more</a>
+        </p>
       {%- endif -%}
-    {%- endif -%}
 
-    {%- if p.data.title == "" or p.data.title == nil or p.data.title == "notitle" or p.data.notitle != nil -%}
-      <a href="{{p.url}}">Read more</a>
-    {%- endif -%}
+      <aside class="{{p.data.starred}}">
+        {%- include "date-tags.html" posted: p.date tags: p.data.tags notags: p.data.notags -%}
+      </aside>
+    </article>
 
-    <aside class="mt-ryt-sm {{p.data.starred}}">
-      {%- include "date-tags.html" posted: p.date tags: p.data.tags notags: p.data.notags -%}
-    </aside>
-  </article>
-
-{%- endfor -%}
+  {%- endfor -%}
+</div>
 
 {%- include "pagination-nav.html" -%}
-
-{%- if livePosts.length > limit and limit > 0 -%}
-  <section>
-    {%-assign currentTags = collections.usedSiteTags -%}
-    {%- if currentTags.length > 1 -%}
-      <h2 class="mb-ryt-sm">There are more posts. Choose a tag:</h2>
-      {%- include "site-tags.html" -%}
-    {%- else -%}
-      <a href="{{site.blog}}">There are more posts …</a>
-    {%- endif %}
-  </section>
-{%- endif -%}
-
-<section>
-  {%- include "search-field.html" -%}
-</section>
+{%- include "site-tags.html" -%}
+{%- include "search-field.html" -%}

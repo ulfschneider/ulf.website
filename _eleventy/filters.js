@@ -91,7 +91,6 @@ module.exports = {
         const index = lunr(function () {
             this.ref('id');
             this.field('title', { boost: 10 });
-            this.field('subtitle', { boost: 10 });
             this.field('abstract', { boost: 10 });
             this.field('author');
             this.field('refer');

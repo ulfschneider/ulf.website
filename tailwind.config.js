@@ -25,11 +25,11 @@ module.exports = {
     },
     fontSize: {
       'sm': ['.9rem', '1.6'],
-      'base': ['20px', '1.6'],
+      'base': ['19px', '1.6'],
       'lg': ['1.15rem', '1.5'],
-      'xl': ['1.3rem', '1.4'],
-      '2xl': ['1.4rem', '1.3'],
-      '3xl': ['3.2rem', '1.1'],
+      'xl': ['1.2rem', '1.4'],
+      '2xl': ['1.3rem', '1.4'],
+      '3xl': ['2.8rem', '1.1'],
       'smaller': 'smaller',
       'larger': 'larger'
     },
@@ -44,7 +44,7 @@ module.exports = {
       colors: {
         'primary': {
           light: colors.cyan[100],
-          DEFAULT: colors.cyan[500],
+          DEFAULT: colors.cyan[600],
           dark: colors.cyan[900]
         },
         'link': colors.cyan[600],

@@ -2,7 +2,7 @@
 title: Strael images
 tags: [sports, strael]
 layout: image
-subtitle: My Strael without its rider
+abstract: My Strael without its rider
 --- 
 <figure class="bleed">
 <img src="/img/strael/strael-drive-side.jpg">

@@ -1,6 +1,6 @@
 ---
 title: Transform
-subtitle: A Rebel´s Guide for Digital Transformation
+abstract: A Rebel´s Guide for Digital Transformation
 refer: Gerry McGovern, Book, 2016
 tags: journal
 ---
