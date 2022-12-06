@@ -212,6 +212,12 @@
     max-height: 80vh;
   }
 
+  /* summary */
+
+  summary {
+    @apply cursor-pointer;
+  }
+
   /* hr */
   hr {
     @apply legible-rem-width my-ryt-xl border-0 flex justify-center;
@@ -313,24 +319,10 @@
 
   /* forms */
   :root {
-    --form-font-family: var(--font-family);
-    --form-font-size: var(--fs);
-    --form-radius: 0px;
-    --form-component-pdx: var(--space-d2);
-    --form-component-pdy: var(--space-d2);
-    --label-line-height: var(--lh-2);
-    --button-line-height: var(--lh-2);
-    --custom-check-line-height: var(--label-line-height);
-    --custom-check-space: 0.1em;
-    --custom-check-size: 1em;
-    --custom-check-pos: calc(
-      (var(--custom-check-line-height) * 1em - var(--custom-check-size)) / 3 * 2
-    );
     --custom-check-border-width: 1px;
     --form-error-border-width: 2px;
     --form-input-border-width: 1px;
     --custom-radio-gap: 2px;
-    caret-color: var(--caret-color);
   }
 
   input[type="text"],
@@ -399,11 +391,6 @@
     @apply block align-baseline font-bold leading-tight;
   }
 
-  label.cc,
-  .cc label {
-    @apply my-0;
-  }
-
   form .desc {
     @apply text-meta leading-tight;
   }
@@ -445,6 +432,21 @@ and
 https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-button-with-css 
 */
 
+  /* .cc stands for "custom control" */
+
+  :root {
+    --cc-size: 1em;
+    --cc-check-width: 0.6em;
+    --cc-check-height: 0.3em;
+    --cc-radio-size: 0.7em;
+    --cc-border-width: 1px;
+  }
+
+  label.cc,
+  .cc label {
+    @apply my-0;
+  }
+
   .cc {
     @apply relative inline-block;
   }
@@ -455,6 +457,7 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
 
   .cc:focus-within input[type="checkbox"] + *::before,
   .cc:focus-within input[type="radio"] + *::before {
+    @apply leading-loose;
     outline: 4px solid theme(colors.outline);
     outline-offset: 2px;
   }
@@ -472,76 +475,73 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
 
   .cc input[type="checkbox"] + *,
   .cc input[type="radio"] + * {
-    @apply ml-ryt-lg inline-block;
+    @apply inline-block;
+    margin-left: 1.5em;
   }
 
   /* box */
 
   .cc input[type="checkbox"] + *::before,
   .cc input[type="radio"] + *::before {
+    @apply box-border absolute border-current;
     content: "";
-    box-sizing: border-box;
-    position: absolute;
+    border-width: var(--cc-border-width);
     left: 0;
-    top: var(--custom-check-pos);
-    height: var(--custom-check-size);
-    width: var(--custom-check-size);
-    border: var(--custom-check-border-width) solid currentColor;
-    border-radius: var(--form-radius);
-    background: var(--form-field-background);
+    top: calc((theme(lineHeight.tight) * 1em - 1em) + theme(spacing.ryt-sm));
+    height: var(--cc-size);
+    width: var(--cc-size);
   }
 
   /* circle */
 
   .cc input[type="radio"] + *::before {
-    border-radius: 50%;
+    @apply rounded-full;
   }
 
   /* check */
   .cc input[type="checkbox"] + *::after {
+    @apply box-border absolute bg-transparent border-t-transparent opacity-0;
     content: "";
-    box-sizing: border-box;
-    position: absolute;
-    left: calc(var(--custom-check-size) * 0.2);
-    top: calc(var(--custom-check-pos) + (var(--custom-check-size) * 0.25));
-    width: calc(var(--custom-check-size) * 0.6);
-    height: calc(var(--custom-check-size) * 0.3);
+    left: calc((var(--cc-size) - var(--cc-check-width)) / 2);
+    top: calc(
+      (theme(lineHeight.tight) * 1em - var(--cc-size)) + theme(spacing.ryt-sm) +
+        (var(--cc-size) - var(--cc-check-width)) / 2 + var(--cc-border-width)
+    );
+    width: var(--cc-check-width);
+    height: var(--cc-check-height);
     transform: rotate(-45deg);
-    border: solid var(--base-background);
+    border: solid white;
     border-width: 0 0 2px 2px;
-    border-top-color: transparent;
-    opacity: 0;
-    background: transparent;
   }
 
-  /* select */
+  /* select radio */
   .cc input[type="radio"] + *::after {
+    @apply box-border absolute rounded-full bg-current;
     content: "";
-    box-sizing: border-box;
-    position: absolute;
-    left: calc(var(--custom-radio-gap) * 2);
-    top: calc(var(--custom-check-pos) + var(--custom-radio-gap) * 2);
-    height: calc(var(--custom-check-size) - var(--custom-radio-gap) * 4);
-    width: calc(var(--custom-check-size) - var(--custom-radio-gap) * 4);
-    background: currentColor;
-    border-radius: 50%;
+    left: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
+    top: calc(
+      (theme(lineHeight.tight) * 1em - var(--cc-size)) + theme(spacing.ryt-sm) +
+        (var(--cc-size) - var(--cc-radio-size)) / 2
+    );
+    width: var(--cc-radio-size);
+    height: var(--cc-radio-size);
   }
 
   /* unchecked / unselected */
 
   .cc input[type="checkbox"]:not(:checked) + *::after,
   .cc input[type="radio"]:not(:checked) + *::after {
-    opacity: 0;
+    @apply opacity-0;
   }
 
   /* checked / selected*/
 
   .cc input[type="checkbox"]:checked + *::before {
-    background: currentColor;
+    @apply bg-current;
   }
 
   .cc input[type="checkbox"]:checked + *::after,
   .cc input[type="radio"]:checked + *::after {
-    opacity: 1;
+    @apply opacity-100;
   }
 }
