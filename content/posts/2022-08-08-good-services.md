@@ -1,7 +1,6 @@
 ---
 title: Good Services
 tags: [accessibility, star]
-refer: Book by Lou Downe
 draft: true
 ---
 [<cite>Good Services</cite>](https://good.services/home) is a book by Lou Down, who is the founder of The School of Good Services. Lou spent six years in the UK Government establishing the cross-government standards for good services. Did you know that about 80% of the cost of UK Government is spent on services? Of the 10,000 recorded services, some are over 200 years old. Again 60% of the cost of these services is spent on service failure – phone calls asking government how to do something, or pieces of casework where forms aren´t filled in correctly.

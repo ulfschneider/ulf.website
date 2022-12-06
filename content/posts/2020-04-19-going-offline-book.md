@@ -1,6 +1,5 @@
 ---
 title: Going Offline (book)
-refer: A Book Apart by Jeremy Keith
 tags: [code, star]
 ---
 <figure class="rg:split">

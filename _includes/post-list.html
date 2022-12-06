@@ -27,7 +27,7 @@
         </h2>
       {%- else -%}
         <p>{{ p.templateContent | strip_html | strip | truncatewords : 25
- , "&nbsp;…" }}
+ , "&nbsp;… " }}
           <a href="{{p.url}}">Read more</a>
         </p>
       {%- endif -%}

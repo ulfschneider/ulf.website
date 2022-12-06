@@ -1,6 +1,5 @@
 ---
 title: Three hedgehogs
-refer: Made by Emil
 ---
 <figure class="bleed">
 <img src="/img/emil-drawing/IMG_1099.jpg" alt="Three hedgehogs walking in a row under a yellow sun.">

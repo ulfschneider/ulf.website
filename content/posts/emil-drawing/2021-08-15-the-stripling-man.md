@@ -1,6 +1,5 @@
 ---
 title: The stripling man with a black forest cherry tart
-refer: Made by Emil
 tags: star
 ---
 <figure class="md:bleed-right md:split">

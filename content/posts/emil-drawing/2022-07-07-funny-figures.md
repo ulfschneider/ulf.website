@@ -1,6 +1,5 @@
 ---
 title: Funny Figures
-refer: Made by Emil
 ---
 <figure class="md:bleed">
 <img src="/img/emil-drawing/IMG_2574.jpg" alt="A white and wide paper format with colorful tiny figures.">

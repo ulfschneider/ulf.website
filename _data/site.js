@@ -29,7 +29,7 @@ module.exports = {
         phone: "+49 163 2505164",
         twitter: ""
     },
-    paginationSize: 10,
+    paginationSize: 7,
     starTag: "star",
     starTagSymbol: "★",
     mainnav: [{

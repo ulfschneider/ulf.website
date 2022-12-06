@@ -1,6 +1,5 @@
 ---
 title: Happy Holidays 2021
-refer: Made by Emil
 ---
 
 <figure>

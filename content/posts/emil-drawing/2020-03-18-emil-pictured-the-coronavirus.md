@@ -1,6 +1,5 @@
 ---
 title: The Coronavirus
-refer: Made by Emil
 tags: star
 ---
 <figure>

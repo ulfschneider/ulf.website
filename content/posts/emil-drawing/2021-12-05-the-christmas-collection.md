@@ -1,6 +1,5 @@
 ---
 title: The Christmas Collection
-refer: Made by Emil
 ---
 <figure class="rg:bleed-right rg:split">
 <img src="/img/emil-drawing/IMG_1495D.jpg" alt="">

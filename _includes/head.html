@@ -23,10 +23,14 @@
 <link rel="canonical" href="{{site.origin}}{{page.url}}">
 <link rel="alternate" href="{{site.origin}}{{site.rss}}" title="{{site.title}}" type="application/atom+xml">
 <title>
-  {%- if title and title != "notitle" -%}
-    {{ title }} – {{site.name}}
+  {%- if title != nil and title != "notitle" and title != ""-%}
+    {{ title }}
+  {%- elsif tag != nil and tag != "" -%}
+    Posts tagged {{tag}}
   {%- elsif pagedItems.tag != nil and pagedItems.tag != "" -%}
-    Posts tagged {{pagedItems.tag}} – {{site.name}}
+    Posts tagged {{pagedItems.tag}}
+  {%- elsif pagedItems.tag == "" -%}
+    All posts
   {%- else -%}
     {{ site.name }}
   {%- endif -%}

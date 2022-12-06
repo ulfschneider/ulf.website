@@ -12,7 +12,7 @@ module.exports = {
       '_layouts/**/*',
       '_eleventy/**/*',
       '_assets/js/**/*',
-      '_assets/css/customize.css']
+      '_assets/css/tailwind*.css']
   },
   theme: {
     screens: {
@@ -106,7 +106,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
     plugin(function ({ addUtilities, addBase, theme, e, config }) {
     })]
 }

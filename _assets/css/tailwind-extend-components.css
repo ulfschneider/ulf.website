@@ -10,18 +10,18 @@
 
   /* table of contents */
   /* markdown-it toc */
-  /* purgecss start ignore */
+
   .anchor {
     @apply font-normal text-base text-meta no-underline;
   }
 
   nav.table-of-contents {
-    @apply ml-ryt-lg max-w-[14rem] text-sm max-md:hidden float-right;
+    @apply text-sm my-ryt-lg;
   }
 
   nav.table-of-contents::before {
     content: "Contents";
-    @apply block font-bold;
+    @apply block font-bold text-base;
   }
 
   nav.table-of-contents a {
@@ -36,24 +36,22 @@
     @apply p-0 my-ryt-sm leading-tight;
   }
   nav.table-of-contents ol > li::before {
-    content: "";
-    @apply hidden;
+    @apply hidden content-none;
   }
 
   nav.table-of-contents ol > li > ol {
     @apply pl-ryt-lg;
   }
-  /* purgecss end ignore */
 
   /*scroll-table*/
-  /* purgecss start ignore */
+
   .scroll-table {
     @apply my-ryt-xl;
     table {
       @apply my-0;
     }
   }
-  /* purgecss end ignore */
+
   table {
     caption {
       .restore-hint {
@@ -74,7 +72,7 @@
 
   /* image container */
   #image-container {
-    @apply grid gap-ryt-xl my-ryt-xl grid-flow-dense;
+    @apply grid gap-ryt-xl mt-ryt-2xl mb-ryt-xl grid-flow-dense;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
@@ -173,7 +171,10 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
   }
 
   /* markdown-it footnotes */
-  /* purgecss start ignore */
+
+  hr.footnotes-sep {
+    @apply hidden;
+  }
 
   .footnote-ref a,
   .footnote-backref {
@@ -182,17 +183,16 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 
   .footnotes-list {
     counter-reset: footnote-counter;
-    @apply m-0;
   }
 
-  .footnotes-list :target {
-    outline: var(--outline);
-    outline-offset: var(--outline-offset);
+  .footnotes-list::before {
+    content: "Footnotes";
+    @apply h2 mt-ryt-xl mb-ryt block;
   }
 
   .footnotes-list li {
     counter-increment: footnote-counter;
-    position: relative;
+    @apply relative;
   }
 
   .footnotes-list li::before {
@@ -204,8 +204,6 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
   }
 
   .footnotes-list li > p {
-    display: inline;
+    @apply inline;
   }
-
-  /* purgecss end ignore */
 }

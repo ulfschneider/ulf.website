@@ -62,12 +62,12 @@
 
   /* font-size*/
   html {
-    @apply text-base;
+    @apply text-base bg-light;
   }
 
   /* base colors */
   body {
-    @apply text-stone-900;
+    @apply text-stone-900 bg-white;
   }
 
   /* focus */
@@ -214,12 +214,12 @@
 
   /* hr */
   hr {
-    @apply legible-rem-width border-0 m-0 block;
+    @apply legible-rem-width my-ryt-xl border-0 flex justify-center;
   }
 
   hr::before {
     content: "* * *";
-    @apply legible-rem-width my-ryt-lg text-center block;
+    @apply legible-rem-width block -mt-ryt;
   }
 
   /* table */
@@ -231,10 +231,10 @@
     }
 
     th {
-      @apply text-left font-bold py-ryt-sm pr-ryt-sm align-top leading-5;
+      @apply text-left font-bold py-ryt-sm pr-ryt-sm align-top leading-tight;
     }
     td {
-      @apply text-left font-normal py-ryt-sm pr-ryt-sm align-top leading-5;
+      @apply text-left font-normal py-ryt-sm pr-ryt-sm align-top leading-tight;
     }
     thead {
       th,
@@ -298,7 +298,7 @@
   }
 
   pre code {
-    @apply bg-stone-800 text-stone-100 px-ryt py-ryt-sm -mx-ryt block text-left leading-5 whitespace-pre;
+    @apply bg-stone-800 text-stone-100 px-ryt py-ryt-sm -mx-ryt block text-left leading-tight whitespace-pre;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
@@ -309,5 +309,239 @@
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+  }
+
+  /* forms */
+  :root {
+    --form-font-family: var(--font-family);
+    --form-font-size: var(--fs);
+    --form-radius: 0px;
+    --form-component-pdx: var(--space-d2);
+    --form-component-pdy: var(--space-d2);
+    --label-line-height: var(--lh-2);
+    --button-line-height: var(--lh-2);
+    --custom-check-line-height: var(--label-line-height);
+    --custom-check-space: 0.1em;
+    --custom-check-size: 1em;
+    --custom-check-pos: calc(
+      (var(--custom-check-line-height) * 1em - var(--custom-check-size)) / 3 * 2
+    );
+    --custom-check-border-width: 1px;
+    --form-error-border-width: 2px;
+    --form-input-border-width: 1px;
+    --custom-radio-gap: 2px;
+    caret-color: var(--caret-color);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[list],
+  input[type="submit"],
+  input[type="reset"],
+  button,
+  select,
+  textarea,
+  fieldset,
+  label,
+  legend {
+    @apply font-sans font-normal text-base appearance-none placeholder-meta caret-primary;
+  }
+
+  input[type="submit"],
+  input[type="reset"],
+  button,
+  select {
+    @apply border-0 align-baseline bg-primary text-white px-ryt-sm py-ryt-sm cursor-pointer;
+  }
+
+  input[type="submit"]:disabled,
+  input[type="reset"]:disabled,
+  button:disabled,
+  select:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+
+  @media (hover: hover) {
+    input[type="submit"]:hover:not(:disabled),
+    input[type="reset"]:hover:not(:disabled),
+    button:hover:not(:disabled),
+    .button:hover:not(:disabled),
+    select:hover:not(:disabled) {
+      @apply filter brightness-125;
+    }
+  }
+
+  input[type="submit"]:focus:not(:disabled),
+  input[type="reset"]:focus:not(:disabled),
+  button:focus:not(:disabled),
+  select:focus:not(:disabled) {
+    @apply filter brightness-125;
+  }
+
+  input[type="submit"]:active:not(:disabled),
+  input[type="reset"]:active:not(:disabled),
+  button:active:not(:disabled),
+  select:active:not(:disabled) {
+    @apply filter brightness-125;
+  }
+
+  label > * {
+    @apply my-ryt-sm;
+  }
+
+  label:not(label.cc),
+  legend {
+    @apply block align-baseline font-bold leading-tight;
+  }
+
+  label.cc,
+  .cc label {
+    @apply my-0;
+  }
+
+  form .desc {
+    @apply text-meta leading-tight;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[list] {
+    @apply border border-meta p-ryt-xs align-middle leading-none border-r-0;
+  }
+
+  textarea {
+    @apply leading-snug border border-meta py-xs px-xs border-r-0 resize-none font-normal;
+  }
+
+  fieldset {
+    @apply p-0 border-none;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[list]:focus,
+  textarea:focus {
+    @apply border-transparent;
+  }
+
+  /*
+https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/
+and
+https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-button-with-css 
+*/
+
+  .cc {
+    @apply relative inline-block;
+  }
+
+  .cc * {
+    @apply cursor-pointer;
+  }
+
+  .cc:focus-within input[type="checkbox"] + *::before,
+  .cc:focus-within input[type="radio"] + *::before {
+    outline: 4px solid theme(colors.outline);
+    outline-offset: 2px;
+  }
+
+  .cc input[type="checkbox"],
+  .cc input[type="radio"] {
+    /* remove the control from flow */
+    position: absolute;
+    /* hide it visually */
+    opacity: 0.00001;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+  .cc input[type="checkbox"] + *,
+  .cc input[type="radio"] + * {
+    @apply ml-ryt-lg inline-block;
+  }
+
+  /* box */
+
+  .cc input[type="checkbox"] + *::before,
+  .cc input[type="radio"] + *::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: var(--custom-check-pos);
+    height: var(--custom-check-size);
+    width: var(--custom-check-size);
+    border: var(--custom-check-border-width) solid currentColor;
+    border-radius: var(--form-radius);
+    background: var(--form-field-background);
+  }
+
+  /* circle */
+
+  .cc input[type="radio"] + *::before {
+    border-radius: 50%;
+  }
+
+  /* check */
+  .cc input[type="checkbox"] + *::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: calc(var(--custom-check-size) * 0.2);
+    top: calc(var(--custom-check-pos) + (var(--custom-check-size) * 0.25));
+    width: calc(var(--custom-check-size) * 0.6);
+    height: calc(var(--custom-check-size) * 0.3);
+    transform: rotate(-45deg);
+    border: solid var(--base-background);
+    border-width: 0 0 2px 2px;
+    border-top-color: transparent;
+    opacity: 0;
+    background: transparent;
+  }
+
+  /* select */
+  .cc input[type="radio"] + *::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: calc(var(--custom-radio-gap) * 2);
+    top: calc(var(--custom-check-pos) + var(--custom-radio-gap) * 2);
+    height: calc(var(--custom-check-size) - var(--custom-radio-gap) * 4);
+    width: calc(var(--custom-check-size) - var(--custom-radio-gap) * 4);
+    background: currentColor;
+    border-radius: 50%;
+  }
+
+  /* unchecked / unselected */
+
+  .cc input[type="checkbox"]:not(:checked) + *::after,
+  .cc input[type="radio"]:not(:checked) + *::after {
+    opacity: 0;
+  }
+
+  /* checked / selected*/
+
+  .cc input[type="checkbox"]:checked + *::before {
+    background: currentColor;
+  }
+
+  .cc input[type="checkbox"]:checked + *::after,
+  .cc input[type="radio"]:checked + *::after {
+    opacity: 1;
   }
 }

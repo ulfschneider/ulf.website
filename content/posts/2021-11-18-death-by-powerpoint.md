@@ -1,6 +1,5 @@
 ---
 title: How to Avoid Death by PowerPoint
-refer: <a href="https://youtu.be/Iwpi1Lm6dFo">TEDx Presentation</a> by David Phillips
 tags: journal
 ---
 <figure>

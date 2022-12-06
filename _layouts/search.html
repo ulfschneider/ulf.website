@@ -46,40 +46,28 @@ permalink: "{{site.search.url}}"
       parent.appendChild(article);
       if (friend.title && friend.title != "notitle") {
         let title = document.createElement("h2");
-        title.classList = "mb-ryt-sm";
+        title.classList = "my-ryt-lg mb-ryt-sm";
         article.appendChild(title);
 
         let linkToArticle = document.createElement("a");
         linkToArticle.href = entry.ref;
         linkToArticle.innerHTML = friend.title;
         title.appendChild(linkToArticle);
-      }
-
-      if (friend.abstract || friend.excerpt || friend.content) {
+      } else {
+        let abstract = friend.abstract || friend.excerpt || friend.content;
+        abstract = abstract.split(' ').slice(
+          0,
+          parseInt("{{site.excerptWordCount}}")
+            ? parseInt("{{site.excerptWordCount}}")
+            : 25
+        ).join(" ") + " … ";
         let excerpt = document.createElement("p");
-        article.appendChild(excerpt);
-        let text = friend.abstract || friend.excerpt;
-        if (text) {
-          excerpt.innerHTML = text;
-        } else {
-          excerpt.innerHTML = friend
-            .content
-            .split(" ")
-            .slice(
-              0,
-              parseInt("{{site.excerptWordCount}}")
-                ? parseInt("{{site.excerptWordCount}}")
-                : 25
-            )
-            .join(" ") + " …";
-        }
-      }
-
-      if (! friend.title || friend.title == "notitle") {
+        excerpt.innerHTML = abstract;
         let linkToArticle = document.createElement("a");
         linkToArticle.href = entry.ref;
         linkToArticle.innerHTML = "Read more";
-        section.appendChild(linkToArticle);
+        excerpt.appendChild(linkToArticle);
+        article.appendChild(excerpt);
       }
 
       if (friend.date || (friend.tags.length && ! friend.notags)) {
@@ -240,7 +228,7 @@ permalink: "{{site.search.url}}"
       });
   });
 </script>
-<section class="max-sm:my-ryt-xl my-ryt-2xl">
+<section class="my-ryt-2xl">
   {% include "search-field.html", focus: true, onsubmit:
    "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value);
    history.replaceState(null, '', location.pathname + '?query=' +

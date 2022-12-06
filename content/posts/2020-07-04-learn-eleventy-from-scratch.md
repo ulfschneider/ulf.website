@@ -1,6 +1,5 @@
 ---
 title: Learn eleventy from scratch
-refer: A piccalil.li course made by Andy Bell, 2020
 tags: [code, courses]
 ---
 [Learn Eleventy From Scratch](

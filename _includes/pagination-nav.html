@@ -19,4 +19,10 @@
       </strong>
     {%- endif -%}
   </nav>
+{%- elsif pagedItems == nil -%}
+  <strong>
+    <a id="nav-next" class="h2 text-primary" href="{{site.blog}}">
+      All posts
+    </a>
+  </strong>
 {%- endif -%}

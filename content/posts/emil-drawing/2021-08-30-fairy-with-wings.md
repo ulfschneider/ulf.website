@@ -1,6 +1,5 @@
 ---
 title: Fairy with wings
-refer: Made by Emil
 tags: star
 ---
 <figure class="bleed">

@@ -27,9 +27,9 @@
       <h1 class="my-0 {{reducedTitleStyle}}">All posts</h1>
     {%- endif -%}
     {%- if refer -%}
-      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}} my-ryt{% else %}my-ryt-lg legible-rem-width{% endif %}">{{refer}}</div>
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg legible-rem-width{% endif %}">{{refer}}</div>
     {%- elsif author -%}
-      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}} my-ryt{% else %}my-ryt-lg legible-rem-width{% endif %}">{{author}}</div>
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg legible-rem-width{% endif %}">{{author}}</div>
     {%- endif -%}
   </header>
 {%- endif -%}

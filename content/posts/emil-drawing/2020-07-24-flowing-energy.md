@@ -1,6 +1,5 @@
 ---
 title: Flowing energy
-refer: Made by Emil
 tags: star
 ---
 <figure class="bleed">
