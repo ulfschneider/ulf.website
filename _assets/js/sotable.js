@@ -202,7 +202,7 @@ function indicateRestoreTableOrder(table) {
             //in case the hint contained a button, 
             //assign a css class and a restore order action to that button
             indicator.querySelectorAll('.restore-hint button').forEach(button => {
-                button.classList.add('restore-order');
+                button.classList.add('restore-order', 'sotable', 'restore');
                 button.addEventListener('click', () => {
                     restoreOrigTableOrder(table);
                 });
@@ -243,9 +243,9 @@ function insertColumnSortToggle(th) {
         return null;
     } else {
         //use a button toggle for accessibility
-        th.innerHTML = `<button>${th.innerHTML}</button>`;
+        th.innerHTML = `<button class="sotable column">${th.innerHTML}</button>`;
         //watch out for the css
-        //th.sotable-column>button is referring to
+        //th.sotable.column>button is referring to
         //this element
         return th.firstChild;
     }

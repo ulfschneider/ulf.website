@@ -52,13 +52,15 @@
     }
   }
 
-  table {
-    caption {
-      .restore-hint {
-        .restore-order {
-          @apply font-bold;
-        }
-      }
+  /* sotable */
+
+  table.sotable {
+    button.sotable.restore,
+    button.sotable.column {
+      @apply font-bold p-0 m-0 text-inherit bg-transparent;
+    }
+    button.sotable.column .indicator {
+      @apply ml-ryt-sm text-sm;
     }
   }
 
