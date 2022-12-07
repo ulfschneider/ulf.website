@@ -1,6 +1,7 @@
 const CACHE_VERSION = 'v41'; //version is used to remove old caches
 
-const PREFIX = '{{trimBase}}' ? '{{trimBase}}-' : '';
+const TRIM_BASE_PLACEHOLDER = '{{trimBase}}';
+const PREFIX = TRIM_BASE_PLACEHOLDER && TRIM_BASE_PLACEHOLDER != '{{' + 'trimBase' + '}}' ? `${TRIM_BASE_PLACEHOLDER}-` : '';
 const IGNORE_CACHE_PATTERN = undefined; //must be a regular expression if defined
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
@@ -54,7 +55,8 @@ const CACHE_SETTINGS = {
     }
 }
 
-const OFFLINE_URL = '{{offline}}';
+const OFFLINE_PLACEHOLDER = '{{offline}}';
+const OFFLINE_URL = OFFLINE_PLACEHOLDER && OFFLINE_PLACEHOLDER != '{{' + 'offline' + '}}' ? `${OFFLINE_PLACEHOLDER}` : '/offline/';
 
 const NO_CACHE_URLS = [
     '/feed.xml/',
