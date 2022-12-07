@@ -7,38 +7,38 @@
   color: var(--neutral);
 }
 
-nav.table-of-contents a {
+div.table-of-contents a {
   text-decoration: none;
 }
 
-nav.table-of-contents::before {
+div.table-of-contents::before {
   content: "Contents";
   display: block;
   font-weight: bold;
 }
 
-nav.table-of-contents {
+div.table-of-contents {
   margin: var(--space-3) 0;
 }
 
-nav.table-of-contents a {
+div.table-of-contents a {
   text-decoration: none;
 }
 
-nav.table-of-contents > * {
+div.table-of-contents > * {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
 }
 
-nav.table-of-contents > * {
+div.table-of-contents > * {
 }
 
-nav.table-of-contents ol li::before {
+div.table-of-contents ol li::before {
   content: "";
 }
 
-nav.table-of-contents ol li::before {
+div.table-of-contents ol li::before {
   min-width: 0 !important;
   margin: 0 !important;
   padding: 0 !important;

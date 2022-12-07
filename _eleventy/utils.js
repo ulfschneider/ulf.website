@@ -1,7 +1,7 @@
 const markdownIt = require('markdown-it');
 const slugify = require('slugify');
 const markdownItAnchor = require('markdown-it-anchor');
-const markdonItTOC = require('markdown-it-toc-done-right');
+const markdonItTOC = require('markdown-it-table-of-contents');
 const markdownItDefList = require('markdown-it-deflist');
 const markdownItContainer = require('markdown-it-container');
 const markdownItFitMedia = require('markdown-it-fitmedia');
@@ -319,7 +319,11 @@ module.exports = {
                 permalinkSpace: true,
                 slugify: mySlugify
             })
-            .use(markdonItTOC, { slugify: mySlugify })
+            .use(markdonItTOC, {
+                slugify: mySlugify,
+                listType: 'ol',
+                includeLevel: [2]
+            })
             .use(markdownItMark)
             .use(markdownItDefList)
             .use(markdownItScrollTable)

@@ -41,7 +41,7 @@ const CACHE_SETTINGS = {
         maxAgeMinutes: 60 * 24 //expire runtime entries after one day
     },
     [CSS_CACHE_NAME]: {
-        maxAgeMinutes: 60 * 24 //expire css after one day
+        maxAgeMinutes: 10 //FIXME 60 * 24 //expire css after one day
     },
     [JSON_CACHE_NAME]: {
         maxAgeMinutes: 60 * 24 //expire json after one day

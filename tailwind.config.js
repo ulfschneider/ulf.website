@@ -49,7 +49,11 @@ module.exports = {
         },
         'link': colors.cyan[600],
         'meta': colors.stone[500],
-        'light': colors.stone[200],
+        'light': {
+          light: colors.stone[50],
+          DEFAULT: colors.stone[200],
+          dark: colors.stone[400],
+        },
         'outline': colors.yellow[500]
       },
       spacing: {
