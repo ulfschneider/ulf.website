@@ -1,6 +1,7 @@
 const CACHE_VERSION = 'v41'; //version is used to remove old caches
 
-const PREFIX = '{{trimBase}}' ? '{{trimBase}}-' : '';
+const TRIM_BASE_PLACEHOLDER = '{{trimBase}}';
+const PREFIX = TRIM_BASE_PLACEHOLDER && TRIM_BASE_PLACEHOLDER != '{{' + 'trimBase' + '}}' ? `${TRIM_BASE_PLACEHOLDER}-` : '';
 const IGNORE_CACHE_PATTERN = undefined; //must be a regular expression if defined
 const SCRIPT = 'script';
 const RUNTIME = 'runtime';
@@ -21,7 +22,7 @@ const RUNTIME_CACHE_NAME = `${PREFIX}${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
 const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME, JSON_CACHE_NAME, SEARCH_CACHE_NAME];
 
 const SERVE_HTML_CACHE_FIRST = false;
-const CACHE_FIRST_FOR_EXPIRED = true;
+const CACHE_FIRST_FOR_EXPIRED = false;
 const NO_REVALIDATE_WITHIN_MINUTES = 10;
 
 //maxAgeMinutes < 0: do not use the cache
@@ -54,7 +55,8 @@ const CACHE_SETTINGS = {
     }
 }
 
-const OFFLINE_URL = '{{offline}}';
+const OFFLINE_PLACEHOLDER = '{{offline}}';
+const OFFLINE_URL = OFFLINE_PLACEHOLDER && OFFLINE_PLACEHOLDER != '{{' + 'offline' + '}}' ? `${OFFLINE_PLACEHOLDER}` : '/offline/';
 
 const NO_CACHE_URLS = [
     '/feed.xml/',
@@ -181,7 +183,7 @@ async function networkFirst(event) {
     const request = event.request;
 
     return fetchAndCache(request)
-        .catch(error => errorlog('Failure in network first operation: ' + error));
+        .catch(error => log('Failure in network first operation: ' + error));
 }
 
 
@@ -198,22 +200,22 @@ async function cacheFirst(event, options) {
             //clone response and call without await
             options.responseFromCache = responseFromCache.clone();
             fetchAndCache(request, options)
-                .catch(error => errorlog('Failure in cache first operation: ' + error));
+                .catch(error => log('Could not refresh expired cache: ' + error));
         }
 
         return responseFromCache;
     } else {
         return fetchAndCache(request, options)
             .catch(error => {
-                errorlog('Failure in cache first operation: ' + error);
                 if (responseFromCache) {
+                    log('Returning expired cache because network operation was not successful');
                     //use an outdated cache response, 
                     //because that is better than nothing
                     return responseFromCache;
                 } else {
                     return caches.match(OFFLINE_URL);
                 }
-            });;
+            });
     }
 }
 
@@ -266,7 +268,7 @@ async function fetchAndCache(request, options) {
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/\/.*\.(json|[web]manifest)$/i.test(url.pathname)) {
+            } else if (/\/.*\.(json|(web)?manifest)$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: JSON_CACHE_NAME,
                     request: request,
@@ -280,14 +282,14 @@ async function fetchAndCache(request, options) {
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/\.css[2]?$/i.test(url.pathname)) {
+            } else if (/\.css(2)?$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: CSS_CACHE_NAME,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options
                 });
-            } else if (/\.(woff[2]?|ttf|otf|sfnt)$/i.test(url.pathname)) {
+            } else if (/\.(woff(2)?|ttf|otf|sfnt)$/i.test(url.pathname)) {
                 await stashInCache({
                     cacheName: FONT_CACHE_NAME,
                     request: request,
