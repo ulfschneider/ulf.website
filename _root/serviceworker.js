@@ -21,7 +21,7 @@ const RUNTIME_CACHE_NAME = `${PREFIX}${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
 const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME, JSON_CACHE_NAME, SEARCH_CACHE_NAME];
 
 const SERVE_HTML_CACHE_FIRST = false;
-const CACHE_FIRST_FOR_EXPIRED = true;
+const CACHE_FIRST_FOR_EXPIRED = false;
 const NO_REVALIDATE_WITHIN_MINUTES = 10;
 
 //maxAgeMinutes < 0: do not use the cache
@@ -213,7 +213,7 @@ async function cacheFirst(event, options) {
                 } else {
                     return caches.match(OFFLINE_URL);
                 }
-            });;
+            });
     }
 }
 
