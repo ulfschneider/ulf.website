@@ -383,7 +383,7 @@
   }
 
   label > * {
-    @apply my-ryt-sm;
+    @apply my-ryt-xs;
   }
 
   label:not(label.cc),
@@ -442,13 +442,13 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     --cc-border-width: 1px;
   }
 
-  label.cc,
-  .cc label {
+  label.cc > *,
+  .cc label > * {
     @apply my-0;
   }
 
   .cc {
-    @apply relative inline-block;
+    @apply relative;
   }
 
   .cc * {
@@ -457,7 +457,6 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
 
   .cc:focus-within input[type="checkbox"] + *::before,
   .cc:focus-within input[type="radio"] + *::before {
-    @apply leading-loose;
     outline: 4px solid theme(colors.outline);
     outline-offset: 2px;
   }
@@ -476,7 +475,7 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
   .cc input[type="checkbox"] + *,
   .cc input[type="radio"] + * {
     @apply inline-block;
-    margin-left: 1.5em;
+    margin-left: calc(var(--cc-size) + 0.5em);
   }
 
   /* box */
@@ -487,7 +486,7 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     content: "";
     border-width: var(--cc-border-width);
     left: 0;
-    top: calc((theme(lineHeight.tight) * 1em - 1em) + theme(spacing.ryt-sm));
+    top: calc((theme(lineHeight.tight) * 1em - 1em));
     height: var(--cc-size);
     width: var(--cc-size);
   }
@@ -504,7 +503,7 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     content: "";
     left: calc((var(--cc-size) - var(--cc-check-width)) / 2);
     top: calc(
-      (theme(lineHeight.tight) * 1em - var(--cc-size)) + theme(spacing.ryt-sm) +
+      (theme(lineHeight.tight) * 1em - var(--cc-size)) +
         (var(--cc-size) - var(--cc-check-width)) / 2 + var(--cc-border-width)
     );
     width: var(--cc-check-width);
@@ -520,7 +519,7 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
     content: "";
     left: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
     top: calc(
-      (theme(lineHeight.tight) * 1em - var(--cc-size)) + theme(spacing.ryt-sm) +
+      (theme(lineHeight.tight) * 1em - var(--cc-size)) +
         (var(--cc-size) - var(--cc-radio-size)) / 2
     );
     width: var(--cc-radio-size);
