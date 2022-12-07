@@ -181,7 +181,7 @@ async function networkFirst(event) {
     const request = event.request;
 
     return fetchAndCache(request)
-        .catch(error => errorlog('Failure in network first operation: ' + error));
+        .catch(error => log('Failure in network first operation: ' + error));
 }
 
 
@@ -198,15 +198,15 @@ async function cacheFirst(event, options) {
             //clone response and call without await
             options.responseFromCache = responseFromCache.clone();
             fetchAndCache(request, options)
-                .catch(error => errorlog('Failure in cache first operation: ' + error));
+                .catch(error => log('Could not refresh expired cache: ' + error));
         }
 
         return responseFromCache;
     } else {
         return fetchAndCache(request, options)
             .catch(error => {
-                errorlog('Failure in cache first operation: ' + error);
                 if (responseFromCache) {
+                    log('Returning expired cache because network operation was not successful');
                     //use an outdated cache response, 
                     //because that is better than nothing
                     return responseFromCache;
