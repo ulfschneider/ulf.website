@@ -1,25 +1,18 @@
-const CACHE_VERSION = 'v41'; //version is used to remove old caches
+
 
 const TRIM_BASE_PLACEHOLDER = '{{trimBase}}';
-const PREFIX = TRIM_BASE_PLACEHOLDER && TRIM_BASE_PLACEHOLDER != '{{' + 'trimBase' + '}}' ? `${TRIM_BASE_PLACEHOLDER}-` : '';
-const IGNORE_CACHE_PATTERN = undefined; //must be a regular expression if defined
-const SCRIPT = 'script';
-const RUNTIME = 'runtime';
-const CSSCACHE = 'css';
-const IMAGE = 'image';
-const FONT = 'font';
-const JSONCACHE = 'json';
-const SEARCH = 'search';
-const CACHE_NAME = 'cache';
+const CACHE_NAME = TRIM_BASE_PLACEHOLDER && TRIM_BASE_PLACEHOLDER != '{{' + 'trimBase' + '}}' ? `${TRIM_BASE_PLACEHOLDER}-cache` : 'cache';
+const IGNORE_CACHE_PATTERN = undefined; //these caches will get ignored. must be a regular expression if defined
 
-const SCRIPT_CACHE_NAME = `${PREFIX}${SCRIPT}-${CACHE_NAME}-${CACHE_VERSION}`;
-const FONT_CACHE_NAME = `${PREFIX}${FONT}-${CACHE_NAME}-${CACHE_VERSION}`;
-const IMAGE_CACHE_NAME = `${PREFIX}${IMAGE}-${CACHE_NAME}-${CACHE_VERSION}`;
-const CSS_CACHE_NAME = `${PREFIX}${CSSCACHE}-${CACHE_NAME}-${CACHE_VERSION}-3`;
-const JSON_CACHE_NAME = `${PREFIX}${JSONCACHE}-${CACHE_NAME}-${CACHE_VERSION}`;
-const SEARCH_CACHE_NAME = `${PREFIX}${SEARCH}-${CACHE_NAME}-${CACHE_VERSION}`;
-const RUNTIME_CACHE_NAME = `${PREFIX}${RUNTIME}-${CACHE_NAME}-${CACHE_VERSION}`;
-const CACHE_NAMES = [FONT_CACHE_NAME, SCRIPT_CACHE_NAME, IMAGE_CACHE_NAME, RUNTIME_CACHE_NAME, JSON_CACHE_NAME, SEARCH_CACHE_NAME];
+const SCRIPT_CACHE_NAME = `${CACHE_NAME}-script-{{scriptVersion}}`;
+const RUNTIME_CACHE_NAME = `${CACHE_NAME}-runtime-{{runtimeVersion}}`;
+const CSS_CACHE_NAME = `${CACHE_NAME}-css-{{cssVersion}}`;
+const IMAGE_CACHE_NAME = `${CACHE_NAME}-image-{{imageVersion}}`;
+const FONT_CACHE_NAME = `${CACHE_NAME}-font-{{fontVersion}}`;
+const JSON_CACHE_NAME = `${CACHE_NAME}-json-{{jsonVersion}}`;
+const SEARCH_CACHE_NAME = `${CACHE_NAME}-search-{{searchVersion}}`;
+
+const CACHE_NAMES = [SCRIPT_CACHE_NAME, RUNTIME_CACHE_NAME, CSS_CACHE_NAME, IMAGE_CACHE_NAME, FONT_CACHE_NAME, JSON_CACHE_NAME, SEARCH_CACHE_NAME];
 
 const SERVE_HTML_CACHE_FIRST = false;
 const CACHE_FIRST_FOR_EXPIRED = false;
@@ -41,7 +34,7 @@ const CACHE_SETTINGS = {
         maxAgeMinutes: 60 * 24 //expire runtime entries after one day
     },
     [CSS_CACHE_NAME]: {
-        maxAgeMinutes: 10 //FIXME 60 * 24 //expire css after one day
+        maxAgeMinutes: 60 * 24 //expire css after one day
     },
     [JSON_CACHE_NAME]: {
         maxAgeMinutes: 60 * 24 //expire json after one day
@@ -68,9 +61,9 @@ const NO_CACHE_URLS = [
 const PRE_CACHE_URLS = [
     OFFLINE_URL,
     '/',
-    '/css/main.css',
-    '/js/site-scripts.js',
-    '/js/lunr.js'
+    '/css/main-{{cssVersion}}.css',
+    '/js/site-scripts-{{scriptVersion}}.js',
+    '/js/lunr-{{scriptVersion}}.js'
 ];
 
 
@@ -166,14 +159,14 @@ async function clearOldCaches() {
         .then(cacheNames => cacheNames.filter(name => {
             if (IGNORE_CACHE_PATTERN && IGNORE_CACHE_PATTERN.test(name) == false) {
                 //if the given cache name contains the ignore pattern, well, ignore it
+                log(`Ignore cache ${name}`);
                 return false;
             }
-            if (name.indexOf(PREFIX) != 0) {
-                //if the given cache name does not start with PREFIX, ignore it
-                return false;
+            //if the cache name is not part of the cache names of this service worker, delete the cache
+            if (CACHE_NAMES.indexOf(name) == -1) {
+                log(`Clearing cache ${name}`);
+                return true;
             }
-            //if the cache name is not part of the cache names of this service workers, delete the cache
-            return CACHE_NAMES.indexOf(name) == -1;
         }))
         .then(cacheNames => Promise.all(cacheNames.map(name => caches.delete(name))));
 }
@@ -188,13 +181,17 @@ async function networkFirst(event) {
 
 
 async function cacheFirst(event, options) {
-
-    options = options ? options : {};
     const request = event.request;
-    const responseFromCache = await caches.match(request, options);
+    const cacheName = getCacheNameForRequest(request);
+    options = options ? options : {};
+    options.cacheName = cacheName;
+    let responseFromCache;
+    if (cacheName) {
+        responseFromCache = await caches.match(request, options);
+    }
 
     if (responseFromCache && (CACHE_FIRST_FOR_EXPIRED || !isExpired(responseFromCache))) {
-        log(`Responding from cache ${request.url}`);
+        log(`Responding from ${cacheName} ${request.url}`);
 
         if ((isExpired(responseFromCache) || options.revalidate) && isAllowRevalidate(responseFromCache, request.url)) {
             //clone response and call without await
@@ -219,6 +216,24 @@ async function cacheFirst(event, options) {
     }
 }
 
+function getCacheNameForRequest(request) {
+    let url = new URL(request.url);
+    if (isHtmlRequest(request)) {
+        return RUNTIME_CACHE_NAME;
+    } else if (/\/.*index.*\.json$/i.test(url.pathname)) {
+        return SEARCH_CACHE_NAME;
+    } else if (/\/.*\.(json|(web)?manifest)$/i.test(url.pathname)) {
+        return JSON_CACHE_NAME;
+    } else if (/\.js$/i.test(url.pathname)) {
+        return SCRIPT_CACHE_NAME;
+    } else if (/\.css(2)?$/i.test(url.pathname)) {
+        return CSS_CACHE_NAME;
+    } else if (/\.(woff(2)?|ttf|otf|sfnt)$/i.test(url.pathname)) {
+        return FONT_CACHE_NAME;
+    } else if (/\.(jpg|jpeg|webp|ico|png|gif|svg)$/i.test(url.pathname)) {
+        return IMAGE_CACHE_NAME;
+    }
+}
 
 async function fetchAndCache(request, options) {
     options = options ? options : {};
@@ -253,58 +268,15 @@ async function fetchAndCache(request, options) {
     }
     return fetch(request)
         .then(async responseFromNetwork => {
-
-            if (isHtmlRequest(request)) {
+            let cacheName = getCacheNameForRequest(request);
+            if (cacheName) {
                 await stashInCache({
-                    cacheName: RUNTIME_CACHE_NAME,
-                    request: request,
-                    response: responseFromNetwork.clone(),
-                    options
-                });
-            } else if (/\/.*index.*\.json$/i.test(url.pathname)) {
-                await stashInCache({
-                    cacheName: SEARCH_CACHE_NAME,
-                    request: request,
-                    response: responseFromNetwork.clone(),
-                    options
-                });
-            } else if (/\/.*\.(json|(web)?manifest)$/i.test(url.pathname)) {
-                await stashInCache({
-                    cacheName: JSON_CACHE_NAME,
-                    request: request,
-                    response: responseFromNetwork.clone(),
-                    options,
-                });
-            } else if (/\.js$/i.test(url.pathname)) {
-                await stashInCache({
-                    cacheName: SCRIPT_CACHE_NAME,
-                    request: request,
-                    response: responseFromNetwork.clone(),
-                    options
-                });
-            } else if (/\.css(2)?$/i.test(url.pathname)) {
-                await stashInCache({
-                    cacheName: CSS_CACHE_NAME,
-                    request: request,
-                    response: responseFromNetwork.clone(),
-                    options
-                });
-            } else if (/\.(woff(2)?|ttf|otf|sfnt)$/i.test(url.pathname)) {
-                await stashInCache({
-                    cacheName: FONT_CACHE_NAME,
-                    request: request,
-                    response: responseFromNetwork.clone(),
-                    options
-                });
-            } else if (/\.(jpg|jpeg|webp|ico|png|gif|svg)$/i.test(url.pathname)) {
-                await stashInCache({
-                    cacheName: IMAGE_CACHE_NAME,
+                    cacheName: cacheName,
                     request: request,
                     response: responseFromNetwork.clone(),
                     options
                 });
             }
-
             return responseFromNetwork;
         });
 }
@@ -327,9 +299,9 @@ function makeURL(url) {
 }
 
 //extract the expiration timestamp
-//from our self-invented `${CACHE_NAME}-expires` header
+//from our self-invented `cache-expires` header
 function getExpireTimestamp(response) {
-    const expires = response.headers.get(`${CACHE_NAME}-expires`);
+    const expires = response.headers.get('cache-expires');
     return expires ? Date.parse(expires) : 0;
 }
 
@@ -356,7 +328,7 @@ async function maintainExpiration({ response, maxAgeMinutes }) {
 
             let expires = new Date();
             expires.setMinutes(expires.getMinutes() + maxAgeMinutes);
-            headers.append(`${CACHE_NAME}-expires`, expires.toUTCString());
+            headers.append('cache-expires', expires.toUTCString());
 
             let blob = await response.blob();
             return new Response(blob, {

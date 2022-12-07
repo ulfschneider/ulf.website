@@ -10,6 +10,7 @@ const postcssCustomProperties = require('postcss-custom-properties');
 const postcssCalc = require('postcss-calc');
 const postcssPurgeCSS = require('@fullhuman/postcss-purgecss');
 const cssNano = require('cssnano');
+const rename = require('gulp-rename');
 
 const replace = require('./replace.js');
 const site = require('../_data/site.js');
@@ -33,6 +34,9 @@ const processingCSS = () => {
             cssNano()
         ]))
         .pipe(replace())
+        .pipe(rename(function (path) {
+            path.basename += `-${site.versioning.css}`
+        }))
         .pipe(dest(DEST));
 };
 

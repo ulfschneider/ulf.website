@@ -20,8 +20,8 @@
     {%- if hasTitle == true -%}
       <h1 class="my-0 {{reducedTitleStyle}}">{{title}}</h1>
     {%- elsif hasTagIntro == true -%}
-      <h1 class="my-0 {{reducedTitleStyle}}">Posts tagged
-        <span class="italic font-mono">{{tagIntro}}</span>
+      <h1 class="my-0 font-normal {{reducedTitleStyle}}">Posts tagged
+        <span class="italic font-mono font-bold">{{tagIntro}}</span>
       </h1>
     {%- elsif isBlog == true  -%}
       <h1 class="my-0 {{reducedTitleStyle}}">All posts</h1>

@@ -1,6 +1,7 @@
 const ORIGIN = "https://ulfschneider.io";
 const BASE = "/";
 const URL = ORIGIN + BASE;
+const CACHE_VERSION = 'v1';
 
 module.exports = {
     name: "ulfschneider.io",
@@ -123,5 +124,14 @@ module.exports = {
     images: BASE + "images/",
     rss: BASE + "feed.xml",
     output: process.env.OUTPUT ? process.env.OUTPUT : "_site",
-    input: process.env.INPUT ? process.env.INPUT : "content"
+    input: process.env.INPUT ? process.env.INPUT : "content",
+    versioning: {
+        runtime: `${CACHE_VERSION}-0`,
+        script: `${CACHE_VERSION}-0`,
+        css: `${CACHE_VERSION}-0`,
+        json: `${CACHE_VERSION}-0`,
+        search: `${CACHE_VERSION}-0`,
+        image: `${CACHE_VERSION}-0`,
+        font: `${CACHE_VERSION}-0`
+    }
 }

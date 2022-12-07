@@ -1,6 +1,7 @@
 const { dest, src } = require('gulp');
 const replace = require('./replace.js');
 const minify = require('gulp-minify');
+const rename = require('gulp-rename');
 const site = require('../_data/site.js');
 const utils = require('../_eleventy/utils.js');
 const SOURCE = ['_assets/js/**/*.js'];
@@ -15,6 +16,9 @@ const processingJavascript = () => {
                 min: '.js'
             },
             noSource: true
+        }))
+        .pipe(rename(function (path) {
+            path.basename += `-${site.versioning.script}`
         }))
         .pipe(dest(DEST));
 };
