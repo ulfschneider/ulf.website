@@ -134,10 +134,11 @@ permalink: "{{site.search.url}}"
     let count = document.createElement("div");
     if (resultSet.length == 0) {
       count.innerHTML = 'Your search for "' + query + '" did not return any results.';
+    } else if (resultSet.length == 1) {
+      count.innerHTML = 'One result:';
     } else {
-      count.innerHTML = resultSet.length + " results:";
-    } count.classList = "meta mry";
-    searchResults.append(count);
+      count.innerHTML = resultSet.length + ' results:';
+    } searchResults.append(count);
   }
 
   function printSearching() {
@@ -148,7 +149,6 @@ permalink: "{{site.search.url}}"
     }
     removeChildren(searchResults);
     let searching = document.createElement("div");
-    searching.classList = "meta mry";
     searching.innerHTML = "Searching …";
     searchResults.append(searching);
   }

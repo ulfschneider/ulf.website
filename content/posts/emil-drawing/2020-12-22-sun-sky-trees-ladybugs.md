@@ -1,6 +1,6 @@
 ---
 title: Sun, sky, trees, ladybugs
 ---
-<figure class="bleed">
+<figure>
 <img src="/img/emil-drawing/IMG_0225D.jpg" alt="">
 </figure>

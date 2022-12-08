@@ -1,6 +1,6 @@
 ---
 title: Witch´s mountain
 ---
-<figure class="bleed">
+<figure>
 <img src="/img/emil-drawing/IMG_0226D.jpg" alt="">
 </figure>

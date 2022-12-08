@@ -3,6 +3,3 @@
 @import "tailwind-extend-base";
 @import "tailwind-extend-components";
 @import "tailwind-extend-utilities";
-
-@import "cooklang";
-@import "tweets";

@@ -13,7 +13,7 @@ tags: accessibility
 ## Tools
 The table below is listing tools to check a website for compliance in the named areas.
 
-<figure class="bleed">
+<figure>
 <table>
 <caption>Tools to validate a website for accessibility.</caption>
 <colgroup>  

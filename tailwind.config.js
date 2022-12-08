@@ -6,7 +6,7 @@ module.exports = {
   content: {
     relative: true,
     files: ['content/pages/**/*',
-      'contentt/posts/**/*',
+      'content/posts/**/*',
       'content/tagintros/**/*',
       '_includes/**/*',
       '_layouts/**/*',
@@ -30,6 +30,7 @@ module.exports = {
       'xl': ['1.2rem', '1.4'],
       '2xl': ['1.3rem', '1.4'],
       '3xl': ['2.8rem', '1.1'],
+      '4xl': ['3.8rem', '1.1'],
       'smaller': 'smaller',
       'larger': 'larger'
     },
@@ -54,7 +55,41 @@ module.exports = {
           DEFAULT: colors.stone[200],
           dark: colors.stone[400],
         },
-        'outline': colors.yellow[500]
+        'outline': {
+          light: colors.yellow[100],
+          DEFAULT: colors.yellow[500],
+          dark: colors.yellow[900]
+        },
+        'mark': {
+          light: colors.yellow[100],
+          DEFAULT: colors.yellow[500],
+          dark: colors.yellow[900]
+        },
+        'orange': {
+          light: colors.orange[100],
+          DEFAULT: colors.orange[500],
+          dark: colors.orange[900]
+        },
+        'red': {
+          light: colors.red[100],
+          DEFAULT: colors.red[500],
+          dark: colors.red[900]
+        },
+        'green': {
+          light: colors.green[100],
+          DEFAULT: colors.green[500],
+          dark: colors.green[900]
+        },
+        'purple': {
+          light: colors.purple[100],
+          DEFAULT: colors.purple[500],
+          dark: colors.purple[900]
+        },
+        'blue': {
+          light: colors.blue[100],
+          DEFAULT: colors.blue[500],
+          dark: colors.blue[900]
+        },
       },
       spacing: {
         'ryt-3xs': '.1rem',

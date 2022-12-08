@@ -1,6 +1,5 @@
 ---
 title: We are building a house
-bleed: true
 permalink: /journal/{{ page.fileSlug }}/
 tags: journal
 ---
@@ -12,7 +11,7 @@ I´m posting a timeline of images here to document the progress.
 
 ## The ground
 
-<figure class="bleed">
+<figure>
 <figcaption>19 Apr, 2019: Emil is running across a weed field. This is the place where we are going to build our house.</figcaption>
 <img src="/img/house/DSCF3529.jpg">
 </figure>

@@ -36,7 +36,7 @@ async function autoEmbedTweets(content, outputPath, options) {
 
 Of course, that´s not new. Since the days of the [CSS Zen Garden](http://www.csszengarden.com) we are aware of how powerful CSS is. But still. Below you can see what the default styling of a fetched tweet is and how I want to adjust the styling:
 
-<figure class="md:split md:bleed">
+<figure>
 <figure>
 <img src="/img/tweet-style/default.png" alt="A tweet by Jen Simmons with the default Twitter styling">
 <figcaption>The default tweet styling of a fetched tweet</figcaption>
@@ -59,7 +59,7 @@ eleventyConfig.addPlugin(pluginEmbedTweet, {
 
 Then I´m using CSS to adjust the styling of the tweet to my blog layout. There is nothing fancy, except I´m using `display:flex` here and there, and change the order of display by leveraging the `order` property. The default value for the `order` property is `0`. Keep in mind, the change of order is only visual, the HTML remains untouched and assistive technology like screen readers will follow the order of the HTML. Below you see the order of the HTML and the order of display.
 
-<figure class="md:split md:bleed">
+<figure>
 <figure>
 <pre><div>
 .tweet-card

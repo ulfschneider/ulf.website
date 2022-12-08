@@ -1,13 +1,4 @@
 @layer components {
-  .indent {
-    p {
-      @apply my-0;
-    }
-    p + p {
-      @apply indent-ryt-lg;
-    }
-  }
-
   /* table of contents */
   /* markdown-it toc */
 
@@ -207,5 +198,14 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 
   .footnotes-list li > p {
     @apply inline;
+  }
+
+  /* cooklang */
+  ul[class^="cooklang-"] > li::before {
+    content: "▢";
+  }
+
+  .cooklang-ingredients .amount-and-unit {
+    @apply font-bold inline-block;
   }
 }

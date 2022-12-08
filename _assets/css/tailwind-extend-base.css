@@ -67,17 +67,16 @@
 
   /* base colors */
   body {
-    @apply text-stone-900 bg-white;
+    @apply text-stone-900 bg-light-light;
   }
 
   /* focus */
   *:focus {
-    outline: 4px solid theme(colors.outline);
-    outline-offset: 2px;
+    @apply outline-indicator;
   }
 
   ::selection {
-    @apply bg-primary-light text-current;
+    @apply bg-primary-light text-primary-dark;
   }
 
   /* links */
@@ -93,7 +92,7 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display font-bold text-3xl mt-ryt-2xl mb-ryt-xl tracking-tight;
+    @apply font-display font-bold text-3xl rg:text-4xl mt-ryt-2xl mb-ryt-xl tracking-tight;
   }
   h2,
   .h2 {
@@ -121,6 +120,11 @@
   /* typography */
   cite {
     @apply font-bold not-italic;
+  }
+
+  mark,
+  .mark {
+    @apply bg-mark-light text-black;
   }
 
   /* dl */
@@ -198,7 +202,9 @@
 
   /*vertical rhythm*/
   table,
-  figure,
+  figure {
+    @apply my-ryt-xl;
+  }
   pre,
   blockquote {
     @apply my-ryt-lg;
@@ -239,7 +245,6 @@
     caption {
       @apply text-left text-sm py-ryt-sm border-t-2 border-t-current;
     }
-
     th {
       @apply text-left font-bold py-ryt-sm pr-ryt-sm align-top leading-tight;
     }
@@ -407,7 +412,7 @@
   input[type="tel"],
   input[type="url"],
   input[list] {
-    @apply border border-meta p-ryt-xs align-middle leading-none border-r-0 bg-light-light;
+    @apply border border-meta p-ryt-xs align-middle leading-none border-r-0 bg-white;
   }
 
   textarea {
@@ -461,8 +466,7 @@ https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-butto
 
   .cc:focus-within input[type="checkbox"] + *::before,
   .cc:focus-within input[type="radio"] + *::before {
-    outline: 4px solid theme(colors.outline);
-    outline-offset: 2px;
+    @apply outline-indicator;
   }
 
   .cc input[type="checkbox"],

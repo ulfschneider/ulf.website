@@ -2,6 +2,6 @@
 title: A withered flower, a flower, and krickelkrackel
 layout: image
 ---
-<figure class="bleed">
+<figure>
 <img src="/img/emil-drawing/IMG_0341B.jpg" alt="A withered flower, a flower, and krickelkrackel">
 </figure>

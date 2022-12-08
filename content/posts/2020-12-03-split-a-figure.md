@@ -15,17 +15,17 @@ To make the HTML of Rapha´s approach more semantic – while keeping it respons
 
 In the below example, the first two figures use the split technique. Each image will only take half of the available space and the caption of the image will take the other half. The next two images are also using the split technique. In this case each image takes half of the available space with a below caption. The fifth figure is not using the split technique –  the image will always occupy the entire available space. 
 
-<figure class="bleed rg:split">
+<figure class="rg:split">
 <img src="/img/journal/IMG_1329.jpg" alt="">
 <figcaption>A beautiful day with Emil at the Paderborn fishponds.</figcaption>
 </figure>
 
-<figure class="bleed rg:split">
+<figure class="rg:split">
 <figcaption>The fishponds are a home for many waterbirds.</figcaption>
 <img src="/img/journal/IMG_1331.jpg" alt="">
 </figure>
 
-<figure class="bleed rg:split">
+<figure class="rg:split">
 <figure>
 <img src="/img/journal/IMG_1298.jpg" alt="">
 <figcaption>Emil´s hand with a Paderstone that has a sheep (or a dog) drawn on it.</figcaption>
@@ -36,7 +36,7 @@ In the below example, the first two figures use the split technique. Each image 
 </figure>
 </figure>
 
-<figure class="bleed">
+<figure>
 <img src="/img/journal/IMG_1286.jpg" alt="">
 <figcaption>Sunset at the the fishponds.</figcaption>
 </figure>

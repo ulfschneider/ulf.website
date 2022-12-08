@@ -40,9 +40,9 @@ module.exports = function (eleventyConfig) {
         codeAttributes: {},
     });
     eleventyConfig.addPlugin(pluginEmbedTweet, {
-        cacheDirectory: '_tweets',
-        useInlineStyles: false,
-        autoEmbed: true
+        cacheDirectory: '_tweets', /* Cache tweets in the _tweets folder */
+        useInlineStyles: true, /*use the default styling*/
+        autoEmbed: true /*allow to embed a tweet by writing the URL within a single line in your Markdown */
     });
 
     return {

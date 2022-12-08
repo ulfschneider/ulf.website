@@ -1,6 +1,14 @@
 @layer utilities {
+  .indent:not(.indent .no-indent) p + .indent:not(.indent .no-indent) p {
+    @apply my-0 indent-ryt-lg;
+  }
+
+  .outline-indicator {
+    @apply outline-outline outline-4 outline-offset-2 outline;
+  }
+
   .legible-rem-width-descendants:not(
-      .legible-rem-width-descendants .pause-legible-width
+      .legible-rem-width-descendants .no-legible-width
     ) {
     p,
     h1,
@@ -32,7 +40,7 @@
   }
 
   .legible-ch-width-descendants:not(
-      .legible-ch-width-descendants .pause-legible-width
+      .legible-ch-width-descendants .no-legible-width
     ) {
     p,
     h1,
@@ -61,5 +69,15 @@
   }
   *.legible-ch-width {
     max-width: 60ch;
+  }
+
+  /* split */
+  .split {
+    grid-template-columns: repeat(2, 1fr);
+    @apply grid gap-ryt-lg;
+  }
+
+  .split > * {
+    @apply m-0;
   }
 }

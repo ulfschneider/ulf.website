@@ -1,6 +1,6 @@
 ---
 title: Snakes with Poison Dots
 ---
-<figure class="bleed">
+<figure>
 <img alt="" src="/img/emil-drawing/IMG_0768.jpg" >
 </figure>

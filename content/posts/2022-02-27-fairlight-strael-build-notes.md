@@ -23,7 +23,7 @@ I was not particularly interested in a steel bike; actually, I was far away from
 
 The ride quality seemed to be impressive. Fast, direct, yet comfortable to be used as an endurance bike. The next thing to check was the geometry, and that's where the story started lifting off for me. [Fairlight](https://fairlightcycles.com) is a small bike brand based in London, founded by Dom Thomas and Jon Reid. All their bikes are designed around what they call [Proportional Geometry](https://fairlightcycles.com/proportional-geometry/), which means you can have each frame size in a *Regular* and a *Tall* option. That's something I don't see with other brands, even the big ones. The fact that Dom Thomas, the bike designer, is taking so much care about rider needs cannot be over-emphasized in my view 🙌.^[The big manufacturers sometimes claim they are using different carbon layups for differently sized bikes of the same model to create the exact same ride behavior, no matter what frame size. Well, is there a way for you and me to verify that claim? How are the manufacturers going to prove? I think that's difficult.] 
 
-<figure class="md:bleed">
+<figure>
   <img src="/img/strael/fairlight-proportional-geometry.jpg" alt ="">
   <figcaption>See the shorter top tube and the shorter head tube of the <em>Tall</em> geometry compared to the <em>Regular</em> geometry of two 56 frames. Image is taken from <a href="https://fairlightcycles.com/proportional-geometry">Fairlight Proportional Geometry</a>.</figcaption>
 </figure>
@@ -32,7 +32,7 @@ Fairlights *Tall* frame option is for people with long legs and a short torso, w
 
 Now, imagine how lucky I was to see that a *Tall* Fairlight frame would do that: shorten the top tube and extend the head tube while keeping excellent frame handling. As I wrote before: that was when I was getting hooked into Fairlight, though there are [some other bikes](/2021-08-05-bike-geos/) I find interesting for that very reason.
 
-<figure class="md:bleed">
+<figure>
   <iframe src="https://player.vimeo.com/video/180866780?h=17c57cd7f8&amp;color=f9423a&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="">
 </iframe>
   <figcaption><cite>
@@ -71,7 +71,7 @@ It took me four years from there to the point of ordering a Strael 3.0 frame in 
 
     Honestly, all that is too good to be true. But how many bikes do you know that receive a 10 out of 10 rating on road.cc? To be more complete, there are other reviews of the different design iterations of the Strael, like [<cite>Fairlight Cycles Strael 2.0</cite>](https://road.cc/content/review/240016-fairlight-cycles-strael-20) in 2020, again by Stu Kerton. Jack Luke did a [<cite>Fairlight Strael 3.0 review</cite>](https://www.bikeradar.com/reviews/bikes/road-bikes/fairlight-strael-3-0-review/) on bikeradar, with a rating of 5 out of 5. Another one is from David Arthur below.
 
-    <figure class="md:bleed">
+    <figure>
       <iframe width="560" height="315" src="https://www.YouTube.com/embed/ORQacAmVHBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
     </iframe>
       <figcaption><a href="https://www.YouTube.com/watch?v=ORQacAmVHBA&amp;t=12s"><cite>Fairlight Strael 3.0 Review</cite></a> by <a href="https://www.YouTube.com/c/davidarthur/">David Arthur</a></figcaption>
@@ -90,12 +90,12 @@ There is one thing left: *the weight of a steel frame.* The frame of the current
 
 **My decision:** @Strael 3.0 Tall 56 frameset in color putty, including Hope Headset and Hope Seat Post Clamp in black{}. 
 
-<figure class="md:bleed">
+<figure>
   <img src="/img/strael/strael-3-0-frameset-putty.png" alt="">
   <figcaption>The Strael 3.0 frameset in color putty.<br>The image is taken from the Fairlight Strael 3.0 Lookbook.</figcaption>
 </figure>
 
-<figure class="md:split md:bleed">
+<figure class="md:split">
   <figure class="md:pdr-2">
     <img src="/img/strael/strael-3-0-frame-parts.png" alt="">
     <figcaption>Parts that come with the frame.<br>The image is taken from the Fairlight Strael 3.0 Design Notes.<br>As you might notice, you should decide upfront what kind of groupset you want to put on your bike, and Fairlight would provide the correct 3D-printed cable guides. Because these are special parts from Fairlight which you cannot get somewhere else, and because I was not sure initially what groupset to use, and to be more flexible for future frame usage, I asked Sebastian from Fairlights customer service if I could order all the cable guides in addition. Sebastian ensured I get all the cable guides with my frameset at no extra cost, excluding the parts that typically would also come with the frame for a chosen group setup, but which I would get at any bike shop when I was clear with my final decision (e.g. Shimano Di2 grommets). I'm absolutely fine with that approach. I want to add that it was never an issue to reach Sebastian via mail, and he always was very kind and supportive.</figcaption>

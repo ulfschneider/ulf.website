@@ -4,7 +4,7 @@ abstract: A Rebel´s Guide for Digital Transformation
 refer: Gerry McGovern, Book, 2016
 tags: journal
 ---
-<figure class="bleed-right rg:split">
+<figure class="rg:split">
 <img src="/img/journal/gerry-mcgovern-transform.jpg" alt="">
 <figcaption><strong>Transform</strong> by Gerry McGovern</figcaption>
 </figure>

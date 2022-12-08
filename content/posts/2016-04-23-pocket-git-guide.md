@@ -11,7 +11,7 @@ outline: true
 
 Git will help you doing the following things with a computer:
 
-<figure class="bleed rg:split align-start">
+<figure>
 <div>
 <strong>Personal</strong>
 <ul class="indent">

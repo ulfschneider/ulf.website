@@ -2,7 +2,7 @@
 title: Resilient Web Design
 tags: [design, star, code]
 ---
-<figure class="bleed-right rg:split">
+<figure class="rg:split">
 <img src="/img/journal/jeremy-keith-resilient-web-design.png" alt="">
 <figcaption><strong>Resilient Web Design</strong> by Jeremy Keith</figcaption>
 </figure>
