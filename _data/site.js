@@ -4,6 +4,15 @@ const URL = ORIGIN + BASE;
 const CACHE_VERSION = 'v1';
 
 module.exports = {
+    cacheVersioning: {
+        runtime: `${CACHE_VERSION}-0`,
+        script: `${CACHE_VERSION}-0`,
+        css: `${CACHE_VERSION}-0`,
+        json: `${CACHE_VERSION}-0`,
+        search: `${CACHE_VERSION}-0`,
+        image: `${CACHE_VERSION}-0`,
+        font: `${CACHE_VERSION}-0`
+    },
     name: "ulfschneider.io",
     locale: "en",
     direction: "ltr",
@@ -125,13 +134,4 @@ module.exports = {
     rss: BASE + "feed.xml",
     output: process.env.OUTPUT ? process.env.OUTPUT : "_site",
     input: process.env.INPUT ? process.env.INPUT : "content",
-    versioning: {
-        runtime: `${CACHE_VERSION}-0`,
-        script: `${CACHE_VERSION}-0`,
-        css: `${CACHE_VERSION}-0`,
-        json: `${CACHE_VERSION}-0`,
-        search: `${CACHE_VERSION}-0`,
-        image: `${CACHE_VERSION}-0`,
-        font: `${CACHE_VERSION}-0`
-    }
 }

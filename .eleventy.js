@@ -200,7 +200,6 @@ function addCollections(eleventyConfig) {
 
 function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('searchIndex', filters.searchIndex);
-    eleventyConfig.addFilter('contentIndex', filters.contentIndex);
     eleventyConfig.addFilter('excerptIndex', filters.excerptIndex);
     eleventyConfig.addFilter('firstImage', filters.firstImage);
     eleventyConfig.addFilter('live', filters.live);
