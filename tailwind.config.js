@@ -44,8 +44,8 @@ module.exports = {
     extend: {
       colors: {
         'write': {
-          light: colors.stone[100],
-          dark: colors.stone[900]
+          light: colors.stone[300],
+          dark: colors.stone[800]
         },
         'back': {
           light: colors.stone[50],

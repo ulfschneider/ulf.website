@@ -1,8 +1,8 @@
 {%-if pagedItems.pageCount > 1 -%}
-  <nav class="my-ryt-xl space-x-ryt-xl legible-rem-width">
+  <nav class="space-x-ryt-xl legible-rem-width">
     {%-if pagedItems.previous != "" and pagedItems.previous != nil -%}
       <strong>
-        <a id="nav-previous" class="h2 text-primary" href="{{pagedItems.previous}}">
+        <a id="nav-previous" class="h2 text-primary inline-block my-ryt" href="{{pagedItems.previous}}">
           {%-if site.navPrevious.label -%}
             {{site.navPrevious.label}}
             {%-else-%}Newer posts{%-endif-%}
@@ -11,7 +11,7 @@
     {%- endif -%}
     {%-if pagedItems.next != "" and pagedItems.next != nil -%}
       <strong>
-        <a id="nav-next" class="h2 text-primary" href="{{pagedItems.next}}">
+        <a id="nav-next" class="h2 text-primary inline-block my-ryt" href="{{pagedItems.next}}">
           {%-if site.navNext.label -%}
             {{site.navNext.label}}
             {%-else-%}Older posts{%-endif-%}
@@ -21,7 +21,7 @@
   </nav>
 {%- elsif pagedItems == nil -%}
   <strong>
-    <a id="nav-next" class="h2 text-primary" href="{{site.blog}}">
+    <a id="nav-next" class="h2 text-primary inline-block my-ryt" href="{{site.blog}}">
       All posts
     </a>
   </strong>
