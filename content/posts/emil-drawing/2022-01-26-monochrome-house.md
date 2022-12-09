@@ -1,6 +1,5 @@
 ---
 title: Monochrome house
-refer: Made by Emil
 ---
 <figure>
 <img src="/img/emil-drawing/IMG_1644D.jpg" alt="">

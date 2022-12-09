@@ -1,46 +1,5 @@
-<!DOCTYPE html>
-<html class="auto-dark-mode hover-rows bg-neutral-5 dk:bg-neutral-d4 " id="{{site.backToTop.id}}" lang="{{site.locale}}" dir="{{site.direction}}">
-
-  <head>
-    {% include "head.html" %}
-  </head>
-
-  <body class="default break-word flex-column">
-    {% include "header.html" %}
-    <div class="flex-grow-1 flex-shrink-0 bg-base-background pdx">
-      <main id="main" class="indent outdent mry-3 mxw-rg mrx-auto">
-
-        {%- if title != "notitle" and title != nil and notitle == nil -%}
-          <header class="title mry-3">
-
-            <h1 class="fs lh-default mry-0">{{ title }}</h1>
-            {%- if subtitle -%}
-              <h2 class="normal fs mry-0 lh-default">{{subtitle}}</h2>
-            {% endif %}
-            {%- if refer -%}
-              <div>{{refer}}</div>
-            {%- elsif author -%}
-              <div>{{author}}</div>
-            {%- endif -%}
-
-            {%- if abstract -%}
-              <div class="mry-vrplus">
-                {{abstract}}
-              </div>
-            {%- endif -%}
-          </header>
-        {%- endif -%}
-        <div {% if outline==true %}class="outline"{% endif %}>
-          {{ content }}
-        </div>
-        {%- if nodate == nil -%}
-          <aside class="mrt-3 mrb-vrplus meta smaller">
-            {% include "date-tags.html" %}
-          </aside>
-        {%- endif -%}
-      </main>
-    </div>
-    {% include "footer.html" %}
-  </body>
-
-</html>
+---
+layout: default
+reducetitle: true
+---
+<div class="my-ryt-2xl">{{content}}</div>

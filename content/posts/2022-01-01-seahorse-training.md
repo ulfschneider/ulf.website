@@ -3,8 +3,7 @@ title: Training materials for the seahorse badge
 tags: [journal,sports]
 updated: 2022-03-07
 ---
-<div class="full-bleed flex justify-center justify-middle">
-<dl class="inline-block timeline framed row">
+<dl class="timeline framed row">
   <dt>24 Dec 2021</dt>
   <dd><figure>
 <img src="/img/journal/IMG_1581-sm.jpg" class="w-100" alt="">
@@ -67,4 +66,3 @@ updated: 2022-03-07
 	</figure>
 	</dd>
 </dl>
-</div>

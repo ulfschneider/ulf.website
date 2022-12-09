@@ -1,6 +1,5 @@
 ---
 title: We want peace on earth
-refer: Made by Emil
 ---
 <figure>
 <img src="/img/emil-drawing/IMG_1757.jpg" alt=""

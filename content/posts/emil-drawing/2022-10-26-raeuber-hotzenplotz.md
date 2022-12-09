@@ -1,6 +1,5 @@
 ---
 title: Räuber Hotzenplotz
-refer: Made by Emil
 tags: star
 ---
 <figure>

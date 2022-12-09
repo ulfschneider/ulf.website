@@ -2,9 +2,6 @@
 layout: default
 nodate: true
 ---
-<div class="mry-3">
-  {% include "site-tags.html" %}
-</div>
-
-{{ content }}
+{%- include "title.html" tagIntro: pagedItems.tag -%}
+<div class="text-2xl no-indent">{{content}}</div>
 {%- include "post-list.html" -%}

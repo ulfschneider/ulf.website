@@ -31,22 +31,20 @@ function maintainBackToStartVisibility() {
             backToStart.style.display = 'flex';
             backToStart.style.position = 'fixed';
 
-            backToStart.classList.add('mr', 'pdx-d1');
-            backToStart.style.right= '0';
-            backToStart.style.bottom = '0';            
+            backToStart.style.right = '0';
+            backToStart.style.bottom = '0';
             backToStart.style.border = '1px solid currentColor';
             if (footerNav) {
-                footerNav.classList.add('mrb-3');
-                
+                footerNav.classList.add('pb-ryt-xl');
+
             }
         } else {
             backToStart.style.display = 'none';
             backToStart.style.position = 'static';
             backToStart.style.border = 'none';
             backToStart.style.padding = 'none';
-            backToStart.classList.remove('mr', 'pdy-d1');
             if (footerNav) {
-                footerNav.classList.remove('mrb-3');
+                footerNav.classList.remove('pb-ryt-xl');
             }
         }
     }
@@ -88,7 +86,7 @@ addEventListener('resize', maintainBackToStartVisibility);
 /* ActiveToc */
 addEventListener('load', function () {
     ActiveToc.init({
-        tocContainer: 'nav.table-of-contents',
+        tocContainer: 'div.table-of-contents',
         onHighlight: function (tocEntry, heading) {
             let headingHint = document.querySelector('#heading-hint');
 

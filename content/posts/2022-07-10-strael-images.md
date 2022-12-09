@@ -2,50 +2,50 @@
 title: Strael images
 tags: [sports, strael]
 layout: image
-subtitle: My Strael without its rider
+abstract: My Strael without its rider
 --- 
-<figure class="bleed">
+<figure>
 <img src="/img/strael/strael-drive-side.jpg">
 </figure>
 
-<figure class="bleed">
+<figure>
 <img src="/img/strael/strael-drive-side-front-sharp.jpg">
 </figure>
 
-<figure class="bleed">
+<figure>
 <img src="/img/strael/strael-drive-side-front.jpg">
 </figure>
 
-<figure class="bleed rg:split">
+<figure class="rg:split">
 <img src="/img/strael/strael-front.jpg">
 <img src="/img/strael/strael-head-tube.jpg">
 </figure>
 
-<figure class="bleed rg:split">
+<figure class="rg:split">
 <img src="/img/strael/strael-front-wheel.jpg">
 <img src="/img/strael/strael-cockpit.jpg">
 </figure>
 
-<figure class="bleed rg:split">
+<figure class="rg:split">
 <img src="/img/strael/strael-rear-derailleur.jpg">
 <img src="/img/strael/strael-drive-train.jpg">
 </figure>
 
-<figure class="bleed">
+<figure>
 <img src="/img/strael/strael-drive-side-colorful.jpg">
 </figure>
 
-<figure class="bleed rg:split">
+<figure class="rg:split">
 <img src="/img/strael/strael-part-of-rear-wheel.jpg">
 <img src="/img/strael/strael-saddle.jpg">
 </figure>
 
-<figure class="bleed rg:split">
+<figure class="rg:split">
 <img src="/img/strael/strael-rear-wheel.jpg">
 <img src="/img/strael/strael-front-wheel-and-frame.jpg">
 </figure>
 
-<figure class="bleed rg:split">
+<figure class="rg:split">
 <img src="/img/strael/strael-handlebars-from-rear.jpg">
 <img src="/img/strael/strael-rear.jpg">
 </figure>

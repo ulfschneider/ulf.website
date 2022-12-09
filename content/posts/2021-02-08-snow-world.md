@@ -8,7 +8,7 @@ tags: journal
 <figcaption>Early morning on our way to the Kindergarten. Wonderful snow. Emil is excited.</figcaption>
 </figure>
 
-<figure class="bleed">
+<figure>
 <img alt="Emil running in front of the Meinolf church" src="/img/journal/IMG_0380D.jpg">
 </figure>
 

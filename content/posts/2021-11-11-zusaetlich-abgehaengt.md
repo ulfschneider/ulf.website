@@ -1,6 +1,5 @@
 ---
 title: Zusätzlich abgehängt
-abstract: Die Schere zwischen arm und reich geht immer weiter auf. Aber kaum einer sagt, was das für Kinder bedeutet. Carolin und Christoph Butterwegge wissen es.
 refer: der Freitag Nr. 42 vom 21 Oktober 2021
 tags: journal
 ---

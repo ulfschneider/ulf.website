@@ -27,6 +27,34 @@ const replacements = [
     {
         search: '{{trimBase}}',
         replace: utils.getTrimBase()
+    },
+    {
+        search: '{{scriptVersion}}',
+        replace: site.cacheVersioning.script
+    },
+    {
+        search: '{{runtimeVersion}}',
+        replace: site.cacheVersioning.runtime
+    },
+    {
+        search: '{{cssVersion}}',
+        replace: site.cacheVersioning.css
+    },
+    {
+        search: '{{imageVersion}}',
+        replace: site.cacheVersioning.image
+    },
+    {
+        search: '{{fontVersion}}',
+        replace: site.cacheVersioning.font
+    },
+    {
+        search: '{{jsonVersion}}',
+        replace: site.cacheVersioning.json
+    },
+    {
+        search: '{{searchVersion}}',
+        replace: site.cacheVersioning.search
     }
 ]
 

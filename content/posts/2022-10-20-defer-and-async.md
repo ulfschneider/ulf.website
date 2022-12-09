@@ -10,10 +10,10 @@ tags: code
 `<script src="script.js">`
 
 <table>
-<tr><td>(1) Parsing of the HTML document starts.</td><td class="bg-primary white">Parse HTML</td><td></td><td></td></tr>
-<tr><td>(2) A script tag is found while parsing the HTML. Parsing is paused and the browser downloads the script.</td><td class="bg-neutral-4 neutral-d5">Pause HTML parsing</td><td class="bg-accent-four white">Load script</td><td></td></tr>
-<tr><td>(3) Once the script is downloaded by the browser the script is executed.</td><td class="bg-neutral-4"></td><td></td><td class="bg-accent-four white">Execute script</td></tr>
-<tr><td>(4) The script has been executed. The browser will continue parsing HTML.</td><td class="bg-primary white">Parse HTML</td><td></td><td></td></tr>
+<tr><td>(1) Parsing of the HTML document starts.</td><td class="bg-primary text-white">Parse HTML</td><td></td><td></td></tr>
+<tr><td>(2) A script tag is found while parsing the HTML. Parsing is paused and the browser downloads the script.</td><td class="bg-orange text-white">Pause HTML parsing</td><td class="bg-orange text-white">Load script</td><td></td></tr>
+<tr><td>(3) Once the script is downloaded by the browser the script is executed.</td><td class="bg-orange text-white"></td><td></td><td class="bg-orange text-white">Execute script</td></tr>
+<tr><td>(4) The script has been executed. The browser will continue parsing HTML.</td><td class="bg-primary text-white">Parse HTML</td><td></td><td></td></tr>
 </table>
 
 Page contents will only show up in the browser after scripts have been loaded and executed.
@@ -23,10 +23,10 @@ Page contents will only show up in the browser after scripts have been loaded an
 `<script async src="script.js">`
 
 <table>
-<tr><td>(1) Parsing of the HTML document starts.</td><td class="bg-primary white">Parse HTML</td><td></td><td></td></tr>
-<tr><td>(2) A script tag is found while parsing the HTML. The parsing of HTML is not paused while downloading the script.</td><td class="bg-primary"></td><td class="bg-accent-four white">Load script</td><td></td></tr>
-<tr><td>(3) Once the script is downloaded by the browser the script is executed and parsing of HTML is paused.</td><td class="bg-neutral-4 neutral-d5">Pause HTML parsing</td><td></td><td class="bg-accent-four white">Execute script</td></tr>
-<tr><td>(4) The script has been executed. The browser will continue parsing HTML.</td><td class="bg-primary white">Parse HTML</td><td></td><td></td></tr>
+<tr><td>(1) Parsing of the HTML document starts.</td><td class="bg-primary text-white">Parse HTML</td><td></td><td></td></tr>
+<tr><td>(2) A script tag is found while parsing the HTML. The parsing of HTML is not paused while downloading the script.</td><td class="bg-primary text-white"></td><td class="bg-primary text-white">Load script</td><td></td></tr>
+<tr><td>(3) Once the script is downloaded by the browser the script is executed and parsing of HTML is paused.</td><td class="bg-orange text-white">Pause HTML parsing</td><td></td><td class="bg-orange text-white">Execute script</td></tr>
+<tr><td>(4) The script has been executed. The browser will continue parsing HTML.</td><td class="bg-primary text-white">Parse HTML</td><td></td><td></td></tr>
 </table>
 
 `async` is ignored when the script tag does not have a `src` attribute (inline script).
@@ -42,10 +42,10 @@ For classic scripts, if the `async` attribute is present, then the classic scrip
 `<script defer src="script.js">`
 
 <table>
-<tr><td>(1) Parsing of the HTML document starts.</td><td class="bg-primary white">Parse HTML</td><td></td><td></td></tr>
-<tr><td>(2) A script tag is found while parsing the HTML.</td><td class="bg-primary"></td><td class="bg-accent-four white">Load script</td><td></td></tr>
+<tr><td>(1) Parsing of the HTML document starts.</td><td class="bg-primary text-white">Parse HTML</td><td></td><td></td></tr>
+<tr><td>(2) A script tag is found while parsing the HTML.</td><td class="bg-primary text-white"></td><td class="bg-primary text-white">Load script</td><td></td></tr>
 <tr><td> The parsing of HTML is not paused while downloading the script and will continue until the parsing is finished.</td><td class="bg-primary white"></td><td></td><td></td></tr>
-<tr><td>(3) When the parsing of the HTML is finished and the script is downloaded the script will be executed.</td><td></td><td></td><td class="bg-accent-four white">Execute script</td></tr>
+<tr><td>(3) When the parsing of the HTML is finished and the script is downloaded the script will be executed.</td><td></td><td></td><td class="bg-orange text-white">Execute script</td></tr>
 </table>
 
 `defer` is ignored when the script tag does not have a `src` attribute (inline script).

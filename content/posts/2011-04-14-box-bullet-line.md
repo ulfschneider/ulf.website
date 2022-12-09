@@ -1,10 +1,9 @@
 ---
 title: The Box-Bullet-Line (BBL)
 abstract: Many important aspects of software development are invisible. When creating software we work through different abstraction layers by analyzing symbols and writing code.
-tags: [articles, agile]
+tags: agile
 ---
 [[toc]]
-
 Writing software is comparable to the work of an author writing a book. Of course, there are engineering elements and creative and social aspects that characterize the work of a software developer, but the contemplative articulation of a model into code is authoring to me. The better we can communicate the underlying model, the better the system can grow. Indeed the ability of the system to develop is coupled to our _shared_ mental model about the system.
 
 Often a model is communicated by using graphical- or diagram techniques. But no single diagram type covers all aspects of a software system model. Instead, we use different pictures to explain and communicate various issues of the system. The Unified Modeling Language (UML) is a standardized language that reflects this fact by providing many different diagram types, which are grouped into the structure- and behavior diagrams.

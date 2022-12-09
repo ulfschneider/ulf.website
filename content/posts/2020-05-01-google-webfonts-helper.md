@@ -2,7 +2,7 @@
 title: Google Webfonts Helper
 tags: [fonts, star]
 ---
-[Mario Ranftl](https://mranftl.com) has written the [Google Webfonts Helper](https://google-webfonts-helper.herokuapp.com/fonts), which makes self-hosting Google fonts as simple as it  can be. 
+[Mario Ranftl](https://mranftl.com) has written the [Google Webfonts Helper](https://gwfh.mranftl.com/fonts), which makes self-hosting Google fonts as simple as it  can be. 
 
 The service worker of my website is caching several contents to speed up response to the users. Google fonts are also cached. 
 

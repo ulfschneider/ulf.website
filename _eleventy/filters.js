@@ -66,14 +66,6 @@ module.exports = {
         }
     },
 
-    contentIndex: function (collection) {
-        let result = [];
-        for (let item of collection) {
-            result.push(utils.mapItem(item));
-        }
-        return JSON.stringify(result);
-    },
-
     tagIntro: function (collection, tag) {
         for (let item of collection) {
             if (!tag && (!item.data.tags || item.data.tags.length == 0)) {
@@ -91,7 +83,6 @@ module.exports = {
         const index = lunr(function () {
             this.ref('id');
             this.field('title', { boost: 10 });
-            this.field('subtitle', { boost: 10 });
             this.field('abstract', { boost: 10 });
             this.field('author');
             this.field('refer');
@@ -110,9 +101,8 @@ module.exports = {
     excerptIndex: function (collection) {
         let result = [];
         for (let item of collection) {
-            let mappedItem = utils.mapItem(item);
+            let mappedItem = utils.mapItemMeta(item);
             mappedItem.content = utils.excerptFromItem(item);
-
             result.push(mappedItem);
         }
         return JSON.stringify(result);
@@ -174,7 +164,7 @@ module.exports = {
     responsiveHero: function (src, alt) {
         let clearSrc = utils.clearResponsive(src);
 
-        let img = `<img src="${clearSrc}" ${alt ? 'alt="' + alt + '"' : 'alt=""'} class="w-100 h-unset fit-cover fit-center" style="${utils.imgAspectRatio(clearSrc)}" ${utils.imgSizeHint(clearSrc)} loading="eager">`;
+        let img = `<img src="${clearSrc}" ${alt ? 'alt="' + alt + '"' : 'alt=""'} class="w-full h-auto object-cover" style="${utils.imgAspectRatio(clearSrc)}" ${utils.imgSizeHint(clearSrc)} loading="eager">`;
         if (utils.isResponsive(src)) {
             let extname = path.extname(clearSrc);
             let stem = path.basename(clearSrc, extname);

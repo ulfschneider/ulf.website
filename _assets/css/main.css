@@ -1,9 +1,5 @@
 @import "fonts";
-@import "compose";
-@import "customize";
-@import "toc";
-@import "fitmedia";
-@import "scrolltable";
-@import "footnotes";
-@import "cooklang";
-@import "tweets";
+@import "tailwind";
+@import "tailwind-extend-base";
+@import "tailwind-extend-components";
+@import "tailwind-extend-utilities";

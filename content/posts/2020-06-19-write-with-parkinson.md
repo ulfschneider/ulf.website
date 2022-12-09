@@ -1,6 +1,6 @@
 ---
 title: Write with Parkinson
-subtitle: Shake, a typeface made from the real handwriting of a person living with Parkinson's Disease
+abstract: Shake, a typeface made from the real handwriting of a person living with Parkinson's Disease
 draft: true
 tags: fonts
 ---

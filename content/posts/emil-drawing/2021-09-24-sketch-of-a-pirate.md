@@ -1,7 +1,6 @@
 ---
 title: Sketch of a pirate
-refer: Made by Emil
 ---
-<figure class="bleed">
+<figure>
 <img src="/img/emil-drawing/IMG_1233.jpg" alt="A black and white drawing a pirates head">
 </figure>

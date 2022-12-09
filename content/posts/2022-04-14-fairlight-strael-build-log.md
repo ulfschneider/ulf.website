@@ -1,12 +1,11 @@
 ---
 title: Fairlight Strael Build Log
-tags: [sports, articles, strael]
-abstract: A Log of my Fairlight Strael Build Process 
+tags: [sports, strael]
+abstract: This is a documentation of my Fairlight Strael build process. You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a>, which are the primer of this build. 
 hero: /img/strael/strael-3-0-parts.jpg
 outline: true
 ---
 
-This is a documentation of my Fairlight Strael Build. You might also be interested in my [Fairlight Strael Build Notes](/2022-02-27-fairlight-strael-build-notes/) which are the primer of this build. You get there the complete list of parts.
 
 [[toc]]
 
@@ -23,7 +22,7 @@ This is a documentation of my Fairlight Strael Build. You might also be interest
 2. **Brake rotors:** Once the rim is protected by the inflated tire it´s save to mount the brake rotors and torque them to 40 Nm. I do not use anti-seize nor grease for the direct mount connection and the lockring threads of the rotors. The parts are all aluminium and the given torque spec is for dry torque (without grease or anything similar). Putting anti-seize or grease on the thread would increase thread-tension when torquing it to 40 Nm. Generally I avoid using grease near the brakes.
 3. **Cassette:** Be careful when mounting the cassette. It will fall apart all too easily and you might have difficulties putting everything back in the right order. I put a thin film of anti-seize on the freehub body to help demounting the cassette later on. It could well be that´s not necessary because the sprockets are on an aluminium spider and the freehub body is also alumunium. Again, no anti-seize on the lockring thread which will be torqued down to 40 Nm.
 
-<figure class="md:bleed">
+<figure>
 <img src="/img/strael/dura-ace-c36s.jpg" alt="">
 <figcaption>The assembled Dura-Ace C36 wheels, inflated to 60 PSI.</figcaption>
 </figure>
@@ -123,7 +122,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
 Before cutting the steerer tube I assemble the fork into the frame and put as many spacers onto the steerer tube as I assume will be needed. I have the geometry of the new frame and can compare it to the geo of my old frame. Theoretically I can calculate the number of required spacers but cutting off something from my shiny new fork scares me in a way that I want to try things first. That in addition requires mounting the handlebars, the shifters, the wheels and the saddle.
 
 1. **Fork:** The headset top cap comes with two shims. I found to get a tight outer seal for the rubber of the headset top cap one spacer was enough in my case. The Hope headset has three convincing seals (two top, one bottom).
-   <div class="split md:bleed">
+   <div class="split>
    <figure>
    <img src="/img/strael/two-headset-shims.jpg">
    <figcaption>The headset comes with two optional shims</figcaption>
@@ -266,7 +265,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
    </figure>
 8. I attach the wheels to take the frame out of the repair stand and straighten the steering unit. Every headset screw receives 4 Nm of torque, except the steerer top cap wich remains hand tight. Ritchey allows a maximum torque of 5 Nm for their 4-bolt-stems, see @[<cite>Ritchey Tech Info</cite>](https://eu.ritcheylogic.com/eu_en/support/tech-info){}. The result starts looking like a bike.
 
-<figure class="md:bleed">
+<figure>
 <img src="/img/strael/it-starts-looking-like-a-bicycle.jpg" alt="The Streal leaning on a wall. It is yet missing the crankset, derailleurs and brakes.">
 <figcaption>Just enough parts to recognize a bicycle</figcaption>
 </figure>
@@ -656,7 +655,7 @@ Straight forward. The Strael frame comes with suitable cage bolts which even inc
 
 The weight of the bike is 9.1 kg including pedals.
 
-<figure class="md:bleed">
+<figure>
 <img src="/img/strael/it-is-done.jpg" alt="The completed Strael bike">
 <figcaption>It is done. Here are some <a href="/2022-07-10-strael-images/"> images of my Strael in the wild</a>.</figcaption>
 </figure>
@@ -680,18 +679,18 @@ The weight of the bike is 9.1 kg including pedals.
 <tbody>
 <tr><td>Bottom Bracket Cups</td><td>40</td></tr>
 <tr><td>Brake Rotor Centerlock</td><td>40</td></tr>
-<tr><td>Calipers to the fork or frame</td><td>6<div class="smaller no-wrap">max 6 - 8</div></td></tr>
+<tr><td>Calipers to the fork or frame</td><td>6<div class="smaller whitespace-nowrap">max 6 - 8</div></td></tr>
 <tr><td>Cassette to freehub body</td><td>40</td></tr>
-<tr><td>Compression bung</td><td>6<div class="smaller no-wrap">max 10</div></td></tr>
-<tr><td>Dual Control Lever clamp screw</td><td>5<div class="smaller no-wrap">max 6 - 8</div></td></tr></tr>
-<tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<div class="smaller no-wrap">max 5 - 6</div></td></tr>
-<tr><td>Front derailleur clamp screw to mount the clamp to the frame</td><td>5<div class="smaller no-wrap">max 5 - 7</div></td></tr>
-<tr><td>Front derailleur fixing screw to attach the derailleur to the clamp band</td><td>5<div class="smaller no-wrap">max 5 - 7</div></td></tr>
-<tr><td>Pedals to crankarms</td><td>15<div class="smaller no-wrap">max 35 - 40</div></td></tr>
-<tr><td>Rear Derailleur Hanger</td><td>8<div class="smaller" no-wrap>max 8 - 10</div></td></tr>
-<tr><td>Ritchey stem bolts (not the top cap screw)</td><td>4<div class="smaller no-wrap">max 5</div></td></tr>
-<tr><td>Ritchey seatpost saddle clamp</td><td>10<div class="smaller no-wrap">max 16</div></td></tr>
-<tr><td>Rotor crankarms to axle</td><td>40<div class="smaller no-wrap">max 35 - 40</div></td></tr>
-<tr><td>Seatpost collar</td><td>4<div class="smaller no-wrap">max 8</div></td></tr></tr>
+<tr><td>Compression bung</td><td>6<div class="smaller whitespace-nowrap">max 10</div></td></tr>
+<tr><td>Dual Control Lever clamp screw</td><td>5<div class="smaller whitespace-nowrap">max 6 - 8</div></td></tr></tr>
+<tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<div class="smaller whitespace-nowrap">max 5 - 6</div></td></tr>
+<tr><td>Front derailleur clamp screw to mount the clamp to the frame</td><td>5<div class="smaller whitespace-nowrap">max 5 - 7</div></td></tr>
+<tr><td>Front derailleur fixing screw to attach the derailleur to the clamp band</td><td>5<div class="smaller whitespace-nowrap">max 5 - 7</div></td></tr>
+<tr><td>Pedals to crankarms</td><td>15<div class="smaller whitespace-nowrap">max 35 - 40</div></td></tr>
+<tr><td>Rear Derailleur Hanger</td><td>8<div class="smaller" whitespace-nowrap>max 8 - 10</div></td></tr>
+<tr><td>Ritchey stem bolts (not the top cap screw)</td><td>4<div class="smaller whitespace-nowrap">max 5</div></td></tr>
+<tr><td>Ritchey seatpost saddle clamp</td><td>10<div class="smaller whitespace-nowrap">max 16</div></td></tr>
+<tr><td>Rotor crankarms to axle</td><td>40<div class="smaller whitespace-nowrap">max 35 - 40</div></td></tr>
+<tr><td>Seatpost collar</td><td>4<div class="smaller whitespace-nowrap">max 8</div></td></tr></tr>
 </tbody>
 </table>

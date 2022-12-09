@@ -1,6 +1,5 @@
 ---
 title: Halloween bat
-refer: Made by Emil
 tags: emil-drawing
 ---
 <figure>

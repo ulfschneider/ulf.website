@@ -1,0 +1,211 @@
+@layer components {
+  /* table of contents */
+  /* markdown-it toc */
+
+  .anchor {
+    @apply font-normal text-base text-meta no-underline;
+  }
+
+  div.table-of-contents {
+    @apply text-sm my-ryt-lg;
+  }
+
+  div.table-of-contents::before {
+    content: "Contents";
+    @apply block font-bold text-base;
+  }
+
+  div.table-of-contents a {
+    @apply no-underline;
+  }
+
+  div.table-of-contents > ol {
+    @apply m-0 p-0;
+  }
+
+  div.table-of-contents ol > li {
+    @apply p-0 my-ryt-sm leading-tight;
+  }
+  div.table-of-contents ol > li::before {
+    @apply hidden content-none;
+  }
+
+  div.table-of-contents ol > li > ol {
+    @apply pl-ryt-lg;
+  }
+
+  /*scroll-table*/
+
+  .scroll-table {
+    @apply my-ryt-xl;
+    table {
+      @apply my-0;
+    }
+  }
+
+  /* sotable */
+
+  table.sotable {
+    button.sotable.restore,
+    button.sotable.column {
+      @apply font-bold p-0 m-0 text-inherit bg-transparent;
+    }
+    button.sotable.column .indicator {
+      @apply ml-ryt-sm text-sm;
+    }
+  }
+
+  /* tags */
+  nav .tag {
+    @apply no-underline px-ryt-xs py-ryt-2xs rounded bg-light dark:bg-light-dark whitespace-nowrap;
+  }
+  nav .tag.current {
+    @apply px-ryt-xs py-ryt-2xs rounded bg-primary text-white whitespace-nowrap;
+  }
+
+  /* image container */
+  #image-container {
+    @apply grid gap-ryt-xl mt-ryt-2xl mb-ryt-xl grid-flow-dense;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+bash+git+json+jsstacktrace+markdown+matlab */
+  /**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #8292a2;
+  }
+
+  .token.punctuation {
+    color: #f8f8f2;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #f92672;
+  }
+
+  .token.boolean,
+  .token.number {
+    color: #ae81ff;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #a6e22e;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string,
+  .token.variable {
+    color: #f8f8f2;
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.function,
+  .token.class-name {
+    color: #e6db74;
+  }
+
+  .token.keyword {
+    color: #66d9ef;
+  }
+
+  .token.regex,
+  .token.important {
+    color: #fd971f;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  /* markdown-it footnotes */
+
+  hr.footnotes-sep {
+    @apply hidden;
+  }
+
+  .footnote-ref a,
+  .footnote-backref {
+    @apply no-underline;
+  }
+
+  .footnotes-list {
+    counter-reset: footnote-counter;
+  }
+
+  .footnotes-list::before {
+    content: "Footnotes";
+    @apply h2 mt-ryt-xl mb-ryt block;
+  }
+
+  .footnotes-list li {
+    counter-increment: footnote-counter;
+    @apply relative;
+  }
+
+  .footnotes-list li::before {
+    content: "[" counter(footnote-counter) "]";
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    top: -0.5em;
+  }
+
+  .footnotes-list li > p {
+    @apply inline;
+  }
+
+  /* cooklang */
+  ul[class^="cooklang-"] > li::before {
+    content: "▢";
+  }
+
+  .cooklang-ingredients .amount-and-unit {
+    @apply font-bold inline-block;
+  }
+}

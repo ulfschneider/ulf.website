@@ -1,7 +1,6 @@
 ---
 title: Snakes with Poison Dots
-refer: Made by Emil
 ---
-<figure class="bleed">
+<figure>
 <img alt="" src="/img/emil-drawing/IMG_0768.jpg" >
 </figure>

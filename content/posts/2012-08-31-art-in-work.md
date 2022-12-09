@@ -1,8 +1,7 @@
 ---
 title: The art in our work
-subtitle: Challenging the status quo is art
 abstract: The Agile Manifesto represents a force that is behind any particular agile procedure like XP, Scrum or Kanban. This force, the culture to challenge the status quo, attracts certain people and companies.
-tags: [articles, agile]
+tags: agile
 ---
 
 [[toc]]
@@ -35,7 +34,7 @@ By claiming our work as being art, the development opportunities will expand for
 
 By Seth Godin's definition an artist is
 
-<blockquote><p>… someone who uses bravery, insight, creativity, and boldness to challenge the status quo. And an artist takes it personally. </p>
+<blockquote><p>... someone who uses bravery, insight, creativity, and boldness to challenge the status quo. And an artist takes it personally. </p>
 <footer>Seth Godin</footer>
 </blockquote>
 

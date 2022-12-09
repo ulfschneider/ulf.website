@@ -1,0 +1,95 @@
+@layer utilities {
+  .indent:not(.indent .no-indent) {
+    p {
+      @apply my-0;
+    }
+    p + p {
+      @apply my-0 indent-ryt-lg;
+    }
+  }
+
+  .no-indent:not(.no-indent .indent) {
+    p,
+    p + p {
+      @apply my-ryt indent-0;
+    }
+  }
+
+  .outline-indicator {
+    @apply outline-outline outline-4 outline-offset-2 outline;
+  }
+
+  .legible-rem-width-descendants:not(
+      .legible-rem-width-descendants .no-legible-width
+    ) {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    th,
+    td,
+    figcaption,
+    caption,
+    summary,
+    blockquote {
+      @apply max-w-rg;
+    }
+    figure {
+      @apply max-w-md;
+    }
+  }
+  *.legible-rem-width {
+    @apply max-w-rg;
+  }
+
+  .legible-ch-width-descendants:not(
+      .legible-ch-width-descendants .no-legible-width
+    ) {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    th,
+    td,
+    figcaption,
+    caption,
+    summary,
+    blockquote {
+      max-width: 60ch;
+    }
+    figure {
+      @apply max-w-md;
+    }
+  }
+  *.legible-ch-width {
+    max-width: 60ch;
+  }
+
+  /* split */
+  .split {
+    grid-template-columns: repeat(2, 1fr);
+    @apply grid gap-ryt-lg;
+  }
+
+  .split > * {
+    @apply m-0;
+  }
+}

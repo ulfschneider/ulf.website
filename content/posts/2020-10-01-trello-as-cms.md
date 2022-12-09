@@ -1,6 +1,5 @@
 ---
 title: Using Trello as a Super Simple CMS
-refer: Phil Hawskworth, CSS-Tricks, 2020
 tags: code
 ---
 In his [CSS-Tricks article](https://css-tricks.com/using-trello-as-a-super-simple-cms/), Phil describes a very nice and generic approach to use 11ty data files for fetching contents from Trello. 

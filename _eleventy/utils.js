@@ -1,6 +1,7 @@
 const markdownIt = require('markdown-it');
+const slugify = require('slugify');
 const markdownItAnchor = require('markdown-it-anchor');
-const markdownItTableOfContents = require('markdown-it-toc-done-right');
+const markdonItTOC = require('markdown-it-table-of-contents');
 const markdownItDefList = require('markdown-it-deflist');
 const markdownItContainer = require('markdown-it-container');
 const markdownItFitMedia = require('markdown-it-fitmedia');
@@ -26,6 +27,10 @@ const utc = require('dayjs/plugin/utc')
 dayjs.extend(utc);
 const timezone = require('dayjs/plugin/timezone');
 dayjs.extend(timezone);
+
+function mySlugify(s) {
+    return slugify(s, { lower: true });
+}
 
 
 const site = require('../_data/site.js');
@@ -164,7 +169,6 @@ module.exports = {
             title: item.data.title,
             date: item.date,
             humanDate: this.humanDate(item.date),
-            subtitle: item.data.subtitle,
             abstract: item.data.abstract,
             author: item.data.author,
             refer: item.data.refer,
@@ -173,6 +177,32 @@ module.exports = {
             notags: item.data.notags,
             starred: item.data.starred,
             content: this.removeHtml(item.templateContent)
+        }
+    },
+
+    mapItemMeta: function (item) {
+        let tagsWithUrls = [];
+
+        if (item.data.tags) {
+            let tags = [...new Set(item.data.tags)].sort();
+            for (let tag of tags) {
+                tagsWithUrls.push({
+                    name: tag,
+                    url: this.tagUrl(tag)
+                });
+            }
+        }
+
+        return {
+            id: item.url,
+            title: item.data.title,
+            date: item.date,
+            humanDate: this.humanDate(item.date),
+            author: item.data.author,
+            refer: item.data.refer,
+            tags: tagsWithUrls,
+            notags: item.data.notags,
+            starred: item.data.starred,
         }
     },
 
@@ -312,10 +342,15 @@ module.exports = {
                 permalinkClass: 'anchor',
                 permalinkSymbol: '#',
                 permalinkBefore: false,
-                permalinkSpace: true
+                permalinkSpace: true,
+                slugify: mySlugify
+            })
+            .use(markdonItTOC, {
+                slugify: mySlugify,
+                listType: 'ol',
+                includeLevel: [2]
             })
             .use(markdownItMark)
-            .use(markdownItTableOfContents)
             .use(markdownItDefList)
             .use(markdownItScrollTable)
             .use(markdownItAttrs)

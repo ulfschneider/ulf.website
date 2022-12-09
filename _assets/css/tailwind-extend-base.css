@@ -1,0 +1,554 @@
+@layer base {
+  /* reset
+   * This reset is influenced by https://www.joshwcomeau.com/css/custom-css-reset/
+   */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html {
+    height: 100%;
+    scroll-behavior: smooth;
+    /*https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/*/
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  @media (prefers-reduced-motion) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+
+  iframe,
+  canvas {
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* font-size*/
+  html {
+    @apply text-base bg-light dark:bg-light-dark;
+  }
+
+  /* base colors */
+  body {
+    @apply text-write-dark bg-back-light dark:text-write-light dark:bg-back-dark;
+  }
+
+  /* focus */
+  *:focus {
+    @apply outline-indicator;
+  }
+
+  ::selection {
+    @apply bg-primary-light text-primary-dark;
+  }
+
+  /* links */
+  a {
+    @apply underline;
+  }
+  a:hover,
+  a:focus,
+  a:active {
+    @apply text-link dark:text-link-light;
+  }
+
+  /* headings */
+  h1,
+  .h1 {
+    @apply font-display font-bold text-3xl rg:text-4xl mt-ryt-2xl mb-ryt-xl tracking-tight;
+  }
+  h2,
+  .h2 {
+    @apply font-display font-bold text-2xl mt-ryt-xl mb-ryt-lg tracking-tight;
+  }
+  h3,
+  .h3 {
+    @apply font-display font-bold text-xl mt-ryt-xl mb-ryt-lg tracking-tight;
+  }
+  h4,
+  .h4 {
+    @apply font-display font-bold text-lg mt-ryt-lg mb-ryt;
+  }
+  h5,
+  h6,
+  .h5,
+  .h6 {
+    @apply font-display font-bold text-base mt-ryt-lg mb-ryt;
+  }
+
+  details > summary {
+    @apply hover:text-link dark:hover:text-link-light;
+  }
+
+  /* typography */
+  cite {
+    @apply font-bold not-italic;
+  }
+
+  mark,
+  .mark {
+    @apply bg-mark text-write-dark;
+  }
+
+  /* dl */
+
+  dl {
+    @apply my-ryt mx-0 p-0;
+  }
+
+  dt {
+    @apply font-bold;
+  }
+
+  dd {
+    @apply m-0;
+  }
+
+  dd + dt,
+  dt + dt {
+    @apply mt-ryt;
+  }
+
+  /* ul, ol */
+  ol,
+  ul {
+    @apply list-none p-0 mx-0 my-ryt;
+  }
+
+  li > ol,
+  li > ul {
+    @apply my-0;
+  }
+
+  li {
+    @apply m-0 p-0 pl-ryt-lg;
+  }
+
+  li > p:first-child {
+    @apply inline;
+  }
+
+  li > ol {
+    counter-reset: ol-counter;
+  }
+
+  ol > li {
+    counter-increment: ol-counter;
+  }
+
+  ol > li::before {
+    content: counters(ol-counter, ".", decimal) ". ";
+    font-size: smaller;
+    @apply font-bold -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start tabular-nums whitespace-nowrap;
+  }
+
+  ol > li > ol > li::before {
+    content: counters(ol-counter, ".", decimal) " ";
+  }
+
+  ul > li::before {
+    content: "●" " ";
+    @apply -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap;
+  }
+
+  ul.reset,
+  ol.reset {
+    @apply list-none my-0 p-0;
+    > li {
+      @apply p-0;
+    }
+    > li::before {
+      content: "";
+      @apply hidden;
+    }
+  }
+
+  /*vertical rhythm*/
+  table,
+  figure {
+    @apply my-ryt-xl;
+  }
+  pre,
+  blockquote {
+    @apply my-ryt-lg;
+  }
+  img + img {
+    @apply my-ryt-lg;
+  }
+  p + p {
+    @apply my-ryt;
+  }
+
+  /* img */
+  img {
+    @apply object-contain object-left dark:filter dark:brightness-75 dark:contrast-125;
+    max-height: 80vh;
+  }
+
+  /* summary */
+
+  summary {
+    @apply cursor-pointer;
+  }
+
+  /* hr */
+  hr {
+    @apply legible-rem-width my-ryt-xl border-0 flex justify-center;
+  }
+
+  hr::before {
+    content: "* * *";
+    @apply legible-rem-width block -mt-ryt;
+  }
+
+  /* table */
+  table {
+    @apply text-sm border-collapse border-y-2 border-y-current;
+
+    caption {
+      @apply text-left text-sm py-ryt-sm border-t-2 border-t-current;
+    }
+    th {
+      @apply text-left font-bold py-ryt-sm pr-ryt-sm align-top leading-tight;
+    }
+    td {
+      @apply text-left font-normal py-ryt-sm pr-ryt-sm align-top leading-tight;
+    }
+    thead {
+      th,
+      td {
+        @apply align-bottom;
+      }
+    }
+    th + th,
+    td + td {
+      @apply pl-ryt-sm;
+    }
+  }
+
+  /* figure */
+  figure {
+    figcaption {
+      @apply text-sm my-ryt-sm;
+    }
+  }
+
+  /* quote and blockquote */
+
+  q {
+    @apply italic;
+  }
+
+  blockquote {
+    @apply p-0 italic font-bold legible-ch-width border-l-2 border-l-current pl-[calc(theme(space.ryt-lg)-theme(borderWidth.2))];
+  }
+
+  blockquote > header,
+  blockquote > footer {
+    @apply font-normal font-sans text-base not-italic my-ryt-sm;
+  }
+
+  /* address */
+  address {
+    @apply my-ryt not-italic font-normal;
+  }
+
+  /* kbd */
+  kbd {
+    @apply font-mono bg-light dark:bg-light-dark text-center text-sm px-ryt-xs inline-block border border-current rounded-sm;
+  }
+
+  /* pre and pre code */
+  pre {
+    @apply text-sm font-mono whitespace-pre-wrap;
+    > * {
+      @apply overflow-x-auto;
+    }
+  }
+
+  pre[data-language]::before {
+    content: attr(data-language);
+    @apply font-sans text-sm my-ryt-sm;
+  }
+
+  code:not(pre code) {
+    @apply bg-light text-write-dark dark:bg-light-dark dark:text-write-light px-ryt-2xs font-mono;
+  }
+
+  pre code {
+    @apply bg-back-dark dark:bg-light-dark text-write-light px-ryt py-ryt-sm -mx-ryt block text-left leading-tight whitespace-pre font-mono;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  /* forms */
+  :root {
+    --custom-check-border-width: 1px;
+    --form-error-border-width: 2px;
+    --form-input-border-width: 1px;
+    --custom-radio-gap: 2px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[list],
+  input[type="submit"],
+  input[type="reset"],
+  button,
+  select,
+  textarea,
+  fieldset,
+  label,
+  legend {
+    @apply font-sans font-normal text-base appearance-none placeholder-meta caret-primary dark:caret-primary-light;
+  }
+
+  input[type="submit"],
+  input[type="reset"],
+  button,
+  select {
+    @apply border-0 align-baseline bg-primary text-white px-ryt-sm py-ryt-sm cursor-pointer;
+  }
+
+  input[type="submit"]:disabled,
+  input[type="reset"]:disabled,
+  button:disabled,
+  select:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+
+  @media (hover: hover) {
+    input[type="submit"]:hover:not(:disabled),
+    input[type="reset"]:hover:not(:disabled),
+    button:hover:not(:disabled),
+    .button:hover:not(:disabled),
+    select:hover:not(:disabled) {
+      @apply filter brightness-125;
+    }
+  }
+
+  input[type="submit"]:focus:not(:disabled),
+  input[type="reset"]:focus:not(:disabled),
+  button:focus:not(:disabled),
+  select:focus:not(:disabled) {
+    @apply filter brightness-125;
+  }
+
+  input[type="submit"]:active:not(:disabled),
+  input[type="reset"]:active:not(:disabled),
+  button:active:not(:disabled),
+  select:active:not(:disabled) {
+    @apply filter brightness-125;
+  }
+
+  label > * {
+    @apply my-ryt-xs;
+  }
+
+  label:not(label.cc),
+  legend {
+    @apply block align-baseline font-bold leading-tight;
+  }
+
+  form .desc {
+    @apply text-meta leading-tight;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[list] {
+    @apply border border-meta p-ryt-xs align-middle leading-none border-r-0 bg-white dark:bg-light-dark;
+  }
+
+  textarea {
+    @apply leading-snug border border-meta py-xs px-xs border-r-0 resize-none font-normal bg-white dark:bg-light-dark;
+  }
+
+  fieldset {
+    @apply p-0 border-none;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[list]:focus,
+  textarea:focus {
+    @apply border-transparent;
+  }
+
+  /*
+https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/
+and
+https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-button-with-css 
+*/
+
+  /* .cc stands for "custom control" */
+
+  :root {
+    --cc-size: 1em;
+    --cc-check-width: 0.6em;
+    --cc-check-height: 0.3em;
+    --cc-radio-size: 0.7em;
+    --cc-border-width: 1px;
+  }
+
+  label.cc > *,
+  .cc label > * {
+    @apply my-0;
+  }
+
+  .cc {
+    @apply relative;
+  }
+
+  .cc * {
+    @apply cursor-pointer;
+  }
+
+  .cc:focus-within input[type="checkbox"] + *::before,
+  .cc:focus-within input[type="radio"] + *::before {
+    @apply outline-indicator;
+  }
+
+  .cc input[type="checkbox"],
+  .cc input[type="radio"] {
+    /* remove the control from flow */
+    position: absolute;
+    /* hide it visually */
+    opacity: 0.00001;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+  .cc input[type="checkbox"] + *,
+  .cc input[type="radio"] + * {
+    @apply inline-block;
+    margin-left: calc(var(--cc-size) + 0.5em);
+  }
+
+  /* box */
+
+  .cc input[type="checkbox"] + *::before,
+  .cc input[type="radio"] + *::before {
+    @apply box-border absolute border-current;
+    content: "";
+    border-width: var(--cc-border-width);
+    left: 0;
+    top: calc((theme(lineHeight.tight) * 1em - 1em));
+    height: var(--cc-size);
+    width: var(--cc-size);
+  }
+
+  /* circle */
+
+  .cc input[type="radio"] + *::before {
+    @apply rounded-full;
+  }
+
+  /* check */
+  .cc input[type="checkbox"] + *::after {
+    @apply box-border absolute bg-transparent border-t-transparent opacity-0;
+    content: "";
+    left: calc((var(--cc-size) - var(--cc-check-width)) / 2);
+    top: calc(
+      (theme(lineHeight.tight) * 1em - var(--cc-size)) +
+        (var(--cc-size) - var(--cc-check-width)) / 2 + var(--cc-border-width)
+    );
+    width: var(--cc-check-width);
+    height: var(--cc-check-height);
+    transform: rotate(-45deg);
+    border: solid white;
+    border-width: 0 0 2px 2px;
+  }
+
+  /* select radio */
+  .cc input[type="radio"] + *::after {
+    @apply box-border absolute rounded-full bg-current;
+    content: "";
+    left: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
+    top: calc(
+      (theme(lineHeight.tight) * 1em - var(--cc-size)) +
+        (var(--cc-size) - var(--cc-radio-size)) / 2
+    );
+    width: var(--cc-radio-size);
+    height: var(--cc-radio-size);
+  }
+
+  /* unchecked / unselected */
+
+  .cc input[type="checkbox"]:not(:checked) + *::after,
+  .cc input[type="radio"]:not(:checked) + *::after {
+    @apply opacity-0;
+  }
+
+  /* checked / selected*/
+
+  .cc input[type="checkbox"]:checked + *::before {
+    @apply bg-current;
+  }
+
+  .cc input[type="checkbox"]:checked + *::after,
+  .cc input[type="radio"]:checked + *::after {
+    @apply opacity-100;
+  }
+}

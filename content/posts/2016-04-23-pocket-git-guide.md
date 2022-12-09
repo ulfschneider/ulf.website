@@ -1,17 +1,17 @@
 ---
 title: Pocket Git Guide
-subtitle: A short entry-level approach to Git
-tags: [code, articles]
+abstract: A short entry-level approach to Git
+tags: code
 outline: true
 ---
 
 [[toc]]
 
-Git will help you doing the following things with a computer:
-
 ## Reasons to use Git
 
-<figure class="bleed rg:split align-start">
+Git will help you doing the following things with a computer:
+
+<figure>
 <div>
 <strong>Personal</strong>
 <ul class="indent">

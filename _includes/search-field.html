@@ -5,74 +5,76 @@
   {%- if focus -%}
     {%- assign autofocus = "autofocus" -%}
   {%- endif -%}
-  <form onsubmit="{{onsubmit}}">
-    <label id="search-label" for="search-query">Search
-      <em>{{site.name}}</em>
-    </label>
-    <div class="flex mxw-rg mry-d2">
-      <input id="search-query" {{autofocus}} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="flex-grow-1 align-stretch" type="text"/>
-      <input type="submit" id="search-submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="Search"/>
-    </div>
-    <details>
-      <summary>Search help</summary>
-      <dl class="mr-0 pdy small">
-        <dt>
-          <code>foo*</code>
-        </dt>
-        <dd>Will match documents with words
-          <em>beginning</em>
-          with
-          <q>foo</q>.</dd>
-        <dt>
-          <code>foo bar</code>
-        </dt>
-        <dd>Will match documents that contain
-          <q>foo</q>
-          <em>or</em>
-          <q>bar</q>.</dd>
-        <dt>
-          <code>+foo bar -baz</code>
-        </dt>
-        <dd>Will match documents that
-          <em>must</em>
-          contain
-          <q>foo</q>,
-          <em>might</em>
-          contain
-          <q>bar</q>
-          and
-          <em>must
-            not</em>
-          contain
-          <q>baz</q>.</dd>
-        <dt>
-          <code>foo~1</code>
-        </dt>
-        <dd>Will match
-          <q>boo</q>, as it requires a single (~1) edit (replacing
-          <q>f</q>
-          with
-          <q>b</q>), but
-          <q>boot</q>
-          would not as it
-          also requires an additional
-          <q>t</q>
-          at the end.</dd>
-      </dl>
-    </details>
-  </form>
+  <section class="legible-rem-width">
+    <form onsubmit="{{onsubmit}}">
+      <label id="search-label" for="search-query" class="h2 mt-ryt-xl mb-ryt-sm">Search
+        <span class="italic font-mono">{{site.name}}</span>
+        <div class="flex flex-row">
+          <input id="search-query" {{autofocus}} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="grow self-stretch" type="text"/>
+          <input type="submit" id="search-submit" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="Search"/>
+        </div>
+      </label>
+      <details>
+        <summary>Search help</summary>
+        <dl class="mr-0 text-small">
+          <dt>
+            <code>foo*</code>
+          </dt>
+          <dd>Will match documents with words
+            <em>beginning</em>
+            with
+            <q>foo</q>.</dd>
+          <dt>
+            <code>foo bar</code>
+          </dt>
+          <dd>Will match documents that contain
+            <q>foo</q>
+            <em>or</em>
+            <q>bar</q>.</dd>
+          <dt>
+            <code>+foo bar -baz</code>
+          </dt>
+          <dd>Will match documents that
+            <em>must</em>
+            contain
+            <q>foo</q>,
+            <em>might</em>
+            contain
+            <q>bar</q>
+            and
+            <em>must
+              not</em>
+            contain
+            <q>baz</q>.</dd>
+          <dt>
+            <code>foo~1</code>
+          </dt>
+          <dd>Will match
+            <q>boo</q>, as it requires a single (~1) edit (replacing
+            <q>f</q>
+            with
+            <q>b</q>), but
+            <q>boot</q>
+            would not as it
+            also requires an additional
+            <q>t</q>
+            at the end.</dd>
+        </dl>
+      </details>
+    </form>
 
-  <script>
-    let query = document.querySelector('#search-query');
+    <script>
+      let query = document.querySelector('#search-query');
 
-    function submitQuery(event) {
-      event.preventDefault();
-      let query = event.target['search-query'].value;
-      if (query && query.trim()) {
-        location.href = '{{site.search.url}}?query=' + encodeURIComponent(query.trim());
-      } else {
-        location.href = '{{site.search.url}}';
+      function submitQuery(event) {
+        event.preventDefault();
+        let query = event.target['search-query'].value;
+        if (query && query.trim()) {
+          location.href = '{{site.search.url}}?query=' + encodeURIComponent(query.trim());
+        } else {
+          location.href = '{{site.search.url}}';
+        }
       }
-    }
-  </script>
+    </script>
+  </section>
 {%- endif -%}

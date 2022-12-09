@@ -1,6 +1,5 @@
 ---
 title: Better Web Typography
-refer: Online course about web typography by Matej Latin
 tags: [fonts, courses]
 ---
 [Matej´s](https://matejlatin.co.uk) course on [Better Web Typography](https://betterwebtype.com) is structured into seven parts which will be mailed to you, once you subscribed to the course. Matej is passionate about his topic and he is putting great care into the details. What I liked especially about the course are the references to articles, tools, and books for further exploration. I found some interesting new things! The parts of the course are:
@@ -44,7 +43,7 @@ I think the course is like a condensed version of Matej´s book *[Better web typ
 
 ## Rhythm in web typography
 
-- [Why is Vertical Rhythm an Important Typography Practice?](https://zellwk.com/blog/why-vertical-rhythms/) *– article by Zell*
+- [Why is Vertical Rhythm an Important Typography Practice?](https://zellwk.com/blog/why-vertical-ryts/) *– article by Zell*
 - [Kern Type, the kerning game](https://type.method.ac/) *– game by Mark MacKay*
 - [Gutenberg – A Meaningful Web Typography Starter Kit](http://matejlatin.github.io/Gutenberg/) *– CSS tool by Matej Latin*
 - [Grid Lover](https://www.gridlover.net/try) *– tool*

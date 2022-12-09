@@ -1,14 +1,24 @@
 const ORIGIN = "https://ulfschneider.io";
 const BASE = "/";
 const URL = ORIGIN + BASE;
+const CACHE_VERSION = 'v1';
 
 module.exports = {
+    cacheVersioning: {
+        runtime: `${CACHE_VERSION}-0`,
+        script: `${CACHE_VERSION}-0`,
+        css: `${CACHE_VERSION}-0`,
+        json: `${CACHE_VERSION}-0`,
+        search: `${CACHE_VERSION}-0`,
+        image: `${CACHE_VERSION}-0`,
+        font: `${CACHE_VERSION}-0`
+    },
     name: "ulfschneider.io",
     locale: "en",
     direction: "ltr",
-    theme_color: "#ebebeb",
-    dark_theme_color: "#3a3a3a",
-    background_color: "#3a3a3a",
+    theme_color: "#e7e5e4",
+    dark_theme_color: "#44403c",
+    background_color: "#44403c",
     origin: ORIGIN,
     base: BASE,
     url: URL,
@@ -29,10 +39,9 @@ module.exports = {
         phone: "+49 163 2505164",
         twitter: ""
     },
-    paginationSize: 10,
+    paginationSize: 50,
     starTag: "star",
     starTagSymbol: "★",
-    /*tagColors: ["#2b7296", "#94322d", "#2a9754", "#7e761d", "#1d7d76", "#761d7d"],*/
     mainnav: [{
         label: "Ulf Schneider",
         url: BASE,
@@ -124,5 +133,5 @@ module.exports = {
     images: BASE + "images/",
     rss: BASE + "feed.xml",
     output: process.env.OUTPUT ? process.env.OUTPUT : "_site",
-    input: process.env.INPUT ? process.env.INPUT : "content"
+    input: process.env.INPUT ? process.env.INPUT : "content",
 }

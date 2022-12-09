@@ -1,6 +1,5 @@
 ---
 title: Man conquers the cosmos
-refer: Mosaic by Fritz Eisel, 1972
 layout: image
 tags: journal
 ---

@@ -1,13 +1,13 @@
-<nav class="meta-font mxw-rg mrx-auto">
-  <ul class="reset mry-0">
+<nav>
+  <ul class="reset space-x-ryt">
     {%- for p in site.mainnav -%}
       <li class="inline-block">
         {%- if id == p.id -%}
-          <a aria-current="page" class="no-deco strong heading-color no-wrap" href="{{ p.url }}">{{p.label}}</a>
+          <a aria-current="page" class="no-underline whitespace-nowrap font-bold" href="{{ p.url }}">{{p.label}}</a>
         {%- elsif p.id == 'editOnGitHub' %}
-          <a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-deco no-wrap">{{p.label}}</a>
+          <a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-underline whitespace-nowrap">{{p.label}}</a>
         {%- else -%}
-          <a class="no-deco no-wrap" href="{{ p.url }}">{{p.label}}</a>
+          <a class="no-underline whitespace-nowrap" href="{{ p.url }}">{{p.label}}</a>
         {%- endif -%}
       </li>
     {%- endfor -%}

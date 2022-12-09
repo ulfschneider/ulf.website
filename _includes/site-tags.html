@@ -2,83 +2,49 @@
 {%- if pagedItems.tag != nil -%}
   {%-assign tag = pagedItems.tag -%}
 {%- endif -%}
-
 {%- if currentTags.length -%}
-  <nav class="mrln-d2 mrrn-d2 site-tags">
-    <ul class="mry-0 reset">
-      {%- if site.tagColors and site.tagColors.length %}
-        {%- if tag == "" -%}
-          <li class="inline-block mr-d2">
-            <span class="pdy-d4 pdx-d2 bg-base-color white rounded no-wrap" aria-current="page">all content</span>
-          </li>
-        {%- else -%}
-          <li class="inline-block mr-d2">
-            <a class="pdy-d4 pdx-d2 rounded no-wrap" style="color: inherit;" href="{{site.blog}}">all content</a>
-          </li>
-        {%- endif -%}
-        {%- for siteTag in currentTags -%}
-          {%- if siteTag == site.starTag %}
-            {%- if tag != siteTag -%}
-              <li class="inline-block mr-d2">
-                <a class="pdy-d4 pdx-d2 rounded no-wrap" style="color: {{siteTag | tagColor}}" href="{{siteTag | tagUrl}}">{{site.starTagSymbol}}</a>
-              </li>
-            {%- else -%}
-              <li class="inline-block mr-d2" style="background: {{siteTag || tagColor}};">
-                <span class="pdy-d4 pdx-d2 rounded no-wrap white" aria-current="page">{{site.starTagSymbol}}</span>
-              </li>
-            {%- endif -%}
+  <section class="legible-rem-width">
+    {%- if currentTags.length > 1 -%}
+      <h2 class="mb-ryt-sm">Choose posts by tag:</h2>
+      <nav>
+        <ul class="my-0 -mx-ryt-xs reset">
+          {%- if tag == ""  -%}
+            <li class="inline-block m-ryt-xs">
+              <span class="tag current" aria-current="page">all posts</span>
+            </li>
+          {%- else -%}
+            <li class="inline-block m-ryt-xs">
+              <a class="tag" href="{{site.blog}}">all posts</a>
+            </li>
           {%- endif -%}
-        {%- endfor -%}
-        {%- for siteTag in currentTags -%}
-          {%- if siteTag != site.starTag -%}
-            {%- if tag != siteTag -%}
-              <li class="inline-block mr-d2">
-                <a class="pdy-d4 pdx-d2 rounded no-wrap" style="color: {{siteTag | tagColor}}" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
-              </li>
-            {%- else -%}
-              <li class="inline-block mr-d2" style="background: {{siteTag || tagColor}};">
-                <span class="pdy-d4 pdx-d2 rounded no-wrap white" aria-current="page">{{siteTag}}</span>
-              </li>
+          {%- for siteTag in currentTags -%}
+            {%- if siteTag == site.starTag -%}
+              {%- if tag != siteTag -%}
+                <li class="inline-block m-ryt-xs">
+                  <a class="tag" href="{{siteTag | tagUrl}}">{{site.starTagSymbol}}</a>
+                </li>
+              {%- else -%}
+                <li class="inline-block m-ryt-xs">
+                  <span class="tag current" aria-current="page">{{site.starTagSymbol}}</span>
+                </li>
+              {%- endif -%}
             {%- endif -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- else -%}
-        {%- if tag == ""  -%}
-          <li class="inline-block mr-d2">
-            <span class="bg-neutral-5 pdy-d4 pdx-d2 rounded bg-primary white no-wrap" aria-current="page">all content</span>
-          </li>
-        {%- else -%}
-          <li class="inline-block mr-d2">
-            <a class="no-deco pdy-d4 pdx-d2 bg-neutral-5 dk:bg-neutral-d3 rounded no-wrap" href="{{site.blog}}">all content</a>
-          </li>
-        {%- endif -%}
-        {%- for siteTag in currentTags -%}
-          {%- if siteTag == site.starTag -%}
-            {%- if tag != siteTag -%}
-              <li class="inline-block mr-d2">
-                <a class="no-deco bg-neutral-5 dk:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap" href="{{siteTag | tagUrl}}">{{site.starTagSymbol}}</a>
-              </li>
-            {%- else -%}
-              <li class="inline-block mr-d2">
-                <span class="bg-primary white pdy-d4 pdx-d2 rounded no-wrap" aria-current="page">{{site.starTagSymbol}}</span>
-              </li>
+          {%- endfor -%}
+          {%- for siteTag in currentTags -%}
+            {%-if siteTag != site.starTag -%}
+              {%- if tag != siteTag -%}
+                <li class="inline-block m-ryt-xs">
+                  <a class="tag" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
+                </li>
+              {%- else -%}
+                <li class="inline-block m-ryt-xs">
+                  <span class="tag current" aria-current="page">{{siteTag}}</span>
+                </li>
+              {%- endif -%}
             {%- endif -%}
-          {%- endif -%}
-        {%- endfor -%}
-        {%- for siteTag in currentTags -%}
-          {%-if siteTag != site.starTag -%}
-            {%- if tag != siteTag -%}
-              <li class="inline-block mr-d2">
-                <a class="no-deco bg-neutral-5 dk:bg-neutral-d3 pdy-d4 pdx-d2 rounded no-wrap" href="{{siteTag | tagUrl}}">{{siteTag}}</a>
-              </li>
-            {%- else -%}
-              <li class="inline-block mr-d2">
-                <span class="bg-primary white pdy-d4 pdx-d2 rounded no-wrap" aria-current="page">{{siteTag}}</span>
-              </li>
-            {%- endif -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif %}
-    </ul>
-  </nav>
-{%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </nav>
+    {%- endif -%}
+  {%- endif %}
+</section>

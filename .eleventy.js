@@ -40,9 +40,9 @@ module.exports = function (eleventyConfig) {
         codeAttributes: {},
     });
     eleventyConfig.addPlugin(pluginEmbedTweet, {
-        cacheDirectory: '_tweets',
-        useInlineStyles: false,
-        autoEmbed: true
+        cacheDirectory: '_tweets', /* Cache tweets in the _tweets folder */
+        useInlineStyles: true, /*use the default styling*/
+        autoEmbed: true /*allow to embed a tweet by writing the URL within a single line in your Markdown */
     });
 
     return {
@@ -160,6 +160,7 @@ function addCollections(eleventyConfig) {
         for (let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
             tagMap.push({
                 tag: '',
+                title: 'All posts',
                 pageNumber: pageNumber,
                 permalink: utils.currentPage(site.blog, pageNumber),
                 previous: utils.previousPage(site.blog, pageNumber),
@@ -199,7 +200,6 @@ function addCollections(eleventyConfig) {
 
 function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('searchIndex', filters.searchIndex);
-    eleventyConfig.addFilter('contentIndex', filters.contentIndex);
     eleventyConfig.addFilter('excerptIndex', filters.excerptIndex);
     eleventyConfig.addFilter('firstImage', filters.firstImage);
     eleventyConfig.addFilter('live', filters.live);

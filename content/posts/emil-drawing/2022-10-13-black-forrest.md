@@ -1,6 +1,5 @@
 ---
 title: Black forrest
-refer: Made by Emil
 ---
 <figure>
 <img src="/img/emil-drawing/IMG_2938.jpg">
