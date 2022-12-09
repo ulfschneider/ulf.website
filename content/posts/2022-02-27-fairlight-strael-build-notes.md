@@ -160,18 +160,18 @@ The weight of the Shimano groupsets is competitive, making a decision for either
       <p>Weights are provided in gram. Parts that are contained in both groupsets, like wiring and battery, are omitted.</p>
      </caption>
   <thead>
-    <tr><th>Component</th><th>Dura-Ace weight</th><th>Ultegra weight</th><th class="bg-primary-5 dk:bg-primary-d4">Weight saving of Dura-Ace</th><th class="bg-accent-four-5 dk:bg-accent-four-d4">Added cost of Dura-Ace</th><th>Dura-Ace cost</th><th>Ultegra cost</th></tr>
+    <tr><th>Component</th><th>Dura-Ace weight</th><th>Ultegra weight</th><th class="bg-green text-white">Weight saving of Dura-Ace</th><th class="bg-red text-white">Added cost of Dura-Ace</th><th>Dura-Ace cost</th><th>Ultegra cost</th></tr>
   </thead>
   <tbody class="whitespace-nowrap">
-    <tr><td>Shifters</td><td>350</td><td>391</td><td class="bg-primary-5 dk:bg-primary-d4">-41</td><td class="bg-accent-four-5 dk:bg-accent-four-d4">280 €</td><td>940 €</td><td>660 €</td></tr>
-    <tr><td>Calipers</td><td>290</td><td>342</td><td class="bg-primary-5 dk:bg-primary-d4">-52</td><td class="bg-accent-four-5 dk:bg-accent-four-d4">180 €</td><td>320 €</td><td>140 €</td></tr>
-    <tr><td>Rotors</td><td>216</td><td>218</td><td class="bg-primary-5 dk:bg-primary-d4">-2</td><td class="bg-accent-four-5 dk:bg-accent-four-d4">35 €</td><td>120 €</td><td>85 €</td></tr>
-    <tr><td>Front derailleur</td><td>96</td><td>110</td><td class="bg-primary-5 dk:bg-primary-d4">-14</td><td class="bg-accent-four-5 dk:bg-accent-four-d4">230 €</td><td>430 €</td><td>200 €</td></tr>
-      <tr><td>Crankset</td><td>685</td><td>700</td><td class="bg-primary-5 dk:bg-primary-d4">-15</td><td class="bg-accent-four-5 dk:bg-accent-four-d4">290 €</td><td>540 €</td><td>250 €</td></tr>
-    <tr><td>Rear derailleur</td><td>215</td><td>262</td><td class="bg-primary-5 dk:bg-primary-d4">-47</td><td class="bg-accent-four-5 dk:bg-accent-four-d4">410 €</td><td>760 €</td><td>350 €</td></tr>
-    <tr><td>Cassette 11-30</td><td>223</td><td>291</td><td class="bg-primary-5 dk:bg-primary-d4">-68</td><td class="bg-accent-four-5  dk:bg-accent-four-d4">225 €</td><td>340 €</td><td>115 €</td></tr>
-    <tr><td>Chain</td><td>242</td><td>252</td><td class="bg-primary-5 dk:bg-primary-d4">-10</td><td class="bg-accent-four-5  dk:bg-accent-four-d4">10 €</td><td>50 €</td><td>40 €</td></tr>
-    <tr><td>Total</td><td>2317</td><td>2566</td><td class="bg-primary-5 dk:bg-primary-d4">-249</td><td class="bg-accent-four-5  dk:bg-accent-four-d4">1660 €</td><td>3500 €</td><td>1840 €</td></tr>
+    <tr><td>Shifters</td><td>350</td><td>391</td><td class="bg-green text-white">-41</td><td class="bg-red text-white">280 €</td><td>940 €</td><td>660 €</td></tr>
+    <tr><td>Calipers</td><td>290</td><td>342</td><td class="bg-green text-white">-52</td><td class="bg-red text-white">180 €</td><td>320 €</td><td>140 €</td></tr>
+    <tr><td>Rotors</td><td>216</td><td>218</td><td class="bg-green text-white">-2</td><td class="bg-red text-white">35 €</td><td>120 €</td><td>85 €</td></tr>
+    <tr><td>Front derailleur</td><td>96</td><td>110</td><td class="bg-green text-white">-14</td><td class="bg-red text-white">230 €</td><td>430 €</td><td>200 €</td></tr>
+      <tr><td>Crankset</td><td>685</td><td>700</td><td class="bg-green text-white">-15</td><td class="bg-red text-white">290 €</td><td>540 €</td><td>250 €</td></tr>
+    <tr><td>Rear derailleur</td><td>215</td><td>262</td><td class="bg-green text-white">-47</td><td class="bg-red text-white">410 €</td><td>760 €</td><td>350 €</td></tr>
+    <tr><td>Cassette 11-30</td><td>223</td><td>291</td><td class="bg-green text-white">-68</td><td class="bg-red text-white">225 €</td><td>340 €</td><td>115 €</td></tr>
+    <tr><td>Chain</td><td>242</td><td>252</td><td class="bg-green text-white">-10</td><td class="bg-red text-white">10 €</td><td>50 €</td><td>40 €</td></tr>
+    <tr><td>Total</td><td>2317</td><td>2566</td><td class="bg-green text-white">-249</td><td class="bg-red text-white">1660 €</td><td>3500 €</td><td>1840 €</td></tr>
 </table>
 
 
@@ -242,7 +242,7 @@ Every now and then, I hear or read that 12-speed is unnecessary and 11-speed is 
     <strong>Gear steps of different cassettes</strong>
     <dl>
       <dt>Color-coding for tooth-jumps:</dt>
-      <dd><span class="bg-accent-one-4 dk:bg-accent-one-d4 px-1">1 tooth</span> <span class="bg-accent-four-4 dk:bg-accent-four-d4 px-1">2 tooths</span> <span class="bg-accent-three-4 dk:bg-accent-three-d4 px-1">3 tooths</span> <span class="bg-accent-two-4 dk:bg-accent-two-d2 white px-1">4 tooths</span> <span class="bg-accent-two-3 dk:bg-accent-two white px-1">5 tooths</span></dd>
+      <dd><span class="bg-green text-white">1 tooth</span> <span class="bg-blue text-white">2 tooths</span> <span class="bg-orange text-white">3 tooths</span> <span class="bg-purple text-white">4 tooths</span> <span class="bg-red text-white">5 tooths</span></dd>
     </dl>
     <p>My current cassette is <span class="underline">SRAM 11-30 11-speed</span>.</p>
   </caption>
@@ -250,10 +250,10 @@ Every now and then, I hear or read that 12-speed is unnecessary and 11-speed is 
     <tr><th>Manufacturer and range</th><th colspan="12">Steps</th></tr>
   </thead>
   <tbody class="whitespace-nowrap">
-    <tr><td>Shimano 11-30 (12 speed)</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">11</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">12</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">13</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">14</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">15</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">16</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">17</td><td class="bg-accent-four-4 dk:bg-accent-four-d4 dk:bg-accent-four-d4 dk:bg-accent-four-d4">19</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">21</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">24</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">27</td><td  class="bg-accent-three-4 dk:bg-accent-three-d4">30</td></tr>
-    <tr><td>Shimano 11-34 (12 speed)</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">11</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">12</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">13</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">14</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">15</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">17</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">19</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">21</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">24</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">27</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">30</td><td class="bg-accent-two-4 dk:bg-accent-two-d2 white">34</td></tr>
-    <tr><td>SRAM 10-33 (12 speed)</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">10</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">11</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">12</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">13</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">14</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">15</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">17</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">19</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">21</td><td  class="bg-accent-three-4 dk:bg-accent-three-d4">24</td><td  class="bg-accent-two-4 dk:bg-accent-two-d2 white">28</td><td class="bg-accent-two-3 dk:bg-accent-two white">33</td></tr> 
-<tr class="brb br-base-color"><td>SRAM 11-30 (11 speed)</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">11</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">12</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">13</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">14</td><td class="bg-accent-one-4 dk:bg-accent-one-d4">15</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">17</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">19</td><td class="bg-accent-four-4 dk:bg-accent-four-d4">21</td><td class="bg-accent-three-4 dk:bg-accent-three-d4">24</td><td  class="bg-accent-three-4 dk:bg-accent-three-d4">27</td><td  class="bg-accent-three-4 dk:bg-accent-three-d4">30</td><td class="center">X</td></tr>           
+    <tr><td>Shimano 11-30 (12 speed)</td><td class="bg-green text-white">11</td><td class="bg-green text-white">12</td><td class="bg-green text-white">13</td><td class="bg-green text-white">14</td><td class="bg-green text-white">15</td><td class="bg-green text-white">16</td><td class="bg-green text-white">17</td><td class="bg-blue text-white">19</td><td class="bg-blue text-white">21</td><td class="bg-orange text-white">24</td><td class="bg-orange text-white">27</td><td  class="bg-orange text-white">30</td></tr>
+    <tr><td>Shimano 11-34 (12 speed)</td><td class="bg-green text-white">11</td><td class="bg-green text-white">12</td><td class="bg-green text-white">13</td><td class="bg-green text-white">14</td><td class="bg-green text-white">15</td><td class="bg-blue text-white">17</td><td class="bg-blue text-white">19</td><td class="bg-blue text-white">21</td><td class="bg-orange text-white">24</td><td class="bg-orange text-white">27</td><td class="bg-orange text-white">30</td><td class="bg-purple text-white">34</td></tr>
+    <tr><td>SRAM 10-33 (12 speed)</td><td class="bg-green text-white">10</td><td class="bg-green text-white">11</td><td class="bg-green text-white">12</td><td class="bg-green text-white">13</td><td class="bg-green text-white">14</td><td class="bg-green text-white">15</td><td class="bg-blue text-white">17</td><td class="bg-blue text-white">19</td><td class="bg-blue text-white">21</td><td  class="bg-orange text-white">24</td><td  class="bg-purple text-white">28</td><td class="bg-red text-white">33</td></tr> 
+<tr><td>SRAM 11-30 (11 speed)</td><td class="bg-green text-white">11</td><td class="bg-green text-white">12</td><td class="bg-green text-white">13</td><td class="bg-green text-white">14</td><td class="bg-green text-white">15</td><td class="bg-blue text-white">17</td><td class="bg-blue text-white">19</td><td class="bg-blue text-white">21</td><td class="bg-orange text-white">24</td><td  class="bg-orange text-white">27</td><td  class="bg-orange text-white">30</td><td class="center">X</td></tr>           
   </tbody>
 </table>
 
