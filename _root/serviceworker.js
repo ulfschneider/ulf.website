@@ -19,7 +19,7 @@ const NO_CACHE_URLS = [
 ]
 
 if ('{{trimBase}}') {
-    NO_CACHE_URLS.push(/^(?!\/{{trimBase}}\/).*/)
+    NO_CACHE_URLS.push(/^(?!\/{{trimBase}}\/).*/);
 }
 
 
