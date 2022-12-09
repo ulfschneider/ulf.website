@@ -400,11 +400,11 @@ function renderPreview(color) {
     return;
   }
   let [r, g, b] = colors[color];
-  document.getElementById('preview').innerHTML = `
-      ${color}
+  document.getElementById('preview').innerHTML = `      
        <span class="swatch"
           style="background-color: ${rgbToHex(r, g, b)};">&nbsp;</span>
-      ${rgbToHex(r, g, b).toUpperCase()}
+          ${color}
+      ${rgbToHex(r, g, b)}
       `;
 }
 svg.addEventListener('mouseover', e => {

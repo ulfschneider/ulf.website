@@ -57,7 +57,7 @@
 
   /* tags */
   nav .tag {
-    @apply no-underline px-ryt-xs py-ryt-2xs rounded bg-light whitespace-nowrap;
+    @apply no-underline px-ryt-xs py-ryt-2xs rounded bg-light dark:bg-light-dark whitespace-nowrap;
   }
   nav .tag.current {
     @apply px-ryt-xs py-ryt-2xs rounded bg-primary text-white whitespace-nowrap;

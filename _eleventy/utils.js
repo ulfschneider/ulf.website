@@ -151,8 +151,36 @@ module.exports = {
         return stripHtml($('body').html());
     },
 
-
     mapItem: function (item) {
+        let tagsWithUrls = [];
+
+        if (item.data.tags) {
+            let tags = [...new Set(item.data.tags)].sort();
+            for (let tag of tags) {
+                tagsWithUrls.push({
+                    name: tag,
+                    url: this.tagUrl(tag)
+                });
+            }
+        }
+
+        return {
+            id: item.url,
+            title: item.data.title,
+            date: item.date,
+            humanDate: this.humanDate(item.date),
+            abstract: item.data.abstract,
+            author: item.data.author,
+            refer: item.data.refer,
+            layout: item.data.layout,
+            tags: tagsWithUrls,
+            notags: item.data.notags,
+            starred: item.data.starred,
+            content: this.removeHtml(item.templateContent)
+        }
+    },
+
+    mapItemMeta: function (item) {
         let tagsWithUrls = [];
 
         if (item.data.tags) {

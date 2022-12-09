@@ -46,10 +46,11 @@ permalink: "{{site.search.url}}"
       parent.appendChild(article);
       if (friend.title && friend.title != "notitle") {
         let title = document.createElement("h2");
-        title.classList = "my-ryt-lg mb-ryt-sm";
+        title.classList = "mt-ryt mb-0";
         article.appendChild(title);
 
         let linkToArticle = document.createElement("a");
+        linkToArticle.classList = 'no-underline';
         linkToArticle.href = entry.ref;
         linkToArticle.innerHTML = friend.title;
         title.appendChild(linkToArticle);
@@ -72,12 +73,11 @@ permalink: "{{site.search.url}}"
 
       if (friend.date || (friend.tags.length && ! friend.notags)) {
         let aside = document.createElement("aside");
-        aside.classList = `mt-ryt-sm ${
+        aside.classList = `${
           friend.starred
             ? friend.starred
             : ""
           }`;
-        article.innerHTML += " ";
         article.appendChild(aside);
 
         if (friend.date) {
@@ -91,7 +91,6 @@ permalink: "{{site.search.url}}"
         if (friend.tags.length && ! friend.notags) {
           let tags = document.createElement("span");
           aside.appendChild(tags);
-          tags.appendChild(document.createTextNode(" "));
 
           for (let tag of friend.tags) {
             if (tag.name == "{{site.starTag}}") {
@@ -99,7 +98,6 @@ permalink: "{{site.search.url}}"
               tagLink.href = tag.url;
               tagLink.innerHTML = "{{site.starTagSymbol}}";
               tagLink.classList = "no-underline px-ryt-2xs mr-ryt-sm";
-              tags.appendChild(document.createTextNode(" "));
               tags.appendChild(tagLink);
               break;
             }
@@ -109,8 +107,7 @@ permalink: "{{site.search.url}}"
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
               tagLink.innerHTML = tag.name;
-              tagLink.classList = "inline-block mr-ryt-sm";
-              tags.appendChild(document.createTextNode(" "));
+              tagLink.classList = "no-underline inline-block mr-ryt-sm";
               tags.appendChild(tagLink);
             }
           }

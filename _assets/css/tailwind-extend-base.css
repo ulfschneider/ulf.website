@@ -62,12 +62,12 @@
 
   /* font-size*/
   html {
-    @apply text-base bg-light;
+    @apply text-base bg-light dark:bg-light-dark;
   }
 
   /* base colors */
   body {
-    @apply text-stone-900 bg-light-light;
+    @apply text-write-dark bg-back-light dark:text-write-light dark:bg-back-dark;
   }
 
   /* focus */
@@ -86,7 +86,7 @@
   a:hover,
   a:focus,
   a:active {
-    @apply text-link;
+    @apply text-link dark:text-link-light;
   }
 
   /* headings */
@@ -114,7 +114,7 @@
   }
 
   details > summary {
-    @apply hover:text-link;
+    @apply hover:text-link dark:hover:text-link-light;
   }
 
   /* typography */
@@ -124,7 +124,7 @@
 
   mark,
   .mark {
-    @apply bg-mark text-black;
+    @apply bg-mark text-write-dark;
   }
 
   /* dl */
@@ -218,7 +218,7 @@
 
   /* img */
   img {
-    @apply object-contain object-left;
+    @apply object-contain object-left dark:filter dark:brightness-75 dark:contrast-125;
     max-height: 80vh;
   }
 
@@ -292,7 +292,7 @@
 
   /* kbd */
   kbd {
-    @apply font-mono bg-light text-center text-sm px-ryt-xs inline-block border border-current rounded-sm;
+    @apply font-mono bg-light dark:bg-light-dark text-center text-sm px-ryt-xs inline-block border border-current rounded-sm;
   }
 
   /* pre and pre code */
@@ -309,11 +309,11 @@
   }
 
   code:not(pre code) {
-    @apply bg-light px-ryt-2xs font-mono;
+    @apply bg-light text-write-dark dark:bg-light-dark dark:text-write-light px-ryt-2xs font-mono;
   }
 
   pre code {
-    @apply bg-stone-800 text-stone-100 px-ryt py-ryt-sm -mx-ryt block text-left leading-tight whitespace-pre;
+    @apply bg-back-dark dark:bg-light-dark text-write-light px-ryt py-ryt-sm -mx-ryt block text-left leading-tight whitespace-pre font-mono;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
@@ -350,7 +350,7 @@
   fieldset,
   label,
   legend {
-    @apply font-sans font-normal text-base appearance-none placeholder-meta caret-primary;
+    @apply font-sans font-normal text-base appearance-none placeholder-meta caret-primary dark:caret-primary-light;
   }
 
   input[type="submit"],
@@ -412,11 +412,11 @@
   input[type="tel"],
   input[type="url"],
   input[list] {
-    @apply border border-meta p-ryt-xs align-middle leading-none border-r-0 bg-white;
+    @apply border border-meta p-ryt-xs align-middle leading-none border-r-0 bg-white dark:bg-light-dark;
   }
 
   textarea {
-    @apply leading-snug border border-meta py-xs px-xs border-r-0 resize-none font-normal bg-light-light;
+    @apply leading-snug border border-meta py-xs px-xs border-r-0 resize-none font-normal bg-white dark:bg-light-dark;
   }
 
   fieldset {

@@ -12,7 +12,7 @@ module.exports = {
       '_layouts/**/*',
       '_eleventy/**/*',
       '_assets/js/**/*',
-      '_assets/css/tailwind*.css']
+      '_assets/css/tailwind-extend-components.css']
   },
   theme: {
     screens: {
@@ -43,17 +43,29 @@ module.exports = {
     },
     extend: {
       colors: {
+        'write': {
+          light: colors.stone[100],
+          dark: colors.stone[900]
+        },
+        'back': {
+          light: colors.stone[50],
+          dark: colors.stone[800]
+        },
         'primary': {
-          light: colors.cyan[100],
+          light: colors.cyan[300],
           DEFAULT: colors.cyan[600],
           dark: colors.cyan[900]
         },
-        'link': colors.cyan[600],
+        'link': {
+          light: colors.cyan[300],
+          DEFAULT: colors.cyan[600],
+          dark: colors.cyan[800],
+        },
         'meta': colors.stone[500],
         'light': {
           light: colors.stone[50],
           DEFAULT: colors.stone[200],
-          dark: colors.stone[400],
+          dark: colors.stone[700],
         },
         'outline': {
           light: colors.yellow[100],

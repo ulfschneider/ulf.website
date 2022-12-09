@@ -8,7 +8,6 @@ const postcssHexRgba = require('postcss-hexrgba');
 const postcssCustomMedia = require('postcss-custom-media');
 const postcssCustomProperties = require('postcss-custom-properties');
 const postcssCalc = require('postcss-calc');
-const postcssPurgeCSS = require('@fullhuman/postcss-purgecss');
 const cssNano = require('cssnano');
 const rename = require('gulp-rename');
 
@@ -41,18 +40,3 @@ const processingCSS = () => {
 };
 
 module.exports = processingCSS;
-
-
-//postcssPurgeCSS({
-//content: [
-//    'content/pages/**/*',
-//    'content/posts/**/*',
-//    '!content/**/*compose.html',
-//    '_includes/**/*',
-//    '_layouts/**/*',
-//    '_eleventy/**/*',
-//    '_assets/js/**/*',
-//    '_assets/css/customize.css'
-//],
-//    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] //check https://flaviocopes.com/tailwind-setup/
-//            }),

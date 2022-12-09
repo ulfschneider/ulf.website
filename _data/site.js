@@ -17,8 +17,8 @@ module.exports = {
     locale: "en",
     direction: "ltr",
     theme_color: "#e7e5e4",
-    dark_theme_color: "#3a3a3a",
-    background_color: "#3a3a3a",
+    dark_theme_color: "#44403c",
+    background_color: "#44403c",
     origin: ORIGIN,
     base: BASE,
     url: URL,
@@ -39,7 +39,7 @@ module.exports = {
         phone: "+49 163 2505164",
         twitter: ""
     },
-    paginationSize: 7,
+    paginationSize: 50,
     starTag: "star",
     starTagSymbol: "★",
     mainnav: [{

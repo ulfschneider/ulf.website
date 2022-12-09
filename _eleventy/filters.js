@@ -101,7 +101,8 @@ module.exports = {
     excerptIndex: function (collection) {
         let result = [];
         for (let item of collection) {
-            let mappedItem = utils.mapItem(item);
+            let mappedItem = utils.mapItemMeta(item);
+            mappedItem.content = utils.excerptFromItem(item);
             result.push(mappedItem);
         }
         return JSON.stringify(result);
