@@ -350,7 +350,7 @@
   fieldset,
   label,
   legend {
-    @apply font-sans font-normal text-base appearance-none placeholder-meta caret-primary dark:caret-primary-light;
+    @apply font-sans font-normal text-base appearance-none placeholder-meta caret-primary dark:caret-primary-light rounded-none;
   }
 
   input[type="submit"],
