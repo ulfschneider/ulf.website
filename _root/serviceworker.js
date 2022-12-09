@@ -1,8 +1,34 @@
 
 
-const TRIM_BASE_PLACEHOLDER = '{{trimBase}}';
-const CACHE_NAME = TRIM_BASE_PLACEHOLDER && TRIM_BASE_PLACEHOLDER != '{{' + 'trimBase' + '}}' ? `${TRIM_BASE_PLACEHOLDER}-cache` : 'cache';
-const IGNORE_CACHE_PATTERN = undefined; //these caches will get ignored. must be a regular expression if defined
+const CACHE_NAME = '{{trimBase}}' ? '{{trimBase}}-cache' : 'cache';
+
+//the following caches will get ignored. if the value is defined, it must be a regular expression
+//if the value is undefined, the cache will be completely cleared except of the cache names that
+//are under control of this service worker
+//const IGNORE_CACHE_PATTERN = new RegExp(`^(?!${CACHE_NAME}).*`); //do not take control of what does not start with our cache name
+
+IGNORE_CACHE_PATTERN = undefined; //do not ignore anything - take control of all caches
+
+const OFFLINE_URL = '{{offline}}' ? '{{offline}}' : '/offline/';
+
+const NO_CACHE_URLS = [
+    '/feed.xml/',
+    '/feed.xml',
+    '/rss.xml/',
+    '/rss.xml'
+]
+
+if ('{{trimBase}}') {
+    NO_CACHE_URLS.push(/^(?!\/{{trimBase}}\/).*/)
+}
+
+
+const PRE_CACHE_URLS = [
+    OFFLINE_URL,
+    '/',
+    '/css/main-{{cssVersion}}.css'
+];
+
 
 const SCRIPT_CACHE_NAME = `${CACHE_NAME}-script-{{scriptVersion}}`;
 const RUNTIME_CACHE_NAME = `${CACHE_NAME}-runtime-{{runtimeVersion}}`;
@@ -47,24 +73,6 @@ const CACHE_SETTINGS = {
         maxItems: 100 //cache this amount of images, not more
     }
 }
-
-const OFFLINE_PLACEHOLDER = '{{offline}}';
-const OFFLINE_URL = OFFLINE_PLACEHOLDER && OFFLINE_PLACEHOLDER != '{{' + 'offline' + '}}' ? `${OFFLINE_PLACEHOLDER}` : '/offline/';
-
-const NO_CACHE_URLS = [
-    '/feed.xml/',
-    '/feed.xml',
-    '/rss.xml/',
-    '/rss.xml'
-]
-
-const PRE_CACHE_URLS = [
-    OFFLINE_URL,
-    '/',
-    '/css/main-{{cssVersion}}.css',
-    '/js/site-scripts-{{scriptVersion}}.js',
-    '/js/lunr-{{scriptVersion}}.js'
-];
 
 
 //preCache on install
@@ -139,7 +147,7 @@ addEventListener('fetch', event => {
 function isHtmlRequest(request) {
     let url = new URL(request.url);
     let accept = request.headers.get('Accept');
-    return accept && accept.includes('text/html') || /^\/.+\/$/.test(url.pathname);
+    return accept && accept.includes('text/html') || /^\/.+\/$/.test(url.pathname) || /^\/$/.test(url.pathname);
 }
 
 async function preCache() {
@@ -157,9 +165,9 @@ async function clearOldCaches() {
     return caches
         .keys()
         .then(cacheNames => cacheNames.filter(name => {
-            if (IGNORE_CACHE_PATTERN && IGNORE_CACHE_PATTERN.test(name) == false) {
+            if (IGNORE_CACHE_PATTERN && IGNORE_CACHE_PATTERN.test(name)) {
                 //if the given cache name contains the ignore pattern, well, ignore it
-                log(`Ignore cache ${name}`);
+                log(`Ignoring cache ${name}`);
                 return false;
             }
             //if the cache name is not part of the cache names of this service worker, delete the cache
@@ -285,6 +293,10 @@ function log(message) {
     console.log(message);
 }
 
+function warnlog(message) {
+    console.warn(message);
+}
+
 function errorlog(message) {
     console.error(message);
 }
@@ -371,11 +383,11 @@ function isPreCacheUrl({ request, response }) {
     for (let p of PRE_CACHE_URLS) {
         if (p instanceof RegExp) {
             if (p.test(url.pathname + url.search)) {
-                log(`Pre-caching: ${request.url}`);
+                log(`Pre-caching: ${url}`);
                 return true;
             }
         } else if (p == url.pathname + url.search) {
-            log(`Pre-caching: ${request.url}`);
+            log(`Pre-caching: ${url}`);
             return true;
         }
     }

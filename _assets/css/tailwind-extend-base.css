@@ -124,7 +124,7 @@
 
   mark,
   .mark {
-    @apply bg-mark-light text-black;
+    @apply bg-mark text-black;
   }
 
   /* dl */

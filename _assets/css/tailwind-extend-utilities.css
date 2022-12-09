@@ -1,6 +1,18 @@
 @layer utilities {
-  .indent:not(.indent .no-indent) p + .indent:not(.indent .no-indent) p {
-    @apply my-0 indent-ryt-lg;
+  .indent:not(.indent .no-indent) {
+    p {
+      @apply my-0;
+    }
+    p + p {
+      @apply my-0 indent-ryt-lg;
+    }
+  }
+
+  .no-indent:not(.no-indent .indent) {
+    p,
+    p + p {
+      @apply my-ryt indent-0;
+    }
   }
 
   .outline-indicator {

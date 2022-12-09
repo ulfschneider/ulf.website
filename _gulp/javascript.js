@@ -18,7 +18,7 @@ const processingJavascript = () => {
             noSource: true
         }))
         .pipe(rename(function (path) {
-            path.basename += `-${site.versioning.script}`
+            path.basename += `-${site.cacheVersioning.script}`
         }))
         .pipe(dest(DEST));
 };

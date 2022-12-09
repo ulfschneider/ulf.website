@@ -66,14 +66,6 @@ module.exports = {
         }
     },
 
-    contentIndex: function (collection) {
-        let result = [];
-        for (let item of collection) {
-            result.push(utils.mapItem(item));
-        }
-        return JSON.stringify(result);
-    },
-
     tagIntro: function (collection, tag) {
         for (let item of collection) {
             if (!tag && (!item.data.tags || item.data.tags.length == 0)) {
@@ -110,8 +102,6 @@ module.exports = {
         let result = [];
         for (let item of collection) {
             let mappedItem = utils.mapItem(item);
-            mappedItem.content = utils.excerptFromItem(item);
-
             result.push(mappedItem);
         }
         return JSON.stringify(result);

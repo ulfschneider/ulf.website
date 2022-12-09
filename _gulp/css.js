@@ -35,7 +35,7 @@ const processingCSS = () => {
         ]))
         .pipe(replace())
         .pipe(rename(function (path) {
-            path.basename += `-${site.versioning.css}`
+            path.basename += `-${site.cacheVersioning.css}`
         }))
         .pipe(dest(DEST));
 };

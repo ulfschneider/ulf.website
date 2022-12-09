@@ -62,8 +62,8 @@ module.exports = {
         },
         'mark': {
           light: colors.yellow[100],
-          DEFAULT: colors.yellow[500],
-          dark: colors.yellow[900]
+          DEFAULT: colors.yellow[300],
+          dark: colors.yellow[600]
         },
         'orange': {
           light: colors.orange[100],

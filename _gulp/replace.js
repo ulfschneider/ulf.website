@@ -3,8 +3,6 @@ const through = require('through2');
 const site = require('../_data/site.js');
 const utils = require('../_eleventy/utils.js');
 
-const CACHE_VERSION = site.versioning?.cache || '1';
-
 const replacements = [
     {
         search: '{{theme_color}}',
@@ -32,31 +30,31 @@ const replacements = [
     },
     {
         search: '{{scriptVersion}}',
-        replace: site.versioning.script
+        replace: site.cacheVersioning.script
     },
     {
         search: '{{runtimeVersion}}',
-        replace: site.versioning.runtime
+        replace: site.cacheVersioning.runtime
     },
     {
         search: '{{cssVersion}}',
-        replace: site.versioning.css
+        replace: site.cacheVersioning.css
     },
     {
         search: '{{imageVersion}}',
-        replace: site.versioning.image
+        replace: site.cacheVersioning.image
     },
     {
         search: '{{fontVersion}}',
-        replace: site.versioning.font
+        replace: site.cacheVersioning.font
     },
     {
         search: '{{jsonVersion}}',
-        replace: site.versioning.json
+        replace: site.cacheVersioning.json
     },
     {
         search: '{{searchVersion}}',
-        replace: site.versioning.search
+        replace: site.cacheVersioning.search
     }
 ]
 
