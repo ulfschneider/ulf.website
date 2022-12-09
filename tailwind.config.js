@@ -44,12 +44,12 @@ module.exports = {
     extend: {
       colors: {
         'write': {
-          light: colors.stone[300],
-          dark: colors.stone[800]
+          light: colors.neutral[300],
+          dark: colors.neutral[800]
         },
         'back': {
-          light: colors.stone[50],
-          dark: colors.stone[800]
+          light: colors.neutral[50],
+          dark: colors.neutral[900]
         },
         'primary': {
           light: colors.cyan[300],
@@ -61,11 +61,11 @@ module.exports = {
           DEFAULT: colors.cyan[600],
           dark: colors.cyan[800],
         },
-        'meta': colors.stone[500],
+        'meta': colors.neutral[500],
         'light': {
-          light: colors.stone[50],
-          DEFAULT: colors.stone[200],
-          dark: colors.stone[700],
+          light: colors.neutral[50],
+          DEFAULT: colors.neutral[200],
+          dark: colors.neutral[800],
         },
         'outline': {
           light: colors.yellow[100],
