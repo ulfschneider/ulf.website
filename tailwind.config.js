@@ -29,7 +29,7 @@ module.exports = {
       'lg': ['1.15rem', '1.5'],
       'xl': ['1.2rem', '1.4'],
       '2xl': ['1.3rem', '1.4'],
-      '3xl': ['2.8rem', '1.1'],
+      '3xl': ['2.6rem', '1.1'],
       '4xl': ['3.6rem', '1.1'],
       'smaller': 'smaller',
       'larger': 'larger'
