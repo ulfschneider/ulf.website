@@ -71,23 +71,35 @@ function addLayoutAliases(eleventyConfig) {
 }
 
 function addCollections(eleventyConfig) {
-    //used site tags
-    eleventyConfig.addCollection('usedSiteTags', collectionAPI => {
-        console.log('Derive used site tags');
-        let usedSiteTags = utils.extractTags([
-            ...collectionAPI.getFilteredByGlob('content/posts/**')
+    //live content
+    eleventyConfig.addCollection('liveContent', collectionAPI => {
+        console.log('Derive live content');
+        return [
+            ...collectionAPI.getFilteredByGlob(['content/**'])
+                .filter(utils.isLiveItem)
                 .map(item => {
-                    if (item.data?.tags?.includes(site.starTag)) {
-                        item.data.starred = site.starTag;
-                    } else {
-                        item.data.starred = '';
-                    }
+                    item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
+                    item.data.modifiedDate = filters.modifiedDate(item);
                     return item;
                 })
+                .sort(utils.compareItemDate)
+                .reverse()
+        ];
+    });
+    //searchable content
+    eleventyConfig.addCollection('searchableContent', collectionAPI => {
+        console.log('Derive searchable content');
+        return [
+            ...collectionAPI.getFilteredByGlob(['content/**', '!content/tagintros/**'])
                 .filter(utils.isLiveItem)
-        ]);
-        filters.createColorMap(usedSiteTags);
-        return usedSiteTags;
+                .map(item => {
+                    item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
+                    item.data.modifiedDate = filters.modifiedDate(item);
+                    return item;
+                })
+                .sort(utils.compareItemDate)
+                .reverse()
+        ];
     });
     //live posts
     eleventyConfig.addCollection('livePosts', collectionAPI => {
@@ -110,21 +122,6 @@ function addCollections(eleventyConfig) {
                 .reverse()
         ];
     });
-    //live content
-    eleventyConfig.addCollection('liveContent', collectionAPI => {
-        console.log('Derive live content');
-        return [
-            ...collectionAPI.getFilteredByGlob(['content/**', '!content/tagintros/**'])
-                .filter(utils.isLiveItem)
-                .map(item => {
-                    item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
-                    item.data.modifiedDate = filters.modifiedDate(item);
-                    return item;
-                })
-                .sort(utils.compareItemDate)
-                .reverse()
-        ];
-    });
     //tag intros
     eleventyConfig.addCollection('tagIntros', collectionAPI => {
         console.log('Derive tag intros');
@@ -136,6 +133,24 @@ function addCollections(eleventyConfig) {
                     return item;
                 })
         ];
+    });
+    //used site tags
+    eleventyConfig.addCollection('usedSiteTags', collectionAPI => {
+        console.log('Derive used site tags');
+        let usedSiteTags = utils.extractTags([
+            ...collectionAPI.getFilteredByGlob('content/posts/**')
+                .map(item => {
+                    if (item.data?.tags?.includes(site.starTag)) {
+                        item.data.starred = site.starTag;
+                    } else {
+                        item.data.starred = '';
+                    }
+                    return item;
+                })
+                .filter(utils.isLiveItem)
+        ]);
+        filters.createColorMap(usedSiteTags);
+        return usedSiteTags;
     });
     //double pagination
     eleventyConfig.addCollection('doublePagination', collectionAPI => {

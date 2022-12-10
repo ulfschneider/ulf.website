@@ -10,7 +10,6 @@
   <meta name="msapplication-TileColor" content="{{site.theme_color}}">
   <meta name="theme-color" content="{{site.theme_color}}">
 {%- endif -%}
-<meta name="description" content="{%- if title and title != 'notitle' and abstract == nil %}{{ title }}. {%endif %}{% if abstract != nil %}{{abstract | strip_html}}{% endif %}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{site.base}}apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="{{site.base}}favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{site.base}}favicon-16x16.png">
@@ -22,17 +21,26 @@
 <!-- SEO/feed -->
 <link rel="canonical" href="{{site.origin}}{{page.url}}">
 <link rel="alternate" href="{{site.origin}}{{site.rss}}" title="{{site.title}}" type="application/atom+xml">
-<title>
-  {%- if title != nil and title != "notitle" and title != ""-%}
-    {{ title }}
-  {%- elsif tag != nil and tag != "" -%}
-    Posts tagged {{tag}}
-  {%- elsif pagedItems.tag != nil and pagedItems.tag != "" -%}
-    Posts tagged {{pagedItems.tag}}
-  {%- elsif pagedItems.tag == "" -%}
-    All posts
-  {%- else -%}
-    {{ site.name }}
-  {%- endif -%}
-</title>
+
+{%- if title != nil and title != "notitle" and title != ""-%}
+  {%- assign adaptedTitle = title -%}
+{%- elsif tag != nil and tag != "" -%}
+  {%- assign adaptedTitle = "Posts tagged " | append: tag -%}
+{%- elsif pagedItems.tag != nil and pagedItems.tag != "" -%}
+  {%- assign adaptedTitle = "Posts tagged " | append: pagedItems.tag -%}
+{%- elsif pagedItems.tag == "" -%}
+  {%- assign adaptedTitle = "All posts" -%}
+{%- else -%}
+  {%- assign adaptedTitle = site.name -%}
+{%- endif -%}
+<title>{{adaptedTitle}}</title>
+<meta property="og:title" content="{{adaptedTitle}}">
+{%- if abstract  -%}
+  <meta name="description" content="{{abstract}}">
+  <meta property="og:description" content="{{abstract}}">
+{%- endif -%}
+{%- assign firstImage = collections.liveContent | firstImage: page.url -%}
+{%- if firstImage.src  -%}
+  <meta property="og:image" content="{{site.origin}}{{firstImage.src}}">
+{%- endif -%}
 {% include "head-scripts.html" %}

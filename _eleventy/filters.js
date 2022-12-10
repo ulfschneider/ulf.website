@@ -108,49 +108,62 @@ module.exports = {
         return JSON.stringify(result);
     },
 
-    firstImage: function (collection) {
+    firstImage: function (collection, url) {
         let result = [];
         for (let item of collection) {
-            let src;
-            let alt;
-            if (item.data.hero) {
-                src = utils.clearResponsive(item.data.hero);
-                if (item.data.herocaption) {
-                    alt = item.data.herocaption;
+            if (!url || (url && url == item.url)) {
+                let src;
+                let alt;
+                if (item.data.hero) {
+                    src = utils.clearResponsive(item.data.hero);
+                    if (item.data.herocaption) {
+                        alt = item.data.herocaption;
+                    }
+                } else {
+                    let img = utils.firstImageTag(item.templateContent);
+                    if (img) {
+                        src = utils.clearResponsive(utils.srcAttr(img));
+                        alt = utils.altAttr(img);
+                    }
                 }
-            } else {
-                let img = utils.firstImageTag(item.templateContent);
-                if (img) {
-                    src = utils.clearResponsive(utils.srcAttr(img));
-                    alt = utils.altAttr(img);
+                if (src) {
+                    let extname = path.extname(src);
+                    let stem = path.basename(src, extname);
+                    let dirname = path.dirname(src);
+                    let humanDate = utils.humanDate(item.date);
+                    let dimensions;
+                    try {
+                        dimensions = utils.getDimensions(`${site.output}${src}`);
+                    } catch (e) {
+                        console.log(e);
+                    }
+
+                    let imgData = {
+                        src: src,
+                        smallSrc: dirname + '/' + stem + site.imgSmallPostfix + extname,
+                        width: dimensions ? dimensions.width : 0,
+                        height: dimensions ? dimensions.height : 0,
+                        alt: alt,
+                        url: item.url,
+                        title: item.data.title,
+                        starred: item.data.starred,
+                        date: item.date,
+                        humanDate: humanDate
+                    };
+
+                    if (url) {
+                        return imgData;
+                    } else {
+                        result.push(imgData);
+                    }
                 }
-            }
-            if (src) {
-                let extname = path.extname(src);
-                let stem = path.basename(src, extname);
-                let dirname = path.dirname(src);
-                let humanDate = utils.humanDate(item.date);
-                let dimensions;
-                try {
-                    dimensions = utils.getDimensions(`${site.output}${src}`);
-                } catch (e) {
-                    console.log(e);
-                }
-                result.push({
-                    src: src,
-                    smallSrc: dirname + '/' + stem + site.imgSmallPostfix + extname,
-                    width: dimensions ? dimensions.width : 0,
-                    height: dimensions ? dimensions.height : 0,
-                    alt: alt,
-                    url: item.url,
-                    title: item.data.title,
-                    starred: item.data.starred,
-                    date: item.date,
-                    humanDate: humanDate
-                });
             }
         }
-        return JSON.stringify(result);
+        if (url) {
+            return {};
+        } else {
+            return JSON.stringify(result);
+        }
     },
 
     imgAspectRatio: function (src) {
