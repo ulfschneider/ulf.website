@@ -5,20 +5,20 @@
 {%- endif -%}
 <div class="my-ryt-xl">
   {%- for p in livePosts  -%}
-
-    {%- if limit > 0 and forloop.index > limit -%}
+    {%- assign currentDate = p.date | humanDate -%}
+    {%- if limit == 1 and forloop.index > limit and currentDate != referenceDate -%}
+      {%- break -%}
+    {%- elsif limit > 1 and forloop.index > limit -%}
       {%- break -%}
     {%- endif -%}
+    {%- assign referenceDate = p.date | humanDate -%}
 
     {%- if p.url == page.url -%}
       {%- continue -%}
     {%- endif -%}
 
-    {%- assign href = p.url -%}
-
-    {%- assign count = count | plus: 1 -%}
-
     <article>
+
       {% if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil %}
         <h2 class="mt-ryt-lg mb-0">
           <a class="no-underline" href="{{p.url}}">
