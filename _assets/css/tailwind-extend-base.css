@@ -67,7 +67,7 @@
 
   /* base colors */
   body {
-    @apply text-write-dark bg-back-light dark:text-write-light dark:bg-back-dark;
+    @apply text-write-dark bg-back-light dark:text-write-light dark:bg-back-dark overflow-x-hidden;
   }
 
   /* focus */
