@@ -119,25 +119,18 @@ permalink: "{{site.search.url}}"
     }
   }
 
-  function printHeading(resultSet, query) {
-    let heading = document.getElementsByTagName("h1");
-    if (heading.length) {
-      if (resultSet.length) {
-        heading[0].innerHTML = 'Search results for "' + query + '"';
-      } else {
-        heading[0].innerHTML = 'No search results for "' + query + '"';
-      }
-    }
+  function printTitle(query) {
+    document.title = 'Search "' + query + '"';
   }
 
   function printResultCount(searchResults, resultSet, query) {
     let count = document.createElement("div");
     if (resultSet.length == 0) {
-      count.innerHTML = 'Your search for "' + query + '" did not return any results.';
+      count.innerHTML = 'Your search <strong>' + query + '</strong> did not return any results.';
     } else if (resultSet.length == 1) {
-      count.innerHTML = 'One result:';
+      count.innerHTML = 'One result <strong>' + query + '</strong:';
     } else {
-      count.innerHTML = resultSet.length + ' results:';
+      count.innerHTML = resultSet.length + ' results for <strong>' + query + '</strong>:';
     } searchResults.append(count);
   }
 
@@ -160,7 +153,7 @@ permalink: "{{site.search.url}}"
       return;
     }
     removeChildren(searchResults);
-    printHeading(resultSet, query);
+    printTitle(query);
     printResultCount(searchResults, resultSet, query);
     if (resultSet.length) {
       for (let entry of resultSet) {
