@@ -7,7 +7,7 @@
         "dev": "gulp && concurrently \"eleventy --incremental --serve\" \"gulp watch\"",
         "build": "set CACHE_BUST=true && gulp && eleventy",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "clear-cache": "rm -rf tweets",
+        "clear-cache": "rm -rf _tweets",
         "update": "npm update && npm audit fix"
     },
     "keywords": [],

@@ -19,27 +19,26 @@
     {%- assign count = count | plus: 1 -%}
 
     <article>
-      {%- if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil -%}
-        <h2 class="mt-ryt mb-0">
+      {% if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil %}
+        <h2 class="mt-ryt-lg mb-0">
           <a class="no-underline" href="{{p.url}}">
             {{ p.data.title }}
           </a>
         </h2>
-      {%- else -%}
+      {% else %}
         <p>{{ p.templateContent | strip_html | strip | truncatewords : 25
  , "&nbsp;… " }}
           <a href="{{p.url}}">Read more</a>
         </p>
-      {%- endif -%}
-
+      {% endif %}
       <aside class="{{p.data.starred}}">
-        {%- include "date-tags.html" posted: p.date tags: p.data.tags notags: p.data.notags -%}
+        {% include "date-tags.html" posted: p.date tags: p.data.tags notags: p.data.notags %}
       </aside>
     </article>
 
   {%- endfor -%}
+  {%- include "pagination-nav.html" -%}
 </div>
 
-{%- include "pagination-nav.html" -%}
 {%- include "site-tags.html" -%}
 {%- include "search-field.html" -%}

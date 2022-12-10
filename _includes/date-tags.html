@@ -11,29 +11,29 @@
 {%- endif -%}
 {%- if posted != nil or updated != nil or tags != nil -%}
   <div class="inline-block">
-    {%- if posted != nil -%}
-      <time class="inline-block {% if updated != nil or tags != nil %}mr-ryt{% endif %}" datetime="{{date | isoDate}}" class="inline-block">{{ posted | humanDate }}</time>
-    {%- endif -%}
-    {%- if updated -%}
+    {% if posted != nil %}
+      <time class="inline-block {% if updated != nil or tags != nil %}mr-ryt-sm{% endif %}" datetime="{{date | isoDate}}" class="inline-block">{{ posted | humanDate }}</time>
+    {% endif %}
+    {% if updated %}
       <span class="inline-block">
         <span>Updated</span>
-        <time datetime="{{date | isoDate}}" class="inline-block {% if updated != nil or tags != nil %}mr-ryt{%- endif -%}">{{ updated | humanDate }}</time>
+        <time datetime="{{date | isoDate}}" class="inline-block {% if updated != nil or tags != nil %}mr-ryt-sm{%- endif -%}">{{ updated | humanDate }}</time>
       </span>
-    {%- endif -%}
-    {%- if tags != nil -%}
+    {% endif %}
+    {% if tags != nil %}
       {%- assign sortedTags = tags | uniq | sort -%}
       <span class="inline-block">
-        {%- for tag in sortedTags -%}
-          {%- if tag == site.starTag -%}
-            <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs mr-ryt-sm">{{site.starTagSymbol}}</a>
-          {%- endif -%}
-        {%- endfor -%}
-        {%- for tag in sortedTags -%}
-          {%- if tag != site.starTag -%}
-            <a href="{{tag | tagUrl}}" class="no-underline inline-block mr-ryt-sm">{{tag}}</a>
-          {%- endif -%}
-        {%- endfor -%}
+        {% for tag in sortedTags %}
+          {% if tag == site.starTag %}
+            <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs mr-ryt-xs">{{site.starTagSymbol}}</a>
+          {% endif %}
+        {% endfor %}
+        {% for tag in sortedTags %}
+          {% if tag != site.starTag %}
+            <a href="{{tag | tagUrl}}" class="no-underline inline-block mr-ryt-xs">{{tag}}</a>
+          {% endif %}
+        {% endfor %}
       </span>
-    {%- endif -%}
+    {% endif %}
   </div>
 {%- endif -%}

@@ -3,10 +3,8 @@ title: How we read
 refer: A List Apart article by Jason Santa Maria, Aug 5, 2014
 tags: fonts
 ---
-<blockquote>
-The term readability doesn´t ask simply "Can you read it?" or "How fast can you read it?" It also asks "Do you want to read it?"
-<footer>Stephen Coles in a <a href="https://twitter.com/typographica/status/268091875746009088">tweet</a></footer>
-</blockquote>
+
+https://twitter.com/typographica/status/268091875746009088
 
 "[How we read](https://alistapart.com/article/how-we-read/)" is about reading typography in general, with excursions to reading on computers. And Jason´s short text invites the reader. *I wanted to read it.*
 

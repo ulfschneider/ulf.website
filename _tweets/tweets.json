@@ -1,11 +1,43 @@
 {
+  "1393107304841728000": {
+    "id_str": "1393107304841728000",
+    "htmlText": "\"It’s amazing how great computer products can be when they don’t need to deal with corporate bullshit, don’t have to promote a brand or to sell its users.\" <a href=\"https://twitter.com/Vjeux/status/1393063653352501261\">twitter.com/Vjeux/status/1393063653352501261</a>",
+    "images": [],
+    "favorite_count": 25,
+    "created_at": {
+      "display": "09:33 AM · May 14, 2021",
+      "meta": "May 14, 2021 07:33:58 (UTC)"
+    },
+    "user": {
+      "name": "Sarah Dayan",
+      "screen_name": "frontstuff_io",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/977873484759158784/mOItIR7M_normal.jpg"
+    },
+    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/frontstuff_io\"><img src=\"https://pbs.twimg.com/profile_images/977873484759158784/mOItIR7M_normal.jpg\" alt=\"Avatar for frontstuff_io\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/frontstuff_io\">Sarah Dayan </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/frontstuff_io\">@frontstuff_io</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/frontstuff_io/status/1393107304841728000\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">\"It’s amazing how great computer products can be when they don’t need to deal with corporate bullshit, don’t have to promote a brand or to sell its users.\" <a href=\"https://twitter.com/Vjeux/status/1393063653352501261\">twitter.com/Vjeux/status/1393063653352501261</a></p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1393107304841728000\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">25 </span></a><a class=\"tweet-date\" title=\"Time Posted: May 14, 2021 07:33:58 (UTC)\" href=\"https://twitter.com/frontstuff_io/status/1393107304841728000\">09:33 AM · May 14, 2021</a></div></blockquote>"
+  },
+  "268091875746009088": {
+    "id_str": "268091875746009088",
+    "htmlText": "The term readability doesn't ask simply “Can you read it?” or “How fast can you read it?” <br/><br/>It also asks “Do you want to read it?\"",
+    "images": [],
+    "favorite_count": 75,
+    "created_at": {
+      "display": "09:44 PM · Nov 12, 2012",
+      "meta": "Nov 12, 2012 08:44:18 (UTC)"
+    },
+    "user": {
+      "name": "Typographica",
+      "screen_name": "typographica",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/689598204963225601/-w9a_IGQ_normal.jpg"
+    },
+    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/typographica\"><img src=\"https://pbs.twimg.com/profile_images/689598204963225601/-w9a_IGQ_normal.jpg\" alt=\"Avatar for typographica\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/typographica\">Typographica </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/typographica\">@typographica</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/typographica/status/268091875746009088\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">The term readability doesn't ask simply “Can you read it?” or “How fast can you read it?”<br><br>It also asks “Do you want to read it?\"</p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=268091875746009088\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">75 </span></a><a class=\"tweet-date\" title=\"Time Posted: Nov 12, 2012 08:44:18 (UTC)\" href=\"https://twitter.com/typographica/status/268091875746009088\">09:44 PM · Nov 12, 2012</a></div></blockquote>"
+  },
   "1473251189181591554": {
     "id_str": "1473251189181591554",
     "htmlText": "Here is WebKit trunk with 320 rules like “<a href=\"https://twitter.com/hashtag/container\">#container</a>:has(.r123:hover) .tr123 { … }” and 25600 divs ",
     "images": [
       "https://pbs.twimg.com/ext_tw_video_thumb/1473251164896600072/pu/img/cAMYHLN8_KBzKj2o.jpg"
     ],
-    "favorite_count": 94,
+    "favorite_count": 101,
     "created_at": {
       "display": "12:17 PM · Dec 21, 2021",
       "meta": "Dec 21, 2021 11:17:09 (UTC)"
@@ -15,13 +47,13 @@
       "screen_name": "anttikoivisto",
       "profile_image_url_https": "https://pbs.twimg.com/profile_images/1532748888/climb_normal.png"
     },
-    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/anttikoivisto\"><img src=\"https://pbs.twimg.com/profile_images/1532748888/climb_normal.png\" alt=\"Avatar for anttikoivisto\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/anttikoivisto\">Antti Koivisto </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/anttikoivisto\">@anttikoivisto</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/anttikoivisto/status/1473251189181591554\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">Here is WebKit trunk with 320 rules like “<a href=\"https://twitter.com/hashtag/container\">#container</a>:has(.r123:hover) .tr123 { … }” and 25600 divs</p><div class=\"tweet-images\"><img alt=\"Image from Tweet\" src=\"https://pbs.twimg.com/ext_tw_video_thumb/1473251164896600072/pu/img/cAMYHLN8_KBzKj2o.jpg\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1473251189181591554\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">94 </span></a><a class=\"tweet-date\" title=\"Time Posted: Dec 21, 2021 11:17:09 (UTC)\" href=\"https://twitter.com/anttikoivisto/status/1473251189181591554\">12:17 PM · Dec 21, 2021</a></div></blockquote>"
+    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/anttikoivisto\"><img src=\"https://pbs.twimg.com/profile_images/1532748888/climb_normal.png\" alt=\"Avatar for anttikoivisto\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/anttikoivisto\">Antti Koivisto </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/anttikoivisto\">@anttikoivisto</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/anttikoivisto/status/1473251189181591554\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">Here is WebKit trunk with 320 rules like “<a href=\"https://twitter.com/hashtag/container\">#container</a>:has(.r123:hover) .tr123 { … }” and 25600 divs</p><div class=\"tweet-images\"><img alt=\"Image from Tweet\" src=\"https://pbs.twimg.com/ext_tw_video_thumb/1473251164896600072/pu/img/cAMYHLN8_KBzKj2o.jpg\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1473251189181591554\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">101 </span></a><a class=\"tweet-date\" title=\"Time Posted: Dec 21, 2021 11:17:09 (UTC)\" href=\"https://twitter.com/anttikoivisto/status/1473251189181591554\">12:17 PM · Dec 21, 2021</a></div></blockquote>"
   },
   "1541449081591144449": {
     "id_str": "1541449081591144449",
     "htmlText": "☀️🌙<br/>I’m collecting blog posts, articles, and other resources about dark mode toggle implementations in the replies to this tweet. Feel free to add your own or any post you know of!<br/>1/x",
     "images": [],
-    "favorite_count": 11,
+    "favorite_count": 10,
     "created_at": {
       "display": "05:51 PM · Jun 27, 2022",
       "meta": "Jun 27, 2022 03:51:14 (UTC)"
@@ -31,38 +63,22 @@
       "screen_name": "m_ott",
       "profile_image_url_https": "https://pbs.twimg.com/profile_images/1343102302358536192/xdtCGwSB_normal.jpg"
     },
-    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/m_ott\"><img src=\"https://pbs.twimg.com/profile_images/1343102302358536192/xdtCGwSB_normal.jpg\" alt=\"Avatar for m_ott\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/m_ott\">Matthias Ott </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/m_ott\">@m_ott</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/m_ott/status/1541449081591144449\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">☀️🌙<br>I’m collecting blog posts, articles, and other resources about dark mode toggle implementations in the replies to this tweet. Feel free to add your own or any post you know of!<br>1/x</p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1541449081591144449\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">11 </span></a><a class=\"tweet-date\" title=\"Time Posted: Jun 27, 2022 03:51:14 (UTC)\" href=\"https://twitter.com/m_ott/status/1541449081591144449\">05:51 PM · Jun 27, 2022</a></div></blockquote>"
-  },
-  "1561060139523874820": {
-    "id_str": "1561060139523874820",
-    "htmlText": "For those of you skeptical of WebKit’s performance with lots of :has() selectors and a large DOM tree. And this was back in Dec 2021. <a href=\"https://twitter.com/anttikoivisto/status/1473251189181591554\">twitter.com/anttikoivisto/status/1473251189181591554</a>",
-    "images": [],
-    "favorite_count": 50,
-    "created_at": {
-      "display": "08:38 PM · Aug 20, 2022",
-      "meta": "Aug 20, 2022 06:38:35 (UTC)"
-    },
-    "user": {
-      "name": "Jen Simmons",
-      "screen_name": "jensimmons",
-      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1273367498390462469/qL9jZluF_normal.jpg"
-    },
-    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/jensimmons\"><img src=\"https://pbs.twimg.com/profile_images/1273367498390462469/qL9jZluF_normal.jpg\" alt=\"Avatar for jensimmons\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/jensimmons\">Jen Simmons </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/jensimmons\">@jensimmons</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/jensimmons/status/1561060139523874820\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">For those of you skeptical of WebKit’s performance with lots of :has() selectors and a large DOM tree. And this was back in Dec 2021. <a href=\"https://twitter.com/anttikoivisto/status/1473251189181591554\">twitter.com/anttikoivisto/status/1473251189181591554</a></p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1561060139523874820\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">50 </span></a><a class=\"tweet-date\" title=\"Time Posted: Aug 20, 2022 06:38:35 (UTC)\" href=\"https://twitter.com/jensimmons/status/1561060139523874820\">08:38 PM · Aug 20, 2022</a></div></blockquote>"
+    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/m_ott\"><img src=\"https://pbs.twimg.com/profile_images/1343102302358536192/xdtCGwSB_normal.jpg\" alt=\"Avatar for m_ott\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/m_ott\">Matthias Ott </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/m_ott\">@m_ott</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/m_ott/status/1541449081591144449\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">☀️🌙<br>I’m collecting blog posts, articles, and other resources about dark mode toggle implementations in the replies to this tweet. Feel free to add your own or any post you know of!<br>1/x</p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1541449081591144449\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">10 </span></a><a class=\"tweet-date\" title=\"Time Posted: Jun 27, 2022 03:51:14 (UTC)\" href=\"https://twitter.com/m_ott/status/1541449081591144449\">05:51 PM · Jun 27, 2022</a></div></blockquote>"
   },
   "1562797626369515522": {
     "id_str": "1562797626369515522",
     "htmlText": "Some questions for setting up a new team:<br/><br/>1. Why do we exist?<br/>2. What are we planning to do?<br/>3. Who are we? What do we own?<br/>4. How do we work? Who does what?<br/>5. How does each of us fit in?<br/><br/>What am I missing?",
     "images": [],
-    "favorite_count": 46,
+    "favorite_count": 74,
     "created_at": {
       "display": "03:42 PM · Aug 25, 2022",
       "meta": "Aug 25, 2022 01:42:44 (UTC)"
     },
     "user": {
-      "name": "Jason Yip",
+      "name": "Jason Yip (@jchyip@mastodon.online)",
       "screen_name": "jchyip",
       "profile_image_url_https": "https://pbs.twimg.com/profile_images/1415341686826356737/hnkb3bu1_normal.jpg"
     },
-    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/jchyip\"><img src=\"https://pbs.twimg.com/profile_images/1415341686826356737/hnkb3bu1_normal.jpg\" alt=\"Avatar for jchyip\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/jchyip\">Jason Yip </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/jchyip\">@jchyip</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/jchyip/status/1562797626369515522\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">Some questions for setting up a new team:<br><br>1. Why do we exist?<br>2. What are we planning to do?<br>3. Who are we? What do we own?<br>4. How do we work? Who does what?<br>5. How does each of us fit in?<br><br>What am I missing?</p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1562797626369515522\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">46 </span></a><a class=\"tweet-date\" title=\"Time Posted: Aug 25, 2022 01:42:44 (UTC)\" href=\"https://twitter.com/jchyip/status/1562797626369515522\">03:42 PM · Aug 25, 2022</a></div></blockquote>"
+    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/jchyip\"><img src=\"https://pbs.twimg.com/profile_images/1415341686826356737/hnkb3bu1_normal.jpg\" alt=\"Avatar for jchyip\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/jchyip\">Jason Yip (@jchyip@mastodon.online) </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/jchyip\">@jchyip</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/jchyip/status/1562797626369515522\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">Some questions for setting up a new team:<br><br>1. Why do we exist?<br>2. What are we planning to do?<br>3. Who are we? What do we own?<br>4. How do we work? Who does what?<br>5. How does each of us fit in?<br><br>What am I missing?</p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1562797626369515522\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">74 </span></a><a class=\"tweet-date\" title=\"Time Posted: Aug 25, 2022 01:42:44 (UTC)\" href=\"https://twitter.com/jchyip/status/1562797626369515522\">03:42 PM · Aug 25, 2022</a></div></blockquote>"
   }
 }

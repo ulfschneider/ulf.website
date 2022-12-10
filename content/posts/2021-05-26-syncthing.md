@@ -11,7 +11,5 @@ tags: [journal, star]
 
 👌 The tool is so good, you should give it a try! I got aware via the following tweet:
 
-<blockquote>
-It´s amazing how great computer products can be when they don´t need to deal with corporate bullshit, don´t have to promote a brand or to sell its users.
-<footer>Sarah Dayan in a <a href="https://twitter.com/frontstuff_io/status/1393107304841728000">tweet</a> which again points to <a href="https://tonsky.me/blog/syncthing/">tonsky.me</a></footer>
-</blockquote>
+https://twitter.com/frontstuff_io/status/1393107304841728000
+

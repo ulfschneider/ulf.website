@@ -208,4 +208,9 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
   .cooklang-ingredients .amount-and-unit {
     @apply font-bold inline-block;
   }
+
+  /* eleventy embed tweet */
+  blockquote.tweet-card {
+    @apply font-normal not-italic text-base my-ryt-lg font-sans border-light;
+  }
 }
