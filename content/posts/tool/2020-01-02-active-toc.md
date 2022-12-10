@@ -7,37 +7,32 @@ abstract: Highlight the entries of your table of contents while scrolling
 
 <style>
 
-    html, body {
-        scroll-behavior: smooth;
-    }
-
-    .table-of-contents {
-        margin-top: 2.5rem;
-    }
-
-  .table-of-contents a {
-
+  div.table-of-contents a {
       color: unset;
         text-decoration: unset;
         display: block;
     }
      
-    .table-of-contents .is-highlight {
+    div.table-of-contents .is-highlight {
         font-weight: bold;
     }
 
-    .table-of-contents .is-highlight::after {
+    div.table-of-contents .is-highlight::after {
         content: "*";
     }
 
-    .table-of-contents {
+    div.table-of-contents, 
+    .return  {
+        margin-top: 5rem;
         position: fixed;
         width: 9rem;
         top: 0;
         left: 0;
-        font-weight: normal;
-        line-height: 1rem;
         padding-left: 1rem;
+    }
+
+    .return {
+        margin-top: 2rem;
     }
 
     .content {
@@ -52,8 +47,10 @@ abstract: Highlight the entries of your table of contents while scrolling
     }
 </style>
 
-<nav class="table-of-contents">
-<a href="/blog/tools/" class="mrb-2">{{site.name}}</a>
+<div class="return text-sm">
+Return to <a href="/blog/tools/" class="mrb-2">tools</a>
+</div>
+<div class="table-of-contents text-sm">
 <a href="#one-morning">One morning</a>
 <a href="#he-thought">He thought</a>
 <a href="#gregor-then">Gregor then</a>
@@ -69,7 +66,7 @@ abstract: Highlight the entries of your table of contents while scrolling
 <a href="#he-lay">He lay</a>
 <a href="#a-collection">A collection</a>
 <a href="#however-hard">However hard</a>
-</nav>
+</div>
 
 <div class="content">
 <h1 >active-toc</h1>
