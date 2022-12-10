@@ -242,7 +242,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
 5. With the bottom bearing onto the fork steerer tube I insert the fork into the frame and slide the coned ring, the top cup shim,  and the headseat top cap over the steerer tube. 
     <figure>
    <img src="/img/strael/one-headset-shim.jpg">
-   <figcaption>After the fork is inserted into the head tube the coned ring, the top cup shim, and the headset top cap go from bottom to top order onto the steerer</figcaption>
+   <figcaption>After the fork is inserted into the head tube, the coned ring, the top cup shim, and the headset top cap go from bottom to top order onto the steerer</figcaption>
    </figure>
    The headset top cap sits so tight that the fork will stay in the frame. Finally I´m attaching the three stem spacers, followed by the stem.
    <figure>
