@@ -211,7 +211,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 
   /* eleventy embed tweet */
   blockquote.tweet-card {
-    @apply font-normal not-italic text-base my-ryt-lg font-sans border-light overflow-x-hidden;
+    @apply font-normal not-italic text-base my-ryt-lg font-sans border-light overflow-x-auto;
 
     .tweet-author-name,
     .tweet-author-handle {
