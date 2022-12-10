@@ -1,27 +1,45 @@
 {%-if pagedItems.pageCount > 1 -%}
-  <nav class="space-x-ryt-xl legible-rem-width">
+  <nav class="legible-rem-width">
     {%-if pagedItems.previous != "" and pagedItems.previous != nil -%}
-      <strong>
-        <a id="nav-previous" class="h2 text-primary inline-block mt-ryt-lg mb-0" href="{{pagedItems.previous}}">
-          {%-if site.navPrevious.label -%}
-            {{site.navPrevious.label}}
-            {%-else-%}Newer posts{%-endif-%}
-        </a>
-      </strong>
+      <div class="inline-block mt-ryt-lg">
+        <strong>
+          <a id="nav-first" class="h2 text-primary mr-ryt-lg mt-0 mb-0" href="{{pagedItems.first}}">
+            {%-if site.navFirst.label -%}
+              {{site.navFirst.label}}
+              {%-else-%}Newest{%-endif-%}
+          </a>
+        </strong>
+        <strong>
+          <a id="nav-previous" class="h2 text-primary mr-ryt-lg mt-0 mb-0" href="{{pagedItems.previous}}">
+            {%-if site.navPrevious.label -%}
+              {{site.navPrevious.label}}
+              {%-else-%}Newer posts{%-endif-%}
+          </a>
+        </strong>
+      </div>
     {%- endif -%}
     {%-if pagedItems.next != "" and pagedItems.next != nil -%}
-      <strong>
-        <a id="nav-next" class="h2 text-primary inline-block  mt-ryt-lg mb-0" href="{{pagedItems.next}}">
-          {%-if site.navNext.label -%}
-            {{site.navNext.label}}
-            {%-else-%}Older posts{%-endif-%}
-        </a>
-      </strong>
+      <div class="inline-block mt-ryt-lg">
+        <strong>
+          <a id="nav-next" class="h2 text-primary mr-ryt-lg mt-0 mb-0" href="{{pagedItems.next}}">
+            {%-if site.navNext.label -%}
+              {{site.navNext.label}}
+              {%-else-%}Older posts{%-endif-%}
+          </a>
+        </strong>
+        <strong>
+          <a id="nav-last" class="h2 text-primary inline-block m-0" href="{{pagedItems.last}}">
+            {%-if site.navLast.label -%}
+              {{site.navLast.label}}
+              {%-else-%}Oldest{%-endif-%}
+          </a>
+        </strong>
+      </div>
     {%- endif -%}
   </nav>
 {%- elsif pagedItems == nil -%}
   <strong>
-    <a id="nav-next" class="h2 text-primary inline-block  mt-ryt-lg mb-0" href="{{site.blog}}">
+    <a id="nav-next" class="h2 text-primary inline-block mt-ryt-lg mb-0" href="{{site.blog}}">
       All posts
     </a>
   </strong>

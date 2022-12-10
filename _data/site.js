@@ -7,7 +7,7 @@ module.exports = {
     cacheVersioning: {
         runtime: `${CACHE_VERSION}-0`,
         script: `${CACHE_VERSION}-0`,
-        css: `${CACHE_VERSION}-2`,
+        css: `${CACHE_VERSION}-3`,
         json: `${CACHE_VERSION}-0`,
         search: `${CACHE_VERSION}-0`,
         image: `${CACHE_VERSION}-0`,
@@ -110,15 +110,25 @@ module.exports = {
         url: BASE + "blog/"
     }
     ],
+    navFirst: {
+        label: 'Newest',
+        id: 'nav-first',
+        kbd: ''
+    },
     navPrevious: {
-        label: 'Newer posts',
+        label: 'Newer',
         id: 'nav-previous',
         kbd: '-'
     },
     navNext: {
-        label: 'Older posts',
+        label: 'Older',
         id: 'nav-next',
         kbd: '+',
+    },
+    navLast: {
+        label: 'Oldest',
+        id: 'nav-last',
+        kbd: ''
     },
     backToTop: {
         label: "Back to Top",

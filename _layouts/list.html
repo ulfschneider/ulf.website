@@ -3,5 +3,7 @@ layout: default
 nodate: true
 ---
 {%- include "title.html" tagIntro: pagedItems.tag -%}
-<div class="text-2xl no-indent">{{content}}</div>
+{%- if pagedItems.humanPageNumber == 1 -%}
+  <div class="text-2xl no-indent">{{content}}</div>
+{%- endif -%}
 {%- include "post-list.html" -%}

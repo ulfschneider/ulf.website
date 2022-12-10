@@ -303,6 +303,14 @@ module.exports = {
         return chunks
     },
 
+    firstPage: function (path) {
+        return path;
+    },
+
+    lastPage: function (path, max) {
+        return path + max + '/';
+    },
+
     previousPage: function (path, currentIndex) {
         if (currentIndex > 1) {
             return path + currentIndex + '/';

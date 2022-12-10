@@ -178,8 +178,10 @@ function addCollections(eleventyConfig) {
                 title: 'All posts',
                 pageNumber: pageNumber,
                 permalink: utils.currentPage(site.blog, pageNumber),
+                first: utils.currentPage(site.blog),
                 previous: utils.previousPage(site.blog, pageNumber),
                 next: utils.nextPage(site.blog, pageNumber, max),
+                last: utils.lastPage(site.blog, max),
                 itemCount: items.length,
                 pageCount: pagedItems.length,
                 pageData: pagedItems[pageNumber]
@@ -199,9 +201,12 @@ function addCollections(eleventyConfig) {
                 tagMap.push({
                     tag: tagName,
                     pageNumber: pageNumber,
+                    humanPageNumber: pageNumber + 1,
                     permalink: utils.currentPage(`${site.blog}${tagName}/`, pageNumber),
+                    first: utils.currentPage(`${site.blog}${tagName}/`),
                     previous: utils.previousPage(`${site.blog}${tagName}/`, pageNumber),
                     next: utils.nextPage(`${site.blog}${tagName}/`, pageNumber, max),
+                    last: utils.lastPage(`${site.blog}${tagName}/`, max),
                     itemCount: tagItems.length,
                     pageCount: pagedItems.length,
                     pageData: pagedItems[pageNumber]

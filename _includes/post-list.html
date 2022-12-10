@@ -3,6 +3,11 @@
 {%- else -%}
   {%- assign livePosts = collections.livePosts -%}
 {%- endif -%}
+{%- if pagedItems.humanPageNumber > 1 -%}
+  <div>
+    Page {{pagedItems.humanPageNumber}} / {{pagedItems.pageCount}}
+  </div>
+{%- endif -%}
 <div class="my-ryt-xl">
   {%- for p in livePosts  -%}
     {%- assign currentDate = p.date | humanDate -%}
@@ -18,7 +23,6 @@
     {%- endif -%}
 
     <article>
-
       {% if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil %}
         <h2 class="mt-ryt-lg mb-0">
           <a class="no-underline" href="{{p.url}}">
