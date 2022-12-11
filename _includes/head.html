@@ -21,7 +21,7 @@
 <!-- SEO/feed -->
 <link rel="canonical" href="{{site.origin}}{{page.url}}">
 <link rel="alternate" href="{{site.origin}}{{site.rss}}" title="{{site.title}}" type="application/atom+xml">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 {%- if title != nil and title != "notitle" and title != ""-%}
   {%- assign adaptedTitle = title -%}
 {%- elsif tag != nil and tag != "" -%}
