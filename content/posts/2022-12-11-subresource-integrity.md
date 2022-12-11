@@ -7,6 +7,8 @@ draft: true
 
 SRI ensures that files fetched by a website from a Content Delivery Network (CDN) or anywhere else, like your own servers, are delivered without a third party injecting any additional and malicious content into those files.
 
+Spec: https://www.w3.org/TR/SRI/#cross-origin-data-leakage
+
 > Subresoure Integrity enables browsers to verify that the resources they fetch are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 > <footer><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Mozilla Developer Network</a></footer>
 
