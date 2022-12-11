@@ -185,7 +185,7 @@
 
   ul > li::before {
     content: "●" " ";
-    @apply -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap;
+    @apply not-italic -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap;
   }
 
   ul.reset,
