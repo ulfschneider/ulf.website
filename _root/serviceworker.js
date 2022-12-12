@@ -405,7 +405,7 @@ function isValidToCache({ request, response, cacheName, options }) {
     }
 
     if (options.maxAgeMinutes < 0) {
-        log(`Refusing to cache because ${cacheName} has maxAgeMinutes is negative: ${request.url}`)
+        log(`Refusing to cache because ${cacheName} maxAgeMinutes is negative: ${request.url}`)
         return false;
     }
 

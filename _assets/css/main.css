@@ -1,5 +1,8 @@
 @import "fonts";
-@import "tailwind";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 @import "tailwind-extend-base";
 @import "tailwind-extend-components";
 @import "tailwind-extend-utilities";
+@import "forms";

@@ -28,7 +28,7 @@ The `integrity` attribute contains the file hash.
 integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
 ```
 
-The attribute has 2 parts - the hashing algorithm and the hash of the file. There are 3 different hash functions that are supported for SRI - `sha256`, `sha384` and `sha512`. An eysy way of doing this is via [www.srihash.org](https://www.srihash.org/). Paste the link to the resource and generate a hash. 
+The attribute has 2 parts - the hashing algorithm and the hash of the file. There are 3 different hash functions that are supported for SRI - `sha256`, `sha384` and `sha512`. An easy way of doing this is via [www.srihash.org](https://www.srihash.org/). Paste the link to the resource and generate a hash. 
 
 An alternative way is to create the hash locally on your machine by leveraging openssl. This would make sense as part of a build process, where the hash will be created and used automatically.
 

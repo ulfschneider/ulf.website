@@ -1,0 +1,228 @@
+@layer components {
+  :root {
+    --custom-check-border-width: 1px;
+    --form-error-border-width: 2px;
+    --form-input-border-width: 1px;
+    --custom-radio-gap: 2px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[list],
+  input[type="submit"],
+  input[type="reset"],
+  button,
+  select,
+  textarea,
+  fieldset,
+  label,
+  legend {
+    @apply font-sans font-normal text-base appearance-none placeholder-meta caret-primary dark:caret-primary-light rounded-none;
+  }
+
+  input[type="submit"],
+  input[type="reset"],
+  button,
+  select {
+    @apply border-0 align-baseline bg-primary text-white px-ryt-sm py-ryt-sm cursor-pointer;
+  }
+
+  input[type="submit"]:disabled,
+  input[type="reset"]:disabled,
+  button:disabled,
+  select:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+
+  @media (hover: hover) {
+    input[type="submit"]:hover:not(:disabled),
+    input[type="reset"]:hover:not(:disabled),
+    button:hover:not(:disabled),
+    .button:hover:not(:disabled),
+    select:hover:not(:disabled) {
+      @apply filter brightness-125;
+    }
+  }
+
+  input[type="submit"]:focus:not(:disabled),
+  input[type="reset"]:focus:not(:disabled),
+  button:focus:not(:disabled),
+  select:focus:not(:disabled) {
+    @apply filter brightness-125;
+  }
+
+  input[type="submit"]:active:not(:disabled),
+  input[type="reset"]:active:not(:disabled),
+  button:active:not(:disabled),
+  select:active:not(:disabled) {
+    @apply filter brightness-125;
+  }
+
+  label > * {
+    @apply my-ryt-xs;
+  }
+
+  label:not(label.cc):not(.cc label),
+  legend {
+    @apply block align-baseline font-bold leading-tight;
+  }
+
+  form .hint {
+    @apply text-meta leading-tight;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[list] {
+    @apply border border-meta p-ryt-xs align-middle leading-none border-r-0 bg-white dark:bg-light-dark;
+  }
+
+  textarea {
+    @apply leading-snug border border-meta py-xs px-xs border-r-0 resize-none font-normal bg-white dark:bg-light-dark;
+  }
+
+  fieldset {
+    @apply p-0 border-none;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[list]:focus,
+  textarea:focus {
+    @apply border-transparent;
+  }
+
+  /*
+https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/
+and
+https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-button-with-css 
+*/
+
+  /* .cc stands for "custom control" */
+
+  :root {
+    --cc-size: 2em;
+    --cc-check-width: 1.2em;
+    --cc-check-height: 0.6em;
+    --cc-check-stroke: 3px;
+    --cc-radio-size: 1.3em;
+    --cc-border-width: 2px;
+  }
+
+  label.cc,
+  .cc label {
+    @apply leading-tight font-normal cursor-pointer relative block my-ryt-sm;
+  }
+
+  label.cc > *,
+  .cc label > * {
+    margin-top: calc(
+      (var(--cc-size) - (theme(lineHeight.tight) * 1em)) / 2
+    ) !important;
+    margin-bottom: calc(
+      (var(--cc-size) - (theme(lineHeight.tight) * 1em)) / 2
+    ) !important;
+  }
+
+  .cc:focus-within input[type="checkbox"] + *::before,
+  .cc:focus-within input[type="radio"] + *::before {
+    @apply outline-indicator;
+  }
+
+  .cc input[type="checkbox"],
+  .cc input[type="radio"] {
+    /* remove the control from flow */
+    position: absolute;
+    /* hide it visually */
+    opacity: 0.00001;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+  .cc input[type="checkbox"] + *,
+  .cc input[type="radio"] + * {
+    @apply inline-block;
+    margin-left: calc(var(--cc-size) + 0.5em);
+  }
+
+  /* box */
+
+  .cc input[type="checkbox"] + *::before,
+  .cc input[type="radio"] + *::before {
+    @apply box-border absolute border-current;
+    content: "";
+    border-width: var(--cc-border-width);
+    left: 0;
+    top: 0;
+    height: var(--cc-size);
+    width: var(--cc-size);
+  }
+
+  .cc input[type="checkbox"][disabled] + *,
+  .cc input[type="radio"][disabled] + * {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  /* circle */
+
+  .cc input[type="radio"] + *::before {
+    @apply rounded-full;
+  }
+
+  /* check */
+  .cc input[type="checkbox"] + *::after {
+    @apply box-border absolute bg-transparent border-t-transparent opacity-0;
+    content: "";
+    left: calc((var(--cc-size) - var(--cc-check-width)) / 2);
+    top: calc((var(--cc-size) - var(--cc-check-width)) / 1.5);
+    width: var(--cc-check-width);
+    height: var(--cc-check-height);
+    transform: rotate(-45deg);
+    border: solid white;
+    border-width: 0 0 var(--cc-check-stroke) var(--cc-check-stroke);
+  }
+
+  /* select radio */
+  .cc input[type="radio"] + *::after {
+    @apply box-border absolute rounded-full bg-current;
+    content: "";
+    left: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
+    top: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
+    width: var(--cc-radio-size);
+    height: var(--cc-radio-size);
+  }
+
+  /* unchecked / unselected */
+
+  .cc input[type="checkbox"]:not(:checked) + *::after,
+  .cc input[type="radio"]:not(:checked) + *::after {
+    @apply opacity-0;
+  }
+
+  /* checked / selected*/
+
+  .cc input[type="checkbox"]:checked + *::before {
+    @apply bg-current;
+  }
+
+  .cc input[type="checkbox"]:checked + *::after,
+  .cc input[type="radio"]:checked + *::after {
+    @apply opacity-100;
+  }
+}
