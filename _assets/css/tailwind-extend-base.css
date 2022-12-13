@@ -219,7 +219,10 @@
   /* img */
   img {
     @apply object-contain object-left dark:filter dark:brightness-75 dark:contrast-125;
-    max-height: 80vh;
+
+    @media (min-width: theme(screens.sm)) {
+      max-height: 80vh;
+    }
   }
 
   /* summary */
@@ -267,6 +270,13 @@
   figure {
     figcaption {
       @apply text-sm my-ryt-sm;
+    }
+  }
+
+  figure:not(figure figure):has(iframe) {
+    @apply max-sm:-mx-ryt;
+    figcaption {
+      @apply max-sm:mx-ryt;
     }
   }
 
