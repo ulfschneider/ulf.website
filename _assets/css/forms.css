@@ -64,7 +64,7 @@
   }
 
   label > * {
-    @apply my-ryt-xs;
+    @apply my-ryt-sm;
   }
 
   label:not(label.cc):not(.cc label),
