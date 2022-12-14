@@ -92,7 +92,7 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display font-bold text-3xl rg:text-4xl mt-ryt-2xl mb-ryt-xl tracking-tight;
+    @apply font-display font-bold text-3xl sm:text-4xl mt-ryt-2xl mb-ryt-xl tracking-tight;
   }
   h2,
   .h2 {
