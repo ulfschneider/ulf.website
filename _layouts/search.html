@@ -72,7 +72,7 @@ permalink: "{{site.search.url}}"
         article.appendChild(excerpt);
       }
 
-      if (friend.date || (friend.tags.length && ! friend.notags)) {
+      if (friend.humanDate || (friend.tags.length && ! friend.notags)) {
         let aside = document.createElement("aside");
         aside.classList = `${
           friend.starred
