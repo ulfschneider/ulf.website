@@ -5,8 +5,10 @@
 {%- endif -%}
 {%- if pagedItems.humanPageNumber > 1 or content == "" -%}
   <div>
-    Page {{pagedItems.humanPageNumber}} / {{pagedItems.pageCount}} tagged
-    <em class="font-mono">{{pagedItems.tag}}</em>
+    Page {{pagedItems.humanPageNumber}} / {{pagedItems.pageCount}}
+    {%if pagedItems.tag != "" %}tagged
+      <em class="font-mono">{{pagedItems.tag}}</em>
+    {% endif %}
   </div>
 {%- endif -%}
 <div class="my-ryt-xl">

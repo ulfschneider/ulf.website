@@ -177,6 +177,7 @@ function addCollections(eleventyConfig) {
                 tag: '',
                 title: 'All posts',
                 pageNumber: pageNumber,
+                humanPageNumber: pageNumber + 1,
                 permalink: utils.currentPage(site.blog, pageNumber),
                 first: utils.currentPage(site.blog),
                 previous: utils.previousPage(site.blog, pageNumber),
