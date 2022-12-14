@@ -84,11 +84,11 @@
   input[type="tel"],
   input[type="url"],
   input[list] {
-    @apply border border-meta p-ryt-xs align-middle leading-none border-r-0 bg-white dark:bg-light-dark;
+    @apply border border-meta p-ryt-xs align-middle leading-none border-r-0 bg-field-light dark:bg-field-dark;
   }
 
   textarea {
-    @apply leading-snug border border-meta py-xs px-xs border-r-0 resize-none font-normal bg-white dark:bg-light-dark;
+    @apply leading-snug border border-meta py-xs px-xs border-r-0 resize-none font-normal  bg-field-light dark:bg-field-dark;
   }
 
   fieldset {

@@ -62,6 +62,10 @@ module.exports = {
           dark: colors.cyan[800],
         },
         'meta': colors.neutral[500],
+        'field': {
+          light: 'white',
+          dark: colors.neutral[700]
+        },
         'light': {
           light: colors.neutral[50],
           DEFAULT: colors.neutral[200],
