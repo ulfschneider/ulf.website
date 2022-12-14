@@ -273,7 +273,7 @@
     }
   }
 
-  figure:not(figure figure):has(iframe) {
+  figure:not(figure figure):has(iframe, video) {
     @apply max-sm:-mx-ryt;
     figcaption {
       @apply max-sm:mx-ryt;

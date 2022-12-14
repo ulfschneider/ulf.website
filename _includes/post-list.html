@@ -3,9 +3,10 @@
 {%- else -%}
   {%- assign livePosts = collections.livePosts -%}
 {%- endif -%}
-{%- if pagedItems.humanPageNumber > 1 -%}
+{%- if pagedItems.humanPageNumber > 1 or content == "" -%}
   <div>
-    Page {{pagedItems.humanPageNumber}} / {{pagedItems.pageCount}}
+    Page {{pagedItems.humanPageNumber}} / {{pagedItems.pageCount}} tagged
+    <em class="font-mono">{{pagedItems.tag}}</em>
   </div>
 {%- endif -%}
 <div class="my-ryt-xl">
@@ -43,6 +44,4 @@
   {%- endfor -%}
   {%- include "pagination-nav.html" -%}
 </div>
-
-{%- include "site-tags.html" -%}
 {%- include "search-field.html" -%}
