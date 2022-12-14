@@ -35,9 +35,9 @@
 {%- endif -%}
 <title>{{adaptedTitle}}</title>
 <meta property="og:title" content="{{adaptedTitle}}">
-{%- if abstract  -%}
-  <meta name="description" content="{{abstract}}">
-  <meta property="og:description" content="{{abstract}}">
+{%- if abstract != nil and abstract != "" -%}
+  <meta name="description" content="{{abstract | strip_html }}">
+  <meta property="og:description" content="{{abstract | strip_html }}">
 {%- endif -%}
 {%- assign firstImage = collections.liveContent | firstImage: page.url -%}
 {%- if firstImage.src  -%}
