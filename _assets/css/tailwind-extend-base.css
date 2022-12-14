@@ -269,7 +269,7 @@
   /* figure */
   figure {
     figcaption {
-      @apply text-sm my-ryt-sm;
+      @apply my-ryt-sm;
     }
   }
 
@@ -292,7 +292,7 @@
 
   blockquote > header,
   blockquote > footer {
-    @apply font-normal font-sans text-base not-italic my-ryt-sm;
+    @apply font-normal font-sans not-italic my-ryt-sm;
   }
 
   /* address */
