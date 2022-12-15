@@ -117,9 +117,9 @@ module.exports = {
                 if (item.data.hero) {
                     src = utils.clearResponsive(item.data.hero);
                     if (item.data.heroalt) {
-                        alt = utils.stripHtml(item.data.heroalt);
+                        alt = utils.removeHtml(item.data.heroalt);
                     } else if (item.data.herocaption) {
-                        alt = utils.stripHtml(item.data.herocaption);
+                        alt = utils.removeHtml(item.data.herocaption);
                     }
                 } else {
                     let img = utils.firstImageTag(item.templateContent);

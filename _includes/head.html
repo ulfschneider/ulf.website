@@ -21,6 +21,7 @@
 <!-- SEO/feed -->
 <link rel="canonical" href="{{site.origin}}{{page.url}}">
 <link rel="alternate" href="{{site.origin}}{{site.rss}}" title="{{site.title}}" type="application/atom+xml">
+<!-- title and description -->
 {%- if title != nil and title != "notitle" and title != ""-%}
   {%- assign adaptedTitle = title -%}
 {%- elsif tag != nil and tag != "" -%}
@@ -57,4 +58,5 @@
 {%- if firstImage.src  -%}
   <meta property="twitter:image:src" content="{{site.origin}}{{firstImage.src}}">
 {%- endif -%}
+<!-- scripts -->
 {% include "head-scripts.html" %}
