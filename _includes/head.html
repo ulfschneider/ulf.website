@@ -46,6 +46,7 @@
 {%- assign firstImage = collections.liveContent | firstImage: page.url -%}
 {%- if firstImage.src  -%}
   <meta property="og:image" content="{{site.origin}}{{firstImage.src}}">
+  <meta property="og:image:alt" content="{{firstImage.alt}}">
 {%- endif -%}
 <!-- twitter -->
 <meta name="twitter:card" content="summary_large_image">

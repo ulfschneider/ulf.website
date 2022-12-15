@@ -116,8 +116,10 @@ module.exports = {
                 let alt;
                 if (item.data.hero) {
                     src = utils.clearResponsive(item.data.hero);
-                    if (item.data.herocaption) {
-                        alt = item.data.herocaption;
+                    if (item.data.heroalt) {
+                        alt = utils.stripHtml(item.data.heroalt);
+                    } else if (item.data.herocaption) {
+                        alt = utils.stripHtml(item.data.herocaption);
                     }
                 } else {
                     let img = utils.firstImageTag(item.templateContent);
