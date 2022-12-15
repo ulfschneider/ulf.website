@@ -37,7 +37,7 @@ module.exports = {
         name: "Ulf Schneider",
         email: "mail@ulfschneider.io",
         phone: "+49 163 2505164",
-        twitter: ""
+        twitter: "@ulfeed"
     },
     paginationSize: 7,
     starTag: "star",

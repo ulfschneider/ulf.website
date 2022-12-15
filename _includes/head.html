@@ -33,13 +33,24 @@
   {%- assign adaptedTitle = site.name -%}
 {%- endif -%}
 <title>{{adaptedTitle}}</title>
-<meta property="og:title" content="{{adaptedTitle}}">
 {%- if abstract != nil and abstract != "" -%}
   <meta name="description" content="{{abstract | strip_html }}">
+{%- endif -%}
+<!-- Open Graph -->
+<meta property="og:title" content="{{adaptedTitle}}">
+<meta property="og:url" content="{{site.origin}}{{page.url}}">
+<meta property="og:type" content="website">
+{%- if abstract != nil and abstract != "" -%}
   <meta property="og:description" content="{{abstract | strip_html }}">
 {%- endif -%}
 {%- assign firstImage = collections.liveContent | firstImage: page.url -%}
 {%- if firstImage.src  -%}
   <meta property="og:image" content="{{site.origin}}{{firstImage.src}}">
+{%- endif -%}
+<!-- twitter -->
+<meta name="twitter:card" content="summary_large_image">
+{%- if site.ownership.twitter -%}
+  <meta name="twitter:site" content="{{site.ownership.twitter}}">
+  <meta name="twitter:creator" content="{{site.ownership.twitter}}">
 {%- endif -%}
 {% include "head-scripts.html" %}
