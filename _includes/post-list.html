@@ -5,14 +5,14 @@
 {%- endif -%}
 {%- if pagedItems.humanPageNumber > 1 or content == "" -%}
   <div>
-    Page {{pagedItems.humanPageNumber}} / {{pagedItems.pageCount}}
-    {%if pagedItems.tag != "" %}tagged
-      <em class="font-mono">{{pagedItems.tag}}</em>
+    Page {{ pagedItems.humanPageNumber }} / {{ pagedItems.pageCount }}
+    {% if pagedItems.tag != "" %}tagged
+      <em class="font-mono">{{ pagedItems.tag }}</em>
     {% endif %}
   </div>
 {%- endif -%}
-<div class="my-ryt-xl">
-  {%- for p in livePosts  -%}
+<div class="my-ryt-lg">
+  {%- for p in livePosts -%}
     {%- assign currentDate = p.date | humanDate -%}
     {%- if limit == 1 and forloop.index > limit and currentDate != referenceDate -%}
       {%- break -%}
@@ -33,7 +33,7 @@
           </a>
         </h2>
       {% else %}
-        <p>{{ p.templateContent | strip_html | strip | truncatewords : 25
+        <p>{{ p.templateContent | strip_html | strip | truncatewords: 25
  , "&nbsp;… " }}
           <a href="{{p.url}}">Read more</a>
         </p>
