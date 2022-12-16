@@ -11,7 +11,7 @@
     {% endif %}
   </div>
 {%- endif -%}
-<div class="my-ryt-lg">
+<div class="mt-ryt-lg mb-ryt-xl">
   {%- for p in livePosts -%}
     {%- assign currentDate = p.date | humanDate -%}
     {%- if limit == 1 and forloop.index > limit and currentDate != referenceDate -%}
