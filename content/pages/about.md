@@ -33,6 +33,13 @@ Email
 Phone 
 : {{site.ownership.phone}}
 
+Mastodon
+: [{{site.ownership.mastodon.user}}]({{site.ownership.mastodon.profile}})
+
+RSS
+: [{{site.rss}}]({{site.origin}}{{site.rss}})
+
+
 <h2>Content ownership</h2>
 
 According to § 55 Abs.2 RStV responsible for the content of this website:

@@ -37,7 +37,11 @@ module.exports = {
         name: "Ulf Schneider",
         email: "mail@ulfschneider.io",
         phone: "+49 163 2505164",
-        twitter: "@ulfeed"
+        twitter: "@ulfeed",
+        mastodon: {
+            user: "@ulfschneider@fosstodon.org",
+            profile: "https://fosstodon.org/@ulfschneider"
+        }
     },
     paginationSize: 7,
     starTag: "star",
