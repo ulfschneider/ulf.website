@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html id="{{site.backToTop.id}}" lang="{{site.locale}}" dir="{{site.direction}}">
+<html
+  id="{{site.backToTop.id}}"
+  lang="{{site.locale}}"
+  dir="{{site.direction}}">
 
   <head>
     {% include "head.html" %}
@@ -8,7 +11,7 @@
   <body class="break-words flex flex-col">
     <div class="grow shrink-0 px-ryt">
       {% include "header.html" %}
-      <main id="main" class="indent max-rg:max-w-rg rg:max-w-lg mx-auto mb-ryt-xl">
+      <main id="main" class="indent max-rg:max-w-rg rg:max-w-lg transition-spacing duration-1000 mx-auto mb-ryt-xl">
         {%- include "title.html" -%}
         <div class="legible-rem-width-descendants">
           {{ content }}

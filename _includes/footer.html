@@ -1,6 +1,6 @@
 <footer id="footer" class="shrink-0 bg-light dark:bg-light-dark py-ryt-xl px-ryt">
-  <div class="max-rg:max-w-rg rg:max-w-lg mx-auto">
-    {%-if page.url != site.search.url -%}
+  <div class="max-rg:max-w-rg rg:max-w-lg transition-spacing duration-1000 mx-auto">
+    {%- if page.url != site.search.url -%}
       <div class="mb-ryt-lg">
         {%- include "search-field.html" -%}
       </div>
@@ -10,13 +10,19 @@
         {%- for p in site.footernav -%}
           <li class="max-sm:my-2">
             {%- if id == p.id and id -%}
-              <a class="no-underline whitespace-nowrap font-bold" aria-current="page" href="{{ p.url }}">
-                {{p.label}}
+              <a
+                class="no-underline whitespace-nowrap font-bold"
+                aria-current="page"
+                href="{{ p.url }}">
+                {{ p.label }}
               </a>
             {%- elsif p.id == 'editOnGitHub' %}
-              <a href="{{p.url}}{{page.inputPath}}" target="_blank" class="no-underline whitespace-nowrap">{{p.label}}</a>
+              <a
+                href="{{p.url}}{{page.inputPath}}"
+                target="_blank"
+                class="no-underline whitespace-nowrap">{{ p.label }}</a>
             {%- else -%}
-              <a class="no-underline whitespace-nowrap" href="{{ p.url }}">{{p.label}}</a>
+              <a class="no-underline whitespace-nowrap" href="{{ p.url }}">{{ p.label }}</a>
             {%- endif -%}
           </li>
         {%- endfor -%}
@@ -29,7 +35,7 @@
           <div class="text-right">
             <a href="#{{site.backToTop.id}}">
               {%- if site.backToTop.label -%}
-                {{site.backToTop.label}}
+                {{ site.backToTop.label }}
               {%- else -%}
                 Back to Top
               {%- endif -%}

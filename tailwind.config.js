@@ -157,7 +157,12 @@ module.exports = {
         'md': '46rem',
         'lg': '58rem',
         'xl': '70rem'
-      }
+      },
+      transitionProperty: {
+        'height': 'height',
+        'width': 'width',
+        'spacing': 'margin, padding',
+      },
     },
   },
   plugins: [
