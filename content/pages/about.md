@@ -14,7 +14,7 @@ At this place I´m taking notes about things that resonate with me, like [agile 
 
 I implemented my first *service worker* on this site, and I enjoy exploring new topics in web development by implementing and experimenting here on my personal site. I´m also sharing a set of [software tools](/blog/tools/) I built.
 
-My most recent *riding tool* projects is a [Fairlight Strael](/blog/strael/) build. Every now and then my son Emil makes a drawing, which I aim to [capture here](/images/emil-drawing/). Emil created a picture of [the virus](/2020-03-18-emil-pictured-the-coronavirus/) at beginning of the Corona pandemic.
+My most recent *riding tool* project is a [Fairlight Strael](/blog/strael/) build. Every now and then my son Emil makes a drawing, which I aim to [capture here](/images/emil-drawing/). Emil created a picture of [the virus](/2020-03-18-emil-pictured-the-coronavirus/) at beginning of the Corona pandemic.
 
 My path through 30 years of software went like this:<dl class="timeline">
   <dt>1991 – 1996 University</dt>
