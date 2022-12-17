@@ -158,7 +158,7 @@ module.exports = {
         'lg': '58rem',
         'xl': '70rem'
       }
-    },
+    }
   },
   plugins: [
     plugin(function ({ addUtilities, addBase, theme, e, config }) {
