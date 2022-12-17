@@ -10,7 +10,7 @@ heroalt: Portrait of Ulf Schneider
 ---
 Hi, my name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently heading the Processes & Quality team of Diebold Nixdorf Professional Services.
 
-At this place I´m taking notes about things that resonate with me, like [agile software development](/blog/agile/), web development, and fast bicycles. Writing this blog helps me to clarify my thoughts and over time it became the *external memory* for topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts in their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
+At this place I´m taking notes about things that resonate with me, like [agile software development](/blog/agile/), web development, and fast bicycles. Writing this blog helps me to clarify my thoughts, and over time it became the *external memory* for topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts in their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
 
 I implemented my first *service worker* on this site, and I enjoy exploring new topics in web development by implementing and experimenting here on my personal site. I´m also sharing a set of [software tools](/blog/tools/) I built.
 
