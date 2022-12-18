@@ -10,11 +10,13 @@ heroalt: Portrait of Ulf Schneider
 ---
 Hi, my name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently heading the Processes & Quality team of Diebold Nixdorf Professional Services.
 
-At this place I´m taking notes about things that resonate with me, like [agile software development](/blog/agile/), web development, and fast bicycles. Writing this blog helps me to clarify my thoughts, and over time it became the *external memory* for topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts in their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
+At this place I´m taking notes about things that resonate with me, like web development, web accessibility, [agile software development](/blog/agile/), and fast bicycles. My most recent *riding tool* project is a [Fairlight Strael](/blog/strael/) steel bike build. 
 
-I implemented my first *service worker* on this site, and I enjoy exploring new topics in web development by implementing and experimenting here on my personal site. I´m also sharing a set of [software tools](/blog/tools/) I built.
+Writing this blog helps me to clarify my thoughts, and over time the blog became the *external memory* for topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts in their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
 
-My most recent *riding tool* project is a [Fairlight Strael](/blog/strael/) build. Every now and then my son Emil makes a drawing, which I aim to [capture here](/images/emil-drawing/). Emil created a picture of [the virus](/2020-03-18-emil-pictured-the-coronavirus/) at beginning of the Corona pandemic.
+I implemented my first *service worker* on this site, and I enjoy exploring new topics in web development by experimenting and integrating them here into my personal site. 
+
+Every now and then my son Emil makes a drawing, which I aim to [capture here](/images/emil-drawing/). Emil created a picture of [the virus](/2020-03-18-emil-pictured-the-coronavirus/) at beginning of the Corona pandemic.
 
 My path through 30 years of software went like this:<dl class="timeline">
   <dt>1991 – 1996 University</dt>
@@ -39,7 +41,7 @@ My path through 30 years of software went like this:<dl class="timeline">
 
 According to § 55 Abs.2 RStV responsible for the content of this website:
 
-<address class="mry">
+<address>
   Ulf Schneider<br>
   Böckstiegel-Str. 27<br>
   33100 Paderborn<br>
