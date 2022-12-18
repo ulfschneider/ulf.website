@@ -10,11 +10,11 @@ heroalt: Portrait of Ulf Schneider
 ---
 Hi, my name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently heading the Processes & Quality team of Diebold Nixdorf Professional Services.
 
-At this place I´m taking notes about things that resonate with me, like web development, web accessibility, [agile software development](/blog/agile/), and fast bicycles. My most recent *riding tool* project is a [Fairlight Strael](/blog/strael/) steel bike build. 
+At this place I´m taking notes about things that resonate with me, like web development, web accessibility, [agile software development](/blog/agile/), and fast bicycles. My most recent *riding tool* project is a [Fairlight Strael](/blog/strael/) steel-bike build. 
 
-Writing this blog helps me to clarify my thoughts, and over time the blog became the *external memory* for topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts in their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
+Writing this blog helps me to clarify my thoughts, and over time it became the *external memory* for topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts via their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
 
-I implemented my first *service worker* on this site, and I enjoy exploring new topics in web development by experimenting and integrating them here into my personal site. 
+This site is also my playing field for web technologies. It´s here where I implemented my first *service worker*, and I enjoy exploring new topics in web development by experimenting and integrating them here into my personal site. 
 
 Every now and then my son Emil makes a drawing, which I aim to [capture here](/images/emil-drawing/). Emil created a picture of [the virus](/2020-03-18-emil-pictured-the-coronavirus/) at beginning of the Corona pandemic.
 
