@@ -10,7 +10,7 @@ heroalt: Portrait of Ulf Schneider
 ---
 Hi, my name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently heading the Processes & Quality team of Diebold Nixdorf Professional Services.
 
-At this place I´m taking notes about things that resonate with me, like web development, web accessibility, [agile software development](/blog/agile/), and fast bicycles. My most recent *riding tool* project is a [Fairlight Strael](/blog/strael/) steel-bike build. 
+At this place I´m taking notes about things that resonate with me, like web development, [web accessibility](/2020-08-21-my-approach-to-accessibility/), [agile software development](/blog/agile/), and fast bicycles. My most recent *riding tool* project is a [Fairlight Strael](/blog/strael/) steel-bike build. 
 
 Writing this blog helps me to clarify my thoughts, and over time it became the *external memory* for topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts via their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
 
