@@ -1,17 +1,18 @@
-const ORIGIN = "https://ulfschneider.io";
-const BASE = "/";
+const HOSTNAME = 'ulfschneider.io';
+const ORIGIN = `https://${HOSTNAME}`;
+const BASE = '/';
 const URL = ORIGIN + BASE;
 const CACHE_VERSION = 'v1';
 
 module.exports = {
     cacheVersioning: {
-        runtime: `${CACHE_VERSION}-0`,
-        script: `${CACHE_VERSION}-0`,
-        css: `${CACHE_VERSION}-23`,
-        json: `${CACHE_VERSION}-0`,
-        search: `${CACHE_VERSION}-0`,
-        image: `${CACHE_VERSION}-0`,
-        font: `${CACHE_VERSION}-0`
+        runtime: `${CACHE_VERSION} -0`,
+        script: `${CACHE_VERSION} -0`,
+        css: `${CACHE_VERSION} -24`,
+        json: `${CACHE_VERSION} -0`,
+        search: `${CACHE_VERSION} -0`,
+        image: `${CACHE_VERSION} -0`,
+        font: `${CACHE_VERSION} -0`
     },
     name: "ulfschneider.io",
     locale: "en",
@@ -19,6 +20,7 @@ module.exports = {
     theme_color: "#e7e5e4",
     dark_theme_color: "#262626",
     background_color: "#262626",
+    hostname: HOSTNAME,
     origin: ORIGIN,
     base: BASE,
     url: URL,
