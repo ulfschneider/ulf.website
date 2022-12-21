@@ -1,6 +1,7 @@
 ---
 title: Evolution of the Jamstack
 tags: code
+draft: true
 ---
 Initialy, the term JAMStack stood for JavaScript, Markup, and API. That was correct but didn´t really explain the underlying processing model. 
 
