@@ -269,7 +269,7 @@
   /* figure */
   figure {
     figcaption {
-      @apply my-ryt-sm not-italic;
+      @apply my-ryt-sm not-italic text-smaller;
     }
   }
 

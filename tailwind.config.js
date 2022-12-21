@@ -44,7 +44,7 @@ module.exports = {
     extend: {
       colors: {
         'write': {
-          light: colors.neutral[400],
+          light: colors.neutral[300],
           dark: colors.neutral[800]
         },
         'back': {
