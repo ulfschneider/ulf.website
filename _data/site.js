@@ -49,7 +49,7 @@ module.exports = {
     starTag: "star",
     starTagSymbol: "★",
     mainnav: [{
-        label: "Ulf Schneider",
+        label: "Home",
         url: BASE,
         id: "home",
         kbd: "h"
