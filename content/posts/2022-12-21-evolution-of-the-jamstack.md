@@ -40,15 +40,15 @@ The Deferred Static Generation should be done in a way to ensure:
 - **Atomic deployments** which ensure updates of the site are available only when they are complete and totally in place.
 - **Immutable deployments** which guarantee the integrity of previous deploys by insulating them from future actions.
 
-For that reason, after a deferred page has been generated, it can only change with or after the next complete pre-rendering of the website[^atomic-and-immutable]. 
+For that reason, after a deferred page has been generated, it can only change with or after the next complete pre-rendering of the website.[^atomic-and-immutable][^keep-it-simple]
 
 ## Defining the Jamstack
 
-To settle on a somewhat lengthy and probably not super-elegant description for now, I´d say:
+To settle on a somewhat lengthy and not super-elegant description for now, I´d say:
 
 > <p>The Jamstack takes data from various sources and compiles that data into static files in advance (SSG). SSG is a simple processing model that creates fast, scalable, and robust websites. The static files <em>can</em> be distributed via a Content Delivery Network (CDN) for speed and reliability. A faster pre-rendering can be achieved through Deferred Static Generation (DSG) of certain pages at a point in time when a user requests such a page.</p><p>Dynamic content will be handled with REST API calls, JavaScript, and Client-side Rendering (CSR), as well as by Deferred Static Generation (DSG) that incorporates user input to render and serve a static page.</p>
 
-I´m referring a lot to Netlify here. I think that´s because Netlify is at the heart of the Jamstack and they are heavily pushing the topic in a direction that makes sense to me.
+I´m referring a lot to Netlify in this text. I think that´s because Netlify is at the heart of the Jamstack and they are heavily pushing the topic in a direction that makes sense to me.
 
 
 
@@ -66,5 +66,6 @@ https://bryanlrobinson.com/blog/creating-a-dynamic-color-converter-with-11ty-ser
 [^dsg]: [<cite>A Guide to Deferred Static Generation</cite>](https://www.gatsbyjs.com/blog/deferred-static-generation-guide/)
 [^rfc-dpr]: [Request for Comments](https://github.com/jamstack/jamstack.org/discussions/549) for a Discussion around Netlify´s Distributed Persistent Rendering 
 [^on-demand-builders]: [<cite>On-demand Builders</cite>](https://docs.netlify.com/configure-builds/on-demand-builders/) are serverless functions used to generate web content as needed that’s automatically cached on Netlify’s Edge CDN
-[^atomic-and-immutable]: [<cite>Terminology explained: Atomic and immutable deploys</cite>](https://www.netlify.com/blog/2021/02/23/terminology-explained-atomic-and-immutable-deploys/)
+[^atomic-and-immutable]: [<cite>Terminology explained: Atomic and immutable deploys</cite>](https://www.netlify.com/blog/2021/02/23/terminology-explained-atomic-and-immutable-deploys/)#
+[^keep-it-simple]: [<cite>Keeping It Simple</cite>](https://youtu.be/p-ZWytPX1fo), Mathias Biilman, CEO of Netlify, React Summit Remote Edition 2021
 [^rinaldi]:[Understanding Rendering in the Jamstack](https://bejamas.io/blog/understanding-rendering-in-the-jamstack/), by Brian Rinaldi is a great round up on the topic of rendering in the Jamstack
