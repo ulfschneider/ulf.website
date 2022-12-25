@@ -86,7 +86,7 @@
         event.preventDefault();
         let query = event.target['search-query'].value;
         if (query && query.trim()) {
-          location.href = '{{site.search.url}} ?query=' + encodeURIComponent(query.trim());
+          location.href = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim());
         } else {
           location.href = '{{site.search.url}}';
         }
