@@ -1,7 +1,6 @@
 ---
 title: Evolution of the Jamstack
 tags: code
-draft: true
 abstract: Strategies for building Jamstack sites evolved since 2015. How is the Jamstack defined today? 
 ---
 
@@ -15,7 +14,7 @@ Such websites are very fast and sturdy. A downside of this concept can be that t
 
 ## Content Delivery Network
 
-Recently I saw[^growing-up]: <q>Jamstack means [to be] capable of being served directly from a CDN.</q> 
+Recently I saw: Jamstack means <q>capable of being served directly from a CDN.</q>[^growing-up]
 
 A Content Delivery Network (CDN) is not a must for a website that is serving static files, but static files can perfectly be distributed via a CDN, which will power up the site with speed and reliability. Global availability at highspeed is an attribute associated with Jamstack sites, therefore I consider this a part of defining the Jamstack.
 
@@ -31,7 +30,7 @@ Another approach is to pre-render only critical pages and to defer the static re
 
 <figure>
 <img src="/img/jamstack/distributed-persistent-rendering.png">
-<figcaption>Pre-render critical pages during the <em>static rendering</em> and generate additional pages on demand. The image is taken from Matt Biilmann´s article <a href="https://www.netlify.com/blog/2021/04/14/distributed-persistent-rendering-a-new-jamstack-approach-for-faster-builds/"><cite>Distributed Persistent Rendering: A new Jamstack approach for faster builds</cite></a>. I´m not sure if <em>Distributed Persistent Rendering</em> is a good term – for now I prefer <em>Deferred Static Generation</em>, as the Gatsby team calls it, or even <em>Deferred Static Rendering</em>, how I prefer to name it.</figcaption>
+<figcaption>Pre-render critical pages during the <em>static rendering</em> and generate additional pages on demand. The image is taken from Matt Biilmann´s article <a href="https://www.netlify.com/blog/2021/04/14/distributed-persistent-rendering-a-new-jamstack-approach-for-faster-builds/"><cite>Distributed Persistent Rendering: A new Jamstack approach for faster builds</cite></a>. I´m not sure if <em>Distributed Persistent Rendering</em> is a good term – for now I prefer <em>Deferred Static Generation</em>, as the Gatsby team calls it, or simply <em>Deferred Static Rendering</em>.</figcaption>
 </figure>
 
 Deferring the static rendering of pages serves two purposes:
@@ -54,7 +53,7 @@ Similar to client-side JavaScript, serverless functions allow to react to user r
 
 ## Edge functions
 
-Edge functions are serverless functions *living on the edge.* Instead of being hosted on a server somewhere in the cloud, edge functions are executed on a server closest to the user (<q>on the edge of the internet</q>). This reduces latency and therefore increases speed. Also, edge functions have a quicker cold-start  because typically they use a fast starting runtime environment like [Deno](https://deno.land), which allows a faster cold start than [Node.js](https://nodejs.dev/en/), for example. Edge functions are *elite serverless functions.*
+Edge functions are serverless functions *living on the edge.* Instead of being hosted on a server somewhere in the cloud, edge functions are executed on a server closest to the user (*on the edge of the internet*). This reduces latency and therefore increases speed. Also, edge functions shouldhave a quicker cold-start because typically they use a fast starting runtime environment like [Deno](https://deno.land), which allows a faster cold start than [Node.js](https://nodejs.dev/en/), for example. Edge functions are *elite serverless functions.*
 
 Netlify offers both, serverless functions as well as edge functions. Each of them having certain constraints, like maximum memory consumption, execution time limits, and available programming languages.[^netlify-functions] [<cite>11ty build vs. serverless vs. edge</cite>](/2022-10-05-build-serverless-edge/) might be of use for a differentation from the perspective of Zach Leatherman´s 11ty Static Site Generator.[^11ty-build-serverless-edge]
 
@@ -70,8 +69,8 @@ I´m referring often to Netlify in this text. I think that´s because Netlify is
 [^growing-up]: [<cite>Jamstack growing up](https://noti.st/philhawksworth/5Zh3rm/jamstack-growing-up), Phil Hawksworth at Jamstack Toronto, June 2021
 [^intersection-observer]: Use the [<cite>Intersection Observer API</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to load the comments only when the user scrolls to that area of the page where the comments reside.
 [^dsg]: [<cite>A Guide to Deferred Static Generation</cite>](https://www.gatsbyjs.com/blog/deferred-static-generation-guide/)
-[^on-demand-builders]: [<cite>On-demand Builders</cite>](https://docs.netlify.com/configure-builds/on-demand-builders/) are serverless functions used to generate web content as needed that’s automatically cached on Netlify’s Edge CDN.
 [^rfc-dpr]: [<cite>Request for Comments: Distributed Persistent Rendering (DPR)</cite>](https://github.com/jamstack/jamstack.org/discussions/549) for a discussion around Netlify´s Distributed Persistent Rendering , April 2021
+[^on-demand-builders]: [<cite>On-demand Builders</cite>](https://docs.netlify.com/configure-builds/on-demand-builders/) are serverless functions used to generate web content as needed that’s automatically cached on Netlify’s Edge CDN.
 [^atomic-and-immutable]: [<cite>Terminology explained: Atomic and immutable deploys</cite>](https://www.netlify.com/blog/2021/02/23/terminology-explained-atomic-and-immutable-deploys/)
 [^keep-it-simple]: [<cite>Keeping It Simple</cite>](https://youtu.be/p-ZWytPX1fo), Mathias Biilman, CEO of Netlify, React Summit Remote Edition 2021
 [^rainglow]: [<cite>Rainglow: A demo of eleventy serverless</cite>](https://www.zachleat.com/web/rainglow/), Zach Leatherman, July 2021
