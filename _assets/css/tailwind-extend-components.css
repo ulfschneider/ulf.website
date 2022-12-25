@@ -189,11 +189,11 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
   }
 
   .footnotes-list li::before {
-    content: "[" counter(footnote-counter) "]";
+    content: counter(footnote-counter);
     font-size: 75%;
     line-height: 0;
-    position: relative;
     top: -0.5em;
+    @apply relative normal-nums font-bold;
   }
 
   .footnotes-list li > p {
