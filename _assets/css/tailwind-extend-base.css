@@ -270,7 +270,7 @@
   }
 
   figure:not(figure figure):has(iframe, video) {
-    @apply max-sm:-mx-ryt duration-300 transition-all;
+    @apply max-sm:-mx-ryt;
     figcaption {
       @apply max-sm:mx-ryt;
     }
