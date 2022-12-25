@@ -271,7 +271,7 @@
   figure:not(figure figure):has(iframe, video) {
     @apply max-sm:-mx-ryt transition-spacing duration-300;
     figcaption {
-      @apply max-sm:mx-ryt;
+      @apply max-sm:mx-ryt transition-spacing duration-300;
     }
   }
 
