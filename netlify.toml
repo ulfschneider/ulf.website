@@ -1,0 +1,6 @@
+[build]
+edge_functions = "_edge"
+
+[[edge_functions]]
+path = "/api/search"
+function = "search"
