@@ -25,7 +25,7 @@ module.exports = {
     },
     fontSize: {
       'sm': ['.9rem', '1.6'],
-      'base': ['19px', '1.6'],
+      'base': ['var(--font-size-base)', '1.6'],
       'lg': ['1.25rem', '1.4'],
       'xl': ['1.56rem', '1.3'],
       '2xl': ['1.95rem', '1.2'],

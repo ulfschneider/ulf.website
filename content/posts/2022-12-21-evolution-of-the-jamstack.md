@@ -2,7 +2,7 @@
 title: Evolution of the Jamstack
 tags: code
 draft: true
-abstract: Initialy, the term JAMStack stood for JavaScript, Markup, and API. That was correct but didn´t really explain the underlying processing model. The strategies for building Jamstack sites evolved since 2015 and so did the naming of strategies. 
+abstract: Strategies for building Jamstack sites evolved since 2015. How is the Jamstack defined today? 
 ---
 
 [[toc]]
@@ -46,7 +46,7 @@ The deferred static rendering should be done in a way to ensure[^rfc-dpr]:
 - **Atomic deployments:** Where all of the code, assets and configuration of a site are updated at once so that a website cannot be accidentally served in a partially updated state.
 - **Immutable deployments:**  Once created, an immutable deploy of a website becomes an artifact which will not change. Instead, deploys result in new versions or instances of the site, and traffic is routed to them accordingly.
 
-For that reason, after a deferred page has been generated, it can only change with, or after, the next complete build of the website.[^keep-it-simple] Zach Leathermans [Rainglow demo](https://www.zachleat.com/web/rainglow/)[^rainglow] is an example of deferred static rendering with the 11ty Static Site Generator.
+For that reason, after a deferred page has been generated, it can only change with, or after, the next complete build of the website.[^keep-it-simple] Zach Leatherman´s [Rainglow demo](https://www.zachleat.com/web/rainglow/)[^rainglow] is an example of deferred static rendering with the 11ty Static Site Generator.
 
 ## Serverless functions
 
@@ -56,7 +56,7 @@ Similar to client-side JavaScript, serverless functions allow to react to user r
 
 Edge functions are serverless functions *living on the edge.* Instead of being hosted on a server somewhere in the cloud, edge functions are executed on a server closest to the user (<q>on the edge of the internet</q>). This reduces latency and therefore increases speed. Also, edge functions have a quicker cold-start  because typically they use a fast starting runtime environment like [Deno](https://deno.land), which allows a faster cold start than [Node.js](https://nodejs.dev/en/), for example. Edge functions are *elite serverless functions.*
 
-Netlify offers both, serverless functions as well as edge functions. Each of them having certain constraints, like maximum memory consumption, execution time limits, and available programming languages.[^netlify-functions]
+Netlify offers both, serverless functions as well as edge functions. Each of them having certain constraints, like maximum memory consumption, execution time limits, and available programming languages.[^netlify-functions] [<cite>11ty build vs. serverless vs. edge</cite>](/2022-10-05-build-serverless-edge/) might be of use for a differentation from the perspective of Zach Leatherman´s 11ty Static Site Generator.[^11ty-build-serverless-edge]
 
 ## Defining the Jamstack
 
@@ -76,4 +76,4 @@ I´m referring often to Netlify in this text. I think that´s because Netlify is
 [^keep-it-simple]: [<cite>Keeping It Simple</cite>](https://youtu.be/p-ZWytPX1fo), Mathias Biilman, CEO of Netlify, React Summit Remote Edition 2021
 [^rainglow]: [<cite>Rainglow: A demo of eleventy serverless</cite>](https://www.zachleat.com/web/rainglow/), Zach Leatherman, July 2021
 [^netlify-functions]: [<cite>Netlify Functions. Build scalable, dynamic applications</cite>](https://www.netlify.com/products/functions/)
-
+[^11ty-build-serverless-edge]: [<cite>11ty build vs. serverless vs. edge</cite>](/2022-10-05-build-serverless-edge/) gives a differentiation from the perspective of Zach Leatherman´s 11ty Static Site Generator.
