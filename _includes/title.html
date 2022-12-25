@@ -1,5 +1,5 @@
 {%- if reducetitle -%}
-  {%- assign reducedTitleStyle = "text-base legible-rem-width" -%}
+  {%- assign reducedTitleStyle = "text-base legible-base-width" -%}
 {%- endif -%}
 {%- if title != "" and title != nil and title != "notitle" and notitle == nil -%}
   {%- assign hasTitle = true -%}
@@ -21,14 +21,14 @@
       <h1 class="my-0 {{reducedTitleStyle}}">{{ title }}</h1>
     {%- endif -%}
     {%- if abstract -%}
-      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}} my-ryt{% else %}text-lg my-ryt-lg legible-rem-width{% endif %}">
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}} my-ryt{% else %}text-lg my-ryt-lg legible-base-width{% endif %}">
         {{ abstract }}
       </div>
     {%- endif -%}
     {%- if refer -%}
-      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg legible-rem-width{% endif %}">{{ refer }}</div>
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg legible-base-width{% endif %}">{{ refer }}</div>
     {%- elsif author -%}
-      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg legible-rem-width{% endif %}">{{ author }}</div>
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg legible-base-width{% endif %}">{{ author }}</div>
     {%- endif -%}
   </header>
 {%- endif -%}

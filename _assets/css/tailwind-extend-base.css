@@ -62,12 +62,12 @@
 
   /* font-size*/
   html {
-    @apply text-base bg-light dark:bg-light-dark;
+    @apply bg-light dark:bg-light-dark;
   }
 
   /* base colors */
   body {
-    @apply text-write-dark bg-back-light dark:text-write-light dark:bg-back-dark overflow-x-hidden;
+    @apply text-base text-write-dark bg-back-light dark:text-write-light dark:bg-back-dark overflow-x-hidden;
   }
 
   /* focus */
@@ -171,8 +171,7 @@
 
   ol > li::before {
     content: counters(ol-counter, ".", decimal) ". ";
-    font-size: smaller;
-    @apply font-bold -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start tabular-nums whitespace-nowrap;
+    @apply text-smaller font-bold -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start tabular-nums whitespace-nowrap;
   }
 
   ol > li > ol > li::before {
@@ -229,12 +228,12 @@
 
   /* hr */
   hr {
-    @apply legible-rem-width my-ryt-xl border-0 flex justify-center;
+    @apply legible-base-width my-ryt-xl border-0 flex justify-center;
   }
 
   hr::before {
     content: "* * *";
-    @apply legible-rem-width block -mt-ryt;
+    @apply legible-base-width block -mt-ryt;
   }
 
   /* table */
@@ -270,7 +269,7 @@
   }
 
   figure:not(figure figure):has(iframe, video) {
-    @apply max-sm:-mx-ryt;
+    @apply max-sm:-mx-ryt transition-spacing duration-300;
     figcaption {
       @apply max-sm:mx-ryt;
     }

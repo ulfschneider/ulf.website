@@ -19,8 +19,8 @@
     @apply outline-outline outline-4 outline-offset-2 outline;
   }
 
-  .legible-rem-width-descendants:not(
-      .legible-rem-width-descendants .no-legible-width
+  .legible-base-width-descendants:not(
+      .legible-base-width-descendants .no-legible-width
     ) {
     p,
     h1,
@@ -47,7 +47,7 @@
       @apply max-w-md;
     }
   }
-  *.legible-rem-width {
+  *.legible-base-width {
     @apply max-w-rg;
   }
 
