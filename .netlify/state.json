@@ -1,0 +1,20 @@
+{
+	"promptVSCodeSettings": true,
+	"geolocation": {
+		"data": {
+			"city": "Paderborn",
+			"country": {
+				"code": "DE",
+				"name": "Germany"
+			},
+			"subdivision": {
+				"code": "NW",
+				"name": "North Rhine-Westphalia"
+			},
+			"timezone": "Europe/Berlin",
+			"latitude": 51.7152,
+			"longitude": 8.7493
+		},
+		"timestamp": 1671971653044
+	}
+}

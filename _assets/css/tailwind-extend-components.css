@@ -12,7 +12,7 @@
 
   div.table-of-contents::before {
     content: "Contents";
-    @apply block font-bold text-base;
+    @apply block font-bold text-sm;
   }
 
   div.table-of-contents a {

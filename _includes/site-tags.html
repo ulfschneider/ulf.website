@@ -3,48 +3,46 @@
   {%- assign tag = pagedItems.tag -%}
 {%- endif -%}
 {%- if currentTags.length -%}
-  <section class="legible-rem-width my-ryt-2xl">
+  <nav class="legible-base-width my-ryt-2xl">
     {%- if currentTags.length > 1 -%}
-      <h2 class="text-base mb-0">Choose posts by tag</h2>
-      <nav>
-        <ul class="my-0 -mx-ryt-xs reset">
-          {%- if tag == "" -%}
-            <li class="inline-block m-ryt-xs">
-              <span class="tag current" aria-current="page">all posts</span>
-            </li>
-          {%- else -%}
-            <li class="inline-block m-ryt-xs">
-              <a class="tag" href="{{site.blog}}">all posts</a>
-            </li>
+      <h2 class="text-base font-bold mb-0">Choose posts by tag</h2>
+      <ul class="my-0 -mx-ryt-xs reset">
+        {%- if tag == "" -%}
+          <li class="inline-block m-ryt-xs">
+            <span class="tag current" aria-current="page">all posts</span>
+          </li>
+        {%- else -%}
+          <li class="inline-block m-ryt-xs">
+            <a class="tag" href="{{site.blog}}">all posts</a>
+          </li>
+        {%- endif -%}
+        {%- for siteTag in currentTags -%}
+          {%- if siteTag == site.starTag -%}
+            {%- if tag != siteTag -%}
+              <li class="inline-block m-ryt-xs">
+                <a class="tag" href="{{siteTag | tagUrl}}">{{ site.starTagSymbol }}</a>
+              </li>
+            {%- else -%}
+              <li class="inline-block m-ryt-xs">
+                <span class="tag current" aria-current="page">{{ site.starTagSymbol }}</span>
+              </li>
+            {%- endif -%}
           {%- endif -%}
-          {%- for siteTag in currentTags -%}
-            {%- if siteTag == site.starTag -%}
-              {%- if tag != siteTag -%}
-                <li class="inline-block m-ryt-xs">
-                  <a class="tag" href="{{siteTag | tagUrl}}">{{ site.starTagSymbol }}</a>
-                </li>
-              {%- else -%}
-                <li class="inline-block m-ryt-xs">
-                  <span class="tag current" aria-current="page">{{ site.starTagSymbol }}</span>
-                </li>
-              {%- endif -%}
+        {%- endfor -%}
+        {%- for siteTag in currentTags -%}
+          {%- if siteTag != site.starTag -%}
+            {%- if tag != siteTag -%}
+              <li class="inline-block m-ryt-xs">
+                <a class="tag" href="{{siteTag | tagUrl}}">{{ siteTag }}</a>
+              </li>
+            {%- else -%}
+              <li class="inline-block m-ryt-xs">
+                <span class="tag current" aria-current="page">{{ siteTag }}</span>
+              </li>
             {%- endif -%}
-          {%- endfor -%}
-          {%- for siteTag in currentTags -%}
-            {%- if siteTag != site.starTag -%}
-              {%- if tag != siteTag -%}
-                <li class="inline-block m-ryt-xs">
-                  <a class="tag" href="{{siteTag | tagUrl}}">{{ siteTag }}</a>
-                </li>
-              {%- else -%}
-                <li class="inline-block m-ryt-xs">
-                  <span class="tag current" aria-current="page">{{ siteTag }}</span>
-                </li>
-              {%- endif -%}
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      </nav>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
     {%- endif -%}
   {%- endif %}
-</section>
+</nav>

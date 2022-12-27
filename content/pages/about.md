@@ -5,7 +5,7 @@ nodate: true
 notags: true
 id: about
 hero: /img/ulf/ulf-16x9-900.jpg
-herocss: legible-rem-width
+herocss: legible-base-width
 heroalt: Portrait of Ulf Schneider
 ---
 Hi, my name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently heading the Processes & Quality team of Diebold Nixdorf Professional Services.
