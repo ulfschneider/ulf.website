@@ -151,23 +151,33 @@ permalink: "{{site.search.url}}"
   }
 
   function printError(error, query) {
-   let searchResults = document.getElementById(SEARCH_RESULTS_ID);
+    let searchResults = document.getElementById(SEARCH_RESULTS_ID);
     if (! searchResults) {
       console.error("The page does not have a DOM element with id=" + SEARCH_RESULTS_ID);
       return;
     }
     removeChildren(searchResults);
     let errorMessage = document.createElement("div");
-    errorMessage.innerHTML = 'The search for <strong>' + query + '</strong> resulted in an error<br><br>' + error;
+    errorMessage.innerHTML = 'The search for <strong>' + query + '</strong> could not be completed because of a failure.';
+    if (error.status && error.statusText) {
+      errorMessage.innerHTML += '</br>';
+      errorMessage.innerHTML += 'Status code ' + error.status + ': ' + error.statusText;
+    }
     searchResults.append(errorMessage);
   }
 
   async function search(query) {
-    await fetch('/api/search/?query=' + encodeURIComponent(query))
-     .then(response => response.json())
-     .then(resultSet => printSearchResults(resultSet, query))
-     .catch(error => 
-      printError(error, query));   
+    try {
+      let response = await fetch('/api/search/?query=' + encodeURIComponent(query));
+      if (response.status == 200) {
+        let resultSet = await response.json();
+        printSearchResults(resultSet, query)
+      } else {
+        printError(response, query);
+      }
+    } catch (error) {
+      printError(error, query);
+    }
   }
 
   addEventListener("load", function(event) {
