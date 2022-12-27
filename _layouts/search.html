@@ -159,7 +159,7 @@ permalink: "{{site.search.url}}"
     removeChildren(searchResults);
     let errorMessage = document.createElement("div");
     errorMessage.innerHTML = 'The search for <strong>' + query + '</strong> could not be completed because of a failure.';
-    if (error.status && error.statusText) {
+    if (error && error.status && error.statusText) {
       errorMessage.innerHTML += '</br>';
       errorMessage.innerHTML += 'Status code ' + error.status + ': ' + error.statusText;
     }
