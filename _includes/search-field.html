@@ -34,13 +34,6 @@
         <summary>Search help</summary>
         <dl class="mr-0 text-small">
           <dt>
-            <code>foo*</code>
-          </dt>
-          <dd>Will match documents with words
-            <em>beginning</em>
-            with
-            <q>foo</q>.</dd>
-          <dt>
             <code>foo bar</code>
           </dt>
           <dd>Will match documents that contain
@@ -48,33 +41,15 @@
             <em>or</em>
             <q>bar</q>.</dd>
           <dt>
-            <code>+foo bar -baz</code>
+            <code>+foo bar</code>
           </dt>
           <dd>Will match documents that
             <em>must</em>
             contain
-            <q>foo</q>,
+            <q>foo</q> and 
             <em>might</em>
             contain
-            <q>bar</q>
-            and
-            <em>must
-              not</em>
-            contain
-            <q>baz</q>.</dd>
-          <dt>
-            <code>foo~1</code>
-          </dt>
-          <dd>Will match
-            <q>boo</q>, as it requires a single (~1) edit (replacing
-            <q>f</q>
-            with
-            <q>b</q>), but
-            <q>boot</q>
-            would not as it
-            also requires an additional
-            <q>t</q>
-            at the end.</dd>
+            <q>bar</q>.</dd>
         </dl>
       </details>
     </form>
@@ -84,7 +59,9 @@
 
       function submitQuery(event) {
         event.preventDefault();
+        
         let query = event.target['search-query'].value;
+
         if (query && query.trim()) {
           location.href = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim());
         } else {

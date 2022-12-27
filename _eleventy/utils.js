@@ -37,12 +37,16 @@ const site = require('../_data/site.js');
 
 module.exports = {
 
-    excerptFromItem: function (item) {
-        let excerpt = this.removeHtml(item.templateContent);
+    excerptFromText: function (text) {
+        let excerpt = this.removeHtml(text);
         if (excerpt) {
-            excerpt = excerpt.split(' ')
-                .slice(0, site.excerptWordCount ? site.excerptWordCount : 25)
+            let excerptWordCount = site.excerptWordCount ? site.excerptWordCount : 25;
+            let words = excerpt.split(' ');
+            excerpt = words.slice(0, excerptWordCount)
                 .join(' ');
+            if (words.length > excerptWordCount) {
+                excerpt += ' …'
+            }
         }
         return excerpt;
     },
@@ -142,13 +146,15 @@ module.exports = {
     },
 
     removeHtml: function (text) {
-        const $ = cheerio.load(text);
+        if (text) {
+            const $ = cheerio.load(text);
 
-        //remove anchors
-        $('a.anchor').each(function () {
-            $(this).remove();
-        });
-        return stripHtml($('body').html());
+            //remove anchors
+            $('a.anchor').each(function () {
+                $(this).remove();
+            });
+            return stripHtml($('body').html());
+        }
     },
 
     mapItem: function (item) {
@@ -176,33 +182,8 @@ module.exports = {
             tags: tagsWithUrls,
             notags: item.data.notags,
             starred: item.data.starred,
-            content: this.removeHtml(item.templateContent)
-        }
-    },
-
-    mapItemMeta: function (item) {
-        let tagsWithUrls = [];
-
-        if (item.data.tags) {
-            let tags = [...new Set(item.data.tags)].sort();
-            for (let tag of tags) {
-                tagsWithUrls.push({
-                    name: tag,
-                    url: this.tagUrl(tag)
-                });
-            }
-        }
-
-        return {
-            id: item.url,
-            title: item.data.title,
-            date: item.date,
-            humanDate: this.humanDate(item.date),
-            author: item.data.author,
-            refer: item.data.refer,
-            tags: tagsWithUrls,
-            notags: item.data.notags,
-            starred: item.data.starred,
+            content: this.removeHtml(item.templateContent),
+            excerpt: this.excerptFromText(item.templateContent)
         }
     },
 

@@ -221,7 +221,6 @@ function addCollections(eleventyConfig) {
 
 function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('searchIndex', filters.searchIndex);
-    eleventyConfig.addFilter('excerptIndex', filters.excerptIndex);
     eleventyConfig.addFilter('firstImage', filters.firstImage);
     eleventyConfig.addFilter('live', filters.live);
     eleventyConfig.addFilter('post', filters.post);

@@ -3,14 +3,10 @@ layout: default
 nodate: true
 permalink: "{{site.search.url}}"
 ---
-<script defer src="/js/lunr-{{site.cacheVersioning.script}}.js"></script>
 <script>
   const SEARCH_RESULTS_ID = "search-results";
   const SEARCH_QUERY_ID = "search-query";
   const SEARCH_SUBMIT_ID = "search-submit";
-
-  var searchIndex,
-    friendlyMap;
 
   function getParameterByName(name, url) {
     url = url
@@ -40,60 +36,52 @@ permalink: "{{site.search.url}}"
 
   function printResultEntry(parent, entry) {
     if (parent) {
-      let friend = friendlyMap.get(entry.ref);
-
       let article = document.createElement("article");
       parent.appendChild(article);
-      if (friend.title && friend.title != "notitle") {
+      if (entry.title && entry.title != "notitle") {
         let title = document.createElement("h2");
         title.classList = "mt-ryt-lg mb-0";
         article.appendChild(title);
 
         let linkToArticle = document.createElement("a");
         linkToArticle.classList = 'no-underline';
-        linkToArticle.href = entry.ref;
-        linkToArticle.innerHTML = friend.title;
+        linkToArticle.href = entry.id;
+        linkToArticle.innerHTML = entry.title;
         title.appendChild(linkToArticle);
       } else {
-        let abstract = friend.abstract || friend.excerpt || friend.content;
-        abstract = abstract.split(' ').slice(
-          0,
-          parseInt("{{site.excerptWordCount}}")
-            ? parseInt("{{site.excerptWordCount}}")
-            : 25
-        ).join(" ") + " … ";
+        let abstract = entry.abstract || entry.excerpt;
         let excerpt = document.createElement("p");
         excerpt.innerHTML = abstract;
         excerpt.appendChild(document.createTextNode(" "));
         let linkToArticle = document.createElement("a");
-        linkToArticle.href = entry.ref;
+        linkToArticle.href = entry.id;
         linkToArticle.innerHTML = "Read more";
         excerpt.appendChild(linkToArticle);
         article.appendChild(excerpt);
       }
 
-      if (friend.humanDate || (friend.tags.length && ! friend.notags)) {
+      if (entry.humanDate || (entry.tags.length && ! entry.notags)) {
         let aside = document.createElement("aside");
         aside.classList = `${
-          friend.starred
-            ? friend.starred
+          entry.starred
+            ? entry.starred
             : ""
           }`;
         article.appendChild(aside);
 
-        if (friend.date) {
+        if (entry.date) {
           let date = document.createElement("time");
-          date.innerHTML += friend.humanDate;
+          date.innerHTML += entry.humanDate;
           date.classList = "inline-block mr-ryt-sm";
           aside.appendChild(date);
           aside.appendChild(document.createTextNode(" "));
         }
 
-        if (friend.tags.length && ! friend.notags) {
+        if (entry.tags.length && ! entry.notags) {
           let tags = document.createElement("span");
           aside.appendChild(tags);
 
-          for (let tag of friend.tags) {
+          for (let tag of entry.tags) {
             if (tag.name == "{{site.starTag}}") {
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
@@ -104,7 +92,7 @@ permalink: "{{site.search.url}}"
               break;
             }
           }
-          for (let tag of friend.tags) {
+          for (let tag of entry.tags) {
             if (tag.name != "{{site.starTag}}") {
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
@@ -128,7 +116,7 @@ permalink: "{{site.search.url}}"
     if (resultSet.length == 0) {
       count.innerHTML = 'Your search <strong>' + query + '</strong> did not return any results.';
     } else if (resultSet.length == 1) {
-      count.innerHTML = 'One result <strong>' + query + '</strong:';
+      count.innerHTML = 'One result for <strong>' + query + '</strong:';
     } else {
       count.innerHTML = resultSet.length + ' results for <strong>' + query + '</strong>:';
     } searchResults.append(count);
@@ -162,30 +150,27 @@ permalink: "{{site.search.url}}"
     }
   }
 
-  function search(query) {
-    if (searchIndex && friendlyMap) {
-      let resultSet = [];
-      if (query && query.trim().length) {
-        resultSet = searchIndex.search(query);
-      }
-      printSearchResults(resultSet, query);
+  function printError(error, query) {
+   let searchResults = document.getElementById(SEARCH_RESULTS_ID);
+    if (! searchResults) {
+      console.error("The page does not have a DOM element with id=" + SEARCH_RESULTS_ID);
+      return;
     }
+    removeChildren(searchResults);
+    let errorMessage = document.createElement("div");
+    errorMessage.innerHTML = 'The search for <strong>' + query + '</strong> resulted in an error<br><br>' + error;
+    searchResults.append(errorMessage);
   }
 
-  function maintainInputState() {
-    let submit = document.getElementById(SEARCH_SUBMIT_ID);
-    if (submit) {
-      if (lunr && searchIndex && friendlyMap) {
-        submit.disabled = false;
-      } else {
-        submit.disabled = true;
-      }
-    }
+  async function search(query) {
+    await fetch('/api/search/?query=' + encodeURIComponent(query))
+     .then(response => response.json())
+     .then(resultSet => printSearchResults(resultSet, query))
+     .catch(error => 
+      printError(error, query));   
   }
 
-  maintainInputState();
   addEventListener("load", function(event) {
-    maintainInputState();
     let query = getParameterByName("query");
     let input = document.getElementById(SEARCH_QUERY_ID);
     if (input) {
@@ -193,32 +178,8 @@ permalink: "{{site.search.url}}"
     }
     if (query) {
       printSearching();
+      search(query);
     }
-    fetch("/search-index.json", {credentials: "same-origin"})
-      .then((response) => {
-        return response.json();
-      })
-      .then((rawIndex) => {
-        searchIndex = lunr.Index.load(rawIndex);
-        return fetch("/excerpt-index.json", {credentials: "same-origin"});
-      })
-      .then((response) => {
-        return response.json();
-      })
-      .then((excerptIndex) => {
-        friendlyMap = new Map();
-        for (let item of excerptIndex) {
-          friendlyMap.set(item.id, item);
-        }
-        maintainInputState();
-
-        if (query) {
-          search(query);
-        }
-      })
-      .catch((error) => {
-        console.error("Failure when creating search index " + error);
-      });
   });
 </script>
 <section class="my-ryt-2xl">

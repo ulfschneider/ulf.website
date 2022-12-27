@@ -1,4 +1,4 @@
-const lunr = require('lunr');
+const MiniSearch = require('minisearch');
 const path = require('path');
 const ccd = require('cached-commit-date');
 const utils = require('./utils.js');
@@ -80,32 +80,42 @@ module.exports = {
     },
 
     searchIndex: function (collection) {
-        const index = lunr(function () {
-            this.ref('id');
-            this.field('title', { boost: 10 });
-            this.field('abstract', { boost: 10 });
-            this.field('author');
-            this.field('refer');
-            this.field('tags');
-            this.field('content');
+        const INDEX_FIELDS = [
+            'id',
+            'title',
+            'humanDate',
+            'author',
+            'refer',
+            'tags',
+            'abstract',
+            'content'];
 
-            for (let item of collection) {
-                if (utils.isSearchAble(item)) {
-                    this.add(utils.mapItem(item));
-                }
-            }
-        });
-        return JSON.stringify(index);
-    },
+        const STORE_FIELDS = [
+            'id',
+            'title',
+            'date',
+            'humanDate',
+            'author',
+            'refer',
+            'tags',
+            'notags',
+            'starred',
+            'abstract',
+            'excerpt'];
 
-    excerptIndex: function (collection) {
-        let result = [];
+        let miniSearch = new MiniSearch({ fields: INDEX_FIELDS, storeFields: STORE_FIELDS });
         for (let item of collection) {
-            let mappedItem = utils.mapItemMeta(item);
-            mappedItem.content = utils.excerptFromItem(item);
-            result.push(mappedItem);
+            let mappedItem = utils.mapItem(item);
+            if (mappedItem.id && !miniSearch.has(mappedItem.id)) {
+                miniSearch.add(mappedItem);
+            }
         }
-        return JSON.stringify(result);
+
+        let searchIndex = miniSearch.toJSON();
+        //store the configured fields within the search index
+        //to access it later when importing the index
+        searchIndex.INDEX_FIELDS = INDEX_FIELDS;
+        return JSON.stringify(searchIndex);
     },
 
     firstImage: function (collection, url) {
