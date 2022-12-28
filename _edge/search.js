@@ -57,11 +57,7 @@ export default async function (request, context) {
         let results = miniSearch.search(deriveSearchOptions(query));
         const now = Date.now();
         context.log(`The search for [${query}] returned ${results.length} results within ${now - start} milliseconds`);
-        return new Response(JSON.stringify(results),
-            {
-                status: 200,
-                headers: { "content-type": "application/json;charset=UTF-8" }
-            });
+        return context.json(results);
     } catch (error) {
         context.log(`Failure when searching for [${query}]: ${error}`);
         return new Response(error, {
