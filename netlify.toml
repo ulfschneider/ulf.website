@@ -4,3 +4,9 @@ edge_functions = "_edge"
 [[edge_functions]]
 path = "/api/search"
 function = "search"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs]
+    output_path = "lighthouse.html"

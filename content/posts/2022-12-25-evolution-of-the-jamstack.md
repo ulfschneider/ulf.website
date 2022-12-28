@@ -53,9 +53,9 @@ Similar to client-side JavaScript, serverless functions allow to react to user r
 
 ## Edge functions
 
-Edge functions are serverless functions *living on the edge.* Instead of being hosted on a server somewhere in the cloud, edge functions are executed on a server closest to the user (*on the edge of the internet*). This reduces latency and therefore increases speed. Also, edge functions shouldhave a quicker cold-start because typically they use a fast starting runtime environment like [Deno](https://deno.land), which allows a faster cold start than [Node.js](https://nodejs.dev/en/), for example. Edge functions are *elite serverless functions.*
+Edge functions are serverless functions *living on the edge.* Instead of being hosted on a server somewhere in the cloud, edge functions are executed on a server closest to the user (*on the edge of the internet*). This reduces latency and therefore increases speed. Also, edge functions should have a quicker cold-start because typically they use a fast starting runtime environment like [Deno](https://deno.land), which allows a faster cold start than [Node.js](https://nodejs.dev/en/), for example. Edge functions seem like *elite serverless functions* to me.
 
-Netlify offers both, serverless functions as well as edge functions. Each of them having certain constraints, like maximum memory consumption, execution time limits, and available programming languages.[^netlify-functions] [<cite>11ty build vs. serverless vs. edge</cite>](/2022-10-05-build-serverless-edge/) might be of use for a differentation from the perspective of Zach Leatherman´s 11ty Static Site Generator.[^11ty-build-serverless-edge]
+Netlify offers both, serverless functions as well as edge functions.[^lengstorf-edge] Each of them having certain constraints, like maximum memory consumption, execution time limits, and available programming languages.[^netlify-functions] [<cite>11ty build vs. serverless vs. edge</cite>](/2022-10-05-build-serverless-edge/) might be of use for a differentation from the perspective of Zach Leatherman´s 11ty Static Site Generator.[^11ty-build-serverless-edge]
 
 ## Defining the Jamstack
 
@@ -74,5 +74,6 @@ I´m referring often to Netlify in this text. I think that´s because Netlify is
 [^atomic-and-immutable]: [<cite>Terminology explained: Atomic and immutable deploys</cite>](https://www.netlify.com/blog/2021/02/23/terminology-explained-atomic-and-immutable-deploys/)
 [^keep-it-simple]: [<cite>Keeping It Simple</cite>](https://youtu.be/p-ZWytPX1fo), Mathias Biilman, CEO of Netlify, React Summit Remote Edition 2021
 [^rainglow]: [<cite>Rainglow: A demo of eleventy serverless</cite>](https://www.zachleat.com/web/rainglow/), Zach Leatherman, July 2021
+[^lengstorf-edge]: [<cite>Let´s learn Netlify Edge Functions</cite>](https://www.learnwithjason.dev/let-s-learn-netlify-edge-functions), a video with Jason Lengstorf
 [^netlify-functions]: [<cite>Netlify Functions. Build scalable, dynamic applications</cite>](https://www.netlify.com/products/functions/)
 [^11ty-build-serverless-edge]: [<cite>11ty build vs. serverless vs. edge</cite>](/2022-10-05-build-serverless-edge/) gives a differentiation from the perspective of Zach Leatherman´s 11ty Static Site Generator.

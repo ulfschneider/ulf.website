@@ -47,7 +47,7 @@ function deriveSearchOptions(query) {
     return searchOptions;
 }
 
-export default async function (request, context) {
+export default async (request, context) => {
     const start = Date.now();
 
     const url = new URL(request.url);
