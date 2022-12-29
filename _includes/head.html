@@ -82,7 +82,11 @@ rel="alternate"
   <meta property="og:image" content="{{site.origin}}{{firstImage.src}}">
   <meta property="og:image:alt" content="{{firstImage.alt}}">
 {%- endif -%}
-<!-- twitter -->
+<!-- Mastodon -->
+{%- if site.ownership.mastodon.profile -%}
+  <link rel="me" href="{{site.ownership.mastodon.profile}}">
+{%- endif -%}
+<!-- Twitter -->
 <meta name="twitter:card" content="summary">
 {%- if site.ownership.twitter -%}
   <meta name="twitter:site" content="{{site.ownership.twitter}}">
