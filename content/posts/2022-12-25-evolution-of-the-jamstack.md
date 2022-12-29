@@ -53,7 +53,7 @@ Similar to client-side JavaScript, serverless functions allow to react to user r
 
 ## Edge functions
 
-Edge functions are serverless functions *living on the edge.* Instead of being hosted on a server somewhere in the cloud, edge functions are executed on a server closest to the user (*on the edge of the internet*). This reduces latency and therefore increases speed. Also, edge functions should have a quicker cold-start because typically they use a fast starting runtime environment like [Deno](https://deno.land), which allows a faster cold start than [Node.js](https://nodejs.dev/en/), for example. Edge functions seem like *elite serverless functions* to me.
+Edge functions are serverless functions *living on the edge.* Instead of being hosted on a server somewhere in the cloud, edge functions are executed on a server closest to the user (*on the edge of the internet*). This reduces latency and therefore increases speed. Also, edge functions should have a quicker cold-start because typically they use a fast starting runtime environment like [Deno](https://deno.land), which allows a faster cold start than [Node.js](https://nodejs.dev/en/), for example. 
 
 Netlify offers both, serverless functions as well as edge functions.[^lengstorf-edge] Each of them having certain constraints, like maximum memory consumption, execution time limits, and available programming languages.[^netlify-functions] [<cite>11ty build vs. serverless vs. edge</cite>](/2022-10-05-build-serverless-edge/) might be of use for a differentation from the perspective of Zach Leatherman´s 11ty Static Site Generator.[^11ty-build-serverless-edge]
 
