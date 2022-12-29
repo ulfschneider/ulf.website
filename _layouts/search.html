@@ -175,9 +175,12 @@ permalink: "{{site.search.url}}"
 
   async function search(query) {
     try {
+      let start = Date.now();
       let response = await fetch('/api/search/?query=' + encodeURIComponent(query));
+      let duration = Date.now() - start;
       if (response.status == 200) {
         let resultSet = await response.json();
+        console.log('The search for [' + query + '] returned ' + resultSet.length + ' results within ' + duration + ' milliseconds');
         printSearchResults(resultSet, query)
       } else {
         printError(response, query);
