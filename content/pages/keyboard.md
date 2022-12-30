@@ -4,7 +4,7 @@ title: Keyboard navigation
 nodate: true
 id: keyboard
 ---
-You can navigate this website with the keyboard when JavaScript is activated for your browser.
+You can navigate this website with the keyboard.
 
 {% include "keyboard.html" %}
 

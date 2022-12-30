@@ -16,6 +16,15 @@ if (navigator.serviceWorker) {
     });
 }
 
+/* indicate if JavaScript is available */
+function isJavaScript() {
+    let noJs = document.querySelectorAll('.no-js');
+    for (let element of noJs) {
+        element.classList.remove('no-js');
+        element.classList.add('js')
+    }
+}
+
 
 /* Back to top */
 function maintainBackToStartVisibility() {
@@ -77,6 +86,7 @@ function displayLoadTime() {
     }
 }
 
+addEventListener('DOMContentLoaded', isJavaScript);
 addEventListener('load', maintainBackToStartVisibility);
 addEventListener('scroll', maintainBackToStartVisibility);
 addEventListener('resize', maintainBackToStartVisibility);

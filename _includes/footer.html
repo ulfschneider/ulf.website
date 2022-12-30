@@ -6,7 +6,7 @@
     <nav class="legible-base-width columns-3xs">
       <ul class="m-0 reset">
         {%- for p in site.footernav -%}
-          <li class="max-sm:my-2{%if p.hide==true %} hidden{% endif %}" id="{{p.id}}">
+          <li class="max-sm:my-2 {{p.classList}}" id="{{p.id}}">
             {%- if id == p.id and id -%}
               <a
                 class="no-underline whitespace-nowrap font-bold"
@@ -26,7 +26,7 @@
         {%- endfor -%}
       </ul>
       {%- if site.backToTop and site.backToTop.id %}
-        <div id="back-to-start" class="hidden m-ryt p-ryt-sm flex-col justify-end bg-light dark:bg-light-dark">
+        <div id="back-to-start" class="no-js-hidden m-ryt p-ryt-sm flex-col justify-end bg-light dark:bg-light-dark">
           <div id="heading-hint" class="right text-sm hidden mb-ryt-sm leading-tight">
             <a href="#" class="no-underline"></a>
           </div>

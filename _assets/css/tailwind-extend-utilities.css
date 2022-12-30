@@ -1,4 +1,8 @@
 @layer utilities {
+  .no-js .no-js-hidden {
+    display: none;
+  }
+
   .indent:not(.indent .no-indent) {
     p {
       @apply my-0;

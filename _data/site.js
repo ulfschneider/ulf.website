@@ -7,7 +7,7 @@ const CACHE_VERSION = 'v1';
 module.exports = {
     cacheVersioning: {
         runtime: `${CACHE_VERSION}-0`,
-        script: `${CACHE_VERSION}-0`,
+        script: `${CACHE_VERSION}-1`,
         css: `${CACHE_VERSION}-30`,
         json: `${CACHE_VERSION}-0`,
         search: `${CACHE_VERSION}-1`,
@@ -64,7 +64,7 @@ module.exports = {
         label: "Search",
         url: BASE + "search/",
         id: "search",
-        hide: true,
+        classList: 'no-js-hidden',
         kbd: "s"
     }
     ],
@@ -83,7 +83,8 @@ module.exports = {
         label: "Keyboard",
         url: BASE + "keyboard/",
         id: "keyboard",
-        kbd: "a"
+        kbd: "a",
+        classList: 'no-js-hidden'
     },
     {
         label: "Colophon",

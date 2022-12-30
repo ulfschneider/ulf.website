@@ -1,7 +1,7 @@
 <nav>
   <ul class="reset space-x-ryt">
     {%- for p in site.mainnav -%}
-      <li class="inline-block{%if p.hide==true %} hidden{% endif %}" id="{{p.id}}">
+      <li class="inline-block {{p.classList}}" id="{{p.id}}">
         {%- if id == p.id -%}
           <a
             aria-current="page"
