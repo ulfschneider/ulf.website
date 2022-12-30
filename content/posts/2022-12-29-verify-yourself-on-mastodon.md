@@ -2,7 +2,7 @@
 title: Verify yourself on Mastodon
 tags: journal
 ---
-When you have a personal website, you can verify yourself on Mastodon by linking from your Mastodon profile to your personal website and by backlinking from your personal website to your Mastodon profile. The backlink (verification link) needs to have a `rel="me"` attribute. You don´t have to pay for it as on Twitter and the indication in your Mastodon profile will not be a blue checkmark but a green link to your personal site with a green checkmark in front of it.
+When you have a personal website you can verify yourself on Mastodon by linking from your Mastodon profile to your personal website and by backlinking from your personal website to your Mastodon profile. The backlink (verification link) needs to have a `rel="me"` attribute. You don´t have to pay for it as on Twitter and the indication in your Mastodon profile will not be a blue checkmark but a green link to your personal site with a green checkmark in front of it.
 
 Of course, the verification is only as credible as your personal website, and as credible as the Mastodon server your are on, because the idea is that your personal website declares trustworthiness of your Mastodon account and vice versa.^[[<cite>How We Verified Ourselves on Mastodon — and How You Can Too</cite>](https://themarkup.org/levelup/2022/12/22/how-we-verified-ourselves-on-mastodon-and-how-you-can-too), Dan Phiffer, The Markup, Dec 22, 2022]
 
