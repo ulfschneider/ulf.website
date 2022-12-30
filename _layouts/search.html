@@ -3,12 +3,12 @@ layout: default
 nodate: true
 permalink: "{{site.search.url}}"
 ---
-<section class="my-ryt-2xl">
+<div class="my-ryt-2xl">
   {% include "search-field.html", focus: true, onsubmit:
    "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value);
    history.replaceState(null, '', location.pathname + '?query=' +
    event.target[SEARCH_QUERY_ID].value)" %}
-</section>
+</div>
 <div id="search-results"></div>
 <script>
   const SEARCH_RESULTS_ID = "search-results";

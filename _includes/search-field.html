@@ -5,7 +5,7 @@
   {%- if focus -%}
     {%- assign autofocus = "autofocus" -%}
   {%- endif -%}
-  <section class="legible-base-width">
+  <section id="search-box" class="legible-base-width mb-ryt-lg hidden">
     <form onsubmit="{{onsubmit}}">
       <label
         id="search-label"
@@ -46,28 +46,38 @@
           <dd>Will match documents that
             <em>must</em>
             contain
-            <q>foo</q> and 
+            <q>foo</q>
+            and
             <em>might</em>
             contain
             <q>bar</q>.</dd>
         </dl>
       </details>
     </form>
-
-    <script>
-      let query = document.querySelector('#search-query');
-
-      function submitQuery(event) {
-        event.preventDefault();
-        
-        let query = event.target['search-query'].value;
-
-        if (query && query.trim()) {
-          location.href = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim());
-        } else {
-          location.href = '{{site.search.url}}';
-        }
-      }
-    </script>
   </section>
+  <script>
+    // show the search box and search navigation item only if javascript is available
+    let box = document.querySelector('#search-box');
+    let menuItem = document.querySelector('#search');
+    if (box) {
+      box.classList.remove('hidden');
+    }
+    if (menuItem) {
+      menuItem.classList.remove('hidden');
+    }
+
+    let query = document.querySelector('#search-query');
+
+    function submitQuery(event) {
+      event.preventDefault();
+
+      let query = event.target['search-query'].value;
+
+      if (query && query.trim()) {
+        location.href = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim());
+      } else {
+        location.href = '{{site.search.url}}';
+      }
+    }
+  </script>
 {%- endif -%}

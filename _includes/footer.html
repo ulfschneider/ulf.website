@@ -1,14 +1,12 @@
 <footer id="footer" class="shrink-0 bg-light dark:bg-light-dark py-ryt-xl px-ryt">
   <div class="max-w-lg mx-auto">
     {%- if page.url != site.search.url -%}
-      <div class="mb-ryt-lg">
-        {%- include "search-field.html" -%}
-      </div>
+      {%- include "search-field.html" -%}
     {%- endif -%}
     <nav class="legible-base-width columns-3xs">
-      <ul class="mr-0 reset">
+      <ul class="m-0 reset">
         {%- for p in site.footernav -%}
-          <li class="max-sm:my-2">
+          <li class="max-sm:my-2{%if p.hide==true %} hidden{% endif %}" id="{{p.id}}">
             {%- if id == p.id and id -%}
               <a
                 class="no-underline whitespace-nowrap font-bold"
@@ -16,7 +14,7 @@
                 href="{{ p.url }}">
                 {{ p.label }}
               </a>
-            {%- elsif p.id == 'editOnGitHub' %}
+            {%- elsif p.id == 'edit-on-github' %}
               <a
                 href="{{p.url}}{{page.inputPath}}"
                 target="_blank"
@@ -28,7 +26,7 @@
         {%- endfor -%}
       </ul>
       {%- if site.backToTop and site.backToTop.id %}
-        <div id="back-to-start" class="m-ryt p-ryt-sm flex-col justify-end bg-light dark:bg-light-dark">
+        <div id="back-to-start" class="hidden m-ryt p-ryt-sm flex-col justify-end bg-light dark:bg-light-dark">
           <div id="heading-hint" class="right text-sm hidden mb-ryt-sm leading-tight">
             <a href="#" class="no-underline"></a>
           </div>

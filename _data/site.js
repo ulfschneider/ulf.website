@@ -64,6 +64,7 @@ module.exports = {
         label: "Search",
         url: BASE + "search/",
         id: "search",
+        hide: true,
         kbd: "s"
     }
     ],
@@ -98,7 +99,7 @@ module.exports = {
     },
     {
         label: "Edit on GitHub",
-        id: "editOnGitHub",
+        id: "edit-on-github",
         url: "https://github.com/ulfschneider/11ty.ulf.codes/edit/master/",
         kbd: "e"
     }
