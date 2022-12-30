@@ -80,9 +80,9 @@ module.exports = {
         kbd: "u"
     },
     {
-        label: "Accessibility",
-        url: BASE + "accessibility-statement/",
-        id: "accessibility",
+        label: "Keyboard",
+        url: BASE + "keyboard/",
+        id: "keyboard",
         kbd: "a"
     },
     {
