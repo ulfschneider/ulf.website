@@ -7,6 +7,7 @@ const miniSearch = MiniSearch.loadJSON(JSON.stringify(searchIndex), {
 });
 
 
+
 export default async (request, context) => {
     const start = Date.now();
 
@@ -14,16 +15,13 @@ export default async (request, context) => {
     const searchParams = url.searchParams;
     const query = searchParams.get('query');
     try {
-        let results = miniSearch.search(deriveSearchOptions(query));
+        let results = miniSearch.autoSuggest(deriveSearchOptions(query));
         const now = Date.now();
-        context.log(`The search for [${query}] returned ${results.length} results within ${now - start} milliseconds`);
-        return new Response(JSON.stringify(results),
-            {
-                status: 200,
-                headers: { "content-type": "application/json;charset=UTF-8" }
-            });
+        console.log(JSON.stringify(results));
+        console.log(`The suggest for [${query}] returned ${results.length} results within ${now - start} milliseconds`);
+        return context.json(results);
     } catch (error) {
-        context.log(`Failure when searching for [${query}]: ${error}`);
+        console.log(`Failure when suggesting for [${query}]: ${error}`);
         return new Response(error, {
             status: 500
         });
