@@ -1,7 +1,9 @@
 <footer id="footer" class="shrink-0 bg-light dark:bg-light-dark py-ryt-xl px-ryt">
   <div class="max-w-lg mx-auto">
     {%- if page.url != site.search.url -%}
-      {%- include "search-field.html" -%}
+      <div class="no-js-hidden mb-ryt-lg">
+        {%- include "search-field.html" -%}
+      </div>
     {%- endif -%}
     <nav class="legible-base-width columns-3xs">
       <ul class="m-0 reset">

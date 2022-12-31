@@ -4,6 +4,9 @@ nodate: true
 permalink: "{{site.search.url}}"
 ---
 <div class="my-ryt-2xl">
+  <noscript>
+    <div class="legible-base-width text-lg">You cannot perform a search because JavaScript disabled for your browser. Please consider enabling JavaScript.</div>
+  </noscript>
   {% include "search-field.html", focus: true, onsubmit:
    "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value);
    history.replaceState(null, '', location.pathname + '?query=' +
