@@ -47,9 +47,6 @@
     blockquote {
       @apply max-w-rg;
     }
-    figure {
-      @apply max-w-md;
-    }
   }
   *.legible-base-width {
     @apply max-w-rg;
@@ -78,9 +75,6 @@
     summary,
     blockquote {
       max-width: 60ch;
-    }
-    figure {
-      @apply max-w-md;
     }
   }
   *.legible-ch-width {
