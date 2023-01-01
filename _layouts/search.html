@@ -124,7 +124,7 @@ permalink: "{{site.search.url}}"
   function printResultCount(searchResults, resultSet, query) {
     let count = document.createElement("div");
     if (resultSet.length == 0) {
-      count.innerHTML = 'Your search <strong>' + query + '</strong> did not return any results.';
+      count.innerHTML = 'Your search for <strong>' + query + '</strong> did not return any results.';
     } else if (resultSet.length == 1) {
       count.innerHTML = 'One result for <strong>' + query + '</strong:';
     } else {
