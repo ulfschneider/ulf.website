@@ -7,8 +7,8 @@ const CACHE_VERSION = 'v1';
 module.exports = {
     cacheVersioning: {
         runtime: `${CACHE_VERSION}-0`,
-        script: `${CACHE_VERSION}-0`,
-        css: `${CACHE_VERSION}-30`,
+        script: `${CACHE_VERSION}-1`,
+        css: `${CACHE_VERSION}-31`,
         json: `${CACHE_VERSION}-0`,
         search: `${CACHE_VERSION}-1`,
         image: `${CACHE_VERSION}-0`,
@@ -64,6 +64,7 @@ module.exports = {
         label: "Search",
         url: BASE + "search/",
         id: "search",
+        classList: 'no-js-hidden',
         kbd: "s"
     }
     ],
@@ -79,10 +80,11 @@ module.exports = {
         kbd: "u"
     },
     {
-        label: "Accessibility",
-        url: BASE + "accessibility-statement/",
-        id: "accessibility",
-        kbd: "a"
+        label: "Keyboard",
+        url: BASE + "keyboard/",
+        id: "keyboard",
+        kbd: "a",
+        classList: 'no-js-hidden'
     },
     {
         label: "Colophon",
@@ -98,7 +100,7 @@ module.exports = {
     },
     {
         label: "Edit on GitHub",
-        id: "editOnGitHub",
+        id: "edit-on-github",
         url: "https://github.com/ulfschneider/11ty.ulf.codes/edit/master/",
         kbd: "e"
     }

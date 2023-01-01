@@ -50,7 +50,7 @@
 
       for (let nav of {{site.mainnav | json}}) {
         if (event.key == nav.kbd && nav.url) {
-          if (nav.id == 'editOnGitHub') {
+          if (nav.id == 'edit-on-github') {
             window.open(nav.url + '{{page.inputPath}}', '_blank');
           } else {
             location.href = nav.url;
@@ -63,7 +63,7 @@
       for (let nav of {{site.footernav | json}}) {
         if (event.key == nav.kbd && nav.url) {
           event.preventDefault();
-          if (nav.id == 'editOnGitHub') {
+          if (nav.id == 'edit-on-github') {
             window.open(nav.url + '{{page.inputPath}}', '_blank');
           } else {
             location.href = nav.url;

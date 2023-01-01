@@ -3,6 +3,16 @@ layout: default
 nodate: true
 permalink: "{{site.search.url}}"
 ---
+<div class="my-ryt-2xl">
+  <noscript>
+    <div class="legible-base-width text-lg">You cannot perform a search because JavaScript disabled for your browser. Please consider enabling JavaScript.</div>
+  </noscript>
+  {% include "search-field.html", focus: true, onsubmit:
+   "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value);
+   history.replaceState(null, '', location.pathname + '?query=' +
+   event.target[SEARCH_QUERY_ID].value)" %}
+</div>
+<div id="search-results"></div>
 <script>
   const SEARCH_RESULTS_ID = "search-results";
   const SEARCH_QUERY_ID = "search-query";
@@ -158,15 +168,26 @@ permalink: "{{site.search.url}}"
     }
     removeChildren(searchResults);
     let errorMessage = document.createElement("div");
-    errorMessage.innerHTML = 'The search for <strong>' + query + '</strong> resulted in an error<br><br>' + error;
+    errorMessage.innerHTML = 'The search for <strong>' + query + '</strong> could not be completed because of a failure.';
+    if (error && error.status && error.statusText) {
+      errorMessage.innerHTML += '</br>';
+      errorMessage.innerHTML += 'Status code ' + error.status + ': ' + error.statusText;
+    }
     searchResults.append(errorMessage);
   }
 
   async function search(query) {
     try {
-      let response = await fetch('/api/search/?query=' + encodeURIComponent(query))
-      let resultSet = await response.json();
-      printSearchResults(resultSet, query);
+      let start = Date.now();
+      let response = await fetch('/api/search/?query=' + encodeURIComponent(query));
+      let duration = Date.now() - start;
+      if (response.status == 200) {
+        let resultSet = await response.json();
+        console.log('The search for [' + query + '] returned ' + resultSet.length + ' results within ' + duration + ' milliseconds');
+        printSearchResults(resultSet, query)
+      } else {
+        printError(response, query);
+      }
     } catch (error) {
       printError(error, query);
     }
@@ -184,10 +205,3 @@ permalink: "{{site.search.url}}"
     }
   });
 </script>
-<div class="my-ryt-2xl">
-  {% include "search-field.html", focus: true, onsubmit:
-   "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value);
-   history.replaceState(null, '', location.pathname + '?query=' +
-   event.target[SEARCH_QUERY_ID].value)" %}
-</div>
-<div id="search-results"></div>

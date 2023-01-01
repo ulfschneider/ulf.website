@@ -16,6 +16,15 @@ if (navigator.serviceWorker) {
     });
 }
 
+/* indicate if JavaScript is available */
+function isJavaScript() {
+    let noJs = document.querySelectorAll('.no-js');
+    for (let element of noJs) {
+        element.classList.remove('no-js');
+        element.classList.add('js')
+    }
+}
+
 
 /* Back to top */
 function maintainBackToStartVisibility() {
@@ -30,13 +39,11 @@ function maintainBackToStartVisibility() {
         if (windowHeight * 1.5 < documentHeight && scrollY >= .5 * windowHeight) {
             backToStart.style.display = 'flex';
             backToStart.style.position = 'fixed';
-
             backToStart.style.right = '0';
             backToStart.style.bottom = '0';
             backToStart.style.border = '1px solid currentColor';
             if (footerNav) {
                 footerNav.classList.add('pb-ryt-xl');
-
             }
         } else {
             backToStart.style.display = 'none';
@@ -79,6 +86,7 @@ function displayLoadTime() {
     }
 }
 
+addEventListener('DOMContentLoaded', isJavaScript);
 addEventListener('load', maintainBackToStartVisibility);
 addEventListener('scroll', maintainBackToStartVisibility);
 addEventListener('resize', maintainBackToStartVisibility);

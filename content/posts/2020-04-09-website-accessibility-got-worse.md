@@ -2,9 +2,11 @@
 title: Website accessibility got worse
 tags: accessibility
 ---
-Dave Rupert made me aware with his [tweet](https://twitter.com/davatron5000/status/1247179071890640896): 
+Dave Rupert made me aware with his tweet
 
-> The average website accessibility got worse during the last twelve months!
+https://twitter.com/davatron5000/status/1247179071890640896
+
+The average website accessibility got worse during the last twelve months!
 
 This is according to the [WebAIM annual accessibility analysis](https://webaim.org/projects/million/) of a list of one million homepages. [WebAIM](https://webaim.org/about/), which stands for Web Accessibility In Mind, is a non-profit organization based at the [Center for people with Disabilities](https://www.cpd.usu.edu/) of the Utah State University.
 

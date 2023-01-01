@@ -80,5 +80,21 @@
       "profile_image_url_https": "https://pbs.twimg.com/profile_images/1415341686826356737/hnkb3bu1_normal.jpg"
     },
     "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/jchyip\"><img src=\"https://pbs.twimg.com/profile_images/1415341686826356737/hnkb3bu1_normal.jpg\" alt=\"Avatar for jchyip\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/jchyip\">Jason Yip (@jchyip@mastodon.online) </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/jchyip\">@jchyip</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/jchyip/status/1562797626369515522\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">Some questions for setting up a new team:<br><br>1. Why do we exist?<br>2. What are we planning to do?<br>3. Who are we? What do we own?<br>4. How do we work? Who does what?<br>5. How does each of us fit in?<br><br>What am I missing?</p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1562797626369515522\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">74 </span></a><a class=\"tweet-date\" title=\"Time Posted: Aug 25, 2022 01:42:44 (UTC)\" href=\"https://twitter.com/jchyip/status/1562797626369515522\">03:42 PM · Aug 25, 2022</a></div></blockquote>"
+  },
+  "1247179071890640896": {
+    "id_str": "1247179071890640896",
+    "htmlText": "Over the last year websites got **checks notes** LESS accessible?!?1 Jesus, my dudes. <a href=\"https://webaim.org/blog/webaim-million-one-year-update/\">webaim.org/blog/webaim-million-one-year-update/</a>",
+    "images": [],
+    "favorite_count": 114,
+    "created_at": {
+      "display": "05:07 PM · Apr 6, 2020",
+      "meta": "Apr 6, 2020 03:07:16 (UTC)"
+    },
+    "user": {
+      "name": "Dave Rupert",
+      "screen_name": "davatron5000",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1369051271735443468/Kzlh5_3C_normal.jpg"
+    },
+    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/davatron5000\"><img src=\"https://pbs.twimg.com/profile_images/1369051271735443468/Kzlh5_3C_normal.jpg\" alt=\"Avatar for davatron5000\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/davatron5000\">Dave Rupert </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/davatron5000\">@davatron5000</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/davatron5000/status/1247179071890640896\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">Over the last year websites got **checks notes** LESS accessible?!?1 Jesus, my dudes. <a href=\"https://webaim.org/blog/webaim-million-one-year-update/\">webaim.org/blog/webaim-million-one-year-update/</a></p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1247179071890640896\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">114 </span></a><a class=\"tweet-date\" title=\"Time Posted: Apr 6, 2020 03:07:16 (UTC)\" href=\"https://twitter.com/davatron5000/status/1247179071890640896\">05:07 PM · Apr 6, 2020</a></div></blockquote>"
   }
 }
