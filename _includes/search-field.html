@@ -5,69 +5,68 @@
   {%- if focus -%}
     {%- assign autofocus = "autofocus" -%}
   {%- endif -%}
-  <section class="legible-base-width">
-    <form onsubmit="{{onsubmit}}">
-      <label
-        id="search-label"
-        for="search-query"
-        class="font-display font-bold">Search
-        {{ site.name }}
-        <div class="flex flex-row">
-          <input
-            id="search-query"
-            {{ autofocus }}
-            autocomplete="off"
-            autocorrect="off"
-            autocapitalize="off"
-            spellcheck="false"
-            type="text"
-            class="grow self-stretch"
-            type="text" />
-          <input
-            type="submit"
-            id="search-submit"
-            style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;"
-            value="Search" />
-        </div>
-      </label>
-      <details>
-        <summary>Search help</summary>
-        <dl class="mr-0 text-small">
-          <dt>
-            <code>foo bar</code>
-          </dt>
-          <dd>Will match documents that contain
-            <q>foo</q>
-            <em>or</em>
-            <q>bar</q>.</dd>
-          <dt>
-            <code>+foo bar</code>
-          </dt>
-          <dd>Will match documents that
-            <em>must</em>
-            contain
-            <q>foo</q> and 
-            <em>might</em>
-            contain
-            <q>bar</q>.</dd>
-        </dl>
-      </details>
-    </form>
+
+  <form
+    id='search-form'
+    class="legible-base-width"
+    onsubmit="{{onsubmit}}">
+    <label
+      id="search-label"
+      for="search-query"
+      class="font-display font-bold">Search
+      {{ site.name }}
+      <div class="flex flex-row">
+        <input
+          id="search-query"
+          {{ autofocus }}
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          type="text"
+          suggestion-wrapper-id="autocomplete-search"
+          class="grow self-stretch"
+          type="text" />
+        <input
+          type="submit"
+          id="search-submit"
+          style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;"
+          value="Search" />
+      </div>
+    </label>
+    <ul id="autocomplete-search"></ul>
 
     <script>
-      let query = document.querySelector('#search-query');
+      async function suggest(input, callback) {
+        try {
+          let response = await fetch('/api/search-suggest/?query=' + encodeURIComponent(input));
+          let suggestions = await response.json();
+          callback(null, suggestions.map(entry => entry.suggestion));
+        } catch (error) {
+          callback(error, []);
+        }
+      }
 
       function submitQuery(event) {
-        event.preventDefault();
-        
-        let query = event.target['search-query'].value;
-
+        if (event) {
+          event.preventDefault();
+        }
+        let query = document.querySelector('#search-query').value;
         if (query && query.trim()) {
           location.href = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim());
         } else {
           location.href = '{{site.search.url}}';
         }
       }
+
+
+      addEventListener('DOMContentLoaded', function(event) {
+        AutoComplete.init({selector: '#search-query', data: suggest, threshold: 2, onSelect: submitQuery});
+      });
     </script>
-  </section>
+
+  </form>
+
+
+
 {%- endif -%}

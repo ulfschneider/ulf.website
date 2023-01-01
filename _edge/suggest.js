@@ -17,9 +17,10 @@ export default async (request, context) => {
     try {
         let results = miniSearch.autoSuggest(deriveSearchOptions(query));
         const now = Date.now();
-        console.log(JSON.stringify(results));
         console.log(`The suggest for [${query}] returned ${results.length} results within ${now - start} milliseconds`);
-        return context.json(results);
+        //return at max 7 suggestions
+        let limitedResult = context.json(results.slice(0, 7));
+        return limitedResult;
     } catch (error) {
         console.log(`Failure when suggesting for [${query}]: ${error}`);
         return new Response(error, {

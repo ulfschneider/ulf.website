@@ -1,4 +1,25 @@
 @layer components {
+  /*auto complete */
+  ul.auto-complete-suggestion {
+    @apply reset border border-meta absolute w-full m-0;
+
+    &::after {
+      content: "";
+      @apply absolute -bottom-ryt-xl h-ryt-xl w-1;
+    }
+
+    > li {
+      @apply px-ryt-xs py-ryt-sm leading-tight bg-field-light dark:bg-field-dark cursor-pointer font-normal;
+    }
+    > li::before {
+      @apply hidden;
+    }
+    > li:hover,
+    > li[aria-selected="true"] {
+      @apply bg-primary text-white;
+    }
+  }
+
   /* table of contents */
   /* markdown-it toc */
 

@@ -319,7 +319,7 @@
   }
 
   pre code {
-    @apply bg-back-dark dark:bg-light-dark text-write-light px-ryt py-ryt-sm -mx-ryt block text-left leading-tight whitespace-pre font-mono;
+    @apply bg-back-dark dark:bg-light-dark text-write-light px-ryt py-ryt-sm -mx-ryt block text-left leading-normal whitespace-pre font-mono;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;

@@ -19,6 +19,7 @@ export default function deriveSearchOptions(query) {
     let and = andTerms(query);
     let searchOptions = {
         queries: [],
+        prefix: true
     }
     if (or.length) {
         searchOptions.combineWith = 'OR';

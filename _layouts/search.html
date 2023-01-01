@@ -151,7 +151,7 @@ permalink: "{{site.search.url}}"
   }
 
   function printError(error, query) {
-   let searchResults = document.getElementById(SEARCH_RESULTS_ID);
+    let searchResults = document.getElementById(SEARCH_RESULTS_ID);
     if (! searchResults) {
       console.error("The page does not have a DOM element with id=" + SEARCH_RESULTS_ID);
       return;
@@ -163,11 +163,13 @@ permalink: "{{site.search.url}}"
   }
 
   async function search(query) {
-    await fetch('/api/search/?query=' + encodeURIComponent(query))
-     .then(response => response.json())
-     .then(resultSet => printSearchResults(resultSet, query))
-     .catch(error => 
-      printError(error, query));   
+    try {
+      let response = await fetch('/api/search/?query=' + encodeURIComponent(query))
+      let resultSet = await response.json();
+      printSearchResults(resultSet, query);
+    } catch (error) {
+      printError(error, query);
+    }
   }
 
   addEventListener("load", function(event) {
@@ -182,10 +184,10 @@ permalink: "{{site.search.url}}"
     }
   });
 </script>
-<section class="my-ryt-2xl">
+<div class="my-ryt-2xl">
   {% include "search-field.html", focus: true, onsubmit:
    "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value);
    history.replaceState(null, '', location.pathname + '?query=' +
    event.target[SEARCH_QUERY_ID].value)" %}
-</section>
+</div>
 <div id="search-results"></div>
