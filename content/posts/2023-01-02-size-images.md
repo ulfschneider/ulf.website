@@ -24,17 +24,17 @@ In addition to `object-fit` the `object-position` property allows to move the im
 
 <figure>
 <img src="/img/bauhaus/IMG_8431.jpg" style="max-width: 100%; height: auto; max-height: 25vh; object-fit: contain; object-position: left;">
-<figcaption>The Bauhaus in Dessau, <code>max-height:25vh; object-position:left;</code></figcaption>
+<figcaption>The Bauhaus in Dessau, <code>max-height:25vh; object-fit: contain; object-position:left;</code></figcaption>
 </figure>
 
 <figure>
 <img src="/img/bauhaus/IMG_8431.jpg" style="max-width: 100%; height: auto; max-height: 25vh; object-fit: contain; object-position: center;">
-<figcaption>The Bauhaus in Dessau, <code>max-height:25vh; object-position:center;</code></figcaption>
+<figcaption>The Bauhaus in Dessau, <code>max-height:25vh; object-fit: contain; object-position:center;</code></figcaption>
 </figure>
 
 <figure>
 <img src="/img/bauhaus/IMG_8431.jpg" style="max-width: 100%; height: auto; max-height: 25vh; object-fit: contain; object-position: right;">
-<figcaption>The Bauhaus in Dessau, <code>max-height:25vh; object-position:right;</code></figcaption>
+<figcaption>The Bauhaus in Dessau, <code>max-height:25vh; object-fit: contain; object-position:right;</code></figcaption>
 </figure>
 
 
