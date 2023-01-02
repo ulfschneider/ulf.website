@@ -1,5 +1,5 @@
 ---
-title: Fit images intirely into the browser window
+title: Fit images entirely into the browser window
 tags: [css, code]
 ---
 CSS allows to size images so that a complete image will fit into the browser window. I like to style images in flowing text this way because even for a small browser window a viewing or reading user can see the image at once, without the need of scrolling up and down for a complete impression. 
