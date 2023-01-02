@@ -8,7 +8,7 @@ CSS allows to size images so that a complete image will fit into the browser win
 img {
 	max-width: 100%; /* make the image responsive and allow it to take at max 100% of the available width */
 	height: auto; /* do not have a fixed setting for height */
-	max-height: 80vh; /* for browser windows wider than 400px the image will be limited to take at max 80% of the height of the browser window */
+	max-height: 80vh; /* the image will be limited to take at max 80% of the height of the browser window */
 	object-fit: contain; /* fit the image into the available dimensions while preserving aspect ratio */
 }
 ```
