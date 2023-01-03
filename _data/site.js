@@ -97,12 +97,6 @@ module.exports = {
         url: BASE + "feed.xml",
         id: "rss",
         kbd: "r"
-    },
-    {
-        label: "Edit on GitHub",
-        id: "edit-on-github",
-        url: "https://github.com/ulfschneider/11ty.ulf.codes/edit/master/",
-        kbd: "e"
     }
     ],
     tagnav: [{
