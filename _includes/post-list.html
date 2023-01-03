@@ -1,7 +1,7 @@
 {%- if pagedItems.pageData.length > 0 -%}
   {%- assign livePosts = pagedItems.pageData -%}
 {%- else -%}
-  {%- assign livePosts = collections.livePosts -%}
+  {%- assign livePosts = collections.liveContent | post -%}
 {%- endif -%}
 {%- if pagedItems.humanPageNumber > 1 or content == "" -%}
   <div>
@@ -11,6 +11,9 @@
     {% endif %}
   </div>
 {%- endif -%}
+
+
+
 <div class="mt-ryt-lg mb-ryt-xl">
   {%- for p in livePosts -%}
     {%- assign currentDate = p.date | humanDate -%}

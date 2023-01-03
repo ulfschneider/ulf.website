@@ -10,7 +10,7 @@ nodate: true
 {%- if tag != nil -%}
   {% assign imageData = collections[tag] | live | post | reverse | firstImage %}
 {%- else -%}
-  {% assign imageData = collections.livePosts | firstImage %}
+  {% assign imageData = collections.liveContent | post | firstImage %}
 {%- endif %}
 
 <script>

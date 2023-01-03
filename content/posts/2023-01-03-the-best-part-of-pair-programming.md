@@ -1,6 +1,6 @@
 ---
 title: The best part of pair-programming is when things go wrong
-tags: code
+tags: [code, agile]
 ---
 > When I think back, my favorite pair-programming sessions were the one where things went wrong. These were the moments that taught me what being a programmer is all about. What do you do when you don’t know what to do? How do you break down a new problem? What tools do you reach for? When do you abandon your current approach? These are things you can’t learn from a blog post.
 > 

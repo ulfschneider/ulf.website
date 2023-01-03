@@ -8,6 +8,7 @@ const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
 const filters = require('./_eleventy/filters.js');
 const transforms = require('./_eleventy/transforms.js');
+const { filter } = require('domutils');
 
 module.exports = function (eleventyConfig) {
     addLayoutAliases(eleventyConfig);
@@ -72,67 +73,46 @@ function addLayoutAliases(eleventyConfig) {
 
 function addCollections(eleventyConfig) {
     //live content
-    eleventyConfig.addCollection('liveContent', collectionAPI => {
+    eleventyConfig.addCollection('liveContent', async collectionAPI => {
         console.log('Derive live content');
-        return [
-            ...collectionAPI.getFilteredByGlob(['content/**'])
-                .filter(utils.isLiveItem)
-                .map(item => {
-                    item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
-                    item.data.modifiedDate = filters.modifiedDate(item);
-                    return item;
-                })
-                .sort(utils.compareItemDate)
-                .reverse()
-        ];
+        return collectionAPI.getFilteredByGlob(['content/**'])
+            .filter(utils.isLiveItem)
+            .map(item => {
+                item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
+                item.data.modifiedDate = filters.modifiedDate(item);
+                return item;
+            })
+            .sort(utils.compareItemDate)
+            .reverse()
+            ;
     });
-    //searchable content
-    eleventyConfig.addCollection('searchableContent', collectionAPI => {
-        console.log('Derive searchable content');
-        return [
-            ...collectionAPI.getFilteredByGlob(['content/**', '!content/tagintros/**'])
-                .filter(utils.isLiveItem)
-                .map(item => {
-                    item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
-                    item.data.modifiedDate = filters.modifiedDate(item);
-                    return item;
-                })
-                .sort(utils.compareItemDate)
-                .reverse()
-        ];
-    });
-    //live posts
-    eleventyConfig.addCollection('livePosts', collectionAPI => {
-        console.log('Derive live posts');
-        return [
-            ...collectionAPI.getFilteredByGlob('content/posts/**')
-                .filter(utils.isLiveItem)
-                .map(item => {
-                    item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
-                    item.data.modifiedDate = filters.modifiedDate(item);
+    /*//home content
+    eleventyConfig.addCollection('homeContent', async collectionAPI => {
+        console.log('Derive home content');
+        let homeContent = [...collectionAPI.getFilteredByGlob(['content/posts/**'])
+            .filter(utils.isLiveItem)
+            .map(item => {
+                item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
+                item.data.modifiedDate = filters.modifiedDate(item);
+                return item;
+            })
+            .sort(utils.compareItemDate)
+            .reverse()].slice(0, 1);
+        homeContent[0].url = site.base;
+        homeContent[0].data.id = 'home';
+        homeContent[0].outputPath = site.output + site.base + 'index.html';
 
-                    if (item.data?.tags?.includes(site.starTag)) {
-                        item.data.starred = site.starTag;
-                    } else {
-                        item.data.starred = '';
-                    }
-                    return item;
-                })
-                .sort(utils.compareItemDate)
-                .reverse()
-        ];
-    });
+        return homeContent;
+    });*/
     //tag intros
     eleventyConfig.addCollection('tagIntros', collectionAPI => {
         console.log('Derive tag intros');
-        return [
-            ...collectionAPI.getFilteredByGlob('content/tagintros/**')
-                .map(item => {
-                    item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
-                    item.data.modifiedDate = filters.modifiedDate(item);
-                    return item;
-                })
-        ];
+        return collectionAPI.getFilteredByGlob('content/tagintros/**')
+            .map(item => {
+                item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
+                item.data.modifiedDate = filters.modifiedDate(item);
+                return item;
+            });
     });
     //used site tags
     eleventyConfig.addCollection('usedSiteTags', collectionAPI => {
@@ -155,20 +135,18 @@ function addCollections(eleventyConfig) {
     //double pagination
     eleventyConfig.addCollection('doublePagination', collectionAPI => {
         console.log('Derive double pagination');
-        let items = [
-            ...collectionAPI.getFilteredByGlob('content/posts/**')
-                .map(item => {
-                    if (item.data?.tags?.includes(site.starTag)) {
-                        item.data.starred = site.starTag;
-                    } else {
-                        item.data.starred = '';
-                    }
-                    return item;
-                })
-                .filter(utils.isLiveItem)
-                .sort(utils.compareItemDate)
-                .reverse()
-        ];
+        let items = collectionAPI.getFilteredByGlob('content/posts/**')
+            .map(item => {
+                if (item.data?.tags?.includes(site.starTag)) {
+                    item.data.starred = site.starTag;
+                } else {
+                    item.data.starred = '';
+                }
+                return item;
+            })
+            .filter(utils.isLiveItem)
+            .sort(utils.compareItemDate)
+            .reverse();
 
         let tagMap = [];
         let pagedItems = utils.chunk(items, site.paginationSize);
@@ -179,10 +157,10 @@ function addCollections(eleventyConfig) {
                 pageNumber: pageNumber,
                 humanPageNumber: pageNumber + 1,
                 permalink: utils.currentPage(site.blog, pageNumber),
-                first: utils.currentPage(site.blog),
-                previous: utils.previousPage(site.blog, pageNumber),
-                next: utils.nextPage(site.blog, pageNumber, max),
-                last: utils.lastPage(site.blog, max),
+                newest: utils.currentPage(site.blog),
+                newer: utils.newerPage(site.blog, pageNumber),
+                older: utils.olderPage(site.blog, pageNumber, max),
+                oldest: utils.oldestPage(site.blog, max),
                 itemCount: items.length,
                 pageCount: pagedItems.length,
                 pageData: pagedItems[pageNumber]
@@ -204,10 +182,10 @@ function addCollections(eleventyConfig) {
                     pageNumber: pageNumber,
                     humanPageNumber: pageNumber + 1,
                     permalink: utils.currentPage(`${site.blog}${tagName}/`, pageNumber),
-                    first: utils.currentPage(`${site.blog}${tagName}/`),
-                    previous: utils.previousPage(`${site.blog}${tagName}/`, pageNumber),
-                    next: utils.nextPage(`${site.blog}${tagName}/`, pageNumber, max),
-                    last: utils.lastPage(`${site.blog}${tagName}/`, max),
+                    newest: utils.currentPage(`${site.blog}${tagName}/`),
+                    newer: utils.newerPage(`${site.blog}${tagName}/`, pageNumber),
+                    older: utils.olderPage(`${site.blog}${tagName}/`, pageNumber, max),
+                    oldest: utils.oldestPage(`${site.blog}${tagName}/`, max),
                     itemCount: tagItems.length,
                     pageCount: pagedItems.length,
                     pageData: pagedItems[pageNumber]

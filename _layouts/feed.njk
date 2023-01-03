@@ -12,7 +12,7 @@
       <email>{{ site.ownership.email }}</email>
     </author>
   {% endif -%}
-  {%- for p in collections.livePosts | reverse -%}
+  {%- for p in collections.liveContent | post | reverse -%}
     {%- if p.data.norss == nil %}
       {%- set absolutePostUrl -%}{{ site.origin }}{{ p.url | url }}{%- endset -%}
       {%- set authorEmail -%}{{ p | authorEmail }}{%- endset -%}

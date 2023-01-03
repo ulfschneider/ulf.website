@@ -1,0 +1,29 @@
+{% assign newerPost = collections.liveContent | post | getPreviousCollectionItem: page %}
+{% assign olderPost = collections.liveContent | post | getNextCollectionItem: page %}
+
+{%- if newerPost or olderPost -%}
+  <nav class="flex flex-col sm:flex-row justify-between gap-ryt-xl mt-ryt-2xl mb-ryt-xl legible-base-width">
+    {% if newerPost %}
+      <div>
+        <div class="text-sm whitespace-nowrap">Newer post</div>
+        <a
+          class="no-underline"
+          id="nav-newer"
+          href="{{ newerPost.url }}">
+          <cite>{{ newerPost.data.title }}</cite>
+        </a>
+      </div>
+    {% endif %}
+    {% if olderPost %}
+      <div>
+        <div class="text-sm whitespace-nowrap">Older post</div>
+        <a
+          class="no-underline"
+          id="nav-older"
+          href="{{ olderPost.url }}">
+          <cite>{{ olderPost.data.title }}</cite>
+        </a>
+      </div>
+    {% endif %}
+  </nav>
+{%- endif -%}

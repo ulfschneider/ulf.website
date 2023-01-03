@@ -115,7 +115,7 @@
 
   /* typography */
   cite {
-    @apply font-bold not-italic;
+    @apply font-bold not-italic font-display;
   }
 
   mark,

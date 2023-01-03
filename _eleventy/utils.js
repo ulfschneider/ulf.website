@@ -34,6 +34,7 @@ function mySlugify(s) {
 
 
 const site = require('../_data/site.js');
+const utils = require('markdown-it/lib/common/utils.js');
 
 module.exports = {
 
@@ -140,7 +141,7 @@ module.exports = {
 
     isSearchAble: function (item) {
         if (item.templateContent && item.templateContent.trim()) {
-            return item.data.nosearch == null;
+            return item.data.nosearch == null && this.isLiveItem(item) && !item.inputPath.startsWith(`./${site.input}/tagintros/`);
         }
         return false;
     },
@@ -284,15 +285,15 @@ module.exports = {
         return chunks
     },
 
-    firstPage: function (path) {
+    newestPage: function (path) {
         return path;
     },
 
-    lastPage: function (path, max) {
+    oldestPage: function (path, max) {
         return path + max + '/';
     },
 
-    previousPage: function (path, currentIndex) {
+    newerPage: function (path, currentIndex) {
         if (currentIndex > 1) {
             return path + currentIndex + '/';
         } else if (currentIndex == 1) {
@@ -309,7 +310,7 @@ module.exports = {
             return path;
     },
 
-    nextPage: function (path, currentIndex, max) {
+    olderPage: function (path, currentIndex, max) {
         if (currentIndex < max - 1) {
             return path + (currentIndex + 2) + '/';
         } else {

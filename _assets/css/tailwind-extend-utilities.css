@@ -81,6 +81,10 @@
     max-width: 60ch;
   }
 
+  .center-children > * {
+    @apply mx-auto;
+  }
+
   /* split */
   .split {
     grid-template-columns: repeat(2, 1fr);

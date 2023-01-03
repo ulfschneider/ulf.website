@@ -1,37 +1,49 @@
-{%-if pagedItems.pageCount > 1 -%}
-  <nav class="max-w-xs flex flex-row justify-between">
-    {%-if pagedItems.previous != "" and pagedItems.previous != nil -%}
+{%- if pagedItems.pageCount > 1 -%}
+  <nav class="flex flex-row justify-between gap-ryt-xl my-ryt-xl max-w-xs">
+    {%- if pagedItems.newer != "" and pagedItems.newer != nil -%}
       <div>
         <strong>
-          <a id="nav-previous" class="h2 text-primary block mt-ryt-lg mb-0" href="{{pagedItems.previous}}">
-            {%-if site.navPrevious.label -%}
-              {{site.navPrevious.label}}
-              {%-else-%}Newer posts{%-endif-%}
+          <a
+            id="nav-newer"
+            class="h2 text-primary block mt-ryt-lg mb-0"
+            href="{{pagedItems.newer}}">
+            {%- if site.navNewer.label -%}
+              {{ site.navNewer.label }}
+              {%- else -%}Newer posts{%- endif -%}
           </a>
         </strong>
         <strong>
-          <a id="nav-first" class="text-base text-primary block mt-ryt-lg mb-0" href="{{pagedItems.first}}">
-            {%-if site.navFirst.label -%}
-              {{site.navFirst.label}}
-              {%-else-%}Newest{%-endif-%}
+          <a
+            id="nav-newest"
+            class="text-base text-primary block mt-ryt-lg mb-0"
+            href="{{pagedItems.newest}}">
+            {%- if site.navNewest.label -%}
+              {{ site.navNewest.label }}
+              {%- else -%}Newest{%- endif -%}
           </a>
         </strong>
       </div>
     {%- endif -%}
-    {%-if pagedItems.next != "" and pagedItems.next != nil -%}
+    {%- if pagedItems.older != "" and pagedItems.older != nil -%}
       <div>
         <strong>
-          <a id="nav-next" class="h2 text-primary block mt-ryt-lg mb-0" href="{{pagedItems.next}}">
-            {%-if site.navNext.label -%}
-              {{site.navNext.label}}
-              {%-else-%}Older posts{%-endif-%}
+          <a
+            id="nav-older"
+            class="h2 text-primary block mt-ryt-lg mb-0"
+            href="{{pagedItems.older}}">
+            {%- if site.navOlder.label -%}
+              {{ site.navOlder.label }}
+              {%- else -%}Older posts{%- endif -%}
           </a>
         </strong>
         <strong>
-          <a id="nav-last" class="text-base text-primary block mt-ryt-lg mb-0" href="{{pagedItems.last}}">
-            {%-if site.navLast.label -%}
-              {{site.navLast.label}}
-              {%-else-%}Oldest{%-endif-%}
+          <a
+            id="nav-oldest"
+            class="text-base text-primary block mt-ryt-lg mb-0"
+            href="{{pagedItems.oldest}}">
+            {%- if site.navOldest.label -%}
+              {{ site.navOldest.label }}
+              {%- else -%}Oldest{%- endif -%}
           </a>
         </strong>
       </div>
@@ -39,7 +51,10 @@
   </nav>
 {%- elsif pagedItems == nil -%}
   <strong>
-    <a id="nav-next" class="h2 text-primary inline-block mt-ryt-lg mb-0" href="{{site.blog}}">
+    <a
+      id="nav-older"
+      class="h2 text-primary inline-block mt-ryt-lg mb-0"
+      href="{{site.blog}}">
       All posts
     </a>
   </strong>

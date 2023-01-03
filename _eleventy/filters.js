@@ -106,7 +106,7 @@ module.exports = {
         let miniSearch = new MiniSearch({ fields: INDEX_FIELDS, storeFields: STORE_FIELDS });
         for (let item of collection) {
             let mappedItem = utils.mapItem(item);
-            if (mappedItem.id && !miniSearch.has(mappedItem.id)) {
+            if (utils.isSearchAble(item) && mappedItem.id && !miniSearch.has(mappedItem.id)) {
                 miniSearch.add(mappedItem);
             }
         }

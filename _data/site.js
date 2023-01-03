@@ -83,7 +83,7 @@ module.exports = {
         label: "Keyboard",
         url: BASE + "keyboard/",
         id: "keyboard",
-        kbd: "a",
+        kbd: "k",
         classList: 'no-js-hidden'
     },
     {
@@ -112,25 +112,25 @@ module.exports = {
         url: BASE + "blog/"
     }
     ],
-    navFirst: {
+    navNewest: {
         label: 'Newest',
         id: 'nav-first',
         kbd: ''
     },
-    navPrevious: {
+    navNewer: {
         label: 'Newer',
-        id: 'nav-previous',
+        id: 'nav-newer',
         kbd: '-'
     },
-    navNext: {
-        label: 'Older',
-        id: 'nav-next',
-        kbd: '+',
-    },
-    navLast: {
+    navOldest: {
         label: 'Oldest',
         id: 'nav-last',
         kbd: ''
+    },
+    navOlder: {
+        label: 'Older',
+        id: 'nav-older',
+        kbd: '+',
     },
     backToTop: {
         label: "Back to Top",
