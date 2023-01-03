@@ -12,7 +12,7 @@ permalink: "{{site.search.url}}"
    history.replaceState(null, '', location.pathname + '?query=' +
    event.target[SEARCH_QUERY_ID].value)" %}
 </div>
-<div id="search-results" class="legible-base-width"></div>
+<div id="search-results"></div>
 <script>
   const SEARCH_RESULTS_ID = "search-results";
   const SEARCH_QUERY_ID = "search-query";
@@ -123,6 +123,7 @@ permalink: "{{site.search.url}}"
 
   function printResultCount(searchResults, resultSet, query) {
     let count = document.createElement("div");
+    count.classList.add('legible-rem-width');
     if (resultSet.length == 0) {
       count.innerHTML = 'Your search for <strong>' + query + '</strong> did not return any results.';
     } else if (resultSet.length == 1) {
