@@ -30,8 +30,8 @@ module.exports = {
       'xl': ['var(--font-size-xl)', '1.3'],
       '2xl': ['var(--font-size-2xl)', '1.2'],
       '3xl': ['var(--font-size-3xl)', '1.1'],
-      '4xl': ['var(--font-size-4xl)', '1'],
-      '5xl': ['var(--font-size-5xl)', '1'],
+      '4xl': ['var(--font-size-4xl)', '1.1'],
+      '5xl': ['var(--font-size-5xl)', '1.1'],
       'smaller': 'smaller',
       'larger': 'larger'
     },
