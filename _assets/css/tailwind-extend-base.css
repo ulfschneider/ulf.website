@@ -115,7 +115,7 @@
 
   /* typography */
   cite {
-    @apply font-bold not-italic font-display;
+    @apply font-bold not-italic;
   }
 
   mark,
@@ -278,12 +278,21 @@
   /* quote and blockquote */
 
   q {
-    @apply italic;
+    @apply italic font-mono;
     quotes: "“" "”" "‘" "’";
   }
 
   blockquote {
-    @apply p-0 italic legible-ch-width border-l-2 border-l-current pl-[calc(theme(space.ryt-lg)-theme(borderWidth.2))];
+    --quote-size: 4em;
+    --quote-box-height: 0.5em;
+
+    @apply p-0 font-mono italic legible-ch-width;
+    &::before {
+      @apply font-display leading-none block -ml-ryt-sm;
+      font-size: var(--quote-size);
+      height: var(--quote-box-height);
+      content: "“";
+    }
   }
 
   blockquote > header,
