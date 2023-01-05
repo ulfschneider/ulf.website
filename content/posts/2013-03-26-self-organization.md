@@ -18,7 +18,7 @@ Leaders in agile organizations have the vital function of actively giving self-o
 </blockquote>
 
 <blockquote>
-<p>… the only possibility of transcending the capacity of individual minds is to rely on those super personal, 'self-organizing' forces which create spontaneous orders. </p>
+<p>… the only possibility of transcending the capacity of individual minds is to rely on those super personal, ´self-organizing´ forces which create spontaneous orders. </p>
 <footer>Friedrich A. von Hayek</footer>
 </blockquote>
 
@@ -40,7 +40,7 @@ But how can this new world be connected to the evolution principle?
 </blockquote>
 
 
-The connection is, 150 years ago as well as today no mastermind can overview this world, to construct it and to plan it. The system organized itself in evolutionary steps.
+The connection is, 150 years ago as well as today, no mastermind can overview this world, construct it, and plan it. The system organized itself in evolutionary steps.
 
 ## Complexity
 
@@ -77,7 +77,7 @@ Knowledge organizations are not able to survive without large degrees of freedom
 The reaction to unforeseeable events affords ad-hoc negotiation, the breakdown of routines and goal-oriented development of new rules to modify current structures.
 
 <blockquote>
-<p>Radically one has to leave behind the idea that everything in the organization can be ruled and controlled .</p>
+<p>Radically one has to leave behind the idea that everything in the organization can be ruled and controlled.</p>
 <footer>Sylvia Bendel</footer>
 </blockquote>
 
