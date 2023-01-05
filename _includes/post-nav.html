@@ -7,10 +7,10 @@
       <div>
         <div class="text-sm whitespace-nowrap">Newer post</div>
         <a
-          class="no-underline"
+          class="no-underline font-display font-bold"
           id="nav-newer"
           href="{{ newerPost.url }}">
-          <cite>{{ newerPost.data.title }}</cite>
+          {{ newerPost.data.title }}
         </a>
       </div>
     {% endif %}
@@ -18,10 +18,10 @@
       <div>
         <div class="text-sm whitespace-nowrap">Older post</div>
         <a
-          class="no-underline"
+          class="no-underline font-display font-bold"
           id="nav-older"
           href="{{ olderPost.url }}">
-          <cite>{{ olderPost.data.title }}</cite>
+          {{ olderPost.data.title }}
         </a>
       </div>
     {% endif %}
