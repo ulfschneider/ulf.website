@@ -234,6 +234,11 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
   blockquote.tweet-card {
     @apply font-normal not-italic text-base my-ryt-lg font-sans border-light overflow-x-auto;
 
+    &::before,
+    &::after {
+      display: none;
+    }
+
     .tweet-author-name,
     .tweet-author-handle {
       @apply break-all;
