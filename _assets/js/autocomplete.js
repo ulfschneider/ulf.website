@@ -24,9 +24,29 @@ AutoComplete = (function () {
         return suggestionWrapper;
     }
 
+    function isMarkedHidden(element) {
+        let suggestionWrapper = getSuggestionWrapper(element);
+        return suggestionWrapper && suggestionWrapper.getAttribute('mark-hidden') == 'true';
+    }
+
+    function unmarkHidden(element) {
+        let suggestionWrapper = getSuggestionWrapper(element);
+        if (suggestionWrapper) {
+            suggestionWrapper.removeAttribute('mark-hidden');
+        }
+    }
+
+    function markHidden(element) {
+        let suggestionWrapper = getSuggestionWrapper(element);
+        if (suggestionWrapper) {
+            suggestionWrapper.setAttribute('mark-hidden', true);
+        }
+    }
+
     function hideSuggestionWrapper(element) {
         let suggestionWrapper = getSuggestionWrapper(element);
         if (suggestionWrapper) {
+            markHidden(element);
             suggestionWrapper.style.display = 'none';
             suggestionWrapper.innerHTML = '';
         }
@@ -44,7 +64,11 @@ AutoComplete = (function () {
     }
 
     function renderSuggestion({ element, keyUpEvent, suggestions = [], onSelect }) {
-        if (suggestions.length == 0) {
+        if (isMarkedHidden(element)) {
+            //this can only happen by callbacks returning after
+            //the autosuggestion has been hidden
+            return;
+        } else if (suggestions.length == 0) {
             hideSuggestionWrapper(element);
         } else {
             let suggestionWrapper = ensureSuggestionWrapper(element);
@@ -130,7 +154,7 @@ AutoComplete = (function () {
 
         let value = element.value;
         let trimmedValue = value.trim();
-
+        unmarkHidden(element);
         if (!threshold || threshold > 0 && trimmedValue.length >= threshold) {
             if (keyUpEvent.key == 'ArrowUp' || keyUpEvent.key == 'ArrowDown' || keyUpEvent.key == 'ArrowLeft' || keyUpEvent.key == 'ArrowRight') {
                 if (!hasVisibleSuggestionWrapper(element)) {
