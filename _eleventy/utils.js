@@ -16,7 +16,7 @@ const markdownItEmoji = require('markdown-it-emoji');
 const markdownItInclude = require('markdown-it-include');
 const sizeOf = require('image-size');
 const cheerio = require('cheerio');
-const stripHtml = require('string-strip-html');
+const striptags = require('striptags');
 const fs = require('fs');
 const path = require('path');
 
@@ -154,7 +154,7 @@ module.exports = {
             $('a.anchor').each(function () {
                 $(this).remove();
             });
-            return stripHtml($('body').html());
+            return striptags($('body').html());
         }
     },
 
