@@ -80,7 +80,7 @@
         "sharp": "^0.31.0",
         "sizeof": "^1.0.0",
         "slugify": "^1.6.5",
-        "string-strip-html": "^4.5.1",
+        "striptags": "^2.2.1",
         "tailwindcss": "^3.2.4",
         "through2": "^4.0.2"
     },
