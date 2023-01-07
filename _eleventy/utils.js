@@ -31,9 +31,7 @@ function mySlugify(s) {
     return slugify(s, { lower: true });
 }
 
-
 const site = require('../_data/site.js');
-
 
 module.exports = {
 
@@ -263,6 +261,13 @@ module.exports = {
                     tagSet.add(tag);
                 }
             }
+
+            if (post.data?.tags?.includes(site.starTag)) {
+                post.data.starred = site.starTag;
+            } else {
+                post.data.starred = '';
+            }
+
         }
         return [...tagSet].sort();
     },
