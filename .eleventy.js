@@ -86,24 +86,6 @@ function addCollections(eleventyConfig) {
             .reverse()
             ;
     });
-    /*//home content
-    eleventyConfig.addCollection('homeContent', async collectionAPI => {
-        console.log('Derive home content');
-        let homeContent = [...collectionAPI.getFilteredByGlob(['content/posts/**'])
-            .filter(utils.isLiveItem)
-            .map(item => {
-                item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
-                item.data.modifiedDate = filters.modifiedDate(item);
-                return item;
-            })
-            .sort(utils.compareItemDate)
-            .reverse()].slice(0, 1);
-        homeContent[0].url = site.base;
-        homeContent[0].data.id = 'home';
-        homeContent[0].outputPath = site.output + site.base + 'index.html';
-
-        return homeContent;
-    });*/
     //tag intros
     eleventyConfig.addCollection('tagIntros', collectionAPI => {
         console.log('Derive tag intros');
