@@ -56,7 +56,6 @@ AutoComplete = (function () {
         let suggestionWrapper = getSuggestionWrapper(element);
         if (suggestionWrapper) {
             let elementStyle = getComputedStyle(element);
-            suggestionWrapper.style.border = elementStyle.border;
             suggestionWrapper.style.marginLeft = elementStyle.marginLeft;
             suggestionWrapper.style.marginRight = elementStyle.marginRight;
             suggestionWrapper.style.width = element.offsetWidth + 'px';

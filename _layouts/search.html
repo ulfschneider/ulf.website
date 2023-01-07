@@ -194,7 +194,7 @@ permalink: "{{site.search.url}}"
     }
   }
 
-  addEventListener("load", function(event) {
+  addEventListener("DOMContentLoaded", function(event) {
     let query = getParameterByName("query");
     let input = document.getElementById(SEARCH_QUERY_ID);
     if (input) {

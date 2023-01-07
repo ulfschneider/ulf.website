@@ -88,7 +88,8 @@ module.exports = {
             'refer',
             'tags',
             'abstract',
-            'content'];
+            'content'
+        ];
 
         const STORE_FIELDS = [
             'id',
@@ -101,7 +102,8 @@ module.exports = {
             'notags',
             'starred',
             'abstract',
-            'excerpt'];
+            'excerpt'
+        ];
 
         let miniSearch = new MiniSearch({ fields: INDEX_FIELDS, storeFields: STORE_FIELDS });
         for (let item of collection) {
@@ -112,7 +114,7 @@ module.exports = {
         }
 
         let searchIndex = miniSearch.toJSON();
-        //store the configured fields within the search index
+        //store the configured index fields within the search index
         //to access it later when importing the index
         searchIndex.INDEX_FIELDS = INDEX_FIELDS;
         return JSON.stringify(searchIndex);
