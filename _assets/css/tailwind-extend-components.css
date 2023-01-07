@@ -23,36 +23,37 @@
   /* table of contents */
   /* markdown-it toc */
 
-  .anchor {
-    @apply font-normal text-base text-meta no-underline;
-  }
-
-  div.table-of-contents {
-    @apply text-sm my-ryt-lg;
-  }
-
-  div.table-of-contents::before {
-    content: "Contents";
-    @apply block font-bold text-sm;
-  }
-
-  div.table-of-contents a {
+  .heading-anchor {
     @apply no-underline;
   }
 
-  div.table-of-contents > ol {
-    @apply m-0 p-0;
-  }
+  .table-of-contents {
+    @apply text-sm my-ryt-lg;
 
-  div.table-of-contents ol > li {
-    @apply p-0 my-ryt-sm leading-tight;
-  }
-  div.table-of-contents ol > li::before {
-    @apply hidden content-none;
-  }
+    &::before {
+      content: "Contents";
+      @apply block font-bold text-sm;
+    }
 
-  div.table-of-contents ol > li > ol {
-    @apply pl-ryt-lg;
+    a {
+      @apply no-underline;
+    }
+
+    > ol {
+      @apply m-0 p-0;
+    }
+
+    ol > li {
+      @apply p-0 my-ryt-sm leading-tight;
+    }
+
+    ol > li::before {
+      @apply hidden content-none;
+    }
+
+    ol > li > ol {
+      @apply hidden;
+    }
   }
 
   /*scroll-table*/

@@ -1,7 +1,7 @@
 const markdownIt = require('markdown-it');
 const slugify = require('slugify');
 const markdownItAnchor = require('markdown-it-anchor');
-const markdonItTOC = require('markdown-it-table-of-contents');
+const markdownItTocDoneRight = require('markdown-it-toc-done-right');
 const markdownItDefList = require('markdown-it-deflist');
 const markdownItContainer = require('markdown-it-container');
 const markdownItFitMedia = require('markdown-it-fitmedia');
@@ -15,7 +15,6 @@ const markdownItMathJax = require('markdown-it-mathjax3');
 const markdownItEmoji = require('markdown-it-emoji');
 const markdownItInclude = require('markdown-it-include');
 const sizeOf = require('image-size');
-const cheerio = require('cheerio');
 const striptags = require('striptags');
 const fs = require('fs');
 const path = require('path');
@@ -34,7 +33,7 @@ function mySlugify(s) {
 
 
 const site = require('../_data/site.js');
-const utils = require('markdown-it/lib/common/utils.js');
+
 
 module.exports = {
 
@@ -148,13 +147,7 @@ module.exports = {
 
     removeHtml: function (text) {
         if (text) {
-            const $ = cheerio.load(text);
-
-            //remove anchors
-            $('a.anchor').each(function () {
-                $(this).remove();
-            });
-            return striptags($('body').html());
+            return striptags(text);
         }
     },
 
@@ -328,17 +321,11 @@ module.exports = {
         })
             .use(markdownItContainer)
             .use(markdownItAnchor, {
-                permalink: true,
-                permalinkClass: 'anchor',
-                permalinkSymbol: '#',
-                permalinkBefore: false,
-                permalinkSpace: true,
+                permalink: markdownItAnchor.permalink.headerLink({ safariReaderFix: true, class: 'heading-anchor' }),
                 slugify: mySlugify
             })
-            .use(markdonItTOC, {
+            .use(markdownItTocDoneRight, {
                 slugify: mySlugify,
-                listType: 'ol',
-                includeLevel: [2]
             })
             .use(markdownItMark)
             .use(markdownItDefList)
