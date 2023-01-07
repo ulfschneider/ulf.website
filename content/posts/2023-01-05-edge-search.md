@@ -284,12 +284,12 @@ The last step is to connect your edge function with the user interface and to re
 
 ```html
 <form id="searchform">
-<label>Do a fulltext search
-<div>
-<input type="text" name="searchquery">
-<input type="submit" value="Search">
-</div>
-</label>
+    <label>Do a fulltext search
+        <div>
+            <input type="text" name="searchquery">
+            <input type="submit" value="Search">
+        </div>
+    </label>
 </form>
 
 <div id="searchresults"></div>
@@ -338,14 +338,14 @@ form.addEventListener('submit', submitSearch);
 And here is how the code will work when searching *{{site.hostname}}.*
 
 <figure class="border border-write-dark dark:border-write-light p-ryt legible-base-width">
-<form id="searchform">
-<label>Do a fulltext search
-<div>
-<input type="text" name="searchquery">
-<input type="submit" value="Search">
-</div>
-</label>
-</form>
+    <form id="searchform">
+        <label>Do a fulltext search
+            <div>
+                <input type="text" name="searchquery">
+                <input type="submit" value="Search">
+            </div>
+        </label>
+    </form>
 <div id="searchresults"></div>
 <script>
 async function submitSearch(event) {
