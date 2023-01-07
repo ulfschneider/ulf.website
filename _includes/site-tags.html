@@ -1,4 +1,4 @@
-{%- assign currentTags = collections.usedSiteTags -%}
+{%- assign currentTags = collections.liveContent | siteTags -%}
 {%- if pagedItems.tag != nil -%}
   {%- assign tag = pagedItems.tag -%}
 {%- endif -%}

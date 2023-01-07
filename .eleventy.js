@@ -73,9 +73,9 @@ function addLayoutAliases(eleventyConfig) {
 
 function addCollections(eleventyConfig) {
     //live content
-    eleventyConfig.addCollection('liveContent', async collectionAPI => {
+    eleventyConfig.addCollection('liveContent', collectionAPI => {
         console.log('Derive live content');
-        return collectionAPI.getFilteredByGlob(['content/**'])
+        return collectionAPI.getFilteredByGlob(['content/**', '!content/tagintros/**'])
             .filter(utils.isLiveItem)
             .map(item => {
                 item.data.indicateModifiedDate = filters.indicateModifiedDate(item);
@@ -83,8 +83,7 @@ function addCollections(eleventyConfig) {
                 return item;
             })
             .sort(utils.compareItemDate)
-            .reverse()
-            ;
+            .reverse();
     });
     //tag intros
     eleventyConfig.addCollection('tagIntros', collectionAPI => {
@@ -95,24 +94,6 @@ function addCollections(eleventyConfig) {
                 item.data.modifiedDate = filters.modifiedDate(item);
                 return item;
             });
-    });
-    //used site tags
-    eleventyConfig.addCollection('usedSiteTags', collectionAPI => {
-        console.log('Derive used site tags');
-        let usedSiteTags = utils.extractTags([
-            ...collectionAPI.getFilteredByGlob('content/posts/**')
-                .map(item => {
-                    if (item.data?.tags?.includes(site.starTag)) {
-                        item.data.starred = site.starTag;
-                    } else {
-                        item.data.starred = '';
-                    }
-                    return item;
-                })
-                .filter(utils.isLiveItem)
-        ]);
-        filters.createColorMap(usedSiteTags);
-        return usedSiteTags;
     });
     //double pagination
     eleventyConfig.addCollection('doublePagination', collectionAPI => {
@@ -127,6 +108,7 @@ function addCollections(eleventyConfig) {
                 return item;
             })
             .filter(utils.isLiveItem)
+            .filter(utils.isPost)
             .sort(utils.compareItemDate)
             .reverse();
 
@@ -151,11 +133,7 @@ function addCollections(eleventyConfig) {
 
         let usedSiteTags = utils.extractTags(items);
         for (let tagName of usedSiteTags) {
-            let tagItems = collectionAPI.getFilteredByTag(tagName)
-                .filter(utils.isLiveItem)
-                .filter(utils.isPost)
-                .sort(utils.compareItemDate)
-                .reverse();
+            let tagItems = items.filter(item => item.data?.tags?.includes(tagName));
             let pagedItems = utils.chunk(tagItems, site.paginationSize);
 
             for (let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
@@ -181,10 +159,13 @@ function addCollections(eleventyConfig) {
 
 function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('searchIndex', filters.searchIndex);
+    eleventyConfig.addFilter('siteTags', filters.siteTags);
+    eleventyConfig.addFilter('hasTag', filters.hasTag);
+    eleventyConfig.addFilter('tagUrl', filters.tagUrl);
+    eleventyConfig.addFilter('tagColor', filters.tagColor);
     eleventyConfig.addFilter('firstImage', filters.firstImage);
     eleventyConfig.addFilter('live', filters.live);
     eleventyConfig.addFilter('post', filters.post);
-    eleventyConfig.addFilter('hasTag', filters.hasTag);
     eleventyConfig.addFilter('tagIntro', filters.tagIntro);
     eleventyConfig.addFilter('humanDate', filters.humanDate);
     eleventyConfig.addFilter('humanDateTime', filters.humanDateTime);
@@ -195,8 +176,6 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('authorName', filters.authorName);
     eleventyConfig.addFilter('indicateModifiedDate', filters.indicateModifiedDate);
     eleventyConfig.addFilter('modifiedDate', filters.modifiedDate);
-    eleventyConfig.addFilter('tagUrl', filters.tagUrl);
-    eleventyConfig.addFilter('tagColor', filters.tagColor);
 }
 
 function addBrowserSync404(eleventyConfig) {
