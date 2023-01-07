@@ -1,9 +1,10 @@
 {
   "deno.enable": true,
-  "deno.enablePaths": [
-    "_edge"
-  ],
+  "deno.enablePaths": ["_edge"],
   "deno.unstable": true,
   "deno.importMap": ".netlify/edge-functions-import-map.json",
-  "deno.path": "/Users/ulfschneider/Library/Preferences/netlify/deno-cli/deno"
+  "deno.path": "/Users/ulfschneider/Library/Preferences/netlify/deno-cli/deno",
+  "search.exclude": {
+    "_site/**": true
+  }
 }
