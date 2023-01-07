@@ -6,6 +6,19 @@ const site = require('../_data/site.js');
 
 let colorMap;
 
+function createColorMap(values) {
+    if (!colorMap) {
+        colorMap = new Map();
+        if (site.tagColors && site.tagColors.length) {
+            for (let value of values) {
+                colorIndex = Math.abs(utils.hashCode(value)) % site.tagColors.length;
+                colorMap.set(value, site.tagColors[colorIndex]);
+            }
+        }
+    }
+    return colorMap;
+}
+
 module.exports = {
 
     live: function (collection) {
@@ -41,8 +54,8 @@ module.exports = {
     },
 
     //this is very slow due to commitDate
-    //return a date if the latest commit date is available and differs from the page.date by at least one day
-    //otherwise return empty string
+    //returns a date if the latest commit date is available and differs from the page.date by at least one day
+    //otherwise returns empty string
     indicateModifiedDate: function (page) {
         let date = page.date;
         let humanDate = utils.humanDate(date);
@@ -118,6 +131,21 @@ module.exports = {
         //to access it later when importing the index
         searchIndex.INDEX_FIELDS = INDEX_FIELDS;
         return JSON.stringify(searchIndex);
+    },
+
+    siteTags: function (collection) {
+        let tags = utils.extractTags(collection.map(item => {
+            if (item.data?.tags?.includes(site.starTag)) {
+                item.data.starred = site.starTag;
+            } else {
+                item.data.starred = '';
+            }
+            return item;
+        }));
+
+        createColorMap(tags);
+
+        return tags;
     },
 
     firstImage: function (collection, url) {
@@ -223,18 +251,6 @@ module.exports = {
 
     hasTag: function (tags, tag) {
         return tags && tag && tags.includes(tag);
-    },
-
-    createColorMap: function (values) {
-
-        colorMap = new Map();
-        if (site.tagColors && site.tagColors.length) {
-            for (let value of values) {
-                colorIndex = Math.abs(utils.hashCode(value)) % site.tagColors.length;
-                colorMap.set(value, site.tagColors[colorIndex]);
-            }
-        }
-        return colorMap;
     },
 
     tagColor: function (tag) {
