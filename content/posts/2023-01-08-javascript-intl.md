@@ -51,6 +51,7 @@ console.log(shortNotation); //12K
 A longer notation, like formatting 12499 into 12 thousand, can be achieved with the `compactDisplay` option:
 
 ```js
+let value = 12499;
 let longNotation = new Intl.NumberFormat('en-US', { 
 	notation:'compact',
 	compactDisplay: 'long'
