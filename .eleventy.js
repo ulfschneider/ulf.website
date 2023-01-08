@@ -38,7 +38,7 @@ module.exports = function (eleventyConfig) {
                 return language;
             }
         },
-        codeAttributes: {},
+        codeAttributes: {}
     });
     eleventyConfig.addPlugin(pluginEmbedTweet, {
         cacheDirectory: '_tweets', /* Cache tweets in the _tweets folder */
