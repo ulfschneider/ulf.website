@@ -1,5 +1,5 @@
 ---
-title: Responsive images that adapt in width an height
+title: Responsive images that adapt in width and height
 tags: [css, code]
 ---
 CSS allows to size images so that a complete image will fit into the browser window and adapts not only to a change of the window width and height. Even in a small browser window, a viewing or reading user can see the image all at once, without the need of scrolling up and down for a complete impression. I think for images in flowing text such a setting makes sense. See the CSS below:
