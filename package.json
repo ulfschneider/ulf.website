@@ -24,6 +24,7 @@
         "autoprefixer": "^9.8.8",
         "Base64": "^1.1.0",
         "cached-commit-date": "^0.5.1",
+        "cheerio": "^1.0.0-rc.12",
         "compose-css": "^29.3.13",
         "concurrently": "^6.5.1",
         "cssnano": "^5.1.13",

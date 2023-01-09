@@ -30,8 +30,6 @@ Some design principles come across as a law:
 > Be conservative in what you send, and liberal in what you accept.
 > <footer>Postel´s law</footer>
   
-The principle of least power:
-
 > In the web frontend stack – HTML, CSS, JavaScript, and ARIA – if you can solve a problem with a simpler solution lower in the stack, you should. It´s less fragile, more foolproof, and just works.
 > <footer>The principle of least power</footer>
 

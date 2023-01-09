@@ -1,4 +1,5 @@
 const MiniSearch = require('minisearch');
+const cheerio = require('cheerio');
 const path = require('path');
 const ccd = require('cached-commit-date');
 const utils = require('./utils.js');
@@ -265,6 +266,12 @@ module.exports = {
         } else {
             return '';
         }
+    },
+
+    removeWhatNeedsJS: function (content) {
+        let $ = cheerio.load(content);  //TODO
+
+
     }
 
 }

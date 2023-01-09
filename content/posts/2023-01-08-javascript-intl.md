@@ -38,7 +38,7 @@ compact(inputNumber.value);
 </script>
 </figure>
 
-E.g., to format the number 12499 into 12K, all you have to do is:
+To format the number 12499 into *12K,* all you have to do is:
 
 ```js
 let value = 12499;
@@ -48,7 +48,7 @@ let shortNotation = new Intl.NumberFormat('en-US', {
 console.log(shortNotation); //12K
 ```
 
-A longer notation, like formatting 12499 into 12 thousand, can be achieved with the `compactDisplay` option:
+A longer notation, like formatting 12499 into *12 thousand,* can be achieved with the `compactDisplay` option:
 
 ```js
 let value = 12499;

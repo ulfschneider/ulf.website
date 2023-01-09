@@ -12,7 +12,7 @@
   </div>
 {%- endif -%}
 
-<div class="mt-ryt-lg mb-ryt-xl">
+<div class="mt-ryt mb-ryt-xl">
   {%- for p in livePosts -%}
     {%- assign currentDate = p.date | humanDate -%}
     {%- if limit == 1 and forloop.index > limit and currentDate != referenceDate -%}
@@ -28,7 +28,7 @@
 
     <article>
       {% if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil %}
-        <h2 class="mt-ryt-lg mb-0 text-base">
+        <h2 class="mt-ryt mb-0 text-base">
           <a class="no-underline" href="{{p.url}}">
             {{ p.data.title }}
           </a>
