@@ -74,6 +74,12 @@ module.exports = {
         id: "home"
     },
     {
+        label: "Blog",
+        url: BASE + "blog/",
+        id: "blog",
+        kbd: "b"
+    },
+    {
         label: "About",
         url: BASE + "about/",
         id: "about",

@@ -50,16 +50,6 @@
     font: inherit;
   }
 
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    overflow-wrap: break-word;
-  }
-
   /* font-size*/
   html {
     @apply bg-light dark:bg-light-dark;
@@ -92,13 +82,16 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display font-bold text-3xl sm:text-5xl mt-ryt-2xl mb-ryt-xl tracking-tight;
+    @apply font-display font-bold text-2xl mt-ryt-2xl mb-ryt-xl tracking-tight;
   }
   h2,
   .h2 {
-    @apply font-display font-bold text-lg mt-ryt-xl mb-ryt-lg tracking-tight;
+    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg;
   }
   h3,
+  .h3 {
+    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg;
+  }
   h4,
   h5,
   h6,
@@ -106,7 +99,7 @@
   .h4,
   .h5,
   .h6 {
-    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg tracking-tight;
+    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg;
   }
 
   details > summary {
@@ -278,26 +271,24 @@
   /* quote and blockquote */
 
   q {
-    @apply italic font-mono;
+    @apply italic;
     quotes: "“" "”" "‘" "’";
   }
 
   blockquote {
     --quote-size: 4em;
     --quote-box-height: 0.5em;
-
-    @apply p-0 font-mono italic legible-ch-width;
-    &::before {
-      @apply font-display leading-none block -ml-ryt-sm;
-      font-size: var(--quote-size);
-      height: var(--quote-box-height);
-      content: "“";
-    }
+    padding-left: calc(theme(spacing.ryt-lg) - theme(spacing.2));
+    @apply border-l-2 border-l-current;
   }
 
   blockquote > header,
   blockquote > footer {
     @apply font-normal font-sans not-italic my-ryt-sm;
+
+    &::before {
+      content: "—";
+    }
   }
 
   /* address */

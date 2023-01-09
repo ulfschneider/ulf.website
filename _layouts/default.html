@@ -12,11 +12,9 @@
   <body class="break-words flex flex-col">
     <div class="grow shrink-0 px-ryt">
       {% include "header.html" %}
-      <main id="main" class="indent max-w-lg mx-auto mb-ryt-xl">
+      <main id="main" class="indent legible-base-width-descendants max-w-lg mx-auto mb-ryt-xl">
         {%- include "title.html" -%}
-        <div class="legible-base-width-descendants">
-          {{ content }}
-        </div>
+        {{ content }}
         {% include "post-nav.html" %}
       </main>
     </div>

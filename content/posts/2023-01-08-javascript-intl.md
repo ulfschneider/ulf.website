@@ -4,15 +4,15 @@ tags: code
 ---
 Raymond Camden^[[<cite>Using Intl for Short Number Formatting</cite>](https://www.raymondcamden.com/2023/01/04/using-intl-for-short-number-formatting), Raymond Camden, Jan 4, 2023] uses the `compact` notation option of the [`Intl.NumberFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/) function to create abbreviated number formats. 
 
-<figure class="no-js-hidden">
+<figure class="no-js-hidden demo-box">
 <label>Provide a large number to be compacted
 <div><input type="number" id="input-number"></div>
 </label>
-<dl class="my-ryt-lg">
+<dl class="mt-ryt-lg">
 <dt>Short compact</dt>
-<dd id="short-number" class="text-5xl mb-ryt-lg font-bold"></dd>
+<dd id="short-number" class="text-5xl font-bold"></dd>
 <dt>Long compact</dt>
-<dd id="long-number" class="text-5xl mb-ryt-lg font-bold"></dd>
+<dd id="long-number" class="text-5xl font-bold"></dd>
 </dl>
 <script>
 function compact(value) {

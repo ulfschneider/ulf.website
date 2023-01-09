@@ -24,7 +24,7 @@
   }
 
   .legible-base-width-descendants:not(
-      .legible-base-width-descendants .no-legible-width
+      .legible-base-width-descendants .no-legible-width *
     ) {
     p,
     h1,
@@ -52,31 +52,6 @@
     @apply max-w-rg;
   }
 
-  .legible-ch-width-descendants:not(
-      .legible-ch-width-descendants .no-legible-width
-    ) {
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    dl,
-    dt,
-    dd,
-    ul,
-    ol,
-    li,
-    th,
-    td,
-    figcaption,
-    caption,
-    summary,
-    blockquote {
-      max-width: 60ch;
-    }
-  }
   *.legible-ch-width {
     max-width: 60ch;
   }

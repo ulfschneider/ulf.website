@@ -5,14 +5,17 @@
   {%- assign updated = modifiedDate -%}
 {%- endif -%}
 {%- if tags and notags == nil -%}
-  {%- assign tags = tags-%}
+  {%- assign tags = tags -%}
 {%- else -%}
   {%- assign tags = nil -%}
 {%- endif -%}
 {%- if posted != nil or updated != nil or tags != nil -%}
-  <div class="inline-block">
+  <div class="inline-block text-sm">
     {% if posted != nil %}
-      <time class="inline-block {% if updated != nil or tags != nil %}mr-ryt-sm{% endif %}" datetime="{{date | isoDate}}" class="inline-block">{{ posted | humanDate }}</time>
+      <time
+        class="inline-block {% if updated != nil or tags != nil %}mr-ryt-sm{% endif %}"
+        datetime="{{date | isoDate}}"
+        class="inline-block">{{ posted | humanDate }}</time>
     {% endif %}
     {% if updated %}
       <span class="inline-block">
@@ -25,12 +28,12 @@
       <span class="inline-block">
         {% for tag in sortedTags %}
           {% if tag == site.starTag %}
-            <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs mr-ryt-xs">{{site.starTagSymbol}}</a>
+            <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs mr-ryt-xs">{{ site.starTagSymbol }}</a>
           {% endif %}
         {% endfor %}
         {% for tag in sortedTags %}
           {% if tag != site.starTag %}
-            <a href="{{tag | tagUrl}}" class="no-underline inline-block mr-ryt-xs">{{tag}}</a>
+            <a href="{{tag | tagUrl}}" class="no-underline inline-block mr-ryt-xs">{{ tag }}</a>
           {% endif %}
         {% endfor %}
       </span>

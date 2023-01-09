@@ -20,6 +20,21 @@
     }
   }
 
+  /* demo box */
+  .demo-box {
+    @apply border border-current legible-base-width p-ryt;
+
+    &::before {
+      content: "Demo";
+      @apply font-sans text-sm absolute;
+
+      margin-top: calc(
+        -1 * (theme(spacing.ryt) + theme(spacing.ryt) + theme(spacing.ryt-xs))
+      );
+      margin-left: calc(-1 * (theme(spacing.ryt) + 1px));
+    }
+  }
+
   /* table of contents */
   /* markdown-it toc */
 
@@ -28,7 +43,7 @@
   }
 
   .table-of-contents {
-    @apply text-sm my-ryt-lg;
+    @apply my-ryt-lg text-sm;
 
     &::before {
       content: "Contents";

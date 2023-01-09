@@ -337,7 +337,7 @@ form.addEventListener('submit', submitSearch);
 
 And here is how the code will work when searching *{{site.hostname}}.*
 
-<figure class="border border-write-dark dark:border-write-light p-ryt legible-base-width">
+<figure class="demo-box">
 <form id="searchform">
     <label>Do a fulltext search
         <div>
