@@ -358,7 +358,7 @@ async function submitSearch(event) {
         return;
     }
     try {
-		let response = await fetch(`/api/search/?query=${query}`);	
+		let response = await fetch(`{{site.base}}api/search/?query=${query}`);	
         if (response.status != 200) {
             throw (`${response.status} ${response.statusText}`);
         }
