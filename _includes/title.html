@@ -18,18 +18,18 @@
       </aside>
     {%- endif -%}
     {%- if hasTitle == true -%}
-      <h1 class="my-0 {{reducedTitleStyle}} legible-base-width">{{ title }}</h1>
+      <h1 class="my-0 {{reducedTitleStyle}} max-w-rg">{{ title }}</h1>
     {%- endif -%}
     {%- include "hero.html" -%}
     {%- if abstract -%}
-      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}} my-ryt{% else %}my-ryt-lg{% endif %} legible-base-width">
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}} my-ryt{% else %}my-ryt-lg{% endif %} max-w-rg">
         {{ abstract }}
       </div>
     {%- endif -%}
     {%- if refer -%}
-      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg {% endif %} legible-base-width">{{ refer }}</div>
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg {% endif %} max-w-rg">{{ refer }}</div>
     {%- elsif author -%}
-      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg{% endif %} legible-base-width">{{ author }}</div>
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg{% endif %} max-w-rg">{{ author }}</div>
     {%- endif -%}
   </header>
 {%- endif -%}
