@@ -6,11 +6,21 @@ CSS allows to size images so that a complete image will fit into the browser win
 
 ```css
 img {
-	max-width: 100%; /* make the image responsive and allow it to take at max 100% of the available width - this will make the image adapt to window width */
+	max-width: 100%; /* make the image responsive and allow it 
+	to take at max 100% of the available width 
+	- this will make the image adapt to window width */
+
 	height: auto; /* do not have a fixed setting for height */
-	max-height: 80vh; /* the image will take at max 80% of the height of the browser window - this will make the image adapt to window height*/
-	object-fit: contain; /* fit the image into the available dimensions while preserving aspect ratio */
-	object-position: left; /*align the image to the left inside of the available box*/
+
+	max-height: 80vh; /* the image will take at max 80% 
+	of the height of the browser window 
+	- this will make the image adapt to window height*/
+
+	object-fit: contain; /* fit the image into the available 
+	dimensions while preserving aspect ratio */
+	
+	object-position: left; /*align the image to the left 
+	inside of the available box*/
 }
 ```
 
@@ -18,8 +28,16 @@ The following HTML
 
 ```html
 <figure>
-<img src="/img/journal/IMG_8256.jpg" style="max-width: 100%; height: auto; max-height: 80vh; object-fit: contain; object-position: left;">
-<figcaption><a href="https://www.lichtkunst-unna.de">ZFIL Unna</a>, The future of light art, 2015</figcaption>
+	<img src="/img/journal/IMG_8256.jpg" 
+		style="max-width: 100%; 
+		height: auto; 
+		max-height: 80vh; 
+		object-fit: contain; 
+		object-position: left;">
+	<figcaption>
+		<a href="https://www.lichtkunst-unna.de">ZFIL Unna</a>, 
+		The future of light art, 2015	
+	</figcaption>
 </figure>
 ```
 
