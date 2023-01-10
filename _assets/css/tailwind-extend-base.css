@@ -82,15 +82,15 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display font-bold text-2xl mt-ryt-2xl mb-ryt-xl tracking-tight;
+    @apply font-display font-bold text-2xl mt-ryt-2xl mb-ryt-xl tracking-tight break-after-avoid;
   }
   h2,
   .h2 {
-    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg;
+    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
   }
   h3,
   .h3 {
-    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg;
+    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
   }
   h4,
   h5,
@@ -99,7 +99,7 @@
   .h4,
   .h5,
   .h6 {
-    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg;
+    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
   }
 
   details > summary {
@@ -221,12 +221,12 @@
 
   /* hr */
   hr {
-    @apply legible-base-width my-ryt-xl border-0 flex justify-center;
+    @apply max-w-rg my-ryt-xl border-0 flex justify-center;
   }
 
   hr::before {
     content: "* * *";
-    @apply legible-base-width block -mt-ryt;
+    @apply max-w-rg block -mt-ryt;
   }
 
   /* table */

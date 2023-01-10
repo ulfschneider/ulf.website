@@ -23,9 +23,7 @@
     @apply outline-outline outline-4 outline-offset-2 outline;
   }
 
-  .legible-base-width-descendants:not(
-      .legible-base-width-descendants .no-legible-width *
-    ) {
+  .max-w-rg-descendants {
     p,
     h1,
     h2,
@@ -48,11 +46,8 @@
       @apply max-w-rg;
     }
   }
-  *.legible-base-width {
-    @apply max-w-rg;
-  }
 
-  *.legible-ch-width {
+  *.max-w-legible-ch {
     max-width: 60ch;
   }
 
