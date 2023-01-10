@@ -28,7 +28,7 @@
 
     <article>
       {% if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil %}
-        <h2 class="mt-ryt mb-0 text-base">
+        <h2 class="mt-ryt-lg mb-0 text-base leading-snug">
           <a class="no-underline" href="{{p.url}}">
             {{ p.data.title }}
           </a>
@@ -39,7 +39,7 @@
           <a href="{{p.url}}">Read more</a>
         </p>
       {% endif %}
-      <aside class="{{p.data.starred}}">
+      <aside class="{{p.data.starred}} leading-snug">
         {% include "date-tags.html" posted: p.date tags: p.data.tags notags: p.data.notags %}
       </aside>
     </article>
