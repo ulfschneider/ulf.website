@@ -94,7 +94,7 @@ addEventListener('resize', maintainBackToStartVisibility);
 /* ActiveToc */
 addEventListener('load', function () {
     ActiveToc.init({
-        tocContainer: 'div.table-of-contents',
+        tocContainer: '.table-of-contents',
         onHighlight: function (tocEntry, heading) {
             let headingHint = document.querySelector('#heading-hint');
 
