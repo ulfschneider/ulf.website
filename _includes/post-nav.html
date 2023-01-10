@@ -4,7 +4,7 @@
 {%- if newerPost or olderPost -%}
   <nav class="flex flex-col sm:flex-row justify-between gap-ryt-xl mt-ryt-2xl mb-ryt-xl max-w-rg">
     {% if newerPost %}
-      <div>
+      <div class="leading-snug">
         <div class="text-sm whitespace-nowrap">Newer post</div>
         <a
           class="no-underline font-display font-bold"
@@ -15,7 +15,7 @@
       </div>
     {% endif %}
     {% if olderPost %}
-      <div>
+      <div class="leading-snug">
         <div class="text-sm whitespace-nowrap">Older post</div>
         <a
           class="no-underline font-display font-bold"
