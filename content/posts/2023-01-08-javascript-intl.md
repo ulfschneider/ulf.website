@@ -4,38 +4,13 @@ tags: code
 ---
 Raymond Camden^[[<cite>Using Intl for Short Number Formatting</cite>](https://www.raymondcamden.com/2023/01/04/using-intl-for-short-number-formatting), Raymond Camden, Jan 4, 2023] uses the `compact` notation option of the [`Intl.NumberFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/) function to create abbreviated number formats. 
 
-<figure class="no-js-hidden demo-box">
-<label>Provide a large number to be compacted
-<div><input type="number" id="input-number"></div>
-</label>
-<dl class="mt-ryt-lg">
-<dt>Short compact</dt>
-<dd id="short-number" class="text-5xl font-bold"></dd>
-<dt>Long compact</dt>
-<dd id="long-number" class="text-5xl font-bold"></dd>
-</dl>
-<script>
-function compact(value) {
-	let shortNumber = document.querySelector('#short-number');
-	let shortNotation = new Intl.NumberFormat('en-US', { 
-		notation:'compact'
-		}).format(inputNumber.value); 
-	shortNumber.innerHTML = shortNotation;
-	let longNumber = document.querySelector('#long-number');	
-	let longNotation = new Intl.NumberFormat('en-US', { 
-		notation:'compact',
-		compactDisplay: 'long'
-		}).format(inputNumber.value); 	
-		longNumber.innerHTML = longNotation;
-}
-let inputNumber = document.querySelector('#input-number');
-['keyup', 'change'].forEach(name => {
-	inputNumber.addEventListener(name, event => {
-		compact(inputNumber.value);
-	});
-});
-compact(inputNumber.value);
-</script>
+<figure>
+<p class="codepen" data-height="526" data-default-tab="result" data-slug-hash="RwBpXBZ" data-user="ulfschneider" style="height: 526px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/ulfschneider/pen/RwBpXBZ">
+  Untitled</a> by Ulf Schneider (<a href="https://codepen.io/ulfschneider">@ulfschneider</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 </figure>
 
 To format the number 12499 into *12K,* all you have to do is:
@@ -59,6 +34,7 @@ let longNotation = new Intl.NumberFormat('en-US', {
 console.log(longNotation); //12 thousand
 ```
 
-The `Intl.NumberFormat` allows to control many more things with just a little configuration, like currency formatting, rounding, and units. It will return localized, beautiful formattings. And while you are around, look at what other great things [`Intl`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) can do, such as [Plural Rules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules), [List Formats](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat), and [Relative Time Formats](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat). I was not aware.
+The `Intl.NumberFormat` allows to control many more things with just a little configuration, like currency formatting, rounding, and units. It will return localized, beautiful formattings. And while you are around, look at what other great things [`Intl`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) can do, such as [Plural Rules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules), [List Formats](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat), and [Relative Time Formats](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat). I was not aware. Check out the the [Intl Explorer](https://www.intl-explorer.com/?locale=de-DE)^[[<cite>Intl Explorer</cite>](https://www.intl-explorer.com/?locale=de-DE) by [Jesper Orb](https://jesperorb.com)].
+
 
 
