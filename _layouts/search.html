@@ -109,19 +109,6 @@ permalink: "{{site.search.url}}"
     } searchResults.append(count);
   }
 
-  function printSearching() {
-    let searchResults = document.querySelector('#search-results');
-    if (! searchResults) {
-      console.error('The page does not have a DOM element with id=[#search-results]');
-      return;
-    }
-    if (searchResults.innerHTML == '') {
-      let searching = document.createElement('div');
-      searching.innerHTML = 'Searching …';
-      searchResults.append(searching);
-    }
-  }
-
   function printSearchResults(resultSet) {
     let searchResults = document.querySelector('#search-results');
     if (! searchResults) {
@@ -181,7 +168,6 @@ permalink: "{{site.search.url}}"
       location.pathname
     }?query=${query}&combine=${combine}`);
     if (query && query.trim()) {
-      printSearching();
       search(query, combine);
     }
   }
