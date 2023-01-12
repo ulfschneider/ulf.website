@@ -2,9 +2,6 @@
   {%- if onsubmit == nil or onsubmit == "" -%}
     {%- assign onsubmit = "submitQuery(event);" %}
   {%- endif -%}
-  {%- if focus -%}
-    {%- assign autofocus = "autofocus" -%}
-  {%- endif -%}
 
   <form
     id='search-form'
@@ -18,6 +15,7 @@
       <div class="flex flex-row">
         <input
           id="search-query"
+          name="query"
           {{ autofocus }}
           autocomplete="off"
           autocorrect="off"
@@ -35,11 +33,47 @@
       </div>
     </label>
     <ul id="autocomplete-search"></ul>
+    <fieldset class="mt-ryt-sm">
+      <legend class="font-normal">Mulptiple searchterms are combined by:</legend>
+      <div class="flex flex-row gap-ryt-lg">
+        <label class="cc">
+          <input
+            type="radio"
+            id="combine-and"
+            name="combine"
+            value="AND"
+            checked><span>AND</span>
+        </label>
+        <label class="cc">
+          <input
+            type="radio"
+            id="combine-or"
+            name="combine"
+            value="OR"><span>OR</span>
+        </label>
+      </div>
+    </fieldset>
 
     <script>
-      async function suggest(input, callback) {
+      function getParameterByName(name, url) {
+        let params = (new URL(url || document.location)).searchParams;
+        const param = params.get(name);
+        return param;
+      }
+      function splitSearchTerms(query) {
+        query = query || document.querySelector('#search-query').value;
+        return query.split(/\s+/);
+      }
+
+      function searchTermCount(query) {
+        let split = splitSearchTerms(query);
+        return split.length;
+      }
+      async function suggest(event, callback) {
         try {
-          let response = await fetch('/api/search-suggest/?query=' + encodeURIComponent(input));
+          const query = document.querySelector('#search-query').value;
+          const combine = document.querySelector('input[name="combine"]:checked').value;
+          let response = await fetch('/api/search-suggest/?query=' + encodeURIComponent(query) + '&combine=' + combine);
           let suggestions = await response.json();
           callback(null, suggestions.map(entry => entry.suggestion));
         } catch (error) {
@@ -51,22 +85,32 @@
         if (event) {
           event.preventDefault();
         }
-        let query = document.querySelector('#search-query').value;
+        const query = document.querySelector('#search-query').value;
+        const combine = document.querySelector('input[name="combine"]:checked').value;
         if (query && query.trim()) {
-          location.href = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim());
+          location.href = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim()) + '&combine=' + combine;
         } else {
-          location.href = '{{site.search.url}}';
+          location.href = '{{site.search.url}}' + '?combine=' + combine;
         }
       }
-
 
       addEventListener('DOMContentLoaded', function(event) {
         AutoComplete.init({selector: '#search-query', data: suggest, threshold: 2, onSelect: submitQuery});
       });
+
+      let orField = document.querySelector('#combine-or');
+      let andField = document.querySelector('#combine-and');
+      andField.addEventListener('change', event => {
+        if (searchTermCount() > 1) {
+          submitQuery();
+        }
+      });
+      orField.addEventListener('change', event => {
+        if (searchTermCount() > 1) {
+          submitQuery();
+        }
+      });
     </script>
 
   </form>
-
-
-
 {%- endif -%}

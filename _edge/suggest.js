@@ -15,8 +15,10 @@ export default async (request, context) => {
     const url = new URL(request.url);
     const searchParams = url.searchParams;
     const query = searchParams.get('query');
+    const combine = searchParams.get('combine') == 'OR' ? 'OR' : 'AND'; //AND is default
+
     try {
-        let results = miniSearch.autoSuggest(query, { prefix: true });
+        let results = miniSearch.autoSuggest(query, { prefix: true, combineWith: combine });
         const now = Date.now();
         console.log(`The suggest for [${query}] returned ${results.length} results within ${now - start} milliseconds`);
         //return at max 7 suggestions

@@ -1,7 +1,7 @@
 @layer components {
   /*auto complete */
   ul.auto-complete-suggestion {
-    @apply reset border border-meta absolute w-full m-0;
+    @apply reset border border-meta absolute z-10 w-full m-0;
 
     &::after {
       content: "";

@@ -3,113 +3,80 @@ layout: default
 nodate: true
 permalink: "{{site.search.url}}"
 ---
-<div class="my-ryt-2xl">
-  <noscript>
-    <div class="max-w-rg">You cannot perform a search because JavaScript disabled for your browser. Please consider enabling JavaScript.</div>
-  </noscript>
-  {% include "search-field.html", focus: true, onsubmit:
-   "event.preventDefault(); search(event.target[SEARCH_QUERY_ID].value);
-   history.replaceState(null, '', location.pathname + '?query=' +
-   event.target[SEARCH_QUERY_ID].value)" %}
-</div>
-<div id="search-results"></div>
+
 <script>
-  const SEARCH_RESULTS_ID = "search-results";
-  const SEARCH_QUERY_ID = "search-query";
-  const SEARCH_SUBMIT_ID = "search-submit";
-
-  function getParameterByName(name, url) {
-    url = url
-      ? url
-      : location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
-    let results = regex.exec(url);
-    if (! results) {
-      return null;
-    }
-    if (! results[2]) {
-      return "";
-    }
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-  }
-
   function removeChildren(parent) {
     if (parent) {
-      let child = parent.lastElementChild;
-      while (child) {
-        parent.removeChild(child);
-        child = parent.lastElementChild;
-      }
+      parent.innerHTML = '';
     }
   }
 
   function printResultEntry(parent, entry) {
     if (parent) {
-      let article = document.createElement("article");
+      let article = document.createElement('article');
       parent.appendChild(article);
-      if (entry.title && entry.title != "notitle") {
-        let title = document.createElement("h2");
-        title.classList = "mt-ryt-lg mb-0 leading-snug";
+      if (entry.title && entry.title != 'notitle') {
+        let title = document.createElement('h2');
+        title.classList = 'mt-ryt-lg mb-0 leading-snug';
         article.appendChild(title);
 
-        let linkToArticle = document.createElement("a");
+        let linkToArticle = document.createElement('a');
         linkToArticle.classList = 'no-underline';
         linkToArticle.href = entry.id;
         linkToArticle.innerHTML = entry.title;
         title.appendChild(linkToArticle);
       } else {
         let abstract = entry.abstract || entry.excerpt;
-        let excerpt = document.createElement("p");
+        let excerpt = document.createElement('p');
         excerpt.innerHTML = abstract;
-        excerpt.appendChild(document.createTextNode(" "));
-        let linkToArticle = document.createElement("a");
+        excerpt.appendChild(document.createTextNode(' '));
+        let linkToArticle = document.createElement('a');
         linkToArticle.href = entry.id;
-        linkToArticle.innerHTML = "Read more";
+        linkToArticle.innerHTML = 'Read more';
         excerpt.appendChild(linkToArticle);
         article.appendChild(excerpt);
       }
 
       if (entry.humanDate || (entry.tags.length && ! entry.notags)) {
-        let aside = document.createElement("aside");
+        let aside = document.createElement('aside');
         aside.classList = `${
           entry.starred
             ? entry.starred
-            : ""
+            : ''
           } leading-snug`;
         article.appendChild(aside);
 
         if (entry.date) {
-          let date = document.createElement("time");
+          let date = document.createElement('time');
           date.innerHTML += entry.humanDate;
-          date.classList = "inline-block mr-ryt-sm";
+          date.classList = 'inline-block mr-ryt-sm';
           aside.appendChild(date);
-          aside.appendChild(document.createTextNode(" "));
+          aside.appendChild(document.createTextNode(' '));
         }
 
         if (entry.tags.length && ! entry.notags) {
-          let tags = document.createElement("span");
+          let tags = document.createElement('span');
           aside.appendChild(tags);
 
           for (let tag of entry.tags) {
-            if (tag.name == "{{site.starTag}}") {
-              let tagLink = document.createElement("a");
+            if (tag.name == '{{site.starTag}}') {
+              let tagLink = document.createElement('a');
               tagLink.href = tag.url;
-              tagLink.innerHTML = "{{site.starTagSymbol}}";
-              tagLink.classList = "no-underline px-ryt-2xs mr-ryt-xs";
+              tagLink.innerHTML = '{{site.starTagSymbol}}';
+              tagLink.classList = 'no-underline px-ryt-2xs mr-ryt-xs';
               tags.appendChild(tagLink);
-              tags.appendChild(document.createTextNode(" "));
+              tags.appendChild(document.createTextNode(' '));
               break;
             }
           }
           for (let tag of entry.tags) {
-            if (tag.name != "{{site.starTag}}") {
-              let tagLink = document.createElement("a");
+            if (tag.name != '{{site.starTag}}') {
+              let tagLink = document.createElement('a');
               tagLink.href = tag.url;
               tagLink.innerHTML = tag.name;
-              tagLink.classList = "no-underline inline-block mr-ryt-xs";
+              tagLink.classList = 'no-underline inline-block mr-ryt-xs';
               tags.appendChild(tagLink);
-              tags.appendChild(document.createTextNode(" "));
+              tags.appendChild(document.createTextNode(' '));
             }
           }
         }
@@ -117,43 +84,53 @@ permalink: "{{site.search.url}}"
     }
   }
 
-  function printTitle(query) {
-    document.title = 'Search "' + query + '"';
+  function printTitle() {
+    document.title = `Search "${
+      humanQuery()
+    }"`;
   }
 
-  function printResultCount(searchResults, resultSet, query) {
-    let count = document.createElement("div");
+  function humanQuery(query, combine) {
+    query = query || document.querySelector('#search-query').value;
+    combine = combine || document.querySelector('input[name="combine"]:checked').value;
+    const split = splitSearchTerms(query);
+    return split.join(` ${combine} `);
+  }
+
+  function printResultCount(searchResults, resultSet) {
+    let count = document.createElement('div');
     count.classList.add('legible-rem-width');
     if (resultSet.length == 0) {
-      count.innerHTML = 'Your search for <strong>' + query + '</strong> did not return any results.';
+      count.innerHTML = 'Your search for <strong>' + humanQuery() + '</strong> did not return any results.';
     } else if (resultSet.length == 1) {
-      count.innerHTML = 'One result for <strong>' + query + '</strong:';
+      count.innerHTML = 'One result for <strong>' + humanQuery() + '</strong:';
     } else {
-      count.innerHTML = resultSet.length + ' results for <strong>' + query + '</strong>:';
+      count.innerHTML = resultSet.length + ' results for <strong>' + humanQuery() + '</strong>:';
     } searchResults.append(count);
   }
 
   function printSearching() {
-    let searchResults = document.getElementById(SEARCH_RESULTS_ID);
+    let searchResults = document.querySelector('#search-results');
     if (! searchResults) {
-      console.error("The page does not have a DOM element with id=" + SEARCH_RESULTS_ID);
+      console.error('The page does not have a DOM element with id=[#search-results]');
       return;
     }
-    removeChildren(searchResults);
-    let searching = document.createElement("div");
-    searching.innerHTML = "Searching …";
-    searchResults.append(searching);
+    if (searchResults.innerHTML == '') {
+      let searching = document.createElement('div');
+      searching.innerHTML = 'Searching …';
+      searchResults.append(searching);
+    }
   }
 
-  function printSearchResults(resultSet, query) {
-    let searchResults = document.getElementById(SEARCH_RESULTS_ID);
+  function printSearchResults(resultSet) {
+    let searchResults = document.querySelector('#search-results');
     if (! searchResults) {
-      console.error("The page does not have a DOM element with id=" + SEARCH_RESULTS_ID);
+      console.error('The page does not have a DOM element with id=[#search-results]');
       return;
     }
     removeChildren(searchResults);
-    printTitle(query);
-    printResultCount(searchResults, resultSet, query);
+    printTitle();
+    printResultCount(searchResults, resultSet);
     if (resultSet.length) {
       for (let entry of resultSet) {
         printResultEntry(searchResults, entry);
@@ -161,15 +138,17 @@ permalink: "{{site.search.url}}"
     }
   }
 
-  function printError(error, query) {
-    let searchResults = document.getElementById(SEARCH_RESULTS_ID);
+  function printError(error) {
+    console.log(error);
+
+    let searchResults = document.querySelector('#search-results');
     if (! searchResults) {
-      console.error("The page does not have a DOM element with id=" + SEARCH_RESULTS_ID);
+      console.error('The page does not have a DOM element with id=[#search-results]');
       return;
     }
     removeChildren(searchResults);
-    let errorMessage = document.createElement("div");
-    errorMessage.innerHTML = 'The search for <strong>' + query + '</strong> could not be completed because of a failure.';
+    let errorMessage = document.createElement('div');
+    errorMessage.innerHTML = 'The search for <strong>' + humanQuery() + '</strong> could not be completed because of a failure.';
     if (error && error.status && error.statusText) {
       errorMessage.innerHTML += '</br>';
       errorMessage.innerHTML += 'Status code ' + error.status + ': ' + error.statusText;
@@ -177,32 +156,70 @@ permalink: "{{site.search.url}}"
     searchResults.append(errorMessage);
   }
 
-  async function search(query) {
+  async function search(query, combine) {
     try {
       let start = Date.now();
-      let response = await fetch('/api/search/?query=' + encodeURIComponent(query));
+      let response = await fetch('/api/search/?query=' + encodeURIComponent(query) + '&combine=' + combine);
       let duration = Date.now() - start;
+
       if (response.status == 200) {
         let resultSet = await response.json();
-        console.log('The search for [' + query + '] returned ' + resultSet.length + ' results within ' + duration + ' milliseconds');
-        printSearchResults(resultSet, query)
+        console.log('The search for [' + humanQuery(query, combine) + '] returned ' + resultSet.length + ' results within ' + duration + ' milliseconds');
+        printSearchResults(resultSet)
       } else {
-        printError(response, query);
+        printError(response, query, combine);
       }
     } catch (error) {
-      printError(error, query);
+      printError(error, query, combine);
     }
   }
 
-  addEventListener("DOMContentLoaded", function(event) {
-    let query = getParameterByName("query");
-    let input = document.getElementById(SEARCH_QUERY_ID);
-    if (input) {
-      input.value = query;
-    }
-    if (query) {
+  function submitSearch() {
+    const query = document.querySelector('#search-query').value;
+    const combine = document.querySelector('input[name="combine"]:checked').value;
+    history.replaceState(null, '', `${
+      location.pathname
+    }?query=${query}&combine=${combine}`);
+    if (query && query.trim()) {
       printSearching();
-      search(query);
+      search(query, combine);
     }
+  }
+
+  function init() {
+    let query = getParameterByName('query');
+    let queryField = document.querySelector('#search-query')
+    queryField.value = query;
+
+    let combine = getParameterByName('combine');
+    let orField = document.querySelector('#combine-or');
+    let andField = document.querySelector('#combine-and');
+    if (combine == 'OR') {
+      orField.checked = true;
+    } else {
+      andField.checked = true;
+    } andField.addEventListener('change', event => {
+      if (searchTermCount() > 1) {
+        submitSearch();
+      }
+    });
+    orField.addEventListener('change', event => {
+      if (searchTermCount() > 1) {
+        submitSearch();
+      }
+    });
+  }
+
+  addEventListener('DOMContentLoaded', event => {
+    init();
+    submitSearch();
   });
 </script>
+<div class="my-ryt-2xl">
+  <noscript>
+    <div class="max-w-rg">You cannot perform a search because JavaScript is disabled for your browser. Please consider enabling JavaScript.</div>
+  </noscript>
+  {% include "search-field.html", autofocus: "autofocus", onsubmit:
+   "event.preventDefault(); submitSearch();" %}
+</div>
+<div id="search-results"></div>

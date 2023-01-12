@@ -157,7 +157,7 @@ AutoComplete = (function () {
         if (!threshold || threshold > 0 && trimmedValue.length >= threshold) {
             if (keyUpEvent.key == 'ArrowUp' || keyUpEvent.key == 'ArrowDown' || keyUpEvent.key == 'ArrowLeft' || keyUpEvent.key == 'ArrowRight') {
                 if (!hasVisibleSuggestionWrapper(element)) {
-                    data(trimmedValue, callback);
+                    data(keyUpEvent, callback);
                 } else {
                     indicateSuggestion(keyUpEvent)
                 }
@@ -171,7 +171,7 @@ AutoComplete = (function () {
             } else if (keyUpEvent.key == 'Enter' || keyUpEvent.key == 'Escape') {
                 hideSuggestionWrapper(element);
             } else {
-                data(trimmedValue, callback);
+                data(keyUpEvent, callback);
             }
         } else {
             callback(null, []);
