@@ -257,7 +257,7 @@
   /* figure */
   figure {
     figcaption {
-      @apply my-ryt-sm not-italic text-smaller;
+      @apply my-ryt-sm font-mono text-sm;
     }
   }
 
@@ -284,7 +284,7 @@
 
   blockquote > header,
   blockquote > footer {
-    @apply font-normal font-sans not-italic my-ryt-sm;
+    @apply my-ryt-sm font-mono text-sm;
 
     &::before {
       content: "—";
