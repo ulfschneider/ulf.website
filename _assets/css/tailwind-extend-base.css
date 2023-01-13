@@ -57,7 +57,7 @@
 
   /* base colors */
   body {
-    @apply text-base text-write-dark bg-back-light dark:text-write-light dark:bg-back-dark overflow-x-hidden;
+    @apply text-base text-write-dark bg-back-light dark:text-write-light dark:bg-back-dark;
   }
 
   /* focus */
@@ -303,15 +303,20 @@
 
   /* pre and pre code */
   pre {
-    @apply text-sm font-mono whitespace-pre-wrap;
-    > * {
-      @apply overflow-x-auto;
+    @apply text-sm font-mono whitespace-pre-wrap overflow-x-auto block;
+  }
+
+  pre[data-language] {
+    @apply mt-ryt-xl max-sm:bg-back-dark max-sm:dark:bg-light-dark;
+    &::before {
+      content: attr(data-language);
+      @apply font-sans text-sm absolute max-sm:ml-ryt;
+      margin-top: calc(-1 * (theme(spacing.ryt) + theme(spacing.ryt-xs)));
     }
   }
 
-  pre[data-language]::before {
-    content: attr(data-language);
-    @apply font-sans text-sm my-ryt-sm;
+  main > pre[data-language] {
+    @apply max-sm:-mx-ryt;
   }
 
   code:not(pre code) {
@@ -319,7 +324,7 @@
   }
 
   pre code {
-    @apply bg-back-dark dark:bg-light-dark text-write-light px-ryt py-ryt-sm -mx-ryt block text-left leading-normal whitespace-pre font-mono;
+    @apply inline-block py-ryt-sm pl-ryt-sm pr-ryt bg-back-dark dark:bg-light-dark text-write-light leading-normal whitespace-pre font-mono;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
@@ -330,5 +335,9 @@
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+  }
+
+  main > pre[data-language] code {
+    @apply max-sm:pl-ryt max-sm:block;
   }
 }
