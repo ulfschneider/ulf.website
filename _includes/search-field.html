@@ -70,7 +70,7 @@
           const combine = document.querySelector('input[name="combine"]:checked').value;
           let response = await fetch('/api/search-suggest/?query=' + encodeURIComponent(query) + '&combine=' + combine);
           let suggestions = await response.json();
-          callback(null, suggestions.map(entry => entry.suggestion));
+          callback(null, suggestions);
         } catch (error) {
           callback(error, []);
         }

@@ -21,9 +21,20 @@ export default async (request, context) => {
         let results = miniSearch.autoSuggest(query, { prefix: true, combineWith: combine });
         const now = Date.now();
         console.log(`The suggest for [${query}] returned ${results.length} results within ${now - start} milliseconds`);
-        //return at max 7 suggestions
-        let limitedResult = results.slice(0, 7);
-        return new Response(JSON.stringify(limitedResult), {
+        //return at max 7 suggestions        
+
+        let limitedResults = new Set();
+        if (results.length) {
+            for (let result of results) {
+                for (let t of result.terms) {
+                    if (limitedResults.size == 7) {
+                        break;
+                    }
+                    limitedResults.add(t);
+                }
+            }
+        }
+        return new Response(JSON.stringify([...limitedResults]), {
             status: 200,
             headers: { "content-type": "application/json;charset=UTF-8" }
         });
