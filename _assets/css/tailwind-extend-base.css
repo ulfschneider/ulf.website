@@ -262,9 +262,9 @@
   }
 
   figure:not(figure figure):has(iframe, video) {
-    @apply max-sm:-mx-ryt transition-spacing duration-300;
+    @apply max-sm:-mx-ryt;
     figcaption {
-      @apply max-sm:mx-ryt transition-spacing duration-300;
+      @apply max-sm:mx-ryt;
     }
   }
 
@@ -307,24 +307,16 @@
   }
 
   pre[data-language] {
-    @apply mt-ryt-xl max-sm:bg-back-dark max-sm:dark:bg-light-dark;
+    @apply mt-ryt-xl;
     &::before {
       content: attr(data-language);
-      @apply font-sans text-sm absolute max-sm:ml-ryt;
+      @apply font-sans text-sm absolute;
       margin-top: calc(-1 * (theme(spacing.ryt) + theme(spacing.ryt-xs)));
     }
   }
 
-  main > pre[data-language] {
-    @apply max-sm:-mx-ryt;
-  }
-
-  code:not(pre code) {
-    @apply bg-light text-write-dark dark:bg-light-dark dark:text-write-light px-ryt-2xs font-mono;
-  }
-
-  pre code {
-    @apply inline-block py-ryt-sm pl-ryt-sm pr-ryt bg-back-dark dark:bg-light-dark text-write-light leading-normal whitespace-pre font-mono;
+  pre > code {
+    @apply inline-block p-ryt-sm bg-back-dark dark:bg-light-dark text-write-light leading-normal whitespace-pre font-mono;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
@@ -337,7 +329,7 @@
     hyphens: none;
   }
 
-  main > pre[data-language] code {
-    @apply max-sm:pl-ryt max-sm:block;
+  code:not(pre code) {
+    @apply bg-light text-write-dark dark:bg-light-dark dark:text-write-light px-ryt-2xs font-mono;
   }
 }
