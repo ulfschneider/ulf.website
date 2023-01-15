@@ -7,6 +7,18 @@ const miniSearch = MiniSearch.loadJSON(JSON.stringify(searchIndex), {
     fields: searchIndex.INDEX_FIELDS
 });
 
+function splitSearchTerms(query) {
+    query = query || document.querySelector('#search-query').value;
+
+    return query
+        ? query.split(/\s+/)
+        : [];
+}
+function searchTermCount(query) {
+    let split = splitSearchTerms(query);
+    return split.length;
+}
+
 
 
 export default async (request, context) => {
@@ -15,23 +27,23 @@ export default async (request, context) => {
     const url = new URL(request.url);
     const searchParams = url.searchParams;
     const query = searchParams.get('query');
+    const count = searchTermCount(query);
     const combine = searchParams.get('combine') == 'OR' ? 'OR' : 'AND'; //AND is default
 
     try {
         let results = miniSearch.autoSuggest(query, { prefix: true, combineWith: combine });
         const now = Date.now();
         console.log(`The suggest for [${query}] returned ${results.length} results within ${now - start} milliseconds`);
-        //return at max 7 suggestions        
+
 
         let limitedResults = new Set();
         if (results.length) {
             for (let result of results) {
-                for (let t of result.terms) {
-                    if (limitedResults.size == 7) {
-                        break;
-                    }
-                    limitedResults.add(t);
+                //return at max 7 suggestions        
+                if (limitedResults.size == 7) {
+                    break;
                 }
+                limitedResults.add(result.terms.slice(0, count).join(' '));
             }
         }
         return new Response(JSON.stringify([...limitedResults]), {
