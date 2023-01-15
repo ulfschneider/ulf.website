@@ -10,6 +10,7 @@
           id="search-query"
           name="query"
           {{ autofocus }}
+          autocomplete="off"
           autocorrect="off"
           autocapitalize="off"
           spellcheck="false"
@@ -82,14 +83,13 @@
         const query = document.querySelector('#search-query').value;
         const combine = document.querySelector('input[name="combine"]:checked').value;
         if (query && query.trim()) {
-          location = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim()) + '&combine=' + combine;
+          location.href = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim()) + '&combine=' + combine;
         } else {
-          location = '{{site.search.url}}' + '?combine=' + combine;
+          location.href = '{{site.search.url}}' + '?combine=' + combine;
         }
       }
 
       function setFieldValues() {
-
         let query = getParameterByName('query');
         let queryField = document.querySelector('#search-query')
         queryField.value = query;

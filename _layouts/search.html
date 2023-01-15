@@ -181,6 +181,8 @@ permalink: "{{site.search.url}}"
   addEventListener('pageshow', event => {
     if (!event.persisted) {
       submitSearch();
+    } else {
+      setTimeout(setFieldValues, 50);
     }
   });
 </script>
