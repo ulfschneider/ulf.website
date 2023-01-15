@@ -1,12 +1,5 @@
 {%- if site.search and site.search.url -%}
-  {%- if onsubmit == nil or onsubmit == "" -%}
-    {%- assign onsubmit = "submitQuery(event);" %}
-  {%- endif -%}
-
-  <form
-    id='search-form'
-    class="max-w-rg"
-    onsubmit="{{onsubmit}}">
+  <form id="search-form" class="max-w-rg">
     <label
       id="search-label"
       for="search-query"
@@ -17,7 +10,6 @@
           id="search-query"
           name="query"
           {{ autofocus }}
-          autocomplete="off"
           autocorrect="off"
           autocapitalize="off"
           spellcheck="false"
@@ -62,9 +54,11 @@
       }
       function splitSearchTerms(query) {
         query = query || document.querySelector('#search-query').value;
-        return query.split(/\s+/);
-      }
 
+        return query
+          ? query.split(/\s+/)
+          : [];
+      }
       function searchTermCount(query) {
         let split = splitSearchTerms(query);
         return split.length;
@@ -88,28 +82,50 @@
         const query = document.querySelector('#search-query').value;
         const combine = document.querySelector('input[name="combine"]:checked').value;
         if (query && query.trim()) {
-          location.href = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim()) + '&combine=' + combine;
+          location = '{{site.search.url}}' + '?query=' + encodeURIComponent(query.trim()) + '&combine=' + combine;
         } else {
-          location.href = '{{site.search.url}}' + '?combine=' + combine;
+          location = '{{site.search.url}}' + '?combine=' + combine;
         }
       }
 
-      addEventListener('DOMContentLoaded', function(event) {
-        AutoComplete.init({selector: '#search-query', data: suggest, threshold: 2, onSelect: submitQuery});
-      });
+      function setFieldValues() {
 
-      let orField = document.querySelector('#combine-or');
-      let andField = document.querySelector('#combine-and');
-      andField.addEventListener('change', event => {
-        if (searchTermCount() > 1) {
-          submitQuery();
+        let query = getParameterByName('query');
+        let queryField = document.querySelector('#search-query')
+        queryField.value = query;
+
+        let combine = getParameterByName('combine');
+        let orField = document.querySelector('#combine-or');
+        let andField = document.querySelector('#combine-and');
+        if (combine == 'OR') {
+          orField.checked = true;
+        } else {
+          andField.checked = true;
         }
-      });
-      orField.addEventListener('change', event => {
-        if (searchTermCount() > 1) {
-          submitQuery();
-        }
-      });
+      }
+
+      function registerEvents() {
+        let orField = document.querySelector('#combine-or');
+        let andField = document.querySelector('#combine-and');
+        andField.addEventListener('change', event => {
+          if (searchTermCount()) {
+            submitQuery();
+          }
+        });
+        orField.addEventListener('change', event => {
+          if (searchTermCount()) {
+            submitQuery();
+          }
+        });
+        let searchForm = document.querySelector('#search-form');
+        searchForm.addEventListener('submit', submitQuery);
+
+        addEventListener('DOMContentLoaded', event => {
+          AutoComplete.init({selector: '#search-query', data: suggest, threshold: 2, onSelect: submitQuery});
+        });
+      }
+      setFieldValues();
+      registerEvents();
     </script>
 
   </form>

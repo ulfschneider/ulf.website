@@ -4,6 +4,14 @@ nodate: true
 permalink: "{{site.search.url}}"
 ---
 
+<div class="my-ryt-2xl">
+  <noscript>
+    <div class="max-w-rg">You cannot perform a search because JavaScript is disabled for your browser. Please consider enabling JavaScript.</div>
+  </noscript>
+  {% include "search-field.html", autofocus: "autofocus" %}
+</div>
+<div id="search-results"></div>
+
 <script>
   function removeChildren(parent) {
     if (parent) {
@@ -90,9 +98,9 @@ permalink: "{{site.search.url}}"
     }"`;
   }
 
-  function humanQuery(query, combine) {
-    query = query || document.querySelector('#search-query').value;
-    combine = combine || document.querySelector('input[name="combine"]:checked').value;
+  function humanQuery() {
+    query = getParameterByName('query');
+    combine = getParameterByName('combine');
     const split = splitSearchTerms(query);
     return split.join(` ${combine} `);
   }
@@ -143,69 +151,36 @@ permalink: "{{site.search.url}}"
     searchResults.append(errorMessage);
   }
 
-  async function search(query, combine) {
+  async function search() {
     try {
       let start = Date.now();
+      query = getParameterByName('query');
+      combine = getParameterByName('combine');
       let response = await fetch('/api/search/?query=' + encodeURIComponent(query) + '&combine=' + combine);
       let duration = Date.now() - start;
 
       if (response.status == 200) {
         let resultSet = await response.json();
-        console.log('The search for [' + humanQuery(query, combine) + '] returned ' + resultSet.length + ' results within ' + duration + ' milliseconds');
+        console.log('The search for [' + humanQuery() + '] returned ' + resultSet.length + ' results within ' + duration + ' milliseconds');
         printSearchResults(resultSet)
       } else {
-        printError(response, query, combine);
+        printError(response);
       }
     } catch (error) {
-      printError(error, query, combine);
+      printError(error);
     }
   }
 
   function submitSearch() {
-    const query = document.querySelector('#search-query').value;
-    const combine = document.querySelector('input[name="combine"]:checked').value;
-    history.replaceState(null, '', `${
-      location.pathname
-    }?query=${query}&combine=${combine}`);
+    const query = getParameterByName('query');
     if (query && query.trim()) {
-      search(query, combine);
+      search();
     }
   }
 
-  function init() {
-    let query = getParameterByName('query');
-    let queryField = document.querySelector('#search-query')
-    queryField.value = query;
-
-    let combine = getParameterByName('combine');
-    let orField = document.querySelector('#combine-or');
-    let andField = document.querySelector('#combine-and');
-    if (combine == 'OR') {
-      orField.checked = true;
-    } else {
-      andField.checked = true;
-    } andField.addEventListener('change', event => {
-      if (searchTermCount() > 1) {
-        submitSearch();
-      }
-    });
-    orField.addEventListener('change', event => {
-      if (searchTermCount() > 1) {
-        submitSearch();
-      }
-    });
-  }
-
-  addEventListener('DOMContentLoaded', event => {
-    init();
-    submitSearch();
+  addEventListener('pageshow', event => {
+    if (!event.persisted) {
+      submitSearch();
+    }
   });
 </script>
-<div class="my-ryt-2xl">
-  <noscript>
-    <div class="max-w-rg">You cannot perform a search because JavaScript is disabled for your browser. Please consider enabling JavaScript.</div>
-  </noscript>
-  {% include "search-field.html", autofocus: "autofocus", onsubmit:
-   "event.preventDefault(); submitSearch();" %}
-</div>
-<div id="search-results"></div>
