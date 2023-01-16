@@ -84,7 +84,7 @@
   input[type="tel"],
   input[type="url"],
   input[list] {
-    @apply border border-meta p-ryt-xs align-middle leading-none bg-field-light dark:bg-field-dark;
+    @apply border border-meta p-ryt-xs align-middle leading-none bg-field-light dark:bg-field-dark w-full max-w-screen-rg;
   }
 
   textarea {
