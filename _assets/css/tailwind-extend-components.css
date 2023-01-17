@@ -106,98 +106,73 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  /* PrismJS 1.29.0
-https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+bash+git+json+jsstacktrace+markdown+matlab */
-  /**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
+  /* PrismJS 1.29.0*/
+  pre[data-language] {
+    @apply mt-ryt-xl;
+    &::before {
+      content: attr(data-language);
+      @apply font-sans text-sm absolute px-ryt-2xs text-white bg-write-dark dark:text-write-dark dark:bg-write-light;
+      margin-top: calc(-1 * (theme(spacing.ryt) + theme(spacing.ryt-sm)));
+    }
   }
 
   .token.comment,
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: #8292a2;
+    @apply text-amber-700 dark:text-amber-500;
+    font-style: italic;
   }
 
-  .token.punctuation {
-    color: #f8f8f2;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.property,
-  .token.tag,
-  .token.constant,
-  .token.symbol,
-  .token.deleted {
-    color: #f92672;
-  }
-
-  .token.boolean,
-  .token.number {
-    color: #ae81ff;
-  }
-
-  .token.selector,
-  .token.attr-name,
   .token.string,
-  .token.char,
-  .token.builtin,
-  .token.inserted {
-    color: #a6e22e;
+  .token.attr-value {
+    @apply text-green-700 dark:text-green-400;
   }
 
-  .token.operator,
+  .token.punctuation,
+  .token.operator {
+    @apply text-orange-700 dark:text-orange-400;
+  }
+
   .token.entity,
   .token.url,
-  .language-css .token.string,
-  .style .token.string,
-  .token.variable {
-    color: #f8f8f2;
+  .token.symbol,
+  .token.number,
+  .token.boolean,
+  .token.variable,
+  .token.constant,
+  .token.property,
+  .token.regex,
+  .token.inserted {
+    @apply text-cyan-700 dark:text-cyan-400;
   }
 
   .token.atrule,
-  .token.attr-value,
+  .token.keyword,
+  .token.attr-name,
+  .language-autohotkey .token.selector {
+    @apply text-cyan-700 dark:text-cyan-400;
+  }
+
   .token.function,
-  .token.class-name {
-    color: #e6db74;
+  .token.deleted,
+  .language-autohotkey .token.tag {
+    @apply text-red-700 dark:text-red-400;
   }
 
-  .token.keyword {
-    color: #66d9ef;
-  }
-
-  .token.regex,
-  .token.important {
-    color: #fd971f;
+  .token.tag,
+  .token.selector,
+  .language-autohotkey .token.keyword {
+    @apply text-sky-700 dark:text-sky-400;
   }
 
   .token.important,
   .token.bold {
     font-weight: bold;
   }
+
   .token.italic {
     font-style: italic;
-  }
-
-  .token.entity {
-    cursor: help;
   }
 
   /* markdown-it footnotes */

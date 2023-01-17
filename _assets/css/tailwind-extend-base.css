@@ -302,21 +302,9 @@
   }
 
   /* pre and pre code */
-  pre {
-    @apply text-sm font-mono whitespace-pre-wrap overflow-x-auto block;
-  }
-
-  pre[data-language] {
-    @apply mt-ryt-xl;
-    &::before {
-      content: attr(data-language);
-      @apply font-sans text-sm absolute;
-      margin-top: calc(-1 * (theme(spacing.ryt) + theme(spacing.ryt-xs)));
-    }
-  }
-
+  pre,
   pre > code {
-    @apply inline-block p-ryt-sm bg-back-dark dark:bg-light-dark text-write-light leading-normal whitespace-pre font-mono;
+    @apply text-sm leading-normal whitespace-pre-wrap font-mono;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
@@ -330,6 +318,6 @@
   }
 
   code:not(pre code) {
-    @apply bg-light text-write-dark dark:bg-light-dark dark:text-write-light px-ryt-2xs font-mono;
+    @apply bg-light text-write-dark dark:bg-light-dark dark:text-write-light px-ryt-2xs font-mono text-sm;
   }
 }
