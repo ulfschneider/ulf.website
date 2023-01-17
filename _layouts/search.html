@@ -102,7 +102,7 @@ permalink: "{{site.search.url}}"
     query = getParameterByName('query');
     combine = getParameterByName('combine');
     const split = splitSearchTerms(query);
-    return split.join(` ${combine} `);
+    return split.join(` <span class="text-primary italic">${combine}</span> `);
   }
 
   function printResultCount(searchResults, resultSet) {
