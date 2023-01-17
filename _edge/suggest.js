@@ -19,6 +19,36 @@ function searchTermCount(query) {
     return split.length;
 }
 
+function chunk(arr = [], chunkSize = 1) {
+    let chunks = [];
+    let tmp = [...arr];
+    if (chunkSize <= 0) return chunks;
+    while (tmp.length) {
+        chunks.push(tmp.splice(0, chunkSize));
+    }
+    return chunks
+}
+
+function prepareResults(results, termCount) {
+    let limitedResults = new Set();
+    if (results.length) {
+        for (let result of results) {
+            let chunks = chunk(result.terms, termCount);
+            for (let chunk of chunks) {
+                //return at max 7 suggestions        
+                if (limitedResults.size == 7) {
+                    return [...limitedResults];
+                }
+                if (chunk.length == termCount) {
+                    limitedResults.add(chunk.join(' '));
+                }
+            }
+
+        }
+    }
+    return [...limitedResults];
+}
+
 
 
 export default async (request, context) => {
@@ -27,7 +57,7 @@ export default async (request, context) => {
     const url = new URL(request.url);
     const searchParams = url.searchParams;
     const query = searchParams.get('query');
-    const count = searchTermCount(query);
+    const termCount = searchTermCount(query);
     const combine = searchParams.get('combine') == 'OR' ? 'OR' : 'AND'; //AND is default
 
     try {
@@ -35,18 +65,8 @@ export default async (request, context) => {
         const now = Date.now();
         console.log(`The suggest for [${query}] returned ${results.length} results within ${now - start} milliseconds`);
 
-
-        let limitedResults = new Set();
-        if (results.length) {
-            for (let result of results) {
-                //return at max 7 suggestions        
-                if (limitedResults.size == 7) {
-                    break;
-                }
-                limitedResults.add(result.terms.slice(0, count).join(' '));
-            }
-        }
-        return new Response(JSON.stringify([...limitedResults]), {
+        let limitedResults = prepareResults(results, termCount)
+        return new Response(JSON.stringify(limitedResults), {
             status: 200,
             headers: { "content-type": "application/json;charset=UTF-8" }
         });
