@@ -42,7 +42,7 @@ Please note the striptags version 2, which is required to use CommonJS imports. 
 
 Because the search index is created with each build we do not need to have it under Git control. Add the following line to your `.gitignore`:
 
-```
+```txt
 # .gitignore
 _edge/search-index.json
 ```
@@ -206,17 +206,20 @@ The [Netlify documentation](https://docs.netlify.com/edge-functions/get-started/
 
 1. Create the `.netlify.toml` file in the project root folder.
 2. Specify inside of the `.netlify.toml` where the edge functions will reside. If nothing is specified, it will be inside of `netlify/edge-functions`, relative to the project root folder. I want to have my edge function in the `_edge` folder, which means adding the following entry in the `.netlify.toml`: \
-	```
+	```txt
 	[build]
 	edge_functions = "_edge"
 	```
 3. Specify the URL path for the edge function, and the name of the file that holds the function code. In my case:
-	```
+	```txt
 	[[edge_functions]]
 	path = "/api/search"
 	function = "search"
 	```
-4. Install Netlify CLI globally with `npm install netlify-cli -g`.
+4. Install Netlify CLI globally with 
+	```shell
+	npm install netlify-cli -g
+	```
 
 ## The search function
 
