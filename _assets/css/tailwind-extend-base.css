@@ -304,7 +304,7 @@
   /* pre and pre code */
   pre,
   pre > code {
-    @apply text-sm leading-normal whitespace-pre-wrap font-mono;
+    @apply text-sm leading-normal whitespace-pre-wrap font-mono overflow-x-auto;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
