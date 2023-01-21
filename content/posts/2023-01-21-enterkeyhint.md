@@ -12,6 +12,7 @@ will display a <kbd>Search</kbd> label, or something similar, instead of the Ent
 
 <table>
 <caption>The possible values of the <code>enterkeyhint</code> global HTML attribute.</caption>
+<tr><th><code>enterkeyhint</code> value</th><th>Virtual keyboard symbol</th></tr>
 <tr><td><code>enterkeyhint="enter"</code></td><td><kbd>⏎</kbd></td></tr>
 <tr><td><code>enterkeyhint="done"</code></td><td><kbd>Done</kbd></td></tr>
 <tr><td><code>enterkeyhint="go"</code></td><td><kbd>Go</kbd></td></tr>
