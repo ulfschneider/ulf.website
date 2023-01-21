@@ -8,7 +8,7 @@ The [`enterkeyhint`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_at
 <input type="submit" enterkeyhint="search">
 ``` 
 
-will display a <kbd>Search</kbd> label, or something similar, instead of <kbd>⏎</kbd> on the virtual keyboard. Because `enterkeyhint` is a global attribute, it can be used on any HTML element and is not limited to `input` elements.
+will display a <kbd>Search</kbd> label, or something similar, instead of the Enter symbol <kbd>⏎</kbd> on the virtual keyboard. Because `enterkeyhint` is a global attribute, it can be used on any HTML element and is not limited to `input` elements.
 
 <table>
 <caption>The possible values of the <code>enterkeyhint</code> global HTML attribute.</caption>
