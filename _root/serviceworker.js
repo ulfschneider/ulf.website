@@ -40,7 +40,6 @@ const SEARCH_CACHE_NAME = `${CACHE_NAME}-search-{{searchVersion}}`;
 
 const CACHE_NAMES = [SCRIPT_CACHE_NAME, RUNTIME_CACHE_NAME, CSS_CACHE_NAME, IMAGE_CACHE_NAME, FONT_CACHE_NAME, JSON_CACHE_NAME, SEARCH_CACHE_NAME];
 
-const SERVE_HTML_CACHE_FIRST = false;
 const CACHE_FIRST_FOR_EXPIRED = false;
 const NO_REVALIDATE_WITHIN_MINUTES = 10;
 
@@ -51,29 +50,66 @@ const NO_REVALIDATE_WITHIN_MINUTES = 10;
 const CACHE_SETTINGS = {
 
     [SCRIPT_CACHE_NAME]: {
-        maxAgeMinutes: 60 * 24 * 30 //expire scripts after 30 days
+        maxAgeMinutes: 60 * 24 * 30, //expire scripts after 30 days
+        //serveNetworkFirst: true is default        
     },
     [FONT_CACHE_NAME]: {
-        maxAgeMinutes: 60 * 24 * 300 //expire fonts after 300 days
+        maxAgeMinutes: 60 * 24 * 300, //expire fonts after 300 days
+        //serveCacheFirst: true is default
     },
     [RUNTIME_CACHE_NAME]: {
-        maxAgeMinutes: 60 * 24 //expire runtime entries after one day
+        maxAgeMinutes: 60 * 24, //expire runtime entries after one day 
+        //serveCacheFirst: true is default
     },
     [CSS_CACHE_NAME]: {
         maxAgeMinutes: 10, //FIXME 60 * 24 //expire css after one day
+        //serveCacheFirst: true is default
     },
     [JSON_CACHE_NAME]: {
         maxAgeMinutes: 60 * 24 //expire json after one day
+        //serveCacheFirst: true is default
     },
     [SEARCH_CACHE_NAME]: {
-        maxAgeMinutes: 60 * 24 //expire search after one day
+        maxAgeMinutes: 60 * 24, //expire search after one day    
+        serveNetworkFirst: true //false would be the default
     },
     [IMAGE_CACHE_NAME]: {
         maxAgeMinutes: 60 * 24 * 10, //expire images after 10 days
         maxItems: 100 //cache this amount of images, not more
+        //serveCacheFirst: true is default
     }
 }
 
+
+//// helpers 
+
+function isNetworkFirst(cacheName) {
+    let cache = CACHE_SETTINGS[cacheName];
+    if (cacheName == RUNTIME_CACHE_NAME) {
+        //the runtime cache default is network first if nothing is configured
+        if (cache && cache.serveCacheFirst) {
+            return false;
+        } else if (cache && cache.serveNetworkFirst === false) {
+            return false;
+        } else {
+            return true;
+        }
+    } else {
+        //all other caches are cache first if nothing is configured
+        if (cache && cache.serveCacheFirst === false) {
+            return true;
+        } else if (cache && cache.serveNetworkFirst) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+function isHtmlRequest(request) {
+    let accept = request.headers.get('Accept');
+    return accept && accept.includes('text/html');
+}
 
 //preCache on install
 addEventListener('install', async event => {
@@ -120,35 +156,27 @@ addEventListener("message", event => {
 //react on requests
 addEventListener('fetch', event => {
     const request = event.request;
+    const cacheName = getCacheNameForRequest(request);
 
     const handleEvent = async function () {
-        if (isHtmlRequest(request)) {
-            if (SERVE_HTML_CACHE_FIRST) {
-                return cacheFirst(event, { revalidate: true });
-            } else {
-                let networkFirstResponse = await networkFirst(event);
-                if (networkFirstResponse) {
-                    return networkFirstResponse;
-                }
+        if (isNetworkFirst(cacheName)) {
+            let networkFirstResponse = await networkFirst(event);
+            if (networkFirstResponse) {
+                return networkFirstResponse;
             }
         }
-        //everyhting that´s not an html page
-        //will be served cache first
-        return cacheFirst(event);
+        //from here on it´s cache first
+        if (isHtmlRequest(request)) {
+            return cacheFirst(event, { revalidate: true });
+        } else {
+            return cacheFirst(event);
+        }
     }
 
     log('Requesting ' + request.url);
     event.respondWith(handleEvent());
 });
 
-
-//// helpers 
-
-function isHtmlRequest(request) {
-    let url = new URL(request.url);
-    let accept = request.headers.get('Accept');
-    return accept && accept.includes('text/html') || /^\/.+\/$/.test(url.pathname) || /^\/$/.test(url.pathname);
-}
 
 async function preCache() {
     for (let url of PRE_CACHE_URLS) {
@@ -228,7 +256,7 @@ function getCacheNameForRequest(request) {
     let url = new URL(request.url);
     if (isHtmlRequest(request)) {
         return RUNTIME_CACHE_NAME;
-    } else if (/\/.*index.*\.json$/i.test(url.pathname)) {
+    } else if (/\/api\/search.*/i.test(url.pathname)) {
         return SEARCH_CACHE_NAME;
     } else if (/\/.*\.(json|(web)?manifest)$/i.test(url.pathname)) {
         return JSON_CACHE_NAME;
