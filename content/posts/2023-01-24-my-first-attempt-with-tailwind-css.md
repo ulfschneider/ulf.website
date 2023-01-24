@@ -2,7 +2,7 @@
 title: My first attempt with Tailwind CSS
 tags: [code, css]
 ---
-During the recent weeks I switched the CSS for *{{site.hostname}}* to [Tailwind CSS](https://tailwindcss.com). One of the key concepts of Tailwind is the *utility-first* approach for CSS classes. I think utility classes are not invented by Tailwind. Years ago, tools like [Tachyons](http://tachyons.io) were already onto it. The difference of Tailwind is, in my view, the configuration options of the system, and the ease of use, have been brought to a new level, which can make you very quick. 
+During the recent weeks I switched the CSS for *{{site.hostname}}* to [Tailwind CSS](https://tailwindcss.com). One of the key concepts of Tailwind is the *utility-first* approach for CSS classes. I think utility classes are not invented by Tailwind. Years ago, tools like [Tachyons](http://tachyons.io) were already onto it. The difference of Tailwind is, in my view, the configuration options and the ease of use have been brought to a new level, which can make you very quick. 
 
 Also, Tailwind is not *only* utility-first. You can have CSS component classes that go beyond utility-first. You build them by reusing utility classes, injecting them into your component class with the `@apply` keyword. The concept makes you write less CSS, that is more consistent. The layers for extending the system, `@layer base`, `@layer components`, and `@layer utilities`, as well as the `tailwind-config.js` file, provide a skeleton that makes sense to me and is easy to build upon. I know Tailwind is polarizing people, but I can say I enjoy working with Tailwind.
 
