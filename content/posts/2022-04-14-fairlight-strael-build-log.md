@@ -86,7 +86,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    </figure>
    <figure>
    <img src="/img/strael/packaging-recycling.jpg" alt="A hand with a scissor cutting a piece from plastic packaging material">
-   <figcaption>Re-cycling of packaging material</figcaption>
+   <figcaption>Recycling of packaging material</figcaption>
    </figure>
    <figure>
    <img src="/img/strael/wrapping-the-junction.jpg" alt="The beginning of wrapping the junction. The junction is still visible.">
@@ -476,7 +476,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
    <figcaption>The NoQ chainring centered on the axle</figcaption>
    </figure>
    The chainring is kept in place by mounting the drive-side crank arm on top of it. The crankarm must be centered above the metal pin sticking out the outer chainring and should be tightened with a 10 mm hex key to 35 - 40 Nm. In my case 35 Nm was not enough because the chainring then was sitting wobbly on the axle. Once tightened to 40 Nm the parts were without any play. I use anti-seize on the crankarm thread before screwing it into the axle.  
-2. Before pushing the axle through the bottom bracket take away the non-drive-side O-Ring from the axle and push the drive-side O-Ring as far as possible on the axle into the direction of the chainrings. Then push the axle completely through the bottom bracket (you might apply gentle force) and <mark>re-attach the non-drive-side O-Ring</mark> to the axle. 
+2. Before pushing the axle through the bottom bracket take away the non-drive-side O-Ring from the axle and push the drive-side O-Ring as far as possible on the axle into the direction of the chainrings. Then push the axle completely through the bottom bracket (you might apply gentle force) and <mark>reattach the non-drive-side O-Ring</mark> to the axle. 
    <figure>
    <img src="/img/strael/drive-side.jpg" alt="The drive-side of the crankset">
    <figcaption>The drive-side of the crankset. The front derailleur is not in its final position.</figcaption>
@@ -487,7 +487,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
    </figure>
    <figure>
    <img src="/img/strael/re-attach-non-drive-side-o-ring.jpg">
-   <figcaption>Do not forget to re-attach the non-drive-side O-Ring to the axle</figcaption>
+   <figcaption>Do not forget to reattach the non-drive-side O-Ring to the axle</figcaption>
    </figure>
 3. Loosen the preload nut bolt of the non-drive-side crankarm with the 2.5 mm hex key and thread the preload nut clock-wise into the crankarm until it bottoms out.
 4. Mount the non-drive-side crankarm to the axle with a 10 mm hey key and torque it to 40 Nm. I use anti-seize before screwing the crankarm onto the axle.
@@ -603,7 +603,7 @@ Repeat the steps for each brake hose.
 - Electrical Tape
 
 ### Steps
-I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://youtu.be/5MzIiv7pewE){}. Because I´m using Pro Race Comfort Bartape with an adhesive silicone strip re-wrapping to get the perfect result is no issue. The tape could be a little bit longer. Unfortunately I cannot install the Wolf Tooth Bar End Plugs because they do not stay in place which might be because the bartape is a bit thicker. The plugs that come with the Pro Race Comfort bartape are working fine instead.
+I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://youtu.be/5MzIiv7pewE){}. Because I´m using Pro Race Comfort Bartape with an adhesive silicone strip rewrapping to get the perfect result is no issue. The tape could be a little bit longer. Unfortunately I cannot install the Wolf Tooth Bar End Plugs because they do not stay in place which might be because the bartape is a bit thicker. The plugs that come with the Pro Race Comfort bartape are working fine instead.
 
 <figure>
 <img src="/img/strael/wolf-tooth-bar-end-plugs.jpg" alt="A hand holding the Wolf Tooth Bar End Plugs">
