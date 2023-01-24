@@ -2,15 +2,15 @@
 title: My first attempt with Tailwind CSS
 tags: [code, css]
 ---
-During the recent weeks I switched the CSS for *{{site.hostname}}* to [Tailwind CSS](https://tailwindcss.com). One of the key concepts of Tailwind are *utility-first* CSS classes. I think utility-classes are not invented by Tailwind. Years ago, tools like [Tachyons](http://tachyons.io) were already onto it. The difference of Tailwind is, in my view, the configuration options and the ease of use have been brought to a new level, which can make you very quick. 
+During the recent weeks I switched the CSS for *{{site.hostname}}* to [Tailwind CSS](https://tailwindcss.com). One of the key concepts of Tailwind is the *utility-first* approach for CSS classes. I think utility classes are not invented by Tailwind. Years ago, tools like [Tachyons](http://tachyons.io) were already onto it. The difference of Tailwind is, in my view, the configuration options of the system, and the ease of use, have been brought to a new level, which can make you very quick. 
 
 Also, Tailwind is not *only* utility-first. You can have CSS component classes that go beyond utility-first. You build them by reusing utility classes, injecting them into your component class with the `@apply` keyword. The concept makes you write less CSS, that is more consistent. The layers for extending the system, `@layer base`, `@layer components`, and `@layer utilities`, as well as the `tailwind-config.js` file, provide a skeleton that makes sense to me and is easy to build upon. I know Tailwind is polarizing people, but I can say I enjoy working with Tailwind.
 
 [[toc]]
 
-## Utility-first CSS classes
+## Utility CSS classes
 
-Utility-first CSS means *self-descriptive, single-purpose CSS classes*, like for: 
+Utility classes mean *self-descriptive, single-purpose CSS classes*, like for: 
 
 - Text sizes, colors, and weights
 - Border colors, widths, and positions
@@ -37,7 +37,7 @@ Read the two CSS class names of the example as:
 
 We do not need to know the exact values of *large rhythm* and *regular rhythm* by now, because you would configure these to the needs of your project.
 
-I find utility classes especially useful in conjunction with *media-variants.* A media-variant will reflect on things like screen size, dark mode, or light mode. In the following example, the *variant* classes give more padding on large screens (more accurate: large browser windows) and less padding on smaller screens:
+I find utility classes especially useful in conjunction with *media variants.* A media variant will reflect on things like screen size, dark mode, or light mode. In the following example, the *variant* classes give more padding on large screens (more accurate: large browser windows) and less padding on smaller screens:
 
 ```html
 <p class="px-ryt-lg py-ryt lg:px-ryt-xl lg:py-ryt-lg">
@@ -158,7 +158,7 @@ In the example above, folders that start with an underscore (_) contain HTML or 
 
 ## The evolution of Tailwind
 
-Adam Wathan, the creator of Tailwind, explains what made him prefer utility-first classes over content-component classes in his article [<cite>CSS Utility Classes and "Separation of Concerns"</cite>](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)^[[<cite>CSS Utility Classes and "Separation of Concerns"</cite>](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)], dating back to the year 2017. In that text, Adam describes, how his way of developing web pages evolved:
+Adam Wathan, the creator of Tailwind, explains what made him prefer utility classes over specialized content-component classes in his article [<cite>CSS Utility Classes and "Separation of Concerns"</cite>](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)^[[<cite>CSS Utility Classes and "Separation of Concerns"</cite>](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)], dating back to the year 2017. In that text, Adam describes, how his way of developing web pages evolved:
 
 **Phase 1: Write semantic HTML that is not concerned with styling decisions.** Let the CSS follow the HTML structure. This leads to CSS being tightly coupled to the HTML, even becoming a mirror of the HTML structure. It might happen that only a single CSS class representing a component will be assigned to the HTML. Adam doesn´t explain in his article why that could be a problem. A typical CSS during that phase looks like:
 
@@ -265,7 +265,7 @@ Here is my paragraph, it has padding on all sides.
 </p>
 ```
 
-Instead the notation of the Tailwind utility classes is shorter and you can choose only from a curated list of utility classes that are centrally configured. I understand it as a utility-layer of your design system.
+Instead the notation of the Tailwind utility classes is shorter and you can choose only from a curated list of utility classes that are centrally configured. I understand it as a utility layer of your design system.
 
 Following this approach, I think, the reusability of the CSS not only makes you write less code. The reduced amount of code and the predefined set of utility classes, that you tailor to your needs, increases the chances of the styling to be more consistent and quicker to change. Utility classes have a clear purpose that should help everyone in the team using them consistently. In my view the combination of utility classes, the possibility to create components by inheriting styles with the `@apply` keyword, the hierarchy provided by the layers (`@layer`), and the ease of adjustment through the `tailwind-config.js`, is something that works.
 
