@@ -156,7 +156,7 @@ The CSS code will be optimized by Tailwind during the build, so hat only those C
 
 In the example above, folders that start with an underscore (_) contain HTML or JavaScript and folders not starting with an underscore hold the content of the website. All of those folders will be analyzed by Tailwind for the usage of CSS.
 
-## The evolution of utility classes
+## The evolution of Tailwind
 
 Adam Wathan, the creator of Tailwind, explains what made him prefer utility-first classes over content-component classes in his article [<cite>CSS Utility Classes and "Separation of Concerns"</cite>](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)^[[<cite>CSS Utility Classes and "Separation of Concerns"</cite>](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)], dating back to the year 2017. In that text, Adam describes, how his way of developing web pages evolved:
 
