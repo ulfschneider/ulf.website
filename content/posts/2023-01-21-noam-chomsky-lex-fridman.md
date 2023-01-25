@@ -1,6 +1,6 @@
 ---
 title: Noam Chomsky interview by Lex Fridman
-tags: journal
+tags: [journal, video]
 ---
 This interview expands the understanding of the world. The biggest threat to the US is not China, it´s the US itself.
 
