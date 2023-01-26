@@ -114,5 +114,23 @@
       "profile_image_url_https": "https://pbs.twimg.com/profile_images/1550383732355485698/X7twqf3Z_normal.jpg"
     },
     "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/adambsilver\"><img src=\"https://pbs.twimg.com/profile_images/1550383732355485698/X7twqf3Z_normal.jpg\" alt=\"Avatar for adambsilver\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/adambsilver\">Adam Silver </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/adambsilver\">@adambsilver</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/adambsilver/status/1615989706700857344\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">🔥Why we use statements instead of questions for labelling form fields.<br><br>Reasons:<br><br>- less to read<br>- the important details are front-loaded<br><a href=\"https://twitter.com/hashtag/#FormsButBette\"><br>#FormsButBette</a>r<a href=\"https://twitter.com/hashtag/#ContentDesig\"> #ContentDesig</a>nf</p><div class=\"tweet-images\"><img alt=\"Image from Tweet\" src=\"https://pbs.twimg.com/ext_tw_video_thumb/1615989457965948928/pu/img/XfnrOg_kEOrplSSS.jpg\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1615989706700857344\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">69 </span></a><a class=\"tweet-date\" title=\"Time Posted: Jan 19, 2023 08:29:04 (UTC)\" href=\"https://twitter.com/adambsilver/status/1615989706700857344\">09:29 AM · Jan 19, 2023</a></div></blockquote>"
+  },
+  "1618156137555148802": {
+    "id_str": "1618156137555148802",
+    "htmlText": "🔥 Designing form fields? Avoid instructions like ‘Enter...’, ‘Select...’, ‘Tell us about...’ because it’s wordier and usually unnecessary.L",
+    "images": [
+      "https://pbs.twimg.com/amplify_video_thumb/1618156073386446850/img/v4veaPaEQvuxoL_m.jpg"
+    ],
+    "favorite_count": 29,
+    "created_at": {
+      "display": "08:57 AM · Jan 25, 2023",
+      "meta": "Jan 25, 2023 07:57:41 (UTC)"
+    },
+    "user": {
+      "name": "Adam Silver",
+      "screen_name": "adambsilver",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1550383732355485698/X7twqf3Z_normal.jpg"
+    },
+    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/adambsilver\"><img src=\"https://pbs.twimg.com/profile_images/1550383732355485698/X7twqf3Z_normal.jpg\" alt=\"Avatar for adambsilver\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/adambsilver\">Adam Silver </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/adambsilver\">@adambsilver</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/adambsilver/status/1618156137555148802\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">🔥 Designing form fields? Avoid instructions like ‘Enter...’, ‘Select...’, ‘Tell us about...’ because it’s wordier and usually unnecessary.L</p><div class=\"tweet-images\"><img alt=\"Image from Tweet\" src=\"https://pbs.twimg.com/amplify_video_thumb/1618156073386446850/img/v4veaPaEQvuxoL_m.jpg\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1618156137555148802\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">29 </span></a><a class=\"tweet-date\" title=\"Time Posted: Jan 25, 2023 07:57:41 (UTC)\" href=\"https://twitter.com/adambsilver/status/1618156137555148802\">08:57 AM · Jan 25, 2023</a></div></blockquote>"
   }
 }

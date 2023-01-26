@@ -235,5 +235,9 @@
     .tweet-author-handle {
       @apply break-all;
     }
+
+    .tweet-date::before {
+      content: "Tweet: ";
+    }
   }
 }
