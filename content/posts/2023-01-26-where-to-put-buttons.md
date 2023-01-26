@@ -2,9 +2,7 @@
 title: Where to put buttons on forms
 tags: accessibility
 ---
-Excellent article by Adam Silver: [<cite>Where to put buttons on forms</cite>](https://adamsilver.io/blog/where-to-put-buttons-on-forms/).
-
-Quick notes:
+Excellent article by Adam Silver: [<cite>Where to put buttons on forms</cite>](https://adamsilver.io/blog/where-to-put-buttons-on-forms/). Quick notes:
 
 - Align the primary button to the left edge of the inputs
 - Put the back button above the form
