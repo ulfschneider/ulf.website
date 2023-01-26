@@ -9,7 +9,7 @@ That´s crazy! [<cite>Lighthouse map</cite>](https://geodienst.github.io/lightho
 
 It´s provided by [Geodienst](https://www.geodienst.xyz/index.html), which belongs to the Center of Information Technology of the University of Groningen. 
 
-<figure>
+<figure class="max-w-rg">
   <iframe src="https://geodienst.github.io/lighthousemap/" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="">
 </iframe>
   <figcaption>Lighthouse map by the Center of Information Technology of the University of Groningen</figcaption>
