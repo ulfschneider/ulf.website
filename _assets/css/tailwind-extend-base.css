@@ -38,8 +38,8 @@
     max-width: 100%;
   }
 
-  iframe,
-  canvas {
+  canvas,
+  iframe {
     max-width: 100%;
   }
 
@@ -261,7 +261,11 @@
     }
   }
 
-  figure:not(figure figure):has(iframe, video) {
+  figure:has(iframe, video) {
+    @apply max-w-md;
+  }
+
+  figure:not(figure figure):not(main * figure):has(iframe, video) {
     @apply max-sm:-mx-ryt;
     figcaption {
       @apply max-sm:mx-ryt;
