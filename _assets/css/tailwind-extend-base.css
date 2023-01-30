@@ -127,7 +127,7 @@
   }
 
   dd {
-    @apply m-0;
+    @apply pl-ryt-lg;
   }
 
   dd + dt,
