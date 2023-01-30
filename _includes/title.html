@@ -13,7 +13,7 @@
 {%- if hasTitle == true or hasTagIntro == true or isBlog == true or refer or author -%}
   <header class="my-ryt-xl sm:my-ryt-2xl">
     {%- if nodate == nil -%}
-      <aside class="my-ryt">
+      <aside>
         {% include "date-tags.html" %}
       </aside>
     {%- endif -%}
@@ -22,7 +22,7 @@
     {%- endif -%}
     {%- include "hero.html" -%}
     {%- if abstract -%}
-      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}} my-ryt{% else %}my-ryt-lg{% endif %} max-w-rg">
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}} my-ryt{% else %}my-ryt-lg text-lg{% endif %} max-w-rg">
         {{ abstract }}
       </div>
     {%- endif -%}
