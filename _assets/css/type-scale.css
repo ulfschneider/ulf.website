@@ -3,14 +3,14 @@
 /* Fluid font size variables, for browsers that support clamp */
 @supports (font-size: clamp(1rem, 1vw, 1rem)) {
   :root {
-    --font-size-sm: clamp(0.99rem, 0.14vw + 0.95rem, 1.09rem);
-    --font-size-base: clamp(1.19rem, 0.17vw + 1.14rem, 1.31rem);
-    --font-size-lg: clamp(1.43rem, 0.21vw + 1.37rem, 1.57rem);
-    --font-size-xl: clamp(1.71rem, 0.25vw + 1.65rem, 1.89rem);
-    --font-size-2xl: clamp(2.05rem, 0.3vw + 1.98rem, 2.27rem);
-    --font-size-3xl: clamp(2.46rem, 0.36vw + 2.37rem, 2.72rem);
-    --font-size-4xl: clamp(2.95rem, 0.43vw + 2.85rem, 3.27rem);
-    --font-size-5xl: clamp(3.55rem, 0.51vw + 3.42rem, 3.92rem);
+    --font-size-sm: clamp(0.99rem, 0.21vw + 0.94rem, 1.15rem);
+    --font-size-base: clamp(1.19rem, 0.26vw + 1.12rem, 1.38rem);
+    --font-size-lg: clamp(1.43rem, 0.31vw + 1.35rem, 1.65rem);
+    --font-size-xl: clamp(1.71rem, 0.37vw + 1.62rem, 1.98rem);
+    --font-size-2xl: clamp(2.05rem, 0.45vw + 1.94rem, 2.38rem);
+    --font-size-3xl: clamp(2.46rem, 0.53vw + 2.33rem, 2.85rem);
+    --font-size-4xl: clamp(2.95rem, 0.64vw + 2.79rem, 3.42rem);
+    --font-size-5xl: clamp(3.55rem, 0.77vw + 3.35rem, 4.11rem);
   }
 }
 /* Fallback variables for browsers that don't support clamp */
@@ -27,14 +27,14 @@
   }
   @media screen and (min-width: 1563px) {
     :root {
-      --font-size-sm: 1.09rem;
-      --font-size-base: 1.31rem;
-      --font-size-lg: 1.57rem;
-      --font-size-xl: 1.89rem;
-      --font-size-2xl: 2.27rem;
-      --font-size-3xl: 2.72rem;
-      --font-size-4xl: 3.27rem;
-      --font-size-5xl: 3.92rem;
+      --font-size-sm: 1.15rem;
+      --font-size-base: 1.38rem;
+      --font-size-lg: 1.65rem;
+      --font-size-xl: 1.98rem;
+      --font-size-2xl: 2.38rem;
+      --font-size-3xl: 2.85rem;
+      --font-size-4xl: 3.42rem;
+      --font-size-5xl: 4.11rem;
     }
   }
 }
