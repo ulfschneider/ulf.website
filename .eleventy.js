@@ -1,21 +1,18 @@
+const fs = require('fs');
+
 const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginEmbedTweet = require('eleventy-plugin-embed-tweet');
-
-const fs = require('fs');
-
 const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
 const filters = require('./_eleventy/filters.js');
-const transforms = require('./_eleventy/transforms.js');
-const { filter } = require('domutils');
+
 
 module.exports = function (eleventyConfig) {
     addLayoutAliases(eleventyConfig);
     addCollections(eleventyConfig);
     addFilters(eleventyConfig);
     addMarkdownLib(eleventyConfig);
-    addBrowserSync404(eleventyConfig);
 
     eleventyConfig.setDataDeepMerge(true);
     eleventyConfig.setTemplateFormats([
@@ -24,7 +21,6 @@ module.exports = function (eleventyConfig) {
         'njk'
     ]);
 
-    eleventyConfig.addTransform('htmlmin', transforms.minifyHtml);
     eleventyConfig.addPassthroughCopy({ 'content/assets': '/assets' });
 
     eleventyConfig.addPlugin(rss);
@@ -178,21 +174,3 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('modifiedDate', filters.modifiedDate);
 }
 
-function addBrowserSync404(eleventyConfig) {
-    eleventyConfig.setBrowserSyncConfig({
-        callbacks: {
-            ready: function (err, bs) {
-
-                bs.addMiddleware("*", (req, res) => {
-                    const content_404 = fs.readFileSync('_site/404.html');
-                    // Provides the 404 content without redirect.
-                    res.write(content_404);
-                    // Add 404 http status code in request header.
-                    // res.writeHead(404, { "Content-Type": "text/html" });
-                    res.writeHead(404);
-                    res.end();
-                });
-            }
-        }
-    });
-}
