@@ -25,8 +25,10 @@ My path through 30 years of software went like this:<dl class="timeline">
   <dd>I was more than ten years with IBM Global Services as a developer and software architect.</dd>
   <dt>2006 – 2014 Self-employment</dt>
   <dd>Seven years self-employed as an agile coach, architect and trainer.</dd>
-  <dt>2014 – today Diebold Nixdorf</dt>
-  <dd>Since 2014 I am employed as an agile coach at Diebold Nixdorf, heading the Professional Services Processes & Quality team.</dd>
+  <dt>2014 – 2023 Diebold Nixdorf</dt>
+  <dd>Eight years employed as a software developer and agile coach at Diebold Nixdorf, heading the Professional Services Processes & Quality when leaving the company.</dd>
+  <dt>2023 – today Weidmüller Interface</dt>
+  <dd>Since February 2023 I am working as a software developer on great things at Weidmüller Interface.</dd>
 </dl>
 
 <h2>Connect with me</h2>
