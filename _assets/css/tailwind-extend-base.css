@@ -308,9 +308,9 @@
   /* pre and pre code */
   pre,
   pre > code {
-    @apply text-sm leading-normal whitespace-pre-wrap font-mono overflow-x-auto;
+    @apply text-sm leading-normal whitespace-pre-wrap font-mono break-words;
     word-spacing: normal;
-    word-break: normal;
+
     word-wrap: normal;
     -moz-tab-size: 4;
     -o-tab-size: 4;

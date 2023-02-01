@@ -21,7 +21,7 @@ module.exports = {
       'rg': '800px',
       'md': '1024px',
       'lg': '1280px',
-      'xl': '1563px'
+      'xl': '1560px'
     },
     fontSize: {
       'sm': ['var(--font-size-sm)', '1.6'],
