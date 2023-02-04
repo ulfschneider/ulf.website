@@ -4,7 +4,7 @@ tags: code
 ---
 The Deno blog entry [<cite>The Future (and the Past) of the Web is Server Side Rendering</cite>](https://deno.com/blog/the-future-and-past-is-server-side-rendering) is touching important points: website size, speed, and robustness. I became more aware of Deno because [Netlify is running their edge functions in Deno](https://www.netlify.com/blog/announcing-serverless-compute-with-edge-functions/), and because the Shop Talk Show has an interesting talk with Ryan Dahl in its episode [<cite>546: Ryan Dahl and Deno</cite>](https://shoptalkshow.com/546/). Ryan previously invented the Node.js project, and  now he is with Deno on his second big invention project. What´s going on with Deno needs attention, in my view.
 
-Quick notes form the blog article:
+Some quick notes from the blog article:
 
 > -  In the past 10 years, the [median size for a desktop webpage](https://almanac.httparchive.org/en/2021/page-weight) has gone from 468 KB to 2284 KB, a 388.3% increase. 
 > -  For mobile, this jump is even more staggering — 145 KB to 2010 KB — a whopping 1288.1% increase.
