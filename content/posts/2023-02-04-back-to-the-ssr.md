@@ -2,7 +2,7 @@
 title: Back to the SSR
 tags: code
 ---
-The Deno blog entry [<cite>Back to the SSR</cite>](https://deno.com/blog/the-future-and-past-is-server-side-rendering) is touching important points: website size, speed, and robustness. I became more aware of Deno because [Netlify is running their edge functions in Deno](https://www.netlify.com/blog/announcing-serverless-compute-with-edge-functions/), and because the Shop Talk Show has an interesting talk with Ryan Dahl in its episode [<cite>546: Ryan Dahl and Deno</cite>](https://shoptalkshow.com/546/). Ryan previously invented the Node.js project, and  now he is with Deno on his second big invention project. What´s going on with Deno needs attention, in my view.
+The Deno blog entry [<cite>The Future (and the Past) of the Web is Server Side Rendering</cite>](https://deno.com/blog/the-future-and-past-is-server-side-rendering) is touching important points: website size, speed, and robustness. I became more aware of Deno because [Netlify is running their edge functions in Deno](https://www.netlify.com/blog/announcing-serverless-compute-with-edge-functions/), and because the Shop Talk Show has an interesting talk with Ryan Dahl in its episode [<cite>546: Ryan Dahl and Deno</cite>](https://shoptalkshow.com/546/). Ryan previously invented the Node.js project, and  now he is with Deno on his second big invention project. What´s going on with Deno needs attention, in my view.
 
 Quick notes form the blog article:
 
