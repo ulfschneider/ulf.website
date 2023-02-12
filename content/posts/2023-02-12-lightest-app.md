@@ -2,7 +2,7 @@
 title: Lightest
 tags: code
 ---
-[<cite>lightest.app</cite>](https://lightest.app) is a neat website to compare and visualize load times web pages. The use cases are pretty interesting:
+[<cite>lightest.app</cite>](https://lightest.app) is a neat website to compare and visualize initial load times of web pages. The use cases are pretty interesting:
 
 > - Compare your web page load time against competitors. 
 > - Don't know what website builder platform to choose? Evaluate their showcase sites and templates on performance, accessibility, and SEO metrics.
