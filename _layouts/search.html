@@ -102,19 +102,35 @@ permalink: "{{site.search.url}}"
     query = getParameterByName('query');
     combine = getParameterByName('combine');
     const split = splitSearchTerms(query);
-    return split.join(` <span class="text-primary italic">${combine}</span> `);
+    return split.join(` ${combine} `);
+  }
+
+  function humanHtmlQuery() {
+    query = getParameterByName('query');
+    combine = getParameterByName('combine');
+    const split = splitSearchTerms(query);
+    return '<strong>' + split.join(` <span class="text-primary italic">${combine}</span> `) + '</strong>';
   }
 
   function printResultCount(searchResults, resultSet) {
     let count = document.createElement('div');
     count.classList.add('legible-rem-width');
     if (resultSet.length == 0) {
-      count.innerHTML = 'Your search for <strong>' + humanQuery() + '</strong> did not return any results.';
+      count.innerHTML = 'Your search for ' + humanHtmlQuery() + ' did not return any results.';
     } else if (resultSet.length == 1) {
-      count.innerHTML = 'One result for <strong>' + humanQuery() + '</strong:';
+      count.innerHTML = 'One result for ' + humanHtmlQuery() + ':';
     } else {
-      count.innerHTML = resultSet.length + ' results for <strong>' + humanQuery() + '</strong>:';
+      count.innerHTML = resultSet.length + ' results for ' + humanHtmlQuery() + ':';
     } searchResults.append(count);
+  }
+
+  function printSearching() {
+    let searchResults = document.querySelector('#search-results');
+    if (! searchResults) {
+      console.error('The page does not have a DOM element with id=[#search-results]');
+      return;
+    }
+    searchResults.innerHTML = 'Searching for ' + humanHtmlQuery() + ' ...';
   }
 
   function printSearchResults(resultSet) {
@@ -143,7 +159,7 @@ permalink: "{{site.search.url}}"
     }
     removeChildren(searchResults);
     let errorMessage = document.createElement('div');
-    errorMessage.innerHTML = 'The search for <strong>' + humanQuery() + '</strong> could not be completed because of a failure.';
+    errorMessage.innerHTML = 'The search for ' + humanHtmlQuery() + ' could not be completed because of a failure.';
     if (error && error.status && error.statusText) {
       errorMessage.innerHTML += '</br>';
       errorMessage.innerHTML += 'Status code ' + error.status + ': ' + error.statusText;
