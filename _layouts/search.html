@@ -130,7 +130,7 @@ permalink: "{{site.search.url}}"
       console.error('The page does not have a DOM element with id=[#search-results]');
       return;
     }
-    searchResults.innerHTML = 'Searching for ' + humanHtmlQuery() + ' ...';
+    searchResults.innerHTML = 'Searching ' + humanHtmlQuery() + ' ...';
   }
 
   function printSearchResults(resultSet) {
@@ -169,6 +169,7 @@ permalink: "{{site.search.url}}"
 
   async function search() {
     try {
+      printSearching();
       let start = Date.now();
       query = getParameterByName('query');
       combine = getParameterByName('combine');
@@ -178,6 +179,7 @@ permalink: "{{site.search.url}}"
       if (response.status == 200) {
         let resultSet = await response.json();
         console.log('The search for [' + humanQuery() + '] returned ' + resultSet.length + ' results within ' + duration + ' milliseconds');
+
         printSearchResults(resultSet)
       } else {
         printError(response);
