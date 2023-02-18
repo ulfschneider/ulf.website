@@ -1,6 +1,17 @@
 AutoComplete = (function () {
 
     let idCounter = 0;
+    let throttleTimer;
+
+    function throttle(callback, milliseconds = 100) {
+        if (throttleTimer) return;
+
+        throttleTimer = true;
+        setTimeout(function () {
+            callback();
+            throttleTimer = false;
+        }, milliseconds);
+    }
 
     function getSuggestionWrapper(element) {
         let suggestionWrapperId = element.getAttribute('suggestion-wrapper-id');
@@ -52,13 +63,39 @@ AutoComplete = (function () {
         }
     }
 
-    function setSuggestionWrapperWidth(element) {
+    function getSuggestionWrapperTopPosition(element, suggestionWrapper) {
+        let elementStyle = getComputedStyle(element);
+        let elementRect = element.getBoundingClientRect();
+        let suggestRect = suggestionWrapper.getBoundingClientRect();
+        let outlineTrim = parseInt(elementStyle.outlineOffset) + parseInt(elementStyle.outlineWidth);
+
+        if (element.offsetTop < suggestRect.height) {
+            //there is not enough space at the top anyway
+            //attach suggestions to the bottom of the input field
+            return (element.offsetTop + elementRect.height + outlineTrim) + 'px';
+        } else if (elementRect.bottom + suggestRect.height > innerHeight) {
+            //there is not enough space to the bottom of the viewport
+            //but there is enough space to the top of the document
+            //attach suggestions to the top of the input field
+            return (element.offsetTop - suggestRect.height - outlineTrim) + 'px';
+        } else {
+            //in any other case 
+            //attach suggestions to the bottom of the input field
+            return (element.offsetTop + elementRect.height + outlineTrim) + 'px';
+        }
+    }
+
+
+    function trimSuggestionWrapperPosition(element) {
         let suggestionWrapper = getSuggestionWrapper(element);
         if (suggestionWrapper) {
             let elementStyle = getComputedStyle(element);
+
             suggestionWrapper.style.marginLeft = elementStyle.marginLeft;
             suggestionWrapper.style.marginRight = elementStyle.marginRight;
             suggestionWrapper.style.width = element.offsetWidth + 'px';
+
+            suggestionWrapper.style.top = getSuggestionWrapperTopPosition(element, suggestionWrapper);
         }
     }
 
@@ -72,7 +109,7 @@ AutoComplete = (function () {
         } else {
             let suggestionWrapper = ensureSuggestionWrapper(element);
             suggestionWrapper.innerHTML = '';
-            setSuggestionWrapperWidth(element);
+            trimSuggestionWrapperPosition(element);
 
             for (let suggest of suggestions) {
                 if (suggest) {
@@ -92,8 +129,10 @@ AutoComplete = (function () {
                         }
                     })
                     suggestionWrapper.appendChild(suggestElement);
+                    trimSuggestionWrapperPosition(element);
                 }
             }
+
         }
     }
 
@@ -210,8 +249,15 @@ AutoComplete = (function () {
                 onSelect: onSelect
             })
         });
-        addEventListener('resize', function (event) {
-            setSuggestionWrapperWidth(element);
+        addEventListener('resize', function () {
+            //no throttle on resize
+            trimSuggestionWrapperPosition(element);
+        });
+        addEventListener('scroll', function () {
+            //throttle on scroll
+            throttle(function () {
+                trimSuggestionWrapperPosition(element);
+            })
         });
     }
 
