@@ -73,7 +73,7 @@ AutoComplete = (function () {
             //there is not enough space at the top anyway
             //attach suggestions to the bottom of the input field
             return (element.offsetTop + elementRect.height + outlineTrim) + 'px';
-        } else if (elementRect.bottom + suggestRect.height > innerHeight) {
+        } else if (elementRect.bottom + suggestRect.height > window.innerHeight) {
             //there is not enough space to the bottom of the viewport
             //but there is enough space to the top of the document
             //attach suggestions to the top of the input field
