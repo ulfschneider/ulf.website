@@ -2,7 +2,7 @@
 import searchIndex from './search-index.json' assert {type: 'json'};
 //keep the version number of minisearch in sync with the version that is used when 
 //building the search indexy
-import MiniSearch from 'https://cdn.jsdelivr.net/npm/minisearch@6.0.0/dist/es/index.js';
+import MiniSearch from 'https://cdn.jsdelivr.net/npm/minisearch@6.0.1/dist/es/index.js';
 const miniSearch = MiniSearch.loadJSON(JSON.stringify(searchIndex), {
     fields: searchIndex.INDEX_FIELDS
 });
