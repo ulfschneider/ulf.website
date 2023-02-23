@@ -6,6 +6,7 @@ import MiniSearch from 'https://cdn.jsdelivr.net/npm/minisearch@6.0.1/dist/es/in
 const miniSearch = MiniSearch.loadJSON(JSON.stringify(searchIndex), {
     fields: searchIndex.INDEX_FIELDS
 });
+const RESULT_COUNT = 7;
 
 function splitSearchTerms(query) {
     query = query || document.querySelector('#search-query').value;
@@ -19,33 +20,22 @@ function searchTermCount(query) {
     return split.length;
 }
 
-function chunk(arr = [], chunkSize = 1) {
-    let chunks = [];
-    let tmp = [...arr];
-    if (chunkSize <= 0) return chunks;
-    while (tmp.length) {
-        chunks.push(tmp.splice(0, chunkSize));
-    }
-    return chunks
-}
-
 function prepareResults(results, termCount) {
     let limitedResults = new Set();
-    if (results.length) {
-        for (let result of results) {
-            let chunks = chunk(result.terms, termCount);
-            for (let chunk of chunks) {
-                //return at max 7 suggestions        
-                if (limitedResults.size == 7) {
-                    return [...limitedResults];
-                }
-                if (chunk.length == termCount) {
-                    limitedResults.add(chunk.join(' '));
-                }
-            }
 
+    for (let result of results) {
+        if (limitedResults.size == RESULT_COUNT) {
+            break;
         }
+        //use only the first termCount number of terms 
+        //per each result
+        let slice = result.terms.slice(0, termCount);
+
+        //join the sliced terms with a space
+        //and add them to the limited results
+        limitedResults.add(slice.join(' '));
     }
+
     return [...limitedResults];
 }
 
