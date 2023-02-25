@@ -1,5 +1,5 @@
 ---
-title: TIL-2 console.count()
+title: console.count()
 tags: [til, code]
 ---
 `console.count()` logs the number of times that a particular content has been logged out by `count()`.

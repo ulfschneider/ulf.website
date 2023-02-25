@@ -1,5 +1,5 @@
 ---
-title: TIL-1 Use thin space
+title: Use thin space
 tags: [til, fonts]
 ---
 Use `&thinsp;` to separate initials like  `J.&thinsp;K. Rowling`.
