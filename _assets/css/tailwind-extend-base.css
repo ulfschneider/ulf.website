@@ -256,13 +256,19 @@
 
   @media (min-width: theme(screens.rg)) {
     main > figure,
-    main > header > figure,
+    main > header > figure {
+      margin-right: max(
+        -1 * (theme(space.md) - theme(space.rg)),
+        -0.5 * (100vw - theme(space.rg)) + theme(space.ryt-2xl)
+      );
+    }
+
     main > .scroll-table,
     main > table,
     main > pre {
       margin-right: max(
         -1 * (theme(space.md) - theme(space.rg)),
-        -0.5 * (100vw - theme(space.rg)) + theme(space.ryt-2xl)
+        -0.5 * (100vw - theme(space.rg)) + theme(space.ryt)
       );
     }
   }
