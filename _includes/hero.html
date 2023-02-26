@@ -1,8 +1,8 @@
 {%- if hero != nil and hero != "" -%}
-  <figure class="mx-r-auto my-ryt-xl sm:my-ryt-2xl {% if herocss != nil and herocss != ""%}{{herocss}}{% endif %}">
+  <figure class="my-ryt-xl sm:my-ryt-2xl {% if herocss != nil and herocss != ""%}{{herocss}}{% endif %}">
     {{ hero | responsiveHero: heroalt }}
     {%- if herocaption != nil and herocaption != "" -%}
-      <figcaption class="small ml-auto text-right">{{ herocaption }}</figcaption>
+      <figcaption class="text-sm">{{ herocaption }}</figcaption>
     {%- endif -%}
   </figure>
 {%- endif -%}
