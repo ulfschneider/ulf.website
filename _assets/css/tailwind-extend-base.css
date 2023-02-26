@@ -254,10 +254,22 @@
     }
   }
 
-  /* figure */
+  @media (min-width: theme(screens.rg)) {
+    main > figure,
+    main > header > figure,
+    main > .scroll-table,
+    main > table,
+    main > pre {
+      margin-right: max(
+        -1 * (theme(space.md) - theme(space.rg)),
+        -1 * (100vw - theme(space.rg)) + theme(space.ryt)
+      );
+    }
+  }
+
   figure {
     figcaption {
-      @apply my-ryt-sm font-mono text-sm;
+      @apply max-w-rg my-ryt-sm font-mono text-sm;
     }
   }
 

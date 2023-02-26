@@ -23,38 +23,6 @@
     @apply outline-outline outline-4 outline-offset-2 outline;
   }
 
-  .max-w-rg-descendants {
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    dl,
-    dt,
-    dd,
-    ul,
-    ol,
-    li,
-    th,
-    td,
-    figcaption,
-    caption,
-    summary,
-    blockquote {
-      @apply max-w-rg;
-    }
-  }
-
-  *.max-w-legible-ch {
-    max-width: 60ch;
-  }
-
-  .center-children > * {
-    @apply mx-auto;
-  }
-
   /* split */
   .split {
     grid-template-columns: repeat(2, 1fr);
