@@ -262,7 +262,7 @@
     main > pre {
       margin-right: max(
         -1 * (theme(space.md) - theme(space.rg)),
-        -1 * (100vw - theme(space.rg)) + theme(space.ryt)
+        -0.5 * (100vw - theme(space.rg)) + theme(space.ryt-2xl)
       );
     }
   }
@@ -271,10 +271,6 @@
     figcaption {
       @apply max-w-rg my-ryt-sm font-mono text-sm;
     }
-  }
-
-  figure:has(iframe, video) {
-    @apply max-w-md;
   }
 
   figure:not(figure figure):not(main * figure):has(iframe, video) {
