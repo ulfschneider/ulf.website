@@ -38,8 +38,9 @@
     max-width: 100%;
   }
 
-  iframe {
-    @apply max-w-rg;
+  iframe,
+  canvas {
+    max-width: 100%;
   }
 
   input,
@@ -259,6 +260,10 @@
   main > table,
   main > pre {
     @apply rhero;
+  }
+
+  figure:has(iframe, video) {
+    margin-right: unset;
   }
 
   figure {
