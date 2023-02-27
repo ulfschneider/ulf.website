@@ -11,10 +11,9 @@ outline: true
 
 Git will help you doing the following things with a computer:
 
-<figure>
-<div>
-<strong>Personal</strong>
-<ul class="indent">
+### Personal
+
+<ul>
 <li>Keep track of file revisions when working iteratively (this is often referred to as version control).</li>
 <li>Safely experiment because you can always step back to the previous version.</li>
 <li>No need to give your files version indicating names, like essay_v1.txt, essay_v2.txt and so on.</li>
@@ -23,16 +22,14 @@ Git will help you doing the following things with a computer:
 <li>Have the advantage of powerful version control without the need to setup a server or creating an account somewhere.</li>
 <li>Work consistently on multiple different operating systems, like MacOS, Linux and Windows.</li>
 </ul>
-</div>
-<div>
-<strong>Team</strong>
-<ul class="indent">
+
+### Team
+
+<ul>
 <li>Share your work with others and keep track of their changes by enforcing the same set of rules for managing versions. This will work even with thousands of people on a big project, but also scales down nicely for a small team.</li>
 <li>When sharing your work with others, you can work on your local computer without being always connected to a shared repository, only synchronizing eventually.</li>
 <li>No central locking of files. All team members have their own working copy on their own computers which allows each of them to work independently.</li>
 </ul>
-</div>
-</figure>
 
 ## Get Git
 
