@@ -1,3 +1,10 @@
+:root {
+  --bleed: max(
+    -1 * (theme(space.md) - theme(space.rg)),
+    -0.5 * (100vw - theme(space.rg)) + theme(space.ryt)
+  );
+}
+
 @layer utilities {
   .no-js .no-js-hidden {
     display: none;
@@ -34,15 +41,18 @@
   }
 
   @media (min-width: theme(screens.rg)) {
-    .hero {
-      margin-left: max(
-        -1 * (theme(space.md) - theme(space.rg)),
-        -0.5 * (100vw - theme(space.rg)) + theme(space.ryt)
-      );
-      margin-right: max(
-        -1 * (theme(space.md) - theme(space.rg)),
-        -0.5 * (100vw - theme(space.rg)) + theme(space.ryt)
-      );
+    .hero,
+    .bleed {
+      margin-left: var(--bleed);
+      margin-right: var(--bleed);
+    }
+    .lhero,
+    .lbleed {
+      margin-left: var(--bleed);
+    }
+    .rhero,
+    .rbleed {
+      margin-right: var(--bleed);
     }
   }
 }
