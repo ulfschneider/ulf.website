@@ -32,4 +32,17 @@
   .split > * {
     @apply m-0;
   }
+
+  @media (min-width: theme(screens.rg)) {
+    .hero {
+      margin-left: max(
+        -1 * (theme(space.md) - theme(space.rg)),
+        -0.5 * (100vw - theme(space.rg)) + theme(space.ryt)
+      );
+      margin-right: max(
+        -1 * (theme(space.md) - theme(space.rg)),
+        -0.5 * (100vw - theme(space.rg)) + theme(space.ryt)
+      );
+    }
+  }
 }

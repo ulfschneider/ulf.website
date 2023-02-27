@@ -1,5 +1,5 @@
 {%- if hero != nil and hero != "" -%}
-  <figure class="my-ryt-xl sm:my-ryt-2xl {% if herocss != nil and herocss != ""%}{{herocss}}{% endif %}">
+  <figure class="my-ryt-xl sm:my-ryt-2xl {% if herocss != nil and herocss != ""%}{{herocss}}{%else%}hero{% endif %}">
     {{ hero | responsiveHero: heroalt }}
     {%- if herocaption != nil and herocaption != "" -%}
       <figcaption class="text-sm">{{ herocaption }}</figcaption>
