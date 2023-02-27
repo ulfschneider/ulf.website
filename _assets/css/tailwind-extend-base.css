@@ -38,9 +38,8 @@
     max-width: 100%;
   }
 
-  canvas,
   iframe {
-    max-width: 100%;
+    @apply max-w-rg;
   }
 
   input,
