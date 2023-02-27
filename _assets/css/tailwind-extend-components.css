@@ -224,7 +224,7 @@
 
   /* eleventy embed tweet */
   blockquote.tweet-card {
-    @apply font-normal not-italic text-base my-ryt-lg font-sans border-light overflow-x-auto;
+    @apply font-normal not-italic text-base my-ryt-lg font-sans border-light overflow-x-auto max-w-rg;
 
     &::before,
     &::after {
@@ -234,10 +234,6 @@
     .tweet-author-name,
     .tweet-author-handle {
       @apply break-all;
-    }
-
-    .tweet-date::before {
-      content: "Tweet: ";
     }
   }
 }
