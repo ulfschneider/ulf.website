@@ -45,6 +45,10 @@
     .bleed {
       margin-left: var(--bleed);
       margin-right: var(--bleed);
+
+      img {
+        @apply object-center mx-auto;
+      }
     }
     .lhero,
     .lbleed {
