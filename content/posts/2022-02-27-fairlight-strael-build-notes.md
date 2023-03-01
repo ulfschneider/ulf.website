@@ -95,7 +95,7 @@ There is one thing left: *the weight of a steel frame.* The frame of the current
   <figcaption>The Strael 3.0 frameset in color putty.<br>The image is taken from the Fairlight Strael 3.0 Lookbook.</figcaption>
 </figure>
 
-<figure class="md:split">
+<figure class="md:split hero">
   <figure class="md:pdr-2">
     <img src="/img/strael/strael-3-0-frame-parts.png" alt="">
     <figcaption>Parts that come with the frame.<br>The image is taken from the Fairlight Strael 3.0 Design Notes.<br>As you might notice, you should decide upfront what kind of groupset you want to put on your bike, and Fairlight would provide the correct 3D-printed cable guides. Because these are special parts from Fairlight which you cannot get somewhere else, and because I was not sure initially what groupset to use, and to be more flexible for future frame usage, I asked Sebastian from Fairlights customer service if I could order all the cable guides in addition. Sebastian ensured I get all the cable guides with my frameset at no extra cost, excluding the parts that typically would also come with the frame for a chosen group setup, but which I would get at any bike shop when I was clear with my final decision (e.g. Shimano Di2 grommets). I'm absolutely fine with that approach. I want to add that it was never an issue to reach Sebastian via mail, and he always was very kind and supportive.</figcaption>
