@@ -14,7 +14,7 @@ $ history
  5  netlify dev
 ```
 
-To get the any command of the hisotry list into the prompt, key in the exclamation mark followed by the number of the command in the history:
+To get any command of the history into the prompt, key in the exclamation mark followed by the number of the command in the history:
 
 ```shell
 # bring the first issued command into the command prompt 
