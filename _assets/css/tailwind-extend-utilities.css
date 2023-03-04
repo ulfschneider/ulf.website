@@ -39,24 +39,4 @@
   .split > * {
     @apply m-0;
   }
-
-  @media (min-width: theme(screens.rg)) {
-    .hero,
-    .bleed {
-      margin-left: var(--bleed);
-      margin-right: var(--bleed);
-
-      img {
-        @apply object-center mx-auto;
-      }
-    }
-    .lhero,
-    .lbleed {
-      margin-left: var(--bleed);
-    }
-    .rhero,
-    .rbleed {
-      margin-right: var(--bleed);
-    }
-  }
 }
