@@ -7,6 +7,7 @@ const LABEL_FILTER = 'website-comments'; //use empty string to ignore label filt
 
 let octokit;
 let issues;
+let comments;
 
 
 async function loginGitHub() {
@@ -22,6 +23,7 @@ async function getRemainingRateLimit() {
 }
 
 async function loadIssues() {
+    issues = [];
     return octokit.paginate(octokit.rest.issues.listForRepo, {
         owner: OWNER,
         repo: REPO,
@@ -31,6 +33,7 @@ async function loadIssues() {
             //paginate returns all issues of the repo in an array
             issues = allIssues;
         });
+    return issues;
 }
 
 
@@ -46,18 +49,18 @@ function getIssueByTitle(title) {
 }
 
 async function loadComments(commentRoot) {
-    let comments = [];
+    comments = [];
     let commentRootIssue = getIssueByTitle(commentRoot);
     if (!commentRootIssue) {
         console.log(`No comment root ${commentRoot} found`);
     } else {
-        console.log(`Using comment root ${commentRoot}`);
         const { data } = await octokit.rest.issues.listComments({
             owner: OWNER,
             repo: REPO,
             issue_number: commentRootIssue.number
         });
         comments = data;
+        console.log(`Found ${comments.length} comments for ${commentRoot}`);
     }
     return comments;
 }
@@ -86,9 +89,9 @@ export default async (request, context) => {
     const commentRoot = searchParams.get('comment-root');
 
     await loadIssues();
-    let comments = await loadComments(commentRoot);
+    await loadComments(commentRoot);
+
     for (let comment of comments) {
-        console.log('--');
         console.log(comment.body);
     }
 
