@@ -9,6 +9,11 @@ function = "search"
 path = "/api/search-suggest"
 function = "suggest"
 
+[[edge_functions]]
+path = "/api/comments"
+function = "comments"
+
+
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
