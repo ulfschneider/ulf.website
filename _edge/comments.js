@@ -1,6 +1,7 @@
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 import { Octokit } from "https://cdn.skypack.dev/octokit";
 
+const WEBSITE_ORIGIN = 'https://ulfschneider.io'; //FIXME improve this
 const REPO = 'ulf.website'; //repo to check for comments
 const OWNER = 'ulfschneider'; //repo owner
 const LABEL_FILTER = 'website-comments'; //use empty string to ignore label filtering
@@ -62,9 +63,9 @@ async function createCommentRootIssue() {
         owner: OWNER,
         repo: REPO,
         title: commentRoot,
-        labels: [LABEL_FILTER]
+        labels: [LABEL_FILTER],
+        body: `This is a comment root to collect discussions about ${WEBSITE_ORIGIN + commentRoot}`
     });
-    //TODO store a backlink to the original website post
 }
 
 async function createComment(commentBody) {
