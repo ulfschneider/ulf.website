@@ -45,22 +45,15 @@
     button:hover:not(:disabled),
     .button:hover:not(:disabled),
     select:hover:not(:disabled) {
-      @apply filter brightness-125;
+      @apply backdrop-filter brightness-125;
     }
-  }
-
-  input[type="submit"]:focus:not(:disabled),
-  input[type="reset"]:focus:not(:disabled),
-  button:focus:not(:disabled),
-  select:focus:not(:disabled) {
-    @apply filter brightness-125;
   }
 
   input[type="submit"]:active:not(:disabled),
   input[type="reset"]:active:not(:disabled),
   button:active:not(:disabled),
   select:active:not(:disabled) {
-    @apply filter brightness-125;
+    @apply backdrop-filter brightness-125;
   }
 
   label > * {

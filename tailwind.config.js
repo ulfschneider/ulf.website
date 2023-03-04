@@ -73,9 +73,9 @@ module.exports = {
           dark: colors.neutral[800],
         },
         'outline': {
-          light: colors.yellow[100],
-          DEFAULT: colors.yellow[500],
-          dark: colors.yellow[900]
+          light: colors.yellow[300],
+          DEFAULT: colors.yellow[400],
+          dark: colors.yellow[700]
         },
         'mark': {
           light: colors.yellow[100],
