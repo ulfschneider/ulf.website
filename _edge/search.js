@@ -25,7 +25,7 @@ export default async (request, context) => {
             headers: { "content-type": "application/json;charset=UTF-8" }
         });
     } catch (err) {
-        console.log(`Failure when searching for [${query}]: ${err}`);
+        console.error(`Failure when searching for [${query}]: ${err}`);
         return new Response(err.message, {
             status: 500
         });

@@ -61,7 +61,7 @@ export default async (request, context) => {
             headers: { "content-type": "application/json;charset=UTF-8" }
         });
     } catch (err) {
-        console.log(`Failure when suggesting for [${query}]: ${err}`);
+        console.error(`Failure when suggesting for [${query}]: ${err}`);
         return new Response(err.message, {
             status: 500
         });
