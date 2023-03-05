@@ -150,9 +150,8 @@ export default async (request, context) => {
 
         if (!processing.originPath && !processing.issueNumber) {
             console.error('The comment root argument is not specified');
-            return new Response(JSON.stringify('You didn´t specify a comment root with either ?originPath= or ?issueNumber='), {
-                status: 400,
-                headers: { "content-type": "application/json;charset=UTF-8" }
+            return new Response('You didn´t specify a comment root with either ?originPath= or ?issueNumber=', {
+                status: 400
             });
 
         }
