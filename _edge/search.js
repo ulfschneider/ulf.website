@@ -9,14 +9,14 @@ const miniSearch = MiniSearch.loadJSON(JSON.stringify(searchIndex), {
 
 
 export default async (request, context) => {
-    const start = Date.now();
-
-    const url = new URL(request.url);
-    const searchParams = url.searchParams;
-    const query = searchParams.get('query');
-    const combine = searchParams.get('combine') == 'OR' ? 'OR' : 'AND'; //AND is default
-
     try {
+        const start = Date.now();
+
+        const url = new URL(request.url);
+        const searchParams = url.searchParams;
+        const query = searchParams.get('query');
+        const combine = searchParams.get('combine') == 'OR' ? 'OR' : 'AND'; //AND is default
+
         let results = miniSearch.search(query, { prefix: true, combineWith: combine });
         const now = Date.now();
         console.log(`The search for [${query}] returned ${results.length} results within ${now - start} milliseconds`);
@@ -24,11 +24,12 @@ export default async (request, context) => {
             status: 200,
             headers: { "content-type": "application/json;charset=UTF-8" }
         });
-    } catch (error) {
-        console.log(`Failure when searching for [${query}]: ${error}`);
-        return new Response(error.message, {
+    } catch (err) {
+        console.log(`Failure when searching for [${query}]: ${err}`);
+        return new Response(err.message, {
             status: 500
         });
+
     }
 }
 
