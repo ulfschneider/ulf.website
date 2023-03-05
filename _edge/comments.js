@@ -1,13 +1,12 @@
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 import { Octokit } from "https://cdn.skypack.dev/octokit";
 
-const WEBSITE_ORIGIN = 'https://ulfschneider.io'; //FIXME improve this
+const WEBSITE_ORIGIN = 'https://ulfschneider.io'; //TODO improve this
 const REPO = 'ulf.website'; //repo to check for comments
 const OWNER = 'ulfschneider'; //repo owner
 const LABEL_FILTER = 'website-comments'; //use empty string to ignore label filtering
 
 let octokit;
-
 
 async function loginGitHub() {
     // Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
@@ -88,13 +87,19 @@ async function loadComments(processing) {
     processing.comments = [];
 
     if (processing.issueNumber) {
-
-        const { data } = await octokit.rest.issues.listComments({
+        let options = {
             owner: OWNER,
             repo: REPO,
             issue_number: processing.issueNumber,
-        });
-        processing.comments = data;
+        }
+        if (processing.since) {
+            options.since = processing.since;
+        }
+        await octokit.paginate(octokit.rest.issues.listComments, options)
+            .then(allComments => {
+                //paginate returns all comments in an array
+                processing.comments = allComments;
+            });
     }
 }
 
@@ -127,8 +132,6 @@ function getPrettifiedComments(processing) {
 }
 
 
-
-
 export default async (request, context) => {
 
     try {
@@ -139,6 +142,7 @@ export default async (request, context) => {
         let processing = {
             originPath: searchParams.get('originPath'),
             issueNumber: searchParams.get('issueNumber'),
+            since: searchParams.get('since'),
             method: request.method
         }
 
@@ -158,9 +162,8 @@ export default async (request, context) => {
         }
         await determinIssueNumber(processing);
 
-        //TODO create a comment only for method=='POST' && body != empty
-        processing.commentBody = 'my new body\n\n* bullet\n* bullet';
-        await createComment(processing);
+        //TODO create a comment only for method=='POST' && body != empty 
+        //await createComment(processing);
 
         await loadComments(processing);
 
