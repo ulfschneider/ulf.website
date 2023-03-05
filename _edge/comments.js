@@ -26,7 +26,7 @@ async function loadIssues(processing) {
     await octokit.paginate(octokit.rest.issues.listForRepo, {
         owner: OWNER,
         repo: REPO,
-        labels: LABEL_FILTER
+        labels: LABEL_FILTER /*use a filter to reduce load */
     })
         .then(allIssues => {
             //paginate returns all issues of the repo in an array
@@ -40,6 +40,8 @@ async function loadCommentRootIssue(processing) {
     processing.commentRootIssue = null;
 
     if (processing.commentRoot && processing.commentRoot.startsWith('/')) {
+        //we do not have an issue number and therefore
+        //have to load all issues and filter the correct one
         await loadIssues(processing);
         for (let issue of processing.issues) {
             if (issue.title == processing.commentRoot) {
@@ -49,6 +51,7 @@ async function loadCommentRootIssue(processing) {
         }
     } else if (processing.commentRoot) {
         //the commentRoot is treated as a GitHub issue number
+        //therefore a more efficient direct load of a single issue is possible
         const { data } = octokit.rest.issues.get({
             owner: OWNER,
             repo: REPO,
@@ -96,7 +99,6 @@ async function loadComments(processing) {
             issue_number: processing.commentRootIssue.number
         });
         processing.comments = data;
-        console.log(`Loaded ${processing.comments.length} comments for ${processing.commentRoot}`);
     }
 }
 
@@ -118,6 +120,7 @@ function getPrettifiedComments(processing) {
             body: extractCommentBody(comment),
             author: extractCommentAuthor(comment),
             website: extractCommentWebsite(comment),
+            isEdited: comment.created_at !== comment.updated_at,
             createdAt: comment.created_at,
             updatedAt: comment.updated_at
         }
@@ -130,6 +133,7 @@ function getPrettifiedComments(processing) {
 export default async (request, context) => {
 
     try {
+        const start = Date.now();
         const url = new URL(request.url);
         const searchParams = url.searchParams;
 
@@ -153,34 +157,26 @@ export default async (request, context) => {
             octokit = await loginGitHub();
         }
 
-
-        let remaining = await getRemainingRateLimit();
-        console.log(`GitHub remaining rate limit: ${remaining}`);
-        if (remaining == 0) {
-            return {
-                statusCode: 429,
-                body: JSON.stringify({ error: 'Unable to fetch comments at this time. Check back later.' }),
-            };
-        }
-
-
         await loadCommentRootIssue(processing);
 
         //TODO create a comment only for method=='POST' && body != empty
-        processing.commentBody = 'my new body';
+        processing.commentBody = 'my new body\n\n* bullet\n* bullet';
         await createComment(processing);
 
         await loadComments(processing);
 
-        return new Response(JSON.stringify(getPrettifiedComments(processing)), {
+        let prettifiedComments = getPrettifiedComments(processing);
+        const now = Date.now();
+        console.log(`Loading ${processing.comments.length} comments for comment root ${processing.commentRoot} took ${now - start} milliseconds`);
+
+        return new Response(JSON.stringify(prettifiedComments), {
             status: 200,
             headers: { "content-type": "application/json;charset=UTF-8" }
         });
     } catch (err) {
-        console.error(err);
-        return new Response(JSON.stringify(err.message), {
-            status: 500,
-            headers: { "content-type": "application/json;charset=UTF-8" }
+        console.error(`Failure in commenting process: ${err}`);
+        return new Response(err.message, {
+            status: 500
         });
     }
 }
