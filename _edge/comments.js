@@ -78,6 +78,7 @@ async function createCommentRootIssue(processing) {
 }
 
 async function createComment(processing) {
+    //TODO handle comment author and website
     if (!processing.commentRootIssue) {
         await createCommentRootIssue(processing);
     }
