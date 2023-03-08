@@ -81,7 +81,7 @@
   }
 
   textarea {
-    @apply leading-snug border border-meta py-xs px-xs resize-none font-normal  bg-field-light dark:bg-field-dark;
+    @apply leading-snug border border-meta py-ryt-xs px-ryt-xs resize-none font-normal  bg-field-light dark:bg-field-dark;
   }
 
   fieldset {
