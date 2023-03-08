@@ -237,6 +237,14 @@
     }
   }
 
+  #back-to-start {
+    a:hover,
+    a:focus,
+    a:active {
+      @apply text-current;
+    }
+  }
+
   @media (min-width: theme(screens.rg)) {
     .hero,
     .bleed {
