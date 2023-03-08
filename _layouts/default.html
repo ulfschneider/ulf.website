@@ -13,8 +13,9 @@
     <div class="grow shrink-0 px-ryt">
       {% include "header.html" %}
       <main id="main" class="indent max-w-rg mx-auto mb-ryt-xl">
-        {%- include "title.html" -%}
+        {% include "title.html" %}
         {{ content }}
+        {% include "comments.html" %}
         {% include "post-nav.html" %}
       </main>
     </div>

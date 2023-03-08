@@ -1,7 +1,6 @@
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 import { Octokit } from "https://cdn.skypack.dev/octokit";
 
-const WEBSITE_ORIGIN = 'https://ulfschneider.io'; //TODO improve this
 const REPO = 'ulf.website'; //repo to check for comments
 const OWNER = 'ulfschneider'; //repo owner
 const LABEL_FILTER = 'website-comments'; //use empty string to ignore label filtering
@@ -16,8 +15,8 @@ async function loginGitHub() {
 
 function printRootIssue(processing) {
     let print = '';
-    if (processing.originPath) {
-        print += 'origin path ' + processing.originPath;
+    if (processing.origUrl) {
+        print += 'origin url ' + processing.origUrl;
     }
     if (processing.issueNumber) {
         if (print) {
@@ -43,12 +42,12 @@ async function loadCommentRootIssues(processing) {
 
 
 async function determinIssueNumber(processing) {
-    if (!processing.issueNumber && processing.originPath) {
+    if (!processing.issueNumber && processing.origUrl) {
         //we do not have an issue number and therefore
         //have to load all issues and extract the correct number
         await loadCommentRootIssues(processing);
         for (let issue of processing.issues) {
-            if (issue.title == processing.originPath) {
+            if (issue.title == processing.origUrl.pathname) {
                 processing.issueNumber = issue.number;
                 break;
             }
@@ -60,27 +59,41 @@ async function createCommentRootIssue(processing) {
     const { data } = await octokit.rest.issues.create({
         owner: OWNER,
         repo: REPO,
-        title: processing.originPath,
+        title: processing.origUrl.pathname,
         labels: [LABEL_FILTER],
-        body: `This is a comment root to collect discussions about ${WEBSITE_ORIGIN + processing.originPath}`
+        body: `This is a comment root to collect discussions about ${processing.origUrl}`
     });
 
     processing.issueNumber = data.number;
-    console.log(`Created comment root issue for ${printRootIssue(processing)}`);
+    console.log(`Created comment root issue ${data.html_url} for ${printRootIssue(processing)}`);
+}
+
+function formatComment(processing) {
+    return `by ${processing.comment.author}\n--\n\n${processing.comment.body}`;
+}
+
+function parseCommentBody(commentBody) {
+
+    let match = commentBody.match(/^\s*by\s+(.*)\s*\n--\s*(.*)/i);
+
+    let parsed = {
+        author: match ? match[1] : '',
+        body: match ? match[2] : commentBody
+    };
+    return parsed;
 }
 
 async function createComment(processing) {
     if (!processing.issueNumber) {
         await createCommentRootIssue(processing);
     }
-    //TODO handle comment author and website
     const { data } = await octokit.rest.issues.createComment({
         owner: OWNER,
         repo: REPO,
         issue_number: processing.issueNumber,
-        body: processing.commentBody,
+        body: formatComment(processing)
     });
-    console.log(`Created a comment for ${printRootIssue(processing)}`);
+    console.log(`Created a comment ${data.html_url} for ${printRootIssue(processing)}`);
 }
 
 async function loadComments(processing) {
@@ -103,26 +116,14 @@ async function loadComments(processing) {
     }
 }
 
-function extractCommentAuthor(comment) {
-    return ''; //TODO implement
-}
-
-function extractCommentWebsite(comment) {
-    return ''; //TODO implement
-}
-
-function extractCommentBody(comment) {
-    return comment.body; //TODO finalize
-}
-
 function getPrettifiedComments(processing) {
     return {
         issueNumber: processing.issueNumber,
         comments: processing.comments?.map(comment => {
+            let parsed = parseCommentBody(comment.body);
             return {
-                body: extractCommentBody(comment),
-                author: extractCommentAuthor(comment),
-                website: extractCommentWebsite(comment),
+                body: parsed.body,
+                author: parsed.author || comment.user.login,
                 isEdited: comment.created_at !== comment.updated_at,
                 createdAt: comment.created_at,
                 updatedAt: comment.updated_at
@@ -138,31 +139,55 @@ export default async (request, context) => {
         const start = Date.now();
         const url = new URL(request.url);
         const searchParams = url.searchParams;
+        let origUrl = '';
+        if (searchParams.get('origUrl')) {
+            origUrl = new URL(searchParams.get('origUrl'));
+        }
+        const body = await request.json();
 
         let processing = {
-            originPath: searchParams.get('originPath'),
+            origUrl: origUrl,
             issueNumber: searchParams.get('issueNumber'),
             since: searchParams.get('since'),
-            method: request.method
+            method: request.method,
+            comment: {
+                author: body.author,
+                body: body.comment
+            }
         }
 
         console.log(processing.method, printRootIssue(processing));
 
-        if (!processing.originPath && !processing.issueNumber) {
+        if (!processing.origUrl && !processing.issueNumber) {
             console.error('The comment root argument is not specified');
-            return new Response('You didn´t specify a comment root with either ?originPath= or ?issueNumber=', {
+            return new Response('You didn´t specify a comment root with either ?origUrl= or ?issueNumber=', {
                 status: 400
             });
-
         }
+        if (processing.method == 'POST') {
+            if (!processing.comment.body) {
+                console.error('The comment body is missing');
+                return new Response('You didn´t provide a comment body to post', {
+                    status: 400
+                });
+            }
+            if (!processing.comment.author) {
+                console.error('The comment author is missing');
+                return new Response('You didn´t provide a comment author to post', {
+                    status: 400
+                });
+            }
+        }
+
 
         if (!octokit) {
             octokit = await loginGitHub();
         }
         await determinIssueNumber(processing);
 
-        //TODO create a comment only for method=='POST' && body != empty 
-        //await createComment(processing);
+        if (processing.method == 'POST') {
+            await createComment(processing);
+        }
 
         await loadComments(processing);
 
