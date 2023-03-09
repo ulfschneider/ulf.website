@@ -149,14 +149,12 @@ export default async (request, context) => {
             origUrl = new URL(searchParams.get('origUrl'));
         }
 
-
         let processing = {
             origUrl: origUrl,
             issueNumber: searchParams.get('issueNumber'),
             since: searchParams.get('since'),
             method: request.method,
         }
-
 
 
         console.log(processing.method, printRootIssue(processing));
