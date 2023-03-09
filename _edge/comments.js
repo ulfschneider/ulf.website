@@ -2,7 +2,7 @@ import { config } from "https://deno.land/x/dotenv/mod.ts";
 import { Octokit } from "https://cdn.skypack.dev/octokit";
 import { micromark } from 'https://esm.sh/micromark@3'
 
-const REPO = 'ulf.website'; //repo to check for comments
+const REPO = 'ulf.website.comments'; //repo to check for comments
 const OWNER = 'ulfschneider'; //repo owner
 const LABEL_FILTER = 'website-comments'; //use empty string to ignore label filtering
 
