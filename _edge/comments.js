@@ -1,5 +1,6 @@
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 import { Octokit } from "https://cdn.skypack.dev/octokit";
+import { micromark } from 'https://esm.sh/micromark@3'
 
 const REPO = 'ulf.website'; //repo to check for comments
 const OWNER = 'ulfschneider'; //repo owner
@@ -74,12 +75,15 @@ function formatComment(processing) {
 
 function parseCommentBody(commentBody) {
 
-    let match = commentBody.match(/^\s*by\s+(.*)\s*\n--\s*(.*)/i);
+    let author = commentBody.match(/^\s*by\s+(.*?)\s*--\s*/si);
+    let body = commentBody.match(/\s*--\s*(.*?)\s*$/si);
+
 
     let parsed = {
-        author: match ? match[1] : '',
-        body: match ? match[2] : commentBody
+        author: author ? author[1] : '',
+        body: body ? body[1] : commentBody
     };
+
     return parsed;
 }
 
@@ -119,10 +123,11 @@ async function loadComments(processing) {
 function getPrettifiedComments(processing) {
     return {
         issueNumber: processing.issueNumber,
-        comments: processing.comments?.map(comment => {
+        commentList: processing.comments?.map(comment => {
             let parsed = parseCommentBody(comment.body);
             return {
                 body: parsed.body,
+                htmlBody: micromark(parsed.body),
                 author: parsed.author || comment.user.login,
                 isEdited: comment.created_at !== comment.updated_at,
                 createdAt: comment.created_at,
@@ -143,18 +148,16 @@ export default async (request, context) => {
         if (searchParams.get('origUrl')) {
             origUrl = new URL(searchParams.get('origUrl'));
         }
-        const body = await request.json();
+
 
         let processing = {
             origUrl: origUrl,
             issueNumber: searchParams.get('issueNumber'),
             since: searchParams.get('since'),
             method: request.method,
-            comment: {
-                author: body.author,
-                body: body.comment
-            }
         }
+
+
 
         console.log(processing.method, printRootIssue(processing));
 
@@ -165,6 +168,12 @@ export default async (request, context) => {
             });
         }
         if (processing.method == 'POST') {
+            const body = await request.json();
+            processing.comment = {
+                author: body.author,
+                body: body.comment
+            }
+
             if (!processing.comment.body) {
                 console.error('The comment body is missing');
                 return new Response('You didn´t provide a comment body to post', {
