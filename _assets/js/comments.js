@@ -57,9 +57,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
     observer.observe(commentList);
 
     let commentForm = document.querySelector('#comment-form');
+    let submitButton = document.querySelector('#submit-comment');
     if (commentForm) {
         commentForm.addEventListener('submit', async function (event) {
             event.preventDefault();
+            //TODO disable the form
+            if (submitButton) {
+                submitButton.value = 'Submitting your comment ...';
+            }
+
             const payload = {
                 author: commentForm.author.value,
                 comment: commentForm.comment.value
@@ -72,6 +78,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 },
                 body: JSON.stringify(payload)
             });
+            if (submitButton) {
+                submitButton.value = 'Submit your comment'
+            }
+            //TODO if no error, clear contents of comment form
+            //TODO enable the form
             let data = await response.json();
             printComments(commentList, data);
         });

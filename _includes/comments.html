@@ -2,7 +2,14 @@
   <div id="comment-list" class="no-indent"></div>
 
   <form id="comment-form" name="comment">
-    <h2>Write a comment</h2>
+    <label class="my-ryt-lg">
+      Write a comment
+      <span class="font-normal text-sm">(Markdown is okay)</span>
+      <textarea
+        required
+        class="block w-full h-ryt-3xl"
+        name="comment"></textarea>
+    </label>
     <label class="my-ryt-lg">
       Your name
       <input
@@ -11,16 +18,9 @@
         name="author"
         type="text">
     </label>
-    <label class="my-ryt-lg">
-      Your comment
-      <textarea
-        required
-        class="block w-full h-ryt-3xl"
-        name="comment"></textarea>
-    </label>
     <input
       type="submit"
       id="submit-comment"
-      value="Submit comment">
+      value="Submit your comment">
   </form>
 </div>

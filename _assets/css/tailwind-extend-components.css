@@ -245,6 +245,10 @@
     }
   }
 
+  #comment-list article * {
+    @apply m-0;
+  }
+
   @media (min-width: theme(screens.rg)) {
     .hero,
     .bleed {
