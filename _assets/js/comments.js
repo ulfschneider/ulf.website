@@ -83,7 +83,7 @@ function formHandling(commentList) {
     let submitButton = document.querySelector('.comments .submit-comment');
     let indicateSubmitFailure = document.querySelector('.comments .indicate-submit-failure');
     if (commentForm) {
-        commentForm.addEventListener('submit', async function (event) {
+        commentForm.addEventListener('submit', async (event) => {
             try {
                 event.preventDefault();
                 disableForm(commentForm);
@@ -129,7 +129,7 @@ function formHandling(commentList) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener('DOMContentLoaded', event => {
     let commentList = document.querySelector('.comments .comment-list');
 
     let observer = new IntersectionObserver(async function () {
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let authorName = document.querySelector('.comments input[name=author]');
     if (authorName && localStorage) {
         authorName.value = localStorage.commentAuthorName ? localStorage.commentAuthorName : '';
-        authorName.addEventListener('blur', function (event) {
+        authorName.addEventListener('blur', event => {
             localStorage.commentAuthorName = authorName.value;
         })
     }

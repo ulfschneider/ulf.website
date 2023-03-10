@@ -116,12 +116,12 @@ AutoComplete = (function () {
                     let suggestElement = document.createElement('li');
                     suggestElement.innerText = suggest;
 
-                    suggestElement.addEventListener('mousedown', function (event) {
+                    suggestElement.addEventListener('mousedown', event => {
                         //stop onblur for the element from firing when selecting 
                         //a suggestion with a pointing device
                         event.preventDefault();
                     });
-                    suggestElement.addEventListener('click', function (event) {
+                    suggestElement.addEventListener('click', event => {
                         element.value = event.target.innerText;
                         element.focus();
                         if (onSelect) {
@@ -230,17 +230,17 @@ AutoComplete = (function () {
         }
         hideSuggestionWrapper(element);
 
-        element.addEventListener('blur', function (event) {
+        element.addEventListener('blur', event => {
             hideSuggestionWrapper(element);
         });
-        element.addEventListener('keydown', function (event) {
+        element.addEventListener('keydown', event => {
             if (event.key == 'Enter' && getSelectedSuggestion(element)) {
                 //do not submit a potentially existing form 
                 //if we first have to use the selected suggestion
                 event.preventDefault();
             }
         });
-        element.addEventListener('keyup', function (event) {
+        element.addEventListener('keyup', event => {
             suggest({
                 element: element,
                 keyUpEvent: event,
