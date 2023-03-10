@@ -162,6 +162,7 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('firstImage', filters.firstImage);
     eleventyConfig.addFilter('live', filters.live);
     eleventyConfig.addFilter('post', filters.post);
+    eleventyConfig.addFilter('isPost', filters.isPost);
     eleventyConfig.addFilter('tagIntro', filters.tagIntro);
     eleventyConfig.addFilter('humanDate', filters.humanDate);
     eleventyConfig.addFilter('humanDateTime', filters.humanDateTime);

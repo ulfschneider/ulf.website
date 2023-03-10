@@ -1,26 +1,31 @@
-<div class="my-ryt-2xl">
-  <div id="comment-list" class="no-indent"></div>
-
-  <form id="comment-form" name="comment">
-    <label class="my-ryt-lg">
-      Write a comment
-      <span class="font-normal text-sm">(Markdown is okay)</span>
-      <textarea
-        required
-        class="block w-full h-ryt-3xl"
-        name="comment"></textarea>
-    </label>
-    <label class="my-ryt-lg">
-      Your name
+{%- if page | isPost -%}
+  <div class="comments my-ryt-2xl">
+    <div class="comment-list"></div>
+    <div class="text-red font-bold indicate-load-failure"></div>
+    <form class="comment-form" name="comment">
+      <label class="my-ryt-lg">
+        Write a comment
+        <div class="hint text-sm">
+          <a href="https://www.markdownguide.org/cheat-sheet/" target="_blank">Markdown</a>
+          is okay</div>
+        <textarea
+          required
+          class="block w-full h-ryt-3xl"
+          name="comment"></textarea>
+      </label>
+      <label class="my-ryt-lg">
+        Your name
+        <input
+          required
+          class="block"
+          name="author"
+          type="text">
+      </label>
+      <div class="text-red font-bold indicate-submit-failure"></div>
       <input
-        required
-        class="block"
-        name="author"
-        type="text">
-    </label>
-    <input
-      type="submit"
-      id="submit-comment"
-      value="Submit your comment">
-  </form>
-</div>
+        type="submit"
+        class="submit-comment"
+        value="Submit your comment">
+    </form>
+  </div>
+{%- endif -%}

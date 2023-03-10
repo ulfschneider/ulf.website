@@ -30,6 +30,10 @@ module.exports = {
         return collection ? collection.filter(utils.isPost) : collection;
     },
 
+    isPost: function (page) {
+        return utils.isPost(page);
+    },
+
     searchAble: function (collection) {
         return collection ? collection.filter(utils.isSearchAble) : collection;
     },

@@ -36,7 +36,7 @@
   input[type="reset"]:disabled,
   button:disabled,
   select:disabled {
-    @apply cursor-not-allowed opacity-50;
+    @apply cursor-not-allowed opacity-75;
   }
 
   @media (hover: hover) {
@@ -66,7 +66,7 @@
   }
 
   form .hint {
-    @apply text-meta leading-tight;
+    @apply text-meta leading-tight font-normal;
   }
 
   input[type="text"],

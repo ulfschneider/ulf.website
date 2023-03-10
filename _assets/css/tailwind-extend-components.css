@@ -245,8 +245,8 @@
     }
   }
 
-  #comment-list article * {
-    @apply m-0;
+  .comment-list article * {
+    @apply no-indent m-0 !important;
   }
 
   @media (min-width: theme(screens.rg)) {

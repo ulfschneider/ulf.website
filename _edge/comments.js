@@ -1,16 +1,18 @@
 import { config } from "https://deno.land/x/dotenv/mod.ts";
-import { Octokit } from "https://cdn.skypack.dev/octokit";
+import { Octokit } from "https://cdn.skypack.dev/octokit?dts";
 import { micromark } from 'https://esm.sh/micromark@3'
-
-const REPO = 'ulf.website.comments'; //repo to check for comments
-const OWNER = 'ulfschneider'; //repo owner
-const LABEL_FILTER = 'website-comments'; //use empty string to ignore label filtering
+import * as ammonia from "https://deno.land/x/ammonia@0.3.1/mod.ts";
 
 let octokit;
 
+const REPO = config().GITHUB_COMMENT_REPO; //repo to check for comments
+const OWNER = config().GITHUB_COMMENT_REPO_OWNER; //repo owner
+const LABEL_FILTER = config().GITHUB_COMMENT_LABEL_FILTER; //use empty string to ignore label filtering
+
+
 async function loginGitHub() {
     // Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
-    const token = config().GITHUB_PAT || Deno.env.get(GITHUB_PAT);
+    const token = config().GITHUB_PAT;
     return new Octokit({ auth: token });
 }
 
@@ -48,7 +50,7 @@ async function determinIssueNumber(processing) {
         //have to load all issues and extract the correct number
         await loadCommentRootIssues(processing);
         for (let issue of processing.issues) {
-            if (issue.title == processing.origUrl.pathname) {
+            if (issue.title == processing.origUrl.hostname + processing.origUrl.pathname) {
                 processing.issueNumber = issue.number;
                 break;
             }
@@ -60,7 +62,7 @@ async function createCommentRootIssue(processing) {
     const { data } = await octokit.rest.issues.create({
         owner: OWNER,
         repo: REPO,
-        title: processing.origUrl.pathname,
+        title: processing.origUrl.hostname + processing.origUrl.pathname,
         labels: [LABEL_FILTER],
         body: `This is a comment root to collect discussions about ${processing.origUrl}`
     });
@@ -128,7 +130,7 @@ function getPrettifiedComments(processing) {
             return {
                 body: parsed.body,
                 htmlBody: micromark(parsed.body),
-                author: parsed.author || comment.user.login,
+                author: ammonia.clean(parsed.author || comment.user.login),
                 isEdited: comment.created_at !== comment.updated_at,
                 createdAt: comment.created_at,
                 updatedAt: comment.updated_at
@@ -186,10 +188,10 @@ export default async (request, context) => {
             }
         }
 
-
         if (!octokit) {
             octokit = await loginGitHub();
         }
+
         await determinIssueNumber(processing);
 
         if (processing.method == 'POST') {
@@ -201,13 +203,13 @@ export default async (request, context) => {
         let prettifiedComments = getPrettifiedComments(processing);
         const now = Date.now();
         console.log(`Loading ${processing.comments.length} comments for ${printRootIssue(processing)} took ${now - start} milliseconds`);
-
+        await ammonia.init();
         return new Response(JSON.stringify(prettifiedComments), {
             status: 200,
             headers: { "content-type": "application/json;charset=UTF-8" }
         });
     } catch (err) {
-        console.error(`Failure in commenting process: ${err}`);
+        console.error(err);
         return new Response(err.message, {
             status: 500
         });
