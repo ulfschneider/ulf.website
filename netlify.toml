@@ -1,18 +1,17 @@
 [build]
-edge_functions = "_edge"
+  edge_functions = "_functions/_edge"
 
 [[edge_functions]]
-path = "/api/search"
-function = "search"
+  path = "/api/suggest"
+  function = "suggest"
 
 [[edge_functions]]
-path = "/api/search-suggest"
-function = "suggest"
+  path = "/api/search"
+  function = "search"
 
 [[edge_functions]]
-path = "/api/comments"
-function = "comments"
-
+  path = "/api/comments"
+  function = "comments"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"

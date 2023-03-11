@@ -132,19 +132,22 @@ function formHandling(commentList) {
 document.addEventListener('DOMContentLoaded', event => {
     let commentList = document.querySelector('.comments .comment-list');
 
-    let observer = new IntersectionObserver(async function () {
-        await loadComments(commentList);
-    });
-    observer.observe(commentList);
+    if (commentList) {
 
-    let authorName = document.querySelector('.comments input[name=author]');
-    if (authorName && localStorage) {
-        authorName.value = localStorage.commentAuthorName ? localStorage.commentAuthorName : '';
-        authorName.addEventListener('blur', event => {
-            localStorage.commentAuthorName = authorName.value;
-        })
+        let observer = new IntersectionObserver(async () => {
+            await loadComments(commentList);
+        });
+        observer.observe(commentList);
+
+        let authorName = document.querySelector('.comments input[name=author]');
+        if (authorName && localStorage) {
+            authorName.value = localStorage.commentAuthorName ? localStorage.commentAuthorName : '';
+            authorName.addEventListener('blur', event => {
+                localStorage.commentAuthorName = authorName.value;
+            })
+        }
+
+        formHandling(commentList);
     }
-
-    formHandling(commentList);
 
 });

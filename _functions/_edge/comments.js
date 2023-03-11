@@ -130,7 +130,7 @@ function getPrettifiedComments(processing) {
             return {
                 body: parsed.body,
                 htmlBody: micromark(parsed.body),
-                author: ammonia.clean(parsed.author || comment.user.login),
+                author: parsed.author || comment.user.login,  //ammonia clean
                 isEdited: comment.created_at !== comment.updated_at,
                 createdAt: comment.created_at,
                 updatedAt: comment.updated_at

@@ -44,7 +44,6 @@ permalink: "{{site.search.url}}"
         excerpt.appendChild(linkToArticle);
         article.appendChild(excerpt);
       }
-
       if (entry.humanDate || (entry.tags.length && ! entry.notags)) {
         let aside = document.createElement('aside');
         aside.classList = `${

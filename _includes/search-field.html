@@ -69,7 +69,7 @@
         try {
           const query = document.querySelector('#search-query').value;
           const combine = document.querySelector('input[name="combine"]:checked').value;
-          let response = await fetch('/api/search-suggest/?query=' + encodeURIComponent(query) + '&combine=' + combine);
+          let response = await fetch('/api/suggest/?query=' + encodeURIComponent(query) + '&combine=' + combine);
           let suggestions = await response.json();
           callback(null, suggestions);
         } catch (error) {
