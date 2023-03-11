@@ -1,5 +1,12 @@
+[functions]
+  directory = "api"
+
 [build]
-  edge_functions = "_functions/_edge"
+  edge_functions = "api/_edge"
+
+[[edge_functions]]
+  path = "/api/dummy"
+  function = "dummy"
 
 [[edge_functions]]
   path = "/api/suggest"
@@ -8,10 +15,6 @@
 [[edge_functions]]
   path = "/api/search"
   function = "search"
-
-[[edge_functions]]
-  path = "/api/comments"
-  function = "comments"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"

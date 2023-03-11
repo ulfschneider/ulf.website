@@ -1,14 +1,12 @@
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 import { Octokit } from "https://cdn.skypack.dev/octokit?dts";
-import { micromark } from 'https://esm.sh/micromark@3'
-import * as ammonia from "https://deno.land/x/ammonia@0.3.1/mod.ts";
+import { micromark } from 'https://esm.sh/micromark@3';
 
 let octokit;
 
 const REPO = config().GITHUB_COMMENT_REPO; //repo to check for comments
 const OWNER = config().GITHUB_COMMENT_REPO_OWNER; //repo owner
 const LABEL_FILTER = config().GITHUB_COMMENT_LABEL_FILTER; //use empty string to ignore label filtering
-
 
 async function loginGitHub() {
     // Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
@@ -130,7 +128,7 @@ function getPrettifiedComments(processing) {
             return {
                 body: parsed.body,
                 htmlBody: micromark(parsed.body),
-                author: parsed.author || comment.user.login,  //ammonia clean
+                author: parsed.author || comment.user.login,
                 isEdited: comment.created_at !== comment.updated_at,
                 createdAt: comment.created_at,
                 updatedAt: comment.updated_at
@@ -155,7 +153,7 @@ export default async (request, context) => {
             origUrl: origUrl,
             issueNumber: searchParams.get('issueNumber'),
             since: searchParams.get('since'),
-            method: request.method,
+            method: request.method
         }
 
 
