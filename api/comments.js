@@ -139,12 +139,13 @@ function getPrettifiedComments(processing) {
         commentList: processing.comments?.map(comment => {
             let parsed = parseCommentBody(comment.body);
             return {
+                id: comment.id,
                 body: parsed.body,
                 htmlBody: sanitizeHtml(mdlib.render(parsed.body)),
                 author: sanitizeHtml(parsed.author || comment.user.login),
                 isEdited: comment.created_at !== comment.updated_at,
                 createdAt: comment.created_at,
-                updatedAt: comment.updated_at
+                updatedAt: comment.updated_at,
             }
         })
     }
@@ -211,7 +212,6 @@ exports.handler = async (event, context) => {
         await loadComments(processing);
 
         let prettifiedComments = getPrettifiedComments(processing);
-
         console.log(`${processing.comments.length} comments for ${printRootIssue(processing)} have been loaded`);
         return {
             statusCode: 200,
