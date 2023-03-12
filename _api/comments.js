@@ -57,6 +57,19 @@ async function loadCommentRootIssues() {
 
 
 async function determinIssueNumber(processing) {
+    if (processing.issueNumber) {
+        try {
+            //verify if the issue number is valid
+            await octokit.rest.issues.get({
+                owner: OWNER,
+                repo: REPO,
+                issue_number: processing.issueNumber
+            });
+        } catch (err) {
+            delete processing.issueNumber;
+        }
+    }
+
     if (!processing.issueNumber && processing.origUrl) {
         //we do not have an issue number and therefore
         //have to load all issues and extract the correct number
