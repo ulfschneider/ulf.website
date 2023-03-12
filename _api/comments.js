@@ -41,8 +41,8 @@ function printRootIssue(processing) {
 }
 
 
-async function loadCommentRootIssues(processing) {
-    processing.issues = [];
+async function loadCommentRootIssues() {
+    let issues = [];
     await octokit.paginate(octokit.rest.issues.listForRepo, {
         owner: OWNER,
         repo: REPO,
@@ -50,8 +50,9 @@ async function loadCommentRootIssues(processing) {
     })
         .then(allIssues => {
             //paginate returns all issues of the repo in an array
-            processing.issues = allIssues;
+            issues = allIssues;
         });
+    return issues;
 }
 
 
@@ -59,7 +60,7 @@ async function determinIssueNumber(processing) {
     if (!processing.issueNumber && processing.origUrl) {
         //we do not have an issue number and therefore
         //have to load all issues and extract the correct number
-        await loadCommentRootIssues(processing);
+        processing.issues = await loadCommentRootIssues();
         for (let issue of processing.issues) {
             if (issue.title == processing.origUrl.hostname + processing.origUrl.pathname) {
                 processing.issueNumber = issue.number;
@@ -149,6 +150,14 @@ function getPrettifiedComments(processing) {
             }
         })
     }
+}
+
+
+exports.loadCommentRootIssues = async () => {
+    if (!octokit) {
+        octokit = await loginGitHub();
+    }
+    return loadCommentRootIssues();
 }
 
 exports.handler = async (event, context) => {

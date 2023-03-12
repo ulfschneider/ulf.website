@@ -1,8 +1,8 @@
 [functions]
-  directory = "api"
+  directory = "_api"
 
 [build]
-  edge_functions = "api/_edge"
+  edge_functions = "_api/_edge"
 
 [[edge_functions]]
   path = "/api/dummy"

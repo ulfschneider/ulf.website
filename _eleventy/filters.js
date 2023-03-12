@@ -4,6 +4,7 @@ const path = require('path');
 const ccd = require('cached-commit-date');
 const utils = require('./utils.js');
 const site = require('../_data/site.js');
+const comments = require('../_data/comments.js');
 
 let colorMap;
 
@@ -271,8 +272,7 @@ module.exports = {
         }
     },
 
-    removeWhatNeedsJS: function (content) {
-        let $ = cheerio.load(content);  //TODO
+    commentRootIssueNumber: async function (item) {
+        return comments.getIssueNumber(item.url);
     }
-
 }

@@ -173,5 +173,6 @@ function addFilters(eleventyConfig) {
     eleventyConfig.addFilter('authorName', filters.authorName);
     eleventyConfig.addFilter('indicateModifiedDate', filters.indicateModifiedDate);
     eleventyConfig.addFilter('modifiedDate', filters.modifiedDate);
+    eleventyConfig.addFilter('commentRootIssueNumber', filters.commentRootIssueNumber);
 }
 

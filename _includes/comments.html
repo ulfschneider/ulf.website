@@ -1,6 +1,6 @@
 {%- if page | isPost -%}
   <div class="comments my-ryt-2xl">
-    <div class="comment-list"></div>
+    <div class="comment-list" data-comment-issue="{{page | commentRootIssueNumber}}"></div>
     <div class="text-red font-bold indicate-load-failure"></div>
     <form class="comment-form" name="comment">
       <label class="my-ryt-lg">

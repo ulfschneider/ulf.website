@@ -40,7 +40,8 @@ async function loadComments(commentList) {
         if (!commentsLoaded) {
             commentList.innerHTML = '';
             const url = new URL(location.href);
-            let response = await fetch('/.netlify/functions/comments/?origUrl=' + url.origin + url.pathname);
+            const issueNumber = commentList.dataset.commentIssue;
+            let response = await fetch('/.netlify/functions/comments/?origUrl=' + url.origin + url.pathname + '&issueNumber=' + issueNumber);
             if (response.ok) {
                 let data = await response.json();
                 commentsLoaded = true;
@@ -95,7 +96,8 @@ function formHandling(commentList) {
                     comment: commentForm.comment.value
                 }
                 const url = new URL(location.href);
-                let response = await fetch('/.netlify/functions/comments/?origUrl=' + url.origin + url.pathname, {
+                const issueNumber = commentList.dataset.commentIssue;
+                let response = await fetch('/.netlify/functions/comments/?origUrl=' + url.origin + url.pathname + '&issueNumber=' + issueNumber, {
                     method: 'POST',
                     headers: {
                         "Content-Type": "application/json"
