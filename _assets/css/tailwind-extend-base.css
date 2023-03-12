@@ -206,7 +206,7 @@
 
   /* img */
   img {
-    @apply object-contain object-left dark:filter dark:brightness-75 dark:contrast-125;
+    @apply object-contain object-left dark:filter dark:brightness-90 dark:contrast-125;
 
     @media (min-width: theme(screens.sm)) {
       max-height: 80vh;
