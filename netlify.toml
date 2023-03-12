@@ -1,23 +1,30 @@
 [functions]
-  directory = "_api"
+directory = "_api"
+
+[[redirects]]
+from = "/api/comments/*"
+to = "/.netlify/functions/comments/:splat"
+status = 200
+
 
 [build]
-  edge_functions = "_api/_edge"
+edge_functions = "_api/_edge"
 
 [[edge_functions]]
-  path = "/api/dummy"
-  function = "dummy"
+path = "/api/dummy"
+function = "dummy"
 
 [[edge_functions]]
-  path = "/api/suggest"
-  function = "suggest"
+path = "/api/suggest"
+function = "suggest"
 
 [[edge_functions]]
-  path = "/api/search"
-  function = "search"
+path = "/api/search"
+function = "search"
+
 
 [[plugins]]
-  package = "@netlify/plugin-lighthouse"
+package = "@netlify/plugin-lighthouse"
 
-  [plugins.inputs]
-    output_path = "lighthouse.html"
+[plugins.inputs]
+output_path = "lighthouse.html"

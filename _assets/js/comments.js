@@ -41,7 +41,7 @@ async function loadComments(commentList) {
             commentList.innerHTML = '';
             const url = new URL(location.href);
             const issueNumber = commentList.dataset.commentIssue;
-            let response = await fetch('/.netlify/functions/comments/?origUrl=' + url.origin + url.pathname + '&issueNumber=' + issueNumber);
+            let response = await fetch('/api/comments/?origUrl=' + url.origin + url.pathname + '&issueNumber=' + issueNumber);
             if (response.ok) {
                 let data = await response.json();
                 commentsLoaded = true;
@@ -97,7 +97,7 @@ function formHandling(commentList) {
                 }
                 const url = new URL(location.href);
                 const issueNumber = commentList.dataset.commentIssue;
-                let response = await fetch('/.netlify/functions/comments/?origUrl=' + url.origin + url.pathname + '&issueNumber=' + issueNumber, {
+                let response = await fetch('/api/comments/?origUrl=' + url.origin + url.pathname + '&issueNumber=' + issueNumber, {
                     method: 'POST',
                     headers: {
                         "Content-Type": "application/json"
