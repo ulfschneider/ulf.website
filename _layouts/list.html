@@ -2,8 +2,13 @@
 layout: default
 nodate: true
 ---
-{%- include "site-tags.html" -%}
-{%- if pagedItems.humanPageNumber == 1 -%}
-  <div class="no-indent">{{ content }}</div>
-{%- endif -%}
-{%- include "post-list.html" -%}
+<div class="rg:heror rg:flex flex-row-reverse gap-ryt-xl align-baseline ">
+  <div class="grow-0 basis-4/12">
+    {%- include "site-tags.html" -%}
+  </div>
+  <div class="grow basis-8/12">
+    {%- if pagedItems.humanPageNumber == 1 -%}{%- endif -%}
+    <div class="no-indent">{{ content }}</div>
+    {%- include "post-list.html" -%}
+  </div>
+</div>

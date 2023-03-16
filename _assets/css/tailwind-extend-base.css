@@ -200,6 +200,9 @@
   img + img {
     @apply my-ryt-lg;
   }
+  p {
+    @apply my-0 indent-0;
+  }
   p + p {
     @apply my-ryt;
   }
@@ -257,7 +260,7 @@
   main > .scroll-table,
   main > table,
   main > pre {
-    @apply rhero;
+    @apply heror;
   }
 
   figure {

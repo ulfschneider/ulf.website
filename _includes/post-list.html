@@ -10,9 +10,16 @@
       <em class="font-mono">{{ pagedItems.tag }}</em>
     {% endif %}
   </div>
+{%- elsif -%}
+  <div>
+    All posts
+    {% if pagedItems.tag != "" %}tagged
+      <em class="font-mono">{{ pagedItems.tag }}</em>
+    {% endif %}
+  </div>
 {%- endif -%}
 
-<div class="mt-ryt mb-ryt-xl">
+<div>
   {%- for p in livePosts -%}
     {%- assign currentDate = p.date | humanDate -%}
     {%- if limit == 1 and forloop.index > limit and currentDate != referenceDate -%}

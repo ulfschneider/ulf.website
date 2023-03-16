@@ -4,13 +4,13 @@ nodate: true
 permalink: "{{site.search.url}}"
 ---
 
-<div class="my-ryt-xl sm:my-ryt-2xl">
-  <noscript>
-    <div class="max-w-rg">You cannot perform a search because JavaScript is disabled for your browser. Please consider enabling JavaScript.</div>
-  </noscript>
-  {% include "search-field.html", autofocus: "autofocus" %}
-</div>
-<div id="search-results"></div>
+
+<noscript>
+  <div class="max-w-rg">You cannot perform a search because JavaScript is disabled for your browser. Please consider enabling JavaScript.</div>
+</noscript>
+{% include "search-field.html", autofocus: "autofocus" %}
+
+<div class="my-ryt-xl" id="search-results"></div>
 
 <script>
   function removeChildren(parent) {

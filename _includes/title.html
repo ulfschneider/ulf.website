@@ -11,7 +11,7 @@
   {%- assign isBlog = true -%}
 {%- endif -%}
 {%- if hasTitle == true or hasTagIntro == true or isBlog == true or refer or author -%}
-  <header class="my-ryt-xl sm:my-ryt-2xl">
+  <header class="my-ryt-xl">
     {%- if nodate == nil -%}
       <aside>
         {% include "date-tags.html" %}

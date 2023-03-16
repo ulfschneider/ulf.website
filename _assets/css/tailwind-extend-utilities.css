@@ -11,18 +11,14 @@
   }
 
   .indent:not(.indent .no-indent) {
-    p {
-      @apply my-0;
-    }
     p + p {
       @apply my-0 indent-ryt-lg;
     }
   }
 
   .no-indent:not(.no-indent .indent) {
-    p,
     p + p {
-      @apply my-ryt indent-0;
+      @apply mt-ryt indent-0;
     }
   }
 
@@ -38,5 +34,25 @@
 
   .split > * {
     @apply m-0;
+  }
+
+  @media (min-width: theme(screens.rg)) {
+    .hero,
+    .bleed {
+      margin-left: var(--bleed);
+      margin-right: var(--bleed);
+
+      img {
+        @apply object-center mx-auto;
+      }
+    }
+    .herol,
+    .bleedl {
+      margin-left: var(--bleed);
+    }
+    .heror,
+    .bleedr {
+      margin-right: var(--bleed);
+    }
   }
 }
