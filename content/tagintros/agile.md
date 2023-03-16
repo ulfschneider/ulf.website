@@ -8,4 +8,3 @@ Articles and notes about my experiences within the agile movement and the agile 
 - [The art in our work](/2012-08-31-art-in-work/)
 - [Self-organization](/2013-03-26-self-organization/)
 
-All posts about agile, newest first:

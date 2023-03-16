@@ -3,21 +3,17 @@
 {%- else -%}
   {%- assign livePosts = collections.liveContent | post -%}
 {%- endif -%}
-{%- if pagedItems.humanPageNumber > 1 or content == "" -%}
-  <div>
+
+<div class="my-ryt">
+  {% if pagedItems.pageCount > 1 %}
     Page {{ pagedItems.humanPageNumber }} / {{ pagedItems.pageCount }}
-    {% if pagedItems.tag != "" %}tagged
-      <em class="font-mono">{{ pagedItems.tag }}</em>
-    {% endif %}
-  </div>
-{%- elsif -%}
-  <div>
+  {% else %}
     All posts
-    {% if pagedItems.tag != "" %}tagged
-      <em class="font-mono">{{ pagedItems.tag }}</em>
-    {% endif %}
-  </div>
-{%- endif -%}
+  {% endif %}
+  {% if pagedItems.tag != "" %}tagged
+    <em class="font-mono">{{ pagedItems.tag }}</em>
+  {% endif %}
+</div>
 
 <div>
   {%- for p in livePosts -%}
