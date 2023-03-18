@@ -9,7 +9,10 @@
       <ul class="my-0 -mx-ryt-xs reset">
         {%- if tag == "" -%}
           <li class="inline-block m-ryt-xs">
-            <span class="tag current" aria-current="page">all posts</span>
+            <a
+              class="tag current"
+              aria-current="page"
+              href="{{site.blog}}">all posts</a>
           </li>
         {%- else -%}
           <li class="inline-block m-ryt-xs">
@@ -24,7 +27,10 @@
               </li>
             {%- else -%}
               <li class="inline-block m-ryt-xs">
-                <span class="tag current" aria-current="page">{{ site.starTagSymbol }}</span>
+                <a
+                  class="tag current"
+                  aria-current="page"
+                  href="{{siteTag | tagUrl}}">{{ site.starTagSymbol }}</a>
               </li>
             {%- endif -%}
           {%- endif -%}
@@ -37,7 +43,10 @@
               </li>
             {%- else -%}
               <li class="inline-block m-ryt-xs">
-                <span class="tag current" aria-current="page">{{ siteTag }}</span>
+                <a
+                  class="tag current"
+                  aria-current="page"
+                  href="{{siteTag | tagUrl}}">{{ siteTag }}</a>
               </li>
             {%- endif -%}
           {%- endif -%}
