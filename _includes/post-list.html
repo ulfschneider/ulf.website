@@ -4,14 +4,16 @@
   {%- assign livePosts = collections.liveContent | post -%}
 {%- endif -%}
 
-<div class="my-ryt">
-  {% if pagedItems.pageCount > 1 %}
-    Page {{ pagedItems.humanPageNumber }} / {{ pagedItems.pageCount }}
-  {% else %}
-    All posts
-  {% endif %}
-  {% if pagedItems.tag != "" %}tagged
-    <em class="font-mono">{{ pagedItems.tag }}</em>
+<div>
+  {% if limit == "" or limit == nil %}
+    {% if pagedItems.pageCount > 1 %}
+      Page {{ pagedItems.humanPageNumber }} / {{ pagedItems.pageCount }}
+    {% else %}
+      All posts
+    {% endif %}
+    {% if pagedItems.tag != "" and pagedItems.tag != nil %}tagged
+      <em class="font-mono">{{ pagedItems.tag }}</em>
+    {% endif %}
   {% endif %}
 </div>
 
@@ -47,5 +49,5 @@
       </aside>
     </article>
   {%- endfor -%}
-  {%- include "pagination-nav.html" -%}
 </div>
+{%- include "pagination-nav.html" -%}

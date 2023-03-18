@@ -1,0 +1,72 @@
+{%- if pagedItems.pageCount > 1 -%}
+  <nav class="flex flex-row justify-between gap-ryt-xl mt-ryt-xl max-w-xs">
+    {%- if pagedItems.newer != "" and pagedItems.newer != nil -%}
+      <div>
+        <div class="whitespace-nowrap">
+          <strong>
+            <a
+              id="nav-newer"
+              class="text-primary"
+              href="{{pagedItems.newer}}">
+              {%- if site.navNewer.label -%}
+                {{ site.navNewer.label }}
+                {%- else -%}Newer posts{%- endif -%}
+            </a>
+          </strong>
+          {%- if site.navNewer.kbd -%}
+            <kbd class="text-sm">{{ site.navNewer.kbd }}</kbd>
+          {%- endif -%}
+        </div>
+        <strong>
+          <a
+            id="nav-newest"
+            class="text-sm text-primary block mt-ryt-lg"
+            href="{{pagedItems.newest}}">
+            {%- if site.navNewest.label -%}
+              {{ site.navNewest.label }}
+              {%- else -%}Newest{%- endif -%}
+          </a>
+        </strong>
+      </div>
+    {%- endif -%}
+    {%- if pagedItems.older != "" and pagedItems.older != nil -%}
+      <div>
+        <div class="whitespace-nowrap">
+          <strong>
+            <a
+              id="nav-older"
+              class="text-primary"
+              href="{{pagedItems.older}}">
+              {%- if site.navOlder.label -%}
+                {{ site.navOlder.label }}
+                {%- else -%}Older posts{%- endif -%}
+            </a>
+          </strong>
+          {%- if site.navOlder.kbd -%}
+            <kbd class="text-sm">{{ site.navOlder.kbd }}</kbd>
+          {%- endif -%}
+        </div>
+
+        <strong>
+          <a
+            id="nav-oldest"
+            class="text-sm text-primary block mt-ryt-lg"
+            href="{{pagedItems.oldest}}">
+            {%- if site.navOldest.label -%}
+              {{ site.navOldest.label }}
+              {%- else -%}Oldest{%- endif -%}
+          </a>
+        </strong>
+      </div>
+    {%- endif -%}
+  </nav>
+{%- elsif pagedItems == nil -%}
+  <strong>
+    <a
+      id="nav-older"
+      class="text-primary inline-block mt-ryt-lg mb-0"
+      href="{{site.blog}}">
+      All posts
+    </a>
+  </strong>
+{%- endif -%}

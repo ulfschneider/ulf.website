@@ -46,7 +46,7 @@ module.exports = {
             profile: "https://fosstodon.org/@ulfschneider"
         }
     },
-    paginationSize: 7,
+    paginationSize: 5,
     starTag: "star",
     starTagSymbol: "★",
     mainnav: [{
