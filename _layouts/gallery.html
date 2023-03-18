@@ -2,10 +2,12 @@
 layout: default
 nodate: true
 ---
-{%- include "site-tags.html" -%}
 <div class="no-indent">{{ content }}</div>
 <div id="image-container"></div>
 <button id="load-more">Load more images</button>
+<div class="mt-ryt-xl">
+  {%- include "site-tags.html" -%}
+</div>
 
 {%- if tag != nil -%}
   {% assign imageData = collections[tag] | live | post | reverse | firstImage %}
