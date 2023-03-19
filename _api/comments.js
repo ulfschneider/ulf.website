@@ -97,7 +97,12 @@ async function createCommentRootIssue(processing) {
 }
 
 function formatComment(processing) {
-    return `---\nauthor: ${processing.comment.author}\n---\n${processing.comment.body}`;
+    if (processing.comment.author) {
+        return `---\nauthor: ${processing.comment.author}\n---\n${processing.comment.body}`;
+    } else {
+        return processing.comment.body;
+    }
+
 }
 
 async function createComment(processing) {
