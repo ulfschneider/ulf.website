@@ -90,6 +90,7 @@
     },
     "dependencies": {
         "@netlify/functions": "^1.4.0",
+        "front-matter": "^4.0.2",
         "sanitize-html": "^2.10.0"
     }
 }

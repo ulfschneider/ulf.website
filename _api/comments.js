@@ -1,5 +1,5 @@
 const sanitizeHtml = require('sanitize-html');
-
+const frontMatter = require('front-matter');
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -97,21 +97,7 @@ async function createCommentRootIssue(processing) {
 }
 
 function formatComment(processing) {
-    return `by ${processing.comment.author}\n--\n\n${processing.comment.body}`;
-}
-
-function parseCommentBody(commentBody) {
-
-    let author = commentBody.match(/^\s*by\s+(.*?)\s*--\s*/si);
-    let body = commentBody.match(/\s*--\s*(.*?)\s*$/si);
-
-
-    let parsed = {
-        author: author ? author[1] : '',
-        body: body ? body[1] : commentBody
-    };
-
-    return parsed;
+    return `---\nauthor: ${processing.comment.author}\n---\n${processing.comment.body}`;
 }
 
 async function createComment(processing) {
@@ -151,12 +137,12 @@ function getPrettifiedComments(processing) {
     return {
         issueNumber: processing.issueNumber,
         commentList: processing.comments?.map(comment => {
-            let parsed = parseCommentBody(comment.body);
+            let parsed = frontMatter(comment.body);
             return {
                 id: comment.id,
                 body: parsed.body,
                 htmlBody: sanitizeHtml(mdlib.render(parsed.body)),
-                author: sanitizeHtml(parsed.author || comment.user.login),
+                author: sanitizeHtml(parsed.attributes.author || comment.user.login),
                 isEdited: comment.created_at !== comment.updated_at,
                 createdAt: comment.created_at,
                 updatedAt: comment.updated_at,
