@@ -52,12 +52,12 @@
 
   /* font-size*/
   html {
-    @apply bg-light dark:bg-light-dark;
+    @apply dark:bg-light-dark;
   }
 
   /* base colors */
   body {
-    @apply text-base text-write-dark bg-back-light dark:text-write-light dark:bg-back-dark;
+    @apply text-base text-write-dark dark:text-write-light dark:bg-back-dark;
   }
 
   /* focus */
