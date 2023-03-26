@@ -83,14 +83,17 @@
   h1,
   .h1 {
     @apply font-display font-bold text-3xl sm:text-4xl mt-ryt-2xl mb-ryt-xl tracking-tight break-after-avoid;
+    text-wrap: balance;
   }
   h2,
   .h2 {
     @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
+    text-wrap: balance;
   }
   h3,
   .h3 {
     @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
+    text-wrap: balance;
   }
   h4,
   h5,
@@ -100,10 +103,12 @@
   .h5,
   .h6 {
     @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
+    text-wrap: balance;
   }
 
   details > summary {
     @apply hover:text-link dark:hover:text-link-light;
+    text-wrap: balance;
   }
 
   /* typography */
@@ -265,6 +270,7 @@
 
   figure {
     figcaption {
+      text-wrap: balance;
       @apply max-w-rg my-ryt-sm font-mono text-sm;
     }
   }
@@ -287,13 +293,14 @@
     --quote-size: 4em;
     --quote-box-height: 0.5em;
     padding-left: calc(theme(spacing.ryt-lg) - theme(spacing.2));
+    text-wrap: balance;
     @apply border-l-2 border-l-current;
   }
 
   blockquote > header,
   blockquote > footer {
     @apply my-ryt-sm font-mono text-sm;
-
+    text-wrap: balance;
     &::before {
       content: "—";
     }
