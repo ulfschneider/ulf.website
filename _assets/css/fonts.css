@@ -86,3 +86,11 @@
     url("{{base}}fonts/ibm-plex-sans-latin-700.woff2") format("woff2");
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("{{base}}fonts/onest-regular.woff") format("woff");
+  font-display: swap;
+}
