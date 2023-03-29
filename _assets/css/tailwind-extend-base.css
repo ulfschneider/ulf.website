@@ -82,17 +82,17 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display font-bold text-3xl sm:text-4xl mt-ryt-2xl mb-ryt-xl tracking-tight break-after-avoid;
+    @apply font-display font-bold text-3xl sm:text-4xl mt-ryt-2xl mb-ryt-xl break-after-avoid;
     text-wrap: balance;
   }
   h2,
   .h2 {
-    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
+    @apply font-body font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
     text-wrap: balance;
   }
   h3,
   .h3 {
-    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
+    @apply font-body font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
     text-wrap: balance;
   }
   h4,
@@ -102,7 +102,7 @@
   .h4,
   .h5,
   .h6 {
-    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
+    @apply font-body font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
     text-wrap: balance;
   }
 
