@@ -14,4 +14,5 @@ Zach´s article is another piece in a series of recent writings by different peo
 - Better empty cache performance
 - Energy-efficiency
 
-Read to the end to get links to similar articles by Manuel Matuzovic, Jason Godesky ([<cite>When JavaScript Fails</cite>](https://scribe.rip/@jason.godesky/when-javascript-fails-52eef47e90db), great!), and several articles by Jake Archibald.
+Read to the end to get links to similar articles by Manuel Matuzovic, Jason Godesky ([<cite>When JavaScript Fails</cite>](https://scribe.rip/@jason.godesky/when-javascript-fails-52eef47e90db), great!), and several articles by Jake Archibald (among is a [tweet](https://twitter.com/jaffathecake/status/1433317536754458628) showing GitHub opening faster when used as a Multi Page App in a new tab compared to following their Single Page App link).
+

@@ -132,5 +132,21 @@
       "profile_image_url_https": "https://pbs.twimg.com/profile_images/1550383732355485698/X7twqf3Z_normal.jpg"
     },
     "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/adambsilver\"><img src=\"https://pbs.twimg.com/profile_images/1550383732355485698/X7twqf3Z_normal.jpg\" alt=\"Avatar for adambsilver\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/adambsilver\">Adam Silver </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/adambsilver\">@adambsilver</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/adambsilver/status/1618156137555148802\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\">🔥 Designing form fields? Avoid instructions like ‘Enter...’, ‘Select...’, ‘Tell us about...’ because it’s wordier and usually unnecessary.L</p><div class=\"tweet-images\"><img alt=\"Image from Tweet\" src=\"https://pbs.twimg.com/amplify_video_thumb/1618156073386446850/img/v4veaPaEQvuxoL_m.jpg\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1618156137555148802\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">29 </span></a><a class=\"tweet-date\" title=\"Time Posted: Jan 25, 2023 07:57:41 (UTC)\" href=\"https://twitter.com/adambsilver/status/1618156137555148802\">08:57 AM · Jan 25, 2023</a></div></blockquote>"
+  },
+  "1433317536754458628": {
+    "id_str": "1433317536754458628",
+    "htmlText": "<a href=\"https://twitter.com/Rich_Harris\">@Rich_Harris</a> <a href=\"https://twitter.com/BenLesh\">@BenLesh</a> <a href=\"https://twitter.com/AdamRackis\">@AdamRackis</a> <a href=\"https://youtu.be/4zG0AZRZD6Q\">youtu.be/4zG0AZRZD6Q</a> - here's a real world case where I get a better experience loading a github page in a new tab (MPA) rather than following their in-page link (SPA).",
+    "images": [],
+    "favorite_count": 27,
+    "created_at": {
+      "display": "08:35 AM · Sep 2, 2021",
+      "meta": "Sep 2, 2021 06:35:05 (UTC)"
+    },
+    "user": {
+      "name": "Jake Archibald",
+      "screen_name": "jaffathecake",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1695239906/me_normal.jpg"
+    },
+    "html": "<blockquote class=\"tweet-card\"><div class=\"tweet-header\"><a class=\"tweet-profile\" href=\"https://twitter.com/jaffathecake\"><img src=\"https://pbs.twimg.com/profile_images/1695239906/me_normal.jpg\" alt=\"Avatar for jaffathecake\"></a><div class=\"tweet-author\"><a class=\"tweet-author-name\" href=\"https://twitter.com/jaffathecake\">Jake Archibald </a><a class=\"tweet-author-handle\" href=\"https://twitter.com/jaffathecake\">@jaffathecake</a></div><a class=\"tweet-bird\" href=\"https://twitter.com/jaffathecake/status/1433317536754458628\"><div class=\"tweet-bird-icon\" role=\"presentation\" aria-label=\"View on Twitter\" title=\"View on Twitter\"></div></a></div><p class=\"tweet-body\"><a href=\"https://twitter.com/Rich_Harris\">@Rich_Harris</a> <a href=\"https://twitter.com/BenLesh\">@BenLesh</a> <a href=\"https://twitter.com/AdamRackis\">@AdamRackis</a> <a href=\"https://youtu.be/4zG0AZRZD6Q\">youtu.be/4zG0AZRZD6Q</a> - here's a real world case where I get a better experience loading a github page in a new tab (MPA) rather than following their in-page link (SPA).</p><div class=\"tweet-images\"></div><div class=\"tweet-footer\"><a class=\"tweet-like\" href=\"https://twitter.com/intent/like?tweet_id=1433317536754458628\"><div class=\"tweet-like-icon\" aria-label=\"Like\" title=\"Like\" role=\"img\"></div><span class=\"tweet-like-count\">27 </span></a><a class=\"tweet-date\" title=\"Time Posted: Sep 2, 2021 06:35:05 (UTC)\" href=\"https://twitter.com/jaffathecake/status/1433317536754458628\">08:35 AM · Sep 2, 2021</a></div></blockquote>"
   }
 }
