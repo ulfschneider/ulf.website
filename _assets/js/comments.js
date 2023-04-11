@@ -1,8 +1,13 @@
 var commentsLoaded = false;
 
 function printComments(commentList, data) {
-    if (data && data.commentList && data.commentList.length) {
-        commentList.innerHTML = '<h2>Comments</h2>';
+    let indicateLoadFailure = document.querySelector('.comments .indicate-load-failure');
+    if (indicateLoadFailure) {
+        indicateLoadFailure.innerHTML = '';
+    }
+
+    if (data && data.commentList) {
+        commentList.innerHTML = '';
         let dateFormat = new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'short', day: '2-digit', hour: 'numeric', minute: 'numeric' });
 
         for (let comment of data.commentList) {
@@ -35,7 +40,7 @@ function printComments(commentList, data) {
 }
 
 async function loadComments(commentList) {
-    let indicateLoadFailure = document.querySelector('.comments .indicate-load-failure');
+
     try {
         if (!commentsLoaded) {
             commentList.innerHTML = '';
@@ -45,10 +50,8 @@ async function loadComments(commentList) {
             if (response.ok) {
                 let data = await response.json();
                 commentsLoaded = true;
-                if (indicateLoadFailure) {
-                    indicateLoadFailure.innerHTML = '';
-                }
                 printComments(commentList, data);
+                return data;
             } else {
                 throw new Error(response.status + ' ' + response.statusText);
             }
@@ -137,7 +140,21 @@ document.addEventListener('DOMContentLoaded', event => {
     if (commentList) {
 
         let observer = new IntersectionObserver(async () => {
-            await loadComments(commentList);
+            let data = await loadComments(commentList);
+
+            if (data && data.commentList) {
+                let count = data.commentList.length;
+                let commentCounters = document.querySelectorAll('.comments .comment-count');
+                for (let counter of commentCounters) {
+                    if (count == 0) {
+                        counter.innerHTML = 'Comments';
+                    } else if (count == 1) {
+                        counter.innerHTML = 'One comment';
+                    } else {
+                        counter.innerHTML = `${count} comments`;
+                    }
+                }
+            }
         });
         observer.observe(commentList);
 
