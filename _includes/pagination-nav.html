@@ -1,32 +1,34 @@
 {%- if pagedItems.pageCount > 1 -%}
   <nav class="flex flex-row gap-ryt-xl max-w-xs mt-ryt-lg text-sm">
     {%- if pagedItems.newer != "" and pagedItems.newer != nil -%}
-      <div>
-        <div class="whitespace-nowrap">
-          <a id="nav-newer" href="{{pagedItems.newer}}">
-            {%- if site.navNewer.label -%}
-              {{ site.navNewer.label }}
-              {%- else -%}Newer posts{%- endif -%}
-          </a>
-          {% if site.navNewer.kbd %}
-            <kbd class="text-sm">{{ site.navNewer.kbd }}</kbd>
-          {% endif %}
-        </div>
-      </div>
+      <a
+        id="nav-newer"
+        class="whitespace-nowrap block no-underline"
+        href="{{pagedItems.newer}}">
+        <span class="underline">
+          {%- if site.navNewer.label -%}
+            {{ site.navNewer.label }}
+            {%- else -%}Newer posts{%- endif -%}
+        </span>
+        {% if site.navNewer.kbd %}
+          <kbd class="text-sm">{{ site.navNewer.kbd }}</kbd>
+        {% endif %}
+      </a>
     {%- endif -%}
     {%- if pagedItems.older != "" and pagedItems.older != nil -%}
-      <div>
-        <div class="whitespace-nowrap">
-          <a id="nav-older" href="{{pagedItems.older}}">
-            {%- if site.navOlder.label -%}
-              {{ site.navOlder.label }}
-              {%- else -%}Older posts{%- endif -%}
-          </a>
-          {% if site.navOlder.kbd %}
-            <kbd class="text-sm">{{ site.navOlder.kbd }}</kbd>
-          {% endif %}
-        </div>
-      </div>
+      <a
+        id="nav-older"
+        class="whitespace-nowrap no-underline block"
+        href="{{pagedItems.older}}">
+        <span class="underline">
+          {%- if site.navOlder.label -%}
+            {{ site.navOlder.label }}
+            {%- else -%}Older posts{%- endif -%}
+        </span>
+        {% if site.navOlder.kbd %}
+          <kbd class="text-sm">{{ site.navOlder.kbd }}</kbd>
+        {% endif %}
+      </a>
     {%- endif -%}
   </nav>
 {%- elsif pagedItems == nil -%}
