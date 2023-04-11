@@ -1,5 +1,6 @@
 ---
-title: Server-side fulltext search with 11ty, MiniSearch, and Netlify edge functions
+title: Edge searching a Jamstack site
+abstract: Server-side fulltext search with 11ty, MiniSearch, and Netlify edge functions
 tags: code
 ---
 [[toc]]
