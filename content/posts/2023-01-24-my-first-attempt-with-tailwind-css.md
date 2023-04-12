@@ -283,7 +283,7 @@ Following this approach, I think, the reusability of the CSS not only makes you 
 ## What might be a problem with Tailwind
 
 - I think you need to have a proper understanding of CSS before using Tailwind. 
-- I find myself often googling for how to exactly do a thing with Tailwind, when I already know how I would do it with pure CSS, because the naming of the Tailwind utility classes is sometimes every-so-slightly different. It´s not a real issue for me, and it is quick. Typically your first search hit directly brings you to the correct page of the Tailwind documentation. However, I understand it can irritate, or make the handling your styles initially more difficult.
+- I find myself often googling for how to exactly do a thing with Tailwind, when I already know how I would do it with pure CSS, because the naming of the Tailwind utility classes is sometimes ever-so-slightly different. It´s not a real issue for me, and it is quick. Typically your first search hit directly brings you to the correct page of the Tailwind documentation. However, I understand it can irritate, or make the handling your styles initially more difficult.
 - It´s better to have a componentization concept for your HTML, otherwise you might duplicate combinations of your utility first classes into several locations in your HTML, which can become difficult to maintain.
 - Once you have Tailwind in your system, at some point it might be difficult to move away from it.
 
