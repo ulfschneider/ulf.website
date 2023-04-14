@@ -2,15 +2,15 @@
 title: My first attempt with Tailwind CSS
 tags: [code, css]
 ---
-During the recent weeks I switched the CSS for *{{site.hostname}}* to [Tailwind CSS](https://tailwindcss.com). One of the key concepts of Tailwind is the *utility-first* approach for CSS classes. I think utility classes are not invented by Tailwind. Years ago, tools like [Tachyons](http://tachyons.io) were already onto it. The difference of Tailwind is, in my view, the configuration options and the ease of use have been brought to a new level, which can make you very quick. 
+During the recent weeks I switched the CSS for {{site.hostname}} to [Tailwind CSS](https://tailwindcss.com). One of the key concepts of Tailwind is the *utility-first* approach for CSS classes. I think utility classes are not invented by Tailwind. Years ago tools like [Tachyons](http://tachyons.io) were already onto it. The difference of Tailwind is, in my view, the configuration options and the ease of use have been brought to a new level, which can make you very productive. 
 
-Also, Tailwind is not *only* utility-first. You can have CSS component classes that go beyond utility-first. You build them by reusing utility classes, injecting them into your component class with the `@apply` keyword. The concept makes you write less CSS, that is more consistent. The layers for extending the system, `@layer base`, `@layer components`, and `@layer utilities`, as well as the `tailwind-config.js` file, provide a skeleton that makes sense to me and is easy to build upon. I know Tailwind is polarizing people, but I can say I enjoy working with Tailwind.
+Also, Tailwind is not limited to the utility-first approach. You can have CSS component classes that go beyond utility-first. You can reuse utility classes by injecting them into your component class with the `@apply` keyword. I found the concept makes you write less and more consistent CSS. The layers for extending the system, `@layer base`, `@layer components`, and `@layer utilities`, as well as the `tailwind-config.js` file, provide a skeleton that makes sense to me and is easy to build upon. I know Tailwind is polarizing people, but I enjoy working with Tailwind.
 
 [[toc]]
 
 ## Utility CSS classes
 
-Utility classes mean *self-descriptive, single-purpose CSS classes*, like for: 
+Utility classes are *self-descriptive, single-purpose CSS classes*, like for: 
 
 - Text sizes, colors, and weights
 - Border colors, widths, and positions
@@ -19,7 +19,7 @@ Utility classes mean *self-descriptive, single-purpose CSS classes*, like for:
 - Filters
 - Padding, width, and margin helpers
 
-Look at the following example: 
+Given the following example: 
 
 ```html
 <p class="px-ryt-lg py-ryt">
@@ -27,7 +27,7 @@ Here is my paragraph, it has padding on all sides.
 </p>
 ```
 
-Read the two CSS class names of the example as:
+The two CSS class names of the example have the meaning:
 
 `px-ryt-lg`
 : Padding for the x-axis (left padding and right padding) with a large horizontal rhythm.
@@ -97,7 +97,7 @@ Below is an example showing how the above utility classes can be implemented wit
 
 ## Adjusting Tailwind
 
-The thing with utility-first CSS frameworks, like Tachyons or Tailwind, is, you do not have to write the utility classes by yourself. The framework has them already predefined. Tailwind has a very nice mechanism with the `tailwind-config.js` file, to quickly adapt the system to your needs. You can define your screen sizes (`400px`, `600px`, …) and the variant prefixes (`xs`, `sm`, …) to address the screen sizes in your code, like follows:
+With utility-first CSS frameworks, like Tachyons or Tailwind, you do not have to write the utility classes by yourself. The framework has them already predefined. Tailwind has a very nice mechanism with the `tailwind-config.js` file to quickly adapt the system to your needs. You can define your screen sizes (`400px`, `600px`, …) and the variant prefixes (`xs`, `sm`, …) to address the screen sizes in your code, like follows:
 
 ```js
 //tailwind-config.js
