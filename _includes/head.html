@@ -86,11 +86,15 @@ rel="alternate"
 {%- if site.ownership.mastodon.profile -%}
   <link rel="me" href="{{site.ownership.mastodon.profile}}">
 {%- endif -%}
+<!-- GitHub -->
+{%- if site.ownership.github.profile -%}
+  <link rel="me" href="{{site.ownership.github.profile}}">
+{%- endif -%}
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
-{%- if site.ownership.twitter -%}
-  <meta name="twitter:site" content="{{site.ownership.twitter}}">
-  <meta name="twitter:creator" content="{{site.ownership.twitter}}">
+{%- if site.ownership.twitter.user -%}
+  <meta name="twitter:site" content="{{site.ownership.twitter.user}}">
+  <meta name="twitter:creator" content="{{site.ownership.twitter.user}}">
 {%- endif -%}
 {%- if firstImage.src -%}
   <meta property="twitter:image:src" content="{{site.origin}}{{firstImage.src}}">
