@@ -1,8 +1,11 @@
-const fs = require('fs');
+const dotenv = require('dotenv');
+dotenv.config();
 
+const fs = require('fs');
 const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const pluginEmbedTweet = require('eleventy-plugin-embed-tweet');
+const embedTweets = require('eleventy-plugin-embed-tweet');
+const webmentions = require('eleventy-plugin-webmentions');
 const site = require('./_data/site.js');
 const utils = require('./_eleventy/utils.js');
 const filters = require('./_eleventy/filters.js');
@@ -36,10 +39,15 @@ module.exports = function (eleventyConfig) {
         },
         codeAttributes: {}
     });
-    eleventyConfig.addPlugin(pluginEmbedTweet, {
+    eleventyConfig.addPlugin(embedTweets, {
         cacheDirectory: '_tweets', /* Cache tweets in the _tweets folder */
         useInlineStyles: true, /*use the default styling*/
         autoEmbed: true /*allow to embed a tweet by writing the URL within a single line in your Markdown */
+    });
+    eleventyConfig.addPlugin(webmentions, {
+        domain: site.domain,
+        token: process.env.WEBMENTION_PAT,
+        cacheDirectory: '_webmentions'
     });
 
     return {

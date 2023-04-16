@@ -1,0 +1,29 @@
+{%- if site.allowWebmentions == true -%}
+  {%- if page | isPost -%}
+    <details class="webmentions my-ryt-xl">
+      <summary>
+        <strong class="webmention-count">Webmentions</strong>
+      </summary>
+      <div class="webmention-list" data-comment-issue="{{page | commentRootIssueNumber}}"></div>
+      <form
+        class="webmention-form"
+        name="webmention"
+        action="https://webmention.io/{{site.domain}}/webmention"
+        method="post">
+        <label class="my-ryt-lg">
+          Have you written a response to this? Let me know the URL:
+          <input
+            required
+            class="block"
+            name="webmention"
+            type="url">
+        </label>
+        <div class="text-red font-bold indicate-submit-failure"></div>
+        <input
+          type="submit"
+          class="submit-comment"
+          value="Send webmention">
+      </form>
+    </details>
+  {%- endif -%}
+{%- endif -%}

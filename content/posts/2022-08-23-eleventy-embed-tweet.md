@@ -50,7 +50,7 @@ Of course, that´s not new. Since the days of the [CSS Zen Garden](http://www.cs
 Kyle´s plugin comes with a default tweet style which can be deactivated in the plugin options with the `useInlineStyles: false` setting.
 
 ```js
-eleventyConfig.addPlugin(pluginEmbedTweet, {
+eleventyConfig.addPlugin(embedTweets, {
       cacheDirectory: '_tweets', /* Cache tweets in the _tweets folder */
       useInlineStyles: false, /*use your own CSS styles*/
       autoEmbed: true /*allow to embed a tweet by writing the URL within a single line in your Markdown */
