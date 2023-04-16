@@ -10,7 +10,7 @@ async function loadCommentRootIssueMap() {
     if (issueMap) {
         return issueMap;
     }
-    console.log('Start loading comment root issues');
+    console.log('Loading comment root issues');
     let issues = await comments.loadCommentRootIssues();
     issueMap = new Map();
     for (let issue of issues) {
@@ -27,16 +27,32 @@ function sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
+async function getIssueMap() {
+    //wait until the issueMap is loaded!
+    while (!issueMap) {
+        await sleep(500);
+    }
+    return issueMap;
+}
+
+async function getIssueNumber(path) {
+    let issueMap = await getIssueMap();
+    const url = new URL(path, process.env.ENVIRONMENT == 'DEV' ? 'http://localhost' : site.origin);
+    const key = url.hostname + url.pathname;
+    const issue = issueMap.get(key);
+    return issue ? issue.number : undefined;
+}
+
 
 module.exports = {
-    getIssueNumber: async (path) => {
-        //wait until the issueMap is loaded!
-        while (!issueMap) {
-            await sleep(500);
+    getCommentRootIssueNumber: async (path) => {
+        return getIssueNumber(path);
+    },
+    getComments: async (path) => {
+        let issueNumber = await getIssueNumber(path);
+        if (issueNumber) {
+            return comments.loadCommentsForIssue(issueNumber);
         }
-        const url = new URL(path, process.env.ENVIRONMENT == 'DEV' ? 'http://localhost' : site.origin);
-        const key = url.hostname + url.pathname;
-        const issue = issueMap.get(key);
-        return issue ? issue.number : undefined;
+        return {};
     }
 } 

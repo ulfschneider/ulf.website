@@ -164,6 +164,19 @@ exports.loadCommentRootIssues = async () => {
     return loadCommentRootIssues();
 }
 
+exports.loadCommentsForIssue = async (issueNumber) => {
+    if (!octokit) {
+        octokit = await loginGitHub();
+    }
+    let processing = {
+        issueNumber: issueNumber
+    }
+    await loadComments(processing);
+    return getPrettifiedComments(processing);
+}
+
+
+
 exports.handler = async (event, context) => {
     try {
         let queryStringParameters = event.queryStringParameters;

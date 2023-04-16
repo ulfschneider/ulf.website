@@ -1,5 +1,4 @@
 const MiniSearch = require('minisearch');
-const cheerio = require('cheerio');
 const path = require('path');
 const ccd = require('cached-commit-date');
 const utils = require('./utils.js');
@@ -273,6 +272,12 @@ module.exports = {
     },
 
     commentRootIssueNumber: async function (item) {
-        return comments.getIssueNumber(item.url);
+        return comments.getCommentRootIssueNumber(item.url);
+    },
+
+    comments: async function (item) {
+        return comments.getComments(item.url);
     }
+
+
 }
