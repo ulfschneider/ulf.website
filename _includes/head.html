@@ -82,11 +82,10 @@ rel="alternate"
   <meta property="og:image" content="{{site.origin}}{{firstImage.src}}">
   <meta property="og:image:alt" content="{{firstImage.alt}}">
 {%- endif -%}
-<!-- GitHub -->
+<!-- Email -->
 {%- if site.ownership.email -%}
   <link rel="me" href="mailto:{{site.ownership.email}}">
 {%- endif -%}
-
 <!-- Mastodon -->
 {%- if site.ownership.mastodon.profile -%}
   <link rel="me" href="{{site.ownership.mastodon.profile}}">
