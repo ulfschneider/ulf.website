@@ -44,11 +44,13 @@ module.exports = function (eleventyConfig) {
         useInlineStyles: true, /*use the default styling*/
         autoEmbed: true /*allow to embed a tweet by writing the URL within a single line in your Markdown */
     });
-    eleventyConfig.addPlugin(webmentions, {
-        domain: site.domain,
-        token: process.env.WEBMENTION_PAT,
-        cacheDirectory: '_webmentions'
-    });
+    if (site.allowWebmentions) {
+        eleventyConfig.addPlugin(webmentions, {
+            domain: site.domain,
+            token: process.env.WEBMENTION_PAT,
+            cacheDirectory: '_webmentions'
+        });
+    }
 
     return {
         dir: {
