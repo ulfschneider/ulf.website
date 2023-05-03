@@ -27,7 +27,7 @@ module.exports = {
     url: URL,
     offline: BASE + "offline/",
     allowCommenting: true,
-    allowWebmentions: true,
+    allowWebmentions: false,
     buildTime: new Date(),
     imgMaxWidth: 1024,
     imgMaxHeight: 700,
