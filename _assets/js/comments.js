@@ -59,6 +59,7 @@ async function loadComments(commentList) {
     }
     catch (err) {
         commentsLoaded = false;
+        let indicateLoadFailure = document.querySelector('.comments .indicate-load-failure');
         if (indicateLoadFailure) {
             indicateLoadFailure.innerHTML = 'There was a failure when loading the comments for this post.<br>Please try again later.';
         }
