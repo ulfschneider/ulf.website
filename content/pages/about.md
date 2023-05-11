@@ -10,9 +10,9 @@ heroalt: Portrait of Ulf Schneider
 ---
 Welcome! My name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently working on great things at Weidmüller Interface.
 
-At this place I´m taking notes about things that resonate with me, like web development, [web accessibility](/2020-08-21-my-approach-to-accessibility/), [agile software development](/blog/agile/), and fast bicycles. My most recent *riding tool* project is a [Fairlight Strael](/blog/strael/) steel-bike build. 
+At this place I´m taking notes about things that resonate with me, like web development, [web accessibility](/2020-08-21-my-approach-to-accessibility/), [agile software development](/blog/agile/), and fast bicycles. My most recent *riding tool* is a [Fairlight Strael](/blog/strael/) steel-bike build.
 
-Writing this blog helps me to clarify my thoughts, and over time it became the *external memory* of topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts via their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
+Writing this blog helps me to clarify my thoughts. Over time, it became the *external memory* of topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts via their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
 
 This site is also my playing field for web technologies. It´s here, where I implemented my first *service worker*, and I enjoy exploring new topics in web development by experimenting and integrating them here into my personal site. Since some time I´m a fan of the [Jamstack](/2022-09-28-jamstack-in-20-minutes/).
 
@@ -26,7 +26,7 @@ My path through 30 years of software went like this:<dl class="timeline">
   <dt>2006 – 2014 Self-employment</dt>
   <dd>Seven years self-employed as an agile coach, architect and trainer.</dd>
   <dt>2014 – 2023 Diebold Nixdorf</dt>
-  <dd>Eight years employed as a software developer and agile coach at Diebold Nixdorf, heading the Professional Services Processes & Quality when leaving the company.</dd>
+  <dd>Eight years employed as a software developer and agile coach at Diebold Nixdorf, heading the Professional Services Processes & Quality team when leaving the company.</dd>
   <dt>2023 – today Weidmüller Interface</dt>
   <dd>Since February 2023 I am working as a software developer on great things at Weidmüller Interface.</dd>
 </dl>
