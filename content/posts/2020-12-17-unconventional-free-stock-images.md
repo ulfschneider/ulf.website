@@ -5,7 +5,7 @@ tags: journal
 A list of unconventional and free stock images by Mel Choyce in her [CSS-Tricks article](https://css-tricks.com/unconventional-stock-image-sources/):
 - [British Library](https://unsplash.com/@britishlibrary) (unsplash)
 - [New York Public Library](https://www.nypl.org/research/collections/digital-collections/public-domain)
-- [The State Library of New South Wales](https://www.flickr.com/people/statelibraryofnsw/) (flickr)
+- ==[The State Library of New South Wales](https://www.flickr.com/people/statelibraryofnsw/) (flickr), this one is very good for presentations!==
 - [Library of Congress](https://unsplash.com/@libraryofcongress/) (unsplash)
 - [Library of Congress](https://www.loc.gov/free-to-use/)
 - [National Library of Ireland ](https://www.flickr.com/people/nlireland/) (flickr)
