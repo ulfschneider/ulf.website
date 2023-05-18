@@ -12,7 +12,7 @@ Welcome! My name is Ulf Schneider and this is my website. I´m a software develo
 
 At this place I´m taking notes about things that resonate with me, like web development, [web accessibility](/2020-08-21-my-approach-to-accessibility/), [agile software development](/blog/agile/), and fast bicycles. My most recent *riding tool* is a [Fairlight Strael](/blog/strael/) steel-bike build.
 
-Writing this blog helps me to clarify my thoughts. Over time, it became the *external memory* of topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts via their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
+Writing this blog helps me to [clarify my thoughts](/2023-05-18-blogging/). Over time, it became the *external memory* of topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts via their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
 
 This site is also my playing field for web technologies. It´s here, where I implemented my first *service worker*, and I enjoy exploring new topics in web development by experimenting and integrating them here into my personal site. Since some time I´m a fan of the [Jamstack](/2022-09-28-jamstack-in-20-minutes/).
 
