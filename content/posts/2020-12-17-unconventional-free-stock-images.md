@@ -14,7 +14,7 @@ A list of unconventional and free stock images by Mel Choyce in her [CSS-Tricks 
 - [Met](https://www.metmuseum.org/art/collection/search#!?showOnly=openAccess&offset=0&pageSize=0&perPage=20&searchField=All&sortBy=Relevance)
 - [Art Institute of Chicago](https://www.artic.edu/collection?is_public_domain=1)
 - [NASA](https://images.nasa.gov)
-- [Centers for Disease Control and Prevention](https://css-tricks.com/unconventional-stock-image-sources/) (e.g. Corona virus visualizations)
+- [Centers for Disease Control and Prevention](https://www.cdc.gov) (e.g. Corona virus visualizations)
 - [Open Parks Network](https://openparksnetwork.org) (nature photos)
 
 ## Writing forth
