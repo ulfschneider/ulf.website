@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html
-  class="auto-dark-mode hover-rows no-js"
-  id="{{site.backToTop.id}}"
-  lang="{{site.locale}}"
-  dir="{{site.direction}}">
+<html class="auto-dark-mode hover-rows no-js" id="{{site.backToTop.id}}" lang="{{site.locale}}"
+    dir="{{site.direction}}">
 
-  <head>
+<head>
     {% include "head.html" %}
-  </head>
+</head>
 
-  <body class="p-hr blank break-word outdent">
-    <main id="main" {% if outline == true %}class="indent outline"{% else %}class="indent"{% endif %}>
-      {{ content }}
+<body class="p-hr blank break-word outdent">
+    <main id="main" {% if outline==true %}class="indent outline" {% else %}class="indent" {% endif %}>
+        {{ content }}
     </main>
-  </body>
+</body>
+
 </html>
