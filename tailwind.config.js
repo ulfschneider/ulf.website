@@ -63,6 +63,7 @@ module.exports = {
           dark: colors.cyan[800],
         },
         'meta': colors.neutral[500],
+        'disabled': colors.neutral[400],
         'field': {
           light: 'white',
           dark: colors.neutral[700]
@@ -165,6 +166,6 @@ module.exports = {
     }
   },
   plugins: [
-    plugin(function ({ addUtilities, addBase, theme, e, config }) {
+    plugin(function({ addUtilities, addBase, theme, e, config }) {
     })]
 }
