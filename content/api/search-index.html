@@ -4,4 +4,4 @@ permalinkBypassOutputDir: true
 eleventyExcludeFromCollections: true
 layout: none
 ---
-{{ collections.liveContent | searchIndex }}
+{{ collections.liveContent | withComments | searchIndex }}
