@@ -11,7 +11,7 @@ module.exports = {
     css: `${CACHE_VERSION}-71`,
     json: `${CACHE_VERSION}-0`,
     search: `${CACHE_VERSION}-2`,
-    image: `${CACHE_VERSION}-0`,
+    image: `${CACHE_VERSION}-1`,
     font: `${CACHE_VERSION}-0`
   },
   name: "ulfschneider.io",
