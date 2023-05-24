@@ -176,7 +176,8 @@ module.exports = {
       starred: item.data.starred,
       content: this.removeHtml(item.templateContent),
       excerpt: this.excerptFromText(item.templateContent),
-      commentContent: item.data.comments ? item.data.comments.map(comment => comment.body).join(' ') : undefined
+      commentContents: item.data.comments ? item.data.comments.map(comment => comment.body).join(' ') : undefined,
+      commentAuthors: item.data.comments ? item.data.comments.map(comment => comment.author).join(' ') : undefined
     }
   },
 

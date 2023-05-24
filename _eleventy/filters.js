@@ -106,7 +106,8 @@ module.exports = {
       'tags',
       'abstract',
       'content',
-      'commentContent'
+      'commentContents',
+      'commentAuthors'
     ];
 
     const STORE_FIELDS = [
