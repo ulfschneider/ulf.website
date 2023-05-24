@@ -3,7 +3,7 @@ _site/
 .cache
 .DS_Store
 .env
-search-index.json
+**/search-index.json
 
 # Local Netlify folder
 .netlify/
