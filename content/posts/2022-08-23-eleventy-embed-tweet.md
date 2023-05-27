@@ -7,21 +7,21 @@ Kyle Mitofsky wrote the <cite><a href="https://eleventy-embed-tweet.netlify.app"
 
 ## Wrap the tweet URL in `<p>` tags when using it within a Markdown element
 
-Tweets can be embedded in your Markdown by simply writing the URL to the tweet in a single line, like 
+Tweets can be embedded in your Markdown by simply writing the URL to the tweet in a single line, like
 
 ```markdown
 https://twitter.com/jensimmons/status/1561060139523874820
 ```
 
 When quoting a tweet within a Markdown footnote (or any Markdown element), you have to wrap the URL into a paragraph, otherwise Kyle´s plugin will not recognize the URL as something to fetch data from Twitter for, e.g.:
-	
+
 ```markdown
 [^jensimmons]:
 <p>https://twitter.com/jensimmons/status/1561060139523874820</p>
 ```
-  
+
 That makes a lot of sense because it allows to have the tweet URL within a fenced code block to show code and *not* fetch tweet data. To be honest, Kyle has the wrapping into `<p>` elements in his documentation but somehow I didn´t realize it and only found out by looking into Kyle´s plugin code:
-  
+
 ```js
 async function autoEmbedTweets(content, outputPath, options) {
   // https://regexr.com/5c39d
@@ -31,7 +31,7 @@ async function autoEmbedTweets(content, outputPath, options) {
   })
 }
 ```
-	
+
 ## With CSS it´s a breeze to adjust the tweet style
 
 Of course, that´s not new. Since the days of the [CSS Zen Garden](http://www.csszengarden.com) we are aware of how powerful CSS is. But still. Below you can see what the default styling of a fetched tweet is and how I want to adjust the styling:
@@ -87,7 +87,7 @@ Then I´m using CSS to adjust the styling of the tweet to my blog layout. There 
     .tweet-images
     .tweet-header //changed order
         .tweet-bird //changed order
-            .tweet-bird-icon    
+            .tweet-bird-icon
         .tweet-profile  //hide
         .tweet-author
             .tweet-author-name
@@ -143,7 +143,7 @@ The change in order of display, as well as the hiding of content, is achieved th
     background-image: url(/img/twitter.svg);
     width: 1em;
     height: calc(1em * var(--lh-default));
-    background-size: contain;  
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center left;
     margin-right: var(--space-d1);
@@ -169,4 +169,4 @@ The change in order of display, as well as the hiding of content, is achieved th
 }
 ```
 
-You could say, that´s what CSS is for, and you are right. But when I look at what can be achieved with *a few* lines of CSS I´m satisfied because of the possibilities. 
+You could say, that´s what CSS is for, and you are right. But when I look at what can be achieved with *a few* lines of CSS I´m satisfied because of the possibilities.

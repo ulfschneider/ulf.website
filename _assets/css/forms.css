@@ -22,7 +22,7 @@
   fieldset,
   label,
   legend {
-    @apply font-sans font-normal font-body text-inherit appearance-none placeholder-meta caret-primary dark:caret-primary-light rounded-none;
+    @apply font-body font-normal text-inherit appearance-none placeholder-meta caret-primary dark:caret-primary-light rounded-none;
   }
 
   input[type="submit"],

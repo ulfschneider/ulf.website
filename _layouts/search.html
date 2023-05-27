@@ -24,7 +24,7 @@ permalink: "{{site.search.url}}"
             parent.appendChild(article);
             if (entry.title && entry.title != 'notitle') {
                 let title = document.createElement('h2');
-                title.classList = 'mt-ryt-lg mb-0 leading-snug';
+                title.classList = 'mt-ryt-lg mb-0 font-bold text-base font-body leading-snug';
                 article.appendChild(title);
 
                 let linkToArticle = document.createElement('a');
@@ -46,8 +46,8 @@ permalink: "{{site.search.url}}"
             if (entry.humanDate || (entry.tags.length && !entry.notags)) {
                 let aside = document.createElement('aside');
                 aside.classList = `${entry.starred
-                        ? entry.starred
-                        : ''
+                    ? entry.starred
+                    : ''
                     } leading-snug`;
                 article.appendChild(aside);
 

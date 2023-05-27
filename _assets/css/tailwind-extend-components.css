@@ -26,7 +26,7 @@
 
     &::before {
       content: "Demo";
-      @apply font-sans text-sm absolute;
+      @apply font-body text-sm absolute;
 
       margin-top: calc(
         -1 * (theme(spacing.ryt) + theme(spacing.ryt) + theme(spacing.ryt-xs))
@@ -112,7 +112,7 @@
     @apply mt-ryt-xl;
     &::before {
       content: attr(data-language);
-      @apply font-sans text-sm absolute px-ryt-2xs text-white bg-write-dark dark:text-write-dark dark:bg-write-light;
+      @apply font-body text-sm absolute px-ryt-2xs text-white bg-write-dark dark:text-write-dark dark:bg-write-light;
       margin-top: calc(-1 * (theme(spacing.ryt) + theme(spacing.ryt-sm)));
     }
   }
@@ -224,7 +224,7 @@
 
   /* eleventy embed tweet */
   blockquote.tweet-card {
-    @apply font-normal not-italic text-base my-ryt-lg font-sans border-light overflow-x-auto max-w-rg;
+    @apply font-normal not-italic text-base my-ryt-lg font-body border-light overflow-x-auto max-w-rg;
 
     &::before,
     &::after {

@@ -10,10 +10,10 @@ You can use the Mac Preview app to reduce the size of any PDF file. The default 
 4. Choose the **Quartz filter** named **Reduce File Size**
 5. **Save**
 
-It might happen that the quality of scanned images in the resulting PDF is not good enough. In this case you can create your own Quartz filter.^[Credit for showing this goes to *Living Image.* Watch on YouTube: [<cite>How to Reduce PDF File Size on Mac Without Loosing Quality</cite>](https://youtu.be/Coxh2OJ9_lE)] 
+It might happen that the quality of scanned images in the resulting PDF is not good enough. In this case you can create your own Quartz filter.^[Credit for showing this goes to *Living Image.* Watch on YouTube: [<cite>How to Reduce PDF File Size on Mac Without Loosing Quality</cite>](https://youtu.be/Coxh2OJ9_lE)]
 
 
-1. Open the **ColorSync Utility**, you can search for it with your Spotlight search. 
+1. Open the **ColorSync Utility**, you can search for it with your Spotlight search.
 2. Switch to **Filters**
 3. Add a filter by clicking on the **+** symbol in the lower left corner
 4. Give your new filter a name, e.g. **Reduce PDF Size**

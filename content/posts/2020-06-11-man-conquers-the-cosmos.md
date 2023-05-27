@@ -3,7 +3,7 @@ title: Man conquers the cosmos
 layout: image
 tags: journal
 ---
-Today I saw this picture in "der Freitag", Nr. 24, June 4th 2020. 
+Today I saw this picture in "der Freitag", Nr. 24, June 4th 2020.
 
 <figure>
 <img alt="" src="/img/journal/man-conquers-the-cosmos.jpg">

@@ -50,8 +50,8 @@ nodate: true
         if (imgData.title) {
             let figcaption = document.createElement('figcaption');
             figcaption.classList = `${imgData.starred
-                    ? imgData.starred
-                    : ''
+                ? imgData.starred
+                : ''
                 } leading-snug font-body`;
             figcaption.innerHTML = imgData.title;
             anchor.appendChild(figcaption);

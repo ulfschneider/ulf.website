@@ -39,7 +39,7 @@ module.exports = {
       sans: ['"iA Writer Quattro"', 'sans-serif'],
       serif: ['"iA Writer Quattro"', 'sans-serif'],
       mono: ['"iA Writer Mono"', '"iA Writer Quattro"', 'monospace'],
-      display: ['"helvetica neue"', 'helvetica', 'arial', 'sans-serif'],
+      display: ['"iA Writer Quattro"', 'sans-serif'],
       body: ['"iA Writer Quattro"', 'sans-serif'],
     },
     extend: {

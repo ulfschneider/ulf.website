@@ -1,7 +1,7 @@
 ---
 title: Evolution of the Jamstack
 tags: code
-abstract: Strategies for building Jamstack sites evolved since 2015. How is the Jamstack defined today? 
+abstract: Strategies for building Jamstack sites evolved since 2015. How is the Jamstack defined today?
 ---
 
 [[toc]]
@@ -20,7 +20,7 @@ A Content Delivery Network (CDN) is not a must for a website that is serving sta
 
 ## Client-side JavaScript
 
-Client-side Javascript is used to evaluate user requests at request time and to provide content in a more dynamic way. A simple example are the comments on a blog page. The blog pages content itself is pre-rendered as a static file, but the commenting process cannot be addressed sufficiently by static rendering. The problem can be solved with the strategy that is around since the beginning of the Jamstack: By leveraging an API that handles the dynamic creation *and* the data provisioning of comments *on demand.* That means the already existing comments will be queried with REST calls for each user who is opening a blog page.[^intersection-observer] JavaScript will render the comments dynamically on the client-side into the page. This pattern requires a service that offers the management of comments. 
+Client-side Javascript is used to evaluate user requests at request time and to provide content in a more dynamic way. A simple example are the comments on a blog page. The blog pages content itself is pre-rendered as a static file, but the commenting process cannot be addressed sufficiently by static rendering. The problem can be solved with the strategy that is around since the beginning of the Jamstack: By leveraging an API that handles the dynamic creation *and* the data provisioning of comments *on demand.* That means the already existing comments will be queried with REST calls for each user who is opening a blog page.[^intersection-observer] JavaScript will render the comments dynamically on the client-side into the page. This pattern requires a service that offers the management of comments.
 
 It´s possible to incorporate the already existing comments into the next complete build of the website and make the previously dynamic content a static rendered content. In our example this would even allow to incorporate the comments into a search index of the website for conventient search and find. Only the comments created *after* the most recent build will be dynamic content that is then treated with client-side JavaScript.
 
@@ -36,7 +36,7 @@ Another approach is to pre-render only critical pages and to defer the static re
 Deferring the static rendering of pages serves two purposes:
 
 1.  **Speed up the build process** by pre-rendering only the critcal pages. Uncritical pages will be built on demand at request time and from that point on served unaltered until the next full build. This makes sense for large websites with thousands of pages.
-2.  **React to user input** and build a page based on input that is only available at request time and not at pre-rendering time. This also addresses the problem that some URL´s will only be known at request time and not at pre-rendering time. Again, a page that has been created based on user input will be served unchanged from that point on. It can only change with the next pre-rendering. 
+2.  **React to user input** and build a page based on input that is only available at request time and not at pre-rendering time. This also addresses the problem that some URL´s will only be known at request time and not at pre-rendering time. Again, a page that has been created based on user input will be served unchanged from that point on. It can only change with the next pre-rendering.
 
 When a deferred page is requested for the first time after a new build of the website, the deferred page is not yet available and needs to be built before it can be delivered to the user, which will take a bit of time. After that, the page is static and serving the page is as fast as any static page. Netlify uses their *on-demand builders[^on-demand-builders]* for the deferred page generation. An on-demand builder is a *serverless function.*
 
@@ -49,11 +49,11 @@ For that reason, after a deferred page has been generated, it can only change wi
 
 ## Serverless functions
 
-Similar to client-side JavaScript, serverless functions allow to react to user requests at request time. The difference is: Serverless functions are executed on the server. A fulltext search for a website could be implemented with a serverless function. While running on a server, it is called a serverless function because a developer will not recognize the server. The complexity is hidden away by the provider of the serverless computing service, like with [AWS Lambdas](https://aws.amazon.com/lambda/) and [Azure Functions](https://azure.microsoft.com/en-us/products/functions/). 
+Similar to client-side JavaScript, serverless functions allow to react to user requests at request time. The difference is: Serverless functions are executed on the server. A fulltext search for a website could be implemented with a serverless function. While running on a server, it is called a serverless function because a developer will not recognize the server. The complexity is hidden away by the provider of the serverless computing service, like with [AWS Lambdas](https://aws.amazon.com/lambda/) and [Azure Functions](https://azure.microsoft.com/en-us/products/functions/).
 
 ## Edge functions
 
-Edge functions are serverless functions *living on the edge.* Instead of being hosted on a server somewhere in the cloud, edge functions are executed on a server closest to the user (*on the edge of the internet*). This reduces latency and therefore increases speed. Also, edge functions should have a quicker cold-start because typically they use a fast starting runtime environment like [Deno](https://deno.land), which allows a faster cold start than [Node.js](https://nodejs.dev/en/), for example. 
+Edge functions are serverless functions *living on the edge.* Instead of being hosted on a server somewhere in the cloud, edge functions are executed on a server closest to the user (*on the edge of the internet*). This reduces latency and therefore increases speed. Also, edge functions should have a quicker cold-start because typically they use a fast starting runtime environment like [Deno](https://deno.land), which allows a faster cold start than [Node.js](https://nodejs.dev/en/), for example.
 
 Netlify offers both, serverless functions as well as edge functions.[^lengstorf-edge] Each of them having certain constraints, like maximum memory consumption, execution time limits, and available programming languages.[^netlify-functions] [<cite>11ty build vs. serverless vs. edge</cite>](/2022-10-05-build-serverless-edge/) might be of use for a differentation from the perspective of Zach Leatherman´s 11ty Static Site Generator.[^11ty-build-serverless-edge]
 

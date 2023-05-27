@@ -1,53 +1,53 @@
 {%- if pagedItems.pageData.length > 0 -%}
-  {%- assign livePosts = pagedItems.pageData -%}
+{%- assign livePosts = pagedItems.pageData -%}
 {%- else -%}
-  {%- assign livePosts = collections.liveContent | post -%}
+{%- assign livePosts = collections.liveContent | post -%}
 {%- endif -%}
 
 <div>
-  {% if limit == "" or limit == nil %}
+    {% if limit == "" or limit == nil %}
     {% if pagedItems.pageCount > 1 %}
-      Page {{ pagedItems.humanPageNumber }} / {{ pagedItems.pageCount }}
+    Page {{ pagedItems.humanPageNumber }} / {{ pagedItems.pageCount }}
     {% else %}
-      All posts
+    All posts
     {% endif %}
     {% if pagedItems.tag != "" and pagedItems.tag != nil %}tagged
-      <em class="font-mono">{{ pagedItems.tag }}</em>
+    <em class="font-mono">{{ pagedItems.tag }}</em>
     {% endif %}
-  {% endif %}
+    {% endif %}
 </div>
 
 <div>
-  {%- for p in livePosts -%}
+    {%- for p in livePosts -%}
     {%- assign currentDate = p.date | humanDate -%}
     {%- if limit == 1 and forloop.index > limit and currentDate != referenceDate -%}
-      {%- break -%}
+    {%- break -%}
     {%- elsif limit > 1 and forloop.index > limit -%}
-      {%- break -%}
+    {%- break -%}
     {%- endif -%}
     {%- assign referenceDate = p.date | humanDate -%}
 
     {%- if p.url == page.url -%}
-      {%- continue -%}
+    {%- continue -%}
     {%- endif -%}
 
     <article>
-      {% if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil %}
-        <h2 class="mt-ryt-lg mb-0 text-base leading-snug">
-          <a class="no-underline" href="{{p.url}}">
-            {{ p.data.title }}
-          </a>
+        {% if p.data.title != "" and p.data.title != nil and p.data.title != "notitle" and p.data.notitle == nil %}
+        <h2 class="mt-ryt-lg mb-0 text-base font-bold font-body leading-snug">
+            <a class="no-underline" href="{{p.url}}">
+                {{ p.data.title }}
+            </a>
         </h2>
-      {% else %}
+        {% else %}
         <p>{{ p.templateContent | strip_html | strip | truncatewords: 25
- , "&nbsp;… " }}
-          <a href="{{p.url}}">Read more</a>
+            , "&nbsp;… " }}
+            <a href="{{p.url}}">Read more</a>
         </p>
-      {% endif %}
-      <aside class="{{p.data.starred}} leading-snug">
-        {% include "date-tags.html" posted: p.date tags: p.data.tags notags: p.data.notags %}
-      </aside>
+        {% endif %}
+        <aside class="{{p.data.starred}} leading-snug">
+            {% include "date-tags.html" posted: p.date tags: p.data.tags notags: p.data.notags %}
+        </aside>
     </article>
-  {%- endfor -%}
+    {%- endfor -%}
 </div>
 {%- include "pagination-nav.html" -%}

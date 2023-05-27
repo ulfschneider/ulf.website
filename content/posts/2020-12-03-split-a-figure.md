@@ -7,13 +7,13 @@ tags: [css, code]
 
 ## Rapha is the poster child
 
-Every now and then the folks at Rapha are splitting the contents of a `<figure>` equally into an image (e.g. left half of the available space), and the corresponding caption (e.g. right half). This can be seen for example in *[Riding the Pendulum](https://www.rapha.cc/de/de/stories/riding-the-pendulum).* I think the layout is emphasizing the image and I enjoy the appearence very much. 
+Every now and then the folks at Rapha are splitting the contents of a `<figure>` equally into an image (e.g. left half of the available space), and the corresponding caption (e.g. right half). This can be seen for example in *[Riding the Pendulum](https://www.rapha.cc/de/de/stories/riding-the-pendulum).* I think the layout is emphasizing the image and I enjoy the appearence very much.
 
 ## Split figures example
 
-To make the HTML of Rapha´s approach more semantic – while keeping it responsive – I´ve come up with a simplified approach that´s relying on the `<figure>` and `<figcaption>` tags in conjunction with CSS `grid`. 
+To make the HTML of Rapha´s approach more semantic – while keeping it responsive – I´ve come up with a simplified approach that´s relying on the `<figure>` and `<figcaption>` tags in conjunction with CSS `grid`.
 
-In the below example, the first two figures use the split technique. Each image will only take half of the available space and the caption of the image will take the other half. The next two images are also using the split technique. In this case each image takes half of the available space with a below caption. The fifth figure is not using the split technique –  the image will always occupy the entire available space. 
+In the below example, the first two figures use the split technique. Each image will only take half of the available space and the caption of the image will take the other half. The next two images are also using the split technique. In this case each image takes half of the available space with a below caption. The fifth figure is not using the split technique –  the image will always occupy the entire available space.
 
 <figure class="rg:split">
 <img src="/img/journal/IMG_1329.jpg" alt="">
@@ -52,35 +52,35 @@ img {
   max-width: 100%; /*Make images responsive.*/
 }
 
-figcaption { 
+figcaption {
   /*This figcaption style is used*/
   /*when the figcaption is preceeding other content.*/
   margin-top: 0;
   margin-bottom: 0.81rem;
 }
 
-figure>*+figcaption { 
+figure>*+figcaption {
   /*This figcaption style is used*/
   /*when the figcaption is following other content.*/
   margin-top: 0.81rem;
   margin-bottom: 0;
 }
-	
+
 .w-100 {
   /*Utility class to assign 100% width to any item.*/
   /*It is not required by the split.*/
   width: 100%;
 }
-	
+
 /*Split with flex*/
 @media screen and (min-width: 600px) {
   figure.split {
     /*We use flex-box to split the contents and align.*/
-    /*Depending on the order of the figcaption (preceeding, following)*/ 
+    /*Depending on the order of the figcaption (preceeding, following)*/
     /*it will be positioned to the left (preceeding) or to the right (following).*/
-    display: flex; 
+    display: flex;
   }
-	
+
   figure.split>* {
     flex: 1 1 50%; /*Grow and shrink equally, use 50% of width.*/
     /*Refer to https://css-tricks.com/almanac/properties/f/flex-shrink/*/
@@ -88,7 +88,7 @@ figure>*+figcaption {
   }
 
   figure.split>figcaption {
-    padding: 0 1.62rem; /*have padding to the left and to the right*/       
+    padding: 0 1.62rem; /*have padding to the left and to the right*/
   }
 }
 ```
@@ -118,51 +118,51 @@ figure>*+figcaption {
 ```
 
 
-The flex-box attempt turned out to be limited. The `gap` property cannot be used, because it´s currently only supported by Firefox and Chrome. Therefore padding has to be used for the figcaption, which again makes the solution less versatile. Say, if you wanted to have a `<figure>` with two split images inside, instead of an image and a `<figcaption>`, that wouldn´t be possible with the above `flex` approach. 
+The flex-box attempt turned out to be limited. The `gap` property cannot be used, because it´s currently only supported by Firefox and Chrome. Therefore padding has to be used for the figcaption, which again makes the solution less versatile. Say, if you wanted to have a `<figure>` with two split images inside, instead of an image and a `<figcaption>`, that wouldn´t be possible with the above `flex` approach.
 
 Also, adding a `<div>` to get proper image formatting is not my cup of tea.
 
 ## The code based on grid
 
-The `grid`-based CSS code is shorter and more versatile in my view. It´s possible to use `column-gap` and `row-gap` and also splitting a `<figure>` into two images is possible. Artificial `<div>` elements are not needed at all. 
+The `grid`-based CSS code is shorter and more versatile in my view. It´s possible to use `column-gap` and `row-gap` and also splitting a `<figure>` into two images is possible. Artificial `<div>` elements are not needed at all.
 
 ```css
 img {
   max-width: 100%; /*Make images responsive.*/
 }
 
-figcaption { 
+figcaption {
   /*This figcaption style is used*/
   /*when the figcaption is preceeding other content.*/
   margin-top: 0;
   margin-bottom: 0.81rem;
 }
 
-figure>*+figcaption { 
+figure>*+figcaption {
   /*This figcaption style is used*/
   /*when the figcaption is following other content.*/
   margin-top: 0.81rem;
   margin-bottom: 0;
 }
-	
+
 .w-100 {
   /*Utility class to assign 100% width to any item.*/
   /*It is not required by the split.*/
   width: 100%;
 }
-	
+
 /*Use grid for the split*/
 @media screen and (min-width: 600px) {
   figure.split {
     /*We use grid to split the contents into two columns.*/
-    /*Depending on the order of the figcaption (preceeding, following)*/ 
+    /*Depending on the order of the figcaption (preceeding, following)*/
     /*it will be positioned to the left (preceeding) or to the right (following).*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.62rem;
     row-gap: 1.62rem;
-  }   
-  
+  }
+
   figure.split>* {
     margin:0; /*We have grid-column and grid-row instead of margins*/
   }
@@ -208,19 +208,15 @@ If you want to apply the split not only for `<figure>` tags, you can even use th
 /*Use grid for the split*/
 @media screen and (min-width: 600px) {
   .split {
-    /*We use grid to split the contents into two columns.*/  
+    /*We use grid to split the contents into two columns.*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.62rem;
     row-gap: 1.62rem;
-  }   
-  
+  }
+
   .split>* {
     margin:0; /*We have grid-column and grid-row instead of margins*/
   }
 }
 ```
-
-
-
-

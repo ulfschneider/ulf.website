@@ -20,7 +20,7 @@ Example:
 ![Image of Spitfire tool](/img/spitfire/spitfire.jpg)
 ```
 
-will become 
+will become
 
 ```html
 <img alt="Image of Spitfire tool" src="/img/spitfire/spitfire.jpg" loading="lazy" style="aspect-ratio:750/388;" width="750" height="388">
@@ -35,7 +35,7 @@ Also, html in your markdown, like for example
 </figure>
 ```
 
-will be transformed into 
+will be transformed into
 
 ```html
 <figure>
@@ -48,7 +48,7 @@ will be transformed into
 
 markdown-it-fitmedia carries an adoption of the original [fit-vids](http://fitvidsjs.com) script to make `iframe` and `video` tags responsive. Embedded videos are not automatically responsive or fluid. They come with a fixed setting for width and height. To make them responsive while keeping aspect ratio, they are embedded into a wrapper element. The wrapper receives some clever padding and positioning, and as a last step the fixed dimensions are removed from the video. The technique has been described by Thierry Koblentz in his A List Apart article “[Creating Intrinsic Ratios for Video](https://alistapart.com/article/creating-intrinsic-ratios-for-video/)” in 2009.
 
-For example, this 
+For example, this
 
 ```html
 <iframe src="https://player.vimeo.com/video/304626830" width="600" height="338"></iframe>
@@ -74,7 +74,7 @@ npm i markdown-it-fitmedia
 ```js
 var markdownIt = require('markdown-it');
 var markdownItFitMedia = require('markdown-it-fitmedia');
- 
+
 markdownIt({
     html: true
     })
@@ -83,7 +83,7 @@ markdownIt({
         lazyLoad: true,
         aspectRatio: true,
         imgSizeHint: true,
-        fitWrapElements: ['iframe', 'video']        
+        fitWrapElements: ['iframe', 'video']
     });
 ```
 

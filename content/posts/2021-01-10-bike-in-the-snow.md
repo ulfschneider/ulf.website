@@ -18,4 +18,3 @@ tags: [journal, sports]
 <figcaption>Me, enjoying nature</figcaption>
 </figure>
 </figure>
-

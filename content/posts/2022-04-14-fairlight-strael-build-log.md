@@ -1,7 +1,7 @@
 ---
 title: Fairlight Strael Build Log
 tags: [sports, strael]
-abstract: This is a documentation of my Fairlight Strael build process. You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a>, which are the primer of this build. 
+abstract: This is a documentation of my Fairlight Strael build process. You might also be interested in my <a href="/2022-02-27-fairlight-strael-build-notes/">Fairlight Strael Build Notes</a>, which are the primer of this build.
 hero: /img/strael/strael-3-0-parts.jpg
 outline: true
 ---
@@ -57,21 +57,21 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    <figure>
    <img src="/img/strael/battery-mount-in-seat-post.jpg" alt="The battery inserted into the seat post">
    <figcaption>The battery has to be pushed into the seat post (further than you see on this image)</figcaption>
-   </figure>      
-2. **Seat tube wire:** I push a 700 mm Di2 wire into the seat tube from the top opening towards the bottom bracket shell. The wire has three wire holders attached to prevent it from moving inside the seat tube. I use a folding ruler to push the wire towards the bottom bracket shell. 
-3. **Mounting the seat post:** The seat post wire can now be connected to the battery by using the Shimano Plug Tool. As a next step the seat post can be mounted to the frame. Now the frame is ready to be taken into the repair stand by clamping the seat post with the 5 mm Hex Key. The Di2 wire plug has not been pulled out of the seat tube. With the frame inside the repair stand this is left to be done and I use my routing tool to fish the plug and pull it further trhough the bottom bracket shell. 
+   </figure>
+2. **Seat tube wire:** I push a 700 mm Di2 wire into the seat tube from the top opening towards the bottom bracket shell. The wire has three wire holders attached to prevent it from moving inside the seat tube. I use a folding ruler to push the wire towards the bottom bracket shell.
+3. **Mounting the seat post:** The seat post wire can now be connected to the battery by using the Shimano Plug Tool. As a next step the seat post can be mounted to the frame. Now the frame is ready to be taken into the repair stand by clamping the seat post with the 5 mm Hex Key. The Di2 wire plug has not been pulled out of the seat tube. With the frame inside the repair stand this is left to be done and I use my routing tool to fish the plug and pull it further trhough the bottom bracket shell.
    <figure>
    <img src="/img/strael/seat-tube-plug.jpg" alt="Pulling the Di2 plug out of the seat tube into the bottom bracket shell">
    <figcaption>Pulling the Di2 plug out of the seat tube into the bottom bracket shell</figcaption>
    </figure>
-4. **Rear derailleur wire:** That didn´t went ideal. At first I pushed a 650 mm Di2 wire without any routing tool and with three wire holders attached from the rear lug through the chain stay towards the bottom bracket shell. At some point I couldn´t make any progress and because of the wire holders it was pretty difficult to pull the wire back out of the chain stay. I needed to apply so much force that I´m in doubt about the wire integrity. My second attempt was to remove the wire holders except of one, and push the wire, starting at the bottom bracket shell, through the chain stay to the lug at the end of the chain stay. When the wire plug became visible through the lug it was again time for my DIY routing tool to fish the Di2 wire through the lug. 
+4. **Rear derailleur wire:** That didn´t went ideal. At first I pushed a 650 mm Di2 wire without any routing tool and with three wire holders attached from the rear lug through the chain stay towards the bottom bracket shell. At some point I couldn´t make any progress and because of the wire holders it was pretty difficult to pull the wire back out of the chain stay. I needed to apply so much force that I´m in doubt about the wire integrity. My second attempt was to remove the wire holders except of one, and push the wire, starting at the bottom bracket shell, through the chain stay to the lug at the end of the chain stay. When the wire plug became visible through the lug it was again time for my DIY routing tool to fish the Di2 wire through the lug.
    <figure>
    <img src="/img/strael/fishing-the-plug-frame.jpg" alt="A bent steel wire catch a Di2 wire plug and pulling it out of the bicycle frame">
    <figcaption>Fishing the Di2 wire with my routing tool</figcaption>
    </figure>
-   That second attempt went smoothly. The one wire holder that was attached to the Di2 wire was near the bottom bracket shell. By pulling the Di2 wire further through the chain stay in direction of the dropous, the wire holder slipped into the chain stay. Then I added another wire holder near the dropouts and pulled the Di2 wire back a little bit into the direction of the bottom bracket shell. As a result I have two wire holders attached to the Di2 wire. Because of my concerns about the Di2 wire integrity I repeated the process with a 700 mm wire (that is a leftover wire and 700 mm seem to be the better choice anyway). 
+   That second attempt went smoothly. The one wire holder that was attached to the Di2 wire was near the bottom bracket shell. By pulling the Di2 wire further through the chain stay in direction of the dropous, the wire holder slipped into the chain stay. Then I added another wire holder near the dropouts and pulled the Di2 wire back a little bit into the direction of the bottom bracket shell. As a result I have two wire holders attached to the Di2 wire. Because of my concerns about the Di2 wire integrity I repeated the process with a 700 mm wire (that is a leftover wire and 700 mm seem to be the better choice anyway).
 5. **Down tube wire:** After removing the Fairlight cable guide from the down tube the lug appears to push the 1200 mm Di2 wire through. I remove all wire holders and route the wire through the down tube towards the bottom bracket shell. With my routing tool, again, I can fish the plug out of the tube opening inside of the bottom bracket shell and pull the wire further so that finally 60 cm of wire hang out of the bottom bracket shell. Now I can attach four wire holders and pull the wire back into the down tube. Very smooth.
-6. **Handlebar wire:** It´s easy to push the 700 mm Di2 wire through the handlebars and fish the wire plug with my routing tool out of the lug. I´ve 4 wire holders attached. 
+6. **Handlebar wire:** It´s easy to push the 700 mm Di2 wire through the handlebars and fish the wire plug with my routing tool out of the lug. I´ve 4 wire holders attached.
    <figure>
    <img src="/img/strael/fishing-the-plug-handlebars.jpg" alt="A bent steel wire catching a Di2 wire plug out of the opening lug of a handlebar">
    <figcaption>Fishing the Di2 wire plug out of the handlebar lug opening</figcaption>
@@ -81,7 +81,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    <figure>
    <img src="/img/strael/all-wires-connected.jpg" alt="The EW-JC304 junction with all four Di2 wires plugged in">
    <figcaption>The EW-JC304 junction with all four wires plugged in</figcaption>
-   </figure> 
+   </figure>
    <figure>
    </figure>
    <figure>
@@ -95,7 +95,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    <figure>
    <img src="/img/strael/fixating-the-packaging.jpg" alt="The junction fully wrapped by the packaging that is fixated with electrical tape">
    <figcaption>Fixating the packaging with electrical tape</figcaption>
-   </figure>   
+   </figure>
    <figure>
    <img src="/img/strael/all-wires-tucked-away.jpg" alt="The Di2 wires tucked away in the bottom bracket shell">
    <figcaption>The Di2 wires tucked away in the bottom bracket shell. The EW-JC304 junction is wrapped with the packaging and pushed into the down tube.</figcaption>
@@ -105,7 +105,7 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
    <img src="/img/strael/di2-wire-fixation.jpg" alt="A Di2 wire fixated to the frame with Tesa Crepe">
    <figcaption>The Di2 dangling wire fixation</figcaption>
    </figure>
-	
+
 ## Determine the desired stem height
 
 ### Tools
@@ -173,7 +173,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
 1. For the compression bung to work properly I have to cut away  3 mm in addition. Make sure it´s exactly 3 mm because cutting only additional 2 mm is too less and will lead to the compression bung not function. If you cut 2 mm initially you can imagine it´s difficult to cut another 1 mm. I know what I´m talking about because that´s exactly what happened to me.
    <figure>
    <img src="/img/strael/steerer-cut-lines.jpg" alt="A steerer tube with three pencil lines to identify the final cut line">
-   <figcaption>On this image you see three lines on the steerer. From top to bottom: 
+   <figcaption>On this image you see three lines on the steerer. From top to bottom:
    <ul>
    <li>A thin line going aroung the steerer. That was my first line before noticing that I should take away one of the headset shims for a tighter seal.</li>
    <li>A thicker line going around the steerer. That is the top height of the final 5 mm spacer that sits on top of the stem.</li>
@@ -190,7 +190,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
    <img src="/img/strael/saw-blade-guide.jpg" alt="">
    <figcaption>The saw blade guide attached to the steerer</figcaption>
    </figure>
-4. It´s time to cut the steerer with the hacksaw. I´ve attached the Park Tool Carbon Blade to my plain old 300 mm hacksaw for the cutting. I´m wearing an FFP2 mask (easy to have one at hand during a pandemic) and I should have worn Nitril gloves (which I didn´t do). Because I do not own a vice I´m sitting down, laying the fork on my knees and do the sawing. Admittedly, it would be better to mount the sawing guide into a vice for this job. After the cut is made, I do some gentle sandpaper grinding of the cutting area. I use a sanding block and P120 sandpaper. Finally I remove the Tesa tape from the steerer. 
+4. It´s time to cut the steerer with the hacksaw. I´ve attached the Park Tool Carbon Blade to my plain old 300 mm hacksaw for the cutting. I´m wearing an FFP2 mask (easy to have one at hand during a pandemic) and I should have worn Nitril gloves (which I didn´t do). Because I do not own a vice I´m sitting down, laying the fork on my knees and do the sawing. Admittedly, it would be better to mount the sawing guide into a vice for this job. After the cut is made, I do some gentle sandpaper grinding of the cutting area. I use a sanding block and P120 sandpaper. Finally I remove the Tesa tape from the steerer.
    <figure>
    <img src="/img/strael/sanding-block.jpg" alt="A sanding block with a piece of sanding paper hold in hand">
    <figcaption>The sanding block with the P120 sanding papier</figcaption>
@@ -200,7 +200,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
    <img src="/img/strael/smooth-steerer-cut.jpg" alt="The cut and sandpaper grinded steerer">
    <figcaption>The smoothened steerer cut</figcaption>
    </figure>
-   
+
 ## Mount the fork to the frame
 
 ### Tools
@@ -239,7 +239,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
    <figcaption>I´m wiping away any excess grease carefully</figcaption>
    </figure>
 4. The headset bottom cup will also receive a thin layer of grease, similar to the top cup.
-5. With the bottom bearing onto the fork steerer tube I insert the fork into the frame and slide the coned ring, the top cup shim,  and the headseat top cap over the steerer tube. 
+5. With the bottom bearing onto the fork steerer tube I insert the fork into the frame and slide the coned ring, the top cup shim,  and the headseat top cap over the steerer tube.
     <figure>
    <img src="/img/strael/one-headset-shim.jpg">
    <figcaption>After the fork is inserted into the head tube, the coned ring, the top cup shim, and the headset top cap go from bottom to top order onto the steerer</figcaption>
@@ -247,7 +247,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
    The headset top cap sits so tight that the fork will stay in the frame. Finally I´m attaching the three stem spacers, followed by the stem.
    <figure>
    <img src="/img/strael/inserted-fork-with-spacers-and-stem.jpg" alt="The fork with all top spacers and stem">
-   <figcaption>The fork with all top spacers and stem</figcaption> 
+   <figcaption>The fork with all top spacers and stem</figcaption>
    </figure>
 6. The compression bung receives a thin layer of carbon fitting paste and is installed into the steerer tube. I apply 6 Nm torque.
    <figure>
@@ -296,8 +296,8 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <img src="/img/strael/rear-caliper-with-adapter.jpg">
    <figcaption>The rear caliper with the attached Flat-Mount adapter. The screw fixing pin is not yet installed.</figcaption>
    </figure>
-   
-2. I mount the rear caliper to the frame. 
+
+2. I mount the rear caliper to the frame.
    <figure>
    <img src="/img/strael/attaching-the-rear-caliper.jpg">
    <figcaption>Attaching the rear caliper to the frame</figcaption>
@@ -307,7 +307,7 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <img src="/img/strael/type-a-and-c.jpg">
    <figcaption>The Type A and Type C screw with retaining clip and distance washers</figcaption>
    </figure>
-3. I route the brake hose along the frame and fixate it with the C-Clips. 
+3. I route the brake hose along the frame and fixate it with the C-Clips.
    <figure>
    <div class="split">
    <img src="/img/strael/c-clips.jpg">
@@ -315,7 +315,7 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    </div>
    <figcaption>C-Clips</figcaption>
    </figure>
-4. From the upper end of the down tube I push the Di2 wire completely through a 50 cm long shrink tube. It´s important to begin with the Di2 wire first and not with the brake hose! 
+4. From the upper end of the down tube I push the Di2 wire completely through a 50 cm long shrink tube. It´s important to begin with the Di2 wire first and not with the brake hose!
 5. Then I push the brake hose through the shrink tube. The shrink tube has a diameter of 6.4 mm →  3.2 mm. It´s not required to shrink the tube and keep the 6.4 mm in diameter. If you leave it like that it will just look fine in my view.
    <figure>
    <div class="split">
@@ -332,7 +332,7 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <img src="/img/strael/di2-routing-with-shrink-tube.jpg">
    <figcaption>Routing Di2 wire and brake hose from the down tube to the handlebars</figcaption>
    </figure>
-6. I fixate the shrink tube that contains the brake hose and the Di2 wire to the handlebars with Tesa Crepe. ==I´m not cutting the brake hose yet and I do not connect the brake hose to the shifter because I first want a proof Di2 is working properly==. 
+6. I fixate the shrink tube that contains the brake hose and the Di2 wire to the handlebars with Tesa Crepe. ==I´m not cutting the brake hose yet and I do not connect the brake hose to the shifter because I first want a proof Di2 is working properly==.
 
 ### Install the front caliper
 
@@ -398,7 +398,7 @@ The final position of the front derailleur cannot be set at this point because t
 
 ### Dual Control Shifters
 
-1. Connect the two shifters with each other with the wire that´s routed through the handlebars. ==Use the lower satellite ports of the two shifters!== 
+1. Connect the two shifters with each other with the wire that´s routed through the handlebars. ==Use the lower satellite ports of the two shifters!==
 2. Then connect the wire dangling out of the down tube with the right shifter by ==plugging it into the upper E-Tube port of the right shifter==.
 3. Charge the battery with an USB AC charging adapter. The battery will be charged after 1.5 to 2 hours. Refer to the @[<cite>Rear Derailleur (Di2) / Battery Charger</cite>](https://si.shimano.com/#/en/iUM/3GK0A/charg_ing_method-title/TOC_CHARG_ING_METHOD-TITLE){} handbook.
 
@@ -408,11 +408,11 @@ With all Di2 wires connected and the battery charged the Di2 system is ready to 
 
 After pairing, signals sent from the shifters to the derailleurs should be functioning. Try the shift switches of the two shifters and verify the derailleurs are moving each in their both shifting directions.
 
-Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-tube/project.html){} onto your phone. The app will be necessary later to make gear shifting adjustments and to install software updates into the gearing system. 
+Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-tube/project.html){} onto your phone. The app will be necessary later to make gear shifting adjustments and to install software updates into the gearing system.
 
 1. Press the function button of the rear derailleur until the LED flashes blue (0.5 - 2 seconds). The bicycle side is ready to connect. The unit name is displayed on the E-TUBE PROJECT screen.
 2. Start the E-Tube App (Bluetooth must be activated on the phone).
-3. Select the unit name displayed on screen. Follow the @[<cite>E-Tube Project Cyclist</cite>](https://si.shimano.com/#/en/iUM/7J4MA/starting_for_the_first_time/TOC_STARTING_FOR_THE_FIRST_TIME){} manual to set up the app and create an entry for the bike for the first time.  
+3. Select the unit name displayed on screen. Follow the @[<cite>E-Tube Project Cyclist</cite>](https://si.shimano.com/#/en/iUM/7J4MA/starting_for_the_first_time/TOC_STARTING_FOR_THE_FIRST_TIME){} manual to set up the app and create an entry for the bike for the first time.
 
 ## Install the bottom bracket
 
@@ -454,7 +454,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
    <img src="/img/strael/wera-x-torque-bb.jpg" alt="A hand holding a huge torque wrench">
    <figcaption>The Wera X Torque is ready to tighten the bottom bracket cups to 40 Nm</figcaption>
    </figure>
-   
+
 ## Assemble and install the crankset
 
 ### Tools
@@ -464,9 +464,9 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
 - Anti-seize
 - Wera Click-Torque X 3 Torque Wrench
 
-### Steps 
+### Steps
 
-1. Assemble Rotor ALDHU drive-side crankarm with the chainring and the axle. The video @[<cite>ALDHU crankset assembly with Q RINGS® Direct Mount Chainrings</cite>](https://youtu.be/F2nT7JLdsC4){} will give an impression about the assembly of the crankset. First I mount the 32-48 chainring to the axle by center-aligning the axle imprint "531" with the tiny chainring hole (I think the tiny hole is called OCP indicator – for Optimum Chainring Position). 
+1. Assemble Rotor ALDHU drive-side crankarm with the chainring and the axle. The video @[<cite>ALDHU crankset assembly with Q RINGS® Direct Mount Chainrings</cite>](https://youtu.be/F2nT7JLdsC4){} will give an impression about the assembly of the crankset. First I mount the 32-48 chainring to the axle by center-aligning the axle imprint "531" with the tiny chainring hole (I think the tiny hole is called OCP indicator – for Optimum Chainring Position).
    <figure>
    <img src="/img/strael/crank-axle.jpg" alt="A hand holding the Rotor Road Crank Axle">
    <figcaption>The Rotor 24 mm Road Crank Axle. <mark>Mind the two O-Rings: the drive-side O-Ring is thinner than the non-drive-side O-Ring</mark>. The Rotor axle comes with  additional spacers but none of them is needed for the installation to the Strael.</figcaption>
@@ -475,8 +475,8 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
    <img src="/img/strael/ocp-indicator.jpg" alt="The OCP indicator of the chainring aligned with the 531 mark on the axle">
    <figcaption>The NoQ chainring centered on the axle</figcaption>
    </figure>
-   The chainring is kept in place by mounting the drive-side crank arm on top of it. The crankarm must be centered above the metal pin sticking out the outer chainring and should be tightened with a 10 mm hex key to 35 - 40 Nm. In my case 35 Nm was not enough because the chainring then was sitting wobbly on the axle. Once tightened to 40 Nm the parts were without any play. I use anti-seize on the crankarm thread before screwing it into the axle.  
-2. Before pushing the axle through the bottom bracket take away the non-drive-side O-Ring from the axle and push the drive-side O-Ring as far as possible on the axle into the direction of the chainrings. Then push the axle completely through the bottom bracket (you might apply gentle force) and <mark>reattach the non-drive-side O-Ring</mark> to the axle. 
+   The chainring is kept in place by mounting the drive-side crank arm on top of it. The crankarm must be centered above the metal pin sticking out the outer chainring and should be tightened with a 10 mm hex key to 35 - 40 Nm. In my case 35 Nm was not enough because the chainring then was sitting wobbly on the axle. Once tightened to 40 Nm the parts were without any play. I use anti-seize on the crankarm thread before screwing it into the axle.
+2. Before pushing the axle through the bottom bracket take away the non-drive-side O-Ring from the axle and push the drive-side O-Ring as far as possible on the axle into the direction of the chainrings. Then push the axle completely through the bottom bracket (you might apply gentle force) and <mark>reattach the non-drive-side O-Ring</mark> to the axle.
    <figure>
    <img src="/img/strael/drive-side.jpg" alt="The drive-side of the crankset">
    <figcaption>The drive-side of the crankset. The front derailleur is not in its final position.</figcaption>
@@ -492,7 +492,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
 3. Loosen the preload nut bolt of the non-drive-side crankarm with the 2.5 mm hex key and thread the preload nut clock-wise into the crankarm until it bottoms out.
 4. Mount the non-drive-side crankarm to the axle with a 10 mm hey key and torque it to 40 Nm. I use anti-seize before screwing the crankarm onto the axle.
 5. Screw the preload nut anti-clock-wise and hand-tighten it until there is no play in the crank/axle/bottom bracket system. Tighten the preload nut bolt to 1 Nm (not much!).
-   
+
 ## Mount the pedals
 
 ### Tools
@@ -507,7 +507,7 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 <img src="/img/strael/pedals.jpg" alt="A hand holding two Shimano XTR pedals">
 <figcaption>The pedals I´m using on all of my bikes</figcaption>
 </figure>
-   
+
 ## Install the chain
 
 ### Tools
@@ -518,9 +518,9 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 
 ### Steps
 
-1. Determine the chain length by following the [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010). Please read the chapters <strong>Installing the chain</strong> and <strong>Checking the chain length</strong> under <strong>Adjustment</strong>. It´s basically wrapping the chain around the largest sprocket as well as the largest chainring to identify the zero point. Then adding two or three links plus the Quick-Link to the zero point. 
+1. Determine the chain length by following the [<cite>Rear Derailleur (Di2) Dealer Manual</cite>](https://si.shimano.com/#/en/iDM/RARD010). Please read the chapters <strong>Installing the chain</strong> and <strong>Checking the chain length</strong> under <strong>Adjustment</strong>. It´s basically wrapping the chain around the largest sprocket as well as the largest chainring to identify the zero point. Then adding two or three links plus the Quick-Link to the zero point.
 2. Shorten the chain with the TOPEAK Chain Tool.
-3. Position the front derailleur so that the chain can get routed without rubbing through the the derailleur cage. This is still a temporary positioning – the final position is set when the gear shifting will be adjusted. 
+3. Position the front derailleur so that the chain can get routed without rubbing through the the derailleur cage. This is still a temporary positioning – the final position is set when the gear shifting will be adjusted.
 4. Only now route the chain through the front derailleur and through the rear derailleur, take care of the chain direction, and link it with the Quick Link chain lock. The Foldable Chain Holder as well as the Quick Link Chain Tool simplify installing the Quick Link.
 
 ## Adjust gear shifting
@@ -564,9 +564,9 @@ The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://
 
 ### Steps
 
-Repeat the steps for each brake hose. 
+Repeat the steps for each brake hose.
 
-1. Measure the desired length of the brake hoses. The hose will be inserted 21 mm into the connector port of the lever - consider that and make two marks on the hose: one where to cut and another witness mark 21 mm behind the cut mark. I do it so that  there is some slack around the handlebars and at the same time the hoses are not rubbing each other or a part of the bike. 
+1. Measure the desired length of the brake hoses. The hose will be inserted 21 mm into the connector port of the lever - consider that and make two marks on the hose: one where to cut and another witness mark 21 mm behind the cut mark. I do it so that  there is some slack around the handlebars and at the same time the hoses are not rubbing each other or a part of the bike.
    <figure>
    <img src="/img/strael/measure-brake-hose-length.jpg" alt="The handlebars with two loose brake hoses only fixated with Tesa Crepe">
    <figcaption>The bike prepared for measuring</figcaption>
@@ -594,7 +594,7 @@ Repeat the steps for each brake hose.
    <img src="/img/strael/wipe-away-excess-oil.jpg" alt="A hand holding a paper towel wiping away oil from the brake shifter">
    <figcaption>Wipe away excess oil</figcaption>
    </figure>
-9. ==Do not forget:== Take away the lever stopper and align the caliper with the brake rotor by loosening the caliper fixing screws, pulling the brake lever and then ==torqueing the caliper fixing screws to 6 Nm==. The front caliper will then get a snap ring installed while the rear calipers gets a screw fixing pin. Look that up in the [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10). 
+9. ==Do not forget:== Take away the lever stopper and align the caliper with the brake rotor by loosening the caliper fixing screws, pulling the brake lever and then ==torqueing the caliper fixing screws to 6 Nm==. The front caliper will then get a snap ring installed while the rear calipers gets a screw fixing pin. Look that up in the [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10).
 
 ## Wrap the handlebars
 
@@ -663,7 +663,7 @@ The weight of the bike is 9.1 kg including pedals.
 ## Manuals in order of use
 
 [[ingredients]]
-	
+
 ## Tools in order of use
 
 [[cookware]]

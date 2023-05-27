@@ -16,4 +16,3 @@ tags: journal
 <img src="/img/journal/IMG_0382D.jpg">
 <img src="/img/journal/IMG_0384D.jpg">
 </figure>
-
