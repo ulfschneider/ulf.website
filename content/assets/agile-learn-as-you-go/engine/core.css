@@ -832,7 +832,7 @@ img+p, p+img, p.image-grid  {margin: 1em 0 !important;}
 .image-grid.single-image {
   max-width: 50% !important;
   max-height: 100% !important;
-  object-fit: cover !important;
+  object-fit: cover !important; 
   margin-right: 1em !important;}
 
 
@@ -840,12 +840,12 @@ img+p, p+img, p.image-grid  {margin: 1em 0 !important;}
     padding: 0;
   float: left;}
 
-  .two-rows {
+  .two-rows { 
     grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) !important;
     grid-row-gap: 0.5em;
   }
 
-  .single-image img {
+  .single-image img { 
     max-width: 100% !important;
     max-height: 20em;
     object-fit: cover !important;
