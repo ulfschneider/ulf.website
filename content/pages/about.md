@@ -35,7 +35,6 @@ My path through 30 years of software went like this:<dl class="timeline">
 
 **Email:** [{{site.ownership.email}}](mailto:{{site.ownership.email}})
 **Phone:** {{site.ownership.phone}}
-**Mastodon:** [{{site.ownership.mastodon.user}}]({{site.ownership.mastodon.profile}})
 **RSS:** [{{site.hostname}}{{site.rss}}]({{site.origin}}{{site.rss}})
 
 
