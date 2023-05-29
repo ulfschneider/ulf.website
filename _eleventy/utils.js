@@ -342,6 +342,7 @@ module.exports = {
       .use(markdownItTrimmer)
       .use(markdownItFitMedia, {
         imgDir: `./${site.input}`,
+        decoding: 'async'
       })
       .use(markdownItMathJax)
       .use(markdownItEmoji)

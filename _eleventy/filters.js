@@ -225,7 +225,7 @@ module.exports = {
   responsiveHero: function(src, alt) {
     let clearSrc = utils.clearResponsive(src);
 
-    let img = `<img src="${clearSrc}" ${alt ? 'alt="' + alt + '"' : 'alt=""'} class="w-full h-auto object-cover" style="${utils.imgAspectRatio(clearSrc)}" ${utils.imgSizeHint(clearSrc)} loading="eager">`;
+    let img = `<img src="${clearSrc}" ${alt ? 'alt="' + alt + '"' : 'alt=""'} class="w-full h-auto object-cover" style="${utils.imgAspectRatio(clearSrc)}" ${utils.imgSizeHint(clearSrc)} loading="eager" decoding="async">`;
     if (utils.isResponsive(src)) {
       let extname = path.extname(clearSrc);
       let stem = path.basename(clearSrc, extname);
