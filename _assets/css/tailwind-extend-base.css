@@ -87,7 +87,7 @@
   }
   h2,
   .h2 {
-    @apply font-body font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
+    @apply font-body font-bold text-base mt-ryt-2xl mb-ryt-lg  break-after-avoid;
     text-wrap: balance;
   }
   h3,
