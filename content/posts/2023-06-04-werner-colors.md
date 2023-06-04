@@ -2,7 +2,7 @@
 title: Werner´s nomenclature of colors
 tags: design
 ---
-A [recreation with scans of the original 1821 color guidebook colors](https://www.c82.net/werner/). It is possible to use the scans as tiles.
+A [recreation with scans of the original 1821 color guidebook colors](https://www.c82.net/werner/) by Nicholas Rougeux. It is possible to use the scans as tiles.
 
 <figure class="grid grid-cols-5 gap-0">
 <img src="/img/design/1-snow-white.jpg" class="m-0 w-full h-full">
