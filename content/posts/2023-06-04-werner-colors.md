@@ -2,7 +2,7 @@
 title: Werner´s nomenclature of colors
 tags: design
 ---
-A [recreation with scans of the original 1821 color guidebook colors](https://www.c82.net/werner/) by Nicholas Rougeux. They are extracted from from the scanned copy on the [Internet Archive](https://archive.org/details/gri_c00033125012743312/page/n7/mode/2up). It is possible to use the patterned scans as tiles.
+A [recreation with scans of the original 1821 color guidebook colors](https://www.c82.net/werner/) by Nicholas Rougeux. They are extracted from the scanned copy on the [Internet Archive](https://archive.org/details/gri_c00033125012743312/page/n7/mode/2up). It is possible to use the patterned scans as tiles.
 
 Every color has a name, a description of where the color can be found on an animal, a vegetable, and a mineral. Nicholas even added photographs of those references to the colors.
 
