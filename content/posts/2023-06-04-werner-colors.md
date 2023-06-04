@@ -16,4 +16,5 @@ A [recreation with scans of the original 1821 color guidebook colors](https://ww
 <img src="/img/design/78-orpiment-orange.jpg" class="m-0 w-full h-full">
 <img src="/img/design/87-arterial-blood-red.jpg" class="m-0 w-full h-full">
 <img src="/img/design/103-chestnut-brown.jpg" class="m-0 w-100 h-100 w-full h-full">
+<figcaption>The ten shown colors are a fraction of the scanned colors. In total there are 110 colors.</figcaption>
 </figure>
