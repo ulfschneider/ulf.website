@@ -1,44 +1,35 @@
-/* Fluid font size variables, for browsers that support clamp */
-@supports (font-size: clamp(1rem, 1vw, 1rem)) {
-  :root {
-    --font-size-sm: clamp(0.99rem, 0.22vw + 0.94rem, 1.15rem);
-    --font-size-base: clamp(1.19rem, 0.26vw + 1.12rem, 1.38rem);
-    --font-size-lg: clamp(1.43rem, 0.31vw + 1.35rem, 1.65rem);
-    --font-size-xl: clamp(1.71rem, 0.37vw + 1.62rem, 1.98rem);
-    --font-size-2xl: clamp(2.05rem, 0.45vw + 1.94rem, 2.38rem);
-    --font-size-3xl: clamp(2.46rem, 0.54vw + 2.33rem, 2.85rem);
-    --font-size-4xl: clamp(2.95rem, 0.64vw + 2.79rem, 3.42rem);
-    --font-size-5xl: clamp(3.55rem, 0.77vw + 3.35rem, 4.11rem);
-  }
+@media(min-width: 400px) {
+        :root {
+    font-size: 18px;
+        }
 }
-/* Fallback variables for browsers that don't support clamp */
-@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
-  :root {
-    --font-size-sm: 0.99rem;
-    --font-size-base: 1.19rem;
-    --font-size-lg: 1.43rem;
-    --font-size-xl: 1.71rem;
-    --font-size-2xl: 2.05rem;
-    --font-size-3xl: 2.46rem;
-    --font-size-4xl: 2.95rem;
-    --font-size-5xl: 3.55rem;
-  }
-  @media screen and (min-width: 1560px) {
+
+@media(min-width: 600px) {
     :root {
-      --font-size-sm: 1.15rem;
-      --font-size-base: 1.38rem;
-      --font-size-lg: 1.65rem;
-      --font-size-xl: 1.98rem;
-      --font-size-2xl: 2.38rem;
-      --font-size-3xl: 2.85rem;
-      --font-size-4xl: 3.42rem;
-      --font-size-5xl: 4.11rem;
+    font-size: 19px;
     }
-  }
 }
 
-/* https://www.fluid-type-scale.com/calculate?minFontSize=19&minWidth=400&minRatio=1.2&maxFontSize=22&maxWidth=1560&maxRatio=1.2&steps=sm%2Cbase%2Clg%2Cxl%2C2xl%2C3xl%2C4xl%2C5xl&baseStep=base&prefix=font-size&decimals=2&includeFallbacks=on&useRems=on&remValue=16&previewFont=IBM+Plex+Mono*/
+@media(min-width: 800px) {
+    :root {
+    font-size: 20px;
+    }
+}
 
+/* Major third typescale https://typescale.com */
+
+:root {
+    --font-size-sm: 0.83rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.563rem;
+    --font-size-2xl: 1.953rem;
+    --font-size-3xl: 2.441rem;
+    --font-size-4xl: 3.052rem;
+    --font-size-5xl: 3.815rem;
+  }
+
+/* Use 1.75 factor for spacing rhythm */
 :root {
   --ryt-3xs: calc(var(--font-size-base) * 0.1);
   --ryt-2xs: calc(var(--font-size-base) * 0.19);
