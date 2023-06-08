@@ -135,7 +135,7 @@ For the weight of Shimano's brake hoses and their electronic wiring, I found som
 
 The crankset weights are without Powermeter. The weights of the SRAM cranks are from [r2-bike](https://r2-bike.com/). Please note the AXS Red crankset is *more than 100 grams lighter than the Dura-Ace* cranks. I don't know what part attributes to the smaller chainrings of AXS gearing, and what to the carbon crank arms. Anyway, that weight saving is impressive.
 
-
+<div class="bleed">
 <table>
   <caption><strong>Weight comparison of first and second tier electronic groupsets from Shimano and SRAM</strong><p>Weights are provided in gram.</p>
 </caption>
@@ -149,12 +149,13 @@ The crankset weights are without Powermeter. The weights of the SRAM cranks are 
     <tr><td>eTap AXS Force</td><td>2834</td><td>476</td><td>346 inc hose</td><td>236</td><td>199 inc battery</td><td>727 (33-46)</td><td>325 inc battery</td><td>266 (10-33)</td><td>259</td><td>0</td></tr>
   </tbody>
 </table>
+</div>
 
 
 The weight of the Shimano groupsets is competitive, making a decision for either one of Ultegra or Dura-Ace a good move. The weight-saving of Dura-Ace compared to Ultegra is 249g at an additional cost of 1660 €, judged by the pricing for the single components (not entire groupsets) of [bike24](https://www.bike24.de/radfahren/teile/fahrradschaltung/schaltgruppen?manufacturerId%5B0%5D=931) in January 2022. Let's have a look at the details:
 
-
-<table>
+<div class="bleed">
+<table class="mx-auto">
      <caption>
       <strong>Shimano groupset comparison in terms of weight and cost</strong>
       <p>Weights are provided in gram. Parts that are contained in both groupsets, like wiring and battery, are omitted.</p>
@@ -173,7 +174,7 @@ The weight of the Shimano groupsets is competitive, making a decision for either
     <tr><td>Chain</td><td>242</td><td>252</td><td class="bg-green text-white">-10</td><td class="bg-red text-white">10 €</td><td>50 €</td><td>40 €</td></tr>
     <tr><td>Total</td><td>2317</td><td>2566</td><td class="bg-green text-white">-249</td><td class="bg-red text-white">1660 €</td><td>3500 €</td><td>1840 €</td></tr>
 </table>
-
+</div>
 
 *A thought experiment:* By mixing both groupsets, a weight saving of 161 g at an additional cost of 685 € is possible when using Dura-Ace shifters, calipers, and the cassette – while taking everything else from Ultegra. The Dura-Ace shifters and calipers alone would save 93 g at the additional cost of 460 €. The weight-savings of the Dura-Ace derailleurs and chain is only 71 g at the cost of another 650 €. Even further, the Dura-Ace front derailleur will save 14 g at the additional cost of 230 €, while it's also possible to save 10 g by using the Dura-Ace chain at the additional cost of 10 € 😊.
 
@@ -272,8 +273,8 @@ Rotor cranksets don't have bonded materials as Shimano cranksets. Instead, they 
 
 Please note that I only found the total weights of the Shimano cranksets for the below-given weight comparison without differentiating into their parts. The Rotor ALDHU carbon cranks are not included in the comparison because the carbon cranks are only available for a 30mm axle. I'm only comparing compact chainring sizes for Rotor and Shimano because they are the smallest to get from Shimano.
 
-
-<table>
+<div class="bleed">
+<table class="mx-auto">
   <caption>
   <strong>Weight comparison of cranksets</strong>
   <p>Weights are provided in grams. Sources of data:</p>
@@ -295,7 +296,7 @@ Please note that I only found the total weights of the Shimano cranksets for the
     <tr><td>Ultegra 8100</td><td>700</td><td>←</td><td>←</td><td>←</td><td>←</td></tr>
     <tr><td>VEGAST Spider</td><td>724.5</td><td>399</td><td>60 /assumed</td><td>30.5 + 90 </td><td>145</td></tr></tbody>
 </table>
-
+</div>
 
 **My decision:** At the time of writing, during February 2022, I couldn't get anything from Rotor stating that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet, I think it is possible. For that reason, I will go for the @Rotor ALDHU 24 mm Crank Arms, 172.5 mm length{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Rotor BB1 BSA Threaded Bottom Bracket{}. A Shimano BSA Threaded Bottom Bracket (BB-R9100) doesn´t allow routing the Di2 wires through the bottom bracket shell because the plastic shell of the BB-R9100 is too large to get everything in – the Rotor BB1 works better with this regards.
 
@@ -305,7 +306,8 @@ Please note that I only found the total weights of the Shimano cranksets for the
 
 ## The wheels
 
-<table>
+<div class="bleed">
+<table class="mx-auto">
   <caption>
     <strong>My shortlist of wheels</caption>
   </caption>
@@ -321,6 +323,7 @@ Please note that I only found the total weights of the Shimano cranksets for the
   <tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura-Ace C50</a></td><td>1461 g</td><td>50 mm</td><td>21 mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>Cup and cone bearings</td></tr>
 </tbody>
 </table>
+</div>
 
 I would be happy with any of these wheelsets. They all have a ratchet freewheel 🙌, hooked rims 🙌, and external nipples 🙌. In my experience, a ratchet freewheel is sturdier and has quicker engagement. Hooked rims allow using non-tubeless tires. I don't know how the idea was born that internal nipples are a good thing? Eventually, a wheel requires trueing, and who wants to rip off the rim tape for that reason?
 
@@ -373,8 +376,8 @@ I ride Specialized Phenom Expert on most of my bikes, and that saddle is working
 
 It's a steel frame therefore metal cages should complement it. Ideally, titanium to save weight. The price of these cages is ridiculous when compared to the price of a crankset, for example.
 
-
-<table>
+<div class="bleed">
+<table class="mx-auto">
     <caption>
       <strong>An overview of titanium bottle cages</strong>
       <p>Weights are in grams.</p>
@@ -388,6 +391,7 @@ It's a steel frame therefore metal cages should complement it. Ideally, titanium
       <tr><td><a href="https://www.wolftoothcomponents.com/collections/bottle-cages/products/morse-cage-ti">Wolftooth Morse Cage Ti</a></td><td>33</td><td>77 €</td><td>The baseplate is even more sophisticated than the Sicuro plate and allows for 32 mm vertical adjustment. I think the name <em>Morse</em> is derived from the drilling pattern on the baseplate. The Morse Cage actually is a King Cage (made by the King) with a Wolftooth baseplate! Wolftooth also has an interesting mounting system for bottles and other accessories that is named B-RAD. The cage is optional available as a Limited Edition Black, which costs 93 €.</td></tr>
     </tbody>
   </table>
+  </div>
 
 **My decision:** 2 @King Cage Ti{2}, each one weighing 28 g. The prices of the others are too steep, and I do not need the sophisticated baseplate of the Wolftooth to slide the cages up and down. Dom Thomas certainly took care to place the cage mounts on his frame so that two cages with bottles would not create issues with touching each other.
 
