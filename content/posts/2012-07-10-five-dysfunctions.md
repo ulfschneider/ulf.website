@@ -16,7 +16,7 @@ Patrick Lencioni provides with his "Five Dysfunctions of a Team" [Lencioni 2002:
 
 See how the dysfunctions will typically be masked by a *team* in the below table.
 
-<table>
+<table class="noso">
   <caption>
     How a <em>team</em> will typically mask dysfunctions.
   </caption>
@@ -42,7 +42,7 @@ I find the model useful to analyze team dysfunctions, isolate root causes and wo
 
 The dysfunctions can be rephrased to give a positive direction. The below table states what should be achieved by a team on each layer.
 
-<table>
+<table class="noso">
   <caption>
     Rephrased dysfunctions in a positive way, describing what should be achieved by a team on each layer.
   </caption>

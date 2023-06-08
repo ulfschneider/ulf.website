@@ -9,7 +9,7 @@ For a start, the chain of work steps is of interest. Collect the steps for examp
 
 E.g., a short list of possible steps that are needed to get a piece of software done might be:
 
-<table>
+<table class="noso">
 <tr>
 <th>Work steps</th>
 </tr>
@@ -58,7 +58,7 @@ I do not speak for total specialization with only one specialist for each work s
 
 Sometimes it is of help to write down some professional roles that are needed to fulfill the tasks. The list with the work steps could be extended by writing proper skill sets or roles beside the work steps.
 
-<table>
+<table class="noso">
 <tr>
 <th>Work steps</th><th>Role</th>
 </tr>
