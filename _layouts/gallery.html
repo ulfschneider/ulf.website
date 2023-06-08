@@ -4,7 +4,7 @@ nodate: true
 ---
 <div class="no-indent">{{ content }}</div>
 <div id="image-container"></div>
-<button id="load-more">Load more images</button>
+<button id="{{site.navOlder.id}}">Load more images</button>
 <div class="mt-ryt-xl">
     {%- include "site-tags.html" -%}
 </div>
@@ -83,7 +83,7 @@ nodate: true
 
     loadImages({start: 0, end: getIndex()});
 
-    let loadMore = document.getElementById('load-more');
+    let loadMore = document.getElementById('{{site.navOlder.id}}');
     if (index + increment > imageData.length) {
         loadMore.style = 'display:none;';
     }

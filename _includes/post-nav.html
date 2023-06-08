@@ -6,7 +6,7 @@
     {% if newerPost %}
     <div class="leading-snug">
         <div class="text-sm whitespace-nowrap">Newer post</div>
-        <a class="no-underline font-bold" id="nav-newer" href="{{ newerPost.url }}">
+        <a class="no-underline font-bold" id="{{site.navNewer.id}}" href="{{ newerPost.url }}">
             {{ newerPost.data.title }}
         </a>
     </div>
@@ -14,7 +14,7 @@
     {% if olderPost %}
     <div class="leading-snug">
         <div class="text-sm whitespace-nowrap">Older post</div>
-        <a class="no-underline font-bold" id="nav-older" href="{{ olderPost.url }}">
+        <a class="no-underline font-bold" id="{{site.navOlder.id}}" href="{{ olderPost.url }}">
             {{ olderPost.data.title }}
         </a>
     </div>
