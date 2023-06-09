@@ -42,7 +42,7 @@
       margin-left: var(--bleed);
       margin-right: var(--bleed);
 
-      img {
+      > img {
         @apply object-center mx-auto;
       }
     }
