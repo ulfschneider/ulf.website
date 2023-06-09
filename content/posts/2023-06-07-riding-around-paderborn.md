@@ -3,6 +3,7 @@ title: Bike riding around Paderborn
 tags:
     - sports
     - strael
+layout: image
 ---
 <figure class="bleed">
 <img src="/img/strael/IMG_3843.jpg" alt="The Paderborn plateau in the evening sun with a wheat field andf wind turbines.">
