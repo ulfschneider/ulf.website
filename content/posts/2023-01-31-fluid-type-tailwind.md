@@ -7,7 +7,7 @@ Fluid type allows the fonts on your website to smoothly reduce size when the bro
 
 I´m using the [<cite>Fluid Type Scale Calculator</cite>](https://www.fluid-type-scale.com) by Aleksandr Hovhannisyan to define my fluid type scale and apply it for *{{site.hostname}}*. Because the website´s CSS is realized with Tailwind CSS, I had to integrate the output of Aleksandr´s type scale calculator into my Tailwind setup. This text is a short description of what I did to achieve that.
 
-## Type scale 
+## Type scale
 
 I have a file named `type-scale.css`, storing the scale calculation as the output of the Fluid Type Scale Calculator, copied and pasted, plus, in the second half, some custom CSS variables added by me.
 
@@ -55,13 +55,13 @@ I have a file named `type-scale.css`, storing the scale calculation as the outpu
   }
 }
 
-/* Below lines are not created by the type scale calculator. 
+/* Below lines are not created by the type scale calculator.
 They are added by me. */
 
-/* The link contains the exact settings 
-of my type scale for the type scale calculator. 
-I´m always adding this link, to have a quick 
-back-reference  into the type scale calculator 
+/* The link contains the exact settings
+of my type scale for the type scale calculator.
+I´m always adding this link, to have a quick
+back-reference  into the type scale calculator
 with current settings of the scale I´m using. */
 
 /* https://www.fluid-type-scale.com/calculate?minFontSize=19&minWidth=400&minRatio=1.2&maxFontSize=22&maxWidth=1560&maxRatio=1.2&steps=sm%2Cbase%2Clg%2Cxl%2C2xl%2C3xl%2C4xl%2C5xl&baseStep=base&prefix=font-size&decimals=2&includeFallbacks=on&useRems=on&remValue=16&previewFont=IBM+Plex+Mono*/

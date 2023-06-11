@@ -224,7 +224,7 @@
 
   /* eleventy embed tweet */
   blockquote.tweet-card {
-    @apply font-normal not-italic text-base my-ryt-lg font-body border-light overflow-x-auto max-w-rg;
+    @apply font-normal not-italic text-base font-body border-light overflow-x-auto max-w-rg;
 
     &::before,
     &::after {

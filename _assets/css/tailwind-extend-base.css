@@ -87,12 +87,12 @@
   }
   h2,
   .h2 {
-    @apply font-body font-bold text-base mt-ryt-2xl mb-ryt-lg  break-after-avoid;
+    @apply font-body font-bold text-base mt-ryt-2xl mb-ryt  break-after-avoid;
     text-wrap: balance;
   }
   h3,
   .h3 {
-    @apply font-body font-bold text-base mt-ryt-xl mb-ryt-lg  break-after-avoid;
+    @apply font-body font-bold text-base mt-ryt-xl mb-ryt  break-after-avoid;
     text-wrap: balance;
   }
   h4,
@@ -194,14 +194,7 @@
   }
 
   /*vertical rhythm*/
-  table,
-  figure,
-  blockquote {
-    @apply my-ryt-xl;
-  }
-  pre {
-    @apply my-ryt-lg;
-  }
+
   img + img {
     @apply my-ryt-lg;
   }
@@ -241,7 +234,7 @@
 
   /* table */
   table {
-    @apply text-sm border-collapse border-y-2 border-y-current;
+    @apply my-ryt-xl text-sm border-collapse border-y-2 border-y-current;
 
     caption {
       @apply text-left text-sm py-ryt-sm border-t-2 border-t-current;
@@ -271,6 +264,7 @@
   }
 
   figure {
+      @apply my-ryt-xl;
     figcaption {
       text-wrap: balance;
       @apply max-w-rg my-ryt-sm font-mono text-sm;
@@ -284,7 +278,7 @@
     }
   }
 
-  /* quote and blockquote */
+  /* quote */
 
   q {
     @apply italic;
@@ -292,11 +286,9 @@
   }
 
   blockquote {
-    --quote-size: 4em;
-    --quote-box-height: 0.5em;
     padding-left: calc(theme(spacing.ryt-lg) - theme(spacing.2));
     text-wrap: balance;
-    @apply border-l-2 border-l-current;
+    @apply border-l-2 border-l-current my-ryt;
   }
 
   blockquote > header,
@@ -319,11 +311,13 @@
   }
 
   /* pre and pre code */
+  pre {
+      @apply my-ryt;
+  }
   pre,
   pre > code {
     @apply text-sm leading-normal whitespace-pre-wrap font-mono break-words;
     word-spacing: normal;
-
     word-wrap: normal;
     -moz-tab-size: 4;
     -o-tab-size: 4;
