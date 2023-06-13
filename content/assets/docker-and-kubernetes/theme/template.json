@@ -1,0 +1,21 @@
+{
+  "Name": "Tokyo",
+  "Version": 0.1,
+  "Author": "iA",
+  "ShortDescription": "トーキョーは夜の七時...",
+  "LongDescription": "...早くあなたに逢いたい。\n- Different sizes for headlines\n- Top to bottom Tokyo Metro line gradients for backgrounds\n- Default white on dynamic color\n- System Font",
+  "Css": "tokyo.css",
+  "TitleFont": "System",
+  "BodyFont": "System",
+  "CssClasses": "variable-size-headings",
+  "LayoutExamples":[
+   {
+        "Name": "Title (H1) and Background",
+        "Markdown": "/Theme/image2.jpg\nBackground: true\nfilter: darken\n\n# TITLE\n#### with background",
+   },
+   {
+        "Name": "Title (H2) and Background",
+        "Markdown": "/Theme/image2.jpg\nBackground: true\nfilter: darken\n\n## SUBTITLE\n#### with background",
+   }
+]
+}
