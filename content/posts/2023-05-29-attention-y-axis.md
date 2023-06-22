@@ -1,6 +1,8 @@
 ---
 title: Y-axis to maintain focus
-tags: design
+tags:
+    - design
+    - accessibility
 ---
 Anchoring the most important information to the Y-axis will support better communication, says Christopher Butler in his essay [<cite>Using the Y-Axis to Maintain Focus and Attention</cite>](https://www.chrbutler.com/maintaining-an-attention-axis). It allows a viewer to accelerate their scan without losing accuracy or restarting their visual orientation process. I find Christopher´s two examples compelling in that regard.
 
