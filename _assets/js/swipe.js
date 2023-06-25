@@ -24,11 +24,11 @@ function handleSwipe() {
   }
 }
 
-function onLeftSwipe(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PIXEL) {
+function onSwipeLeft(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PIXEL) {
   gesture.leftSwipes.push({ handler: handler, thresholdPixel: thresholdPixel });
 }
 
-function onRightSwipe(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PIXEL) {
+function onSwipeRight(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PIXEL) {
   gesture.rightSwipes.push({ handler: handler, thresholdPixel: thresholdPixel });
 }
 
