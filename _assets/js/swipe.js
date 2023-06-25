@@ -1,4 +1,4 @@
-const DEFAULT_X_SWIPE_THRESHOLD_PIXEL = 100;
+const DEFAULT_X_SWIPE_THRESHOLD_PIXEL = 50;
 
 let gesture = {
   startX: 0,
@@ -11,14 +11,14 @@ function handleSwipe() {
   let move = gesture.endX - gesture.startX;
   if (move < 0) {
     for (let swipe of gesture.leftSwipes) {
-      if (Math.abs(move) >= swipe.threshold) {
-        swipe(Math.abs(move));
+      if (Math.abs(move) >= swipe.thresholdPixel) {
+        swipe.handler(Math.abs(move));
       }
     }
   } else {
     for (let swipe of gesture.rightSwipes) {
-      if (Math.abs(move) >= swipe.threshold) {
-        swipe(Math.abs(move));
+      if (Math.abs(move) >= swipe.thresholdPixel) {
+        swipe.handler(Math.abs(move));
       }
     }
   }
@@ -33,14 +33,10 @@ function onSwipeRight(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PIXEL)
 }
 
 addEventListener('touchstart', event => {
-  if (event.touches.length == 1) {
-    gesture.startX = event.changedTouches[0].screenX;
-  }
+  gesture.startX = event.changedTouches[0].screenX;
 });
 
 addEventListener('touchend', event => {
-  if (event.touches.length == 1) {
-    gesture.endX = event.changedTouches[0].screenX;
-    handleSwipe();
-  }
+  gesture.endX = event.changedTouches[0].screenX;
+  handleSwipe();
 });

@@ -7,14 +7,14 @@ const CACHE_VERSION = 'v1';
 module.exports = {
   cacheVersioning: {
     runtime: `${CACHE_VERSION}-0`,
-    script: `${CACHE_VERSION}-16`,
+    script: `${CACHE_VERSION}-17`,
     css: `${CACHE_VERSION}-85`,
     json: `${CACHE_VERSION}-0`,
     search: `${CACHE_VERSION}-2`,
     image: `${CACHE_VERSION}-1`,
     font: `${CACHE_VERSION}-0`
   },
-  name: "ulfschneider.io",
+  name: HOSTNAME,
   locale: "en",
   direction: "ltr",
   theme_color: "#e7e5e4",

@@ -93,13 +93,13 @@
     });
     addEventListener('load', () => {
         onSwipeLeft(() => {
-            let nav = document.querySelector('{{site.navOlder.id}}');
+            let nav = document.querySelector('#{{site.navOlder.id}}');
             if (nav && nav.href) {
                 location.href = nav.href;
             }
         });
         onSwipeRight(() => {
-            let nav = document.querySelector('{{site.navNewer.id}}');
+            let nav = document.querySelector('#{{site.navNewer.id}}');
             if (nav && nav.href) {
                 location.href = nav.href;
             }
