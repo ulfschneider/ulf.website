@@ -7,7 +7,6 @@ let gesture = {
   rightSwipes: []
 }
 
-
 function handleSwipe() {
   let move = gesture.endX - gesture.startX;
   if (move < 0) {
@@ -25,25 +24,23 @@ function handleSwipe() {
   }
 }
 
+function onLeftSwipe(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PIXEL) {
+  gesture.leftSwipes.push({ handler: handler, thresholdPixel: thresholdPixel });
+}
+
+function onRightSwipe(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PIXEL) {
+  gesture.rightSwipes.push({ handler: handler, thresholdPixel: thresholdPixel });
+}
+
 addEventListener('touchstart', event => {
   if (event.touches.length == 1) {
     gesture.startX = event.changedTouches[0].screenX;
-    gesture.startY = event.changedTouches[0].screenY;
   }
 });
 
 addEventListener('touchend', event => {
   if (event.touches.length == 1) {
     gesture.endX = event.changedTouches[0].screenX;
-    gesture.endY = event.changedTouches[0].screenY;
     handleSwipe();
   }
 });
-
-onLeftSwipe(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PIXEL) {
-  gesture.leftSwipes.push({ handler: handler, thresholdPixel: thresholdPixel });
-}
-
-onRightSwipe(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PIXEL) {
-  gesture.rightSwipes.push({ handler: handler, thresholdPixel: thresholdPixel });
-}
