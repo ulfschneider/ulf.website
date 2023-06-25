@@ -57,6 +57,7 @@ function maintainBackToStartVisibility() {
   }
 }
 
+
 /* Page load time */
 function displayLoadTime() {
   if (performance) {

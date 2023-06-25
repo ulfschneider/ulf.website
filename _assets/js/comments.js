@@ -1,4 +1,4 @@
-var commentsLoaded = false;
+let commentsLoaded = false;
 
 function printComments(commentList, data) {
   let indicateLoadFailure = document.querySelector('.comments .indicate-load-failure');
