@@ -1,6 +1,6 @@
 ---
 title: Edge searching a Jamstack site
-abstract: Server-side fulltext search with 11ty, MiniSearch, and Netlify edge functions
+abstract: Server-side fulltext search with 11ty, MiniSearch, and Netlify Edge Functions
 tags: code
 ---
 [[toc]]
@@ -15,19 +15,19 @@ Fulltext search for a website can be implemented on the server or on the client.
 - Once you have an index cached in the browser, and you access it throught a service worker, your search becomes offline capable.
 
 ## Server-side search
-- Searching on the server requires a server processing search logic. The usual static website doesn´t have that, but Netlify allows you to do it with Netlify edge functions in a Deno environment (which would be the fastest) or with Netlify serverless functions in a Node environment.
+- Searching on the server requires a server processing search logic. The usual static website doesn´t have that, but Netlify allows you to do it with Netlify Edge Functions in a Deno environment (which would be the fastest) or with Netlify serverless functions in a Node environment.
 - No need to download a fulltext search index to the client.
 - No need to implement caching on the client.
 - Every search operates on the most recent data from the most recent build.
 - The search is not offline capable.
 
-## Edge functions
+## Edge Functions
 
-My blog had a client-side search based on [Lunr](https://lunrjs.com) for years, but the recent availability of Netlify edge functions was reason enough trying to implement a server-side solution. I ended up doing it with [MiniSearch](https://github.com/lucaong/minisearch).
+My blog had a client-side search based on [Lunr](https://lunrjs.com) for years, but the recent availability of Netlify Edge Functions was reason enough trying to implement a server-side solution. I ended up doing it with [MiniSearch](https://github.com/lucaong/minisearch).
 
-Netlify edge functions come with the big advantage of being executed in a datacenter closest to the requesting user, which reduces latency. Because Netlify edge functions are executed in a Deno environment, the cold start time is faster than for serverless functions running in a Node environment, which again makes edge functions faster. A further bonus: Deno supports TypeScript out-of-the-box. Because Deno does not allow CommonJS imports, I had to replace the Lunr search library with MiniSearch.^[[<cite>Ryan Dahl and Deno</citre>](https://shoptalkshow.com/546/), Shop Talk Show 546, Dec 19, 2022]
+Netlify Edge Functions come with the big advantage of being executed in a datacenter closest to the requesting user, which reduces latency. Because Netlify Edge Functions are executed in a Deno environment, the cold start time is faster than for serverless functions running in a Node environment, which again makes Edge Functions faster. A further bonus: Deno supports TypeScript out-of-the-box. Because Deno does not allow CommonJS imports, I had to replace the Lunr search library with MiniSearch.^[[<cite>Ryan Dahl and Deno</citre>](https://shoptalkshow.com/546/), Shop Talk Show 546, Dec 19, 2022]
 
-Netlify edge functions have an execution time limit of 50 ms, a code size limit of 20 MB after compression, and the memory consumption for a set of deployed edge functions must not exceed 512 MB.^[[<cite>Edge Function Limits</cite>](https://docs.netlify.com/edge-functions/limits/), Netlify, 2022] All of those limitations shouldn´t be a problem for implementing a server-side fulltext search. 
+Netlify Edge Functions have an execution time limit of 50 ms, a code size limit of 20 MB after compression, and the memory consumption for a set of deployed Edge Functions must not exceed 512 MB.^[[<cite>Edge Function Limits</cite>](https://docs.netlify.com/edge-functions/limits/), Netlify, 2022] All of those limitations shouldn´t be a problem for implementing a server-side fulltext search.
 
 ## The search index
 
@@ -93,7 +93,7 @@ module.exports = {
             'date',
             'abstract',
             'content' //index the content
-        ]; 
+        ];
 
         const STORE_FIELDS = [
             'id', //the url of the page
@@ -101,7 +101,7 @@ module.exports = {
             'date',
             'abstract',
             'excerpt' //do not store the content but store the excerpt, this will reduce the size of the index
-        ]; 
+        ];
 
         let miniSearch = new MiniSearch({ fields: INDEX_FIELDS, storeFields: STORE_FIELDS });
         for (let item of collection) {
@@ -121,7 +121,7 @@ module.exports = {
 }
 ```
 
-You see there is a `mapItem` function called by the `searchIndex` function. `mapItem` is a helper which again refers to `removeHtml` and `excerptFromText`. It maps the content that is relevant for the search index from the 11ty data object to an object that can be consumed more easily during the search index processing. I´m removing all HTML from the content, because, for example, if I put a `figure` tag into a blog entry I do not want to get a hit for that entry when I search for *figure*. 
+You see there is a `mapItem` function called by the `searchIndex` function. `mapItem` is a helper which again refers to `removeHtml` and `excerptFromText`. It maps the content that is relevant for the search index from the 11ty data object to an object that can be consumed more easily during the search index processing. I´m removing all HTML from the content, because, for example, if I put a `figure` tag into a blog entry I do not want to get a hit for that entry when I search for *figure*.
 
 You can have all of the functions in a single file, in this case it´s  `_eleventy/filters.js`.
 
@@ -132,8 +132,8 @@ const striptags = require('striptags');
 
 module.exports = {
     // ...
-    removeHtml: function (text) {	
-        if (text) {            
+    removeHtml: function (text) {
+        if (text) {
             return striptags(text);
         }
     },
@@ -157,12 +157,12 @@ module.exports = {
             abstract: item.data.abstract,
             content: this.removeHtml(item.templateContent),
             excerpt: this.excerptFromText(item.templateContent)
-        } 
+        }
     }
     //...
 }
 ```
-	
+
 Do not forget to add the `searchIndex` filter to your `.eleventy.js` configuration file:
 
 ```js
@@ -184,18 +184,18 @@ The last thing is the `liveContent` collection. Here is how you can create it in
 
 //...
  eleventyConfig.addCollection('liveContent', async collectionAPI => {
-        //the content that is relevant for me 
+        //the content that is relevant for me
         //is inside of the 11ty input folder in content/**
         //- adjust this to your needs
-        return collectionAPI.getFilteredByGlob(['content/**']) 
+        return collectionAPI.getFilteredByGlob(['content/**'])
             .filter(item => {
-                //the publish date must not be in the future 
+                //the publish date must not be in the future
                 //and frontmatter data should not have an entry of draft: true or draft: yes
                 const now = new Date();
-                return item.date <= now && item.data.draft !== true && item.data.draft !== 'yes'; 
+                return item.date <= now && item.data.draft !== true && item.data.draft !== 'yes';
              });
     });
-    
+
 //...
 ```
 
@@ -206,47 +206,47 @@ This should generate a fulltext search index of your content with each build. Th
 The [Netlify documentation](https://docs.netlify.com/edge-functions/get-started/) is really good at explaining step by step how to setup your local environment. In my case, it was:
 
 1. Create the `.netlify.toml` file in the project root folder.
-2. Specify inside of the `.netlify.toml` where the edge functions will reside. If nothing is specified, it will be inside of `netlify/edge-functions`, relative to the project root folder. I want to have my edge function in the `_edge` folder, which means adding the following entry in the `.netlify.toml`: \
+2. Specify inside of the `.netlify.toml` where the Edge Functions will reside. If nothing is specified, it will be inside of `netlify/edge-functions`, relative to the project root folder. I want to have my Edge Function in the `_edge` folder, which means adding the following entry in the `.netlify.toml`: \
 	```txt
 	[build]
 	edge_functions = "_edge"
 	```
-3. Specify the URL path for the edge function, and the name of the file that holds the function code. In my case:
+3. Specify the URL path for the Edge Function, and the name of the file that holds the function code. In my case:
 	```txt
 	[[edge_functions]]
 	path = "/api/search"
 	function = "search"
 	```
-4. Install Netlify CLI globally with 
+4. Install Netlify CLI globally with
 	```shell
 	npm install netlify-cli -g
 	```
 
 ## The search function
 
-The edge function to respond to search requests with a URL path of  `/api/search/?query=edge` is pretty short. It will be stored in `_edge/search.js`. Because the function will be executed in Deno, only ES6 imports are allowed.
+The Edge function to respond to search requests with a URL path of  `/api/search/?query=edge` is pretty short. It will be stored in `_edge/search.js`. Because the function will be executed in Deno, only ES6 imports are allowed.
 
 ```js
 //_edge/search.js
 
 //import the search index as a json file
-import searchIndex from './search-index.json' assert {type: 'json'}; 
+import searchIndex from './search-index.json' assert {type: 'json'};
 
-//keep the version number of minisearch coming from the CDN 
-//in sync with the node package version that is used when 
+//keep the version number of minisearch coming from the CDN
+//in sync with the node package version that is used when
 //building the search index
-import MiniSearch from 'https://cdn.jsdelivr.net/npm/minisearch@6.0.0/dist/es/index.js'; 
+import MiniSearch from 'https://cdn.jsdelivr.net/npm/minisearch@6.0.0/dist/es/index.js';
 
 //create a new miniSearch instance with the search index
-//and provide the configured index fields 
-//that have been attached to the search index json 
+//and provide the configured index fields
+//that have been attached to the search index json
 //while building the index
 const miniSearch = MiniSearch.loadJSON(JSON.stringify(searchIndex), {
     fields: searchIndex.INDEX_FIELDS
-}); 
+});
 
 //the search itself
-//every Netlify edge function receives two arguments: 
+//every Netlify edge function receives two arguments:
 //the http request that was used for calling the function
 //and a Netlify specific context object (in this case we are not using it)
 //see https://docs.netlify.com/edge-functions/api/
@@ -259,7 +259,7 @@ export default async (request, context) => {
     try {
         let results = miniSearch.search(query, { prefix: true });
         const now = Date.now();
-        console.log(`The search for [${query}] returned ${results.length} results within ${now - start} milliseconds`); 
+        console.log(`The search for [${query}] returned ${results.length} results within ${now - start} milliseconds`);
         //searches typically run within 1 millisecond
         return new Response(JSON.stringify(results), {
             status: 200,
@@ -274,17 +274,17 @@ export default async (request, context) => {
 }
 ```
 
-That´s it. Now you have a edge function that will fulltext-search the contents of your static website in under 1 millisecond *on the server-side.* Try if it´s working by issuing the following command from within your project folder:
+That´s it. Now you have a Edge Function that will fulltext-search the contents of your static website in under 1 millisecond *on the server-side.* Try if it´s working by issuing the following command from within your project folder:
 
 ```shell
 netlify dev
 ```
 
-Your site will be built and a server starts up that is running your edge function. It´s important to know that the static artifacts of your site are built *before* the edge functions are loaded. This ensures edge functions loading up have access to the most recent artifacts – in our case the search index. Once the startup is completed, visit the address [http://localhost:8888/api/search/?query=edge](http://localhost:8888/api/search/?query=edge) to verify your edge function returns some hits in your local dev environment. Adjust the query term to your needs.
- 
+Your site will be built and a server starts up that is running your Edge Function. It´s important to know that the static artifacts of your site are built *before* the Edge Functions are loaded. This ensures Edge Functions loading up have access to the most recent artifacts – in our case the search index. Once the startup is completed, visit the address [http://localhost:8888/api/search/?query=edge](http://localhost:8888/api/search/?query=edge) to verify your Edge function returns some hits in your local dev environment. Adjust the query term to your needs.
+
 ## How the user will search
 
-The last step is to connect your edge function with the user interface and to render the search results. Below is a rough sketch of how you can do it. I´m sure you will do a much more elaborate UI than this one.
+The last step is to connect your Edge function with the user interface and to render the search results. Below is a rough sketch of how you can do it. I´m sure you will do a much more elaborate UI than this one.
 
 ```html
 <form id="searchform">
@@ -302,18 +302,18 @@ The last step is to connect your edge function with the user interface and to re
 async function submitSearch(event) {
     event.preventDefault();
 	let form = event.target;
-	let query = form.searchquery.value;    
+	let query = form.searchquery.value;
 	let resultBox = document.querySelector('#searchresults');
 	resultBox.innerHTML = '';
-    if (!query) { 
+    if (!query) {
         return;
     }
     try {
-		let response = await fetch(`/api/search/?query=${query}`);	
+		let response = await fetch(`/api/search/?query=${query}`);
         if (response.status != 200) {
             throw (`${response.status} ${response.statusText}`);
         }
-        let searchResults = await response.json();	
+        let searchResults = await response.json();
         if (searchResults.length) {
             let resultList = document.createElement('ul');
             for (let result of searchResults) {
@@ -321,11 +321,11 @@ async function submitSearch(event) {
                 listElement.innerHTML = `<a href="${result.id}">${result.title}</a>`;
                 resultList.appendChild(listElement);
             }
-            resultBox.innerHTML = `Results for query <strong>${query}</strong>`;          
+            resultBox.innerHTML = `Results for query <strong>${query}</strong>`;
             resultBox.appendChild(resultList);
         } else {
             resultBox.innerHTML = `No results for query <strong>${query}</strong>`;
-        }		
+        }
     } catch (error) {
 	  	resultBox.innerHTML = error.toString();
     }
@@ -355,18 +355,18 @@ And here is how the code will work when searching *{{site.hostname}}.*
 async function submitSearch(event) {
     event.preventDefault();
 	let form = event.target;
-	let query = form.searchquery.value;    
+	let query = form.searchquery.value;
 	let resultBox = document.querySelector('#searchresults');
 	resultBox.innerHTML = '';
-    if (!query) { 
+    if (!query) {
         return;
     }
     try {
-		let response = await fetch(`{{site.base}}api/search/?query=${query}`);	
+		let response = await fetch(`{{site.base}}api/search/?query=${query}`);
         if (response.status != 200) {
             throw (`${response.status} ${response.statusText}`);
         }
-        let searchResults = await response.json();	
+        let searchResults = await response.json();
         if (searchResults.length) {
             let resultList = document.createElement('ul');
             for (let result of searchResults) {
@@ -374,11 +374,11 @@ async function submitSearch(event) {
                 listElement.innerHTML = `<a href="${result.id}">${result.title}</a>`;
                 resultList.appendChild(listElement);
             }
-            resultBox.innerHTML = `Results for query <strong>${query}</strong>`;          
+            resultBox.innerHTML = `Results for query <strong>${query}</strong>`;
             resultBox.appendChild(resultList);
         } else {
             resultBox.innerHTML = `No results for query <strong>${query}</strong>`;
-        }		
+        }
     } catch (error) {
 	  	resultBox.innerHTML = error.toString();
     }
@@ -389,5 +389,3 @@ form.addEventListener('submit', submitSearch);
 </figure>
 
 When you are satisfied with your solution, a simple `git push` will make it available on the internet. There is nothing to be configured in addition at Netlify.
-
-
