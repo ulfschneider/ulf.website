@@ -1,4 +1,5 @@
 const DEFAULT_X_SWIPE_THRESHOLD_PX = 50;
+const DEFAULT_Y_SWIPE_THRESHOLD_PX = 50;
 const DEFAULT_MAX_DURATION_SEC = .5;
 
 let gesture = {
@@ -8,8 +9,42 @@ let gesture = {
   endY: 0,
   startTime: 0,
   endTime: 0,
+  upSwipes: [],
+  downSwipes: [],
   leftSwipes: [],
   rightSwipes: []
+}
+
+function xSwipe(xMove) {
+  if (xMove < 0) {
+    for (let swipe of gesture.leftSwipes) {
+      if (Math.abs(xMove) >= swipe.thresholdPx) {
+        swipe.handler(Math.abs(xMove));
+      }
+    }
+  } else if (xMove > 0) {
+    for (let swipe of gesture.rightSwipes) {
+      if (Math.abs(xMove) >= swipe.thresholdPx) {
+        swipe.handler(Math.abs(xMove));
+      }
+    }
+  }
+}
+
+function ySwipe(yMove) {
+  if (yMove < 0) {
+    for (let swipe of gesture.upSwipes) {
+      if (Math.abs(yMove) >= swipe.thresholdPx) {
+        swipe.handler(Math.abs(yMove));
+      }
+    }
+  } else if (yMove > 0) {
+    for (let swipe of gesture.downSwipes) {
+      if (Math.abs(yMove) >= swipe.thresholdPx) {
+        swipe.handler(Math.abs(yMove));
+      }
+    }
+  }
 }
 
 function handleSwipe() {
@@ -22,31 +57,26 @@ function handleSwipe() {
   let xMove = gesture.endX - gesture.startX;
   let yMove = gesture.endY - gesture.startY;
   if (Math.abs(xMove) < Math.abs(yMove)) {
-    //this is a vertical swipe, we will not take care
-    return;
-  }
-
-  if (xMove < 0) {
-    for (let swipe of gesture.leftSwipes) {
-      if (Math.abs(xMove) >= swipe.thresholdPixel) {
-        swipe.handler(Math.abs(xMove));
-      }
-    }
-  } else if (xMove > 0) {
-    for (let swipe of gesture.rightSwipes) {
-      if (Math.abs(xMove) >= swipe.thresholdPixel) {
-        swipe.handler(Math.abs(xMove));
-      }
-    }
+    ySwipe(yMove);
+  } else if (Math.abs(xMove) > Math.abs(yMove)) {
+    xSwipe(xMove)
   }
 }
 
-function onSwipeLeft(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PX) {
-  gesture.leftSwipes.push({ handler: handler, thresholdPixel: thresholdPixel });
+function onSwipeUp(handler, thresholdPx = DEFAULT_Y_SWIPE_THRESHOLD_PX) {
+  gesture.upSwipes.push({ handler: handler, thresholdPx: thresholdPxl });
 }
 
-function onSwipeRight(handler, thresholdPixel = DEFAULT_X_SWIPE_THRESHOLD_PX) {
-  gesture.rightSwipes.push({ handler: handler, thresholdPixel: thresholdPixel });
+function onSwipeDown(handler, thresholdPx = DEFAULT_Y_SWIPE_THRESHOLD_PX) {
+  gesture.downSwipes.push({ handler: handler, thresholdPx: thresholdPx });
+}
+
+function onSwipeLeft(handler, thresholdPx = DEFAULT_X_SWIPE_THRESHOLD_PX) {
+  gesture.leftSwipes.push({ handler: handler, thresholdPx: thresholdPx });
+}
+
+function onSwipeRight(handler, thresholdPx = DEFAULT_X_SWIPE_THRESHOLD_PX) {
+  gesture.rightSwipes.push({ handler: handler, thresholdPx: thresholdPx });
 }
 
 addEventListener('touchstart', event => {

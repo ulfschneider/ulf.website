@@ -1,5 +1,4 @@
 <script defer src="/js/site-scripts-{{site.cacheVersioning.script}}.js"></script>
-<script defer src="/js/swipe-{{site.cacheVersioning.script}}.js"></script>
 <script defer src="/js/sotable-{{site.cacheVersioning.script}}.js"></script>
 <script defer src="/js/active-toc-{{site.cacheVersioning.script}}.js"></script>
 <script defer src="/js/autocomplete-{{site.cacheVersioning.script}}.js"></script>
@@ -91,22 +90,7 @@
             }
         }
     });
-    /*
-    addEventListener('load', () => {
-        onSwipeLeft(() => {
-            let nav = document.querySelector('#{{site.navOlder.id}}');
-            if (nav && nav.href) {
-                location.href = nav.href;
-            }
-        });
-        onSwipeRight(() => {
-            let nav = document.querySelector('#{{site.navNewer.id}}');
-            if (nav && nav.href) {
-                location.href = nav.href;
-            }
-        });
-    });
-*/
+
     addEventListener('load', () => {
         sotable()
     });
