@@ -1,6 +1,8 @@
 ---
 title: Now, next, later
-tags: agile
+tags:
+    - agile
+    - star
 ---
 A roadmap planning, categorized into
 
