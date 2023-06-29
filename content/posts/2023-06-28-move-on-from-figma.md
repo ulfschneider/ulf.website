@@ -18,3 +18,6 @@ Reading Shamsi Brinn´s article [<cite>Why I moved on from Figma</cite>](https:/
 - No design can think of everything upfront. Edge cases, responsiveness and accessibility can be tested in their native habitat.
 - Design and technical goals can be measured at the same cadence, building team cohesion.
 - The one constant we can rely on is that projects change and morph, which is what agile strives to embody for engineers. Functional prototyping embraces that reality for designers, too.
+
+P.S.
+A day later I found DHH singing the same song: [<cite>Design for the web without Figma</cite>](https://world.hey.com/dhh/design-for-the-web-without-figma-4bc3a218)
