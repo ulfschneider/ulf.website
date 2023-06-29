@@ -11,9 +11,11 @@
         <main id="main" class="indent max-w-rg mx-auto mb-ryt-xl">
             {% include "title.html" %}
             {{ content }}
-            {% include "comments.html" %}
-            {% include "webmentions.html" %}
-            {% include "post-nav.html" %}
+            <div class="my-ryt-xl">
+                {% include "comments.html" %}
+                {% include "webmentions.html" %}
+                {% include "post-nav.html" %}
+            </div>
         </main>
     </div>
     {% include "footer.html" %}
