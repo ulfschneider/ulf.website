@@ -21,10 +21,11 @@ permalink: "{{site.search.url}}"
     function printResultEntry(parent, entry) {
         if (parent) {
             let article = document.createElement('article');
+            article.classList.add('my-ryt-lg');
             parent.appendChild(article);
             if (entry.title && entry.title != 'notitle') {
                 let title = document.createElement('h2');
-                title.classList = 'mt-ryt-lg mb-0 font-bold text-base font-body leading-snug';
+                title.classList = 'my-0 font-bold text-base font-body leading-snug';
                 article.appendChild(title);
 
                 let linkToArticle = document.createElement('a');
