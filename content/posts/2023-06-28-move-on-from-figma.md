@@ -5,7 +5,7 @@ tags:
     - css
     - star
 ---
-Reading Shamsi Brinn´s article [<cite>Why I moved on from Figma</cite>](https://nohandoff.org/why-i-dont-use-figma/) made me nod many times. Shamsi is doing functional prototypes with HTML and Bootstrap instead of creating Figma-based upfront designs. She articulates so many insightful points in a way I couldn´t. Check out her [nohandoff.org](https://nohandoff.org) website, it´s great. My summary (the entire article is well worth reading):
+Reading Shamsi Brinn´s article [<cite>Why I moved on from Figma</cite>](https://nohandoff.org/why-i-dont-use-figma/) made me nod many times. Shamsi is doing functional prototypes for web applications with HTML and Bootstrap instead of creating Figma-based upfront designs. She articulates so many insightful points in a way I couldn´t. Check out her [nohandoff.org](https://nohandoff.org) website, it´s great. My summary (the entire article is well worth reading):
 
 ## Figma drawbacks
 - Project handoff is baked into Figma, because it is used to create an intermediate product.
