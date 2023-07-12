@@ -113,9 +113,12 @@ function isHtmlRequest(request) {
 
 //preCache on install
 addEventListener('install', async event => {
-  await event.waitUntil(preCache());
-  await self.skipWaiting(); //ensure that updates to the underlying
+  //ensure that updates to the underlying
   //service worker take effect immediately
+  //https://bitsofco.de/what-self-skipwaiting-does-to-the-service-worker-lifecycle/
+  await self.skipWaiting();
+
+  await event.waitUntil(preCache());
 });
 
 
