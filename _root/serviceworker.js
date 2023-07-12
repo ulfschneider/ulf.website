@@ -51,7 +51,7 @@ const CACHE_SETTINGS = {
 
   [SCRIPT_CACHE_NAME]: {
     maxAgeMinutes: 60 * 24 * 30, //expire scripts after 30 days
-    //serveNetworkFirst: true is default
+    //serveCacheFirst: true is default
   },
   [FONT_CACHE_NAME]: {
     maxAgeMinutes: 60 * 24 * 300, //expire fonts after 300 days
@@ -59,10 +59,10 @@ const CACHE_SETTINGS = {
   },
   [RUNTIME_CACHE_NAME]: {
     maxAgeMinutes: 60 * 24, //expire runtime entries after one day
-    //serveCacheFirst: true is default
+    //serveNetworkFirst: true is default
   },
   [CSS_CACHE_NAME]: {
-    maxAgeMinutes: 10, //FIXME 60 * 24 //expire css after one day
+    maxAgeMinutes: 60 * 24, //expire css after one day
     //serveCacheFirst: true is default
   },
   [JSON_CACHE_NAME]: {
@@ -121,7 +121,7 @@ addEventListener('install', async event => {
 
 //remove old static caches on activate
 addEventListener('activate', async event => {
-  const activate = async function() {
+  const activate = async function () {
     await clearOldCaches();
     await clients.claim(); //let this service worker set itself
     //as the controller for all clients within its scope
@@ -158,7 +158,7 @@ addEventListener('fetch', event => {
   const request = event.request;
   const cacheName = getCacheNameForRequest(request);
 
-  const handleEvent = async function() {
+  const handleEvent = async function () {
     if (isNetworkFirst(cacheName)) {
       let networkFirstResponse = await networkFirst(event);
       if (networkFirstResponse) {
@@ -354,7 +354,7 @@ function getDateTimestamp(response) {
 
 async function maintainExpiration({ response, maxAgeMinutes }) {
 
-  cloneHeaders = function(response) {
+  cloneHeaders = function (response) {
     let headers = new Headers();
     for (var kv of response.headers.entries()) {
       headers.append(kv[0], kv[1]);
@@ -362,7 +362,7 @@ async function maintainExpiration({ response, maxAgeMinutes }) {
     return headers;
   }
 
-  cloneResponse = async function(response) {
+  cloneResponse = async function (response) {
     try {
       let headers = cloneHeaders(response);
 
