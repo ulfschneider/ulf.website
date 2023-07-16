@@ -1,7 +1,7 @@
 <table>
   <caption>
     <strong>Shortcuts to navigate
-      <em>{{site.name}}</em>
+      <em>{{ site.name }}</em>
       with the keyboard</strong>
   </caption>
   <tr>
@@ -12,10 +12,10 @@
     {%- if nav.kbd != nil and nav.kbd != '' %}
       <tr>
         <td>
-          <a class="no-underline" href="{{nav.url}}">{{nav.label}}</a>
+          <a class="no-underline" href="{{nav.url}}">{{ nav.label }}</a>
         </td>
         <td>
-          <kbd>{{nav.kbd}}</kbd>
+          <kbd>{{ nav.kbd }}</kbd>
         </td>
       </tr>
     {%- endif -%}
@@ -24,10 +24,10 @@
     {%- if nav.kbd != nil and nav.kbd != '' %}
       <tr>
         <td>
-          <a class="no-underline" href="{{nav.url}}">{{nav.label}}</a>
+          <a class="no-underline" href="{{nav.url}}">{{ nav.label }}</a>
         </td>
         <td>
-          <kbd>{{nav.kbd}}</kbd>
+          <kbd>{{ nav.kbd }}</kbd>
         </td>
       </tr>
     {%- endif -%}
@@ -37,14 +37,14 @@
       <td>
         <a class="no-underline" href="#{{site.backToTop.id}}">
           {%- if site.backToTop.label -%}
-            {{site.backToTop.label}}
+            {{ site.backToTop.label }}
           {%- else -%}
             Back to Top
           {%- endif -%}
         </a>
       </td>
       <td>
-        <kbd>{{site.backToTop.kbd}}</kbd>
+        <kbd>{{ site.backToTop.kbd }}</kbd>
       </td>
     </tr>
   {%- endif -%}
@@ -52,13 +52,13 @@
     <tr>
       <td>
         {%- if site.navOlder.label -%}
-          {{site.navOlder.label}} (for paginated content)
+          {{ site.navOlder.label }} (for paginated content)
         {%- else -%}
           Older posts (for paginated content)
         {%- endif -%}
       </td>
       <td>
-        <kbd>{{site.navOlder.kbd}}</kbd>
+        <kbd>{{ site.navOlder.kbd }}</kbd>
       </td>
     </tr>
   {%- endif -%}
@@ -66,13 +66,13 @@
     <tr>
       <td>
         {%- if site.navNewer.label -%}
-          {{site.navNewer.label}} (for paginated content)
+          {{ site.navNewer.label }} (for paginated content)
         {%- else -%}
           Newer posts (for paginated content)
         {%- endif -%}
       </td>
       <td>
-        <kbd>{{site.navNewer.kbd}}</kbd>
+        <kbd>{{ site.navNewer.kbd }}</kbd>
       </td>
     </tr>
   {%- endif -%}

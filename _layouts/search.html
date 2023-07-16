@@ -4,200 +4,202 @@ nodate: true
 permalink: "{{site.search.url}}"
 ---
 <noscript>
-    <div class="max-w-rg">You cannot perform a search because JavaScript is disabled for your browser. Please consider
-        enabling JavaScript.</div>
+  <div class="max-w-rg">You cannot perform a search because JavaScript is disabled for your browser. Please consider
+    enabling JavaScript.</div>
 </noscript>
 {% include "search-field.html" %}
 
 <div class="my-ryt-xl" id="search-results"></div>
 
 <script>
-    function removeChildren(parent) {
-        if (parent) {
-            parent.innerHTML = '';
-        }
+  function removeChildren(parent) {
+    if (parent) {
+      parent.innerHTML = '';
     }
+  }
 
-    function printResultEntry(parent, entry) {
-        if (parent) {
-            let article = document.createElement('article');
-            article.classList.add('my-ryt-lg');
-            parent.appendChild(article);
-            if (entry.title && entry.title != 'notitle') {
-                let title = document.createElement('h2');
-                title.classList = 'my-0 font-bold text-base font-body leading-snug';
-                article.appendChild(title);
+  function printResultEntry(parent, entry) {
+    if (parent) {
+      let article = document.createElement('article');
+      article.classList.add('my-ryt-lg');
+      parent.appendChild(article);
+      if (entry.title && entry.title != 'notitle') {
+        let title = document.createElement('h2');
+        title.classList = 'my-0 font-bold text-base font-body leading-snug';
+        article.appendChild(title);
 
-                let linkToArticle = document.createElement('a');
-                linkToArticle.classList = 'no-underline';
-                linkToArticle.href = entry.id;
-                linkToArticle.innerHTML = entry.title;
-                title.appendChild(linkToArticle);
-            } else {
-                let abstract = entry.abstract || entry.excerpt;
-                let excerpt = document.createElement('p');
-                excerpt.innerHTML = abstract;
-                excerpt.appendChild(document.createTextNode(' '));
-                let linkToArticle = document.createElement('a');
-                linkToArticle.href = entry.id;
-                linkToArticle.innerHTML = 'Read more';
-                excerpt.appendChild(linkToArticle);
-                article.appendChild(excerpt);
+        let linkToArticle = document.createElement('a');
+        linkToArticle.classList = 'no-underline';
+        linkToArticle.href = entry.id;
+        linkToArticle.innerHTML = entry.title;
+        title.appendChild(linkToArticle);
+      } else {
+        let abstract = entry.abstract || entry.excerpt;
+        let excerpt = document.createElement('p');
+        excerpt.innerHTML = abstract;
+        excerpt.appendChild(document.createTextNode(' '));
+        let linkToArticle = document.createElement('a');
+        linkToArticle.href = entry.id;
+        linkToArticle.innerHTML = 'Read more';
+        excerpt.appendChild(linkToArticle);
+        article.appendChild(excerpt);
+      }
+      if (entry.humanDate || (entry.tags.length && ! entry.notags)) {
+        let aside = document.createElement('aside');
+        aside.classList = `${
+          entry.starred
+            ? entry.starred
+            : ''
+          } leading-snug`;
+        article.appendChild(aside);
+
+        if (entry.date) {
+          let date = document.createElement('time');
+          date.innerHTML += entry.humanDate;
+          date.classList = 'inline-block mr-ryt-sm';
+          aside.appendChild(date);
+          aside.appendChild(document.createTextNode(' '));
+        }
+
+        if (entry.tags.length && ! entry.notags) {
+          let tags = document.createElement('span');
+          aside.appendChild(tags);
+
+          for (let tag of entry.tags) {
+            if (tag.name == '{{site.starTag}}') {
+              let tagLink = document.createElement('a');
+              tagLink.href = tag.url;
+              tagLink.innerHTML = '{{site.starTagSymbol}}';
+              tagLink.classList = 'no-underline px-ryt-2xs mr-ryt-xs';
+              tags.appendChild(tagLink);
+              tags.appendChild(document.createTextNode(' '));
+              break;
             }
-            if (entry.humanDate || (entry.tags.length && !entry.notags)) {
-                let aside = document.createElement('aside');
-                aside.classList = `${entry.starred
-                    ? entry.starred
-                    : ''
-                    } leading-snug`;
-                article.appendChild(aside);
-
-                if (entry.date) {
-                    let date = document.createElement('time');
-                    date.innerHTML += entry.humanDate;
-                    date.classList = 'inline-block mr-ryt-sm';
-                    aside.appendChild(date);
-                    aside.appendChild(document.createTextNode(' '));
-                }
-
-                if (entry.tags.length && !entry.notags) {
-                    let tags = document.createElement('span');
-                    aside.appendChild(tags);
-
-                    for (let tag of entry.tags) {
-                        if (tag.name == '{{site.starTag}}') {
-                            let tagLink = document.createElement('a');
-                            tagLink.href = tag.url;
-                            tagLink.innerHTML = '{{site.starTagSymbol}}';
-                            tagLink.classList = 'no-underline px-ryt-2xs mr-ryt-xs';
-                            tags.appendChild(tagLink);
-                            tags.appendChild(document.createTextNode(' '));
-                            break;
-                        }
-                    }
-                    for (let tag of entry.tags) {
-                        if (tag.name != '{{site.starTag}}') {
-                            let tagLink = document.createElement('a');
-                            tagLink.href = tag.url;
-                            tagLink.innerHTML = tag.name;
-                            tagLink.classList = 'no-underline inline-block mr-ryt-xs';
-                            tags.appendChild(tagLink);
-                            tags.appendChild(document.createTextNode(' '));
-                        }
-                    }
-                }
+          }
+          for (let tag of entry.tags) {
+            if (tag.name != '{{site.starTag}}') {
+              let tagLink = document.createElement('a');
+              tagLink.href = tag.url;
+              tagLink.innerHTML = tag.name;
+              tagLink.classList = 'no-underline inline-block mr-ryt-xs';
+              tags.appendChild(tagLink);
+              tags.appendChild(document.createTextNode(' '));
             }
+          }
         }
+      }
     }
+  }
 
-    function printTitle() {
-        document.title = `Search "${humanQuery()
-            }"`;
+  function printTitle() {
+    document.title = `Search "${
+      humanQuery()
+    }"`;
+  }
+
+  function humanQuery() {
+    query = getParameterByName('query');
+    combine = getParameterByName('combine');
+    const split = splitSearchTerms(query);
+    return split.join(` ${combine} `);
+  }
+
+  function humanHtmlQuery() {
+    query = getParameterByName('query');
+    combine = getParameterByName('combine');
+    const split = splitSearchTerms(query);
+    return '<strong>' + split.join(` <span class="text-primary italic">${combine}</span> `) + '</strong>';
+  }
+
+  function printResultCount(searchResults, resultSet) {
+    let count = document.createElement('div');
+    count.classList.add('legible-rem-width');
+    if (resultSet.length == 0) {
+      count.innerHTML = 'Your search for ' + humanHtmlQuery() + ' did not return any results.';
+    } else if (resultSet.length == 1) {
+      count.innerHTML = 'One result for ' + humanHtmlQuery() + ':';
+    } else {
+      count.innerHTML = resultSet.length + ' results for ' + humanHtmlQuery() + ':';
+    } searchResults.append(count);
+  }
+
+  function printSearching() {
+    let searchResults = document.querySelector('#search-results');
+    if (! searchResults) {
+      console.error('The page does not have a DOM element with id=[#search-results]');
+      return;
     }
+    searchResults.innerHTML = 'Searching ' + humanHtmlQuery() + ' ...';
+  }
 
-    function humanQuery() {
-        query = getParameterByName('query');
-        combine = getParameterByName('combine');
-        const split = splitSearchTerms(query);
-        return split.join(` ${combine} `);
+  function printSearchResults(resultSet) {
+    let searchResults = document.querySelector('#search-results');
+    if (! searchResults) {
+      console.error('The page does not have a DOM element with id=[#search-results]');
+      return;
     }
-
-    function humanHtmlQuery() {
-        query = getParameterByName('query');
-        combine = getParameterByName('combine');
-        const split = splitSearchTerms(query);
-        return '<strong>' + split.join(` <span class="text-primary italic">${combine}</span> `) + '</strong>';
+    removeChildren(searchResults);
+    printTitle();
+    printResultCount(searchResults, resultSet);
+    if (resultSet.length) {
+      for (let entry of resultSet) {
+        printResultEntry(searchResults, entry);
+      }
     }
+  }
 
-    function printResultCount(searchResults, resultSet) {
-        let count = document.createElement('div');
-        count.classList.add('legible-rem-width');
-        if (resultSet.length == 0) {
-            count.innerHTML = 'Your search for ' + humanHtmlQuery() + ' did not return any results.';
-        } else if (resultSet.length == 1) {
-            count.innerHTML = 'One result for ' + humanHtmlQuery() + ':';
-        } else {
-            count.innerHTML = resultSet.length + ' results for ' + humanHtmlQuery() + ':';
-        } searchResults.append(count);
+  function printError(error) {
+    console.log(error);
+
+    let searchResults = document.querySelector('#search-results');
+    if (! searchResults) {
+      console.error('The page does not have a DOM element with id=[#search-results]');
+      return;
     }
-
-    function printSearching() {
-        let searchResults = document.querySelector('#search-results');
-        if (!searchResults) {
-            console.error('The page does not have a DOM element with id=[#search-results]');
-            return;
-        }
-        searchResults.innerHTML = 'Searching ' + humanHtmlQuery() + ' ...';
+    removeChildren(searchResults);
+    let errorMessage = document.createElement('div');
+    errorMessage.innerHTML = 'The search for ' + humanHtmlQuery() + ' could not be completed because of a failure.';
+    if (error && error.status && error.statusText) {
+      errorMessage.innerHTML += '</br>';
+      errorMessage.innerHTML += 'Status code ' + error.status + ': ' + error.statusText;
     }
+    searchResults.append(errorMessage);
+  }
 
-    function printSearchResults(resultSet) {
-        let searchResults = document.querySelector('#search-results');
-        if (!searchResults) {
-            console.error('The page does not have a DOM element with id=[#search-results]');
-            return;
-        }
-        removeChildren(searchResults);
-        printTitle();
-        printResultCount(searchResults, resultSet);
-        if (resultSet.length) {
-            for (let entry of resultSet) {
-                printResultEntry(searchResults, entry);
-            }
-        }
+  async function search() {
+    try {
+      printSearching();
+      let start = Date.now();
+      query = getParameterByName('query');
+      combine = getParameterByName('combine');
+      let response = await fetch('/api/search/?query=' + encodeURIComponent(query) + '&combine=' + combine);
+      let duration = Date.now() - start;
+
+      if (response.status == 200) {
+        let resultSet = await response.json();
+        console.log('The search for [' + humanQuery() + '] returned ' + resultSet.length + ' results within ' + duration + ' milliseconds');
+
+        printSearchResults(resultSet)
+      } else {
+        printError(response);
+      }
+    } catch (error) {
+      printError(error);
     }
+  }
 
-    function printError(error) {
-        console.log(error);
-
-        let searchResults = document.querySelector('#search-results');
-        if (!searchResults) {
-            console.error('The page does not have a DOM element with id=[#search-results]');
-            return;
-        }
-        removeChildren(searchResults);
-        let errorMessage = document.createElement('div');
-        errorMessage.innerHTML = 'The search for ' + humanHtmlQuery() + ' could not be completed because of a failure.';
-        if (error && error.status && error.statusText) {
-            errorMessage.innerHTML += '</br>';
-            errorMessage.innerHTML += 'Status code ' + error.status + ': ' + error.statusText;
-        }
-        searchResults.append(errorMessage);
+  function submitSearch() {
+    const query = getParameterByName('query');
+    if (query && query.trim()) {
+      search();
     }
+  }
 
-    async function search() {
-        try {
-            printSearching();
-            let start = Date.now();
-            query = getParameterByName('query');
-            combine = getParameterByName('combine');
-            let response = await fetch('/api/search/?query=' + encodeURIComponent(query) + '&combine=' + combine);
-            let duration = Date.now() - start;
-
-            if (response.status == 200) {
-                let resultSet = await response.json();
-                console.log('The search for [' + humanQuery() + '] returned ' + resultSet.length + ' results within ' + duration + ' milliseconds');
-
-                printSearchResults(resultSet)
-            } else {
-                printError(response);
-            }
-        } catch (error) {
-            printError(error);
-        }
+  addEventListener('pageshow', event => {
+    if (!event.persisted) {
+      submitSearch();
+    } else {
+      setTimeout(setFieldValues, 50);
     }
-
-    function submitSearch() {
-        const query = getParameterByName('query');
-        if (query && query.trim()) {
-            search();
-        }
-    }
-
-    addEventListener('pageshow', event => {
-        if (!event.persisted) {
-            submitSearch();
-        } else {
-            setTimeout(setFieldValues, 50);
-        }
-    });
+  });
 </script>

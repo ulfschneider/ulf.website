@@ -6,93 +6,96 @@ nodate: true
 <div id="image-container"></div>
 <button id="{{site.navOlder.id}}">Load more images</button>
 <div class="mt-ryt-xl">
-    {%- include "site-tags.html" -%}
+  {%- include "site-tags.html" -%}
 </div>
 
 {%- if tag != nil -%}
-{% assign imageData = collections[tag] | live | post | reverse | firstImage %}
+  {% assign imageData = collections[tag] | live | post | reverse | firstImage %}
 {%- else -%}
-{% assign imageData = collections.liveContent | post | firstImage %}
+  {% assign imageData = collections.liveContent | post | firstImage %}
 {%- endif %}
 
 <script>
-    var imageData = {{imageData}};
-    var index = getIndex();
-    var year;
-    var increment = {{site.paginationSize}};
-    var container = document.getElementById('image-container');
+  var imageData = {{imageData}};
+  var index = getIndex();
+  var year;
+  var increment = {{site.paginationSize}};
+  var container = document.getElementById('image-container');
 
-    function appendImageCard(imgData) {
+  function appendImageCard(imgData) {
 
-        let figure = document.createElement('figure');
-        figure.classList = 'm-0';
-        container.appendChild(figure);
+    let figure = document.createElement('figure');
+    figure.classList = 'm-0';
+    container.appendChild(figure);
 
-        let anchor = document.createElement('a');
-        anchor.classList = 'no-underline inline-block';
-        anchor.href = imgData.url;
-        figure.appendChild(anchor);
+    let anchor = document.createElement('a');
+    anchor.classList = 'no-underline inline-block';
+    anchor.href = imgData.url;
+    figure.appendChild(anchor);
 
-        let img = document.createElement('img');
-        img.src = imgData.smallSrc;
-        img.alt = imgData.alt;
-        img.classList = 'fit-contain';
-        img.setAttribute('loading', 'lazy');
-        if (imgData.width && imgData.height) {
-            img.setAttribute('width', imgData.width);
-            img.setAttribute('height', imgData.height);
-            img.setAttribute('style', `aspect-ratio:${imgData.width
-                }/${imgData.height
-                }`);
-        }
-        anchor.appendChild(img);
+    let img = document.createElement('img');
+    img.src = imgData.smallSrc;
+    img.alt = imgData.alt;
+    img.classList = 'fit-contain';
+    img.setAttribute('loading', 'lazy');
+    if (imgData.width && imgData.height) {
+      img.setAttribute('width', imgData.width);
+      img.setAttribute('height', imgData.height);
+      img.setAttribute('style', `aspect-ratio:${
+        imgData.width
+      }/${
+        imgData.height
+      }`);
+    }
+    anchor.appendChild(img);
 
-        if (imgData.title) {
-            let figcaption = document.createElement('figcaption');
-            figcaption.classList = `${imgData.starred
-                ? imgData.starred
-                : ''
-                } leading-snug font-body`;
-            figcaption.innerHTML = imgData.title;
-            anchor.appendChild(figcaption);
-        }
-
+    if (imgData.title) {
+      let figcaption = document.createElement('figcaption');
+      figcaption.classList = `${
+        imgData.starred
+          ? imgData.starred
+          : ''
+        } leading-snug font-body`;
+      figcaption.innerHTML = imgData.title;
+      anchor.appendChild(figcaption);
     }
 
-    function getIndex() {
-        let queryString = location.search;
-        let params = new URLSearchParams(queryString);
-        let index = parseInt(params.get("index"));
-        return index
-            ? index
-            : 0;
+  }
+
+  function getIndex() {
+    let queryString = location.search;
+    let params = new URLSearchParams(queryString);
+    let index = parseInt(params.get("index"));
+    return index
+      ? index
+      : 0;
+  }
+
+  function loadImages({start, end}) {
+    start = start
+      ? start
+      : 0;
+    end = end
+      ? end + increment
+      : start + increment;
+
+    for (let i = start; i < end && i < imageData.length; i++) {
+      appendImageCard(imageData[i]);
     }
+  }
 
-    function loadImages({start, end}) {
-        start = start
-            ? start
-            : 0;
-        end = end
-            ? end + increment
-            : start + increment;
+  loadImages({start: 0, end: getIndex()});
 
-        for (let i = start; i < end && i < imageData.length; i++) {
-            appendImageCard(imageData[i]);
-        }
+  let loadMore = document.getElementById('{{site.navOlder.id}}');
+  if (index + increment > imageData.length) {
+    loadMore.style = 'display:none;';
+  }
+  loadMore.addEventListener('click', event => {
+    index += increment;
+    history.replaceState(null, '', location.pathname + '?index=' + index);
+    loadImages({start: index});
+    if (index + increment >= imageData.length) {
+      loadMore.style = 'display:none;';
     }
-
-    loadImages({start: 0, end: getIndex()});
-
-    let loadMore = document.getElementById('{{site.navOlder.id}}');
-    if (index + increment > imageData.length) {
-        loadMore.style = 'display:none;';
-    }
-    loadMore.addEventListener('click', event => {
-        index += increment;
-        history.replaceState(null, '', location.pathname + '?index=' + index);
-        loadImages({start: index});
-        if (index + increment >= imageData.length) {
-            loadMore.style = 'display:none;';
-        }
-    });
+  });
 </script>

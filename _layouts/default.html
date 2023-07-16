@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html class="no-js" id="{{site.backToTop.id}}" lang="{{site.locale}}" dir="{{site.direction}}">
+<html
+  class="no-js"
+  id="{{site.backToTop.id}}"
+  lang="{{site.locale}}"
+  dir="{{site.direction}}">
 
-<head>
+  <head>
     {% include "head.html" %}
-</head>
+  </head>
 
-<body class="break-words flex flex-col">
+  <body class="break-words flex flex-col">
     <div class="grow shrink-0 px-ryt">
-        {% include "header.html" %}
-        <main id="main" class="indent max-w-rg mx-auto mb-ryt-xl">
-            {% include "title.html" %}
-            {{ content }}
-            <div class="my-ryt-xl">
-                {% include "comments.html" %}
-                {% include "webmentions.html" %}
-                {% include "post-nav.html" %}
-            </div>
-        </main>
+      {% include "header.html" %}
+      <main id="main" class="indent max-w-rg mx-auto mb-ryt-xl">
+        {% include "title.html" %}
+        {{ content }}
+        <div class="my-ryt-xl">
+          {% include "comments.html" %}
+          {% include "webmentions.html" %}
+          {% include "post-nav.html" %}
+        </div>
+      </main>
     </div>
     {% include "footer.html" %}
-</body>
+  </body>
 
 </html>

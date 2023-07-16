@@ -1,37 +1,37 @@
 {%- if reducetitle -%}
-{%- assign reducedTitleStyle = "text-base font-body font-bold tracking-normal" -%}
+  {%- assign reducedTitleStyle = "text-base font-body font-bold tracking-normal" -%}
 {%- endif -%}
 {%- if title != "" and title != nil and title != "notitle" and notitle == nil -%}
-{%- assign hasTitle = true -%}
+  {%- assign hasTitle = true -%}
 {%- endif -%}
 {%- if tagIntro != "" and tagIntro != nil -%}
-{%- assign hasTagIntro = true -%}
+  {%- assign hasTagIntro = true -%}
 {%- endif -%}
 {%- if tagIntro == "" -%}
-{%- assign isBlog = true -%}
+  {%- assign isBlog = true -%}
 {%- endif -%}
 {%- if hasTitle == true or hasTagIntro == true or isBlog == true or refer or author -%}
-<header class="my-ryt-xl">
+  <header class="my-ryt-xl">
     {%- if nodate == nil -%}
-    <aside>
+      <aside>
         {% include "date-tags.html" %}
-    </aside>
+      </aside>
     {%- endif -%}
     {%- if hasTitle == true -%}
-    <h1 class="my-0 {{reducedTitleStyle}} max-w-rg">{{ title }}</h1>
+      <h1 class="my-0 {{reducedTitleStyle}} max-w-rg">{{ title }}</h1>
     {%- endif -%}
     {%- include "hero.html" -%}
     {%- if abstract -%}
-    <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}} my-ryt{% else %}my-ryt-lg text-lg{% endif %} max-w-rg">
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}} my-ryt{% else %}my-ryt-lg text-lg{% endif %} max-w-rg">
         {{ abstract }}
-    </div>
+      </div>
     {%- endif -%}
     {%- if refer -%}
-    <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg {% endif %} max-w-rg">{{ refer }}
-    </div>
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg {% endif %} max-w-rg">{{ refer }}
+      </div>
     {%- elsif author -%}
-    <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg{% endif %} max-w-rg">{{ author }}
-    </div>
+      <div class="{% if reducedTitleStyle %}{{reducedTitleStyle}}{% else %}my-ryt-lg{% endif %} max-w-rg">{{ author }}
+      </div>
     {%- endif -%}
-</header>
+  </header>
 {%- endif -%}
