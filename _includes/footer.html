@@ -5,10 +5,10 @@
         {%- include "search-field.html" -%}
       </div>
     {%- endif -%}
-    <nav class="max-w-rg columns-3xs">
+    <nav class="max-w-rg">
       <ul class="m-0 reset">
         {%- for p in site.footernav -%}
-          <li class="max-sm:my-2 {{p.classList}}" id="{{p.id}}">
+          <li class="my-ryt-xs {{p.classList}}" id="{{p.id}}">
             {%- if id == p.id and id -%}
               <a
                 class="no-underline whitespace-nowrap font-bold"
