@@ -28,7 +28,7 @@ Here is my compressed list of Jeremy´s statements:
 - [<cite>THE INTELLIGENCE ILLUSION, A practical guide to the business risks of Generative AI</cite>](https://illusion.baldurbjarnason.com), by Baldur Bjarnason
 - [<cite>GENERATIVE AI: WHAT YOU NEED TO KNOW</cite>](https://needtoknow.fyi), a free resource that will help you develop an AI-bullshit detector, by Baldur Bjarnason
 
-## The summary of Jeremy´s transcript, transformed by ChatGPT, not longer than 200 words
+## Jeremy´s transcript, transformed by ChatGPT into a summary, not longer than 200 words
 
 In a talk at the Design Business Association gathering in Brighton, the speaker discusses the concepts of "Web3" and "AI". Regarding "Web3", the speaker explains that it is a meaningless term often used to sell products or solutions. The mention of blockchain in relation to Web3 is seen as a solution in search of a problem. Moving on to "AI", the speaker describes it as a term that encompasses various technologies like large language models and machine learning. These models work by compressing data into tokens, which can generate outputs that may or may not match objective reality. The speaker suggests that AI can be seen as an advanced autocomplete tool, useful for transformations and generating quick ideas, but not as a problem-defining tool. The speaker warns against buying into the hype surrounding AI, driven by venture capital investments, and encourages businesses to focus on practical applications of the technology. The talk concludes with recommendations for further reading on AI and machine learning.
 
