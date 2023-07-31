@@ -14,5 +14,5 @@ A core characteristic of creating slowly is patience. Being patient with ourself
 </ul>
 Slow design is about embracing the time-consuming process of trial and error so we can figure out the most elegant, considered, and sustainable solution. 
 When reflecting on an achievement, people often say that it's not the act of succeeding that's most satisfying. It's the process of getting there.
-<footer><a href="https://carlbarenbrug.com/create-slowly">Carl Barenbrug</a></footer>
+<footer>Carl Barenbrug, <a href="https://carlbarenbrug.com/create-slowly"><cite>Create slowly</cite></a></footer>
 </blockquote>
