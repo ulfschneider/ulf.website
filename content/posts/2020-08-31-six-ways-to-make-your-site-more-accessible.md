@@ -12,6 +12,12 @@ tags: [accessibility, star]
 	~~~html
 	<label for="name">Name</label>
 	<input type="text" id="name" />
+
+	//alternatively:
+	<label>
+	Name
+	<input type="text" />
+	</label>
 	~~~
 - Use `<caption>` for tables.
 	~~~html
