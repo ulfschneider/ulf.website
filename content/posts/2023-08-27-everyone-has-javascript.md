@@ -1,5 +1,5 @@
 ---
-titel: Everyone has JavaScript, right?
+title: Everyone has JavaScript, right?
 tags: 
   - code
   - accessibility
