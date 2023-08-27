@@ -14,9 +14,7 @@ In my words: Use composition for *has-a* relationships.
 
 In my words: Use inheritance for *is-a* relationships.
 
-Stevens guidance:
-
-Inheritance should only be used when:
+Steven´s guidance: Inheritance should only be used when
 - Both classes are in the ==same logical domain==
 - The subclass is a ==proper subtype== of the superclass
 - The superclass’s implementation is ==necessary or appropriate== for the subclass
