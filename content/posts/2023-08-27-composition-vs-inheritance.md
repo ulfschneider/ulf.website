@@ -5,7 +5,7 @@ tags: code
 Steven Lowe has an article on the ThoughtWorks blog, elaborating on 	[<cite>Composition vs. Inheritance: How to Choose?</cite>](https://www.thoughtworks.com/insights/blog/composition-vs-inheritance-how-choose) The text covers examples of how to misuse inheritance.
 
 > The purpose of composition is obvious: make wholes out of parts. 
-> <footer>Steven Lowe</footerY
+> <footer>Steven Lowe</footer>
 
 In my words: Use composition for *has-a* relationships.
 
