@@ -1,6 +1,5 @@
 @layer components {
   :root {
-    --custom-check-border-width: 1px;
     --form-error-border-width: 2px;
     --form-input-border-width: 1px;
   }
