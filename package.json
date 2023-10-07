@@ -92,7 +92,7 @@
   "dependencies": {
     "@netlify/functions": "^1.4.0",
     "front-matter": "^4.0.2",
-    "netlify-cli": "^15.9.1",
+    "netlify-cli": "^15.11.0",
     "sanitize-html": "^2.10.0"
   }
 }

@@ -1,48 +1,59 @@
-<footer id="footer" class="shrink-0 bg-light dark:bg-light-dark py-ryt-xl px-ryt">
+<footer
+  id="footer"
+  class="shrink-0 bg-light dark:bg-light-dark py-ryt-xl px-ryt"
+>
   <div class="max-w-rg mx-auto">
     {%- if page.url != site.search.url -%}
-      <div class="no-js-hidden mb-ryt-lg">
-        {%- include "search-field.html" -%}
-      </div>
+    <div class="no-js-hidden mb-ryt-lg">
+      {%- include "search-field.html" -%}
+    </div>
     {%- endif -%}
     <nav class="max-w-rg">
       <ul class="m-0 reset">
         {%- for p in site.footernav -%}
-          <li class="my-ryt-xs {{p.classList}}" id="{{p.id}}">
-            {%- if id == p.id and id -%}
-              <a
-                class="no-underline whitespace-nowrap font-bold"
-                aria-current="page"
-                href="{{ p.url }}">
-                {{ p.label }}
-              </a>
-            {%- elsif p.id == 'edit-on-github' %}
-              <a
-                href="{{p.url}}{{page.inputPath}}"
-                target="_blank"
-                class="no-underline whitespace-nowrap">{{ p.label }}</a>
-            {%- else -%}
-              <a class="no-underline whitespace-nowrap" href="{{ p.url }}">{{ p.label }}</a>
-            {%- endif -%}
-          </li>
+        <li class="my-ryt-xs {{p.classList}}" id="{{p.id}}">
+          {%- if id == p.id and id -%}
+          <a
+            class="no-underline whitespace-nowrap font-bold"
+            aria-current="page"
+            href="{{ p.url }}"
+          >
+            {{ p.label }}
+          </a>
+          {%- elsif p.id == 'edit-on-github' %}
+          <a
+            href="{{p.url}}{{page.inputPath}}"
+            target="_blank"
+            class="no-underline whitespace-nowrap"
+            >{{ p.label }}</a
+          >
+          {%- else -%}
+          <a class="no-underline whitespace-nowrap" href="{{ p.url }}"
+            >{{ p.label }}</a
+          >
+          {%- endif -%}
+        </li>
         {%- endfor -%}
       </ul>
       {%- if site.backToTop and site.backToTop.id %}
-        <div id="back-to-start" class="no-js-hidden m-ryt p-ryt-sm flex-col justify-end bg-outline text-write-dark">
-          <div id="heading-hint" class="right text-sm hidden mb-ryt-sm leading-tight">
-            <a href="#" class="no-underline"></a>
-          </div>
-          <div class="text-right">
-            <span aria-hidden="true">↑</span>
-            <a href="#{{site.backToTop.id}}">
-              {%- if site.backToTop.label -%}
-                {{ site.backToTop.label }}
-              {%- else -%}
-                Back to Top
-              {%- endif -%}
-            </a>
-          </div>
+      <div
+        id="back-to-start"
+        class="no-js-hidden m-ryt p-ryt-sm flex-col justify-end bg-outline text-write-dark"
+      >
+        <div
+          id="heading-hint"
+          class="right text-sm hidden mb-ryt-sm leading-tight"
+        >
+          <a href="#" class="no-underline"></a>
         </div>
+        <div class="text-right">
+          <span aria-hidden="true">↑</span>
+          <a href="#{{site.backToTop.id}}">
+            {%- if site.backToTop.label -%} {{ site.backToTop.label }} {%- else
+            -%} Back to Top {%- endif -%}
+          </a>
+        </div>
+      </div>
       {%- endif %}
     </nav>
   </div>

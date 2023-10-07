@@ -1,10 +1,9 @@
-const dotenv = require('dotenv');
+const dotenv = require("dotenv");
 dotenv.config();
 
-const site = require('./site.js');
-const comments = require('../_api/comments.js');
+const site = require("./site.js");
+const comments = require("../_api/comments.js");
 let issueMap;
-
 
 async function loadComments() {
   if (issueMap) {
@@ -25,7 +24,7 @@ async function loadComments() {
 loadComments();
 
 function sleep(milliseconds) {
-  return new Promise(resolve => setTimeout(resolve, milliseconds));
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
 async function getIssueMap() {
@@ -38,17 +37,18 @@ async function getIssueMap() {
 
 async function getIssue(path) {
   let issueMap = await getIssueMap();
-  const url = new URL(path, process.env.ENVIRONMENT == 'DEV' ? 'http://localhost' : site.origin);
+  const url = new URL(
+    path,
+    process.env.ENVIRONMENT == "DEV" ? "http://localhost" : site.origin
+  );
   const key = url.hostname + url.pathname;
   return issueMap.get(key);
-
 }
 
 async function getIssueNumber(path) {
   let issue = await getIssue(path);
   return issue ? issue.number : undefined;
 }
-
 
 module.exports = {
   getRootIssueNumber: async (path) => {
@@ -63,6 +63,6 @@ module.exports = {
   },
   all: async () => {
     let issueMap = await getIssueMap();
-    return ['//TODO implement'];
-  }
-}
+    return ["//TODO implement"];
+  },
+};
