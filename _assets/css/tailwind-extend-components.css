@@ -43,11 +43,11 @@
   }
 
   .table-of-contents {
-    @apply my-ryt-lg text-sm;
+    @apply my-ryt-lg;
 
     &::before {
       content: "Contents";
-      @apply block font-bold text-sm;
+      @apply block font-bold;
     }
 
     a {

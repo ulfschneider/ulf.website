@@ -1,42 +1,40 @@
-{%- if posted or page.date and nodate == nil %}
-  {%- assign posted = page.date -%}
-{%- endif -%}
-{%- if updated or indicateModifiedDate != '' and modifiedDate and nodate == nil %}
-  {%- assign updated = modifiedDate -%}
-{%- endif -%}
-{%- if tags and notags == nil -%}
-  {%- assign tags = tags -%}
-{%- else -%}
-  {%- assign tags = nil -%}
-{%- endif -%}
-{%- if posted != nil or updated != nil or tags != nil -%}
-  <div class="inline-block text-sm">
-    {% if posted != nil %}
-      <time
-        class="inline-block {% if updated != nil or tags != nil %}mr-ryt-sm{% endif %}"
-        datetime="{{date | isoDate}}"
-        class="inline-block">{{ posted | humanDate }}</time>
-    {% endif %}
-    {% if updated %}
-      <span class="inline-block">
-        <span>Updated</span>
-        <time datetime="{{date | isoDate}}" class="inline-block {% if updated != nil or tags != nil %}mr-ryt-sm{%- endif -%}">{{ updated | humanDate }}</time>
-      </span>
-    {% endif %}
-    {% if tags != nil %}
-      {%- assign sortedTags = tags | uniq | sort -%}
-      <span class="inline-block">
-        {% for tag in sortedTags %}
-          {% if tag == site.starTag %}
-            <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs mr-ryt-xs">{{ site.starTagSymbol }}</a>
-          {% endif %}
-        {% endfor %}
-        {% for tag in sortedTags %}
-          {% if tag != site.starTag %}
-            <a href="{{tag | tagUrl}}" class="no-underline inline-block mr-ryt-xs">{{ tag }}</a>
-          {% endif %}
-        {% endfor %}
-      </span>
-    {% endif %}
-  </div>
+{%- if posted or page.date and nodate == nil %} {%- assign posted = page.date
+-%} {%- endif -%} {%- if updated or indicateModifiedDate != '' and modifiedDate
+and nodate == nil %} {%- assign updated = modifiedDate -%} {%- endif -%} {%- if
+tags and notags == nil -%} {%- assign tags = tags -%} {%- else -%} {%- assign
+tags = nil -%} {%- endif -%} {%- if posted != nil or updated != nil or tags !=
+nil -%}
+<div class="inline-block">
+  {% if posted != nil %}
+  <time
+    class="inline-block {% if updated != nil or tags != nil %}mr-ryt{% endif %}"
+    datetime="{{date | isoDate}}"
+    class="inline-block"
+    >{{ posted | humanDate }}</time
+  >
+  {% endif %} {% if updated %}
+  <span class="inline-block">
+    <span>Updated</span>
+    <time
+      datetime="{{date | isoDate}}"
+      class="inline-block {% if updated != nil or tags != nil %}mr-ryt{%- endif -%}"
+      >{{ updated | humanDate }}</time
+    >
+  </span>
+  {% endif %} {% if tags != nil %} {%- assign sortedTags = tags | uniq | sort
+  -%}
+  <span class="inline-block">
+    {% for tag in sortedTags %} {% if tag == site.starTag %}
+    <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs mr-ryt-xs"
+      >{{ site.starTagSymbol }}</a
+    >
+    {% endif %} {% endfor %} {% for tag in sortedTags %} {% if tag !=
+    site.starTag %}
+    <a href="{{tag | tagUrl}}" class="no-underline inline-block mr-ryt-xs"
+      >{{ tag }}</a
+    >
+    {% endif %} {% endfor %}
+  </span>
+  {% endif %}
+</div>
 {%- endif -%}

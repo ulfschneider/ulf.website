@@ -1,76 +1,71 @@
 {%- if pagedItems.pageCount > 1 -%}
-  <nav class="flex flex-row gap-ryt-lg max-w-xs text-sm">
-    {%- if pagedItems.newer != "" and pagedItems.newer != nil -%}
-      <a
-        id="{{site.navNewest.id}}"
-        class="whitespace-nowrap block"
-        href="{{pagedItems.newest}}">
-        {%- if site.navNewest.label -%}
-          {{ site.navNewest.label }}
-          {%- else -%}Newest{%- endif -%}
-      </a>
-      <a
-        id="{{site.navNewer.id}}"
-        class="whitespace-nowrap block no-underline"
-        href="{{pagedItems.newer}}">
-        <span class="underline">
-          {%- if site.navNewer.label -%}
-            {{ site.navNewer.label }}
-            {%- else -%}Newer posts{%- endif -%}
-        </span>
-        {% if site.navNewer.kbd %}
-          <kbd class="text-sm">{{ site.navNewer.kbd }}</kbd>
-        {% endif %}
-      </a>
-    {%- else -%}
-      <a
-        id="{{site.navNewest.id}}"
-        class="whitespace-nowrap block text-disabled pointer-events-none"
-        href=""
-        role="link"
-        aria-disabled="true">
-        {%- if site.navNewest.label -%}
-          {{ site.navNewest.label }}
-          {%- else -%}Newest{%- endif -%}
-      </a>
-      <a
-        id="{{site.navNewer.id}}"
-        class="whitespace-nowrap block no-underline pointer-events-none"
-        href=""
-        role="link"
-        aria-disabled="true">
-        <span class="underline text-disabled">
-          {%- if site.navNewer.label -%}
-            {{ site.navNewer.label }}
-            {%- else -%}Newer posts{%- endif -%}
-        </span>
-        {% if site.navNewer.kbd %}
-          <kbd class="text-sm text-disabled">{{ site.navNewer.kbd }}</kbd>
-        {% endif %}
-      </a>
-    {%- endif -%}
-
-    {%- if pagedItems.older != "" and pagedItems.older != nil -%}
-      <a
-        id="{{site.navOlder.id}}"
-        class="whitespace-nowrap no-underline block"
-        href="{{pagedItems.older}}">
-        <span class="underline">
-          {%- if site.navOlder.label -%}
-            {{ site.navOlder.label }}
-            {%- else -%}Older posts{%- endif -%}
-        </span>
-        {% if site.navOlder.kbd %}
-          <kbd class="text-sm">{{ site.navOlder.kbd }}</kbd>
-        {% endif %}
-      </a>
-    {%- endif -%}
-  </nav>
-{%- elsif pagedItems == nil -%}
+<nav class="flex flex-row gap-ryt-lg max-w-xs">
+  {%- if pagedItems.newer != "" and pagedItems.newer != nil -%}
   <a
-    id="nav-older"
-    class="text-primary inline-block"
-    href="{{site.blog}}">
-    All posts
+    id="{{site.navNewest.id}}"
+    class="whitespace-nowrap block"
+    href="{{pagedItems.newest}}"
+  >
+    {%- if site.navNewest.label -%} {{ site.navNewest.label }} {%- else
+    -%}Newest{%- endif -%}
   </a>
+  <a
+    id="{{site.navNewer.id}}"
+    class="whitespace-nowrap block no-underline"
+    href="{{pagedItems.newer}}"
+  >
+    <span class="underline">
+      {%- if site.navNewer.label -%} {{ site.navNewer.label }} {%- else -%}Newer
+      posts{%- endif -%}
+    </span>
+    {% if site.navNewer.kbd %}
+    <kbd>{{ site.navNewer.kbd }}</kbd>
+    {% endif %}
+  </a>
+  {%- else -%}
+  <a
+    id="{{site.navNewest.id}}"
+    class="whitespace-nowrap block text-disabled pointer-events-none"
+    href=""
+    role="link"
+    aria-disabled="true"
+  >
+    {%- if site.navNewest.label -%} {{ site.navNewest.label }} {%- else
+    -%}Newest{%- endif -%}
+  </a>
+  <a
+    id="{{site.navNewer.id}}"
+    class="whitespace-nowrap block no-underline pointer-events-none"
+    href=""
+    role="link"
+    aria-disabled="true"
+  >
+    <span class="underline text-disabled">
+      {%- if site.navNewer.label -%} {{ site.navNewer.label }} {%- else -%}Newer
+      posts{%- endif -%}
+    </span>
+    {% if site.navNewer.kbd %}
+    <kbd class="text-disabled">{{ site.navNewer.kbd }}</kbd>
+    {% endif %}
+  </a>
+  {%- endif -%} {%- if pagedItems.older != "" and pagedItems.older != nil -%}
+  <a
+    id="{{site.navOlder.id}}"
+    class="whitespace-nowrap no-underline block"
+    href="{{pagedItems.older}}"
+  >
+    <span class="underline">
+      {%- if site.navOlder.label -%} {{ site.navOlder.label }} {%- else -%}Older
+      posts{%- endif -%}
+    </span>
+    {% if site.navOlder.kbd %}
+    <kbd>{{ site.navOlder.kbd }}</kbd>
+    {% endif %}
+  </a>
+  {%- endif -%}
+</nav>
+{%- elsif pagedItems == nil -%}
+<a id="nav-older" class="text-primary inline-block" href="{{site.blog}}">
+  All posts
+</a>
 {%- endif -%}
