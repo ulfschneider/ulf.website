@@ -77,7 +77,7 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display font-normal text-3xl mt-ryt-2xl mb-ryt-xl break-after-avoid;
+    @apply font-display font-bold mt-ryt-2xl mb-ryt-xl break-after-avoid;
     text-wrap: balance;
   }
   h2,
