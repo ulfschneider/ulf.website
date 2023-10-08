@@ -3,8 +3,8 @@
   class="no-js"
   id="{{site.backToTop.id}}"
   lang="{{site.locale}}"
-  dir="{{site.direction}}">
-
+  dir="{{site.direction}}"
+>
   <head>
     {% include "head.html" %}
   </head>
@@ -13,16 +13,13 @@
     <div class="grow shrink-0 px-ryt">
       {% include "header.html" %}
       <main id="main" class="indent max-w-rg mx-auto mb-ryt-xl">
-        {% include "title.html" %}
-        {{ content }}
+        {% include "title.html" %} {{ content }}
         <div class="my-ryt-xl">
-          {% include "comments.html" %}
-          {% include "webmentions.html" %}
-          {% include "post-nav.html" %}
+          {% include "comments.html" %} {% include "webmentions.html" %} {%
+          include "post-nav.html" %}
         </div>
       </main>
     </div>
     {% include "footer.html" %}
   </body>
-
 </html>

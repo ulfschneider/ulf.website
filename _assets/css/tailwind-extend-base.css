@@ -50,11 +50,6 @@
     font: inherit;
   }
 
-  /* font-size*/
-  html {
-    @apply dark:bg-light-dark;
-  }
-
   /* base colors */
   body {
     @apply text-base text-write-dark dark:text-write-light dark:bg-back-dark;
