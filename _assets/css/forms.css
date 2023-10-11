@@ -30,6 +30,17 @@
     @apply border-0 align-baseline bg-primary text-white px-ryt-sm py-ryt-sm cursor-pointer;
   }
 
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  textarea {
+    @apply dark:text-write-bright;
+  }
+
   input[type="submit"]:disabled,
   input[type="reset"]:disabled,
   button:disabled,
