@@ -79,7 +79,7 @@
   .h1 {
     @apply font-display font-bold mt-ryt-2xl mb-ryt-xl break-after-avoid leading-snug;
     text-wrap: balance;
-    margin-bottom: 0.125em;
+    margin-bottom: 0.2em;
   }
   h2,
   .h2 {
@@ -125,7 +125,7 @@
 
   dt {
     @apply font-bold leading-snug;
-    margin-bottom: 0.125em;
+    margin-bottom: 0.2em;
   }
 
   dd {

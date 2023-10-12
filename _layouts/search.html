@@ -29,6 +29,7 @@ permalink: "{{site.search.url}}"
       if (entry.title && entry.title != "notitle") {
         let title = document.createElement("h2");
         title.classList = "my-0 font-bold text-base font-body leading-snug";
+        title.style = "margin-bottom:.2em;";
         article.appendChild(title);
 
         let linkToArticle = document.createElement("a");
@@ -71,7 +72,7 @@ permalink: "{{site.search.url}}"
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
               tagLink.innerHTML = "{{site.starTagSymbol}}";
-              tagLink.classList = "no-underline px-ryt-2xs mr-ryt-xs";
+              tagLink.classList = "no-underline px-ryt-2xs";
               tags.appendChild(tagLink);
               tags.appendChild(document.createTextNode(" "));
               break;
@@ -82,7 +83,7 @@ permalink: "{{site.search.url}}"
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
               tagLink.innerHTML = tag.name;
-              tagLink.classList = "no-underline inline-block mr-ryt-xs";
+              tagLink.classList = "no-underline inline-block";
               tags.appendChild(tagLink);
               tags.appendChild(document.createTextNode(" "));
             }
