@@ -30,9 +30,7 @@ nil -%}
     >
     {% endif %} {% endfor %} {% for tag in sortedTags %} {% if tag !=
     site.starTag %}
-    <a href="{{tag | tagUrl}}" class="no-underline inline-block mr-ryt-xs"
-      >{{ tag }}</a
-    >
+    <a href="{{tag | tagUrl}}" class="no-underline inline-block">{{ tag }}</a>
     {% endif %} {% endfor %}
   </span>
   {% endif %}
