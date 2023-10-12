@@ -21,8 +21,13 @@ collections.liveContent | post -%} {%- endif -%}
   <article class="my-ryt-lg">
     {% if p.data.title != "" and p.data.title != nil and p.data.title !=
     "notitle" and p.data.notitle == nil %}
-    <h2 class="my-0 text-base font-bold font-body leading-snug">
-      <a class="no-underline" href="{{p.url}}"> {{ p.data.title }} </a>
+    <h2
+      class="my-0 text-base font-bold font-body leading-snug"
+      style="margin-bottom: 0.125em"
+    >
+      <a class="no-underline inline-block" href="{{p.url}}">
+        {{ p.data.title }}
+      </a>
     </h2>
     {% else %}
     <p>
@@ -31,7 +36,7 @@ collections.liveContent | post -%} {%- endif -%}
       <a href="{{p.url}}">Read more</a>
     </p>
     {% endif %}
-    <aside class="{{p.data.starred}} leading-snug">
+    <aside class="leading-snug {{p.data.starred}}">
       {% include "date-tags.html" posted: p.date tags: p.data.tags notags:
       p.data.notags %}
     </aside>
