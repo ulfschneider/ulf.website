@@ -9,7 +9,7 @@ herocss: max-w-rg
 heroalt: Portrait of Ulf Schneider
 ---
 
-Welcome! My name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently working on great things at Weidmüller Interface.
+Welcome! My name is Ulf Schneider and this is my website. I´m a software developer and agile coach, currently working at Weidmüller Interface.
 
 At this place I´m taking notes about things that resonate with me, like web development, [web accessibility](/2020-08-21-my-approach-to-accessibility/), [agile software development](/blog/agile/), and fast bicycles. My most recent _riding tool_ is a [Fairlight Strael](/blog/strael/) steel-bike build.
 
@@ -30,7 +30,7 @@ My path through 30 years of software went like this:<dl class="timeline">
   <dt>2014 – 2023 Diebold Nixdorf</dt>
   <dd>Eight years employed as a software developer and agile coach at Diebold Nixdorf, heading the Professional Services Processes & Quality team when leaving the company.</dd>
   <dt>2023 – today Weidmüller Interface</dt>
-  <dd>Since February 2023 I am working as a software developer on great things at Weidmüller Interface.</dd>
+  <dd>Since February 2023 I am working as a software developer at Weidmüller Interface.</dd>
 </dl>
 
 <h2>Connect with me</h2>
