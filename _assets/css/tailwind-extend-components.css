@@ -43,7 +43,7 @@
   }
 
   .table-of-contents {
-    @apply my-ryt-lg;
+    @apply my-ryt-xl;
 
     &::before {
       content: "Contents";
