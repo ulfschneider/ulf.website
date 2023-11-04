@@ -187,21 +187,21 @@
     @apply no-underline;
   }
 
-  .footnotes-list {
+  ol.footnotes-list {
     counter-reset: footnote-counter;
   }
 
-  .footnotes-list::before {
+  ol.footnotes-list::before {
     content: "Footnotes";
     @apply h2 mt-ryt-xl mb-ryt block;
   }
 
-  .footnotes-list li {
+  ol.footnotes-list li {
     counter-increment: footnote-counter;
     @apply relative;
   }
 
-  .footnotes-list li::before {
+  ol.footnotes-list li::before {
     content: counter(footnote-counter);
     font-size: 75%;
     line-height: 0;
@@ -209,8 +209,16 @@
     @apply relative normal-nums font-bold;
   }
 
-  .footnotes-list li > p {
+  ol.footnotes-list li > p {
     @apply inline;
+  }
+
+  main > section > ol.footnotes-list {
+    @apply rg:-ml-ryt-lg;
+  }
+
+  main > section > ol.footnotes-list:before {
+    @apply rg:pl-ryt-lg;
   }
 
   /* cooklang */
