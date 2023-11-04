@@ -7,7 +7,7 @@ true or hasTagIntro == true or isBlog == true or refer or author -%}
   {%- if hasTitle == true -%}
   <h1>{{ title }}</h1>
   {%- endif -%} {%- include "hero.html" -%} {%- if abstract -%}
-  <div class="my-ryt-lg font-mono">{{ abstract }}</div>
+  <div class="my-ryt-lg">{{ abstract }}</div>
   {%- endif -%} {%- if refer -%}
   <div class="my-ryt-lg">{{ refer }}</div>
   {%- elsif author -%}
