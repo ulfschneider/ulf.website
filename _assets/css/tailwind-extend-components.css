@@ -206,7 +206,7 @@
     font-size: 75%;
     line-height: 0;
     top: -0.5em;
-    @apply relative normal-nums font-bold;
+    @apply relative normal-nums font-normal;
   }
 
   ol.footnotes-list li > p {
