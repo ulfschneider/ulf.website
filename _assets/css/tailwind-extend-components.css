@@ -223,7 +223,7 @@
 
   /* cooklang */
   ul[class^="cooklang-"] > li::before {
-    content: "▢";
+    content: "＿";
   }
 
   .cooklang-ingredients .amount-and-unit {
