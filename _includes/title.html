@@ -5,13 +5,13 @@ tagIntro == "" -%} {%- assign isBlog = true -%} {%- endif -%} {%- if hasTitle ==
 true or hasTagIntro == true or isBlog == true or refer or author -%}
 <header class="mt-ryt-2xl mb-ryt-xl">
   {%- if hasTitle == true -%}
-  <h1 class="max-w-rg">{{ title }}</h1>
+  <h1>{{ title }}</h1>
   {%- endif -%} {%- include "hero.html" -%} {%- if abstract -%}
-  <div class="my-ryt-lg max-w-rg">{{ abstract }}</div>
+  <div class="my-ryt-lg font-mono">{{ abstract }}</div>
   {%- endif -%} {%- if refer -%}
-  <div class="my-ryt-lg max-w-rg">{{ refer }}</div>
+  <div class="my-ryt-lg">{{ refer }}</div>
   {%- elsif author -%}
-  <div class="my-ryt-lg max-w-rg">{{ author }}</div>
+  <div class="my-ryt-lg">{{ author }}</div>
   {%- endif -%} {%- if nodate == nil -%}
   <aside>{% include "date-tags.html" %}</aside>
   {%- endif -%}
