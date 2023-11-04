@@ -178,6 +178,11 @@
     @apply not-italic -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap;
   }
 
+  main > ul,
+  main > ol {
+    @apply rg:-ml-ryt-lg;
+  }
+
   ul.reset,
   ol.reset {
     @apply list-none my-0 p-0;
@@ -296,6 +301,12 @@
     text-wrap: balance;
     &::before {
       content: "—";
+    }
+  }
+
+  @media (min-width: theme(screens.rg)) {
+    main > blockquote {
+      margin-left: calc(-1 * theme(spacing.ryt-lg) + theme(spacing.2));
     }
   }
 
