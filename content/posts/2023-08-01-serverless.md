@@ -14,7 +14,7 @@ This presentation discusses the concept of serverless computing and its evolutio
 	- Hardware servers require physical installation and administration.
 	-	Virtual machines decouple from hardware, can be prepared once, and are administered.
 	-	Containers are more lightweight, can be distributed easily, and start quickly but still require administration.
-	-	Serverless abstracts away servers, requires minimal administration, relies on cloud providers, is usage-based, and scales automatically.
+	-	Serverless abstracts away servers, requires minimal administration, relies on cloud providers, is priced by usage, and scales automatically.
 -	Serverless covers various aspects, such as functions, storage, authentication, monitoring, and alerting, putting the focus on business logic.
 -	Serverless is known for its reliability, speed, and global availability.
 
