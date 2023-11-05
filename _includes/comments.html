@@ -1,6 +1,6 @@
 {%- if site.allowCommenting == true -%} {%- if page | isPost -%}
 
-<details class="comments my-ryt-xl">
+<details class="comments">
   <summary>
     <strong class="comment-count">Comments</strong>
   </summary>
@@ -9,7 +9,7 @@
     data-comment-issue="{{page | commentRootIssueNumber}}"
   ></div>
   <div class="text-red font-bold indicate-load-failure"></div>
-  <form class="comment-form" name="comment">
+  <form class="comment-form mb-ryt-xl" name="comment">
     <label class="my-ryt-lg">
       Write a comment
       <div class="hint text-sm">

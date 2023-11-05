@@ -2,7 +2,7 @@
 getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
 | post | getNextCollectionItem: page %} {%- if newerPost or olderPost -%}
 <nav
-  class="flex flex-col sm:flex-row justify-between gap-ryt-lg my-ryt-xl max-w-rg"
+  class="flex flex-col gap-ryt-lg sm:flex-row justify-between sm:gap-ryt mt-ryt max-w-rg"
 >
   {% if newerPost %}
   <div class="leading-snug">
