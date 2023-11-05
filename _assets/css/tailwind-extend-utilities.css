@@ -26,6 +26,10 @@
     @apply outline-outline outline-4 outline-offset-2 outline;
   }
 
+  .text-balance {
+    text-wrap: balance;
+  }
+
   /* split */
   .split {
     grid-template-columns: repeat(2, 1fr);
