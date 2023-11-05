@@ -119,7 +119,7 @@
   }
 
   dt {
-    @apply font-bold leading-snug;
+    @apply font-bold leading-snug text-balance;
     margin-bottom: 0.2em;
   }
 
