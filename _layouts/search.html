@@ -52,7 +52,7 @@ permalink: "{{site.search.url}}"
         let aside = document.createElement("aside");
         aside.classList = `${
           entry.starred ? entry.starred + " " : ""
-        }leading-snug`;
+        }leading-snug text-sm`;
         article.appendChild(aside);
 
         if (entry.date) {

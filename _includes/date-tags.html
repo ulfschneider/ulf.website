@@ -4,7 +4,7 @@ and nodate == nil %} {%- assign updated = modifiedDate -%} {%- endif -%} {%- if
 tags and notags == nil -%} {%- assign tags = tags -%} {%- else -%} {%- assign
 tags = nil -%} {%- endif -%} {%- if posted != nil or updated != nil or tags !=
 nil -%}
-<div class="inline-block">
+<div class="inline-block text-sm">
   {% if posted != nil %}
   <time
     class="inline-block {% if updated != nil or tags != nil %}mr-ryt{% endif %}"
