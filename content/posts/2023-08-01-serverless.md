@@ -10,8 +10,8 @@ This presentation discusses the concept of serverless computing and its evolutio
 
 -	Serverless computing is a development approach where developers do not need to manage or interact with servers directly.
 - It marks the final stage in the evolution of virtualization, following hardware servers, virtual machines, and containers.
-	-	The traits of each evolutionary step are outlined:
-	Hardware servers require physical installation and administration.
+-	The traits of each evolutionary step are outlined:
+	- Hardware servers require physical installation and administration.
 	-	Virtual machines decouple from hardware, can be prepared once, and are administered.
 	-	Containers are more lightweight, can be distributed easily, and start quickly but still require administration.
 	-	Serverless abstracts away servers, requires minimal administration, relies on cloud providers, is usage-based, and scales automatically.
