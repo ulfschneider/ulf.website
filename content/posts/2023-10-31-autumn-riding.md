@@ -25,3 +25,8 @@ Reduced daylight, colder temperatures and wet conditions. What sounds like not s
 <img src="/img/strael/IMG_4826.jpg" alt="A picture with the drop handlebars pointing down a small and dark road, surrounded by wind turbines. The road leads into the final of an orange sunset with intense clouds.">
 </figure>
 
+> All along this road
+> not a single soul—only
+> autumn evening
+> <footer>Matsuo Bashō</footer>
+
