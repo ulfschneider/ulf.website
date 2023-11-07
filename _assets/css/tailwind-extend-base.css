@@ -236,7 +236,7 @@
     @apply my-ryt-xl text-sm border-collapse border-y-2 border-y-current;
 
     caption {
-      @apply text-left text-base py-ryt-sm border-t-2 border-t-current;
+      @apply text-left text-base py-ryt-sm border-t-2 border-t-current no-indent;
     }
     th {
       @apply text-left font-bold py-ryt-sm pr-ryt-sm align-top leading-tight;

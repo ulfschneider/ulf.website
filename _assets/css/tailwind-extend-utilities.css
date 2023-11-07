@@ -16,9 +16,9 @@
     }
   }
 
-  .no-indent:not(.no-indent .indent) {
+  .no-indent {
     p + p {
-      @apply mt-ryt indent-0;
+      @apply mt-ryt indent-0 !important;
     }
   }
 
