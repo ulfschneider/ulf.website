@@ -59,7 +59,7 @@ Let´s go into details to see how the Jamstack can live up to the promised benef
 
 The contents served to users are static files that can be handed over extremely fast, as there is no need anymore to evaluate logic for each user request by a web application server. It´s a low number millisecond thing. The CDN will take care of hosting the static files across the globe.
 
-To give an example, after [Smashing Magazine](https://www.smashingmagazine.com) moved away from five different technical platforms (including WordPress) to the Jamstack with the Netlify CDN^[[<cite>How Smashing Magazine Manages Content: Migration From WordPress To Jamstack</cite>](https://www.smashingmagazine.com/2020/01/migration-from-wordpress-to-jamstack/)], their time to first load went down from 800ms to 80ms – a factor of 10! You might want to verify that by yourself and visit [testmysite.io](https://testmysite.io/), key in the address `smashingmagazine.com` and see the impressive HTML download times for different continents. Smashing Magazine had 2.5 million visits each month (80,000 each day) at the time of running the project. 
+To give an example, after [Smashing Magazine](https://www.smashingmagazine.com) moved away from five different technical platforms (including WordPress) to the Jamstack with the Netlify CDN^[[<cite>How Smashing Magazine Manages Content: Migration From WordPress To Jamstack</cite>](https://www.smashingmagazine.com/2020/01/migration-from-wordpress-to-jamstack/)], their time to first load went down from 800ms to 80ms – a factor of 10! Smashing Magazine had 2.5 million visits each month (80,000 each day) at the time of running the project. 
 
 Loblaw, Canada´s largest food retailer with 2,800 stores nationwide, where 85% of canadians shop at at least once a week, is another great example. Justin Watts, Engineering Director at Loblaw Digital, points out in his talk [<cite>What got us here, won’t get us there</cite>](https://youtu.be/6VGu4PvEBag) that by moving to the Jamstack for one of their core businesses, [Shop like a mother](https://www.youtube.com/watch?v=qT4asha9cRA), they recognized extreme website improvements:^[[<cite>Loblaw Digital, Launching sites and campaigns in minutes with no-ops.</cite>](https://www.netlify.com/customers/loblaw/)]
 
@@ -102,8 +102,8 @@ It´s hard to overemphasize the benefit of *atomic* deployments. A deployment wi
 3. Run the automatic tests locally
 4. If no failures occurred, commit the changes of your source code – not the output of your build – into Git. You might want to ensure successful testing with a Git pre-commit hook. 
 5. Push your Git content to make it available to the CDN. You might have a previous step to push to your test environment.
-6. The CDN will build the static contents
-7. The CDN will run the automatic tests
+6. The provider will build the static contents
+7. The provider will run the automatic tests
 8. If no failure occurred, your site goes online. If a failure occured, no deployment will take place and instead the previous version of your site will remain online.
 
 Two important things here:
@@ -128,7 +128,7 @@ JavaScript can be used for the building of the static artifacts on the server an
 
 A Progressive Web App (PWA) will work without a Jamstack and vice versa – it´s two concepts that can stand each on their own. But, static artifacts, when delivered to the web browser, can nicely be injected into a PWA, where the browser will cache those artifacts under the control of a *service worker.* This will speed up the application once more, and, depending on your use case, will even make it offline-capable. The message is: The Jamstack and PWAs allow for excellent pairing. 
 
-Let´s have a look at what a PWA is. I always think of a PWA as: <q>You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.</q>
+Let´s have a look at what a PWA is. I think of a PWA as: <q>You can have an app (cross-platform, mobile and desktop) without the need of visiting an app store.</q>
 
 To quote [Aaron Gustafson](https://www.aaron-gustafson.com), Accessibility Strategist at Microsoft:
 
