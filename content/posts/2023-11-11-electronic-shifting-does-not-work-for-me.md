@@ -10,5 +10,8 @@ I decided to move away from electronic shifting, and not try to repair the Dura-
 
 This is a frustrating and pretty expensive learning I would have preferred to avoid. Maybe, if that can be counted as an excuse, at the time I decided for the Dura-Ace, Shimano´s statement was that likely all the new groupsets with 12 sprockets on the cassette would be electronic. Despite of that announcement, Shimano released two new mechanical 12-speed groups during the recent weeks, the 105 and the GRX. Only because of that release it was possible to swap the expensive electronic system for a cheaper and as well working mechanical one, otherwise I would have been locked into the electronic system.
 
-
+<figure>
+<img src="/img/strael/IMG_4938.jpg" alt="Close image of a GRX 820 mechanical rear derailleur mounted to a white Fairlight Strael with C36 Dura-Ace wheels.">
+<figcaption>The new mechanical GRX dreailleur – already dirty.</figcaption>
+</figure>
 
