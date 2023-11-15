@@ -119,12 +119,7 @@ addEventListener("install", (event) => {
 addEventListener("activate", (event) => {
   event.waitUntil(async () => {
     await clearOldCaches();
-    await clients.claim(); //let this service worker set itself
-    //as the controller for all clients within its scope
-    //use clients.claim() inside to
-    //the "activate" event listener
-    //so that clients do not need to be reloaded
-    //before their fetches will go through this service worker
+    await clients.claim();
   });
 });
 
