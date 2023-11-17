@@ -1,248 +1,235 @@
 @layer components {
-    :root {
-        --form-error-border-width: 2px;
-        --form-input-border-width: 1px;
-    }
+  :root {
+    --form-error-border-width: 2px;
+    --form-input-border-width: 1px;
+  }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    input[type="password"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="url"],
-    input[list],
-    input[type="submit"],
-    input[type="reset"],
-    button,
-    select,
-    textarea,
-    fieldset,
-    label,
-    legend {
-        @apply font-body placeholder-meta caret-primary dark:caret-primary-light appearance-none rounded-none font-normal text-inherit;
-    }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[list],
+  input[type="submit"],
+  input[type="reset"],
+  button,
+  select,
+  textarea,
+  fieldset,
+  label,
+  legend {
+    @apply font-body placeholder-meta caret-primary dark:caret-primary-light appearance-none rounded-none font-normal text-inherit;
+  }
 
-    input[type="submit"],
-    input[type="reset"],
-    button {
-        @apply bg-primary px-ryt-sm py-ryt-sm cursor-pointer border-0 align-baseline text-white;
-    }
+  input[type="submit"],
+  input[type="reset"],
+  button {
+    @apply bg-primary px-ryt-sm py-ryt-sm cursor-pointer border-0 align-baseline text-white;
+  }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    input[type="password"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="url"],
-    select,
-    textarea {
-        @apply dark:text-write-bright;
-    }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  select,
+  textarea {
+    @apply dark:text-write-bright;
+  }
 
-    input[type="submit"]:disabled,
-    input[type="reset"]:disabled,
-    button:disabled {
-        @apply cursor-not-allowed opacity-75;
-    }
+  input[type="submit"]:disabled,
+  input[type="reset"]:disabled,
+  button:disabled {
+    @apply cursor-not-allowed opacity-75;
+  }
 
-    @media (hover: hover) {
-        input[type="submit"]:hover:not(:disabled),
-        input[type="reset"]:hover:not(:disabled),
-        button:hover:not(:disabled),
-        .button:hover:not(:disabled) {
-            @apply brightness-125 backdrop-filter;
-        }
-    }
+  input[type="submit"]:active:not(:disabled),
+  input[type="reset"]:active:not(:disabled),
+  button:active:not(:disabled) {
+    @apply outline-indicator-lg;
+  }
 
-    input[type="submit"]:active:not(:disabled),
-    input[type="reset"]:active:not(:disabled),
-    button:active:not(:disabled) {
-        @apply brightness-125 backdrop-filter;
-    }
+  label > * {
+    @apply my-ryt-xs;
+  }
 
-    label > * {
-        @apply my-ryt-xs;
-    }
+  label:not(label.cc):not(.cc label),
+  legend {
+    @apply block align-baseline font-bold leading-tight;
+  }
 
-    label:not(label.cc):not(.cc label),
-    legend {
-        @apply block align-baseline font-bold leading-tight;
-    }
+  form .hint {
+    @apply text-meta font-normal leading-tight;
+  }
 
-    form .hint {
-        @apply text-meta font-normal leading-tight;
-    }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[list],
+  select {
+    @apply border-meta p-ryt-xs bg-field-light dark:bg-field-dark max-w-screen-rg w-full border align-middle leading-none;
+  }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    input[type="password"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="url"],
-    input[list],
+  select {
+    @apply max-w-max cursor-pointer overflow-ellipsis pr-[2.5em] align-baseline;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cpath vector-effect='non-scaling-stroke' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' d='M26 12 16 22 6 12'/%3E%3C/svg%3E");
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 1em auto, 100%;
+  }
+
+  @media (prefers-color-scheme: dark) {
     select {
-        @apply border-meta p-ryt-xs bg-field-light dark:bg-field-dark max-w-screen-rg w-full border align-middle leading-none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cpath vector-effect='non-scaling-stroke' stroke='#fff' stroke-linecap='round' stroke-linejoin='round' d='M26 12 16 22 6 12'/%3E%3C/svg%3E");
     }
+  }
 
-    select {
-        @apply max-w-max cursor-pointer overflow-ellipsis pr-[2.5em] align-baseline;
+  textarea {
+    @apply border-meta py-ryt-xs px-ryt-xs bg-field-light dark:bg-field-dark resize-none border font-normal leading-snug;
+  }
 
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cpath vector-effect='non-scaling-stroke' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' d='M26 12 16 22 6 12'/%3E%3C/svg%3E");
-        background-repeat: no-repeat, repeat;
-        background-position:
-            right 0.7em top 50%,
-            0 0;
-        background-size:
-            1em auto,
-            100%;
-    }
+  fieldset {
+    @apply border-none p-0;
+  }
 
-    @media (prefers-color-scheme: dark) {
-        select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cpath vector-effect='non-scaling-stroke' stroke='#fff' stroke-linecap='round' stroke-linejoin='round' d='M26 12 16 22 6 12'/%3E%3C/svg%3E");
-        }
-    }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[list]:focus,
+  select:focus,
+  textarea:focus {
+    @apply border-transparent;
+  }
 
-    textarea {
-        @apply border-meta py-ryt-xs px-ryt-xs bg-field-light dark:bg-field-dark resize-none border font-normal leading-snug;
-    }
-
-    fieldset {
-        @apply border-none p-0;
-    }
-
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="number"]:focus,
-    input[type="password"]:focus,
-    input[type="search"]:focus,
-    input[type="tel"]:focus,
-    input[type="url"]:focus,
-    input[list]:focus,
-    select:focus,
-    textarea:focus {
-        @apply border-transparent;
-    }
-
-    /*
+  /*
 https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/
 and
 https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-button-with-css
 */
 
-    /* .cc stands for "custom control" */
+  /* .cc stands for "custom control" */
 
-    :root {
-        --cc-size: 2em;
-        --cc-check-width: 1.2em;
-        --cc-check-height: 0.6em;
-        --cc-check-stroke: 3px;
-        --cc-radio-size: 1.3em;
-        --cc-border-width: 2px;
-    }
+  :root {
+    --cc-size: 2em;
+    --cc-check-width: 1.2em;
+    --cc-check-height: 0.6em;
+    --cc-check-stroke: 3px;
+    --cc-radio-size: 1.3em;
+    --cc-border-width: 2px;
+  }
 
-    label.cc,
-    .cc label {
-        @apply my-ryt-sm relative block cursor-pointer font-normal leading-tight;
-    }
+  label.cc,
+  .cc label {
+    @apply my-ryt-sm relative block cursor-pointer font-normal leading-tight;
+  }
 
-    label.cc > *,
-    .cc label > * {
-        margin-top: calc(
-            (var(--cc-size) - (theme(lineHeight.tight) * 1em)) / 2
-        ) !important;
-        margin-bottom: calc(
-            (var(--cc-size) - (theme(lineHeight.tight) * 1em)) / 2
-        ) !important;
-    }
+  label.cc > *,
+  .cc label > * {
+    margin-top: calc(
+      (var(--cc-size) - (theme(lineHeight.tight) * 1em)) / 2
+    ) !important;
+    margin-bottom: calc(
+      (var(--cc-size) - (theme(lineHeight.tight) * 1em)) / 2
+    ) !important;
+  }
 
-    .cc:focus-within input[type="checkbox"] + *::before,
-    .cc:focus-within input[type="radio"] + *::before {
-        @apply outline-indicator;
-    }
+  .cc:focus-within input[type="checkbox"] + *::before,
+  .cc:focus-within input[type="radio"] + *::before {
+    @apply outline-indicator;
+  }
 
-    .cc input[type="checkbox"],
-    .cc input[type="radio"] {
-        /* remove the control from flow */
-        position: absolute;
-        /* hide it visually */
-        opacity: 0.00001;
-        height: 1px;
-        width: 1px;
-        overflow: hidden;
-    }
+  .cc input[type="checkbox"],
+  .cc input[type="radio"] {
+    /* remove the control from flow */
+    position: absolute;
+    /* hide it visually */
+    opacity: 0.00001;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
 
-    .cc input[type="checkbox"] + *,
-    .cc input[type="radio"] + * {
-        @apply inline-block;
-        margin-left: calc(var(--cc-size) + 0.5em);
-    }
+  .cc input[type="checkbox"] + *,
+  .cc input[type="radio"] + * {
+    @apply inline-block;
+    margin-left: calc(var(--cc-size) + 0.5em);
+  }
 
-    /* box */
+  /* box */
 
-    .cc input[type="checkbox"] + *::before,
-    .cc input[type="radio"] + *::before {
-        @apply absolute box-border border-current;
-        content: "";
-        border-width: var(--cc-border-width);
-        left: 0;
-        top: 0;
-        height: var(--cc-size);
-        width: var(--cc-size);
-    }
+  .cc input[type="checkbox"] + *::before,
+  .cc input[type="radio"] + *::before {
+    @apply absolute box-border border-current;
+    content: "";
+    border-width: var(--cc-border-width);
+    left: 0;
+    top: 0;
+    height: var(--cc-size);
+    width: var(--cc-size);
+  }
 
-    .cc input[type="checkbox"][disabled] + *,
-    .cc input[type="radio"][disabled] + * {
-        @apply cursor-not-allowed opacity-50;
-    }
+  .cc input[type="checkbox"][disabled] + *,
+  .cc input[type="radio"][disabled] + * {
+    @apply cursor-not-allowed opacity-50;
+  }
 
-    /* circle */
+  /* circle */
 
-    .cc input[type="radio"] + *::before {
-        @apply rounded-full;
-    }
+  .cc input[type="radio"] + *::before {
+    @apply rounded-full;
+  }
 
-    /* check */
-    .cc input[type="checkbox"] + *::after {
-        @apply absolute box-border border-t-transparent bg-transparent opacity-0;
-        content: "";
-        left: calc((var(--cc-size) - var(--cc-check-width)) / 2);
-        top: calc((var(--cc-size) - var(--cc-check-width)) / 1.5);
-        width: var(--cc-check-width);
-        height: var(--cc-check-height);
-        transform: rotate(-45deg);
-        border: solid white;
-        border-width: 0 0 var(--cc-check-stroke) var(--cc-check-stroke);
-    }
+  /* check */
+  .cc input[type="checkbox"] + *::after {
+    @apply absolute box-border border-t-transparent bg-transparent opacity-0;
+    content: "";
+    left: calc((var(--cc-size) - var(--cc-check-width)) / 2);
+    top: calc((var(--cc-size) - var(--cc-check-width)) / 1.5);
+    width: var(--cc-check-width);
+    height: var(--cc-check-height);
+    transform: rotate(-45deg);
+    border: solid white;
+    border-width: 0 0 var(--cc-check-stroke) var(--cc-check-stroke);
+  }
 
-    /* select radio */
-    .cc input[type="radio"] + *::after {
-        @apply absolute box-border rounded-full bg-current;
-        content: "";
-        left: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
-        top: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
-        width: var(--cc-radio-size);
-        height: var(--cc-radio-size);
-    }
+  /* select radio */
+  .cc input[type="radio"] + *::after {
+    @apply absolute box-border rounded-full bg-current;
+    content: "";
+    left: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
+    top: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
+    width: var(--cc-radio-size);
+    height: var(--cc-radio-size);
+  }
 
-    /* unchecked / unselected */
+  /* unchecked / unselected */
 
-    .cc input[type="checkbox"]:not(:checked) + *::after,
-    .cc input[type="radio"]:not(:checked) + *::after {
-        @apply opacity-0;
-    }
+  .cc input[type="checkbox"]:not(:checked) + *::after,
+  .cc input[type="radio"]:not(:checked) + *::after {
+    @apply opacity-0;
+  }
 
-    /* checked / selected*/
+  /* checked / selected*/
 
-    .cc input[type="checkbox"]:checked + *::before {
-        @apply bg-current;
-    }
+  .cc input[type="checkbox"]:checked + *::before {
+    @apply bg-current;
+  }
 
-    .cc input[type="checkbox"]:checked + *::after,
-    .cc input[type="radio"]:checked + *::after {
-        @apply opacity-100;
-    }
+  .cc input[type="checkbox"]:checked + *::after,
+  .cc input[type="radio"]:checked + *::after {
+    @apply opacity-100;
+  }
 }
