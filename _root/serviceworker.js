@@ -204,7 +204,7 @@ async function clearOldCaches() {
       })
     )
     .then((cacheNames) =>
-      Promise.all(cacheNames.map((name) => caches.delete(name)))
+      Promise.allSettled(cacheNames.map((name) => caches.delete(name)))
     );
 }
 
