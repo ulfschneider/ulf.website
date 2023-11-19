@@ -211,6 +211,7 @@ async function cacheFirst(event, options) {
   options = Object.assign({ cacheName: cacheName }, options);
   let responseFromCache;
   if (cacheName) {
+    clearOldCaches();
     responseFromCache = await caches.match(request, options);
   }
 
