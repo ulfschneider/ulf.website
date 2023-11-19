@@ -80,7 +80,7 @@
     "postcss-purgecss": "^1.0.0",
     "purgecss-from-html": "^2.2.0",
     "replacestream": "^4.0.3",
-    "sharp": "^0.31.0",
+    "sharp": "^0.32.6",
     "sizeof": "^1.0.0",
     "slugify": "^1.6.5",
     "striptags": "^2.2.1",
