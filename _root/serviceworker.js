@@ -106,32 +106,25 @@ function isHtmlRequest(request) {
 
 //service worker install event
 addEventListener("install", (event) => {
-  event.waitUntil(async () => {
-    //Once successfully installed,
-    //the updated worker will wait until the existing worker is controlling zero clients.
-    //(Note that clients overlap during a refresh.)
-    //self.skipWaiting() prevents the waiting,
-    //meaning the service worker activates as soon as it's finished installing.
-    self.skipWaiting();
+  event.waitUntil(preCache());
 
-    //precache assets that should be available
-    //before the service worker activates
-    await preCache();
-  });
+  //Once successfully installed,
+  //the updated worker will wait until the existing worker is controlling zero clients.
+  //(Note that clients overlap during a refresh.)
+  //skipWaiting() prevents the waiting,
+  //meaning the service worker activates as soon as it's finished installing.
+  skipWaiting();
 });
 
 //service worker activate event
 addEventListener("activate", (event) => {
-  event.waitUntil(async () => {
-    //remove all old caches
-    await clearOldCaches();
+  event.waitUntil(clearOldCaches());
 
-    //By default, a page's fetches won't go through a service worker
-    //unless the page request itself went through a service worker.
-    //So you'll need to refresh the page to see the effects of the service worker.
-    //clients.claim()  overrides this default, and take control of non-controlled pages.
-    clients.claim();
-  });
+  //By default, a page's fetches won't go through a service worker
+  //unless the page request itself went through a service worker.
+  //So you'll need to refresh the page to see the effects of the service worker.
+  //clients.claim() overrides this default, and take control of non-controlled pages.
+  clients.claim();
 });
 
 addEventListener("message", (event) => {
