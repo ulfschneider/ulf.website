@@ -104,31 +104,42 @@ function isHtmlRequest(request) {
   return accept && accept.includes("text/html");
 }
 
-//preCache on install
+//service worker install event
 addEventListener("install", (event) => {
   event.waitUntil(async () => {
+    //Once successfully installed,
+    //the updated worker will wait until the existing worker is controlling zero clients.
+    //(Note that clients overlap during a refresh.)
+    //self.skipWaiting() prevents the waiting,
+    //meaning the service worker activates as soon as it's finished installing.
+    self.skipWaiting();
+
+    //precache assets that should be available
+    //before the service worker activates
     await preCache();
-    //ensure that updates to the underlying
-    //service worker take effect immediately
-    //https://bitsofco.de/what-self-skipwaiting-does-to-the-service-worker-lifecycle/
-    await self.skipWaiting();
   });
 });
 
-//remove old static caches on activate
+//service worker activate event
 addEventListener("activate", (event) => {
   event.waitUntil(async () => {
+    //remove all old caches
     await clearOldCaches();
-    await clients.claim();
+
+    //By default, a page's fetches won't go through a service worker
+    //unless the page request itself went through a service worker.
+    //So you'll need to refresh the page to see the effects of the service worker.
+    //clients.claim()  overrides this default, and take control of non-controlled pages.
+    clients.claim();
   });
 });
 
-//the trimCache command must be sent from the onload event of
-//the page where the service worker is registered
-//https://medium.com/@brandonrozek/limiting-the-cache-in-service-workers-revisited-f0245713e67e
 addEventListener("message", (event) => {
   var data = event.data;
   if (data.command == "trimCache") {
+    //the trimCache command must be sent from the onload event of
+    //the page where the service worker is registered
+    //https://medium.com/@brandonrozek/limiting-the-cache-in-service-workers-revisited-f0245713e67e
     for (let cacheName of CACHE_NAMES) {
       if (CACHE_SETTINGS[cacheName]) {
         const maxItems = CACHE_SETTINGS[cacheName].maxItems;
