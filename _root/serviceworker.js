@@ -208,8 +208,7 @@ async function networkFirst(event) {
 async function cacheFirst(event, options) {
   const request = event.request;
   const cacheName = getCacheNameForRequest(request);
-  options = options ? options : {};
-  options.cacheName = cacheName;
+  options = Object.assign({ cacheName: cacheName }, options);
   let responseFromCache;
   if (cacheName) {
     responseFromCache = await caches.match(request, options);
@@ -243,7 +242,7 @@ async function cacheFirst(event, options) {
         //because that is better than nothing
         return responseFromCache;
       } else {
-        return caches.match(OFFLINE_URL);
+        return caches.match(OFFLINE_URL, options);
       }
     });
   }
