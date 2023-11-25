@@ -3,7 +3,7 @@
 tagIntro != nil -%} {%- assign hasTagIntro = true -%} {%- endif -%} {%- if
 tagIntro == "" -%} {%- assign isBlog = true -%} {%- endif -%} {%- if hasTitle ==
 true or hasTagIntro == true or isBlog == true or refer or author -%}
-<header class="mt-ryt-2xl mb-ryt-xl">
+<header class="my-ryt-2xl">
   {%- if hasTitle == true -%}
   <h1>{{ title }}</h1>
   {%- endif -%} {%- include "hero.html" -%} {%- if abstract -%}
