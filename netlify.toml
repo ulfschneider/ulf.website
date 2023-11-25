@@ -11,10 +11,6 @@ status = 200
 edge_functions = "_api/_edge"
 
 [[edge_functions]]
-path = "/api/dummy"
-function = "dummy"
-
-[[edge_functions]]
 path = "/api/suggest"
 function = "suggest"
 
