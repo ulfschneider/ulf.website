@@ -4,10 +4,11 @@ title: About me
 nodate: true
 notags: true
 id: about
-hero: /img/ulf/ulf-16x9-900.jpg
-herocss: max-w-rg
-heroalt: Portrait of Ulf Schneider
 ---
+
+<figure>
+<img src="/img/ulf/ulf-16x9-900.jpg" alt="Portrait of Ulf Schneider">
+</figure>
 
 Welcome! My name is Ulf Schneider and this is my website. I´m a software developer and agile coach.
 

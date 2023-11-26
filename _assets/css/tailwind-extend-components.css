@@ -85,7 +85,7 @@
   table.sotable {
     button.sotable.restore,
     button.sotable.column {
-      @apply font-bold p-0 m-0 text-inherit bg-transparent;
+      @apply font-bold p-0 m-0 text-inherit text-left bg-transparent;
     }
     button.sotable.column .indicator {
       @apply ml-ryt-sm text-sm;
