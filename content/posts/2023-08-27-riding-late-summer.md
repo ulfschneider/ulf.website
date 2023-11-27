@@ -19,5 +19,10 @@ tags:
 <img src="/img/strael/IMG_4484.jpg" class="A close picture of the wet headtube of the Strael.">
 <img src="/img/strael/IMG_4476.jpg" alt="The Strael from the side in front of a dark wooden shed.">
 </div>
-<figcaption>Ready to continue the journey</figcaption>
+<figcaption>Ready to continue the journey …</figcaption>
+</figure>
+
+<figure>
+<img src="/img/strael/IMG_4481.jpg" class="A wet road, surrounded by some green trees and grain fields.">
+<figcaption>… on a wet road.</figcaption>
 </figure>
