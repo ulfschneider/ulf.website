@@ -20,3 +20,5 @@ html {
   hanging-punctuation: first allow-end last;
 }
  ```
+
+I already made this setting for the CSS of this blog.
