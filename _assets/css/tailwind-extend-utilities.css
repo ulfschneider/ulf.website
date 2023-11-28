@@ -10,16 +10,15 @@
     display: none;
   }
 
-  .indent:not(.indent .no-indent) {
-    p + p {
-      @apply my-0 indent-ryt-lg;
-    }
+  .indent p + p,
+  p.indent {
+    @apply my-0 indent-ryt-lg;
   }
 
-  .no-indent {
-    p + p {
-      @apply mt-ryt indent-0 !important;
-    }
+  p.no-indent,
+  .no-indent p,
+  .no-indent + p {
+    @apply mt-ryt indent-0 !important;
   }
 
   .outline-indicator {
