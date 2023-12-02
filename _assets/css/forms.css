@@ -126,7 +126,6 @@
       width: var(--radio-size);
       height: var(--radio-size);
       display: inline-block;
-      position: relative;
       border: var(--radio-border-width) solid currentColor;
       border-radius: 50%;
       vertical-align: middle;
@@ -137,17 +136,15 @@
       width: var(--radio-check-size);
       height: var(--radio-check-size);
       display: inline-block;
-      position: absolute;
       border-radius: 50%;
-      top: calc(
+      margin-top: calc(
         (var(--radio-size) - var(--radio-check-size)) / 2 -
           var(--radio-border-width)
       );
-      left: calc(
+      margin-left: calc(
         (var(--radio-size) - var(--radio-check-size)) / 2 -
           var(--radio-border-width)
       );
-      vertical-align: middle;
       background-color: currentColor;
     }
 
@@ -159,29 +156,26 @@
     input[type="checkbox"] {
       appearance: none;
       font-size: inherit;
-      width: var(--radio-size);
-      height: var(--radio-size);
+      width: var(--check-size);
+      height: var(--check-size);
       display: inline-block;
-      position: relative;
-      border: var(--radio-border-width) solid currentColor;
+      border: var(--check-border-width) solid currentColor;
       vertical-align: middle;
       margin-right: 0.5em;
     }
     input[type="checkbox"]:checked::after {
       content: "";
-      width: var(--radio-check-size);
-      height: var(--radio-check-size);
+      width: var(--check-check-size);
+      height: var(--check-check-size);
       display: inline-block;
-      position: absolute;
-      top: calc(
-        (var(--radio-size) - var(--radio-check-size)) / 2 -
-          var(--radio-border-width)
+      margin-top: calc(
+        (var(--check-size) - var(--check-check-size)) / 2 -
+          var(--check-border-width)
       );
-      left: calc(
-        (var(--radio-size) - var(--radio-check-size)) / 2 -
-          var(--radio-border-width)
+      margin-left: calc(
+        (var(--check-size) - var(--check-check-size)) / 2 -
+          var(--check-border-width)
       );
-      vertical-align: middle;
       background-color: currentColor;
     }
   }
