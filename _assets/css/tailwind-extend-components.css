@@ -235,7 +235,7 @@
     @apply flex align-middle;
   }
   p.markdown-alert-title svg {
-    @apply inline-block text-current mr-ryt-sm align-text-bottom;
+    @apply inline-block text-current mr-ryt-sm align-text-bottom fill-current;
   }
 
   @media (min-width: theme(screens.rg)) {
