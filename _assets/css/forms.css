@@ -136,6 +136,7 @@
       border-radius: 50%;
       vertical-align: middle;
       margin-right: 0.5em;
+      cursor: pointer;
     }
     input[type="radio"]:checked::after {
       content: "";
@@ -170,6 +171,7 @@
       border: var(--check-border-width) solid currentColor;
       vertical-align: middle;
       margin-right: 0.5em;
+      cursor: pointer;
     }
     input[type="checkbox"]:checked::after {
       content: "";
