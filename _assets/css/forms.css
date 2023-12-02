@@ -53,11 +53,17 @@
     @apply outline-indicator-lg;
   }
 
+  label {
+    @apply cursor-pointer;
+  }
+
   label > * {
     @apply my-ryt-xs;
   }
 
-  label:not(label.cc):not(.cc label),
+  label:not(label.cc):not(.cc label):not(label:has(input[type="checkbox"])):not(
+      label:has(input[type="radio"])
+    ),
   legend {
     @apply block align-baseline font-bold leading-tight;
   }
@@ -118,7 +124,7 @@
     :root {
       --radio-size: 2em;
       --radio-border-width: 2px;
-      --radio-check-size: 1.3em;
+      --radio-check-size: calc(var(--radio-size) - 14px);
     }
     input[type="radio"] {
       appearance: none;
@@ -137,6 +143,7 @@
       height: var(--radio-check-size);
       display: inline-block;
       border-radius: 50%;
+      vertical-align: top;
       margin-top: calc(
         (var(--radio-size) - var(--radio-check-size)) / 2 -
           var(--radio-border-width)
@@ -151,7 +158,8 @@
     :root {
       --check-size: 2em;
       --check-border-width: 2px;
-      --check-check-size: 1.3em;
+      --check-mark-size: calc(var(--check-size) - 12px);
+      --check-mark-border-width: 4px;
     }
     input[type="checkbox"] {
       appearance: none;
@@ -165,18 +173,23 @@
     }
     input[type="checkbox"]:checked::after {
       content: "";
-      width: var(--check-check-size);
-      height: var(--check-check-size);
+      transform: rotate(-65deg);
+      border: var(--check-mark-border-width) solid currentColor;
+      border-top: none;
+      border-right: none;
+      width: var(--check-mark-size);
+      height: calc(var(--check-mark-size) * 0.66);
       display: inline-block;
+      vertical-align: top;
       margin-top: calc(
-        (var(--check-size) - var(--check-check-size)) / 2 -
+        (var(--check-size) - var(--check-mark-size)) / 2 -
           var(--check-border-width)
       );
       margin-left: calc(
-        (var(--check-size) - var(--check-check-size)) / 2 -
+        (var(--check-size) - var(--check-mark-size)) / 2 -
           var(--check-border-width)
       );
-      background-color: currentColor;
+      background-color: transparent;
     }
   }
 }
