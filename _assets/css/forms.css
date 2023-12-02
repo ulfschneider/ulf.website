@@ -114,122 +114,75 @@
     @apply border-transparent;
   }
 
-  /*
-https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/
-and
-https://www.creativejuiz.fr/blog/en/tutorials/customize-checkbox-and-radio-button-with-css
-*/
+  @supports (appearance: none) {
+    :root {
+      --radio-size: 2em;
+      --radio-border-width: 2px;
+      --radio-check-size: 1.3em;
+    }
+    input[type="radio"] {
+      appearance: none;
+      font-size: inherit;
+      width: var(--radio-size);
+      height: var(--radio-size);
+      display: inline-block;
+      position: relative;
+      border: var(--radio-border-width) solid currentColor;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 0.5em;
+    }
+    input[type="radio"]:checked::after {
+      content: "";
+      width: var(--radio-check-size);
+      height: var(--radio-check-size);
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      top: calc(
+        (var(--radio-size) - var(--radio-check-size)) / 2 -
+          var(--radio-border-width)
+      );
+      left: calc(
+        (var(--radio-size) - var(--radio-check-size)) / 2 -
+          var(--radio-border-width)
+      );
+      vertical-align: middle;
+      background-color: currentColor;
+    }
 
-  /* .cc stands for "custom control" */
-
-  :root {
-    --cc-size: 2em;
-    --cc-check-width: 1.2em;
-    --cc-check-height: 0.6em;
-    --cc-check-stroke: 3px;
-    --cc-radio-size: 1.3em;
-    --cc-border-width: 2px;
-  }
-
-  label.cc,
-  .cc label {
-    @apply my-ryt-sm relative block cursor-pointer font-normal leading-tight;
-  }
-
-  label.cc > *,
-  .cc label > * {
-    margin-top: calc(
-      (var(--cc-size) - (theme(lineHeight.tight) * 1em)) / 2
-    ) !important;
-    margin-bottom: calc(
-      (var(--cc-size) - (theme(lineHeight.tight) * 1em)) / 2
-    ) !important;
-  }
-
-  .cc:focus-within input[type="checkbox"] + *::before,
-  .cc:focus-within input[type="radio"] + *::before {
-    @apply outline-indicator;
-  }
-
-  .cc input[type="checkbox"],
-  .cc input[type="radio"] {
-    /* remove the control from flow */
-    position: absolute;
-    /* hide it visually */
-    opacity: 0.00001;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-  }
-
-  .cc input[type="checkbox"] + *,
-  .cc input[type="radio"] + * {
-    @apply inline-block;
-    margin-left: calc(var(--cc-size) + 0.5em);
-  }
-
-  /* box */
-
-  .cc input[type="checkbox"] + *::before,
-  .cc input[type="radio"] + *::before {
-    @apply absolute box-border border-current;
-    content: "";
-    border-width: var(--cc-border-width);
-    left: 0;
-    top: 0;
-    height: var(--cc-size);
-    width: var(--cc-size);
-  }
-
-  .cc input[type="checkbox"][disabled] + *,
-  .cc input[type="radio"][disabled] + * {
-    @apply cursor-not-allowed opacity-50;
-  }
-
-  /* circle */
-
-  .cc input[type="radio"] + *::before {
-    @apply rounded-full;
-  }
-
-  /* check */
-  .cc input[type="checkbox"] + *::after {
-    @apply absolute box-border border-t-transparent bg-transparent opacity-0;
-    content: "";
-    left: calc((var(--cc-size) - var(--cc-check-width)) / 2);
-    top: calc((var(--cc-size) - var(--cc-check-width)) / 1.5);
-    width: var(--cc-check-width);
-    height: var(--cc-check-height);
-    transform: rotate(-45deg);
-    border: solid white;
-    border-width: 0 0 var(--cc-check-stroke) var(--cc-check-stroke);
-  }
-
-  /* select radio */
-  .cc input[type="radio"] + *::after {
-    @apply absolute box-border rounded-full bg-current;
-    content: "";
-    left: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
-    top: calc((var(--cc-size) - var(--cc-radio-size)) / 2);
-    width: var(--cc-radio-size);
-    height: var(--cc-radio-size);
-  }
-
-  /* unchecked / unselected */
-
-  .cc input[type="checkbox"]:not(:checked) + *::after,
-  .cc input[type="radio"]:not(:checked) + *::after {
-    @apply opacity-0;
-  }
-
-  /* checked / selected*/
-
-  .cc input[type="checkbox"]:checked + *::before {
-    @apply bg-current;
-  }
-
-  .cc input[type="checkbox"]:checked + *::after,
-  .cc input[type="radio"]:checked + *::after {
-    @apply opacity-100;
+    :root {
+      --check-size: 2em;
+      --check-border-width: 2px;
+      --check-check-size: 1.3em;
+    }
+    input[type="checkbox"] {
+      appearance: none;
+      font-size: inherit;
+      width: var(--radio-size);
+      height: var(--radio-size);
+      display: inline-block;
+      position: relative;
+      border: var(--radio-border-width) solid currentColor;
+      vertical-align: middle;
+      margin-right: 0.5em;
+    }
+    input[type="checkbox"]:checked::after {
+      content: "";
+      width: var(--radio-check-size);
+      height: var(--radio-check-size);
+      display: inline-block;
+      position: absolute;
+      top: calc(
+        (var(--radio-size) - var(--radio-check-size)) / 2 -
+          var(--radio-border-width)
+      );
+      left: calc(
+        (var(--radio-size) - var(--radio-check-size)) / 2 -
+          var(--radio-border-width)
+      );
+      vertical-align: middle;
+      background-color: currentColor;
+    }
   }
 }
