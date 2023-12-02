@@ -10,7 +10,7 @@
 
 @media (min-width: theme(screens.rg)) {
   :root {
-    font-size: 21px;
+    font-size: 20px;
   }
 }
 
