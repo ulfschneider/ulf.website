@@ -221,6 +221,29 @@
     @apply rg:pl-ryt-lg;
   }
 
+  /* github alerts */
+  div.markdown-alert {
+    padding-left: calc(theme(spacing.ryt-lg) - theme(spacing.2));
+    @apply border-l-2 border-l-current my-ryt text-balance no-indent;
+  }
+
+  div.markdown-alert p {
+    @apply !my-0;
+  }
+
+  p.markdown-alert-title {
+    @apply flex align-middle;
+  }
+  p.markdown-alert-title svg {
+    @apply inline-block text-current mr-ryt-sm align-text-bottom;
+  }
+
+  @media (min-width: theme(screens.rg)) {
+    main > div.markdown-alert {
+      margin-left: calc(-1 * theme(spacing.ryt-lg) + theme(spacing.2));
+    }
+  }
+
   /* cooklang */
   ul[class^="cooklang-"] > li::before {
     content: "＿";

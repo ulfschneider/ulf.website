@@ -56,6 +56,7 @@
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-fitmedia": "^0.7.0",
     "markdown-it-footnote": ">=3.0.3",
+    "markdown-it-github-alerts": "^0.1.2",
     "markdown-it-include": "^2.0.0",
     "markdown-it-mark": "^3.0.1",
     "markdown-it-mathjax3": "^4.3.2",
