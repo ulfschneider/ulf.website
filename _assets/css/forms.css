@@ -61,9 +61,7 @@
     @apply my-ryt-xs;
   }
 
-  label:not(label.cc):not(.cc label):not(label:has(input[type="checkbox"])):not(
-      label:has(input[type="radio"])
-    ),
+  label,
   legend {
     @apply block align-baseline font-bold leading-tight;
   }
@@ -122,9 +120,9 @@
 
   @supports (appearance: none) {
     :root {
-      --radio-size: 2em;
+      --radio-size: 1.5em;
       --radio-border-width: 2px;
-      --radio-check-size: calc(var(--radio-size) - 14px);
+      --radio-check-size: calc(var(--radio-size) - 12px);
     }
     input[type="radio"] {
       appearance: none;
@@ -134,8 +132,6 @@
       display: inline-block;
       border: var(--radio-border-width) solid currentColor;
       border-radius: 50%;
-      vertical-align: middle;
-      margin-right: 0.5em;
       cursor: pointer;
     }
     input[type="radio"]:checked::after {
@@ -144,7 +140,6 @@
       height: var(--radio-check-size);
       display: inline-block;
       border-radius: 50%;
-      vertical-align: top;
       margin-top: calc(
         (var(--radio-size) - var(--radio-check-size)) / 2 -
           var(--radio-border-width)
@@ -157,10 +152,11 @@
     }
 
     :root {
-      --check-size: 2em;
+      --check-size: 1.5em;
       --check-border-width: 2px;
-      --check-mark-size: calc(var(--check-size) - 12px);
-      --check-mark-border-width: 4px;
+      --check-mark-size: calc(var(--check-size) - 8px);
+      --check-mark-width: 4px;
+      --check-mark-rotation: rotate(-60deg);
     }
     input[type="checkbox"] {
       appearance: none;
@@ -169,20 +165,17 @@
       height: var(--check-size);
       display: inline-block;
       border: var(--check-border-width) solid currentColor;
-      vertical-align: middle;
-      margin-right: 0.5em;
       cursor: pointer;
     }
     input[type="checkbox"]:checked::after {
       content: "";
-      transform: rotate(-65deg);
-      border: var(--check-mark-border-width) solid currentColor;
+      transform: var(--check-mark-rotation);
+      border: var(--check-mark-width) solid currentColor;
       border-top: none;
       border-right: none;
       width: var(--check-mark-size);
       height: calc(var(--check-mark-size) * 0.66);
       display: inline-block;
-      vertical-align: top;
       margin-top: calc(
         (var(--check-size) - var(--check-mark-size)) / 2 -
           var(--check-border-width)

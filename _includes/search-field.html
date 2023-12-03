@@ -27,20 +27,20 @@
   <ul id="autocomplete-search"></ul>
   <fieldset class="mt-ryt-sm">
     <legend class="font-normal">Mulptiple search terms are combined by:</legend>
-    <div class="flex flex-row">
-      <label class="cc mr-ryt-lg">
+    <div class="flex gap-ryt-lg">
+      <label class="flex gap-ryt-xs font-normal">
         <input
           type="radio"
           id="combine-and"
           name="combine"
           value="AND"
           checked
-        /><span>AND</span>
+        />
+        <div class="my-auto">AND</div>
       </label>
-      <label class="cc">
-        <input type="radio" id="combine-or" name="combine" value="OR" /><span
-          >OR</span
-        >
+      <label class="flex gap-ryt-xs font-normal align-middle">
+        <input type="radio" id="combine-or" name="combine" value="OR" />
+        <div class="my-auto">OR</div>
       </label>
     </div>
   </fieldset>
