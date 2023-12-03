@@ -182,6 +182,7 @@
       height: calc(var(--check-mark-height));
       transform: var(--check-mark-rotation);
       border: var(--check-mark-line-width) solid currentColor;
+      border-radius: 0;
       border-top: none;
       border-right: none;
       margin-top: calc(
