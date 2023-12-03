@@ -172,6 +172,7 @@
       display: inline-block;
       margin: 0;
       border: var(--check-border-width) solid currentColor;
+      border-radius: 0;
       cursor: pointer;
     }
     input[type="checkbox"]:checked::before {
