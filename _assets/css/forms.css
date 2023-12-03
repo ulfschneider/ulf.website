@@ -134,7 +134,7 @@
       border-radius: 50%;
       cursor: pointer;
     }
-    input[type="radio"]:checked::after {
+    input[type="radio"]:checked::before {
       content: "";
       width: var(--radio-check-size);
       height: var(--radio-check-size);
@@ -167,7 +167,7 @@
       border: var(--check-border-width) solid currentColor;
       cursor: pointer;
     }
-    input[type="checkbox"]:checked::after {
+    input[type="checkbox"]:checked::before {
       content: "";
       transform: var(--check-mark-rotation);
       border: var(--check-mark-width) solid currentColor;
