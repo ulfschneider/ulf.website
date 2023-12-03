@@ -121,8 +121,8 @@
   @supports (appearance: none) {
     :root {
       --radio-size: 1.5em;
-      --radio-border-width: 2px;
-      --radio-check-size: calc(var(--radio-size) - 12px);
+      --radio-border-width: 1px;
+      --radio-check-size: calc(var(--radio-size) - 10px);
     }
     input[type="radio"] {
       appearance: none;
@@ -156,10 +156,12 @@
 
     :root {
       --check-size: 1.5em;
-      --check-border-width: 2px;
-      --check-mark-size: calc(var(--check-size) - 6px);
-      --check-mark-width: 3px;
+      --check-border-width: 1px;
+      --check-mark-width: calc(var(--check-size) - 6px);
+      --check-mark-height: calc(var(--check-mark-width) / 2);
+      --check-mark-line-width: 2.5px;
       --check-mark-rotation: rotate(-60deg);
+      --check-adjust-top: calc(-0.2 * var(--check-mark-height));
     }
     input[type="checkbox"] {
       appearance: none;
@@ -175,18 +177,18 @@
     input[type="checkbox"]:checked::before {
       content: "";
       position: absolute;
-      width: var(--check-mark-size);
-      height: calc(var(--check-mark-size) * 0.66);
+      width: var(--check-mark-width);
+      height: calc(var(--check-mark-height));
       transform: var(--check-mark-rotation);
-      border: var(--check-mark-width) solid currentColor;
+      border: var(--check-mark-line-width) solid currentColor;
       border-top: none;
       border-right: none;
       margin-top: calc(
-        (var(--check-size) - var(--check-mark-size)) / 2 -
-          var(--check-border-width)
+        (var(--check-size) - var(--check-mark-height)) / 2 -
+          var(--check-border-width) + var(--check-adjust-top)
       );
       margin-left: calc(
-        (var(--check-size) - var(--check-mark-size)) / 2 -
+        (var(--check-size) - var(--check-mark-width)) / 2 -
           var(--check-border-width)
       );
       background-color: transparent;
