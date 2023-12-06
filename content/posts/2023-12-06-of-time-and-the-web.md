@@ -3,6 +3,7 @@ title: Of Time And The Web
 tags:
   - journal
   - code
+  - design
   - star
 ---
 The [script](https://adactio.com/articles/20638) and [video](https://youtu.be/UjtcCTH4K10?si=oJrs6ndfuMqkOaoT) of Jeremy Keith´s talk at border:none in Nürnberg. Two of Jeremy´s statements resonate: 
