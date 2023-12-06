@@ -53,7 +53,7 @@
 
   /* base colors */
   body {
-    @apply text-base text-write-dark dark:text-write-light dark:bg-back-dark;
+    @apply text-write-dark dark:text-write-light dark:bg-back-dark text-base;
   }
 
   /* focus */
@@ -78,16 +78,16 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display font-bold mt-ryt-2xl mb-ryt-xl break-after-avoid leading-snug text-balance;
+    @apply font-display mt-ryt-2xl mb-ryt-xl text-balance break-after-avoid font-bold leading-snug;
     margin-bottom: 0.2em;
   }
   h2,
   .h2 {
-    @apply font-display font-bold text-base mt-ryt-xl mb-ryt break-after-avoid leading-snug text-balance;
+    @apply font-display mt-ryt-xl mb-ryt text-balance break-after-avoid text-base font-bold leading-snug;
   }
   h3,
   .h3 {
-    @apply font-display font-bold text-base mt-ryt-lg mb-ryt break-after-avoid leading-snug text-balance;
+    @apply font-display mt-ryt-lg mb-ryt text-balance break-after-avoid text-base font-bold leading-snug;
   }
   h4,
   h5,
@@ -96,7 +96,7 @@
   .h4,
   .h5,
   .h6 {
-    @apply font-display font-bold text-base mt-ryt-xl mb-ryt-lg break-after-avoid leading-snug text-balance;
+    @apply font-display mt-ryt-xl mb-ryt-lg text-balance break-after-avoid text-base font-bold leading-snug;
   }
 
   details > summary {
@@ -120,7 +120,7 @@
   }
 
   dt {
-    @apply font-bold leading-snug text-balance;
+    @apply text-balance font-bold leading-snug;
     margin-bottom: 0.2em;
   }
 
@@ -136,7 +136,7 @@
   /* ul, ol */
   ol,
   ul {
-    @apply list-none p-0 mx-0 my-ryt;
+    @apply my-ryt mx-0 list-none p-0;
   }
 
   li > ol,
@@ -145,7 +145,7 @@
   }
 
   li {
-    @apply m-0 p-0 pl-ryt-lg;
+    @apply pl-ryt-lg m-0 p-0;
   }
 
   li > p:first-child {
@@ -162,7 +162,7 @@
 
   ol > li::before {
     content: counters(ol-counter, ".", decimal) ". ";
-    @apply text-smaller font-bold -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start tabular-nums whitespace-nowrap;
+    @apply text-smaller -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap font-bold tabular-nums;
   }
 
   ol > li > ol > li::before {
@@ -171,7 +171,7 @@
 
   ul > li::before {
     content: "●" " ";
-    @apply not-italic -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap;
+    @apply -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap not-italic;
   }
 
   main > ul,
@@ -181,7 +181,7 @@
 
   ul.reset,
   ol.reset {
-    @apply list-none my-0 p-0;
+    @apply my-0 list-none p-0;
     > li {
       @apply p-0;
     }
@@ -205,7 +205,7 @@
 
   /* img */
   img {
-    @apply object-contain object-left dark:filter dark:brightness-90 dark:contrast-125;
+    @apply object-contain object-left dark:brightness-90 dark:contrast-125 dark:filter;
   }
 
   img:not(.hero img):not(.heror img):not(.herol img):not(.bleed img):not(
@@ -224,12 +224,12 @@
 
   /* hr */
   hr {
-    @apply max-w-rg my-ryt-xl border-0 flex justify-center;
+    @apply max-w-rg my-ryt-xl flex justify-center border-0;
   }
 
   hr::before {
     content: "* * *";
-    @apply max-w-rg block -mt-ryt;
+    @apply max-w-rg -mt-ryt block;
   }
 
   /* table */
@@ -237,13 +237,13 @@
     @apply my-ryt-xl border-collapse border-y border-y-current;
 
     caption {
-      @apply text-left py-ryt-sm border-t border-t-current no-indent;
+      @apply py-ryt-sm no-indent border-t border-t-current text-left;
     }
     th {
-      @apply text-left font-bold py-ryt-sm pr-ryt-sm align-top leading-tight;
+      @apply py-ryt-sm pr-ryt-sm text-left align-top font-bold leading-tight;
     }
     td {
-      @apply text-left font-normal py-ryt-sm pr-ryt-sm align-top leading-tight;
+      @apply py-ryt-sm pr-ryt-sm text-left align-top font-normal leading-tight;
     }
     thead {
       th,
@@ -269,7 +269,7 @@
   figure {
     @apply my-ryt-xl;
     figcaption {
-      @apply max-w-rg my-ryt-sm font-mono text-sm text-balance;
+      @apply max-w-rg my-ryt-sm text-balance font-mono text-sm;
     }
   }
 
@@ -289,16 +289,12 @@
 
   blockquote {
     padding-left: calc(theme(spacing.ryt-lg) - theme(spacing.2));
-    @apply border-l-2 border-l-current my-ryt text-balance no-indent;
-  }
-
-  blockquote p {
-    @apply !my-0;
+    @apply my-ryt text-balance indent border-l-2 border-l-current;
   }
 
   blockquote > header,
   blockquote > footer {
-    @apply my-ryt-sm font-mono text-sm text-balance;
+    @apply my-ryt-sm text-balance font-mono text-sm;
     &::before {
       content: "—";
     }
@@ -312,12 +308,12 @@
 
   /* address */
   address {
-    @apply my-ryt not-italic font-normal;
+    @apply my-ryt font-normal not-italic;
   }
 
   /* kbd */
   kbd {
-    @apply font-mono bg-light dark:bg-light-dark text-center text-sm px-ryt-xs inline-block border border-current rounded-sm;
+    @apply bg-light dark:bg-light-dark px-ryt-xs inline-block rounded-sm border border-current text-center font-mono text-sm;
   }
 
   /* pre and pre code */
@@ -326,7 +322,7 @@
   }
   pre,
   pre > code {
-    @apply text-sm leading-normal whitespace-pre-wrap font-mono break-words;
+    @apply whitespace-pre-wrap break-words font-mono text-sm leading-normal;
     word-spacing: normal;
     word-wrap: normal;
     -moz-tab-size: 4;
