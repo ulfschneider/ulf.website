@@ -15,3 +15,10 @@ This is a frustrating and pretty expensive learning I would have preferred to av
 <figcaption>The new mechanical GRX dreailleur – already dirty.</figcaption>
 </figure>
 
+On Dec 6th 2023 I came across this video by Russ Rocca. One point addressed is the vendor lock-in implied by electronic shifting, named <em>the Applefication of shifting</em>.
+
+<figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lbMxzruQiug?si=H_zsM9OffMtP6vFa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<figcaption><a href="https://www.youtube.com/watch?v=lbMxzruQiug"><cite>The DARK SIDE of Electronic Shifting No One Talks About </cite></a>, by Russ Rocca</figcaption>
+</figure>
+
