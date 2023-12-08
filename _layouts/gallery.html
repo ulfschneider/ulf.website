@@ -5,9 +5,9 @@ nodate: true
 
 <div class="no-indent">{{ content }}</div>
 <div class="image-container">
-  {%- if tag != nil -%} {% assign imageData = collections[tag] | live | reverse
-  | firstImage %} {%- else -%} {% assign imageData = collections.liveContent |
-  reverse | firstImage %} {%- endif %}
+  {%- if tag != nil -%} {% assign imageData = collections[tag] | live | post |
+  reverse | firstImage %} {%- else -%} {% assign imageData =
+  collections.liveContent | post | reverse | firstImage %} {%- endif %}
   <!---->
   {%for image in imageData%}
   <figure class="m-0">
