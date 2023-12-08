@@ -1,9 +1,9 @@
-const MiniSearch = require('minisearch');
-const path = require('path');
-const ccd = require('cached-commit-date');
-const utils = require('./utils.js');
-const site = require('../_data/site.js');
-const comments = require('../_data/comments.js');
+const MiniSearch = require("minisearch");
+const path = require("path");
+const ccd = require("cached-commit-date");
+const utils = require("./utils.js");
+const site = require("../_data/site.js");
+const comments = require("../_data/comments.js");
 
 let colorMap;
 
@@ -21,28 +21,27 @@ function createColorMap(values) {
 }
 
 module.exports = {
-
-  live: function(collection) {
+  live: function (collection) {
     return collection ? collection.filter(utils.isLiveItem) : collection;
   },
 
-  post: function(collection) {
+  post: function (collection) {
     return collection ? collection.filter(utils.isPost) : collection;
   },
 
-  isPost: function(page) {
+  isPost: function (page) {
     return utils.isPost(page);
   },
 
-  searchAble: function(collection) {
+  searchAble: function (collection) {
     return collection ? collection.filter(utils.isSearchAble) : collection;
   },
 
-  rssAble: function(collection) {
+  rssAble: function (collection) {
     return collection ? collection.filter(utils.isRssAble) : collection;
   },
 
-  authorEmail: function(page) {
+  authorEmail: function (page) {
     if (page && page.data.author && page.data.author.email) {
       return page.data.author.email;
     } else if (site.ownership && site.ownership.email) {
@@ -50,7 +49,7 @@ module.exports = {
     }
   },
 
-  authorName: function(page) {
+  authorName: function (page) {
     if (page && page.data.author && page.data.author.name) {
       return page.data.author.name;
     } else if (site.ownership && site.ownership.name) {
@@ -61,7 +60,7 @@ module.exports = {
   //this is very slow due to commitDate
   //returns a date if the latest commit date is available and differs from the page.date by at least one day
   //otherwise returns empty string
-  indicateModifiedDate: function(page) {
+  indicateModifiedDate: function (page) {
     let date = page.date;
     let humanDate = utils.humanDate(date);
     let commitDate = ccd.commitDate(page.inputPath);
@@ -70,11 +69,11 @@ module.exports = {
     if (humanCommitDate && humanDate != humanCommitDate) {
       return commitDate;
     } else {
-      return '';
+      return "";
     }
   },
 
-  modifiedDate: function(page) {
+  modifiedDate: function (page) {
     let commitDate = ccd.commitDate(page.inputPath);
     if (commitDate) {
       return commitDate;
@@ -83,7 +82,7 @@ module.exports = {
     }
   },
 
-  tagIntro: function(collection, tag) {
+  tagIntro: function (collection, tag) {
     for (let item of collection) {
       if (!tag && (!item.data.tags || item.data.tags.length == 0)) {
         return item.templateContent;
@@ -93,41 +92,48 @@ module.exports = {
       }
     }
 
-    return '';
+    return "";
   },
 
-  searchIndex: function(collection) {
+  searchIndex: function (collection) {
     const INDEX_FIELDS = [
-      'id',
-      'title',
-      'humanDate',
-      'author',
-      'refer',
-      'tags',
-      'abstract',
-      'content',
-      'commentContents',
-      'commentAuthors'
+      "id",
+      "title",
+      "humanDate",
+      "author",
+      "refer",
+      "tags",
+      "abstract",
+      "content",
+      "commentContents",
+      "commentAuthors",
     ];
 
     const STORE_FIELDS = [
-      'id',
-      'title',
-      'date',
-      'humanDate',
-      'author',
-      'refer',
-      'tags',
-      'notags',
-      'starred',
-      'abstract',
-      'excerpt'
+      "id",
+      "title",
+      "date",
+      "humanDate",
+      "author",
+      "refer",
+      "tags",
+      "notags",
+      "starred",
+      "abstract",
+      "excerpt",
     ];
 
-    let miniSearch = new MiniSearch({ fields: INDEX_FIELDS, storeFields: STORE_FIELDS });
+    let miniSearch = new MiniSearch({
+      fields: INDEX_FIELDS,
+      storeFields: STORE_FIELDS,
+    });
     for (let item of collection) {
       let mappedItem = utils.mapItem(item);
-      if (utils.isSearchAble(item) && mappedItem.id && !miniSearch.has(mappedItem.id)) {
+      if (
+        utils.isSearchAble(item) &&
+        mappedItem.id &&
+        !miniSearch.has(mappedItem.id)
+      ) {
         miniSearch.add(mappedItem);
       }
     }
@@ -139,22 +145,24 @@ module.exports = {
     return JSON.stringify(searchIndex);
   },
 
-  siteTags: function(collection) {
-    let tags = utils.extractTags(collection.map(item => {
-      if (item.data?.tags?.includes(site.starTag)) {
-        item.data.starred = site.starTag;
-      } else {
-        item.data.starred = '';
-      }
-      return item;
-    }));
+  siteTags: function (collection) {
+    let tags = utils.extractTags(
+      collection.map((item) => {
+        if (item.data?.tags?.includes(site.starTag)) {
+          item.data.starred = site.starTag;
+        } else {
+          item.data.starred = "";
+        }
+        return item;
+      })
+    );
 
     createColorMap(tags);
 
     return tags;
   },
 
-  firstImage: function(collection, url) {
+  firstImage: function (collection, url) {
     let result = [];
     for (let item of collection) {
       if (!url || (url && url == item.url)) {
@@ -188,7 +196,7 @@ module.exports = {
 
           let imgData = {
             src: src,
-            smallSrc: dirname + '/' + stem + site.imgSmallPostfix + extname,
+            smallSrc: dirname + "/" + stem + site.imgSmallPostfix + extname,
             width: dimensions ? dimensions.width : 0,
             height: dimensions ? dimensions.height : 0,
             alt: alt,
@@ -196,7 +204,7 @@ module.exports = {
             title: item.data.title,
             starred: item.data.starred,
             date: item.date,
-            humanDate: humanDate
+            humanDate: humanDate,
           };
 
           if (url) {
@@ -210,22 +218,26 @@ module.exports = {
     if (url) {
       return {};
     } else {
-      return JSON.stringify(result);
+      return result;
     }
   },
 
-  imgAspectRatio: function(src) {
+  imgAspectRatio: function (src) {
     return utils.imgAspectRatio(src);
   },
 
-  imgSizeHint: function(src) {
+  imgSizeHint: function (src) {
     return utils.imgSizeHint(src);
   },
 
-  responsiveHero: function(src, alt) {
+  responsiveHero: function (src, alt) {
     let clearSrc = utils.clearResponsive(src);
 
-    let img = `<img src="${clearSrc}" ${alt ? 'alt="' + alt + '"' : 'alt=""'} class="w-full h-auto object-cover" style="${utils.imgAspectRatio(clearSrc)}" ${utils.imgSizeHint(clearSrc)} loading="eager" decoding="async">`;
+    let img = `<img src="${clearSrc}" ${
+      alt ? 'alt="' + alt + '"' : 'alt=""'
+    } class="w-full h-auto object-cover" style="${utils.imgAspectRatio(
+      clearSrc
+    )}" ${utils.imgSizeHint(clearSrc)} loading="eager" decoding="async">`;
     if (utils.isResponsive(src)) {
       let extname = path.extname(clearSrc);
       let stem = path.basename(clearSrc, extname);
@@ -239,54 +251,53 @@ module.exports = {
     }
   },
 
-  humanDate: function(d) {
+  humanDate: function (d) {
     return utils.humanDate(d);
   },
 
-  humanDateTime: function(d) {
+  humanDateTime: function (d) {
     return utils.humanDateTime(d);
   },
 
-  isoDate: function(d) {
+  isoDate: function (d) {
     return utils.isoDate(d);
   },
 
-  tagUrl: function(tag) {
+  tagUrl: function (tag) {
     return utils.tagUrl(tag);
   },
 
-  hasTag: function(tags, tag) {
+  hasTag: function (tags, tag) {
     return tags && tag && tags.includes(tag);
   },
 
-  tagColor: function(tag) {
+  tagColor: function (tag) {
     if (!colorMap) {
-      console.error('ColorMap has not been initialized. Please call createColorMap once before calling tagColor.');
-      return '';
+      console.error(
+        "ColorMap has not been initialized. Please call createColorMap once before calling tagColor."
+      );
+      return "";
     }
     if (colorMap.size) {
       let color = colorMap.get(tag);
-      return color ? color : '';
-
+      return color ? color : "";
     } else {
-      return '';
+      return "";
     }
   },
 
-  commentRootIssueNumber: async function(item) {
+  commentRootIssueNumber: async function (item) {
     return comments.getRootIssueNumber(item.url);
   },
 
-  comments: async function(item) {
+  comments: async function (item) {
     return comments.get(item.url);
   },
 
-  withComments: async function(items) {
+  withComments: async function (items) {
     for (let item of items) {
       item.data.comments = await comments.get(item.url);
     }
     return items;
-  }
-
-
-}
+  },
+};
