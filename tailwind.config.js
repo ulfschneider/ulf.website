@@ -52,7 +52,7 @@ module.exports = {
           dark: colors.neutral[800],
         },
         back: {
-          light: colors.neutral[50],
+          light: colors.neutral[100],
           dark: colors.neutral[900],
         },
         primary: {

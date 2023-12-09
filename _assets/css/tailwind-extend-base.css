@@ -1,340 +1,352 @@
 @layer base {
-  /* reset
+    /* reset
    * This reset is influenced by https://www.joshwcomeau.com/css/custom-css-reset/
    */
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-  }
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+    }
 
-  html {
-    height: 100%;
-    scroll-behavior: smooth;
-    /*https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/*/
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-    hanging-punctuation: first allow-end last;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  @media (prefers-reduced-motion) {
     html {
-      scroll-behavior: auto;
+        height: 100%;
+        scroll-behavior: smooth;
+        /*https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/*/
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+        hanging-punctuation: first allow-end last;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
     }
-  }
 
-  body {
-    min-height: 100%;
-  }
-
-  img,
-  picture,
-  svg {
-    height: auto;
-    max-width: 100%;
-  }
-
-  iframe,
-  canvas {
-    max-width: 100%;
-  }
-
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-  }
-
-  /* base colors */
-  body {
-    @apply text-write-dark dark:text-write-light dark:bg-back-dark text-base;
-  }
-
-  /* focus */
-  *:focus {
-    @apply outline-indicator;
-  }
-
-  ::selection {
-    @apply bg-primary-light text-primary-dark;
-  }
-
-  /* links */
-  a {
-    @apply underline;
-  }
-  a:hover,
-  a:focus,
-  a:active {
-    @apply text-link dark:text-link-light;
-  }
-
-  /* headings */
-  h1,
-  .h1 {
-    @apply font-display mt-ryt-2xl mb-ryt-xl text-balance break-after-avoid font-bold leading-snug;
-    margin-bottom: 0.2em;
-  }
-  h2,
-  .h2 {
-    @apply font-display mt-ryt-xl mb-ryt text-balance break-after-avoid text-base font-bold leading-snug;
-  }
-  h3,
-  .h3 {
-    @apply font-display mt-ryt-lg mb-ryt text-balance break-after-avoid text-base font-bold leading-snug;
-  }
-  h4,
-  h5,
-  h6,
-  .h3,
-  .h4,
-  .h5,
-  .h6 {
-    @apply font-display mt-ryt-xl mb-ryt-lg text-balance break-after-avoid text-base font-bold leading-snug;
-  }
-
-  details > summary {
-    @apply hover:text-link dark:hover:text-link-light text-balance;
-  }
-
-  /* typography */
-  cite {
-    @apply font-bold not-italic;
-  }
-
-  mark,
-  .mark {
-    @apply bg-mark text-write-dark;
-  }
-
-  /* dl */
-
-  dl {
-    @apply my-ryt mx-0 p-0;
-  }
-
-  dt {
-    @apply text-balance font-bold leading-snug;
-    margin-bottom: 0.2em;
-  }
-
-  dd {
-    @apply pl-ryt-lg;
-  }
-
-  dd + dt,
-  dt + dt {
-    @apply mt-ryt;
-  }
-
-  /* ul, ol */
-  ol,
-  ul {
-    @apply my-ryt mx-0 list-none p-0;
-  }
-
-  li > ol,
-  li > ul {
-    @apply my-0;
-  }
-
-  li {
-    @apply pl-ryt-lg m-0 p-0;
-  }
-
-  li > p:first-child {
-    @apply inline;
-  }
-
-  li > ol {
-    counter-reset: ol-counter;
-  }
-
-  ol > li {
-    counter-increment: ol-counter;
-  }
-
-  ol > li::before {
-    content: counters(ol-counter, ".", decimal) ". ";
-    @apply text-smaller -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap font-bold tabular-nums;
-  }
-
-  ol > li > ol > li::before {
-    content: counters(ol-counter, ".", decimal) " ";
-  }
-
-  ul > li::before {
-    content: "●" " ";
-    @apply -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap not-italic;
-  }
-
-  main > ul,
-  main > ol {
-    @apply rg:-ml-ryt-lg;
-  }
-
-  ul.reset,
-  ol.reset {
-    @apply my-0 list-none p-0;
-    > li {
-      @apply p-0;
+    @media (prefers-reduced-motion) {
+        html {
+            scroll-behavior: auto;
+        }
     }
-    > li::before {
-      content: "";
-      @apply hidden;
+
+    img,
+    picture,
+    svg {
+        height: auto;
+        max-width: 100%;
     }
-  }
 
-  /*vertical rhythm*/
-
-  img + img {
-    @apply my-ryt-lg;
-  }
-  p {
-    @apply my-0 indent-0;
-  }
-  p + p {
-    @apply my-ryt;
-  }
-
-  /* img */
-  img {
-    @apply object-contain object-left dark:brightness-90 dark:contrast-125 dark:filter;
-  }
-
-  img:not(.hero img):not(.heror img):not(.herol img):not(.bleed img):not(
-      .bleedl img
-    ):not(.bleedr img) {
-    @media (min-width: theme(screens.sm)) {
-      max-height: 80vh;
+    iframe,
+    canvas {
+        max-width: 100%;
     }
-  }
 
-  /* summary */
-
-  summary {
-    @apply cursor-pointer;
-  }
-
-  /* hr */
-  hr {
-    @apply max-w-rg my-ryt-xl flex justify-center border-0;
-  }
-
-  hr::before {
-    content: "* * *";
-    @apply max-w-rg -mt-ryt block;
-  }
-
-  /* table */
-  table {
-    @apply my-ryt-xl border-collapse border-y border-y-current;
-
-    caption {
-      @apply py-ryt-sm no-indent border-t border-t-current text-left;
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
     }
-    th {
-      @apply py-ryt-sm pr-ryt-sm text-left align-top font-bold leading-tight;
+
+    body {
+        @apply text-write-dark dark:text-write-light dark:bg-back-dark bg-back-light m-h-full text-basemin-h-full;
     }
-    td {
-      @apply py-ryt-sm pr-ryt-sm text-left align-top font-normal leading-tight;
+
+    /* focus */
+    *:focus {
+        @apply outline-indicator;
     }
-    thead {
-      th,
-      td {
-        @apply align-bottom;
-      }
+
+    ::selection {
+        @apply bg-primary-light text-primary-dark;
     }
-    th + th,
-    td + td {
-      @apply pl-ryt-sm;
+
+    /* links */
+    a {
+        @apply underline;
     }
-    th {
-      @apply mt-ryt;
+
+    a:hover,
+    a:focus,
+    a:active {
+        @apply text-link dark:text-link-light;
     }
-  }
 
-  main > .scroll-table,
-  main > table,
-  main > pre {
-    @apply heror;
-  }
-
-  figure {
-    @apply my-ryt-xl;
-    figcaption {
-      @apply max-w-rg my-ryt-sm text-balance font-mono text-sm;
+    /* headings */
+    h1,
+    .h1 {
+        @apply font-display mt-ryt-2xl mb-ryt-xl text-balance break-after-avoid font-bold leading-snug;
+        margin-bottom: 0.2em;
     }
-  }
 
-  figure:not(figure figure):not(main * figure):has(iframe, video) {
-    @apply max-sm:-mx-ryt;
-    figcaption {
-      @apply max-sm:mx-ryt;
+    h2,
+    .h2 {
+        @apply font-display mt-ryt-xl mb-ryt text-balance break-after-avoid text-base font-bold leading-snug;
     }
-  }
 
-  /* quote */
-
-  q {
-    @apply italic;
-    quotes: "“" "”" "‘" "’";
-  }
-
-  blockquote {
-    padding-left: calc(theme(spacing.ryt-lg) - theme(spacing.2));
-    @apply my-ryt text-balance indent border-l-2 border-l-current;
-  }
-
-  blockquote > header,
-  blockquote > footer {
-    @apply my-ryt-sm text-balance font-mono text-sm;
-    &::before {
-      content: "—";
+    h3,
+    .h3 {
+        @apply font-display mt-ryt-lg mb-ryt text-balance break-after-avoid text-base font-bold leading-snug;
     }
-  }
 
-  @media (min-width: theme(screens.rg)) {
-    main > blockquote {
-      margin-left: calc(-1 * theme(spacing.ryt-lg) + theme(spacing.2));
+    h4,
+    h5,
+    h6,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        @apply font-display mt-ryt-xl mb-ryt-lg text-balance break-after-avoid text-base font-bold leading-snug;
     }
-  }
 
-  /* address */
-  address {
-    @apply my-ryt font-normal not-italic;
-  }
+    details > summary {
+        @apply hover:text-link dark:hover:text-link-light text-balance;
+    }
 
-  /* kbd */
-  kbd {
-    @apply bg-light dark:bg-light-dark px-ryt-xs inline-block rounded-sm border border-current text-center font-mono text-sm;
-  }
+    /* typography */
+    cite {
+        @apply font-bold not-italic;
+    }
 
-  /* pre and pre code */
-  pre {
-    @apply my-ryt;
-  }
-  pre,
-  pre > code {
-    @apply whitespace-pre-wrap break-words font-mono text-sm leading-normal;
-    word-spacing: normal;
-    word-wrap: normal;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-  }
+    mark,
+    .mark {
+        @apply bg-mark text-write-dark;
+    }
 
-  code:not(pre code) {
-    @apply bg-light text-write-dark dark:bg-light-dark dark:text-write-light px-ryt-2xs font-mono text-sm;
-  }
+    /* dl */
+
+    dl {
+        @apply my-ryt mx-0 p-0;
+    }
+
+    dt {
+        @apply text-balance font-bold leading-snug;
+        margin-bottom: 0.2em;
+    }
+
+    dd {
+        @apply pl-ryt-lg;
+    }
+
+    dd + dt,
+    dt + dt {
+        @apply mt-ryt;
+    }
+
+    /* ul, ol */
+    ol,
+    ul {
+        @apply my-ryt mx-0 list-none p-0;
+    }
+
+    li > ol,
+    li > ul {
+        @apply my-0;
+    }
+
+    li {
+        @apply pl-ryt-lg m-0 p-0;
+    }
+
+    li > p:first-child {
+        @apply inline;
+    }
+
+    li > ol {
+        counter-reset: ol-counter;
+    }
+
+    ol > li {
+        counter-increment: ol-counter;
+    }
+
+    ol > li::before {
+        content: counters(ol-counter, ".", decimal) ". ";
+        @apply text-smaller -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap font-bold tabular-nums;
+    }
+
+    ol > li > ol > li::before {
+        content: counters(ol-counter, ".", decimal) " ";
+    }
+
+    ul > li::before {
+        content: "●" " ";
+        @apply -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap not-italic;
+    }
+
+    main > ul,
+    main > ol {
+        @apply rg:-ml-ryt-lg;
+    }
+
+    ul.reset,
+    ol.reset {
+        @apply my-0 list-none p-0;
+
+        > li {
+            @apply p-0;
+        }
+
+        > li::before {
+            content: "";
+            @apply hidden;
+        }
+    }
+
+    /*vertical rhythm*/
+
+    img + img {
+        @apply my-ryt-lg;
+    }
+
+    p {
+        @apply my-0 indent-0;
+    }
+
+    p + p {
+        @apply my-ryt;
+    }
+
+    /* img */
+    img {
+        @apply object-contain object-left dark:brightness-90 dark:contrast-125 dark:filter;
+    }
+
+    img:not(.hero img):not(.heror img):not(.herol img):not(.bleed img):not(
+            .bleedl img
+        ):not(.bleedr img) {
+        @media (min-width: theme(screens.sm)) {
+            max-height: 80vh;
+        }
+    }
+
+    /* summary */
+
+    summary {
+        @apply cursor-pointer;
+    }
+
+    /* hr */
+    hr {
+        @apply max-w-rg my-ryt-xl flex justify-center border-0;
+    }
+
+    hr::before {
+        content: "* * *";
+        @apply max-w-rg -mt-ryt block;
+    }
+
+    /* table */
+    table {
+        @apply my-ryt-xl border-collapse border-y border-y-current;
+
+        caption {
+            @apply py-ryt-sm no-indent border-t border-t-current text-left;
+        }
+
+        th {
+            @apply py-ryt-sm pr-ryt-sm text-left align-top font-bold leading-tight;
+        }
+
+        td {
+            @apply py-ryt-sm pr-ryt-sm text-left align-top font-normal leading-tight;
+        }
+
+        thead {
+            th,
+            td {
+                @apply align-bottom;
+            }
+        }
+
+        th + th,
+        td + td {
+            @apply pl-ryt-sm;
+        }
+
+        th {
+            @apply mt-ryt;
+        }
+    }
+
+    main > .scroll-table,
+    main > table,
+    main > pre {
+        @apply heror;
+    }
+
+    figure {
+        @apply my-ryt-xl;
+
+        figcaption {
+            @apply max-w-rg my-ryt-sm text-balance font-mono text-sm;
+        }
+    }
+
+    figure:not(figure figure):not(main * figure):has(iframe, video) {
+        @apply max-sm:-mx-ryt;
+
+        figcaption {
+            @apply max-sm:mx-ryt;
+        }
+    }
+
+    /* quote */
+
+    q {
+        @apply italic;
+        quotes: "“" "”" "‘" "’";
+    }
+
+    blockquote {
+        padding-left: calc(theme(spacing.ryt-lg) - theme(spacing.2));
+        @apply my-ryt text-balance indent border-l-2 border-l-current;
+    }
+
+    blockquote > header,
+    blockquote > footer {
+        @apply my-ryt-sm text-balance font-mono text-sm;
+
+        &::before {
+            content: "—";
+        }
+    }
+
+    @media (min-width: theme(screens.rg)) {
+        main > blockquote {
+            margin-left: calc(-1 * theme(spacing.ryt-lg) + theme(spacing.2));
+        }
+    }
+
+    /* address */
+    address {
+        @apply my-ryt font-normal not-italic;
+    }
+
+    /* kbd */
+    kbd {
+        @apply bg-light dark:bg-light-dark px-ryt-xs inline-block rounded-sm border border-current text-center font-mono text-sm;
+    }
+
+    /* pre and pre code */
+    pre {
+        @apply my-ryt;
+    }
+
+    pre,
+    pre > code {
+        @apply whitespace-pre-wrap break-words font-mono text-sm leading-normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+    }
+
+    code:not(pre code) {
+        @apply bg-light text-write-dark dark:bg-light-dark dark:text-write-light px-ryt-2xs font-mono text-sm;
+    }
 }
