@@ -82,7 +82,7 @@ permalink: "{{site.search.url}}"
             if (tag.name != "{{site.starTag}}") {
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
-              tagLink.innerHTML = tag.name;
+              tagLink.innerHTML = "#" + tag.name;
               tagLink.classList = "no-underline inline-block";
               tags.appendChild(tagLink);
               tags.appendChild(document.createTextNode(" "));
