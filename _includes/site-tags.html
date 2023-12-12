@@ -29,12 +29,12 @@ if currentTags.length -%}
     {%- endif -%} {%- endif -%} {%- endfor -%} {%- for siteTag in currentTags
     -%} {%- if siteTag != site.starTag -%} {%- if tag != siteTag -%}
     <li class="inline-block m-ryt-xs">
-      <a class="tag" href="{{siteTag | tagUrl}}">{{ siteTag }}</a>
+      <a class="tag" href="{{siteTag | tagUrl}}">#{{ siteTag }}</a>
     </li>
     {%- else -%}
     <li class="inline-block m-ryt-xs">
       <a class="tag current" aria-current="page" href="{{siteTag | tagUrl}}"
-        >{{ siteTag }}</a
+        >#{{ siteTag }}</a
       >
     </li>
     {%- endif -%} {%- endif -%} {%- endfor -%}

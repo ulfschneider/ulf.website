@@ -7,7 +7,7 @@ collections.liveContent | post -%} {%- endif -%}
   pagedItems.humanPageNumber }} / {{ pagedItems.pageCount }} {% else %} All
   posts {% endif %} {% if pagedItems.tag != "" and pagedItems.tag != nil
   %}tagged
-  <em class="font-mono">{{ pagedItems.tag }}</em>
+  <strong>#{{ pagedItems.tag }}</strong>
   {% endif %} {% endif %}
 </div>
 
