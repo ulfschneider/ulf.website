@@ -99,7 +99,7 @@
   }
 
   details > summary {
-    @apply hover:text-link dark:hover:text-link-light text-balance;
+    @apply hover:text-link dark:hover:text-link-light text-balance cursor-pointer;
   }
 
   /* typography */
@@ -217,12 +217,6 @@
     @media (min-width: theme(screens.sm)) {
       max-height: 80vh;
     }
-  }
-
-  /* summary */
-
-  summary {
-    @apply cursor-pointer;
   }
 
   /* hr */
