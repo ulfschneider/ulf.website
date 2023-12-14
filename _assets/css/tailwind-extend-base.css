@@ -48,7 +48,7 @@
   }
 
   body {
-    @apply text-write-dark dark:text-write-light dark:bg-back-dark bg-back-light min-h-full text-base;
+    @apply text-write-dark dark:text-write-light dark:bg-back-dark bg-back-light min-h-full text-base h-full;
   }
 
   /* focus */
