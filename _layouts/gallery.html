@@ -4,6 +4,15 @@ nodate: true
 ---
 
 <div class="no-indent">{{ content }}</div>
+{%- if content == nil or content == "" -%}
+<div>
+  Images tagged
+  <strong
+    >{%if tag == site.starTag%}{{site.starTagSymbol}}{%else%}#{{tag
+    }}{%endif%}</strong
+  >
+</div>
+{%- endif -%}
 <div class="image-container">
   {%- if tag != nil -%} {% assign imageData = collections[tag] | live | post |
   reverse | firstImage %} {%- else -%} {% assign imageData =
