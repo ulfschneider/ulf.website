@@ -22,33 +22,9 @@
     <kbd>{{ site.navNewer.kbd }}</kbd>
     {% endif %}
   </a>
-  {%- else -%}
-  <a
-    id="{{site.navNewest.id}}"
-    class="whitespace-nowrap block text-disabled pointer-events-none"
-    href=""
-    role="link"
-    aria-disabled="true"
-  >
-    {%- if site.navNewest.label -%} {{ site.navNewest.label }} {%- else
-    -%}Newest{%- endif -%}
-  </a>
-  <a
-    id="{{site.navNewer.id}}"
-    class="whitespace-nowrap block no-underline pointer-events-none"
-    href=""
-    role="link"
-    aria-disabled="true"
-  >
-    <span class="underline text-disabled">
-      {%- if site.navNewer.label -%} {{ site.navNewer.label }} {%- else -%}Newer
-      posts{%- endif -%}
-    </span>
-    {% if site.navNewer.kbd %}
-    <kbd class="text-disabled">{{ site.navNewer.kbd }}</kbd>
-    {% endif %}
-  </a>
-  {%- endif -%} {%- if pagedItems.older != "" and pagedItems.older != nil -%}
+  {%- endif -%}
+  <!-- -->
+  {%- if pagedItems.older != "" and pagedItems.older != nil -%}
   <a
     id="{{site.navOlder.id}}"
     class="whitespace-nowrap no-underline block"
@@ -64,7 +40,9 @@
   </a>
   {%- endif -%}
 </nav>
-{%- elsif pagedItems == nil -%}
+{%- endif -%}
+<!-- -->
+{%- if pagedItems == nil -%}
 <a id="nav-older" class="text-primary inline-block" href="{{site.blog}}">
   <strong>All posts</strong>
 </a>
