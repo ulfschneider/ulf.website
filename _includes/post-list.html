@@ -14,7 +14,7 @@ collections.liveContent | post -%} {%- endif -%}
   {% endif %} {% endif %}
 </div>
 
-<div class="my-ryt-xl">
+<div class="my-ryt-lg">
   {%- for p in livePosts -%} {%- assign currentDate = p.date | humanDate -%} {%-
   if limit == 1 and forloop.index > limit and currentDate != referenceDate -%}
   {%- break -%} {%- elsif limit > 1 and forloop.index > limit -%} {%- break -%}
