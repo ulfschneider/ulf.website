@@ -3,11 +3,10 @@ layout: default
 nodate: true
 ---
 
-<div class="rg:heror rg:flex gap-ryt-xl align-baseline">
+<div class="rg:heror rg:flex gap-ryt-xl rg:align-baseline">
   <div class="grow basis-8/12">
-    {%- if pagedItems.humanPageNumber == 1 and content != "" and content != nil
-    -%}
-    <div class="no-indent mb-ryt-xl">{{ content }}</div>
+    {%- if pagedItems.pageNumber == 0 and content != "" and content != nil -%}
+    <div class="mb-ryt-lg no-indent">{{ content }}</div>
     {%- endif -%} {%- include "post-list.html" -%}
   </div>
   <div class="grow-0 basis-4/12 mt-ryt-2xl rg:mt-0">

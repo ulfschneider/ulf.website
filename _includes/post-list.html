@@ -1,7 +1,12 @@
 {%- if pagedItems.pageData.length > 0 -%} {%- assign livePosts =
 pagedItems.pageData -%} {%- else -%} {%- assign livePosts =
 collections.liveContent | post -%} {%- endif -%}
-
+<!-- -->
+{%- if pagedItems.pageNumber > 0 -%} {%- assign indicatePageCount = true %} {%-
+endif -%} {%- if content == nil or content == "" -%} {%- assign
+indicatePageCount = true -%} {%- endif -%}
+<!-- -->
+{%- if indicatePageCount -%}
 <div class="text-sm">
   {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
   pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}All
@@ -13,6 +18,7 @@ collections.liveContent | post -%} {%- endif -%}
   >
   {% endif %} {% endif %}
 </div>
+{%- endif -%}
 
 <div class="my-ryt-lg">
   {%- for p in livePosts -%} {%- assign currentDate = p.date | humanDate -%} {%-
@@ -24,10 +30,7 @@ collections.liveContent | post -%} {%- endif -%}
   <article class="my-ryt-lg">
     {% if p.data.title != "" and p.data.title != nil and p.data.title !=
     "notitle" and p.data.notitle == nil %}
-    <h2
-      class="my-0 text-base font-bold font-body leading-snug"
-      style="margin-bottom: 0.2em"
-    >
+    <h2 class="my-0 text-base font-bold font-body leading-snug">
       <a class="no-underline" href="{{p.url}}"> {{ p.data.title }} </a>
     </h2>
     {% else %}

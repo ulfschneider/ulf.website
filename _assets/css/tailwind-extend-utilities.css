@@ -16,7 +16,7 @@
   }
 
   p.no-indent,
-  .no-indent p,
+  .no-indent p + p,
   .no-indent + p {
     @apply mt-ryt indent-0 !important;
   }
