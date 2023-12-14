@@ -25,7 +25,7 @@ nil -%}
   -%}
   <span class="inline-block">
     {% for tag in sortedTags %} {% if tag == site.starTag %}
-    <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs mr-ryt-xs"
+    <a href="{{tag | tagUrl}}" class="no-underline text-base px-ryt-2xs"
       >{{ site.starTagSymbol }}</a
     >
     {% endif %} {% endfor %} {% for tag in sortedTags %} {% if tag !=

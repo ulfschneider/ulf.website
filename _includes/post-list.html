@@ -2,16 +2,19 @@
 pagedItems.pageData -%} {%- else -%} {%- assign livePosts =
 collections.liveContent | post -%} {%- endif -%}
 
-<div>
-  {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %} Page {{
-  pagedItems.humanPageNumber }} / {{ pagedItems.pageCount }} {% else %} All
-  posts {% endif %} {% if pagedItems.tag != "" and pagedItems.tag != nil
-  %}tagged
-  <strong>#{{ pagedItems.tag }}</strong>
+<div class="text-sm">
+  {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
+  pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}All
+  posts{% endif %}{% if pagedItems.tag != "" and pagedItems.tag != nil %},
+  tagged
+  <strong
+    >{%if pagedItems.tag == site.starTag%}{{site.starTagSymbol}}{%else%}#{{
+    pagedItems.tag }}{%endif%}</strong
+  >
   {% endif %} {% endif %}
 </div>
 
-<div>
+<div class="my-ryt-xl">
   {%- for p in livePosts -%} {%- assign currentDate = p.date | humanDate -%} {%-
   if limit == 1 and forloop.index > limit and currentDate != referenceDate -%}
   {%- break -%} {%- elsif limit > 1 and forloop.index > limit -%} {%- break -%}

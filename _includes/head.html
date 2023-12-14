@@ -72,14 +72,18 @@
   title="{{site.title}}"
   type="application/atom+xml"
 />
+<!-- treat the star tag symbol -->
+{% if tag == site.starTag %} {% assign adaptedTag = site.starTagSymbol %} {%
+elsif pagedItems.tag == site.starTag %} {% assign adaptedTag =
+site.starTagSymbol %} {% elsif tag != nil and tag != "" %} {% assign adaptedTag
+= tag %} {%else%} {% assign adaptedTag = pagedItems.tag %} {%endif%}
 <!-- title and description -->
 {%- if title != nil and title != "notitle" and title != "" -%} {%- assign
-adaptedTitle = title -%} {%- elsif tag != nil and tag != "" -%} {%- assign
-adaptedTitle = "Posts tagged " | append: tag -%} {%- elsif pagedItems.tag != nil
-and pagedItems.tag != "" -%} {%- assign adaptedTitle = "Posts tagged " | append:
-pagedItems.tag -%} {%- elsif pagedItems.tag == "" -%} {%- assign adaptedTitle =
-"All posts" -%} {%- else -%} {%- assign adaptedTitle = site.name -%} {%- endif
--%}
+adaptedTitle = title -%} {%- elsif adaptedTag != nil and adaptedTag != "" -%}
+{%- assign adaptedTitle = "Posts tagged " | append: adaptedTag -%} {%- elsif
+adaptedTag == "" -%} {%- assign adaptedTitle = "All posts" -%} {%- else -%} {%-
+assign adaptedTitle = site.name -%} {%- endif -%}
+<!--  -->
 <title>{{ adaptedTitle }}</title>
 {%- if abstract != nil and abstract != "" -%}
 <meta name="description" content="{{abstract | strip_html }}" />
