@@ -94,7 +94,7 @@
 
   /* tags */
   .site-tags .tag {
-    @apply no-underline px-ryt-xs py-ryt-2xs  bg-white dark:bg-light-dark whitespace-nowrap text-sm;
+    @apply no-underline px-ryt-xs py-ryt-2xs  bg-light dark:bg-light-dark whitespace-nowrap text-sm;
   }
   .site-tags .tag.current {
     @apply px-ryt-xs py-ryt-2xs  bg-primary text-white whitespace-nowrap text-sm;
