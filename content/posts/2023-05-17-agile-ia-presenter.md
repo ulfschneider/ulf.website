@@ -1,6 +1,8 @@
 ---
 title: Agile iA Presenter
-tags: agile
+tags: 
+  - agile
+  - apps
 ---
 What a joy to use iA´s Presenter. I took the chance to prepare a small agile training session. It´s possible to export the presentation to HTML and run it from anywhere. So, here it is:
 
