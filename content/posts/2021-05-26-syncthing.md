@@ -1,6 +1,8 @@
 ---
 title: Syncthing
-tags: [journal, star]
+tags: 
+  - star
+  - apps
 ---
 [Syncthing](https://syncthing.net) is a tool to synchronize *multiple* folders between different computers with same or different operating systems. It is
 - open source,
