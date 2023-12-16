@@ -63,11 +63,11 @@
 
   label,
   legend {
-    @apply block align-baseline font-bold leading-tight;
+    @apply block align-baseline font-bold;
   }
 
   form .hint {
-    @apply text-meta font-normal leading-tight;
+    @apply text-meta font-normal;
   }
 
   input[type="text"],
