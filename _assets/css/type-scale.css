@@ -8,7 +8,7 @@
   }
 }
 
-@media (min-width: theme(screens.rg)) {
+@media (min-width: theme(screens.lg)) {
   :root {
     font-size: 20px;
   }
