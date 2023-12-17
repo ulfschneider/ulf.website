@@ -227,7 +227,7 @@
     @apply border-l-2 border-l-current my-ryt text-balance no-indent;
   }
 
-  div.markdown-alert p {
+  div.markdown-alert p + p {
     @apply !my-0;
   }
 
