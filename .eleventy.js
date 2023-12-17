@@ -1,6 +1,8 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
+const { minify } = require("terser");
+const CleanCSS = require("clean-css");
 const rss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const embedTweets = require("eleventy-plugin-embed-tweet");
@@ -8,6 +10,14 @@ const webmentions = require("eleventy-plugin-webmentions");
 const site = require("./_data/site.js");
 const utils = require("./_eleventy/utils.js");
 const filters = require("./_eleventy/filters.js");
+
+const fs = require("fs");
+const liteYTJs = fs.readFileSync(
+  "node_modules/lite-youtube-embed/src/lite-yt-embed.js"
+);
+const liteYTCss = fs.readFileSync(
+  "node_modules/lite-youtube-embed/src/lite-yt-embed.css"
+);
 
 module.exports = function (eleventyConfig) {
   addLayoutAliases(eleventyConfig);
@@ -38,6 +48,7 @@ module.exports = function (eleventyConfig) {
     useInlineStyles: true /*use the default styling*/,
     autoEmbed: true /*allow to embed a tweet by writing the URL within a single line in your Markdown */,
   });
+
   if (site.allowWebmentions) {
     eleventyConfig.addPlugin(webmentions, {
       domain: site.domain,
@@ -45,6 +56,59 @@ module.exports = function (eleventyConfig) {
       cacheDirectory: "_webmentions",
     });
   }
+
+  //lite-youtube
+  eleventyConfig.addTransform("lite-youtube", async function (content) {
+    let found = false;
+
+    function replaceHTMLWithLiteYoutube(content, index, length, videoId) {
+      return (
+        content.substring(0, index) +
+        `<lite-youtube videoid="${videoId}"></lite-youtube>` +
+        content.substring(index + length)
+      );
+    }
+
+    async function hydrateLiteYoutube(content) {
+      const liteYTStyles = new CleanCSS({}).minify(liteYTCss.toString()).styles;
+      const liteYTCode = (
+        await minify(liteYTJs.toString(), {
+          mangle: {
+            toplevel: true,
+          },
+          nameCache: {},
+        })
+      ).code;
+
+      content += `\n<style>${liteYTStyles}</style>`;
+      content += `\n<script>${liteYTCode}</script>`;
+      return content;
+    }
+
+    const IFRAME =
+      /<iframe\s+src=".*?(youtube.com|youtu.be)\/(embed\/|watch\?v=)?(?<videoId>.*?)(\?|").*?<\/iframe>/i;
+    const SINGLE_LINE =
+      /<p ?.*?>\s*(http(s)?:\/\/)?(www.)?(youtube.com|youtu.be)\/(embed\/|watch\?v=)?(?<videoId>.*?)(\?)?\s*<\/p>/i;
+    const PATTERN = [IFRAME, SINGLE_LINE];
+
+    for (const pattern of PATTERN) {
+      while ((match = content.match(pattern))) {
+        found = true;
+        content = replaceHTMLWithLiteYoutube(
+          content,
+          match.index,
+          match[0].length,
+          match.groups.videoId
+        );
+      }
+    }
+
+    if (found) {
+      content = await hydrateLiteYoutube(content);
+    }
+
+    return content;
+  });
 
   return {
     dir: {
