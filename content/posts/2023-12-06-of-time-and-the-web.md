@@ -43,7 +43,6 @@ Jeremy is also covering Single Page Apps.
 > <footer>Jeremy Keith on using what browsers can accomplish today</footer>
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UjtcCTH4K10?si=FvyeXb0n9ercC4ph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+https://www.youtube.com/embed/UjtcCTH4K10?si=FvyeXb0n9ercC4ph
 <figcaption><a href="https://youtu.be/UjtcCTH4K10?si=oJrs6ndfuMqkOaoT"><cite>Of Time And The Web</cite></a>, by Jeremy Keith</figcaption>
 </figure>
-
