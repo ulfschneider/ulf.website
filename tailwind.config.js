@@ -59,7 +59,7 @@ module.exports = {
           dark: colors.neutral[800],
         },
         back: {
-          light: colors.neutral[100],
+          light: "#f7f7f7",
           dark: colors.neutral[900],
         },
         primary: {
@@ -79,7 +79,7 @@ module.exports = {
           dark: colors.neutral[800],
         },
         light: {
-          light: colors.neutral[50],
+          light: "#f7f7f7",
           DEFAULT: colors.neutral[200],
           dark: colors.neutral[800],
         },
