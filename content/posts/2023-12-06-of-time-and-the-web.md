@@ -42,6 +42,6 @@ Jeremy is also covering Single Page Apps.
 > Instead of assuming that a single page app architecture is needed, ask what users need to accomplish. Instead of assuming you need a CSS framework or a JavaScript library, see what you can do in browsers today with native CSS and vanilla JavaScript. Don’t include a bunch of dependencies by default just in case you might need them. Instead, as Rachel [Andrew] puts it: <q>Stop solving problems you don’t yet have.</q>
 > <footer>Jeremy Keith on using what browsers can accomplish today</footer>
 
-<figure>
-https://www.youtube.com/embed/UjtcCTH4K10?si=FvyeXb0n9ercC4ph<figcaption><a href="https://youtu.be/UjtcCTH4K10?si=oJrs6ndfuMqkOaoT"><cite>Of Time And The Web</cite></a>, by Jeremy Keith</figcaption>
+<figure>https://www.youtube.com/embed/UjtcCTH4K10?si=FvyeXb0n9ercC4ph<figcaption><a href="https://youtu.be/UjtcCTH4K10?si=oJrs6ndfuMqkOaoT"><cite>Of Time And The Web</cite></a>, by Jeremy Keith</figcaption>
 </figure>
+

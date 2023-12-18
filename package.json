@@ -31,7 +31,7 @@
     "dayjs": "^1.11.5",
     "del": "^6.1.1",
     "eleventy-plugin-embed-tweet": "^0.3.1",
-    "eleventy-plugin-lite-youtube": "^0.1.2",
+    "eleventy-plugin-lite-youtube": "^0.1.8",
     "eleventy-plugin-webmentions": "^2.0.0",
     "event-stream": "^4.0.1",
     "glob-parent": "^6.0.2",
