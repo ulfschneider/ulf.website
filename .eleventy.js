@@ -5,7 +5,7 @@ const rss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const embedTweets = require("eleventy-plugin-embed-tweet");
 const webmentions = require("eleventy-plugin-webmentions");
-const liteVideo = require("eleventy-plugin-lite-video");
+const liteYoutube = require("eleventy-plugin-lite-youtube");
 const site = require("./_data/site.js");
 const utils = require("./_eleventy/utils.js");
 const filters = require("./_eleventy/filters.js");
@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
     },
     codeAttributes: {},
   });
-  eleventyConfig.addPlugin(liteVideo);
+  eleventyConfig.addPlugin(liteYoutube);
   eleventyConfig.addPlugin(embedTweets, {
     cacheDirectory: "_tweets" /* Cache tweets in the _tweets folder */,
     useInlineStyles: true /*use the default styling*/,
