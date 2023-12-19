@@ -314,7 +314,7 @@
 
   /* kbd */
   kbd {
-    @apply px-ryt-xs inline-block rounded-sm border border-light dark:border-light-dark text-center font-mono text-sm dark:text-write-light  min-w-ryt uppercase;
+    @apply px-ryt-xs rounded-sm border border-light dark:border-light-dark text-center font-mono text-sm dark:text-write-light  min-w-ryt uppercase;
   }
 
   /* pre and pre code */
