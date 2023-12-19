@@ -47,7 +47,7 @@
   }
 
   body {
-    @apply text-write-dark dark:text-write-light dark:bg-back-dark bg-back-light min-h-full text-base h-full;
+    @apply text-write-dark dark:text-write-light dark:bg-back-dark bg-back-light text-base h-full;
   }
 
   /* focus */
@@ -314,7 +314,7 @@
 
   /* kbd */
   kbd {
-    @apply bg-light dark:bg-light-dark px-ryt-xs inline-block rounded-sm border border-current text-center font-mono text-sm;
+    @apply px-ryt-xs inline-block rounded-sm border border-light dark:border-light-dark text-center font-mono text-sm dark:text-write-light  min-w-ryt uppercase;
   }
 
   /* pre and pre code */
