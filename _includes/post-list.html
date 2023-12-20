@@ -24,8 +24,10 @@ indicatePageCount = true -%} {%- endif -%}
 
 <div class="lg:flex lg:-ml-ryt-2xl my-ryt-lg">
   <div class="lg:w-ryt-2xl shrink-0 mb-ryt-lg lg:leading-snug">
+    {% if limit == "" or limit == nil %}
     <span class="lg:hidden">Posts written in </span
     ><time class="sticky top-ryt-lg lg:font-bold">{{livePosts.year}}</time>
+    {% endif %}
   </div>
   <div class="space-y-ryt-lg">
     {%- for p in livePosts -%} {%- if limit >= 1 and forloop.index > limit -%}
