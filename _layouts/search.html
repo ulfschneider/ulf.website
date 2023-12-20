@@ -50,15 +50,13 @@ permalink: "{{site.search.url}}"
       }
       if (entry.humanDate || (entry.tags.length && !entry.notags)) {
         let aside = document.createElement("aside");
-        aside.classList = `${
-          entry.starred ? entry.starred + " " : ""
-        }leading-snug text-sm`;
+        aside.classList = `${entry.starred ? entry.starred + " " : ""}text-sm`;
         article.appendChild(aside);
 
         if (entry.date) {
           let date = document.createElement("time");
           date.innerHTML += entry.humanDate;
-          date.classList = "inline-block mr-ryt";
+          date.classList = "whitespace-nowrap mr-ryt";
           aside.appendChild(date);
           aside.appendChild(document.createTextNode(" "));
         }
@@ -83,7 +81,7 @@ permalink: "{{site.search.url}}"
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
               tagLink.innerHTML = "#" + tag.name;
-              tagLink.classList = "no-underline inline-block";
+              tagLink.classList = "no-underline";
               tags.appendChild(tagLink);
               tags.appendChild(document.createTextNode(" "));
             }
