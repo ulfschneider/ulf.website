@@ -8,7 +8,7 @@ module.exports = {
   cacheVersioning: {
     runtime: `${CACHE_VERSION}-0`,
     script: `${CACHE_VERSION}-21`,
-    css: `${CACHE_VERSION}-132`,
+    css: `${CACHE_VERSION}-133`,
     json: `${CACHE_VERSION}-0`,
     search: `${CACHE_VERSION}-2`,
     image: `${CACHE_VERSION}-1`,
@@ -56,7 +56,6 @@ module.exports = {
       profile: "https://github.com/ulfschneider",
     },
   },
-  paginationSize: 5,
   starTag: "star",
   starTagSymbol: "★",
   mainnav: [

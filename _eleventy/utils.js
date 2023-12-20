@@ -289,6 +289,22 @@ module.exports = {
     return chunks;
   },
 
+  chunkByYear: function (arr = [], dateProperty = "date") {
+    let years = new Map();
+    for (let entry of arr) {
+      let date = new Date(entry[dateProperty]);
+      let year = date.getFullYear();
+      let chunk = years.get(year);
+      if (!chunk) {
+        chunk = [];
+        chunk.year = year;
+        years.set(year, chunk);
+      }
+      chunk.push(entry);
+    }
+    return [...years.values()];
+  },
+
   newestPage: function (path) {
     return path;
   },

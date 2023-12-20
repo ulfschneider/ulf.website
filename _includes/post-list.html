@@ -22,31 +22,34 @@ indicatePageCount = true -%} {%- endif -%}
 </div>
 {%- endif -%}
 
-<div class="my-ryt-lg">
-  {%- for p in livePosts -%} {%- assign currentDate = p.date | humanDate -%} {%-
-  if limit == 1 and forloop.index > limit and currentDate != referenceDate -%}
-  {%- break -%} {%- elsif limit > 1 and forloop.index > limit -%} {%- break -%}
-  {%- endif -%} {%- assign referenceDate = p.date | humanDate -%} {%- if p.url
-  == page.url -%} {%- continue -%} {%- endif -%}
+<div class="lg:flex lg:-ml-ryt-2xl my-ryt-lg">
+  <div class="lg:w-ryt-2xl shrink-0 mb-ryt-lg lg:leading-snug">
+    <span class="lg:hidden">Posts written in </span
+    ><time class="sticky top-ryt-lg lg:font-bold">{{livePosts.year}}</time>
+  </div>
+  <div class="space-y-ryt-lg">
+    {%- for p in livePosts -%} {%- if limit >= 1 and forloop.index > limit -%}
+    {%- break -%} {%- endif -%} {%- if p.url == page.url -%} {%- continue -%}
+    {%- endif -%}
 
-  <article class="my-ryt-lg">
-    {% if p.data.title != "" and p.data.title != nil and p.data.title !=
-    "notitle" and p.data.notitle == nil %}
-    <h2 class="my-0 text-base font-bold font-body leading-snug">
-      <a class="no-underline" href="{{p.url}}"> {{ p.data.title }} </a>
-    </h2>
-    {% else %}
-    <p>
-      {{ p.templateContent | strip_html | strip | truncatewords: 25 , "&nbsp;… "
-      }}
-      <a href="{{p.url}}">Read more</a>
-    </p>
-    {% endif %}
-    <aside class="leading-snug {{p.data.starred}}">
-      {% include "date-tags.html" posted: p.date tags: p.data.tags notags:
-      p.data.notags %}
-    </aside>
-  </article>
-  {%- endfor -%}
+    <article>
+      {% if p.data.title != "" and p.data.title != nil and p.data.title !=
+      "notitle" and p.data.notitle == nil %}
+      <h2 class="my-0 text-base font-bold font-body leading-snug">
+        <a class="no-underline" href="{{p.url}}"> {{ p.data.title }} </a>
+      </h2>
+      {% else %}
+      <p>
+        {{ p.templateContent | strip_html | strip | truncatewords: 25 , "&nbsp;…
+        " }}
+        <a href="{{p.url}}">Read more</a>
+      </p>
+      {% endif %}
+      <aside class="{{p.data.starred}}">
+        {% include "date-tags.html" posted: p.date tags: p.data.tags notags:
+        p.data.notags %}
+      </aside>
+    </article>
+    {%- endfor -%} {%- include "pagination-nav.html" -%}
+  </div>
 </div>
-{%- include "pagination-nav.html" -%}

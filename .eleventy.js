@@ -123,7 +123,7 @@ function addCollections(eleventyConfig) {
       .reverse();
 
     let tagMap = [];
-    let pagedItems = utils.chunk(items, site.paginationSize);
+    let pagedItems = utils.chunkByYear(items);
     for (
       let pageNumber = 0, max = pagedItems.length;
       pageNumber < max;
@@ -148,7 +148,7 @@ function addCollections(eleventyConfig) {
     let usedSiteTags = utils.extractTags(items);
     for (let tagName of usedSiteTags) {
       let tagItems = items.filter((item) => item.data?.tags?.includes(tagName));
-      let pagedItems = utils.chunk(tagItems, site.paginationSize);
+      let pagedItems = utils.chunkByYear(tagItems);
 
       for (
         let pageNumber = 0, max = pagedItems.length;
