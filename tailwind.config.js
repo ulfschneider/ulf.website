@@ -13,7 +13,7 @@ module.exports = {
       "_layouts/**/*",
       "_eleventy/**/*",
       "_assets/js/**/*",
-      "_assets/css/tailwind-extend-components",
+      "_assets/css/tailwind-extend-components.css",
     ],
   },
   theme: {
