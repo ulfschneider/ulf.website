@@ -337,6 +337,6 @@
   }
 
   code:not(pre code) {
-    @apply bg-light text-write-dark dark:bg-light-dark dark:text-write-light px-ryt-2xs font-mono text-sm;
+    @apply text-write-dark dark:text-write-light font-mono font-semibold;
   }
 }
