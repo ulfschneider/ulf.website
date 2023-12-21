@@ -279,9 +279,9 @@ module.exports = {
     return [...tagSet].sort();
   },
 
-  chunk: function (arr = [], chunkSize = 1) {
+  chunk: function (values = [], chunkSize = 1) {
     let chunks = [];
-    let tmp = [...arr];
+    let tmp = [...values];
     if (chunkSize <= 0) return chunks;
     while (tmp.length) {
       chunks.push(tmp.splice(0, chunkSize));
@@ -289,9 +289,9 @@ module.exports = {
     return chunks;
   },
 
-  chunkByYear: function (arr = [], dateProperty = "date") {
+  chunkByYear: function (values = [], dateProperty = "date") {
     let years = new Map();
-    for (let entry of arr) {
+    for (let entry of values) {
       let date = new Date(entry[dateProperty]);
       let year = date.getFullYear();
       let chunk = years.get(year);
@@ -303,10 +303,18 @@ module.exports = {
       chunk.push(entry);
     }
 
-    if (arr.length / years.size <= 5) {
+    if (values.length / years.size <= 5) {
       //if each year in average contains <= 5 entries
       //do not chunk into years and return a single chunk!
-      return [arr];
+      let chunk = [...values];
+      chunk.years = [...years.keys()].sort();
+      if (chunk.years.at(0) != chunk.years.at(-1)) {
+        chunk.yearsInterval = [chunk.years.at(0), chunk.years.at(-1)];
+      } else {
+        chunk.year = chunk.years.at(0);
+        delete chunk.years;
+      }
+      return [chunk];
     } else {
       return [...years.values()];
     }

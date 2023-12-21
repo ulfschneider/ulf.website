@@ -25,14 +25,21 @@ indicatePageCount = true -%} {%- endif -%}
 <div class="lg:flex lg:-ml-ryt-2xl my-ryt-lg">
   <div class="lg:w-ryt-2xl shrink-0 mb-ryt-lg lg:leading-snug">
     {% if livePosts.year %}
-    <span class="lg:hidden">Posts written in </span
+    <span class="lg:hidden">Content from </span
     ><time class="sticky top-ryt-lg lg:font-bold">{{livePosts.year}}</time>
     {% endif %}
   </div>
   <div>
-    {%- for p in livePosts -%} {%- if limit >= 1 and forloop.index > limit -%}
-    {%- break -%} {%- endif -%} {%- if p.url == page.url -%} {%- continue -%}
-    {%- endif -%}
+    {% if livePosts.yearsInterval %}
+    <div class="mb-ryt-lg">
+      <span>Content from </span
+      ><time
+        >{{livePosts.yearsInterval[0]}}–{{livePosts.yearsInterval[1]}}</time
+      >
+    </div>
+    {% endif %} {%- for p in livePosts -%} {%- if limit >= 1 and forloop.index >
+    limit -%} {%- break -%} {%- endif -%} {%- if p.url == page.url -%} {%-
+    continue -%} {%- endif -%}
 
     <article class="mb-ryt-lg">
       {% if p.data.title != "" and p.data.title != nil and p.data.title !=
