@@ -80,7 +80,7 @@ site.starTagSymbol %} {% elsif tag != nil and tag != "" %} {% assign adaptedTag
 <!-- title and description -->
 {%- if title != nil and title != "notitle" and title != "" -%} {%- assign
 adaptedTitle = title -%} {%- elsif adaptedTag != nil and adaptedTag != "" -%}
-{%- assign adaptedTitle = "Pontent tagged " | append: adaptedTag -%} {%- elsif
+{%- assign adaptedTitle = "Posts tagged " | append: adaptedTag -%} {%- elsif
 adaptedTag == "" -%} {%- assign adaptedTitle = "All posts" -%} {%- else -%} {%-
 assign adaptedTitle = site.name -%} {%- endif -%}
 <!--  -->
