@@ -9,9 +9,8 @@ indicatePageCount = true -%} {%- endif -%}
 {%- if indicatePageCount -%}
 <div>
   {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
-  pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}All
-  posts{% endif %}{% if pagedItems.tag != "" and pagedItems.tag != nil %},
-  tagged
+  pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}Posts{%
+  endif %}{% if pagedItems.tag != "" and pagedItems.tag != nil %} tagged
   <a href="{{pagedItems.tag | tagUrl}}" class="no-underline"
     ><strong
       >{%if pagedItems.tag == site.starTag%}{{site.starTagSymbol}}{%else%}#{{
@@ -25,14 +24,14 @@ indicatePageCount = true -%} {%- endif -%}
 <div class="lg:flex lg:-ml-ryt-2xl my-ryt-lg">
   <div class="lg:w-ryt-2xl shrink-0 mb-ryt-lg lg:leading-snug">
     {% if livePosts.year %}
-    <span class="lg:hidden">Content from </span
+    <span class="lg:hidden">Written </span
     ><time class="sticky top-ryt-lg lg:font-bold">{{livePosts.year}}</time>
     {% endif %}
   </div>
   <div>
     {% if livePosts.yearsInterval %}
     <div class="mb-ryt-lg">
-      <span>Content from </span
+      <span>Written </span
       ><time
         >{{livePosts.yearsInterval[0]}}–{{livePosts.yearsInterval[1]}}</time
       >

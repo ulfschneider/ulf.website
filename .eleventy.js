@@ -132,7 +132,7 @@ function addCollections(eleventyConfig) {
     ) {
       tagMap.push({
         tag: "",
-        title: "All content",
+        title: "All posts",
         pageNumber: pageNumber,
         humanPageNumber: pageNumber + 1,
         permalink: utils.currentPage(site.blog, pageNumber),
