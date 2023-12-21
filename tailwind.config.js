@@ -81,7 +81,7 @@ module.exports = {
         },
         light: {
           light: "#f7f7f7",
-          DEFAULT: colors.neutral[300],
+          DEFAULT: colors.neutral[200],
           dark: colors.neutral[700],
         },
         outline: {
