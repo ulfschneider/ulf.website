@@ -104,6 +104,7 @@ function addCollections(eleventyConfig) {
         return item;
       });
   });
+
   //double pagination
   eleventyConfig.addCollection("doublePagination", (collectionAPI) => {
     console.log("Derive double pagination");
@@ -131,7 +132,7 @@ function addCollections(eleventyConfig) {
     ) {
       tagMap.push({
         tag: "",
-        title: "All posts",
+        title: "All content",
         pageNumber: pageNumber,
         humanPageNumber: pageNumber + 1,
         permalink: utils.currentPage(site.blog, pageNumber),
