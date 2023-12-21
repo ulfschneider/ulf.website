@@ -302,7 +302,14 @@ module.exports = {
       }
       chunk.push(entry);
     }
-    return [...years.values()];
+
+    if (arr.length / years.size <= 5) {
+      //if each year in average contains <= 5 entries
+      //do not chunk into years and return a single chunk!
+      return [arr];
+    } else {
+      return [...years.values()];
+    }
   },
 
   newestPage: function (path) {
