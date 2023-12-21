@@ -29,7 +29,6 @@ permalink: "{{site.search.url}}"
       if (entry.title && entry.title != "notitle") {
         let title = document.createElement("h2");
         title.classList = "my-0 font-bold text-base font-body leading-snug";
-        title.style = "margin-bottom:.2em;";
         article.appendChild(title);
 
         let linkToArticle = document.createElement("a");
@@ -62,27 +61,36 @@ permalink: "{{site.search.url}}"
         }
 
         if (entry.tags.length && !entry.notags) {
-          let tags = document.createElement("span");
+          let tags = document.createElement("ul");
+          tags.classList = "space-x-ryt-xs inline reset";
           aside.appendChild(tags);
 
           for (let tag of entry.tags) {
             if (tag.name == "{{site.starTag}}") {
+              let listElement = document.createElement("li");
+              listElement.classList = "inline";
+              tags.appendChild(listElement);
+
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
               tagLink.innerHTML = "{{site.starTagSymbol}}";
               tagLink.classList = "no-underline text-base px-ryt-2xs";
-              tags.appendChild(tagLink);
+              listElement.appendChild(tagLink);
               tags.appendChild(document.createTextNode(" "));
               break;
             }
           }
           for (let tag of entry.tags) {
             if (tag.name != "{{site.starTag}}") {
+              let listElement = document.createElement("li");
+              listElement.classList = "inline";
+              tags.appendChild(listElement);
+
               let tagLink = document.createElement("a");
               tagLink.href = tag.url;
               tagLink.innerHTML = "#" + tag.name;
               tagLink.classList = "no-underline";
-              tags.appendChild(tagLink);
+              listElement.appendChild(tagLink);
               tags.appendChild(document.createTextNode(" "));
             }
           }
