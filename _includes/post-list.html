@@ -40,17 +40,24 @@ indicatePageCount = true -%} {%- endif -%}
       <h2 class="my-0 text-base font-bold font-body leading-snug">
         <a class="no-underline" href="{{p.url}}"> {{ p.data.title }} </a>
       </h2>
-      {% else %}
+      <aside class="{{p.data.starred}}">
+        {% include "date-tags.html" posted: p.date tags: p.data.tags notags:
+        p.data.notags %}
+      </aside>
+      {% endif %} {%- if p.data.abstract -%}
+      <p>{{p.data.abstract}}</p>
+      {%- endif -%} {%- if p.data.title == "" or p.data.title == nil or
+      p.data.title == "notitle" or p.data.notitle != nil -%}
       <p>
         {{ p.templateContent | strip_html | strip | truncatewords: 25 , "&nbsp;…
         " }}
         <a href="{{p.url}}">Read more</a>
       </p>
-      {% endif %}
       <aside class="{{p.data.starred}}">
         {% include "date-tags.html" posted: p.date tags: p.data.tags notags:
         p.data.notags %}
       </aside>
+      {% endif %}
     </article>
     {%- endfor -%} {%- include "pagination-nav.html" -%}
   </div>
