@@ -1,5 +1,5 @@
 ---
-title: A quick ride into the eveneing
+title: A quick ride into the evening
 tags: 
   - strael
   - sports
