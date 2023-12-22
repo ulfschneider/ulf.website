@@ -22,7 +22,7 @@ nil -%}
   </span>
   {% endif %} {% if tags != nil %} {%- assign sortedTags = tags | uniq | sort
   -%}
-  <ul class="space-x-ryt-xs inline reset">
+  <ul class="inline reset">
     {% for tag in sortedTags %} {% if tag == site.starTag %}
     <li class="inline">
       <a href="{{tag | tagUrl}}" class="no-underline text-base px-ryt-2xs"
