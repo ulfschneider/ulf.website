@@ -56,7 +56,7 @@ module.exports = {
       colors: {
         write: {
           bright: colors.neutral[200],
-          light: colors.neutral[300],
+          light: "#c3c3c3",
           dark: colors.neutral[800],
         },
         back: {
