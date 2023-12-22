@@ -100,9 +100,9 @@ module.exports = {
           dark: colors.orange[900],
         },
         red: {
-          light: colors.red[100],
-          DEFAULT: colors.red[500],
-          dark: colors.red[900],
+          light: colors.red[400],
+          DEFAULT: colors.red[600],
+          dark: colors.red[800],
         },
         green: {
           light: colors.green[100],
