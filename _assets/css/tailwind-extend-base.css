@@ -73,7 +73,7 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display text-balance break-after-avoid font-bold leading-snug tracking-tight text-2xl;
+    @apply font-display text-balance break-after-avoid font-bold leading-snug tracking-tight text-xl sm:text-2xl;
   }
 
   h2,
