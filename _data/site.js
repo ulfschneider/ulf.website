@@ -7,7 +7,7 @@ const CACHE_VERSION = "v1";
 module.exports = {
   cacheVersioning: {
     runtime: `${CACHE_VERSION}-0`,
-    script: `${CACHE_VERSION}-21`,
+    script: `${CACHE_VERSION}-22`,
     css: `${CACHE_VERSION}-139`,
     json: `${CACHE_VERSION}-0`,
     search: `${CACHE_VERSION}-2`,
