@@ -73,12 +73,12 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display text-balance break-after-avoid font-bold leading-snug tracking-tight text-lg;
+    @apply font-display text-balance break-after-avoid font-bold leading-snug tracking-tight text-2xl;
   }
 
   h2,
   .h2 {
-    @apply font-display mt-ryt-xl mb-ryt text-balance break-after-avoid font-bold leading-snug;
+    @apply font-display mt-ryt-xl mb-ryt text-balance break-after-avoid font-bold leading-snug text-lg;
   }
 
   h3,
