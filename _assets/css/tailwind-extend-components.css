@@ -47,7 +47,7 @@
 
     &::before {
       content: "Contents";
-      @apply block font-bold;
+      @apply block text-sm;
     }
 
     a {
