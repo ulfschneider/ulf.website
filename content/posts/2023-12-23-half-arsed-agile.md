@@ -2,7 +2,7 @@
 title: Manifesto for Half-Arsed Agile Software Development
 tags: agile
 ---
-[<cite>www.halfarsedagilemanifesto.org</cite>](https://www.halfarsedagilemanifesto.org), by [Kerry Buckley](https://www.kerrybuckley.org). Ask yourself:
+Ask yourself:
 
 > We have heard about new ways of developing software by paying consultants and reading Gartner reports. Through this we have been told to value:
 >
