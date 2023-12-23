@@ -2,11 +2,7 @@
 pagedItems.pageData -%} {%- else -%} {%- assign livePosts =
 collections.liveContent | post -%} {%- endif -%}
 <!-- -->
-{%- if pagedItems.pageNumber > 0 -%} {%- assign indicatePageCount = true %} {%-
-endif -%} {%- if content == nil or content == "" -%} {%- assign
-indicatePageCount = true -%} {%- endif -%}
-<!-- -->
-{%- if indicatePageCount -%}
+
 <div>
   {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
   pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}Posts{%
@@ -19,7 +15,6 @@ indicatePageCount = true -%} {%- endif -%}
   >
   {% endif %} {% endif %}
 </div>
-{%- endif -%}
 
 <div class="lg:flex lg:-ml-ryt-2xl my-ryt-lg">
   <div class="lg:w-ryt-2xl shrink-0 mb-ryt-lg lg:leading-snug">
