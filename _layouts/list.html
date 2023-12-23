@@ -3,13 +3,13 @@ layout: default
 nodate: true
 ---
 
-<div class="rg:heror rg:flex rg:gap-ryt-xl">
-  <div class="grow basis-8/12">
+<div class="rg:heror rg:flex rg:gap-ryt-xl rg:align-baseline">
+  <div class="basis-8/12">
     {%- if pagedItems.pageNumber == 0 and content != "" and content != nil -%}
     <div class="mb-ryt-lg no-indent">{{ content }}</div>
     {%- endif -%} {%- include "post-list.html" -%}
   </div>
-  <div class="grow-0 basis-4/12 mt-ryt-2xl rg:mt-0">
+  <div class="basis-4/12 mt-ryt-2xl rg:mt-0">
     {%- include "site-tags.html" -%}
   </div>
 </div>

@@ -28,7 +28,8 @@ permalink: "{{site.search.url}}"
       parent.appendChild(article);
       if (entry.title && entry.title != "notitle") {
         let title = document.createElement("h2");
-        title.classList = "my-0 font-bold text-base font-body leading-snug";
+        title.classList =
+          "mt-0 font-bold text-base font-body leading-snug mb-ryt-xs";
         article.appendChild(title);
 
         let linkToArticle = document.createElement("a");
