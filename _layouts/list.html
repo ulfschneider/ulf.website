@@ -4,7 +4,7 @@ nodate: true
 ---
 
 {% if pagedItems.tag != nil and pagedItems.tag != ""%}
-<div>
+<div class="mb-ryt-lg">
   {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
   pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}Posts{%
   endif %}{% if pagedItems.tag != "" and pagedItems.tag != nil %} tagged
@@ -14,12 +14,14 @@ nodate: true
       pagedItems.tag }}{%endif%}</strong
     ></a
   >
-  {% endif %} {% endif %}
+  {% endif %} {% endif %} {% if content != nil and content != "" %}
+  <div class="no-indent">{{ content }}</div>
+  {% endif %}
 </div>
-{% endif %}<!-- -->
-{% if content != nil and content != "" %}
+{% elsif content != nil and content != "" %}
 <div class="no-indent mb-ryt-lg">{{ content }}</div>
-{% endif %}
+{% endif %}<!-- -->
+
 <!-- -->
 <div
   class="flex flex-col rg:heror rg:flex-row-reverse rg:gap-ryt-xl rg:align-baseline"
