@@ -1,25 +1,11 @@
 {%- if pagedItems.pageData.length > 0 -%} {%- assign livePosts =
 pagedItems.pageData -%} {%- else -%} {%- assign livePosts =
 collections.liveContent | post -%} {%- endif -%}
-<!-- -->
 
-<div>
-  {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
-  pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}Posts{%
-  endif %}{% if pagedItems.tag != "" and pagedItems.tag != nil %} tagged
-  <a href="{{pagedItems.tag | tagUrl}}" class="no-underline"
-    ><strong
-      >{%if pagedItems.tag == site.starTag%}{{site.starTagSymbol}}{%else%}#{{
-      pagedItems.tag }}{%endif%}</strong
-    ></a
-  >
-  {% endif %} {% endif %}
-</div>
-
-<div class="lg:flex lg:-ml-[200px] mb-ryt-lg">
+<div class="lg:flex lg:-ml-[200px]">
   <div class="lg:w-[200px] shrink-0 lg:mt-ryt-lg">
     {% if livePosts.year or livePosts.yearsInterval %}
-    <div
+    <aside
       class="lg:sticky lg:top-ryt-2xl lg:leading-snug lg:pr-ryt-xl lg:text-right"
     >
       <span class="lg:hidden">Written </span>
@@ -30,7 +16,7 @@ collections.liveContent | post -%} {%- endif -%}
         >{{livePosts.yearsInterval[0]}}–{{livePosts.yearsInterval[1]}}</time
       >
       {% endif %}
-    </div>
+    </aside>
     {% endif %}
   </div>
 
@@ -39,7 +25,7 @@ collections.liveContent | post -%} {%- endif -%}
     {%- break -%} {%- endif -%} {%- if p.url == page.url -%} {%- continue -%}
     {%- endif -%}
 
-    <article class="my-ryt-lg">
+    <article class="mt-ryt-lg">
       {% if p.data.title != "" and p.data.title != nil and p.data.title !=
       "notitle" and p.data.notitle == nil %}
       <h2 class="mt-0 mb-ryt-xs text-base font-bold font-body leading-snug">

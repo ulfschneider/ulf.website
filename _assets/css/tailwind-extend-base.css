@@ -83,7 +83,7 @@
 
   h3,
   .h3 {
-    @apply font-display mt-ryt-xl mb-ryt text-balance break-after-avoid font-normal leading-snug tracking-tight text-lg;
+    @apply font-display mt-ryt-xl mb-ryt text-balance break-after-avoid font-bold leading-snug  text-base;
   }
 
   h4,

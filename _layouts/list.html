@@ -3,13 +3,28 @@ layout: default
 nodate: true
 ---
 
-<div class="rg:heror rg:flex rg:gap-ryt-xl rg:align-baseline">
-  <div class="basis-8/12">
+{% if content != nil and content != "" %}
+<div class="no-indent mb-ryt-lg">{{ content }}</div>
+{% endif %}
+<!-- -->
+<div>
+  {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
+  pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}Posts{%
+  endif %}{% if pagedItems.tag != "" and pagedItems.tag != nil %} tagged
+  <a href="{{pagedItems.tag | tagUrl}}" class="no-underline"
+    ><strong
+      >{%if pagedItems.tag == site.starTag%}{{site.starTagSymbol}}{%else%}#{{
+      pagedItems.tag }}{%endif%}</strong
+    ></a
+  >
+  {% endif %} {% endif %}
+</div>
+<div
+  class="flex flex-col rg:heror rg:flex-row-reverse rg:gap-ryt-xl rg:align-baseline"
+>
+  <div class="basis-4/12">{%- include "site-tags.html" -%}</div>
+  <div class="basis-8/12 max-rg:mt-ryt-lg">
     {%- if pagedItems.pageNumber == 0 and content != "" and content != nil -%}
-    <div class="mb-ryt-lg no-indent">{{ content }}</div>
     {%- endif -%} {%- include "post-list.html" -%}
-  </div>
-  <div class="basis-4/12 mt-ryt-2xl rg:mt-0">
-    {%- include "site-tags.html" -%}
   </div>
 </div>
