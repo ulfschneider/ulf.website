@@ -3,10 +3,10 @@ pagedItems.pageData -%} {%- else -%} {%- assign livePosts =
 collections.liveContent | post -%} {%- endif -%}
 
 <div class="lg:flex lg:-ml-[200px]">
-  <div class="lg:w-[200px] shrink-0 lg:mt-ryt-lg">
+  <div class="lg:w-[200px] shrink-0">
     {% if livePosts.year or livePosts.yearsInterval %}
     <aside
-      class="lg:sticky lg:top-ryt-lg lg:leading-snug lg:pr-ryt-xl lg:text-right"
+      class="lg:sticky lg:top-ryt-lg lg:leading-snug lg:pr-ryt-xl lg:text-right mb-ryt-lg"
     >
       <span class="lg:hidden">Written </span>
       {% if livePosts.year %}
@@ -20,12 +20,12 @@ collections.liveContent | post -%} {%- endif -%}
     {% endif %}
   </div>
 
-  <div>
+  <div class="space-y-ryt-lg">
     {%- for p in livePosts -%} {%- if limit >= 1 and forloop.index > limit -%}
     {%- break -%} {%- endif -%} {%- if p.url == page.url -%} {%- continue -%}
     {%- endif -%}
 
-    <article class="mt-ryt-lg">
+    <article>
       {% if p.data.title != "" and p.data.title != nil and p.data.title !=
       "notitle" and p.data.notitle == nil %}
       <h2 class="mt-0 mb-ryt-xs text-base font-bold font-body leading-snug">
