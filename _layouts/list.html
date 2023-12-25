@@ -3,6 +3,7 @@ layout: default
 nodate: true
 ---
 
+{% if pagedItems.tag != nil and pagedItems.tag != ""%}
 <div>
   {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
   pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}Posts{%
@@ -15,6 +16,7 @@ nodate: true
   >
   {% endif %} {% endif %}
 </div>
+{% endif %}<!-- -->
 {% if content != nil and content != "" %}
 <div class="no-indent mb-ryt-lg">{{ content }}</div>
 {% endif %}
