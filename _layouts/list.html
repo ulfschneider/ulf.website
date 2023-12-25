@@ -3,10 +3,6 @@ layout: default
 nodate: true
 ---
 
-{% if content != nil and content != "" %}
-<div class="no-indent mb-ryt-lg">{{ content }}</div>
-{% endif %}
-<!-- -->
 <div>
   {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
   pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}Posts{%
@@ -19,11 +15,15 @@ nodate: true
   >
   {% endif %} {% endif %}
 </div>
+{% if content != nil and content != "" %}
+<div class="no-indent mb-ryt-lg">{{ content }}</div>
+{% endif %}
+<!-- -->
 <div
   class="flex flex-col rg:heror rg:flex-row-reverse rg:gap-ryt-xl rg:align-baseline"
 >
-  <div class="basis-4/12">{%- include "site-tags.html" -%}</div>
-  <div class="basis-8/12 max-rg:mt-ryt-lg">
+  <div class="basis-5/12 lg:mt-ryt-lg">{%- include "site-tags.html" -%}</div>
+  <div class="basis-7/12 max-rg:mt-ryt-lg">
     {%- if pagedItems.pageNumber == 0 and content != "" and content != nil -%}
     {%- endif -%} {%- include "post-list.html" -%}
   </div>
