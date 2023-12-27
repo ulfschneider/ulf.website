@@ -113,6 +113,7 @@ module.exports = {
     {
       label: "RSS",
       url: BASE + "feed.xml",
+      type: "application/atom+xml",
       id: "rss",
       kbd: "r",
     },

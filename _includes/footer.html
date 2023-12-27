@@ -25,7 +25,15 @@
             >{{ p.label }}</a
           >
           {%- else -%}
-          <a class="no-underline whitespace-nowrap" href="{{ p.url }}"
+          <a
+            class="no-underline whitespace-nowrap"
+            href="{{ p.url }}"
+            {%
+            if
+            p.type
+            %}type="{{p.type}}"
+            {%
+            endif%}
             >{{ p.label }}</a
           >
           {%- endif -%}
