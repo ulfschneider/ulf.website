@@ -10,10 +10,11 @@ collections.liveContent | post -%} {%- endif -%}
     >
       <span class="lg:hidden">Written </span>
       {% if livePosts.year %}
-      <time class="lg:font-bold">{{livePosts.year}}</time>
+      <time class="lg:text-xl">{{livePosts.year}}</time>
       {% elsif livePosts.yearsInterval %}
-      <time class="lg:font-bold"
-        >{{livePosts.yearsInterval[0]}}–{{livePosts.yearsInterval[1]}}</time
+      <time class="lg:text-xl lg:flex lg:flex-col lg:justify-end"
+        ><span>{{livePosts.yearsInterval[0]}}</span><span>–</span
+        ><span>{{livePosts.yearsInterval[1]}}</span></time
       >
       {% endif %}
     </aside>
