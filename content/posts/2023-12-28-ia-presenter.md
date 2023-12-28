@@ -17,5 +17,5 @@ Meaningful handouts are quick to produce because you focused on text first durin
 
 Export formats are available for PDF,  HTML, and even a Microsoft PowerPoint export is available (don´t expect a 1:1 visualization).
 
-While I have to improve my skills, I enjoyed creating these tiny things very much: [<cite>Serverless</cite>](/2023-08-01-serverless/) and [<cite>Agile. Learn as you go.</cite>](/2023-05-17-agile-ia-presenter/)
+While I have to improve my skills, I enjoyed creating these tiny things very much: [<cite>Serverless</cite>](/2023-08-01-serverless/), [<cite>Agile. Learn as you go</cite>](/2023-05-17-agile-ia-presenter/), and [<cite>Docker and Kubernetes</cite>](/2023-06-13-docker-kubernetes/).
 
