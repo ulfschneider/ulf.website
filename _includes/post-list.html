@@ -22,10 +22,14 @@ collections.liveContent | post -%} {%- endif -%}
   </div>
 
   <div class="space-y-ryt-lg">
-    {%- for p in livePosts -%} {%- if limit >= 1 and forloop.index > limit -%}
-    {%- break -%} {%- endif -%} {%- if p.url == page.url -%} {%- continue -%}
-    {%- endif -%}
-
+    {%- for p in livePosts -%}
+    <!-- -->
+    {% if refDate == nil %} {% assign refDate = p.date | humanDate %} {% endif%}
+    {% assign nowDate = p.date | humanDate %} {% if limit == "day" and nowDate
+    != refDate %} {%- break -%} {%-endif -%}
+    <!-- -->
+    {%- if p.url == page.url -%} {%- continue -%} {%-endif -%}
+    <!-- -->
     <article>
       {% if p.data.title != "" and p.data.title != nil and p.data.title !=
       "notitle" and p.data.notitle == nil %}
