@@ -159,7 +159,7 @@
       --check-mark-height: calc(var(--check-mark-width) / 2);
       --check-mark-line-width: 2.5px;
       --check-mark-rotation: rotate(-60deg);
-      --check-adjust-top: calc(-0.2 * var(--check-mark-height));
+      --check-mark-adjust-top: calc(-0.2 * var(--check-mark-height));
     }
     input[type="checkbox"] {
       appearance: none;
@@ -179,12 +179,11 @@
       height: calc(var(--check-mark-height));
       transform: var(--check-mark-rotation);
       border: var(--check-mark-line-width) solid currentColor;
-      border-radius: 0;
       border-top: none;
       border-right: none;
       margin-top: calc(
         (var(--check-size) - var(--check-mark-height)) / 2 -
-          var(--check-border-width) + var(--check-adjust-top)
+          var(--check-border-width) + var(--check-mark-adjust-top)
       );
       margin-left: calc(
         (var(--check-size) - var(--check-mark-width)) / 2 -
