@@ -51,6 +51,12 @@ Switch on learning mode. Josh´s talk, <cite><a href="https://www.youtube.com/wa
 - `flex-grow: 1` If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children.
 - `flex-basis` works the same way as width (in a flex row) or height (in a flex column).
 
+## Grid layout 
+
+Grid layout is not covered in Josh´s talk, but, like for Flexbox, Josh made  [<cite>An Interactive Guide to CSS Grid</cite>](https://www.joshwcomeau.com/css/interactive-guide-to-grid/).
+
+## Finally – the talk
+
 <figure>
 https://www.youtube.com/watch?v=Xt1Cw4qM3Ec
 <figcaption><cite><a href="https://www.youtube.com/watch?v=Xt1Cw4qM3Ec
