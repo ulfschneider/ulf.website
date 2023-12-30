@@ -6,7 +6,7 @@ tags:
 ---
 [[TOC]]
 
-## Advantages and disadvantages of the alternate approach
+## Advantages and disadvantages
 
 For long I used [Sara´s approach of styling checkboxes and radio buttons](https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/).  I think the following, different approach, is even simpler and has advantages:
 
