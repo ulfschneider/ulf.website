@@ -155,11 +155,12 @@
     :root {
       --check-size: 1.5em;
       --check-border-width: 1px;
-      --check-mark-width: calc(var(--check-size) - 6px);
-      --check-mark-height: calc(var(--check-mark-width) / 2);
-      --check-mark-line-width: 2.5px;
+      --check-mark-width: calc(var(--check-size) - 10px);
+      --check-mark-height: calc(var(--check-mark-width) / 1.8);
+      --check-mark-line-width: 3px;
       --check-mark-rotation: rotate(-60deg);
-      --check-mark-adjust-top: calc(-0.2 * var(--check-mark-height));
+      --check-mark-adjust-top: calc(-0.4 * var(--check-mark-height));
+      --check-mark-adjust-left: calc(-0.1 * var(--check-mark-width));
     }
     input[type="checkbox"] {
       appearance: none;
@@ -187,9 +188,16 @@
       );
       margin-left: calc(
         (var(--check-size) - var(--check-mark-width)) / 2 -
-          var(--check-border-width)
+          var(--check-border-width) + var(--check-mark-adjust-left)
       );
       background-color: transparent;
     }
+  }
+
+  label:hover input[type="radio"],
+  input[type="radio"]:hover,
+  label:hover input[type="checkbox"],
+  input[type="checkbox"]:hover {
+    @apply outline-indicator;
   }
 }
