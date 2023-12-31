@@ -2,11 +2,13 @@
 title: GOV.UK Design Principles
 tags: design
 ---
-In Paul Robert Lloyd´s [<cite> Time team: Documenting decisions & marking milestones</cite>](https://paulrobertlloyd.com/2023/174/s1/ux_london/) is a reference to the [<cite>GOV.UK Design Principles</cite>](https://www.gov.uk/guidance/government-design-principles). The GOV.UK team made [beautiful posters](https://designnotes.blog.gov.uk/2019/09/18/new-design-principles-posters/) for each principle which can be [downloaded from GitHub](https://github.com/alphagov/govdesign/blob/main/Poster_GovernmentDesignPrinciples.pdf).
+In Paul Robert Lloyd´s [<cite> Time team: Documenting decisions & marking milestones</cite>](https://paulrobertlloyd.com/2023/174/s1/ux_london/) is a reference to the [<cite>GOV.UK Design Principles</cite>](https://www.gov.uk/guidance/government-design-principles). 
+
+The GOV.UK team made [beautiful posters](https://designnotes.blog.gov.uk/2019/09/18/new-design-principles-posters/) for each principle which can be [downloaded from GitHub](https://github.com/alphagov/govdesign/blob/main/Poster_GovernmentDesignPrinciples.pdf).
 
 I find their principles insightful and truly design led. At first I thought I have favorites, like <em>Start with user needs</em>, <em>Do less</em>, and <em>This is for everyone</em>. But taking time looking at it, now I think each one plays a role to form a holistic space to guide behavior and decisions. I can imagine the team enjoyed working on the principles as well as building digital services. The work carried out by the GOV.UK design system team is outstanding in my view.
 
-<div class="grid grid-cols-2 hero gap-x-ryt-xl">
+<div class="sm:grid sm:grid-cols-2 sm:gap-x-ryt-xl sm:hero ">
 <figure>
 <img src="/img/design/govuk-start-with-user-nees.jpeg">
 <figcaption>1. Start with user needs</figcaption>
