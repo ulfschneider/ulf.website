@@ -49,7 +49,7 @@ Three custom properties are introduced to adjust the basic appearance of the rad
 :root {
   --radio-size: 1.5em;
   --radio-border-width: 1px;
-  --radio-check-size: calc(var(--radio-size) - 0.7em);
+  --radio-check-size: calc(0.55 * var(--radio-size));
 }
 ```
 
@@ -106,7 +106,7 @@ The basic appearance and the tuning of checkboxes is configured with the followi
 :root {
   --check-size: 1.5em;
   --check-border-width: 1px;
-  --check-mark-width: calc(var(--check-size) - 0.7em);
+  --check-mark-width: calc(0.5 * var(--check-size));
   --check-mark-height: calc(var(--check-mark-width) / 1.8 );
   --check-mark-line-width: 0.2em;
   --check-mark-rotation: rotate(-60deg);
@@ -172,7 +172,7 @@ Here is the complete CSS for both, the radio button and the checkbox.
   :root {
     --radio-size: 1.5em;
     --radio-border-width: 1px;
-    --radio-check-size: calc(var(--radio-size) - 0.7em);
+    --radio-check-size: calc(0.55 * var(--radio-size));
   }
   input[type="radio"] {
     appearance: none;
@@ -205,7 +205,7 @@ Here is the complete CSS for both, the radio button and the checkbox.
   :root {
     --check-size: 1.5em;
     --check-border-width: 1px;
-    --check-mark-width: calc(var(--check-size) - 0.7em);
+    --check-mark-width: calc(0.5 * var(--check-size));
     --check-mark-height: calc(var(--check-mark-width) / 1.8 );
     --check-mark-line-width: 0.2em;
     --check-mark-rotation: rotate(-60deg);
