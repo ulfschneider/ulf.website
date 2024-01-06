@@ -34,6 +34,10 @@ function printComments(commentList, data) {
       meta.appendChild(author);
       meta.appendChild(document.createTextNode(" "));
       meta.appendChild(created);
+      meta.setAttribute(
+        "name",
+        `comment${dateFormat.format(new Date(comment.createdAt))}`
+      );
       article.appendChild(meta);
       //comment body
       let body = document.createElement("div");
