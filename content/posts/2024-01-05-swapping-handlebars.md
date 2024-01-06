@@ -25,7 +25,7 @@ It was a coincidence that my [electronic shifting did not work anymore](/2023-11
 
 Therefore I gave it a try and [replaced my Streem with the Zipp](/2023-10-15-cable-housing-length/). I think it delivers 15 mm additional clearance for my legs. It turned out I like gripping the round top section more than the flattened one and the curve of the drops is even a little bit better when reaching out for the brake levers. It also makes a more minimalistic look.
 
-I took the chance to replace the Ritchey 80 mm stem I was riding before with a 90 mm Ritchey Toyon stem that was unused in my storage. The Zipp with the reduced reach of 3 mm and the Toyon adding 10 mm of reach, in total add 7 mm reach when gripping the shifters. The "leg clearance" though increases by 25 mm because of 10 mm stem + 15 mm handlebars! Riding the bike feels better through the slightly increased reach and the leg clearence is *much* better.
+I took the chance to replace the Ritchey 80 mm stem I was riding before with a 90 mm Ritchey Toyon stem that was unused in my storage. The Zipp, with a reduced reach of 3 mm and the Toyon adding 10 mm of reach, in total add 7 mm of reach when gripping the shifters. The "leg clearance" though increases by 25 mm because of 10 mm stem + 15 mm handlebars! Riding the bike feels better through the slightly increased reach and the leg clearence is *much* better.
 
 This setup allows to adjust the bike better to my needs. It has nothing to do with Zipp being better than Ritchey. Both handlebars are fine. The Zipp is just more suitable for my situation.
 
