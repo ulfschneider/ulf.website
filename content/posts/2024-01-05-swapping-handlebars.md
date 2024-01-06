@@ -23,7 +23,7 @@ It was a coincidence that my [electronic shifting did not work anymore](/2023-11
 3. a round top section, and
 4. a comparable and reasonable price.
 
-Therefore I gave it a try and [replaced my Streem with the Zipp](/2023-10-15-cable-housing-length/). I ride the Zipp with a 90 mm Ritchey Toyon Stem and find the round top section much more preferable. I think it delivers 10 mm additional clearance for my legs. It turned out I like gripping the round top section more than the flattened one and the curve of the drops is even a little bit better when reaching out for the brake levers. 
+Therefore I gave it a try and [replaced my Streem with the Zipp](/2023-10-15-cable-housing-length/). I ride the Zipp with a 90 mm Ritchey Toyon Stem and find the round top section much more preferable. I think it delivers 15 mm additional clearance for my legs. It turned out I like gripping the round top section more than the flattened one and the curve of the drops is even a little bit better when reaching out for the brake levers. 
 
 This setup allows to adjust the bike better to my needs. It has nothing to do with Zipp being better than Ritchey. Both handlebars are fine. The Zipp is just more suitable for my situation.
 
