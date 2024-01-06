@@ -1,9 +1,5 @@
 let commentsLoaded = false;
 
-function trimName(value) {
-  return value.replace(/\s+/g, "-").toLowerCase();
-}
-
 function printComments(commentList, data) {
   let indicateLoadFailure = document.querySelector(
     ".comments .indicate-load-failure"
@@ -38,7 +34,7 @@ function printComments(commentList, data) {
       meta.appendChild(author);
       meta.appendChild(document.createTextNode(" "));
       meta.appendChild(created);
-      meta.setAttribute("name", trimName(`comment ${comment.createdAt}`));
+      meta.setAttribute("name", `comment-${comment.createdAt}`);
       article.appendChild(meta);
       //comment body
       let body = document.createElement("div");
