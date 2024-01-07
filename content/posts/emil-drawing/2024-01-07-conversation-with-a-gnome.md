@@ -1,7 +1,7 @@
 ---
 title: Conversation with a gnome
 ---
-Emil prepared a house  provide a home for a gnome to possibly stay. A gnome named *wulli* came along and the gnome liked the house and stayed long enough to have a conversation in written form with Emil. Both of them never met each other face to face. The conversation happened in German language.
+Emil prepared a house to provide a home for a gnome and invite for a stay. A gnome named *wulli* came along and the gnome liked the house and stayed long enough to have a conversation in written form with Emil. Both of them never met each other face to face. The conversation happened in German language.
 
 <figure class="hero split">
 <figure>
