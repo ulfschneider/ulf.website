@@ -20,7 +20,7 @@ function printComments(commentList, data) {
 
     for (let comment of data.commentList) {
       let article = document.createElement("article");
-      article.classList.add("my-ryt-lg");
+      article.classList.add("my-ryt-xl");
       //author
       let meta = document.createElement("div");
       let author = document.createElement("span");
