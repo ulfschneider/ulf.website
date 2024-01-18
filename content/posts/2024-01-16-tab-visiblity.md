@@ -4,7 +4,7 @@ tags:
   - til
   - code
 ---
-I found it surprisingly straight forward to identify if the current browser tab has the user focus and to find out if a tab is visible. 
+It is surprisingly straight forward to identify if the current browser tab has the user focus and to find out if a tab is visible. 
 
 [`document.hasFocus()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/hasFocus) will return `true` in case the document or any element inside the document has the user focus.
 
