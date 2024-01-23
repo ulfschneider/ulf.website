@@ -33,7 +33,7 @@ Martin is not promoting the idea of getting rid of agile! He talks towards doing
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G_y2pNj0zZg?si=tTZjETg8HjudKf-L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<figcaption><a href="https://www.youtube.com/watch?v=G_y2pNj0zZg"><cite> The State of Agile Software in 2018</cite></a>, by Martin Fowler. Martin, being one of the original signatories of the agile manifesto, is articulating the issues that come with the hype of agile, or should I say enterprise agile? Despite the talk being from 2018, the content is relevant and probably will always be. Martin states at 23:20 that Kent Beck wanted to give agile the name "conversational", and I like that very much. As a developer you want to talk to users first name. Suggestions by Martin:
+<figcaption><a href="https://www.youtube.com/watch?v=G_y2pNj0zZg"><cite> The State of Agile Software in 2018</cite></a>, by Martin Fowler. Martin, being one of the original signatories of the agile manifesto, is articulating the issues that come with the hype of agile, or should I say enterprise agile? Despite the talk being from 2018, the content is relevant and probably will always be. Martin states at 23:20 that Kent Beck wanted to give agile the name "conversational", and I like that very much. Suggestions by Martin:
 <ul>
 <li>Get rid of the agile industrial complex and let go of imposing agile processes on teams</li>
 <li>Raise the importance of technical excellence</li>
