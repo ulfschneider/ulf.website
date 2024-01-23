@@ -12,7 +12,7 @@ One thing that has served me well in my working life, and still does, is a behav
 
 Designing and developing should not be a waterfall process, where a designer has to get the design right in the first pass and the developer will pick up and *simply* build what has been designed. 
 
-The currently popular Figma has a tendency to [push development teams into the waterfall direction](/2023-06-28-move-on-from-figma/) and for that reason I avoid Figma in web development projects.I prefer to work with the materials at hand, HTML, CSS, and JavaScript (TypeScript). It avoids handoff and allows to adhere to what really lays in the materials.
+The currently popular Figma has a tendency to [push development teams into the waterfall direction](/2023-06-28-move-on-from-figma/) and for that reason I avoid Figma in web development projects.I prefer to work with the materials at hand, HTML, CSS, and JavaScript (TypeScript). It avoids design handoff and allows to adhere to what lays in the materials.
 
 Agile is a way of interpreting serious play. Collaboratively working in short feedback cycles to learn and improve is at the core of agile. 
 
