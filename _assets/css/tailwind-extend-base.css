@@ -54,7 +54,7 @@
   *:focus {
     @apply outline-none;
   }
-  *:focus-visible {
+  *:focus-visible:not(disabled) {
     @apply outline-indicator;
   }
 
