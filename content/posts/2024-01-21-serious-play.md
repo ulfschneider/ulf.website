@@ -4,7 +4,7 @@ tags:
   - agile
   - video
 ---
-Dave Rupert posted [<cite>Play at work</cite>](https://daverupert.com/2024/01/play-at-work/). The text is of course not about having a table soccer in the office and spending time playing during office hours. It´s about cultivating a habit of *serious play* at work, enjoying what you do, understanding the materials you have to handle, finding solutions that will serve your users best, exploring what´s in your tools, and having meaningful and responsible team interaction. You can even go as far to say it´s about growing individually and as a team.
+Dave Rupert posted [<cite>Play at work</cite>](https://daverupert.com/2024/01/play-at-work/). The text is not about having a table soccer in the office and spending time playing during office hours. It´s about cultivating a habit of *serious play* at work, enjoying what you do, understanding the materials you have to handle, finding solutions that will serve your users best, exploring what´s in your tools, and having meaningful and responsible team interaction. You can even go as far to say it´s about growing individually and as a team.
 
 I fully agree to the idea of *serious play*. 
 
@@ -42,7 +42,7 @@ Martin is not promoting the idea of getting rid of agile! He talks towards doing
 The <a href="https://martinfowler.com/articles/agile-aus-2018.html ">transcription of the talk</a> is on Martin´s blog.  </figcaption>
 </figure>
 
-It´s a pitty agile has been taken over by corporations emphasizing processes over individuals and interactions, but perhaps it was inevitable. Once agile became popular, a way to make money out of it appeared, and money-makers were jumping onto it. The same managers who were claiming agile is Kindergarten software development, at some point where jumping onto it because it became the valid thing, because other corporations marketed their agile-named processes as well and they didn´t want to be left behind. 
+It´s a pitty agile has been taken over by corporations emphasizing processes over individuals and interactions, but perhaps it was inevitable. Once agile became popular, a way to make money out of it appeared, and money-makers were jumping onto it. The same managers who were claiming agile is Kindergarten software development, at some point where jumping onto it because it became the valid thing, because other corporations marketed their agile-named processes as well and they didn´t wanted to be left behind. 
 
 When you find yourself in a context where agile is being practiced by seizing power on developers, squeezing more features out of a delivery team in a given time, I´m sorry for you and I hope you find a way to change. But it doesn´t render the agile values false. Agile is serious play and it´s worth striving for this way of working - you don´t need to name it agile and probably it will not help you with your management to name it serious play either. Instead, try to find a way of doing what you came for, building and making something beautiful and meaningful together with your colleagues. 
 
