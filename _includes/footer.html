@@ -43,17 +43,17 @@
       {%- if site.backToTop and site.backToTop.id %}
       <div
         id="back-to-start"
-        class="no-js-hidden m-ryt p-ryt-sm flex-col justify-end bg-outline text-write-dark"
+        class="no-js-hidden m-ryt p-ryt-sm flex-col justify-end bg-back-light dark:text-write-light dark:bg-back-dark"
       >
         <div
           id="heading-hint"
           class="right text-sm hidden mb-ryt-sm leading-tight"
         >
-          <a href="#" class="no-underline"></a>
+          <a href="#" class="no-underline !text-current"></a>
         </div>
         <div class="text-right">
           <span aria-hidden="true">↑</span>
-          <a href="#{{site.backToTop.id}}">
+          <a href="#{{site.backToTop.id}}" class="!text-current">
             {%- if site.backToTop.label -%} {{ site.backToTop.label }} {%- else
             -%} Back to Top {%- endif -%}
           </a>
