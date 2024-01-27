@@ -274,14 +274,6 @@
     outline-width: 0px !important;
   }
 
-  #back-to-start {
-    a:hover,
-    a:focus,
-    a:active {
-      @apply text-current;
-    }
-  }
-
   .comment-list article * {
     @apply no-indent m-0 !important;
   }

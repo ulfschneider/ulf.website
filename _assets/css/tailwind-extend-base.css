@@ -52,6 +52,9 @@
 
   /* focus */
   *:focus {
+    @apply outline-none;
+  }
+  *:focus-visible {
     @apply outline-indicator;
   }
 
@@ -65,7 +68,7 @@
   }
 
   a:hover,
-  a:focus,
+  a:focus-visible,
   a:active {
     @apply text-link dark:text-link-light;
   }
