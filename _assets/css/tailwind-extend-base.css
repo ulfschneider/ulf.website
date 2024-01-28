@@ -67,12 +67,6 @@
     @apply underline;
   }
 
-  a:hover,
-  a:focus-visible,
-  a:active {
-    @apply text-link dark:text-link-light;
-  }
-
   /* headings */
   h1,
   .h1 {

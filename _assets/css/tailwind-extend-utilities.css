@@ -22,11 +22,11 @@
   }
 
   .outline-indicator {
-    @apply outline-outline outline-4 outline-offset-2 outline;
+    @apply outline-primary outline-4 outline-offset-2 outline;
   }
 
   .outline-indicator-lg {
-    @apply outline-outline outline-8 outline-offset-2 outline;
+    @apply outline-primary outline-8 outline-offset-2 outline;
   }
 
   .text-balance {
