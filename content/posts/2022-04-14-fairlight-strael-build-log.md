@@ -686,7 +686,7 @@ The weight of the bike is 9.1 kg including pedals.
 <tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<div class="smaller whitespace-nowrap">max 5 - 6</div></td></tr>
 <tr><td>Front derailleur clamp screw to mount the clamp to the frame</td><td>5<div class="smaller whitespace-nowrap">max 5 - 7</div></td></tr>
 <tr><td>Front derailleur fixing screw to attach the derailleur to the clamp band</td><td>5<div class="smaller whitespace-nowrap">max 5 - 7</div></td></tr>
-<tr><td>Pedals to crankarms</td><td>15<div class="smaller whitespace-nowrap">max 35 - 40</div></td></tr>
+<tr><td>Pedals to crankarms</td><td>40<div class="smaller whitespace-nowrap">max 35 - 55</div></td></tr>
 <tr><td>Rear Derailleur Hanger</td><td>8<div class="smaller" whitespace-nowrap>max 8 - 10</div></td></tr>
 <tr><td>Ritchey stem bolts (not the top cap screw)</td><td>4<div class="smaller whitespace-nowrap">max 5</div></td></tr>
 <tr><td>Ritchey seatpost saddle clamp</td><td>10<div class="smaller whitespace-nowrap">max 16</div></td></tr>
