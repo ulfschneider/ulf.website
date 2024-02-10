@@ -4,7 +4,7 @@ tags:
   - sports
   - strael
 ---
-Jack noticed I changed the handlebars on my Strael and swapped the Ritchey Streem for a Zipp Service Course, and [asked for the reasons](/2023-11-26-rural-paderborn-plateu/). That is a good question, because the change has a story. 
+Jack noticed I changed the handlebars on my Strael and swapped the Ritchey Streem for a Zipp Service Course, and he [asked for the reasons](/2023-11-26-rural-paderborn-plateu/). That is a good question, because the change has a story. 
 
 My initial decision for the Streem came because:
 
