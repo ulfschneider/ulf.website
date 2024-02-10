@@ -350,7 +350,7 @@ I start with the handlebars. They should allow for internal Di2 wire and brake h
 
 Because I want to stay with one manufacturer, stem and seat post will come from Ritchey. I complete the setup with the @Ritchey WCS C220 84D Stem, 80 mm length{}^[At first I planned to use a Ritchey Toyon Stem, but the form of the WCS 84D stem fits the bike better and it weighs a little less.], which weighs 121 g, and a @Ritchey Flexlogic Carbon Link Seatpost, 15 mm setback, 350 mm length{}, at a weight of 185 g. The seat post will get a @Ritchey Di2 Battery Mount ==2022=={}.
 
-**Note: Feb 10, 2024** My current stem and handlebar setup is different from what is described here. I ride now the 90 mm Toyon stem (and suprisingly I like the looks) with a Zipp Service Course SL 70, still with Pro Race Comfort Bartabe. The decision is documented under [<cite> Why I switched from Ritchey WCS Streem to Zipp Service Course SL 70</cite>](/2024-01-05-swapping-handlebars/).
+**Note on Feb 10, 2024:** My current stem and handlebar setup is different from what is described here. I ride now the 90 mm Toyon stem (and suprisingly I like the looks) with a Zipp Service Course SL 70, still with Pro Race Comfort Bartabe. The decision is documented under [<cite> Why I switched from Ritchey WCS Streem to Zipp Service Course SL 70</cite>](/2024-01-05-swapping-handlebars/).
 
 ## The bell
 
