@@ -21,9 +21,6 @@ nodate: true
   All posts
 </h1>
 {% endif %}
-<!-- -->
-
-<!-- -->
 
 <!-- -->
 <div
@@ -35,6 +32,8 @@ nodate: true
     {% if content != nil and content != "" %}
     <div class="no-indent mb-ryt-lg">{{ content }}</div>
     {% endif %} {%- if pagedItems.pageNumber == 0 and content != "" and content
-    != nil -%} {%- endif -%} {%- include "post-list.html" -%}
+    != nil -%} {%- endif -%}
+    <!-- -->
+    {%- include "post-list.html" -%}
   </div>
 </div>
