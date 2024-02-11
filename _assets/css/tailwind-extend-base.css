@@ -224,10 +224,10 @@
 
   /* table */
   table {
-    @apply my-ryt-xl border-collapse border-y border-y-current;
+    @apply my-ryt-xl border-collapse border-y border-y-meta;
 
     caption {
-      @apply py-ryt-sm no-indent border-t border-t-current text-left;
+      @apply py-ryt-sm no-indent text-left;
     }
 
     th {
@@ -311,7 +311,7 @@
 
   /* kbd */
   kbd {
-    @apply px-ryt-xs rounded-sm border border-light dark:border-light-dark text-center font-mono text-sm dark:text-write-light  min-w-ryt uppercase;
+    @apply px-ryt-xs rounded-sm border border-meta text-center font-mono text-sm dark:text-write-light min-w-ryt min-h-ryt inline-block uppercase;
   }
 
   /* pre and pre code */

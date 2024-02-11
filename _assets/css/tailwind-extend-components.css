@@ -22,7 +22,7 @@
 
   /* demo box */
   .demo-box {
-    @apply border border-current max-w-rg p-ryt;
+    @apply border border-meta max-w-rg p-ryt;
 
     &::before {
       content: "Demo";
