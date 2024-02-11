@@ -38,7 +38,7 @@
   input[type="reset"]:active,
   button:active,
   .button:active {
-    @apply brightness-125;
+    @apply brightness-110;
   }
 
   input[type="submit"]:disabled,
