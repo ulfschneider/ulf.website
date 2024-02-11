@@ -9,8 +9,8 @@ tags:
 ---
 The [script](https://adactio.com/articles/20638) and [video](https://youtu.be/UjtcCTH4K10?si=oJrs6ndfuMqkOaoT) of Jeremy Keith´s talk at border:none in Nürnberg. Two of Jeremy´s statements resonate: 
 
-1. The real problem of the web today is not advertising, it´s tracking!
-2. When a user navigates to a URL, it shouldn’t feel like they’re installing a piece of software.
+- The real problem of the web today is not advertising, it´s tracking!
+- When a user navigates to a URL, it shouldn’t feel like they’re installing a piece of software.
 
 Here are some quotes:
 
