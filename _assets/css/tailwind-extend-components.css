@@ -94,10 +94,10 @@
 
   /* tags */
   .site-tags .tag {
-    @apply no-underline px-ryt-xs py-ryt-2xs  bg-light dark:bg-light-dark whitespace-nowrap rg:text-sm;
+    @apply no-underline px-ryt-xs py-ryt-2xs  bg-light dark:bg-light-dark whitespace-nowrap;
   }
   .site-tags .tag.current {
-    @apply px-ryt-xs py-ryt-2xs  bg-primary text-white whitespace-nowrap rg:text-sm;
+    @apply px-ryt-xs py-ryt-2xs  bg-primary text-white whitespace-nowrap;
   }
 
   /* image container */
@@ -193,7 +193,7 @@
 
   ol.footnotes-list::before {
     content: "Footnotes";
-    @apply h2 mt-ryt-xl mb-ryt block;
+    @apply h2 mb-ryt block;
   }
 
   ol.footnotes-list li {

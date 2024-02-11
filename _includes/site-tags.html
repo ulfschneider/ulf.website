@@ -3,9 +3,7 @@ pagedItems.tag != nil -%} {%- assign tag = pagedItems.tag -%} {%- endif -%} {%-
 if currentTags.length -%}
 <nav class="max-w-rg sticky top-ryt-2xl site-tags">
   {%- if currentTags.length > 1 -%}
-  <h2 class="my-0 rg:font-normal text-base tracking-normal lg:leading-snug">
-    Choose posts by tag
-  </h2>
+  <div>Choose posts by tag</div>
   <ul class="my-0 -mx-ryt-xs reset">
     {%- if tag == "" -%}
     <li class="inline-block m-ryt-xs">
