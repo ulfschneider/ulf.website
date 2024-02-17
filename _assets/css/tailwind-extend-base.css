@@ -66,6 +66,10 @@
   a {
     @apply underline;
   }
+  a:hover,
+  a:active {
+    @apply text-primary dark:text-primary-light;
+  }
 
   /* headings */
   h1,
