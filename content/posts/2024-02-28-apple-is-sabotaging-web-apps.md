@@ -16,5 +16,5 @@ Apple tries to justify this as a means to comply with the European Digital Marke
 > Degrading these features is not required by the DMA.
 
 You can sign an open letter to Tim Cook to express your concern, and to avail yourself of your rights under the Digital Markets Act (DMA):
-[<cite>Open Letter to Tim Cook, Sabotaging Web Apps Is Indefensible</cite>](https://letter.open-web-advocacy.org). I signed it today.
+[<cite>Open Letter to Tim Cook, Sabotaging Web Apps Is Indefensible</cite>](https://letter.open-web-advocacy.org). I signed today.
 
