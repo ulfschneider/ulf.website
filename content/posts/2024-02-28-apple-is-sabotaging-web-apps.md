@@ -15,6 +15,15 @@ Apple tries to justify this as a means to comply with the European Digital Marke
 
 > Degrading these features is not required by the DMA.
 
-You can sign an open letter to Tim Cook to express your concern, and to avail yourself of your rights under the Digital Markets Act (DMA):
-[<cite>Open Letter to Tim Cook, Sabotaging Web Apps Is Indefensible</cite>](https://letter.open-web-advocacy.org). I signed today.
+You can sign an open letter to Tim Cook to express your concern, and to avail yourself of your rights under the Digital Markets Act (DMA): [<cite>Open Letter to Tim Cook, Sabotaging Web Apps Is Indefensible</cite>](https://letter.open-web-advocacy.org). 
+I signed today.
+
+> This is exactly what it looks like: a single-fingered salute to the web and web developers.
+> <footer>Alex Russel, <a href="https://infrequently.org/2024/02/home-screen-advantage/"><cite>Home Screen Advantage</cite></a></footer>
+
+Here is more information:
+
+- [<cite>Apple vs. PWAs – Go act now and help avoid this disaster…</cite>](https://christianheilmann.com/2024/02/28/apple-vs-pwas-go-act-now-and-help-avoid-this-disaster/), Christian Heilmann
+- [<cite>So, what exactly did Apple break in the EU?</cite>](https://blog.tomayac.com/2024/02/28/so-what-exactly-did-apple-break-in-the-eu/), Thomas Steiner
+- [<cite>Home Screen Advantage</cite>](https://infrequently.org/2024/02/home-screen-advantage/), Alex Russel
 
