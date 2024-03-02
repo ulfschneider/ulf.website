@@ -1,6 +1,58 @@
+<!-- order of head content ist optimized for page load performance with https://rviscomi.github.io/capo.js/ -->
+
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- title and description -->
+{%- if title != nil and title != "notitle" and title != "" -%} {%- assign
+adaptedTitle = title -%} {%- elsif adaptedTag != nil and adaptedTag != "" -%}
+{%- assign adaptedTitle = "Posts tagged " | append: adaptedTag -%} {%- elsif
+adaptedTag == "" -%} {%- assign adaptedTitle = "All posts" -%} {%- else -%} {%-
+assign adaptedTitle = site.name -%} {%- endif -%}
+<title>{{ adaptedTitle }}</title>
+{%- if abstract != nil and abstract != "" -%}
+<meta name="description" content="{{abstract | strip_html }}" />
+{%- endif -%}
+<!-- head scripts -->
+{% include "head-scripts.html" %}
+<!-- stylesheet -->
+<link
+  rel="stylesheet"
+  href="{{site.base}}css/main-{{site.cacheVersioning.css}}.css"
+/>
+<!-- preload fonts -->
+<link
+  rel="preload"
+  href="{{site.base}}fonts/iAWriterQuattroS-Regular.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+<link
+  rel="preload"
+  href="{{site.base}}fonts/iAWriterQuattroS-Bold.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+<link
+  rel="preload"
+  href="{{site.base}}fonts/iAWriterQuattroS-Italic.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+<link
+  rel="preload"
+  href="{{site.base}}fonts/iAWriterMonoS-Italic.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+<!-- head scripts deferred -->
+{% include "head-scripts-deferred.html" %}
+
+<!-- everything else -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-store, max-age=0" />
 <meta name="color-scheme" content="light dark" />
 {%- if site.dark_theme_color -%}
@@ -31,38 +83,6 @@
   href="{{site.base}}favicon-16x16.png"
 />
 <link rel="manifest" href="{{site.base}}site.webmanifest" />
-<link
-  rel="stylesheet"
-  href="{{site.base}}css/main-{{site.cacheVersioning.css}}.css"
-/>
-<link
-  rel="preload"
-  href="{{site.base}}fonts/iAWriterQuattroS-Regular.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
-<link
-  rel="preload"
-  href="{{site.base}}fonts/iAWriterQuattroS-Bold.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
-<link
-  rel="preload"
-  href="{{site.base}}fonts/iAWriterQuattroS-Italic.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
-<link
-  rel="preload"
-  href="{{site.base}}fonts/iAWriterMonoS-Italic.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
 
 <!-- SEO/feed -->
 <link rel="canonical" href="{{site.origin}}{{page.url}}" />
@@ -77,17 +97,7 @@
 elsif pagedItems.tag == site.starTag %} {% assign adaptedTag =
 site.starTagSymbol %} {% elsif tag != nil and tag != "" %} {% assign adaptedTag
 = tag %} {%else%} {% assign adaptedTag = pagedItems.tag %} {%endif%}
-<!-- title and description -->
-{%- if title != nil and title != "notitle" and title != "" -%} {%- assign
-adaptedTitle = title -%} {%- elsif adaptedTag != nil and adaptedTag != "" -%}
-{%- assign adaptedTitle = "Posts tagged " | append: adaptedTag -%} {%- elsif
-adaptedTag == "" -%} {%- assign adaptedTitle = "All posts" -%} {%- else -%} {%-
-assign adaptedTitle = site.name -%} {%- endif -%}
-<!--  -->
-<title>{{ adaptedTitle }}</title>
-{%- if abstract != nil and abstract != "" -%}
-<meta name="description" content="{{abstract | strip_html }}" />
-{%- endif -%}
+
 <!-- Open Graph -->
 <meta property="og:title" content="{{adaptedTitle}}" />
 <meta property="og:url" content="{{site.origin}}{{page.url}}" />
@@ -129,4 +139,3 @@ page.url -%} {%- if firstImage.src -%}
 />
 <link rel="pingback" href="https://webmention.io/{{site.domain}}/xmlrpc" />
 <!-- scripts -->
-{% include "head-scripts.html" %}

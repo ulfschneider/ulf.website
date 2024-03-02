@@ -1,0 +1,13 @@
+<script
+  defer
+  src="/js/site-scripts-{{site.cacheVersioning.script}}.js"
+></script>
+<script defer src="/js/sotable-{{site.cacheVersioning.script}}.js"></script>
+<script defer src="/js/active-toc-{{site.cacheVersioning.script}}.js"></script>
+<script
+  defer
+  src="/js/autocomplete-{{site.cacheVersioning.script}}.js"
+></script>
+{%- if site.allowCommenting == true -%} {%- if page | isPost -%}
+<script defer src="/js/comments-{{site.cacheVersioning.script}}.js"></script>
+{%- endif -%} {%- endif -%}
