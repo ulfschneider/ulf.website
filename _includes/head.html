@@ -12,6 +12,8 @@ assign adaptedTitle = site.name -%} {%- endif -%}
 {%- if abstract != nil and abstract != "" -%}
 <meta name="description" content="{{abstract | strip_html }}" />
 {%- endif -%}
+<!-- head scripts -->
+{% include "head-scripts.html" %}
 <!-- stylesheet -->
 <link
   rel="stylesheet"
