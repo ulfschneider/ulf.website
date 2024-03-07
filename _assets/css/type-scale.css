@@ -8,9 +8,15 @@
   }
 }
 
-@media (min-width: theme(screens.xl)) {
+@media (min-width: theme(screens.md)) {
   :root {
     font-size: 20px;
+  }
+}
+
+@media (min-width: theme(screens.xl)) {
+  :root {
+    font-size: 21px;
   }
 }
 
