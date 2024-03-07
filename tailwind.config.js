@@ -116,7 +116,8 @@ module.exports = {
         },
       },
       transitionProperty: {
-        spacing: "margin, padding, width, height",
+        spacing:
+          "margin, padding, width, height, min-width, min-height, max-width, max-height",
       },
       spacing: {
         "ryt-3xs": "var(--ryt-3xs)",
