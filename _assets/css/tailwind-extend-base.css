@@ -325,7 +325,7 @@
 
   pre,
   pre > code {
-    @apply whitespace-pre-wrap break-words font-mono text-sm leading-normal;
+    @apply whitespace-pre-wrap break-words font-mono leading-normal;
     word-spacing: normal;
     word-wrap: normal;
     -moz-tab-size: 4;
@@ -335,9 +335,11 @@
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+    font-size: 0.95em;
   }
 
   code:not(pre code) {
-    @apply text-write-dark bg-light dark:text-write-light dark:bg-light-dark font-mono text-sm;
+    font-size: 0.95em;
+    @apply text-write-dark bg-light dark:text-write-light dark:bg-light-dark font-mono;
   }
 }
