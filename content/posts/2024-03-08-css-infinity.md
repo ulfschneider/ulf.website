@@ -15,7 +15,7 @@ CSS has an `infinity` constant that can *only* be used inside of a `calc()` stat
 
 There is a negative infinity too: `-infinity`.
 
-`infinity` is not limited to `z-index`. It can be used anywhere where you need the highest possible number (it´s not infinity really, just a high number). E.g.:
+`infinity` is not limited to `z-index`. It can be used whenever you need the highest possible number (it´s not infinity really, just a high number). E.g.:
 
 ```css
 .wide {
