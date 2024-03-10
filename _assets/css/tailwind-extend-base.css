@@ -235,11 +235,11 @@
     }
 
     th {
-      @apply py-ryt-sm pr-ryt-sm text-left align-top font-bold leading-tight;
+      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-bold leading-tight;
     }
 
     td {
-      @apply py-ryt-sm pr-ryt-sm text-left align-top font-normal leading-tight;
+      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-normal leading-tight;
     }
 
     thead {
