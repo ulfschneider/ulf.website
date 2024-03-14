@@ -125,13 +125,13 @@
     @apply border-transparent;
   }
 
-  @supports (appearance: none) {
+ @supports (appearance: none) {
     :root {
       --radio-size: 1.5em;
       --radio-border-width: 1px;
       --radio-check-size: calc(0.55 * var(--radio-size));
     }
-    input[type="radio"] {
+    input[type='radio'] {
       appearance: none;
       font-size: inherit;
       position: relative;
@@ -142,19 +142,17 @@
       border-radius: 50%;
       cursor: pointer;
     }
-    input[type="radio"]:checked::before {
-      content: "";
+    input[type='radio']:checked::before {
+      content: '';
       position: absolute;
       width: var(--radio-check-size);
       height: var(--radio-check-size);
       border-radius: 50%;
       margin-top: calc(
-        (var(--radio-size) - var(--radio-check-size)) / 2 -
-          var(--radio-border-width)
+        (var(--radio-size) - var(--radio-check-size)) / 2 - var(--radio-border-width)
       );
       margin-left: calc(
-        (var(--radio-size) - var(--radio-check-size)) / 2 -
-          var(--radio-border-width)
+        (var(--radio-size) - var(--radio-check-size)) / 2 - var(--radio-border-width)
       );
       background-color: currentColor;
     }
@@ -162,14 +160,14 @@
     :root {
       --check-size: 1.5em;
       --check-border-width: 1px;
-      --check-mark-width: calc(0.5 * var(--check-size));
+      --check-mark-width: calc(0.7 * var(--check-size));
       --check-mark-height: calc(var(--check-mark-width) / 1.8);
       --check-mark-line-width: 0.2em;
       --check-mark-rotation: rotate(-60deg);
-      --check-mark-adjust-top: calc(-0.4 * var(--check-mark-height));
-      --check-mark-adjust-left: calc(-0.1 * var(--check-mark-width));
+      --check-mark-adjust-top: calc(-0.2 * var(--check-mark-height));
+      --check-mark-adjust-left: calc(-0 * var(--check-mark-width));
     }
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       appearance: none;
       font-size: inherit;
       position: relative;
@@ -180,8 +178,8 @@
       border-radius: 0;
       cursor: pointer;
     }
-    input[type="checkbox"]:checked::before {
-      content: "";
+    input[type='checkbox']:checked::before {
+      content: '';
       position: absolute;
       width: var(--check-mark-width);
       height: calc(var(--check-mark-height));
@@ -190,14 +188,20 @@
       border-top: none;
       border-right: none;
       margin-top: calc(
-        (var(--check-size) - var(--check-mark-height)) / 2 -
-          var(--check-border-width) + var(--check-mark-adjust-top)
+        (var(--check-size) - var(--check-mark-height)) / 2 - var(--check-border-width) +
+          var(--check-mark-adjust-top)
       );
       margin-left: calc(
-        (var(--check-size) - var(--check-mark-width)) / 2 -
-          var(--check-border-width) + var(--check-mark-adjust-left)
+        (var(--check-size) - var(--check-mark-width)) / 2 - var(--check-border-width) +
+          var(--check-mark-adjust-left)
       );
       background-color: transparent;
     }
+  }
+  label:hover input[type='radio'],
+  input[type='radio']:hover,
+  label:hover input[type='checkbox'],
+  input[type='checkbox']:hover {
+    @apply outline-indicator;
   }
 }
