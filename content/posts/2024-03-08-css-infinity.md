@@ -5,7 +5,7 @@ tags:
   - css
   - code
 ---
-CSS has an `infinity` constant that can *only* be used inside of a `calc()` statement . It is supported by [modern browsers](https://caniuse.com/mdn-css_types_calc-constant_infinity). For example, to set the z-index to the hightest possible value you could do:
+CSS has an `infinity` constant that can *only* be used inside of a `calc()` statement. It is supported by [modern browsers](https://caniuse.com/mdn-css_types_calc-constant_infinity). For example, to set the z-index to the hightest possible value you could do:
 
 ```css
 .on-top {
