@@ -22,7 +22,7 @@ See the example below, which is a screenshot from the web-version of Microsoft O
 
 <figure>
 <img src="/img/accessibility/toggle-microsoft-outlook.png">
-<figcaption>The screenshot is taken from web-version of Microsoft Outlook. Can you tell which of the two toggles is on and which one is off?</figcaption>
+<figcaption>The screenshot is taken from the web-version of Microsoft Outlook. Can you tell which of the two toggles is on and which one is off?</figcaption>
 </figure>
 
 > ==Toggles fail to convey their current status without making users think!== They also have very poor accessibility for users with disabilities. They are used inconsistently across the web, and they don’t have native HTML support. Use checkboxes or radio groups instead.
