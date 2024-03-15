@@ -13,7 +13,7 @@ Checkboxes and radio buttons convey a clear state in a simple way: A check means
 <label class="flex flex-row gap-ryt items-center"><input type="radio" name="radio-group" id="uranus"> <span>Uranus</span></label>
 <label class="flex flex-row gap-ryt items-center"><input type="radio" name="radio-group" id="neptun"> <span>Neptun</span></label>
 <label class="flex flex-row gap-ryt items-center"><input type="radio" name="radio-group" id="earth" checked> <span>Earth</span></label>
-<figcaption>Radio buttons communicate all available options and the chosen option without any additional explanation required</figcaption>
+<figcaption>Radio buttons communicate all available options, and the chosen option, without additional explanation required</figcaption>
 </figure>
 
 A toggle, in contrast, needs additional explanation for the "on" and "off" state, whether it´s through color-coding (green for "on", red or grey for "off"), or through text. A toggle is not natively supported by web browsers^[The only web browser supporting toggles natively at the time of writing is Safari. Please refer to [<cite> Safari has a native toggle control</cite>](/2024-03-15-safari-toggle/).], which means developers need to build them, which makes the use of toggles inconsistent across the web. Red and green colors will be a problem for red/green disabled people (8% of males and 0.5% of females are affected, according to [<cite>About Colour Blindness</cite>](https://www.colourblindawareness.org/colour-blindness/ ). It is also not clear to me, if, as a convention, a toggle thumb at the right means "on" and at the left means "off".
