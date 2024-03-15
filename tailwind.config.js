@@ -64,9 +64,9 @@ module.exports = {
           dark: colors.neutral[900],
         },
         primary: {
-          light: colors.cyan[300],
-          DEFAULT: colors.cyan[600],
-          dark: colors.cyan[900],
+          light: "#208bff",
+          DEFAULT: "#0969da",
+          dark: "#033d8b",
         },
         link: {
           light: colors.cyan[300],
@@ -88,31 +88,6 @@ module.exports = {
           light: colors.yellow[100],
           DEFAULT: colors.yellow[200],
           dark: colors.yellow[400],
-        },
-        orange: {
-          light: colors.orange[100],
-          DEFAULT: colors.orange[500],
-          dark: colors.orange[900],
-        },
-        red: {
-          light: colors.red[400],
-          DEFAULT: colors.red[600],
-          dark: colors.red[800],
-        },
-        green: {
-          light: colors.green[100],
-          DEFAULT: colors.green[500],
-          dark: colors.green[900],
-        },
-        purple: {
-          light: colors.purple[100],
-          DEFAULT: colors.purple[500],
-          dark: colors.purple[900],
-        },
-        blue: {
-          light: colors.blue[100],
-          DEFAULT: colors.blue[500],
-          dark: colors.blue[900],
         },
       },
       transitionProperty: {

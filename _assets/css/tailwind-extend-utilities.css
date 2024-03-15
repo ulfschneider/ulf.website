@@ -43,6 +43,18 @@
     @apply m-0;
   }
 
+  .mode-text-primary {
+    @apply text-primary dark:text-primary-light;
+  }
+
+  .mode-bg-primary {
+    @apply bg-primary dark:bg-primary-light;
+  }
+
+  .mode-caret-primary {
+    @apply caret-primary dark:caret-primary-light;
+  }
+
   @media (min-width: theme(screens.rg)) {
     .hero,
     .bleed {

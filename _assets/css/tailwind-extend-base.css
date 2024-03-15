@@ -59,7 +59,7 @@
   }
 
   ::selection {
-    @apply bg-primary-light text-primary-dark;
+    @apply bg-primary-light text-white;
   }
 
   /* links */
@@ -68,7 +68,7 @@
   }
   a:hover,
   a:active {
-    @apply text-primary dark:text-primary-light;
+    @apply mode-text-primary;
   }
 
   /* headings */

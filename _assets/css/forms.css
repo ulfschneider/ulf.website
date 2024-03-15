@@ -20,14 +20,14 @@
   fieldset,
   label,
   legend {
-    @apply font-body placeholder-meta caret-primary dark:caret-primary-light appearance-none rounded-none font-normal text-inherit;
+    @apply font-body placeholder-meta mode-caret-primary  appearance-none rounded-none font-normal text-inherit;
   }
 
   input[type="submit"],
   input[type="reset"],
   button,
   .button {
-    @apply bg-primary px-ryt-sm py-ryt-sm cursor-pointer border-0 align-baseline text-white;
+    @apply mode-bg-primary px-ryt-sm py-ryt-sm cursor-pointer border-0 align-baseline text-white;
   }
 
   input[type="submit"]:hover,
