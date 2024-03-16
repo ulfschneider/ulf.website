@@ -18,7 +18,7 @@ Writing this blog helps me to [clarify my thoughts](/2023-05-18-blogging/). Over
 
 This site is also my playing field for web technologies. It´s here, where I implemented my first _service worker_, and I enjoy exploring new topics in web development by experimenting and integrating them here into my personal site. Since some time I like the [Jamstack](/2022-09-28-jamstack-in-20-minutes/).
 
-Every now and then my son Emil makes a drawing, which I aim to [capture here](/images/emil-drawing/). Emil created a picture of [the virus](/2020-03-18-emil-pictured-the-coronavirus/) at beginning of the Corona pandemic.
+Every now and then my son Emil makes a drawing, which I aim to [capture here](/images/emil-drawing/). Emil created a picture of [the virus](/2020-03-18-emil-pictured-the-coronavirus/) at beginning of the Corona pandemic. Emil also made a drawing of a [smiling unicorn](/2021-10-22-a-smiling-unicorn-with-a-kite/).
 
 My path through 30 years of software went like this:<dl class="timeline">
 
