@@ -1,8 +1,8 @@
 {%- if site.search and site.search.url -%}
 <form id="search-form" class="max-w-rg">
-  <label id="search-label" for="search-query"
+  <label id="search-label" class="max-w-none"
     >Search {{ site.name }}
-    <div class="flex flex-row gap-ryt">
+    <div class="flex flex-row gap-ryt w-full">
       <input
         id="search-query"
         name="query"
@@ -17,6 +17,7 @@
         type="text"
       />
       <input
+        class="shrink-0"
         type="submit"
         id="search-submit"
         style="border-top-left-radius: 0px; border-bottom-left-radius: 0px"
