@@ -285,7 +285,7 @@
 
   q {
     @apply italic;
-    quotes: "“" "”" "‘" "’";
+    quotes: "„" "“" "‘" "’";
   }
 
   blockquote {
