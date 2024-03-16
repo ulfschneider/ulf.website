@@ -61,7 +61,7 @@
   }
 
   label {
-    @apply cursor-pointer;
+    @apply cursor-pointer max-w-fit;
   }
 
   label > * {
