@@ -200,10 +200,4 @@
       background-color: transparent;
     }
   }
-  label:hover input[type="radio"]:not(.native),
-  input[type="radio"]:hover:not(.native),
-  label:hover input[type="checkbox"]:not(.native):not([switch]),
-  input[type="checkbox"]:hover:not(.native):not([switch]) {
-    @apply outline-indicator;
-  }
 }

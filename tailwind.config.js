@@ -68,11 +68,6 @@ module.exports = {
           DEFAULT: "#0969da",
           dark: "#033d8b",
         },
-        link: {
-          light: colors.cyan[300],
-          DEFAULT: colors.cyan[600],
-          dark: colors.cyan[800],
-        },
         meta: colors.neutral[500],
         disabled: colors.neutral[400],
         field: {

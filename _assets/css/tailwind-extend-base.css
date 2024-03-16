@@ -97,7 +97,7 @@
   }
 
   details > summary {
-    @apply hover:text-link dark:hover:text-link-light text-balance cursor-pointer;
+    @apply hover:mode-text-primary text-balance cursor-pointer;
   }
 
   /* typography */
