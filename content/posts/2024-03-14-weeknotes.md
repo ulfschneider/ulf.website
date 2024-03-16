@@ -28,7 +28,7 @@ Having the notes published provides not only a current status, but over time a t
 Weeknotes can also radiate intent. Giles quotes Elizabeth Ayer:
 
 > Don´t ask forgiveness, radiate intent
-> Elizabeth Ayer, Jun 27, 2019, <a href="https://medium.com/@ElizAyer/dont-ask-forgiveness-radiate-intent-d36fd22393a3">Medium</a> 
+> <footer>Elizabeth Ayer, Jun 27, 2019, <a href="https://medium.com/@ElizAyer/dont-ask-forgiveness-radiate-intent-d36fd22393a3">Medium</a></footer>
 
 Once you´ve build up a habit of posting regularly your intent, like "This is what we are planning. If you want us to change course, say so!", your environment will start to expect your weeknotes signaling what´s coming next.
 
