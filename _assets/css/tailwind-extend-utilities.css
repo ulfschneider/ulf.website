@@ -22,11 +22,11 @@
   }
 
   .outline-indicator {
-    @apply outline-primary outline-4 outline-offset-2 outline;
+    @apply mode-outline-primary outline-4 outline-offset-2 outline;
   }
 
   .outline-indicator-lg {
-    @apply outline-primary outline-8 outline-offset-2 outline;
+    @apply mode-outline-primary outline-8 outline-offset-2 outline;
   }
 
   .text-balance {
@@ -53,6 +53,10 @@
 
   .mode-caret-primary {
     @apply caret-primary dark:caret-primary-light;
+  }
+
+  .mode-outline-primary {
+    @apply outline-primary dark:outline-primary-light;
   }
 
   @media (min-width: theme(screens.rg)) {
