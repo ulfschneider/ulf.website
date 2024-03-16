@@ -5,14 +5,14 @@ tags: accessibility
 Checkboxes and radio buttons convey a clear state in a simple way: A check means "on", a missing check means "off". 
 
 <figure>
-<label class="flex flex-row gap-ryt items-center"> <input type="checkbox" id="checkbox" checked/> <span>A checkbox can be on or off</span></label>
+<label class="max-w-fit flex flex-row gap-ryt items-center"> <input type="checkbox" id="checkbox" checked/> <span>A checkbox can be on or off</span></label>
 <figcaption>A checkbox communicates the on/off state and does not require additional explanation</figcaption>
 </figure>
 
 <figure>
-<label class="flex flex-row gap-ryt items-center"><input type="radio" name="radio-group" id="uranus"> <span>Uranus</span></label>
-<label class="flex flex-row gap-ryt items-center"><input type="radio" name="radio-group" id="neptun"> <span>Neptun</span></label>
-<label class="flex flex-row gap-ryt items-center"><input type="radio" name="radio-group" id="earth" checked> <span>Earth</span></label>
+<label class="max-w-fit flex flex-row gap-ryt items-center"><input type="radio" name="radio-group" id="uranus"> <span>Uranus</span></label>
+<label class="max-w-fit flex flex-row gap-ryt items-center"><input type="radio" name="radio-group" id="neptun"> <span>Neptun</span></label>
+<label class="max-w-fit flex flex-row gap-ryt items-center"><input type="radio" name="radio-group" id="earth" checked> <span>Earth</span></label>
 <figcaption>Radio buttons communicate all available options, and the chosen option, without additional explanation required</figcaption>
 </figure>
 
