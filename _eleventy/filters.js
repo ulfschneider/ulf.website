@@ -21,6 +21,9 @@ function createColorMap(values) {
 }
 
 module.exports = {
+  escapeHtmlQuotes: function (content) {
+    return content.replaceAll(/"/gi, "&quot;");
+  },
   live: function (collection) {
     return collection ? collection.filter(utils.isLiveItem) : collection;
   },
