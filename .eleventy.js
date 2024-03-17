@@ -190,6 +190,7 @@ function addFilters(eleventyConfig) {
   eleventyConfig.addFilter("humanDate", filters.humanDate);
   eleventyConfig.addFilter("humanDateTime", filters.humanDateTime);
   eleventyConfig.addFilter("isoDate", filters.isoDate);
+  eleventyConfig.addFilter("escapeHtmlQuotes", filters.escapeHtmlQuotes);
   eleventyConfig.addFilter("responsiveHero", filters.responsiveHero);
   eleventyConfig.addFilter("imgAspectRatio", filters.imgAspectRatio);
   eleventyConfig.addFilter("authorEmail", filters.authorEmail);
