@@ -2,6 +2,12 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- treat the tag symbol, must be before setting the title -->
+{% if tag == site.starTag %} {% assign adaptedTag = site.starTagSymbol %} {%
+elsif pagedItems.tag == site.starTag %} {% assign adaptedTag =
+site.starTagSymbol %} {% elsif tag != nil and tag != "" %} {% assign adaptedTag
+= tag %} {%else%} {% assign adaptedTag = pagedItems.tag %} {%endif%}
 <!-- title and description -->
 {%- if title != nil and title != "notitle" and title != "" -%} {%- assign
 adaptedTitle = title -%} {%- elsif adaptedTag != nil and adaptedTag != "" -%}
@@ -10,7 +16,10 @@ adaptedTag == "" -%} {%- assign adaptedTitle = "All posts" -%} {%- else -%} {%-
 assign adaptedTitle = site.name -%} {%- endif -%}
 <title>{{ adaptedTitle }}</title>
 {%- if abstract != nil and abstract != "" -%}
-<meta name="description" content="{{abstract | strip_html }}" />
+<meta
+  name="description"
+  content="{{abstract | strip_html | escapeHtmlQuotes }}"
+/>
 {%- endif -%}
 <!-- head scripts -->
 {% include "head-scripts.html" %}
@@ -79,18 +88,16 @@ assign adaptedTitle = site.name -%} {%- endif -%}
   title="{{site.title}}"
   type="application/atom+xml"
 />
-<!-- treat the star tag symbol -->
-{% if tag == site.starTag %} {% assign adaptedTag = site.starTagSymbol %} {%
-elsif pagedItems.tag == site.starTag %} {% assign adaptedTag =
-site.starTagSymbol %} {% elsif tag != nil and tag != "" %} {% assign adaptedTag
-= tag %} {%else%} {% assign adaptedTag = pagedItems.tag %} {%endif%}
 
 <!-- Open Graph -->
 <meta property="og:title" content="{{adaptedTitle}}" />
 <meta property="og:url" content="{{site.origin}}{{page.url}}" />
 <meta property="og:type" content="website" />
 {%- if abstract != nil and abstract != "" -%}
-<meta property="og:description" content="{{abstract | strip_html }}" />
+<meta
+  property="og:description"
+  content="{{abstract | strip_html | escapeHtmlQuotes }}"
+/>
 {%- endif -%}
 <meta property="og:image" content="{{site.origin}}{{site.open_graph_image}}" />
 <!-- Email -->
