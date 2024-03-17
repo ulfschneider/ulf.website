@@ -1,6 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
+const image = require("@11ty/eleventy-img");
 const rss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const embedTweets = require("eleventy-plugin-embed-tweet");
@@ -9,11 +10,13 @@ const liteYoutube = require("eleventy-plugin-lite-youtube");
 const site = require("./_data/site.js");
 const utils = require("./_eleventy/utils.js");
 const filters = require("./_eleventy/filters.js");
+const transforms = require("./_eleventy/transforms.js");
 
 module.exports = function (eleventyConfig) {
   addLayoutAliases(eleventyConfig);
   addCollections(eleventyConfig);
   addFilters(eleventyConfig);
+  addTransforms(eleventyConfig);
   addMarkdownLib(eleventyConfig);
 
   eleventyConfig.setDataDeepMerge(true);
@@ -206,4 +209,8 @@ function addFilters(eleventyConfig) {
   );
   eleventyConfig.addFilter("comments", filters.comments);
   eleventyConfig.addFilter("withComments", filters.withComments);
+}
+
+function addTransforms(eleventyConfig) {
+  eleventyConfig.addTransform("imageTransform", transforms.imageTransform);
 }

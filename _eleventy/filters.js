@@ -192,7 +192,7 @@ module.exports = {
           let humanDate = utils.humanDate(item.date);
           let dimensions;
           try {
-            dimensions = utils.getDimensions(`${site.output}${src}`);
+            //FIXME dimensions = utils.getDimensions(`${site.output}${src}`);
           } catch (e) {
             console.log(e);
           }

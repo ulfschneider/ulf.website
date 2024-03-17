@@ -57,6 +57,17 @@ module.exports = {
     }
   },
 
+  allImageTags: function (html) {
+    if (html) {
+      const matches = html.match(/<img\s+([^>]*)src="(.*?)"(.*?)[^>]*>/gi);
+      if (matches) {
+        return matches;
+      } else {
+        return [];
+      }
+    }
+  },
+
   getAttr: function (html, attr) {
     if (html) {
       const match = html.match(new RegExp(`${attr}="(.*?)"`));
