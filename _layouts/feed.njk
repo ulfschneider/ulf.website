@@ -13,7 +13,7 @@
     </author>
   {% endif -%}
   {%- for p in collections.liveContent | post | reverse -%}
-    {%- if p.data.norss == nil %}
+    {%- if p.data.norss == nil or p.date.norss == "" %}
       {%- set absolutePostUrl -%}{{ site.origin }}{{ p.url | url }}{%- endset -%}
       {%- set authorEmail -%}{{ p | authorEmail }}{%- endset -%}
       <entry>
@@ -22,12 +22,12 @@
         <updated>{{ p | modifiedDate | dateToRfc3339 }}</updated>
         <id>{{ absolutePostUrl }}</id>
         <content type="html" xml:lang="{{site.locale}}" >
+          {%- if p.data.abstract -%}<p>{{ p.data.abstract | htmlToAbsoluteUrls(absolutePostUrl) }}</p>{%- endif -%}
           {{ p.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
-          <![CDATA[<hr><p><strong><a href="{{absolutePostURL}}">{{ p.data.title }}</a></strong> appeared on <a href="{{site.origin}}">{{site.name}}</a>.</p>
+          <hr/><p><strong><a href="{{absolutePostURL}}">{{ p.data.title }}</a></strong> appeared on <a href="{{site.origin}}">{{site.name}}</a>.</p>
           {%- if authorEmail -%}
             <p><a href="mailto:{{authorEmail}}?body={{absolutePostUrl}}">Reply via email</a></p>
-          {%- endif -%}
-          ]]>
+          {%- endif -%}        
         </content>
       </entry>
     {% endif -%}
