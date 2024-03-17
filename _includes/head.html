@@ -65,23 +65,10 @@ assign adaptedTitle = site.name -%} {%- endif -%}
 <meta name="msapplication-TileColor" content="{{site.theme_color}}" />
 <meta name="theme-color" content="{{site.theme_color}}" />
 {%- endif -%}
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="{{site.base}}apple-touch-icon.png"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="{{site.base}}favicon-32x32.png"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="16x16"
-  href="{{site.base}}favicon-16x16.png"
-/>
+
+<!-- minimalistic favicon setup, checkout https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs -->
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" href="{{site.base}}apple-touch-icon.png" />
 <link rel="manifest" href="{{site.base}}site.webmanifest" />
 
 <!-- SEO/feed -->
