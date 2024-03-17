@@ -26,6 +26,7 @@ module.exports = {
   base: BASE,
   url: URL,
   offline: BASE + "offline/",
+  open_graph_image: BASE + "img/ulf/ulf-open-graph.jpg",
   allowCommenting: true,
   allowWebmentions: false,
   buildTime: new Date(),

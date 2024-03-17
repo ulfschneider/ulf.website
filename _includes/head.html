@@ -104,11 +104,8 @@ site.starTagSymbol %} {% elsif tag != nil and tag != "" %} {% assign adaptedTag
 <meta property="og:type" content="website" />
 {%- if abstract != nil and abstract != "" -%}
 <meta property="og:description" content="{{abstract | strip_html }}" />
-{%- endif -%} {%- assign firstImage = collections.liveContent | firstImage:
-page.url -%} {%- if firstImage.src -%}
-<meta property="og:image" content="{{site.origin}}{{firstImage.src}}" />
-<meta property="og:image:alt" content="{{firstImage.alt}}" />
 {%- endif -%}
+<meta property="og:image" content="{{site.origin}}{{site.open_graph_image}}" />
 <!-- Email -->
 {%- if site.ownership.email -%}
 <link rel="me" href="mailto:{{site.ownership.email}}" />
