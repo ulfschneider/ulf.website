@@ -4,7 +4,7 @@ tags:
   - strael
   - sports
 ---
-A beautiful ride. Streets have been wet because of previous but during the ride no rain. I came home 15 minutes too late. It was already dark and I did not have lights with me :-(.
+A beautiful ride. Streets have been wet because of previous rain but during the ride no rain. I came home 15 minutes too late. It was already dark and I did not have lights with me :-(.
 
 <figure class="hero">
 <img src="/img/strael/IMG_4538.jpg" alt="A misty green valley with woods and meadows">
