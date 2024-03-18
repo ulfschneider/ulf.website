@@ -32,6 +32,7 @@
   svg {
     height: auto;
     max-width: 100%;
+    display: inline-block;
   }
 
   iframe,
@@ -193,7 +194,7 @@
 
   img + img,
   picture + picture {
-    @apply my-ryt-lg;
+    @apply mt-ryt-lg;
   }
 
   p {
