@@ -102,8 +102,8 @@
 
   /* image container */
   .image-container {
-    @apply grid gap-x-ryt-xl gap-y-ryt-lg mt-ryt-2xl mb-ryt-xl;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    @apply grid gap-x-ryt-xl gap-y-ryt-lg mt-ryt-2xl mb-ryt-xl hero;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: masonry;
   }
 

@@ -22,10 +22,11 @@ module.exports = {
           },
         });
 
-        console.log(
+        content = content.replace(
+          imgTag,
           Image.generateHTML(imageMetaData, {
             loading: "lazy",
-            deconding: "async",
+            decoding: "async",
             alt: alt || "",
             sizes: "100vw",
           })

@@ -172,7 +172,7 @@ module.exports = {
         let src;
         let alt;
         if (item.data.hero) {
-          src = utils.clearResponsive(item.data.hero);
+          src = item.data.hero;
           if (item.data.heroalt) {
             alt = utils.removeHtml(item.data.heroalt);
           } else if (item.data.herocaption) {
@@ -181,33 +181,19 @@ module.exports = {
         } else {
           let img = utils.firstImageTag(item.templateContent);
           if (img) {
-            src = utils.clearResponsive(utils.srcAttr(img));
+            src = utils.srcAttr(img);
             alt = utils.altAttr(img);
           }
         }
         if (src) {
-          let extname = path.extname(src);
-          let stem = path.basename(src, extname);
-          let dirname = path.dirname(src);
-          let humanDate = utils.humanDate(item.date);
-          let dimensions;
-          try {
-            //FIXME dimensions = utils.getDimensions(`${site.output}${src}`);
-          } catch (e) {
-            console.log(e);
-          }
-
           let imgData = {
             src: src,
-            smallSrc: dirname + "/" + stem + site.imgSmallPostfix + extname,
-            width: dimensions ? dimensions.width : 0,
-            height: dimensions ? dimensions.height : 0,
             alt: alt,
             url: item.url,
             title: item.data.title,
             starred: item.data.starred,
             date: item.date,
-            humanDate: humanDate,
+            humanDate: utils.humanDate(item.date),
           };
 
           if (url) {
@@ -222,35 +208,6 @@ module.exports = {
       return {};
     } else {
       return result;
-    }
-  },
-
-  imgAspectRatio: function (src) {
-    return utils.imgAspectRatio(src);
-  },
-
-  imgSizeHint: function (src) {
-    return utils.imgSizeHint(src);
-  },
-
-  responsiveHero: function (src, alt) {
-    let clearSrc = utils.clearResponsive(src);
-
-    let img = `<img src="${clearSrc}" ${
-      alt ? 'alt="' + alt + '"' : 'alt=""'
-    } class="w-full h-auto object-cover" style="${utils.imgAspectRatio(
-      clearSrc
-    )}" ${utils.imgSizeHint(clearSrc)} loading="eager" decoding="async">`;
-    if (utils.isResponsive(src)) {
-      let extname = path.extname(clearSrc);
-      let stem = path.basename(clearSrc, extname);
-      let dirname = path.dirname(clearSrc);
-      return `<picture>
-            <source srcset="${dirname}/${stem}.webp" type="image/webp">
-            ${img}
-            </picture>`;
-    } else {
-      return img;
     }
   },
 

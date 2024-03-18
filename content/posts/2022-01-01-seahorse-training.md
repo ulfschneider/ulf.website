@@ -1,12 +1,13 @@
 ---
 title: Training materials for the seahorse badge
-tags: [journal,sports]
+tags: [journal, sports]
 updated: 2022-03-07
 ---
+
 <dl class="timeline framed row">
   <dt>24 Dec 2021</dt>
   <dd><figure>
-<img src="/img/journal/IMG_1581-sm.jpg" class="w-100" alt="">
+<img src="/img/journal/IMG_1581.jpg" class="w-100" alt="">
 <figcaption>Emil´s swim goggles, a diving ring, and soap. The training materials we need to get him the <a href="https://www.dsv.de/fitness-gesundheit/schwimmabzeichen/seepferdchen/">seahorse badge</a>. That´s our project for this year.</figcaption>
 </figure>
 </dd>
@@ -18,7 +19,7 @@ updated: 2022-03-07
 	<dd>Usually we swim in the mornings, but this time it was Sunday late afternoon. It was a relaxed session with ring diving, a bit of swimming and watersliding.</dd>
 	<dd>
 	<figure>
-		<img src="/img/journal/IMG_1637D-sm.jpg" class="w-100" alt="">
+		<img src="/img/journal/IMG_1637D.jpg" class="w-100" alt="">
 		<figcaption>Emil after swimming</figcaption>
 	</figure>
 	</dd>

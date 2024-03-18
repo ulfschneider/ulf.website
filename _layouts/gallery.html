@@ -22,18 +22,10 @@ nodate: true
   <figure class="m-0">
     <a class="no-underline inline-block" href="{{image.url}}">
       <img
-        src="{{image.smallSrc}}"
+        src="{{image.src}}"
         loading="lazy"
         class="fit-contain"
         alt="{{image.alt}}"
-        {%if
-        image.height
-        and
-        image.width%}
-        width="{{image.width}}"
-        height="{{image.height}}"
-        aspect-ratio="{{image.width}}/{{image.height}}"
-        {%endif%}
       />
       {%if image.title %}
       <figcaption class="font-body leading-snug {{image.starred}}">

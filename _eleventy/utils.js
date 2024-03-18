@@ -81,24 +81,8 @@ module.exports = {
     return this.getAttr(html, "src");
   },
 
-  srcsetAttr: function (html) {
-    return this.getAttr(html, "srcset");
-  },
-
   altAttr: function (html) {
     return this.getAttr(html, "alt");
-  },
-
-  widthAttr: function (html) {
-    return this.getAttr(html, "width");
-  },
-
-  heightAttr: function (html) {
-    return this.getAttr(html, "height");
-  },
-
-  getDimensions: function (src) {
-    return sizeOf(src);
   },
 
   isLiveItem: function (item) {
@@ -200,46 +184,6 @@ module.exports = {
 
   compareItemDate: function (a, b) {
     return a.date - b.date;
-  },
-
-  ensureDirectory: function (filePath) {
-    let dirName = path.dirname(filePath);
-    if (fs.existsSync(dirName)) {
-      return;
-    } else {
-      fs.mkdirSync(dirName, { recursive: true });
-    }
-  },
-
-  imgAspectRatio: function (src) {
-    try {
-      dimensions = this.getDimensions(`${site.output}${src}`);
-      if (dimensions.height > 0 && dimensions.width > 0) {
-        return `aspect-ratio:${dimensions.width}/${dimensions.height};`;
-      }
-    } catch (e) {
-      console.log(e);
-    }
-  },
-
-  imgSizeHint: function (src) {
-    try {
-      dimensions = this.getDimensions(`${site.output}${src}`);
-      if (dimensions.height > 0 && dimensions.width > 0) {
-        return `width="${dimensions.width}" height="${dimensions.height}"`;
-      }
-    } catch (e) {
-      console.log(e);
-    }
-  },
-
-  isResponsive: function (filePath) {
-    let fileName = path.basename(filePath);
-    return /@picture|@responsive/i.test(fileName);
-  },
-
-  clearResponsive: function (filePath) {
-    return filePath.replace(/@picture|@responsive/gi, "");
   },
 
   compareInputFileName: function (a, b) {
