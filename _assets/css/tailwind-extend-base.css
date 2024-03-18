@@ -191,7 +191,8 @@
 
   /*vertical rhythm*/
 
-  img + img {
+  img + img,
+  picture + picture {
     @apply my-ryt-lg;
   }
 

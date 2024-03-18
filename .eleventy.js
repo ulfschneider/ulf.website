@@ -1,7 +1,6 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-const image = require("@11ty/eleventy-img");
 const rss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const embedTweets = require("eleventy-plugin-embed-tweet");
