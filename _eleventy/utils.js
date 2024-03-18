@@ -15,7 +15,6 @@ const markdownItMathJax = require("markdown-it-mathjax3");
 const markdownItEmoji = require("markdown-it-emoji");
 const markdownItInclude = require("markdown-it-include");
 const markdownItGitHubAlerts = require("markdown-it-github-alerts");
-const sizeOf = require("image-size");
 const striptags = require("striptags");
 const fs = require("fs");
 const path = require("path");
