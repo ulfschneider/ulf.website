@@ -6,7 +6,6 @@ from = "/api/comments/*"
 to = "/.netlify/functions/comments/:splat"
 status = 200
 
-
 [build]
 edge_functions = "_api/_edge"
 
@@ -17,4 +16,3 @@ function = "suggest"
 [[edge_functions]]
 path = "/api/search"
 function = "search"
-
