@@ -162,7 +162,7 @@ module.exports = {
     kbd: "s",
   },
   blog: BASE + "blog/",
-  gallery: BASE + "iamges/",
+  gallery: BASE + "images/",
   rss: BASE + "feed.xml",
   output: process.env.OUTPUT ? process.env.OUTPUT : "_site",
   input: process.env.INPUT ? process.env.INPUT : "content",
