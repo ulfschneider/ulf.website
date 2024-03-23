@@ -7,7 +7,7 @@ id: about
 ---
 
 <figure>
-<img src="/img/ulf/ulf-16x9-900.webp" alt="Portrait of Ulf Schneider">
+<img src="/img/ulf/ulf-16x9.jpg" alt="Portrait of Ulf Schneider">
 </figure>
 
 Welcome! My name is Ulf Schneider and this is my website. I´m a software developer and agile coach.
