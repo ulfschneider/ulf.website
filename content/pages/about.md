@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-title: About me
+title: About Ulf Schneider
 nodate: true
 notags: true
 id: about
