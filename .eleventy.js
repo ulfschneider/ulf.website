@@ -1,3 +1,5 @@
+const { execSync } = require("child_process");
+
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -12,6 +14,19 @@ const filters = require("./_eleventy/filters.js");
 const transforms = require("./_eleventy/transforms.js");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.on(
+    "eleventy.after",
+    async ({ dir, results, runMode, outputMode }) => {
+      console.log(
+        "******** eleventy after build event, configured in .eleventy.js config file"
+      );
+      execSync(`npx pagefind --site ${dir.output}`, {
+        encoding: "utf-8",
+        stdio: "inherit",
+      });
+    }
+  );
+
   addLayoutAliases(eleventyConfig);
   addCollections(eleventyConfig);
   addFilters(eleventyConfig);
