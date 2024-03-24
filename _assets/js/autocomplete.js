@@ -244,43 +244,53 @@ AutoComplete = (function () {
       }
     };
 
-    let value = element.value;
-    let trimmedValue = value.trim();
     unmarkHidden(element);
-    if (!threshold || (threshold > 0 && trimmedValue.length >= threshold)) {
+    if (
+      !threshold ||
+      (threshold > 0 && element.value.trim().length >= threshold)
+    ) {
       if (
         keyEvent.key == "ArrowUp" ||
         keyEvent.key == "ArrowDown" ||
         keyEvent.key == "ArrowLeft" ||
         keyEvent.key == "ArrowRight"
       ) {
-        if (!hasVisibleSuggestionWrapper(element)) {
-          queryData(keyEvent.target.value, queryDataCallback);
-        } else {
-          indicateSuggestion(keyEvent);
+        if (keyEvent.type == "keydown") {
+          //use keydown event for arrow keys
+          if (!hasVisibleSuggestionWrapper(element)) {
+            queryData(element.value, queryDataCallback);
+          } else {
+            indicateSuggestion(keyEvent);
+          }
         }
       } else if (keyEvent.key == "Enter" && getSelectedSuggestion(element)) {
-        const selection = getSelectedSuggestion(element, data);
-        element.value = extractSuggestTitle(selection);
-        hideSuggestionWrapper(element);
-        element.focus();
+        if (keyEvent.type == "keydown") {
+          //use keydown event for Enter key
+          const selection = getSelectedSuggestion(element, data);
+          element.value = extractSuggestTitle(selection);
+          hideSuggestionWrapper(element);
+          element.focus();
 
-        if (onSelect) {
-          keyEvent.preventDefault();
-          keyEvent.stopImmediatePropagation();
-          console.log(selection);
-          onSelect(selection);
+          if (onSelect) {
+            keyEvent.preventDefault();
+            keyEvent.stopImmediatePropagation();
+            onSelect(selection);
+          }
         }
       } else if (keyEvent.key == "Enter" || keyEvent.key == "Escape") {
-        if (keyEvent.key == "Escape") {
-          keyEvent.preventDefault();
-          keyEvent.stopImmediatePropagation();
+        if (keyEvent.type == "keydown") {
+          //use keydown event for Enter and Escape keys
+          if (keyEvent.key == "Escape") {
+            keyEvent.preventDefault();
+            keyEvent.stopImmediatePropagation();
+          }
+          hideSuggestionWrapper(element);
         }
-        hideSuggestionWrapper(element);
-      } else {
-        queryData(keyEvent.target.value, queryDataCallback);
+      } else if (keyEvent.type == "keyup") {
+        //use keyup event for everything else
+        queryData(element.value, queryDataCallback);
       }
-    } else {
+    } else if (keyEvent.type == "keyup") {
       queryDataCallback(null, []);
     }
   }
@@ -307,16 +317,19 @@ AutoComplete = (function () {
         event.preventDefault();
       }
     });
-    element.addEventListener("keydown", (event) => {
-      suggest({
-        element: element,
-        keyEvent: event,
-        queryData: queryData,
-        data: data,
-        threshold: threshold,
-        onSelect: onSelect,
-      });
-    });
+    ["keyup", "keydown"].forEach((eventName) =>
+      element.addEventListener(eventName, (event) => {
+        suggest({
+          element: element,
+          keyEvent: event,
+          queryData: queryData,
+          data: data,
+          threshold: threshold,
+          onSelect: onSelect,
+        });
+      })
+    );
+
     addEventListener("resize", function () {
       //no throttle on resize
       trimSuggestionWrapperPosition(element);
