@@ -55,10 +55,15 @@
         const suggestions = [];
         const pagefind = await initPagefind();
         const search = await pagefind.search(query);
+        const promiseCollector = [];
         for (let i = 0; i < 7 && i < search.results.length; i++) {
-          const data = await search.results[i].data();
-          suggestions.push(data);
+          promiseCollector.push(
+            search.results[i].data().then((data) =>
+              suggestions.push(data);
+            )
+          );
         }
+        await Promise.allSettled(promiseCollector);
 
         callback(null, suggestions);
       } catch (error) {

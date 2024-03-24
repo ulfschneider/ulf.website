@@ -185,10 +185,14 @@ permalink: "{{site.search.url}}"
 
       pagefind = await initPagefind();
       const search = await pagefind.search(query);
+      const promiseCollector = [];
       for (const entry of search.results) {
-        const data = await entry.data();
-        resultSet.push(data);
+        promiseCollector.push(
+          entry.data().then((data) => resultSet.push(data))
+        );
       }
+      await Promise.allSettled(promiseCollector);
+
       let duration = Date.now() - start;
 
       console.log(
