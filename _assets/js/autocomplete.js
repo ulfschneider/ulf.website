@@ -157,6 +157,8 @@ AutoComplete = (function () {
           suggestElement.addEventListener("click", (event) => {
             element.value = event.target.innerText;
             element.focus();
+            hideSuggestionWrapper(element);
+
             if (onSelect) {
               onSelect(suggest);
             }
