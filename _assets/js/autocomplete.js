@@ -272,6 +272,8 @@ AutoComplete = (function () {
           onSelect(selection);
         }
       } else if (keyEvent.key == "Enter" || keyEvent.key == "Escape") {
+        keyEvent.preventDefault();
+        keyEvent.stopImmediatePropagation();
         hideSuggestionWrapper(element);
       } else {
         queryData(keyEvent.target.value, queryDataCallback);
