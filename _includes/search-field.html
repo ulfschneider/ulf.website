@@ -58,9 +58,7 @@
         const promiseCollector = [];
         for (let i = 0; i < 7 && i < search.results.length; i++) {
           promiseCollector.push(
-            search.results[i].data().then((data) =>
-              suggestions.push(data);
-            )
+            search.results[i].data().then((data) => suggestions.push(data))
           );
         }
         await Promise.allSettled(promiseCollector);
