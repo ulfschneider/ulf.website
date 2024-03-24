@@ -15,7 +15,12 @@ if ("{{trimBase}}") {
   NO_CACHE_URLS.push(/^(?!\/{{trimBase}}\/).*/);
 }
 
-const PRE_CACHE_URLS = [OFFLINE_URL, "/", "/css/main-{{cssVersion}}.css"];
+const PRE_CACHE_URLS = [
+  OFFLINE_URL,
+  "/",
+  "/css/main-{{cssVersion}}.css",
+  "{{pagefind}}",
+];
 
 const SCRIPT_CACHE_NAME = `${CACHE_NAME}-script-{{scriptVersion}}`;
 const RUNTIME_CACHE_NAME = `${CACHE_NAME}-runtime-{{runtimeVersion}}`;

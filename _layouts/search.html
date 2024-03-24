@@ -21,12 +21,24 @@ permalink: "{{site.search.url}}"
     }
   }
 
+  function humanDate(date) {
+    return new Intl.DateTimeFormat("{{site.locale}}", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }).format(date);
+  }
+
+  function isoDate(date) {
+    return date.toISOString();
+  }
+
   function printResultEntry(parent, entry) {
     if (parent) {
       let article = document.createElement("article");
       article.classList.add("my-ryt-lg");
       parent.appendChild(article);
-      if (entry.title && entry.title != "notitle") {
+      if (entry.meta.title && entry.meta.title != "notitle") {
         let title = document.createElement("h2");
         title.classList =
           "mt-0 font-bold text-base font-body leading-snug mb-ryt-xs";
@@ -34,67 +46,51 @@ permalink: "{{site.search.url}}"
 
         let linkToArticle = document.createElement("a");
         linkToArticle.classList = "no-underline";
-        linkToArticle.href = entry.id;
-        linkToArticle.innerHTML = entry.title;
+        linkToArticle.href = entry.url;
+        linkToArticle.innerHTML = entry.meta.title;
         title.appendChild(linkToArticle);
-      } else {
-        let abstract = entry.abstract || entry.excerpt;
-        let excerpt = document.createElement("p");
-        excerpt.innerHTML = abstract;
-        excerpt.appendChild(document.createTextNode(" "));
-        let linkToArticle = document.createElement("a");
-        linkToArticle.href = entry.id;
-        linkToArticle.innerHTML = "Read more";
-        excerpt.appendChild(linkToArticle);
-        article.appendChild(excerpt);
       }
-      if (entry.humanDate || (entry.tags.length && !entry.notags)) {
+
+      if (entry.meta.date) {
         let aside = document.createElement("aside");
-        aside.classList = `${entry.starred ? entry.starred + " " : ""}text-sm`;
+        aside.classList = "text-sm my-ryt-xs";
         article.appendChild(aside);
 
-        if (entry.date) {
+        let date = document.createElement("time");
+        date.innerHTML += humanDate(new Date(entry.meta.date));
+        date.setAttribute("datetime", isoDate(new Date(entry.meta.date)));
+        date.classList = "whitespace-nowrap mr-ryt";
+        aside.appendChild(date);
+        aside.appendChild(document.createTextNode(" "));
+
+        if (entry.meta.updated) {
+          let wrapper = document.createElement("span");
+          wrapper.classList = "whitespace-nowrap";
+          aside.append(wrapper);
+          let label = document.createElement("span");
+          label.innerHTML = "Updated";
+          wrapper.appendChild(label);
+          wrapper.appendChild(document.createTextNode(" "));
           let date = document.createElement("time");
-          date.innerHTML += entry.humanDate;
+          date.innerHTML = humanDate(new Date(entry.meta.updated));
+          date.setAttribute("datetime", isoDate(new Date(entry.meta.updated)));
           date.classList = "whitespace-nowrap mr-ryt";
-          aside.appendChild(date);
-          aside.appendChild(document.createTextNode(" "));
+          wrapper.appendChild(date);
+          wrapper.appendChild(document.createTextNode(" "));
         }
+      }
 
-        if (entry.tags.length && !entry.notags) {
-          let tags = document.createElement("ul");
-          tags.classList = "inline reset";
-          aside.appendChild(tags);
-
-          for (let tag of entry.tags) {
-            if (tag.name == "{{site.starTag}}") {
-              let listElement = document.createElement("li");
-              listElement.classList = "inline";
-              tags.appendChild(listElement);
-
-              let tagLink = document.createElement("a");
-              tagLink.href = tag.url;
-              tagLink.innerHTML = "{{site.starTagSymbol}}";
-              tagLink.classList = "no-underline text-base px-ryt-2xs";
-              listElement.appendChild(tagLink);
-              tags.appendChild(document.createTextNode(" "));
-              break;
-            }
-          }
-          for (let tag of entry.tags) {
-            if (tag.name != "{{site.starTag}}") {
-              let listElement = document.createElement("li");
-              listElement.classList = "inline";
-              tags.appendChild(listElement);
-
-              let tagLink = document.createElement("a");
-              tagLink.href = tag.url;
-              tagLink.innerHTML = "#" + tag.name;
-              tagLink.classList = "no-underline";
-              listElement.appendChild(tagLink);
-              tags.appendChild(document.createTextNode(" "));
-            }
-          }
+      if (entry.excerpt) {
+        let excerpt = document.createElement("p");
+        article.appendChild(excerpt);
+        excerpt.innerHTML = entry.excerpt;
+        excerpt.appendChild(document.createTextNode(" …"));
+        if (!entry.meta.title) {
+          let linkToArticle = document.createElement("a");
+          linkToArticle.href = entry.id;
+          linkToArticle.innerHTML = "Read more";
+          excerpt.appendChild(document.createTextNode(" "));
+          excerpt.appendChild(linkToArticle);
         }
       }
     }
@@ -105,21 +101,11 @@ permalink: "{{site.search.url}}"
   }
 
   function humanQuery() {
-    query = getParameterByName("query");
-    combine = getParameterByName("combine");
-    const split = splitSearchTerms(query);
-    return split.join(` ${combine} `);
+    return getQueryParameterByName("query");
   }
 
   function humanHtmlQuery() {
-    query = getParameterByName("query");
-    combine = getParameterByName("combine");
-    const split = splitSearchTerms(query);
-    return (
-      "<strong>" +
-      split.join(` <span class="mode-text-primary italic">${combine}</span> `) +
-      "</strong>"
-    );
+    return `<strong class="mode-text-primary italic">${humanQuery()}</strong>`;
   }
 
   function printResultCount(searchResults, resultSet) {
@@ -179,7 +165,7 @@ permalink: "{{site.search.url}}"
     removeChildren(searchResults);
     let errorMessage = document.createElement("div");
     errorMessage.innerHTML =
-      "The search for " +
+      "Your search for " +
       humanHtmlQuery() +
       " could not be completed because of a failure.";
     if (error && error.status && error.statusText) {
@@ -192,41 +178,37 @@ permalink: "{{site.search.url}}"
 
   async function search() {
     try {
+      const resultSet = [];
       printSearching();
       let start = Date.now();
-      query = getParameterByName("query");
-      combine = getParameterByName("combine");
-      let response = await fetch(
-        "/api/search/?query=" +
-          encodeURIComponent(query) +
-          "&combine=" +
-          combine
-      );
+      query = getQueryParameterByName("query");
+
+      pagefind = await initPagefind();
+      const search = await pagefind.search(query);
+      for (const entry of search.results) {
+        const data = await entry.data();
+        resultSet.push(data);
+      }
       let duration = Date.now() - start;
 
-      if (response.status == 200) {
-        let resultSet = await response.json();
-        console.log(
-          "The search for [" +
-            humanQuery() +
-            "] returned " +
-            resultSet.length +
-            " results within " +
-            duration +
-            " milliseconds"
-        );
+      console.log(
+        "The search for [" +
+          humanQuery() +
+          "] returned " +
+          resultSet.length +
+          " results within " +
+          duration +
+          " milliseconds"
+      );
 
-        printSearchResults(resultSet);
-      } else {
-        printError(response);
-      }
+      printSearchResults(resultSet);
     } catch (error) {
       printError(error);
     }
   }
 
   function submitSearch() {
-    const query = getParameterByName("query");
+    const query = getQueryParameterByName("query");
     if (query && query.trim()) {
       search();
     }
@@ -236,7 +218,7 @@ permalink: "{{site.search.url}}"
     if (!event.persisted) {
       submitSearch();
     } else {
-      setTimeout(setFieldValues, 50);
+      setTimeout(setQueryValue, 50);
     }
   });
 </script>

@@ -9,11 +9,13 @@
     {% include "head.html" %}
   </head>
 
-  <body class="break-words px-ryt">
+  {%- if nosearch == nil and draft == nil -%} {%assign search_attribute =
+  'data-pagefind-body' %}{%- endif -%}
+  <body class="break-words px-ryt" {{search_attribute}}>
     {% include "header.html" %}
     <main id="main" class="indent max-w-rg mx-auto">
       {% include "title.html" %} {{ content }}
-      <div class="my-ryt-2xl">
+      <div class="my-ryt-2xl" data-pagefind-ignore>
         {% include "comments.html" %} {% include "webmentions.html" %} {%
         include "post-nav.html" %}
       </div>

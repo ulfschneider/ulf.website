@@ -26,57 +26,48 @@
     </div>
   </label>
   <ul id="autocomplete-search" class="shadow-xl"></ul>
-  <fieldset class="mt-ryt-sm">
-    <legend class="font-normal">Mulptiple search terms are combined by:</legend>
-    <div class="flex gap-ryt-lg mt-ryt-sm">
-      <label class="flex gap-ryt-xs font-normal">
-        <input
-          type="radio"
-          id="combine-and"
-          name="combine"
-          value="AND"
-          checked
-        />
-        <div class="my-auto">AND</div>
-      </label>
-      <label class="flex gap-ryt-xs font-normal align-middle">
-        <input type="radio" id="combine-or" name="combine" value="OR" />
-        <div class="my-auto">OR</div>
-      </label>
-    </div>
-  </fieldset>
   <script>
-    function getParameterByName(name, url) {
+    var pagefind;
+    async function initPagefind() {
+      try {
+        if (!pagefind) {
+          pagefind = await import("{{site.pagefind}}");
+          pagefind.init();
+        }
+        return pagefind;
+      } catch (err) {
+        console.error("Failure when initializing pagefind", err);
+      }
+    }
+
+    function setQueryParameterByName(name, value) {
+      history.replaceState(null, null, "?" + name + "=" + value);
+    }
+
+    function getQueryParameterByName(name, url) {
       let params = new URL(url || document.location).searchParams;
       const param = params.get(name);
       return param;
     }
-    function splitSearchTerms(query) {
-      query = query || document.querySelector("#search-query").value;
 
-      return query ? query.split(/\s+/) : [];
-    }
-    function searchTermCount(query) {
-      let split = splitSearchTerms(query);
-      return split.length;
-    }
-    async function suggest(event, callback) {
+    async function suggestPages(query, callback) {
       try {
-        const query = document.querySelector("#search-query").value;
-        const combine = document.querySelector(
-          'input[name="combine"]:checked'
-        ).value;
-        let response = await fetch(
-          "/api/suggest/?query=" +
-            encodeURIComponent(query) +
-            "&combine=" +
-            combine
-        );
-        let suggestions = await response.json();
+        const suggestions = [];
+        const pagefind = await initPagefind();
+        const search = await pagefind.search(query);
+        for (let i = 0; i < 7 && i < search.results.length; i++) {
+          const data = await search.results[i].data();
+          suggestions.push(data);
+        }
+
         callback(null, suggestions);
       } catch (error) {
         callback(error, []);
       }
+    }
+
+    function openPage(suggestion) {
+      location.href = suggestion.url;
     }
 
     function submitQuery(event) {
@@ -84,62 +75,35 @@
         event.preventDefault();
       }
       const query = document.querySelector("#search-query").value;
-      const combine = document.querySelector(
-        'input[name="combine"]:checked'
-      ).value;
       if (query && query.trim()) {
         location.href =
-          "{{site.search.url}}" +
-          "?query=" +
-          encodeURIComponent(query.trim()) +
-          "&combine=" +
-          combine;
+          "{{site.search.url}}" + "?query=" + encodeURIComponent(query.trim());
       } else {
-        location.href = "{{site.search.url}}" + "?combine=" + combine;
+        location.href = "{{site.search.url}}";
       }
     }
 
-    function setFieldValues() {
-      let query = getParameterByName("query");
+    function setQueryValue() {
+      let query = getQueryParameterByName("query");
       let queryField = document.querySelector("#search-query");
       queryField.value = query;
-
-      let combine = getParameterByName("combine");
-      let orField = document.querySelector("#combine-or");
-      let andField = document.querySelector("#combine-and");
-      if (combine == "OR") {
-        orField.checked = true;
-      } else {
-        andField.checked = true;
-      }
     }
 
     function registerEvents() {
-      let orField = document.querySelector("#combine-or");
-      let andField = document.querySelector("#combine-and");
-      andField.addEventListener("change", (event) => {
-        if (searchTermCount()) {
-          submitQuery();
-        }
-      });
-      orField.addEventListener("change", (event) => {
-        if (searchTermCount()) {
-          submitQuery();
-        }
-      });
       let searchForm = document.querySelector("#search-form");
       searchForm.addEventListener("submit", submitQuery);
 
       addEventListener("DOMContentLoaded", (event) => {
         AutoComplete.init({
           selector: "#search-query",
-          data: suggest,
+          queryData: suggestPages,
           threshold: 1,
-          onSelect: submitQuery,
+          onSelect: openPage,
         });
       });
     }
-    setFieldValues();
+
+    setQueryValue();
     registerEvents();
   </script>
 </form>

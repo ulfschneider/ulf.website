@@ -29,6 +29,10 @@ const replacements = [
     replace: utils.getTrimBase(),
   },
   {
+    search: "{{pagefind}}",
+    replace: site.pagefind,
+  },
+  {
     search: "{{scriptVersion}}",
     replace: site.cacheVersioning.script,
   },
@@ -51,10 +55,6 @@ const replacements = [
   {
     search: "{{jsonVersion}}",
     replace: site.cacheVersioning.json,
-  },
-  {
-    search: "{{searchVersion}}",
-    replace: site.cacheVersioning.search,
   },
 ];
 

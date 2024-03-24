@@ -25,7 +25,6 @@ async function loginGitHub() {
   return new Octokit({ auth: token });
 }
 
-
 function printRootIssue(processing) {
   let print = '';
   if (processing.origUrl) {
@@ -40,7 +39,6 @@ function printRootIssue(processing) {
   return print;
 }
 
-
 async function loadCommentRootIssues() {
   let issues = [];
   await octokit.paginate(octokit.rest.issues.listForRepo, {
@@ -54,7 +52,6 @@ async function loadCommentRootIssues() {
     });
   return issues;
 }
-
 
 async function determinIssueNumber(processing) {
   if (processing.issueNumber) {
@@ -102,7 +99,6 @@ function formatComment(processing) {
   } else {
     return processing.comment.body;
   }
-
 }
 
 async function createComment(processing) {
@@ -156,7 +152,6 @@ function getPrettifiedComments(processing) {
   }
 }
 
-
 exports.loadCommentRootIssues = async () => {
   if (!octokit) {
     octokit = await loginGitHub();
@@ -174,8 +169,6 @@ exports.loadCommentsForIssue = async (issueNumber) => {
   await loadComments(processing);
   return getPrettifiedComments(processing);
 }
-
-
 
 exports.handler = async (event, context) => {
   try {
