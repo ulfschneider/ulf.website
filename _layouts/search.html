@@ -201,8 +201,8 @@ permalink: "{{site.search.url}}"
           "] returned " +
           resultSet.length +
           " results within " +
-          duration +
-          " milliseconds"
+          (duration / 1000).toFixed(2) +
+          " seconds"
       );
 
       printSearchResults(resultSet);
