@@ -1,5 +1,3 @@
-const MiniSearch = require("minisearch");
-const path = require("path");
 const ccd = require("cached-commit-date");
 const utils = require("./utils.js");
 const site = require("../_data/site.js");
@@ -34,10 +32,6 @@ module.exports = {
 
   isPost: function (page) {
     return utils.isPost(page);
-  },
-
-  searchAble: function (collection) {
-    return collection ? collection.filter(utils.isSearchAble) : collection;
   },
 
   rssAble: function (collection) {
@@ -96,56 +90,6 @@ module.exports = {
     }
 
     return "";
-  },
-
-  searchIndex: function (collection) {
-    const INDEX_FIELDS = [
-      "id",
-      "title",
-      "humanDate",
-      "author",
-      "refer",
-      "tags",
-      "abstract",
-      "content",
-      "commentContents",
-      "commentAuthors",
-    ];
-
-    const STORE_FIELDS = [
-      "id",
-      "title",
-      "date",
-      "humanDate",
-      "author",
-      "refer",
-      "tags",
-      "notags",
-      "starred",
-      "abstract",
-      "excerpt",
-    ];
-
-    let miniSearch = new MiniSearch({
-      fields: INDEX_FIELDS,
-      storeFields: STORE_FIELDS,
-    });
-    for (let item of collection) {
-      let mappedItem = utils.mapItem(item);
-      if (
-        utils.isSearchAble(item) &&
-        mappedItem.id &&
-        !miniSearch.has(mappedItem.id)
-      ) {
-        miniSearch.add(mappedItem);
-      }
-    }
-
-    let searchIndex = miniSearch.toJSON();
-    //store the configured index fields within the search index
-    //to access it later when importing the index
-    searchIndex.INDEX_FIELDS = INDEX_FIELDS;
-    return JSON.stringify(searchIndex);
   },
 
   siteTags: function (collection) {

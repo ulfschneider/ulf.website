@@ -19,14 +19,6 @@ const striptags = require("striptags");
 const fs = require("fs");
 const path = require("path");
 
-const dayjs = require("dayjs");
-const advancedFormat = require("dayjs/plugin/advancedFormat");
-dayjs.extend(advancedFormat);
-const utc = require("dayjs/plugin/utc");
-dayjs.extend(utc);
-const timezone = require("dayjs/plugin/timezone");
-dayjs.extend(timezone);
-
 function mySlugify(s) {
   return slugify(s, { lower: true });
 }
@@ -34,19 +26,6 @@ function mySlugify(s) {
 const site = require("../_data/site.js");
 
 module.exports = {
-  excerptFromText: function (text) {
-    let excerpt = this.removeHtml(text);
-    if (excerpt) {
-      let excerptWordCount = site.excerptWordCount ? site.excerptWordCount : 25;
-      let words = excerpt.split(" ");
-      excerpt = words.slice(0, excerptWordCount).join(" ");
-      if (words.length > excerptWordCount) {
-        excerpt += " …";
-      }
-    }
-    return excerpt;
-  },
-
   firstImageTag: function (html) {
     if (html) {
       const match = html.match(/<img\s+([^>]*)src="(.*?)"(.*?)[^>]*>/);
@@ -128,57 +107,10 @@ module.exports = {
     }
   },
 
-  isSearchAble: function (item) {
-    if (item.templateContent && item.templateContent.trim()) {
-      return (
-        item.data.nosearch == null &&
-        this.isLiveItem(item) &&
-        !item.inputPath.startsWith(`./${site.input}/tagintros/`)
-      );
-    }
-    return false;
-  },
-
   removeHtml: function (text) {
     if (text) {
       return striptags(text);
     }
-  },
-
-  mapItem: function (item) {
-    let tagsWithUrls = [];
-
-    if (item.data.tags) {
-      let tags = [...new Set(item.data.tags)].sort();
-      for (let tag of tags) {
-        tagsWithUrls.push({
-          name: tag,
-          url: this.tagUrl(tag),
-        });
-      }
-    }
-
-    return {
-      id: item.url,
-      title: item.data.title,
-      date: item.date,
-      humanDate: this.humanDate(item.date),
-      abstract: item.data.abstract,
-      author: item.data.author,
-      refer: item.data.refer,
-      layout: item.data.layout,
-      tags: tagsWithUrls,
-      notags: item.data.notags,
-      starred: item.data.starred,
-      content: this.removeHtml(item.templateContent),
-      excerpt: this.excerptFromText(item.templateContent),
-      commentContents: item.data.comments
-        ? item.data.comments.map((comment) => comment.body).join(" ")
-        : undefined,
-      commentAuthors: item.data.comments
-        ? item.data.comments.map((comment) => comment.author).join(" ")
-        : undefined,
-    };
   },
 
   compareItemDate: function (a, b) {
@@ -192,14 +124,20 @@ module.exports = {
   },
 
   isoDate: function (d) {
-    return dayjs(d).toISOString();
+    if (d) {
+      return d.toISOString();
+    } else {
+      return "";
+    }
   },
 
   humanDate: function (d) {
     if (d) {
-      const locale = site.locale ? site.locale : "en";
-      let dt = dayjs(d).locale(locale);
-      return dt.format("DD MMM YYYY");
+      return new Intl.DateTimeFormat(site.locale, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }).format(d);
     } else {
       return "";
     }
@@ -207,9 +145,13 @@ module.exports = {
 
   humanDateTime: function (d) {
     if (d) {
-      const locale = site.locale ? site.locale : "en";
-      let dt = dayjs(d).locale(locale);
-      return dt.format("DD MMM YYYY at HH:mm:ss");
+      return new Intl.DateTimeFormat(site.locale, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numberic",
+        second: "numberic",
+      }).format(d);
     } else {
       return "";
     }

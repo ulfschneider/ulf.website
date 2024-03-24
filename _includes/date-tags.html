@@ -4,18 +4,20 @@ and nodate == nil %} {%- assign updated = modifiedDate -%} {%- endif -%} {%- if
 tags and notags == nil -%} {%- assign tags = tags -%} {%- else -%} {%- assign
 tags = nil -%} {%- endif -%} {%- if posted != nil or updated != nil or tags !=
 nil -%}
-<div class="text-sm">
+<div class="text-sm" data-pagefind-ignore>
   {% if posted != nil %}
   <time
+    datetime="{{posted | isoDate}}"
+    data-pagefind-meta="date:{{posted | isoDate}}"
     class="whitespace-nowrap {% if updated != nil or tags != nil %}mr-ryt{% endif %}"
-    datetime="{{date | isoDate}}"
     >{{ posted | humanDate }}</time
   >
   {% endif %} {% if updated %}
   <span class="whitespace-nowrap">
     <span>Updated</span>
     <time
-      datetime="{{date | isoDate}}"
+      datetime="{{updated | isoDate}}"
+      data-pagefind-meta="updated:{{updated | isoDate}}"
       class="{% if updated != nil or tags != nil %}mr-ryt{%- endif -%}"
       >{{ updated | humanDate }}</time
     >

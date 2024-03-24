@@ -9,7 +9,9 @@
     {% include "head.html" %}
   </head>
 
-  <body class="p-hr blank break-word outdent">
+  {%- if nosearch == nil and draft == nil -%} {%assign search_attribute =
+  'data-pagefind-body' %}{%- endif -%}
+  <body class="p-hr blank break-word outdent" {{search_attribute}}>
     <main id="main" {% if outline == true %}class="indent outline"{% else %}class="indent"{% endif %}>
       {{ content }}
     </main>
