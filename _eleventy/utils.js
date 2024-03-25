@@ -135,7 +135,7 @@ module.exports = {
     if (d) {
       return new Intl.DateTimeFormat(site.locale, {
         year: "numeric",
-        month: "long",
+        month: "short",
         day: "numeric",
       }).format(d);
     } else {
@@ -147,10 +147,10 @@ module.exports = {
     if (d) {
       return new Intl.DateTimeFormat(site.locale, {
         year: "numeric",
-        month: "long",
+        month: "short",
         day: "numeric",
-        hour: "numberic",
-        second: "numberic",
+        hour: "numeric",
+        second: "numeric",
       }).format(d);
     } else {
       return "";

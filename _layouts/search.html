@@ -24,7 +24,7 @@ permalink: "{{site.search.url}}"
   function humanDate(date) {
     return new Intl.DateTimeFormat("{{site.locale}}", {
       year: "numeric",
-      month: "long",
+      month: "short",
       day: "numeric",
     }).format(date);
   }
