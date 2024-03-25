@@ -84,6 +84,31 @@ module.exports = {
           DEFAULT: colors.yellow[200],
           dark: colors.yellow[400],
         },
+        orange: {
+          light: colors.orange[100],
+          DEFAULT: colors.orange[500],
+          dark: colors.orange[900],
+        },
+        red: {
+          light: colors.red[400],
+          DEFAULT: colors.red[600],
+          dark: colors.red[800],
+        },
+        green: {
+          light: colors.green[100],
+          DEFAULT: colors.green[500],
+          dark: colors.green[900],
+        },
+        purple: {
+          light: colors.purple[100],
+          DEFAULT: colors.purple[500],
+          dark: colors.purple[900],
+        },
+        blue: {
+          light: colors.blue[100],
+          DEFAULT: colors.blue[500],
+          dark: colors.blue[900],
+        },
       },
       transitionProperty: {
         spacing:
