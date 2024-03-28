@@ -121,6 +121,10 @@ assign adaptedTitle = site.name -%} {%- endif -%}
 <meta
   property="twitter:image:src"
   content="{{site.origin}}{{firstImage.src}}"
+/>{%- else -%}
+<meta
+  property="twitter:image:src"
+  content="{{site.origin}}{{site.open_graph_image}}"
 />
 {%- endif -%}
 <!-- Webmentions -->
