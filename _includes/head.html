@@ -113,17 +113,14 @@ assign adaptedTitle = site.name -%} {%- endif -%}
 <link rel="me" href="{{site.ownership.github.profile}}" />
 {%- endif -%}
 <!-- Twitter -->
-<meta name="twitter:card" content="summary" />
-{%- if site.ownership.twitter.user -%}
+<meta name="twitter:card" content="summary_large_image" /> {%- if
+site.ownership.twitter.user -%}
 <meta name="twitter:site" content="{{site.ownership.twitter.user}}" />
 <meta name="twitter:creator" content="{{site.ownership.twitter.user}}" />
 {%- endif -%} {%- if firstImage.src -%}
-<meta name="twitter:image:src" content="{{site.origin}}{{firstImage.src}}" />{%-
+<meta name="twitter:image" content="{{site.origin}}{{firstImage.src}}" />{%-
 else -%}
-<meta
-  name="twitter:image:src"
-  content="{{site.origin}}{{site.open_graph_image}}"
-/>
+<meta name="twitter:image" content="{{site.origin}}{{site.open_graph_image}}" />
 {%- endif -%}
 <!-- Webmentions -->
 <link
