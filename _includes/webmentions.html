@@ -1,6 +1,6 @@
 {%- if site.allowWebmentions == true -%} {%- if page | isPost -%}
 <details class="webmentions my-ryt-xl">
-  <summary>
+  <summary data-pagefind-ignore>
     <strong class="webmention-count">Webmentions</strong>
   </summary>
   <div
@@ -8,6 +8,7 @@
     data-comment-issue="{{page | commentRootIssueNumber}}"
   ></div>
   <form
+    data-pagefind-ignore
     class="webmention-form"
     name="webmention"
     action="https://webmention.io/{{site.domain}}/webmention"
