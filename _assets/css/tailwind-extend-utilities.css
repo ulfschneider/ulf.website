@@ -10,6 +10,11 @@
     display: none;
   }
 
+  p.p-rg,
+  .p-rg p {
+    @apply max-w-screen-rg;
+  }
+
   .indent p + p,
   p.indent {
     @apply my-0 indent-ryt-lg;
