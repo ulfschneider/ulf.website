@@ -10,8 +10,8 @@
     display: none;
   }
 
-  p.p-rg,
-  .p-rg p {
+  p.max-w-p-rg,
+  .max-w-p-rg p {
     @apply max-w-screen-rg;
   }
 

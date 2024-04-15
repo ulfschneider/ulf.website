@@ -4,9 +4,9 @@ nodate: true
 ---
 
 <div class="hero">
-  <div class="p-rg">{{ content }}</div>
+  <div class="max-w-p-rg">{{ content }}</div>
   {%- if content == nil or content == "" -%}
-  <div class="p-rg">
+  <div class="max-w-screen-rg">
     Images tagged
     <strong
       >{%if tag == site.starTag%}{{site.starTagSymbol}}{%else%}#{{tag
