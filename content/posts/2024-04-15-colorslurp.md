@@ -2,7 +2,9 @@
 title: ColorSlurp
 tags: apps
 ---
-My color picker is [<cite>ColorSlurp</cite>](https://colorslurp.com). I use the pro version, which I paid one-time. I think that way of purchasing is not available anymore. Now you have to subscribe a yearly subscription, which I think is expensive. The features are good:
+My color picker is [<cite>ColorSlurp</cite>](https://colorslurp.com). I use the pro version, for which I did a one-time purchase. I think that way of purchasing is not available anymore. Now you have to subscribe a yearly subscription and I think the subscription is expensive. I´m not sure if I would go down that route. 
+
+The features are good:
 
 - The basic picking of a color from the screen is unobtrusive. Start picking with the keyboard command <kbd>Shift</kbd> <kbd>⌘</kbd> <kbd>M</kbd> (you can adjust the shortcut). You can as well open ColorSlurp through the Menu Bar or the Dock. 
 - Picking a color is supported by a magnifier. The magnifier can be configured in size and how much it magnifies (zoom level).
