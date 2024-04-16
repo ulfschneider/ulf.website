@@ -24,7 +24,6 @@ function maintainBackToStartVisibility() {
   let backToStart = document.querySelector("#back-to-start");
 
   if (backToStart) {
-    let footerNav = document.querySelector("#footer nav");
     let windowHeight = window.innerHeight;
     let documentHeight = document.body.scrollHeight;
     let scrollY = window.scrollY;
@@ -34,7 +33,6 @@ function maintainBackToStartVisibility() {
       backToStart.style.position = "fixed";
       backToStart.style.right = "0";
       backToStart.style.bottom = "0";
-      backToStart.style.border = "1px solid currentColor";
     } else {
       backToStart.style.display = "none";
       backToStart.style.position = "static";
