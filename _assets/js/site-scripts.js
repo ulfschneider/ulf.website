@@ -30,14 +30,8 @@ function maintainBackToStartVisibility() {
 
     if (windowHeight * 1.5 < documentHeight && scrollY >= 0.5 * windowHeight) {
       backToStart.style.display = "flex";
-      backToStart.style.position = "fixed";
-      backToStart.style.right = "0";
-      backToStart.style.bottom = "0";
     } else {
       backToStart.style.display = "none";
-      backToStart.style.position = "static";
-      backToStart.style.border = "none";
-      backToStart.style.padding = "none";
     }
   }
 }
