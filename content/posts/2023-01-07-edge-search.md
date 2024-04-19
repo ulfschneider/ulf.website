@@ -337,55 +337,5 @@ form.addEventListener('submit', submitSearch);
 
 ```
 
-## Demo
-
-And here is how the code will work when searching *{{site.hostname}}.*
-
-<figure class="demo-box">
-<form id="searchform">
-    <label>Do a fulltext search
-        <div>
-            <input type="text" name="searchquery">
-            <input type="submit" value="Search">
-        </div>
-    </label>
-</form>
-<div id="searchresults"></div>
-<script>
-async function submitSearch(event) {
-    event.preventDefault();
-	let form = event.target;
-	let query = form.searchquery.value;
-	let resultBox = document.querySelector('#searchresults');
-	resultBox.innerHTML = '';
-    if (!query) {
-        return;
-    }
-    try {
-		let response = await fetch(`{{site.base}}api/search/?query=${query}`);
-        if (response.status != 200) {
-            throw (`${response.status} ${response.statusText}`);
-        }
-        let searchResults = await response.json();
-        if (searchResults.length) {
-            let resultList = document.createElement('ul');
-            for (let result of searchResults) {
-                let listElement = document.createElement('li');
-                listElement.innerHTML = `<a href="${result.id}">${result.title}</a>`;
-                resultList.appendChild(listElement);
-            }
-            resultBox.innerHTML = `Results for query <strong>${query}</strong>`;
-            resultBox.appendChild(resultList);
-        } else {
-            resultBox.innerHTML = `No results for query <strong>${query}</strong>`;
-        }
-    } catch (error) {
-	  	resultBox.innerHTML = error.toString();
-    }
-}
-let form = document.querySelector('#searchform');
-form.addEventListener('submit', submitSearch);
-</script>
-</figure>
 
 When you are satisfied with your solution, a simple `git push` will make it available on the internet. There is nothing to be configured in addition at Netlify.
