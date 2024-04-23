@@ -28,7 +28,6 @@ const CSS_CACHE_NAME = `${CACHE_NAME}-css-{{cssVersion}}`;
 const IMAGE_CACHE_NAME = `${CACHE_NAME}-image-{{imageVersion}}`;
 const FONT_CACHE_NAME = `${CACHE_NAME}-font-{{fontVersion}}`;
 const JSON_CACHE_NAME = `${CACHE_NAME}-json-{{jsonVersion}}`;
-const SEARCH_CACHE_NAME = `${CACHE_NAME}-search-{{searchVersion}}`;
 
 const CACHE_NAMES = [
   SCRIPT_CACHE_NAME,
@@ -37,7 +36,6 @@ const CACHE_NAMES = [
   IMAGE_CACHE_NAME,
   FONT_CACHE_NAME,
   JSON_CACHE_NAME,
-  SEARCH_CACHE_NAME,
 ];
 
 const CACHE_FIRST_FOR_EXPIRED = false;
@@ -67,10 +65,6 @@ const CACHE_SETTINGS = {
   [JSON_CACHE_NAME]: {
     maxAgeMinutes: 60 * 24, //expire json after one day
     //serveCacheFirst: true is default
-  },
-  [SEARCH_CACHE_NAME]: {
-    maxAgeMinutes: 60 * 24, //expire search after one day
-    serveNetworkFirst: true, //false would be the default
   },
   [IMAGE_CACHE_NAME]: {
     maxAgeMinutes: 60 * 24 * 10, //expire images after 10 days
@@ -261,8 +255,6 @@ function getCacheNameForRequest(request) {
   let url = new URL(request.url);
   if (isHtmlRequest(request)) {
     return RUNTIME_CACHE_NAME;
-  } else if (/\/api\/search.*/i.test(url.pathname)) {
-    return SEARCH_CACHE_NAME;
   } else if (/\/.*\.(json|(web)?manifest)$/i.test(url.pathname)) {
     return JSON_CACHE_NAME;
   } else if (/\.js$/i.test(url.pathname)) {
