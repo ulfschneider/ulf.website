@@ -30,8 +30,8 @@ module.exports = {
   allowWebmentions: false,
   buildTime: new Date(),
   images: {
-    widths: [400, 900, 1280, "auto"],
-    formats: ["webp", "auto"],
+    widths: [400, 900, 1280, null],
+    formats: ["webp", null],
     sizes: "100vw",
   },
   excerptWordCount: 25,
