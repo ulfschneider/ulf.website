@@ -108,17 +108,17 @@ permalink: "{{site.search.url}}"
     return `<strong class="mode-text-primary italic">${humanQuery()}</strong>`;
   }
 
-  function printResultCount(searchResults, resultSet) {
+  function printResultCount(searchResults, results) {
     let count = document.createElement("div");
     count.classList.add("legible-rem-width");
-    if (resultSet.length == 0) {
+    if (results.length == 0) {
       count.innerHTML =
         "Your search for " + humanHtmlQuery() + " did not return any results.";
-    } else if (resultSet.length == 1) {
+    } else if (results.length == 1) {
       count.innerHTML = "One result for " + humanHtmlQuery() + ":";
     } else {
       count.innerHTML =
-        resultSet.length + " results for " + humanHtmlQuery() + ":";
+        results.length + " results for " + humanHtmlQuery() + ":";
     }
     searchResults.append(count);
   }
@@ -134,7 +134,7 @@ permalink: "{{site.search.url}}"
     searchResults.innerHTML = "Searching " + humanHtmlQuery() + " ...";
   }
 
-  function printSearchResults(resultSet) {
+  function printSearchResults(results) {
     let searchResults = document.querySelector("#search-results");
     if (!searchResults) {
       console.error(
@@ -144,9 +144,9 @@ permalink: "{{site.search.url}}"
     }
     removeChildren(searchResults);
     printTitle();
-    printResultCount(searchResults, resultSet);
-    if (resultSet.length) {
-      for (let entry of resultSet) {
+    printResultCount(searchResults, results);
+    if (results.length) {
+      for (let entry of results) {
         printResultEntry(searchResults, entry);
       }
     }
@@ -178,7 +178,7 @@ permalink: "{{site.search.url}}"
 
   async function search() {
     try {
-      const resultSet = [];
+      const results = [];
       printSearching();
       let start = Date.now();
       query = getQueryParameterByName("query");
@@ -187,9 +187,7 @@ permalink: "{{site.search.url}}"
       const search = await pagefind.search(query);
       const promiseCollector = [];
       for (const entry of search.results) {
-        promiseCollector.push(
-          entry.data().then((data) => resultSet.push(data))
-        );
+        promiseCollector.push(entry.data().then((data) => results.push(data)));
       }
       await Promise.allSettled(promiseCollector);
 
@@ -199,13 +197,13 @@ permalink: "{{site.search.url}}"
         "The search for [" +
           humanQuery() +
           "] returned " +
-          resultSet.length +
+          results.length +
           " results within " +
           (duration / 1000).toFixed(2) +
           " seconds"
       );
 
-      printSearchResults(resultSet);
+      printSearchResults(results);
     } catch (error) {
       printError(error);
     }

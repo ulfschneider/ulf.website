@@ -10,7 +10,8 @@
   </head>
 
   {%- if nosearch == nil and draft == nil -%} {%assign search_attribute =
-  'data-pagefind-body' %}{%- endif -%}
+  'data-pagefind-body' %} {%- else -%} {%assign search_attribute =
+  'data-pagefind-ignore="all"' %} {%- endif -%}
   <body class="break-words px-ryt" {{search_attribute}}>
     {% include "header.html" %}
     <main id="main" class="indent max-w-rg mx-auto">

@@ -96,7 +96,7 @@
       }
 
       function registerEvents() {
-        let searchForm = document.querySelector("#search-form");
+        const searchForm = document.querySelector("#search-form");
         searchForm.addEventListener("submit", submitQuery);
 
         addEventListener("DOMContentLoaded", (event) => {
@@ -107,6 +107,8 @@
             onSelect: openPage,
           });
         });
+        const searchField = document.querySelector("#search-query");
+        searchField.addEventListener("focus", initPagefind);
       }
 
       setQueryValue();
