@@ -366,7 +366,7 @@ AutoComplete = (function () {
       for (element of elements) {
         prepareElement({
           element: element,
-          queryData: debounce(queryData, 300),
+          queryData: debounce(queryData, 200),
           data: [],
           threshold: threshold,
           onSelect: onSelect,
