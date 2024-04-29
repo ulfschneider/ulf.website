@@ -1,6 +1,8 @@
 ---
 title: Strasbourg St. Denis
-tags: journal
+tags: 
+  - journal
+  - video
 ---
 This is  a truly masterful Jazz performance. As one of the commenters states: <q>This performance should be declared as a Jazz World Cultural Heritage.</q> Roy Hargrove, Justin Robinson, Gerald Clayton, Montez Coleman, and Danton Boller, playing Strasbourg / St. Denis. Five top performers entering the flow-state.
 
