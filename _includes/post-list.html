@@ -49,7 +49,7 @@ collections.liveContent | post -%} {%- endif -%}
         <a href="{{p.url}}">Read more</a>
       </p>
       {% endif %}
-      <aside class="{{p.data.starred}} leading-normal my-ryt-xs">
+      <aside class="{{p.data.starred}} leading-normal">
         {% include "date-tags.html" posted: p.date tags: p.data.tags notags:
         p.data.notags %}
       </aside>
