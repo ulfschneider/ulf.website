@@ -32,7 +32,7 @@
       async function initPagefind() {
         try {
           if (!pagefind) {
-            pagefind = await import("{{site.pagefind}}");
+            pagefind = await import("{{site.pagefindUrl}}");
             pagefind.init();
           }
           return pagefind;

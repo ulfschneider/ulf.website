@@ -29,8 +29,8 @@ const replacements = [
     replace: utils.getTrimBase(),
   },
   {
-    search: "{{pagefind}}",
-    replace: site.pagefind,
+    search: "{{pagefindUrl}}",
+    replace: site.pagefindUrl,
   },
   {
     search: "{{scriptVersion}}",

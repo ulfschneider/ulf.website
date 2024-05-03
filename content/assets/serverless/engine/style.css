@@ -670,6 +670,9 @@ ol .task-list-item {
 
 .slide{
     clear: both;
+    overflow:auto;
 }
 
-
+img[src$=".svg"] {
+    min-height: 200px;
+}

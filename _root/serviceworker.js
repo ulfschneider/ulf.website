@@ -19,7 +19,7 @@ const PRE_CACHE_URLS = [
   OFFLINE_URL,
   "/",
   "/css/main-{{cssVersion}}.css",
-  "{{pagefind}}",
+  "{{pagefindUrl}}",
 ];
 
 const SCRIPT_CACHE_NAME = `${CACHE_NAME}-script-{{scriptVersion}}`;

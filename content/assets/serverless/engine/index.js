@@ -50355,10 +50355,14 @@
      .layout-grid > * > .videoWrapper:only-child,
      .layout-grid > * > img:only-child,
      .layout-grid > * > video:only-child,
+     .layout-grid > * > figure:only-child,
      .layout-caption > * > img:only-child,
+      .layout-caption > * > figure:only-child,
+     .layout-full-image > * > figure:only-child,
      .layout-caption > * > video:only-child,
      .layout-caption > * > .videoWrapper:only-child,
      .layout-v-split > * > img:only-child,
+     .layout-v-split > * > figure:only-child,
      .layout-v-split > * > video:only-child,
      .layout-v-split > * > .videoWrapper:only-child,
      .layout-h-split > * > img:only-child,
@@ -50373,12 +50377,13 @@
     });
     const images = document.querySelectorAll(`
     [class*="layout-"] > div > img,
+    [class*="layout-"] > div > figure,
     [class*="layout-"] > div > video,
-    [class*="layout-"] > :not(.videoWrapper) > img`);
+    [class*="layout-"] > :not(.videoWrapper):not(figure) > img`);
     var collection = [];
     images.forEach((image) => {
       collection.push(image);
-      if (!image.nextElementSibling || !image.nextElementSibling.matches("img")) {
+      if (!image.nextElementSibling || (!image.nextElementSibling.matches("img") && !image.nextElementSibling.matches("figure"))) {
         if (collection.length > 1) {
           const container = document.createElement("div");
           container.classList.add("layout-grid");
@@ -50389,6 +50394,7 @@
             container.appendChild(image2);
           });
         } else {
+            
           const container = document.createElement("div");
           container.classList.add("single-image-wrapper");
           collection[0].parentNode.insertBefore(container, collection[0]);
@@ -50399,6 +50405,7 @@
           } else {
             container.appendChild(image);
           }
+            
         }
         collection = [];
       }

@@ -833,12 +833,13 @@ img+p, p+img, p.image-grid  {margin: 1em 0 !important;}
   max-width: 50% !important;
   max-height: 100% !important;
   object-fit: cover !important; 
-  margin-right: 1em !important;}
+  margin-right: 1em !important;
+}
 
-
-    div.slide {margin: 0;
-    padding: 0;
-  float: left;}
+div.slide {
+  margin: 0;
+  padding: 0;
+}
 
   .two-rows { 
     grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) !important;

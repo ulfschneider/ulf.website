@@ -164,6 +164,7 @@ module.exports = {
   gallery: BASE + "images/",
   rss: BASE + "feed.xml",
   output: process.env.OUTPUT ? process.env.OUTPUT : "_site",
-  pagefind: BASE + "pagefind/pagefind.js",
+  pagefindFolder: "pagefind",
+  pagefindUrl: BASE + "pagefind/pagefind.js",
   input: process.env.INPUT ? process.env.INPUT : "content",
 };
