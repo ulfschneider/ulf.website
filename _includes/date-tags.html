@@ -4,7 +4,7 @@ and nodate == nil %} {%- assign updated = modifiedDate -%} {%- endif -%} {%- if
 tags and notags == nil -%} {%- assign tags = tags -%} {%- else -%} {%- assign
 tags = nil -%} {%- endif -%} {%- if posted != nil or updated != nil or tags !=
 nil -%}
-<div class="text-sm" data-pagefind-ignore>
+<div data-pagefind-ignore>
   {% if posted != nil %}
   <time
     datetime="{{posted | isoDate}}"
@@ -27,7 +27,7 @@ nil -%}
   <ul class="inline reset">
     {% for tag in sortedTags %} {% if tag == site.starTag %}
     <li class="inline mr-ryt last:mr-0">
-      <a href="{{tag | tagUrl}}" class="no-underline text-base px-ryt-2xs"
+      <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs"
         >{{ site.starTagSymbol }}</a
       >
     </li>
