@@ -40,16 +40,16 @@ collections.liveContent | post -%} {%- endif -%}
         <a class="no-underline" href="{{p.url}}"> {{ p.data.title }} </a>
       </h2>
       {% endif %} {%- if p.data.abstract -%}
-      <p class="my-0 leading-normal">{{p.data.abstract}}</p>
+      <p class="my-ryt-xs leading-normal">{{p.data.abstract}}</p>
       {%- endif -%} {%- if p.data.title == "" or p.data.title == nil or
       p.data.title == "notitle" or p.data.notitle != nil -%}
-      <p class="my-0 leading-normal">
+      <p class="my-ryt-xs leading-normal">
         {{ p.templateContent | strip_html | strip | truncatewords: 25 , "&nbsp;…
         " }}
         <a href="{{p.url}}">Read more</a>
       </p>
       {% endif %}
-      <aside class="{{p.data.starred}} leading-normal">
+      <aside class="{{p.data.starred}} leading-normal my-ryt-xs text-sm">
         {% include "date-tags.html" posted: p.date tags: p.data.tags notags:
         p.data.notags %}
       </aside>
