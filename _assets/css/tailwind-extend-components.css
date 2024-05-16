@@ -47,7 +47,7 @@
 
     &::before {
       content: "Contents";
-      @apply block text-sm;
+      @apply block text-sm md:outdent-language;
     }
 
     a {
@@ -111,7 +111,7 @@
     margin-left: calc(-1 * (theme(screens.lg) - theme(screens.rg)) / 2);
     width: calc((theme(screens.lg) - theme(screens.rg)) / 2);
 
-    @apply text-right inline-block pr-ryt-lg border-none;
+    @apply text-right pr-ryt-lg border-none absolute;
   }
 
   /* PrismJS 1.29.0*/
