@@ -107,13 +107,18 @@
     grid-template-rows: masonry;
   }
 
+  .outdent-language {
+    margin-left: calc(-1 * (theme(screens.lg) - theme(screens.rg)) / 2);
+    width: calc((theme(screens.lg) - theme(screens.rg)) / 2);
+
+    @apply text-right inline-block pr-ryt-lg border-none;
+  }
+
   /* PrismJS 1.29.0*/
   pre[data-language] {
-    @apply mt-ryt-xl;
     &::before {
       content: attr(data-language);
-      @apply font-body text-sm absolute px-ryt-2xs text-white bg-write-dark dark:text-write-dark dark:bg-write-light;
-      margin-top: calc(-1 * (theme(spacing.ryt) + theme(spacing.ryt-sm)));
+      @apply italic text-sm block md:outdent-language border-b max-w-rg;
     }
   }
 
