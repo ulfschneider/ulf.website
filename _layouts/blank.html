@@ -13,7 +13,7 @@
   'data-pagefind-body' %} {%- else -%} {%assign search_attribute =
   'data-pagefind-ignore="all"' %} {%- endif -%}
   <body class="p-hr blank break-word outdent" {{search_attribute}}>
-    <main id="main" {% if outline == true %}class="indent outline"{% else %}class="indent"{% endif %}>
+    <main id="main" {% if outline == true %}class="outline"{% endif %}>
       {{ content }}
     </main>
   </body>
