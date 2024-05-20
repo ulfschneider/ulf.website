@@ -4,10 +4,9 @@ tags: code
 ---
 Single-page transitions have been around for a while. Now cross-document view transitions (aka multi-page view transitions) arrived in Chrome and Edge 126, which means you can
 
-- animate the transition from one page to another
-- on the same origin (all pages must have the same scheme, hostname, and port, like: https://example.org:443)^[[goo.gle/same-origin](https://goo.gle/same-origin)].
+> animate the transition from one page to another on the same origin (all pages must have the same scheme, hostname, and port, like: https://example.org:443)^[[goo.gle/same-origin](https://goo.gle/same-origin)].
 
-Bramus Van Damme shows [<cite>What´s new in view transitions?</cite>](https://developer.chrome.com/blog/view-transitions-update-io24) 
+Bramus Van Damme provides an overview in his article [<cite>What´s new in view transitions?</cite>](https://developer.chrome.com/blog/view-transitions-update-io24) on developer.chrome.com.
 
 To play with it you have to enable a feature flag in Chrome with `chrome://flags/#view-transition-on-navigation`. 
 
