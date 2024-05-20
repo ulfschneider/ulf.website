@@ -111,14 +111,14 @@
     margin-left: calc(-1 * (theme(screens.lg) - theme(screens.rg)) / 2);
     width: calc((theme(screens.lg) - theme(screens.rg)) / 2);
 
-    @apply text-right pr-ryt-lg border-none inline-block align-baseline;
+    @apply text-right pr-ryt-lg inline-block align-baseline;
   }
 
   /* PrismJS 1.29.0*/
   pre[data-language] {
     &::before {
       content: attr(data-language);
-      @apply italic text-sm block md:outdent-short-text border-b max-w-rg;
+      @apply uppercase font-mono text-sm block md:outdent-short-text max-md:mb-ryt-sm;
     }
   }
 
