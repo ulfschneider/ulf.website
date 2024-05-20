@@ -38,7 +38,7 @@ To try out a simple thing, a smooth fade effect from page to the other with just
 }
 ```
 
-The ==meta tag==
+That´s all. The ==meta tag==
 
 ```html
 <meta name="view-transition" content="same-origin" />
