@@ -10,6 +10,27 @@
     margin: 0;
   }
 
+  @view-transition {
+    navigation: auto; /* required to enable cross-document view transitions*/
+  }
+
+  ::view-transition-old(main) {
+    animation: fade 0.2s linear forwards;
+  }
+
+  ::view-transition-new(main) {
+    animation: fade 0.4s linear reverse;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
   html {
     height: 100%;
     scroll-behavior: smooth;
