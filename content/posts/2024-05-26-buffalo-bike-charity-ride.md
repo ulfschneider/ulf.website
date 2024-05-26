@@ -18,7 +18,7 @@ Today bike riders from the Paderborn Rotary Club started into a charity ride to 
 <figcaption>The star ride to Prag, source <a href="https://rotary.de/panorama/sternfahrt-nach-prag-a-23593.html">Rotary</a></figcaption>
 </figure>
 
-The cycling clubs from Paderborn, Borchen, Schloß Neuhaus and Rietberg met today at 9 AM in Paderborn to join the Rotary riders and provide them a slipstream for their first kilometers. We rode together to Warburg, then the Rotary riders had to ride alone and the cycling clubs returned to their homes. For us, who are not heading to Prag, it was a beautiful 120k ride, enjoying the beautiful weather and our company. The Rotary riders still have an epic ride in front of them. Best of luck for you! Stay healthy and have no accidents!
+The cycling clubs from Paderborn, Borchen, Schloß Neuhaus and Rietberg met today at 9 AM in Paderborn to join the Rotary riders and provide them a slipstream for their first kilometers. We rode together to Warburg, then the Rotary riders had to ride alone and the cycling clubs returned to their homes. For us, who are not heading to Prag, it was a beautiful 120k ride. We were enjoying the beautiful weather and our company. The Rotary riders still have an epic ride in front of them. Best of luck for you! Stay healthy and have no accidents!
 
 
 
