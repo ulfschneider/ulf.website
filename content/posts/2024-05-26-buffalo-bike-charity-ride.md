@@ -5,7 +5,7 @@ tags:
   - sports
   - video
 ---
-The Buffalo Bike is designed with the purpose to mobilize people who otherwise would have to walk long miles each day just to survive. The walking distance becomes a barrier to attending school, receiving healthcare, delivering goods to market and other critical services needed to thrive. Visit [World Bicycle Relief](https://worldbicyclerelief.org) to see how the Buffalo Bike is helping to improve this situation.
+The Buffalo Bike is designed with the purpose of mobilizing people who otherwise would have to walk long miles each day just to survive. The walking distance becomes a barrier to attending school, receiving healthcare, delivering goods to market and other critical services needed to thrive. Visit [World Bicycle Relief](https://worldbicyclerelief.org) to see how the Buffalo Bike is helping to improve this situation.
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgVxE2mtz80?si=psLzBSSOiUXhqWTV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><figcaption>The power of bicycles</figcaption>
