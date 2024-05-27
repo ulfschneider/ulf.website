@@ -20,6 +20,11 @@ Today bike riders from the Paderborn Rotary Club started into a charity ride to 
 
 The cycling clubs from Paderborn, Borchen, Schloß Neuhaus and Rietberg met today at 9 AM in Paderborn to join the Rotary riders and provide them a slipstream for their first kilometers. We rode together to Warburg, then the Rotary riders had to ride alone and the cycling clubs returned to their homes. For us, who are not heading to Prag, it was a beautiful 120k ride. We were enjoying the beautiful weather and our company. The Rotary riders still have an epic ride in front of them. Best of luck for you! Stay healthy and have no accidents!
 
+<figure>
+<img src="/img/journal/2024-05-26-slipstream-for-the-prag-ride.jpeg" alt="A group of riders in their dark blue Rad-Treff-Borchen jerseys standing with their bicycles in front of the Paderborn city hall">
+<figcaption>Prepare to start the ride at the Paderborn city hall<figcaption>
+</figure>
+
 
 
 
