@@ -25,6 +25,11 @@ The cycling clubs from Paderborn, Borchen, Schloß Neuhaus and Rietberg met toda
 <figcaption>Prepare to start the ride at the Paderborn city hall<figcaption>
 </figure>
 
+<figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yJkaTPUA21U?si=p9Fl3tUN3oxvbdub" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>Impressions of the ride from Paderborn to Warburg</figcaption>
+</fitgure>
+
 
 
 
