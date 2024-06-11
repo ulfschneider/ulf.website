@@ -96,17 +96,17 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display text-balance break-after-avoid font-bold leading-snug tracking-normal text-xl sm:text-2xl;
+    @apply font-display rg:text-balance break-after-avoid font-bold leading-snug tracking-normal text-xl sm:text-2xl;
   }
 
   h2,
   .h2 {
-    @apply font-display mt-ryt-2xl mb-ryt text-balance break-after-avoid font-normal leading-snug tracking-normal text-lg;
+    @apply font-display mt-ryt-2xl mb-ryt rg:text-balance break-after-avoid font-normal leading-snug tracking-normal text-lg;
   }
 
   h3,
   .h3 {
-    @apply font-display mt-ryt-xl mb-ryt text-balance break-after-avoid font-bold leading-snug tracking-normal text-base;
+    @apply font-display mt-ryt-xl mb-ryt rg:text-balance break-after-avoid font-bold leading-snug tracking-normal text-base;
   }
 
   h4,
@@ -115,11 +115,11 @@
   .h4,
   .h5,
   .h6 {
-    @apply font-display mt-ryt-xl mb-ryt-lg text-balance break-after-avoid text-base font-bold leading-snug tracking-normal;
+    @apply font-display mt-ryt-xl mb-ryt-lg rg:text-balance break-after-avoid text-base font-bold leading-snug tracking-normal;
   }
 
   details > summary {
-    @apply hover:mode-text-primary text-balance cursor-pointer;
+    @apply hover:mode-text-primary rg:text-balance cursor-pointer;
   }
 
   /* typography */
@@ -139,7 +139,7 @@
   }
 
   dt {
-    @apply text-balance font-bold;
+    @apply rg:text-balance font-bold;
   }
 
   dd {
@@ -292,7 +292,7 @@
     @apply my-ryt-xl;
 
     figcaption {
-      @apply max-w-rg my-ryt-sm text-balance font-mono text-sm;
+      @apply max-w-rg my-ryt-sm rg:text-balance font-mono text-sm;
     }
   }
 
@@ -313,12 +313,12 @@
 
   blockquote {
     padding-left: calc(theme(spacing.ryt-lg) - theme(borderWidth.2));
-    @apply my-ryt-xl text-balance indent border-l-2 border-l-current;
+    @apply my-ryt-xl rg:text-balance indent border-l-2 border-l-current;
   }
 
   blockquote > header,
   blockquote > footer {
-    @apply my-ryt-sm text-balance font-mono text-sm;
+    @apply my-ryt-sm rg:text-balance font-mono text-sm;
 
     &::before {
       content: "—";
