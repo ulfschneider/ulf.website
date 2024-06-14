@@ -4,8 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- treat the tag symbol, must be before setting the title -->
-{% if tag == site.starTag %} {% assign adaptedTag = site.starTagSymbol %} {%
-elsif pagedItems.tag == site.starTag %} {% assign adaptedTag =
+{% if tag == site.starTag %} {% assign adaptedTag = site.starTagSymbol %}
+{%elsif pagedItems.tag == site.starTag %} {% assign adaptedTag =
 site.starTagSymbol %} {% elsif tag != nil and tag != "" %} {% assign adaptedTag
 = tag %} {%else%} {% assign adaptedTag = pagedItems.tag %} {%endif%}
 <!-- title and description -->
@@ -64,6 +64,7 @@ assign adaptedTitle = site.name -%} {%- endif -%}
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-store, max-age=0" />
 <meta name="color-scheme" content="light dark" />
+
 {%- if site.dark_theme_color -%}
 <meta
   name="theme-color"
@@ -89,6 +90,8 @@ assign adaptedTitle = site.name -%} {%- endif -%}
   type="application/atom+xml"
 />
 
+{% assign firstImage = content | firstImage %}
+
 <!-- Open Graph -->
 <meta property="og:title" content="{{adaptedTitle}}" />
 <meta property="og:url" content="{{site.origin}}{{page.url}}" />
@@ -98,34 +101,41 @@ assign adaptedTitle = site.name -%} {%- endif -%}
   property="og:description"
   content="{{abstract | strip_html | escapeHtmlQuotes }}"
 />
-{%- endif -%}
+{%- endif -%} {% if firstImage.src %}
+<meta property="og:image" content="{{site.origin}}{{firstImage.src}}" />
+{% else %}
 <meta property="og:image" content="{{site.origin}}{{site.open_graph_image}}" />
+{% endif %}
+
 <!-- Email -->
 {%- if site.ownership.email -%}
 <link rel="me" href="mailto:{{site.ownership.email}}" />
 {%- endif -%}
+
 <!-- Mastodon -->
 {%- if site.ownership.mastodon.profile -%}
 <link rel="me" href="{{site.ownership.mastodon.profile}}" />
 {%- endif -%}
+
 <!-- GitHub -->
 {%- if site.ownership.github.profile -%}
 <link rel="me" href="{{site.ownership.github.profile}}" />
 {%- endif -%}
+
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" /> {%- if
 site.ownership.twitter.user -%}
 <meta name="twitter:site" content="{{site.ownership.twitter.user}}" />
 <meta name="twitter:creator" content="{{site.ownership.twitter.user}}" />
 {%- endif -%} {%- if firstImage.src -%}
-<meta name="twitter:image" content="{{site.origin}}{{firstImage.src}}" />{%-
-else -%}
+<meta name="twitter:image" content="{{site.origin}}{{firstImage.src}}" />
+{%- else -%}
 <meta name="twitter:image" content="{{site.origin}}{{site.open_graph_image}}" />
 {%- endif -%}
+
 <!-- Webmentions -->
 <link
   rel="webmention"
   href="https://webmention.io/{{site.domain}}/webmention"
 />
 <link rel="pingback" href="https://webmention.io/{{site.domain}}/xmlrpc" />
-<!-- scripts -->

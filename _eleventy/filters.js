@@ -109,49 +109,55 @@ module.exports = {
     return tags;
   },
 
-  firstImage: function (collection, url) {
-    let result = [];
-    for (let item of collection) {
-      if (!url || (url && url == item.url)) {
-        let src;
-        let alt;
-        if (item.data.hero) {
-          src = item.data.hero;
-          if (item.data.heroalt) {
-            alt = utils.removeHtml(item.data.heroalt);
-          } else if (item.data.herocaption) {
-            alt = utils.removeHtml(item.data.herocaption);
-          }
-        } else {
-          let img = utils.firstImageTag(item.templateContent);
-          if (img) {
-            src = utils.srcAttr(img);
-            alt = utils.altAttr(img);
-          }
+  firstImage: function (content) {
+    function getFirstImageFromItem(content, data) {
+      let src;
+      let alt;
+      if (data?.hero) {
+        src = data.hero;
+        if (data.heroalt) {
+          alt = utils.removeHtml(data.heroalt);
+        } else if (data.herocaption) {
+          alt = utils.removeHtml(data.herocaption);
         }
-        if (src) {
-          let imgData = {
-            src: src,
-            alt: alt,
-            url: item.url,
-            title: item.data.title,
-            starred: item.data.starred,
-            date: item.date,
-            humanDate: utils.humanDate(item.date),
-          };
-
-          if (url) {
-            return imgData;
-          } else {
-            result.push(imgData);
-          }
+      } else {
+        let img = utils.firstImageTag(content);
+        if (img) {
+          src = utils.srcAttr(img);
+          alt = utils.altAttr(img);
         }
       }
+      if (src) {
+        let imgData = {
+          src: src,
+          alt: alt,
+          url: data.url,
+          title: data.title,
+          starred: data.starred,
+          date: data.date,
+          humanDate: utils.humanDate(data.date),
+        };
+
+        return imgData;
+      }
     }
-    if (url) {
-      return {};
-    } else {
+
+    if (!(typeof content == "string") && content?.[Symbol.iterator]) {
+      //we are working on a collection
+      const result = [];
+      for (let item of content) {
+        const image = getFirstImageFromItem(item.templateContent, item.data);
+        if (image) {
+          result.push(image);
+        }
+      }
       return result;
+    } else if (typeof content == "string") {
+      //we are working on a single page
+      //when registering this function as a filter,
+      //the page is available via this.page
+      const image = getFirstImageFromItem(content, this.page);
+      return image || {};
     }
   },
 
