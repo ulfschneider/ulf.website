@@ -45,7 +45,7 @@ permalink: "{{site.search.url}}"
         article.appendChild(title);
 
         let linkToArticle = document.createElement("a");
-        linkToArticle.classList = "no-underline";
+        linkToArticle.classList = "no-underline inline-block";
         linkToArticle.href = entry.url;
         linkToArticle.innerHTML = entry.meta.title;
         title.appendChild(linkToArticle);

@@ -86,7 +86,7 @@
 
   /* links */
   a {
-    @apply underline;
+    @apply underline hover:underline;
   }
   a:hover,
   a:active {

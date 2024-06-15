@@ -9,35 +9,43 @@
     {%- if site.navNewest.label -%} {{ site.navNewest.label }} {%- else
     -%}Newest{%- endif -%}
   </a>
-  <a
-    id="{{site.navNewer.id}}"
-    class="whitespace-nowrap block no-underline"
-    href="{{pagedItems.newer}}"
-  >
-    <span class="underline">
-      {%- if site.navNewer.label -%} {{ site.navNewer.label }} {%- else -%}Newer
-      posts{%- endif -%}
-    </span>
+  <span class="flex flex-row gap-ryt-sm">
+    <a
+      id="{{site.navNewer.id}}"
+      class="whitespace-nowrap block no-underline"
+      href="{{pagedItems.newer}}"
+    >
+      <span class="underline">
+        {%- if site.navNewer.label -%} {{ site.navNewer.label }} {%- else
+        -%}Newer posts{%- endif -%}
+      </span>
+    </a>
     {% if site.navNewer.kbd %}
-    <kbd>{{ site.navNewer.kbd }}</kbd>
+    <span>
+      <kbd>{{ site.navNewer.kbd }}</kbd>
+    </span>
     {% endif %}
-  </a>
+  </span>
   {%- endif -%}
   <!-- -->
   {%- if pagedItems.older != "" and pagedItems.older != nil -%}
-  <a
-    id="{{site.navOlder.id}}"
-    class="whitespace-nowrap no-underline block"
-    href="{{pagedItems.older}}"
-  >
-    <span class="underline">
-      {%- if site.navOlder.label -%} {{ site.navOlder.label }} {%- else -%}Older
-      posts{%- endif -%}
-    </span>
+  <span class="flex flex-row gap-ryt-sm">
+    <a
+      id="{{site.navOlder.id}}"
+      class="whitespace-nowrap no-underline block"
+      href="{{pagedItems.older}}"
+    >
+      <span class="underline">
+        {%- if site.navOlder.label -%} {{ site.navOlder.label }} {%- else
+        -%}Older posts{%- endif -%}
+      </span>
+    </a>
     {% if site.navOlder.kbd %}
-    <kbd>{{ site.navOlder.kbd }}</kbd>
+    <span>
+      <kbd>{{ site.navOlder.kbd }}</kbd>
+    </span>
     {% endif %}
-  </a>
+  </span>
   {%- endif -%}
 </nav>
 {%- endif -%}
