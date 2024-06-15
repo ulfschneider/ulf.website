@@ -146,7 +146,10 @@ module.exports = {
       //we are working on a collection
       const result = [];
       for (let item of content) {
-        const image = getFirstImageFromItem(item.templateContent, item.data);
+        const image = getFirstImageFromItem(
+          item.templateContent,
+          Object.assign({}, item.data, { url: item.url })
+        );
         if (image) {
           result.push(image);
         }
