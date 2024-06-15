@@ -108,7 +108,7 @@ ogImage = site.origin | append: firstImage.src %} {% endif %} {% if hero
 contains '.jpg' or hero contains '.jpeg' or hero contains '.png' %} {% assign
 ogImage = site.origin | append: hero %} {% endif %} {% if ogImage %}
 <meta property="og:image" content="{{ogImage}}" />
-{% endif %} {% if firstImage.src contains '.jpeg' %} contains jpeg {% endif %}
+{% endif %}
 
 <!-- Email -->
 {%- if site.ownership.email -%}
