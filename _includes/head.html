@@ -91,7 +91,7 @@ assign adaptedTitle = site.name -%} {%- endif -%}
 />
 
 <!-- Open Graph -->
-{% assign firstImage = content | firstImage %}
+
 <meta property="og:title" content="{{adaptedTitle}}" />
 <meta property="og:url" content="{{site.origin}}{{page.url}}" />
 <meta property="og:type" content="website" />
@@ -100,13 +100,15 @@ assign adaptedTitle = site.name -%} {%- endif -%}
   property="og:description"
   content="{{abstract | strip_html | escapeHtmlQuotes }}"
 />
-{%- endif -%} {% if hero %}
-<meta property="og:image" content="{{site.origin}}{{hero}}" />
-{% elsif firstImage.src %}
-<meta property="og:image" content="{{site.origin}}{{firstImage.src}}" />
-{% else %}
-<meta property="og:image" content="{{site.origin}}{{site.open_graph_image}}" />
-{% endif %}
+{%- endif -%} {% assign firstImage = content | firstImage %} {% if
+site.open_graph_image %} {% assign ogImage = site.origin | append:
+site.open_graph_image %} {% endif %} {% if firstImage.src contains '.jpg' or
+firstImage.src contains '.jpeg' or firstImage.src contains '.png' %} {% assign
+ogImage = site.origin | append: firstImage.src %} {% endif %} {% if hero
+contains '.jpg' or hero contains '.jpeg' or hero contains '.png' %} {% assign
+ogImage = site.origin | append: hero %} {% endif %} {% if ogImage %}
+<meta property="og:image" content="{{ogImage}}" />
+{% endif %} {% if firstImage.src contains '.jpeg' %} contains jpeg {% endif %}
 
 <!-- Email -->
 {%- if site.ownership.email -%}
