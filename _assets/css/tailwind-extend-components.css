@@ -207,10 +207,7 @@
 
   ol.footnotes-list li::before {
     content: counter(footnote-counter);
-    font-size: 75%;
-    line-height: 0;
-    top: -0.5em;
-    @apply relative normal-nums font-normal;
+    @apply normal-nums font-normal;
   }
 
   ol.footnotes-list li > p {
