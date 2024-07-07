@@ -70,7 +70,7 @@
 
   @media (min-width: theme(screens.rg)) {
     .hero,
-    .bleed {
+    .hero-layout {
       margin-left: var(--bleed);
       margin-right: var(--bleed);
 
@@ -79,11 +79,11 @@
       }
     }
     .herol,
-    .bleedl {
+    .herol-layout {
       margin-left: var(--bleed);
     }
     .heror,
-    .bleedr {
+    .heror-layout {
       margin-right: var(--bleed);
     }
   }

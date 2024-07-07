@@ -231,9 +231,7 @@
     @apply object-contain object-left dark:brightness-90 dark:contrast-125 dark:filter;
   }
 
-  img:not(.hero img):not(.heror img):not(.herol img):not(.bleed img):not(
-      .bleedl img
-    ):not(.bleedr img) {
+  img:not(.hero img):not(.heror img):not(.herol img) {
     @media (min-width: theme(screens.sm)) {
       max-height: 80vh;
     }
