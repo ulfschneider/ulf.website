@@ -10,7 +10,7 @@ Under ideal weather conditions for this weekend, the [Rad-Treff Borchen](https:/
 The preparation for such an event is shared among many people, and my task was to signpost a section of the 108 km route on the Friday before the event. 
 
 <figure>
-<iframe src="https://www.komoot.com/de-de/tour/1483549485/embed?share_token=ate6ItleRV8M5QIDycTyNYxVI1LzuKWKIdGSHFMWXxMQjIQPcU&profile=1" height="900" width="700" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://www.komoot.com/de-de/tour/1483549485/embed?share_token=ate6ItleRV8M5QIDycTyNYxVI1LzuKWKIdGSHFMWXxMQjIQPcU&profile=1" height="1000" width="500" frameborder="0" scrolling="no"></iframe>
 <figcaption>Rad-Treff Borchen – RTF "Through the Hochstift Paderborn" 108 km</figcaption>
 </figure>
 
