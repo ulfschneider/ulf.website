@@ -13,4 +13,4 @@ I'm pleased to learn there are [<cite>New JavaScript Set methods</cite>](https:/
 > `isSubsetOf()` returns a boolean indicating if all elements of a set are in a specific set.
 > `isSupersetOf()` returns a boolean indicating if all elements of a set are in a specific set.
 > `isDisjointFrom()` returns a boolean indicating if this set has no elements in common with a specific set.
-> <footer><a href="https://developer.mozilla.org/en-US/blog/javascript-set-methods/">New JavaScript Set methods<cite></cite></a>, Brian Smith, MDN</footer>
+> <footer><a href="https://developer.mozilla.org/en-US/blog/javascript-set-methods/"><cite>New JavaScript Set methods</cite></a>, Brian Smith, MDN</footer>
