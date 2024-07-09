@@ -34,6 +34,11 @@
     @apply mode-outline-primary outline-8 outline-offset-2 outline;
   }
 
+  /* masonry layout */
+  .grid-masonry {
+    grid-template-rows: masonry;
+  }
+
   /* split */
   .split {
     grid-template-columns: repeat(2, 1fr);

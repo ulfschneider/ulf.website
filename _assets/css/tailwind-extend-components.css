@@ -100,12 +100,6 @@
     @apply px-ryt-xs py-ryt-2xs  bg-primary text-white whitespace-nowrap;
   }
 
-  /* gallery */
-  .gallery {
-    @apply grid gap-x-ryt-xl gap-y-ryt-lg mt-ryt-2xl mb-ryt-xl hero-layout max-sm:grid-cols-1 max-rg:grid-cols-2 grid-cols-3;
-    grid-template-rows: masonry;
-  }
-
   .outdent-short-text {
     margin-left: calc(-1 * (theme(screens.lg) - theme(screens.rg)) / 2);
     width: calc((theme(screens.lg) - theme(screens.rg)) / 2);

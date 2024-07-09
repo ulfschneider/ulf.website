@@ -16,7 +16,9 @@ nodate: true
   {%- endif -%}
 </div>
 
-<div class="gallery">
+<div
+  class="grid grid-masonry gap-ryt-2xl mt-ryt-2xl mb-ryt-xl hero-layout max-sm:grid-cols-1 max-rg:grid-cols-2 grid-cols-3"
+>
   {%- if tag != nil -%} {% assign imageData = collections[tag] | live | post |
   reverse | firstImage %} {%- else -%} {% assign imageData =
   collections.liveContent | post | reverse | firstImage %} {%- endif %}
