@@ -39,5 +39,6 @@ The following alerts are available: [!NOTE] [!TIP] [!IMPORTANT] [!WARNING] [!CAU
 > [!CAUTION]
 > Negative potential consequences of an action.
 
+I found this works well for a webpage, where you have full control of your styling, but in case your content is delivered through a RSS feed (it *should*), the resulting formatting is not ideal. E.g. there is no space between the icon and the title, the color of the icon does not adapt to the text color, and the rendering as a paragraph might not help for reading, a blockquote would be better in my view for this case.
 
 
