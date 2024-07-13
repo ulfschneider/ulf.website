@@ -47,7 +47,7 @@
 
     &::before {
       content: "Contents";
-      @apply block text-sm md:outdent-short-text md:absolute;
+      @apply text-sm md:outdent-short-text;
     }
 
     a {
@@ -104,7 +104,7 @@
     margin-left: calc(-1 * (theme(screens.lg) - theme(screens.rg)) / 2);
     width: calc((theme(screens.lg) - theme(screens.rg)) / 2);
 
-    @apply text-right pr-ryt-lg inline-block align-baseline;
+    @apply text-right pr-ryt-lg inline-block align-baseline sticky top-ryt;
   }
 
   /* PrismJS 1.29.0*/
