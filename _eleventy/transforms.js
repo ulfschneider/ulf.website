@@ -1,4 +1,4 @@
-const path = require("node:path");
+const path = require("path");
 const Image = require("@11ty/eleventy-img");
 const site = require("../_data/site.js");
 const utils = require("../_eleventy/utils.js");

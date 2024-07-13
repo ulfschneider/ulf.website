@@ -48,7 +48,7 @@ module.exports = {
 
   getAttr: function (html, attr) {
     if (html) {
-      const match = html.match(new RegExp(`${attr}="(.*?)"`));
+      const match = html.match(new RegExp(`${attr}="(.*?)"`, "i"));
       if (match) {
         return match[1];
       }
