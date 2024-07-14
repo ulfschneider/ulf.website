@@ -5,5 +5,5 @@ The Tour de France is going into the final week and the ARD television broadcast
 
 <figure>
 <img src="/img/emil-drawing/trikot-design-emil-schneider.jpg" alt="">
-<figcaption>The Tour jersey with rainbow colors and the rider´s initial name letter on the left sleeve.</figcaption>
+<figcaption>The Tour jersey with rainbow colors and the rider´s name initial letter on the left sleeve.</figcaption>
 </figure>
