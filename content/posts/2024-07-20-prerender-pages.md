@@ -19,7 +19,7 @@ As a web developer, you can insert a JSON configuration in your web pages to def
 </script>
 ```
 
-This configuration tells Chromium browsers to prerender any page with *moderate eagerness*. It´s a progressive enhancement, which means it´s not breaking anything for the browsers not supporting the configuration currently.
+This configuration tells Chromium browsers to prerender any page with *moderate eagerness*. It´s a progressive enhancement, which means it´s not breaking anything for the browsers not supporting the configuration.
 
 > The moderate option is a middle ground, and many sites could benefit from the following speculation rule that would prerender a link when holding the pointer over the link for 200 milliseconds (or on the pointerdown event if that is sooner, and on mobile where there is no hover event) as a basic—yet powerful—implementation of speculation rules.
 > <footer><a href="https://developer.chrome.com/docs/web-platform/prerender-pages"><cite>Prerender pages in Chrome for instant page navigations</cite></a>, Barry Pollard on developer.chrome.com</footer>
