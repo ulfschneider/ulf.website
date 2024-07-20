@@ -46,7 +46,7 @@ Speculation Rules can be analyzed in the DevTools pane, you will find it for Chr
 
 You can do *much more* with Speculation Rules, for example change eagerness and define with selectors what links to prerender (or prefetch, which is less than prerendering). To dive deeper, refer to:
 
-- [<cite>Prerender pages in Chrome for instant page navigations</cite>](https://developer.chrome.com/docs/web-platform/prerender-pages) by Barry Pollard on developer.chrome.com
+- [<cite>Prerender pages in Chrome for instant page navigations</cite>](https://developer.chrome.com/docs/web-platform/prerender-pages), by Barry Pollard on developer.chrome.com
 - [<cite>Playing with the Speculation Rules API in the Console</cite>](https://frontendmasters.com/blog/playing-with-the-speculation-rules-api-in-the-console/), by Stoyan Stefanov on frontendmasters.com
 - [<cite>Speculation Rules API</cite>](https://github.com/WICG/nav-speculation/blob/main/triggers.md#speculation-rules)
 
