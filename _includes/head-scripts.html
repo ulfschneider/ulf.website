@@ -1,3 +1,17 @@
+<!-- speculation rules for prerendering -->
+<script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "href_matches": "/*"
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+</script>
+
 <script>
   addEventListener("keydown", (event) => {
     let focus = document.querySelector(":focus");
