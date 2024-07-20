@@ -24,7 +24,7 @@ This configuration tells Chromium browsers to prerender any page with *moderate 
 > The moderate option is a middle ground, and many sites could benefit from the following speculation rule that would prerender a link when holding the pointer over the link for 200 milliseconds (or on the pointerdown event if that is sooner, and on mobile where there is no hover event) as a basic—yet powerful—implementation of speculation rules.
 > <footer><a href="https://developer.chrome.com/docs/web-platform/prerender-pages"><cite>Prerender pages in Chrome for instant page navigations</cite></a>, Barry Pollard on developer.chrome.com</footer>
 
-Because prerendering has an impact on bandwith and memory consumption, it should not be overused. The moderate eagerness will automatically limit you to 2 prerendered pages and work First In, First Out, which means <q>after reaching the limit, a new speculation will cause the oldest speculation to be canceled and replaced by the newer one to conserve memory.</q>
+Because prerendering has an impact on bandwith and memory consumption, it should not be overused. The moderate eagerness will automatically limit you to 2 prerendered pages and works First In, First Out, which means <q>after reaching the limit, a new speculation will cause the oldest speculation to be canceled and replaced by the newer one to conserve memory.</q>
 
 > Chrome will also prevent speculations being used in certain conditions including:
 > - Save-Data.
