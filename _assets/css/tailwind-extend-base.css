@@ -311,7 +311,7 @@
 
   blockquote {
     padding-left: calc(theme(spacing.ryt-lg) - theme(borderWidth.2));
-    @apply my-ryt-xl rg:text-balance indent border-l-2 border-l-current;
+    @apply my-ryt-xl border-l-2 border-l-current;
   }
 
   blockquote > header,

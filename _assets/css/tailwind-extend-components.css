@@ -217,26 +217,8 @@
   }
 
   /* github alerts */
-  div.markdown-alert {
-    padding-left: calc(theme(spacing.ryt-lg) - theme(borderWidth.2));
-    @apply border-l-2 border-l-current my-ryt-xl rg:text-balance no-indent;
-  }
-
-  div.markdown-alert p + p {
-    @apply !my-0;
-  }
-
-  p.markdown-alert-title {
-    @apply flex align-baseline;
-  }
-  p.markdown-alert-title svg {
-    @apply inline-block mr-ryt-sm;
-  }
-
-  @media (min-width: theme(screens.rg)) {
-    main > div.markdown-alert {
-      margin-left: calc(-1 * theme(spacing.ryt-lg) + theme(borderWidth.2));
-    }
+  .markdown-alert > p {
+    @apply my-0;
   }
 
   /* cooklang */
