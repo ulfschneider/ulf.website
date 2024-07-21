@@ -46,6 +46,6 @@ I want to start improving now. Here is my plan:
 - **Read and research:** Continuously read and learn about accessibility.
 - **Apply best practices:** Implement accessibility best practices in my work, starting with my personal website.
 - **Test for accessibility:** Use resources and tools to test for accessibility.
-- **Maintain a resource list:** Keep a [list of useful articles, tools, and techniques]((/blog/accessibility)).
+- **Maintain a resource list:** Keep a [list of useful articles, tools, and techniques](/blog/accessibility).
 
 By learning and applying these practices, I hope to make accessibility more accessible for myself and provide a more inclusive user experience in my web projects.
