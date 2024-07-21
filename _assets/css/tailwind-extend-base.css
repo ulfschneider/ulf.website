@@ -317,10 +317,6 @@
   blockquote > header,
   blockquote > footer {
     @apply my-ryt-sm rg:text-balance font-mono text-sm;
-
-    &::before {
-      content: "—";
-    }
   }
 
   @media (min-width: theme(screens.rg)) {
