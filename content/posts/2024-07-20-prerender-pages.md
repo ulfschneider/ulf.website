@@ -2,7 +2,7 @@
 title: Prerender pages with the Speculation Rules API
 tags: code
 ---
-Chromium browsers (Firefox and Safari are not on board yet) allow prerendering of future pages that a user is likely to navigate to. Prerending will speed up navigation and can be helpful when used together with [cross-document view transitions](https://ulfschneider.io/2024-05-20-cross-document-transition/), because for a prerendered page the transition does not need to wait for loading and rendering. 
+Chromium browsers (Firefox and Safari are not on board yet) allow prerendering of future pages that a user is likely to navigate to. Prerending will speed up navigation and can be helpful when used together with [cross-document view transitions](/2024-05-20-cross-document-transition/), because for a prerendered page the transition does not need to wait for loading and rendering. 
 
 As a web developer, you can insert a JSON configuration in your web pages to define how prerendering should occur. Here is what I´m currently using within the `<head>` of all documents on {{site.name}}:
 
