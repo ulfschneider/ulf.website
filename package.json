@@ -52,7 +52,6 @@
     "markdown-it-cooklang": "^0.4.0",
     "markdown-it-deflist": ">=2.1.0",
     "markdown-it-emoji": "^2.0.2",
-    "markdown-it-fitmedia": "^0.7.0",
     "markdown-it-footnote": ">=3.0.3",
     "markdown-it-include": "^2.0.0",
     "markdown-it-mark": "^3.0.1",
@@ -90,6 +89,7 @@
   "dependencies": {
     "@netlify/functions": "^1.4.0",
     "front-matter": "^4.0.2",
+    "markdown-it-fitmedia": "file:../markdown-it-fitmedia",
     "sanitize-html": "^2.10.0"
   }
 }
