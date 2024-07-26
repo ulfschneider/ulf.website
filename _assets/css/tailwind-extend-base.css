@@ -149,7 +149,19 @@
   }
 
   details > summary {
-    @apply hover:mode-text-primary rg:text-balance cursor-pointer;
+    @apply hover:mode-text-primary cursor-pointer list-none;
+  }
+
+  details > summary::-webkit-details-marker {
+    @apply hidden;
+  }
+
+  details > summary::before {
+    @apply rg:absolute rg:-ml-ryt-lg rg:w-ryt-lg rg:block not-italic font-semibold;
+    content: "+";
+  }
+  details[open] > summary::before {
+    content: "–";
   }
 
   /* typography */
@@ -169,7 +181,7 @@
   }
 
   dt {
-    @apply rg:text-balance font-bold;
+    @apply font-bold;
   }
 
   dd {
@@ -210,7 +222,7 @@
 
   ol > li::before {
     content: counters(ol-counter, ".", decimal) ". ";
-    @apply text-smaller -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap font-bold tabular-nums;
+    @apply text-smaller -ml-ryt-lg inline-block min-w-ryt-lg whitespace-nowrap font-bold tabular-nums;
   }
 
   ol > li > ol > li::before {
@@ -219,7 +231,7 @@
 
   ul > li::before {
     content: "●" " ";
-    @apply -ml-ryt-lg min-w-ryt-lg inline-flex content-baseline justify-start whitespace-nowrap not-italic;
+    @apply -ml-ryt-lg min-w-ryt-lg inline-block whitespace-nowrap not-italic;
   }
 
   main > ul,
