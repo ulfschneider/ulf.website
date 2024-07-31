@@ -384,7 +384,7 @@
 
   pre,
   pre > code {
-    @apply whitespace-pre-wrap break-words font-mono leading-normal;
+    @apply whitespace-pre-wrap break-words font-mono leading-normal font-normal;
     word-spacing: normal;
     word-wrap: normal;
     -moz-tab-size: 4;
@@ -399,6 +399,6 @@
 
   code:not(pre code) {
     font-size: 0.95em;
-    @apply text-write-dark bg-light dark:text-write-light dark:bg-light-dark font-mono p-[2px];
+    @apply text-write-dark bg-light dark:text-write-light dark:bg-light-dark font-mono p-[2px] font-normal;
   }
 }
