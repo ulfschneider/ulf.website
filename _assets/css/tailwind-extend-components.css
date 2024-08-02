@@ -93,8 +93,12 @@
   }
 
   /* tags */
+  .site-tags {
+    @apply -ml-ryt-xs;
+  }
+
   .site-tags .tag {
-    @apply no-underline px-ryt-xs py-ryt-2xs  bg-light dark:bg-light-dark whitespace-nowrap hover:bg-primary hover:text-white hover:brightness-110;
+    @apply text-sm no-underline px-ryt-xs py-ryt-2xs  whitespace-nowrap hover:bg-primary hover:text-white hover:brightness-110;
   }
   .site-tags .tag.current {
     @apply px-ryt-xs py-ryt-2xs  bg-primary text-white whitespace-nowrap;
