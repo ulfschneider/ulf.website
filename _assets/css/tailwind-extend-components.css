@@ -104,8 +104,8 @@
   }
 
   .outdent-short-text {
-    margin-left: calc(-1 * (theme(screens.lg) - theme(screens.rg)) / 2);
-    width: calc((theme(screens.lg) - theme(screens.rg)) / 2);
+    margin-left: -10em;
+    width: 10em;
 
     @apply text-right pr-ryt-lg inline-block align-baseline sticky top-ryt;
   }
