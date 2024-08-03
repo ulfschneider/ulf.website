@@ -26,7 +26,7 @@
   --ryt-3xl: calc(var(--font-size-base) * 9.3);
   --xs: calc(var(--font-size-base) * 16);
   --sm: calc(var(--font-size-base) * 26);
-  --rg: calc(var(--font-size-base) * 36);
+  --rg: calc(var(--font-size-base) * 32);
   --md: calc(var(--font-size-base) * 46);
   --lg: calc(var(--font-size-base) * 58);
   --xl: calc(var(--font-size-base) * 70);
