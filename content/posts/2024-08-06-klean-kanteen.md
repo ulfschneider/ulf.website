@@ -9,7 +9,7 @@ For many years I´ve been using CamelBak drinking bottles on my bicycles. They a
 
 Two or three months ago my bottles were filled with pure water instead of the usual apple juice-water-mix. Every sip tasted like plastic. Bike-riding should help to stay healthy. In my view, drinking water with a plastic taste while riding doesn´t seem to help with that. I was looking for a change.
 
-I ended up buying two [Klean Kanteen](https://www.kleankanteen.com/) Classic 800 ml Sport Cap bottles. I bought them for a good price at [outnorth](https://www.outnorth.com/).
+I ended up buying two [Klean Kanteen](https://www.kleankanteen.com/) Classic 800 ml Sport Cap bottles for a good price at [outnorth](https://www.outnorth.com/).
 
 <figure class="hero">
 <img src="/img/secan/IMG_6126.jpg" alt="A black Fairlight Secan Gravel bike leaning to a wooden door in the warm evening sun.">
