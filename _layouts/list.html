@@ -8,11 +8,9 @@ nodate: true
   {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
   pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}Posts{%
   endif %}{% if pagedItems.tag != "" and pagedItems.tag != nil %} tagged
-  <a href="{{pagedItems.tag | tagUrl}}" class="no-underline"
-    ><strong
-      >{%if pagedItems.tag == site.starTag%}{{site.starTagSymbol}}{%else%}#{{
-      pagedItems.tag }}{%endif%}</strong
-    ></a
+  <a href="{{pagedItems.tag | tagUrl}}" class="tag">
+    {%if pagedItems.tag == site.starTag%}{{site.starTagSymbol}}{%else%}#{{
+    pagedItems.tag }}{%endif%}</a
   >
   {% endif %} {% endif %}
 </h1>
@@ -24,16 +22,18 @@ nodate: true
 
 <!-- -->
 <div
-  class="flex flex-col mt-ryt-lg rg:heror rg:flex-row-reverse rg:gap-ryt-xl rg:align-baseline rg:mt-ryt-2xl"
+  class="flex flex-col mt-ryt-lg md:heror md:flex-row md:gap-ryt-xl md:align-baseline"
 >
-  <div class="basis-4/12">{%- include "site-tags.html" -%}</div>
-
-  <div class="basis-8/12 max-rg:mt-ryt-lg">
+  <div class="basis-8/12">
     {% if content != nil and content != "" %}
     <div class="no-indent mb-ryt-lg">{{ content }}</div>
     {% endif %} {%- if pagedItems.pageNumber == 0 and content != "" and content
     != nil -%} {%- endif -%}
     <!-- -->
     {%- include "post-list.html" -%}
+  </div>
+
+  <div class="basis-4/12 max-md:mt-ryt-2xl">
+    {%- include "site-tags.html" -%}
   </div>
 </div>
