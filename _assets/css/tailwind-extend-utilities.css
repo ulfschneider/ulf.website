@@ -1,7 +1,10 @@
 :root {
-  --bleed: max(
-    -1 * (theme(space.md) - theme(space.rg)),
-    -0.5 * (100vw - theme(space.rg)) + theme(space.ryt)
+  --bleed: min(
+    max(
+      -1 * (theme(space.md) - theme(space.rg)),
+      -0.5 * (100vw - theme(space.rg) - 2 * theme(space.ryt))
+    ),
+    0px
   );
 }
 
@@ -73,23 +76,21 @@
     @apply dark:bg-back-dark bg-back-light;
   }
 
-  @media (min-width: theme(screens.rg)) {
-    .hero,
-    .hero-layout {
-      margin-left: var(--bleed);
-      margin-right: var(--bleed);
+  .hero,
+  .hero-layout {
+    margin-left: var(--bleed);
+    margin-right: var(--bleed);
 
-      > img {
-        @apply object-center mx-auto;
-      }
+    > img {
+      @apply object-center mx-auto;
     }
-    .herol,
-    .herol-layout {
-      margin-left: var(--bleed);
-    }
-    .heror,
-    .heror-layout {
-      margin-right: var(--bleed);
-    }
+  }
+  .herol,
+  .herol-layout {
+    margin-left: var(--bleed);
+  }
+  .heror,
+  .heror-layout {
+    margin-right: var(--bleed);
   }
 }
