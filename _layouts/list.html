@@ -4,7 +4,7 @@ nodate: true
 ---
 
 {% if pagedItems.tag != nil and pagedItems.tag != ""%}
-<h1 class="font-normal leading-relaxed tracking-normal my-ryt-lg text-base">
+<h1 class="font-normal leading-relaxed tracking-normal my-ryt-2xl text-base">
   {% if limit == "" or limit == nil %} {% if pagedItems.pageCount > 1 %}Page {{
   pagedItems.humanPageNumber }} of {{ pagedItems.pageCount }}{% else %}Posts{%
   endif %}{% if pagedItems.tag != "" and pagedItems.tag != nil %} tagged
@@ -15,7 +15,7 @@ nodate: true
   {% endif %} {% endif %}
 </h1>
 {% else %}
-<h1 class="font-normal leading-relaxed tracking-normal my-ryt-lg text-base">
+<h1 class="font-normal leading-relaxed tracking-normal my-ryt-2xl text-base">
   All posts
 </h1>
 {% endif %}
