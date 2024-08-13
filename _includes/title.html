@@ -8,11 +8,11 @@ true or hasTagIntro == true or isBlog == true or refer or author -%}
 
   <h1>{{ title }}</h1>
   {%- endif -%} {%- include "hero.html" -%} {%- if abstract -%}
-  <div class="rg:text-balance my-ryt h2">{{ abstract }}</div>
+  <div class="my-ryt h2">{{ abstract }}</div>
   {%- endif -%} {%- if refer -%}
-  <div class="rg:text-balance my-ryt-xs">{{ refer }}</div>
+  <div class="my-ryt-xs">{{ refer }}</div>
   {%- elsif author -%}
-  <div class="rg:text-balance my-ryt-xs">{{ author }}</div>
+  <div class="my-ryt-xs">{{ author }}</div>
   {%- endif -%} {%- if nodate == nil -%}
   <aside class="my-ryt-xs text-sm">{% include "date-tags.html" %}</aside>
   {%- endif -%}
