@@ -96,10 +96,10 @@
   .site-tags {
   }
 
-  .site-tags .tag {
+  .tag {
     @apply text-sm no-underline px-ryt-xs py-ryt-2xs border border-current rounded whitespace-nowrap hover:bg-primary hover:border-primary hover:text-white hover:brightness-110;
   }
-  .site-tags .tag.current {
+  .tag.current {
     @apply px-ryt-xs py-ryt-2xs bg-primary border-primary text-white whitespace-nowrap;
   }
 
