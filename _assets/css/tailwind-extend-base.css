@@ -10,36 +10,6 @@
     margin: 0;
   }
 
-  :root {
-    --scrollbar-size: 12px;
-
-    @media (prefers-color-scheme: light) {
-      --scrollbar-track-color: transparent;
-      --scrollbar-thumb-color: theme(colors.write.dark);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      --scrollbar-track-color: transparent;
-      --scrollbar-thumb-color: theme(colors.write.bright);
-    }
-  }
-
-  * {
-    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
-  }
-
-  ::-webkit-scrollbar {
-    width: var(--scrollbar-size);
-  }
-
-  ::-webkit-scrollbar-track {
-    background: var(--scrollbar-track-color);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb-color);
-  }
-
   /* focus */
   *:focus {
     @apply outline-none;
@@ -126,17 +96,17 @@
   /* headings */
   h1,
   .h1 {
-    @apply font-display rg:text-balance break-after-avoid font-bold leading-snug tracking-normal text-xl sm:text-2xl;
+    @apply font-display text-balance break-after-avoid font-bold leading-snug tracking-normal text-xl sm:text-2xl;
   }
 
   h2,
   .h2 {
-    @apply font-display mt-ryt-2xl mb-ryt rg:text-balance break-after-avoid font-normal leading-snug tracking-normal text-lg;
+    @apply font-display mt-ryt-2xl mb-ryt text-balance break-after-avoid font-normal leading-snug tracking-normal text-lg;
   }
 
   h3,
   .h3 {
-    @apply font-display mt-ryt-xl mb-ryt rg:text-balance break-after-avoid font-bold leading-snug tracking-normal text-base;
+    @apply font-display mt-ryt-xl mb-ryt text-balance break-after-avoid font-bold leading-snug tracking-normal text-base;
   }
 
   h4,
@@ -145,7 +115,7 @@
   .h4,
   .h5,
   .h6 {
-    @apply font-display mt-ryt-xl mb-ryt-lg rg:text-balance break-after-avoid text-base font-bold leading-snug tracking-normal;
+    @apply font-display mt-ryt-xl mb-ryt-lg text-balance break-after-avoid text-base font-bold leading-snug tracking-normal;
   }
 
   details > summary {
@@ -332,7 +302,7 @@
     @apply my-ryt-xl;
 
     figcaption {
-      @apply max-w-rg my-ryt-sm rg:text-balance font-mono text-sm;
+      @apply max-w-rg my-ryt-sm text-balance font-mono text-sm;
     }
   }
 
@@ -358,7 +328,7 @@
 
   blockquote > header,
   blockquote > footer {
-    @apply my-ryt-sm rg:text-balance font-mono text-sm;
+    @apply my-ryt-sm text-balance font-mono text-sm;
   }
 
   @media (min-width: theme(screens.rg)) {
