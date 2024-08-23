@@ -251,12 +251,12 @@
 
   /* hr */
   hr {
-    @apply max-w-rg my-ryt-xl flex justify-center border-0;
+    @apply border-0 block h-fit;
   }
 
   hr::before {
     content: "* * *";
-    @apply max-w-rg -mt-ryt block;
+    @apply block text-inherit my-ryt-xl text-center;
   }
 
   /* table */
