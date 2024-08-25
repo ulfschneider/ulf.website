@@ -7,21 +7,22 @@ tags:
 ---
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iEnv5IQASQs?si=k-nR5MPZO3Mx74wu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption><a href="https://youtu.be/iEnv5IQASQs?si=dtVm5WPrEZ-rD0mJ"><cite>Perfect Bar tape Wrapping Tips - The figure of 8</cite> </a>. </figcaption>
+<figcaption><a href="https://youtu.be/iEnv5IQASQs?si=dtVm5WPrEZ-rD0mJ"><cite>Perfect Bar tape Wrapping Tips - The figure of 8</cite></a>.</figcaption>
 </figure>
 
 Notes:
 
-- Start wrapping the drops from the bottom and do not do a full overlap, when crossing the starting point, the tape should be already completely on the bar
-- Wrap from the outside to the inside
-- Leave 10 mm gap under the front of the lever clamp 
-- Figure of 8
+- When fixating the cables and brake hoses under the bar top with electrical tape, place the tape closest to the center of the bike exactly where you want to stop wrapping. You have time to measure and ensure the exact position before starting to wrap.
+- Start wrapping the drops from the bottom and do not do a full overlap. When crossing the starting point, the tape should be already completely on the bar.
+- Wrap from the outside to the inside.
+- Leave 10 mm gap under the front of the lever clamp .
+- Figure of 8:
 	- Wrap the tape at the inside up the lever
 	- Above the top of the lever 
 	- Down over the backside of the lever clamp
 	- Under the lever around the front
 	- Again over the backside of the lever clamp and under the handlebar
-- Wrap the top of the bar from the front to the back
+- Wrap the top of the bar from the front to the back.
 - The diagonal cut is 10 cm long, starts at the outside and goes the inside of the bike. Pull the tape to the front of the bike when cutting.
 
 Peter Sagan´s bike is wrapped like that and you can see in the below video how a pro mechanic is doing the job within two minutes (for one side of the handlebar).
