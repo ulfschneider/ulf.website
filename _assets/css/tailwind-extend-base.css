@@ -141,7 +141,33 @@
 
   mark,
   .mark {
-    @apply bg-mark text-write-dark;
+    background: linear-gradient(
+        100deg,
+        rgba(255, 221, 64, 0) 0.9%,
+        rgba(255, 221, 64, 1) 2.4%,
+        rgba(255, 221, 64, 0.5) 5.8%,
+        rgba(255, 221, 64, 0.2) 93%,
+        rgba(255, 221, 64, 0.7) 96%,
+        rgba(255, 221, 64, 0) 98%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 221, 64, 0) 0%,
+        rgba(255, 221, 64, 0.3) 7.9%,
+        rgba(255, 221, 64, 0) 15%
+      );
+    border-radius: 0.125em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0.1em;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    mark,
+    .mark {
+      background: rgb(255, 221, 64);
+      border-radius: 0;
+    }
   }
 
   /* dl */
@@ -369,6 +395,6 @@
 
   code:not(pre code) {
     font-size: 0.95em;
-    @apply text-write-dark bg-light dark:text-write-light dark:bg-light-dark font-mono p-[2px] font-normal;
+    @apply text-write-dark bg-light dark:text-write-light dark:bg-light-dark font-mono p-[0.1em] font-normal;
   }
 }
