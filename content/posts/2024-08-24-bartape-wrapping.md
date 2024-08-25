@@ -11,6 +11,7 @@ tags:
 </figure>
 
 Notes:
+
 - Start wrapping the drops from the bottom and do not do a full overlap, when crossing the starting point, the tape should be already completely on the bar
 - Wrap from the outside to the inside
 - Leave 10 mm gap under the front of the lever clamp 
@@ -30,4 +31,6 @@ Peter Sagan´s bike is wrapped like that and you can see in the below video how 
 <figcaption><a href="https://youtu.be/jGdPNEllITg?si=E03pOjIT7IoKm57J"><cite>Peter Sagan - New handlebar tape</cite></a></figcaption>
 </figure>
 
+> [!Note]Side note
+> Recently I started liking the [Fizik Vento Solocush Tacky](https://www.fizik.com/eu_en/vento-solocush-tacky.html) bartape. It´s very good to wrap, has a soft, tacky, and light cushioned feel, and the bar end plugs stay firm in place. Fizik is saying it´s 2.7 mm thick, but it feels thinner, which is good in my opinion. 
 
