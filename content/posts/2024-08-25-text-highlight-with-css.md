@@ -4,7 +4,7 @@ tags:
   - code
   - css
 ---
-Highlighting text on a web page and making it appear like it was done with a highlighter pen (this is named a skeuomorphism ^[<q>Skeuomorphism involves designing digital interfaces that imitate physical elements, reducing the learning curve for unfamiliar interactions.</q>, [<cite>Skeuomorphism</cite>](https://www.nngroup.com/articles/skeuomorphism/), Megan Chan, Nielsen Norman Group]), can look like this:
+Highlighting text on a web page and making it appear like it was done with a highlighter pen, which is named a skeuomorphism ^[<q>Skeuomorphism involves designing digital interfaces that imitate physical elements, reducing the learning curve for unfamiliar interactions.</q>, [<cite>Skeuomorphism</cite>](https://www.nngroup.com/articles/skeuomorphism/), Megan Chan, Nielsen Norman Group], can look like this:
 
 <figure>
 <style>.mark-highlight {
