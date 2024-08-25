@@ -1,5 +1,5 @@
 ---
-title: Text highlight with CSS
+title: Highlighting text with CSS
 tags: 
   - code
   - css
