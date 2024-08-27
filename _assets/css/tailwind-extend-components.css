@@ -219,11 +219,6 @@
     @apply rg:pl-ryt-lg;
   }
 
-  /* github alerts */
-  .markdown-alert > p {
-    @apply my-0;
-  }
-
   /* cooklang */
   ul[class^="cooklang-"] > li::before {
     content: "＿";
