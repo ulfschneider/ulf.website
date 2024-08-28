@@ -4,7 +4,7 @@ tags:
   - sports
   - strael
 ---
-I´ve changed handlebars on my Strael to the FSA Gossamer Compact. I was looking for handlebars more narrow than the default 42 cm of typical drop bars. While I ordered the Gossamer in 42 cm, the width is measured at the bar ends, and because of 4 ° flare the handlebars are only 40 cm wide at the top, where the hoods are located. 
+I´ve changed the handlebars on my Strael to the FSA Gossamer Compact. I was looking for handlebars more narrow than the default 42 cm of typical drop bars. While I ordered the Gossamer in 42 cm, the width is measured at the bar ends, and because of 4 ° flare the handlebars are only 40 cm wide at the top, where the hoods are located. 
 
 The handlebars have 80 mm reach, 123 mm drop, weigh 310 g, appear well made, and are not super expensive. You get a wide section in the center to mount accessories and the bar top is straight left to right, and not bend backwards, which helps avoiding contact between legs and handlebars. The curved shape in the drops is very comfortable because it guides your hands in a slight curve towards the brake lever. It is more comfortable than the Zipp Service Course SL 70 I was riding before. The narrowness in the hoods suits me, because it is closer to my shoulder width.
 
