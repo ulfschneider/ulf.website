@@ -5,7 +5,7 @@ tags: shell
 
 [[toc]]
 
-## Editing form the shell
+## Editing from the shell
 
 My Mac is set up to use [<cite>Oh My Zsh</cite>](https://ohmyz.sh) as a shell prompt and I prefer to avoid using nano or pico when editing files form the shell. My global `.gitconfig` and my `.zshrc` files are modified in a way to start up the built-in Mac editor TextEdit for such cases. This should go in a way to start the editor from the shell, complete the editing in the editor *while the shell command is waiting for you to close the editor,* return to the shell and go on with what you wanted to do in the shell. 
 
