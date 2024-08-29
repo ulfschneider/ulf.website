@@ -111,7 +111,7 @@
   }
 
   /* PrismJS 1.29.0*/
-  pre[data-language] {
+  pre[data-language]:not(li pre) {
     &::before {
       content: attr(data-language);
       @apply uppercase font-mono text-sm block md:outdent-short-text max-md:mb-ryt-sm;
