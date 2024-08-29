@@ -26,7 +26,7 @@ With the options:
 : Open a new instance of TextEdit, even if TextEdit is already open.
 
 `-W`
-: Wait until the TextEdit is closed again.
+: Wait until the instance of TextEdit is closed again.
 
 Recently I noticed the waiting is not working anymore in my shell. Even if I close the editor, the shell waits forever and I cannot proceed in the shell with what I wanted to do. I have to stop the waiting process by pressing <kbd>CTRL</kbd> <kbd>C</kbd>. I cannot tell if it´s a problem of TextEdit or of Oh My Zsh. 
 
