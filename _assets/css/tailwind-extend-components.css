@@ -107,14 +107,17 @@
     margin-left: -10em;
     width: 10em;
 
-    @apply text-right pr-ryt-lg inline-block align-baseline sticky top-ryt;
+    @apply pr-ryt-lg align-baseline sticky top-ryt float-left text-right;
   }
 
   /* PrismJS 1.29.0*/
-  pre[data-language]:not(li pre) {
+  pre[data-language] {
     &::before {
       content: attr(data-language);
-      @apply uppercase font-mono text-sm block md:outdent-short-text max-md:mb-ryt-sm;
+      @apply font-sans uppercase mb-ryt-sm inline-block p-[0.1em] text-sm border-b border-meta text-meta pr-ryt-lg;
+    }
+    code {
+      @apply block;
     }
   }
 
