@@ -114,7 +114,7 @@
   pre[data-language] {
     &::before {
       content: attr(data-language);
-      @apply font-sans uppercase mb-ryt-sm inline-block p-[0.1em] text-sm border-b border-meta text-meta pr-ryt-lg;
+      @apply font-sans uppercase mb-ryt-sm inline-block text-sm border-b border-meta text-meta pr-ryt-lg;
     }
     code {
       @apply block;
