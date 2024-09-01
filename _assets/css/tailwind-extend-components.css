@@ -47,7 +47,7 @@
 
     &::before {
       content: "Contents";
-      @apply text-sm md:outdent-short-text;
+      @apply text-sm;
     }
 
     a {
@@ -63,7 +63,7 @@
     }
 
     ol > li::before {
-      @apply hidden content-none;
+      /*@apply hidden content-none;*/
     }
 
     ol > li > ol {
