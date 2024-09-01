@@ -4,7 +4,7 @@ tags:
   - code
   - css
 ---
-When using [eleventy](https://11ty.dev) to build your blog, you likely are using the plugin `@11ty/eleventy-plugin-syntaxhighlight`, which is running [Prism](https://prismjs.com) under the hood. ITo indicate to your readers the name of the language you want to highlight in the correct spelling, you can map the language key processed by Prism to a correctly spelled language name, and assign it to a HTML attribute, which you can name however you want. That again will allow you to display and style the name of the language with CSS. The resulting HTML will look similar to the example below. You see, I named the attribute `data-language`:
+When using [eleventy](https://11ty.dev) to build your blog, you likely are using the plugin `@11ty/eleventy-plugin-syntaxhighlight`, which is running [Prism](https://prismjs.com) under the hood. To indicate to your readers the name of the language you want to highlight with the correct spelling, you can map the language key processed by Prism to a correctly spelled language name, and assign it to a HTML attribute, which you can name however you want. That again will allow you to display and style the name of the language with CSS. The resulting HTML will look similar to the example below. You see, I named the attribute `data-language` and it has the value `JavaScript` assigned:
 
 ```html
 <pre class="language-js" data-language="JavaScript">
