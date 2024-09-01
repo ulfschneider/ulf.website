@@ -55,15 +55,7 @@
     }
 
     > ol {
-      @apply m-0 p-0;
-    }
-
-    ol > li {
-      @apply p-0 my-ryt-sm leading-tight;
-    }
-
-    ol > li::before {
-      /*@apply hidden content-none;*/
+      @apply rg:-ml-ryt-lg my-0;
     }
 
     ol > li > ol {
