@@ -111,10 +111,10 @@
   }
 
   /* PrismJS 1.29.0*/
-  pre[data-language] {
+  pre[data-language]:not([data-language=""]) {
     &::before {
       content: attr(data-language);
-      @apply font-sans uppercase mb-ryt-sm inline-block text-sm border-b border-meta text-meta pr-ryt-lg;
+      @apply font-sans mb-ryt-sm inline-block text-sm border border-current px-ryt-xs;
     }
     code {
       @apply block;

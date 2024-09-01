@@ -46,7 +46,7 @@ module.exports = function (eleventyConfig) {
     preAttributes: {
       // Added in 4.1.0 you can use callback functions too
       "data-language": function ({ language, content, options }) {
-        return language;
+        return utils.resolvePrismLanguage(language);
       },
     },
     codeAttributes: {},
