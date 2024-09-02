@@ -325,7 +325,7 @@ const PRISM_LANGUAGES = {
 };
 
 //map the given prism language key, like "js", to 
-	//a correctly spelled language name, like "JavaScript"
+//a correctly spelled language name, like "JavaScript"
 resolvePrismLanguage(language) {
   return PRISM_LANGUAGES[language] || language || "";
 }
