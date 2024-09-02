@@ -117,7 +117,7 @@
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    @apply text-green-600 dark:text-green-500;
+    @apply text-green-700 dark:text-green-500;
     font-style: italic;
   }
 
