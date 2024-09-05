@@ -1,5 +1,5 @@
 ---
-title: TextMate as the default shell editor
+title: Make TextMate the default shell editor
 tags: shell
 ---
 
