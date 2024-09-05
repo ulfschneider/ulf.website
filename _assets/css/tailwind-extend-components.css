@@ -243,8 +243,4 @@
   .lty-playbtn:focus {
     outline-width: 0px !important;
   }
-
-  .comment-list article * {
-    @apply no-indent m-0 !important;
-  }
 }
