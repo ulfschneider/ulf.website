@@ -38,6 +38,7 @@ function printComments(commentList, data) {
       article.appendChild(meta);
       //comment body
       let body = document.createElement("div");
+      body.classList.add("my-ryt");
       body.innerHTML = comment.htmlBody;
       article.appendChild(body);
 
