@@ -1,5 +1,5 @@
 ---
-title: Indicate the full language name when syntax highlighting with eleventy
+title: Indicate the full language name when syntax highlighting with 11ty and Prism
 tags:
   - code
   - css
@@ -7,7 +7,7 @@ tags:
 [[toc]]
 
 ## The goal
-When using [eleventy](https://11ty.dev) to build your blog, you likely are using the plugin `@11ty/eleventy-plugin-syntaxhighlight` for syntax highlighting. The plugin is running [Prism](https://prismjs.com) under the hood. To indicate your readers the names of the highlighted languages with the correct spelling, you can map the language key processed by Prism to a correctly spelled language name, and assign it to a HTML attribute, which you can name however you want. That again will allow you to display and style the name of the language with CSS. The resulting HTML will look similar to the example below. You see, I named the attribute `data-language` and it has the value `JavaScript` assigned:
+When using [11ty](https://11ty.dev) to build your blog, you likely are using the plugin `@11ty/eleventy-plugin-syntaxhighlight` for syntax highlighting. The plugin is running [Prism](https://prismjs.com) under the hood. To indicate your readers the names of the highlighted languages with the correct spelling, you can map the language key processed by Prism to a correctly spelled language name, and assign it to a HTML attribute, which you can name however you want. That again will allow you to display and style the name of the language with CSS. The resulting HTML will look similar to the example below. You see, I named the attribute `data-language` and it has the value `JavaScript` assigned:
 
 ```html
 <pre class="language-js" data-language="JavaScript">
@@ -19,7 +19,13 @@ When using [eleventy](https://11ty.dev) to build your blog, you likely are using
 
 ## How it´s achieved
 
-To achieve that result, add the syntaxhighlight plugin to your `eleventy.js` configuration file in the following way:
+To achieve that result, add the [syntax highlighting plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/) to your npm dependencies, with
+
+```sh
+npm install @11ty/eleventy-plugin-syntaxhighlight
+```
+
+and modify your `eleventy.js` configuration file in the following way:
 
 ```js
 //eleventy.js
