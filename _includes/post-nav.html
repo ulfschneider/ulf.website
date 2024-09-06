@@ -1,32 +1,44 @@
 {% assign newerPost = collections.liveContent | post |
 getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
 | post | getNextCollectionItem: page %} {%- if newerPost or olderPost -%}
-<nav
-  data-pagefind-ignore
-  class="flex flex-col heror sm:gap-ryt-xl rg:gap-ryt-2xl sm:flex-row justify-between gap-ryt mt-ryt"
->
-  {% if newerPost %}
-  <div class="leading-snug max-w-rg">
-    <div class="text-sm whitespace-nowrap">Newer post</div>
-    <a
-      class="no-underline font-bold rg:text-balance"
-      id="{{site.navNewer.id}}"
-      href="{{ newerPost.url }}"
-    >
-      {{ newerPost.data.title }}
-    </a>
-  </div>
-  {% endif %} {% if olderPost %}
-  <div class="leading-normal max-w-rg">
-    <div class="text-sm whitespace-nowrap">Older post</div>
-    <a
-      class="no-underline font-bold rg:text-balance"
-      id="{{site.navOlder.id}}"
-      href="{{ olderPost.url }}"
-    >
-      {{ olderPost.data.title }}
-    </a>
-  </div>
-  {% endif %}
-</nav>
+<div class="heror mt-ryt">
+  <nav
+    data-pagefind-ignore
+    class="flex flex-col sm:gap-ryt-xl rg:gap-ryt-2xl sm:flex-row gap-ryt"
+  >
+    {% if newerPost %}
+    <div class="leading-normal max-w-rg">
+      <div class="text-sm whitespace-nowrap">
+        <span>Newer post</span
+        ><span class="pointer-coarse:hidden">
+          <kbd>{{site.navNewer.kbd}}</kbd></span
+        >
+      </div>
+      <a
+        class="no-underline font-bold rg:text-balance"
+        id="{{site.navNewer.id}}"
+        href="{{ newerPost.url }}"
+      >
+        {{ newerPost.data.title }}
+      </a>
+    </div>
+    {% endif %} {% if olderPost %}
+    <div class="leading-normal max-w-rg">
+      <div class="text-sm whitespace-nowrap">
+        <span>Older post</span
+        ><span class="pointer-coarse:hidden">
+          <kbd>{{site.navOlder.kbd}}</kbd></span
+        >
+      </div>
+      <a
+        class="no-underline font-bold rg:text-balance"
+        id="{{site.navOlder.id}}"
+        href="{{ olderPost.url }}"
+      >
+        {{ olderPost.data.title }}
+      </a>
+    </div>
+    {% endif %}
+  </nav>
+</div>
 {%- endif -%}
