@@ -21,18 +21,18 @@ import plugin from 'tailwindcss/plugin'
 Then, add the following to your configuration:
 
 ```js
- plugins: [
-    plugin(function ({ addVariant }) {
-      addVariant("pointer-coarse", "@media (pointer: coarse)");
-      addVariant("pointer-fine", "@media (pointer: fine)");
-    }),
-  ]
+plugins: [
+  plugin(function ({ addVariant }) {
+    addVariant("pointer-coarse", "@media (pointer: coarse)");
+    addVariant("pointer-fine", "@media (pointer: fine)");
+  }),
+]
 ```
 
 Now you can do something like in the below example, where the indication of a keyboard navigation is hidden for devices that have only a *coarse* pointer device (your finger). 
 
 ```html
- <div class="text-sm whitespace-nowrap">
+<div class="text-sm whitespace-nowrap">
   <span>Newer post</span><span class="pointer-coarse:hidden"> <kbd>-</kbd></span>
 </div>
 ```
