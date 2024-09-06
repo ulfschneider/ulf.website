@@ -2,7 +2,10 @@
 <search>
   <form id="search-form" class="max-w-rg">
     <label id="search-label"
-      >Search {{ site.name }}
+      ><span>Search {{ site.name }}</span
+      ><span class="pointer-coarse:hidden">
+        <kbd>{{site.search.kbd}}</kbd></span
+      >
       <div class="flex flex-row gap-ryt w-full">
         <input
           id="search-query"
