@@ -396,6 +396,6 @@
 
   code:not(pre code) {
     font-size: 0.95em;
-    @apply text-write-dark bg-light dark:text-write-light dark:bg-light-dark font-mono p-[0.1em] font-normal;
+    @apply text-write-dark bg-light dark:text-write-light dark:bg-light-dark font-mono font-normal;
   }
 }
