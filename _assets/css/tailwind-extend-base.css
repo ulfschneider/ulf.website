@@ -371,7 +371,7 @@
 
   /* kbd */
   kbd {
-    @apply px-ryt-xs rounded-sm border border-current text-center font-mono dark:text-write-light min-w-[1.5em] uppercase text-smaller;
+    @apply font-normal px-ryt-xs rounded-sm border border-current text-center font-mono dark:text-write-light min-w-[1.5em] uppercase text-smaller;
   }
 
   /* pre and pre code */
