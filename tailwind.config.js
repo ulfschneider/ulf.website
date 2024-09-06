@@ -167,5 +167,10 @@ module.exports = {
       },
     },
   },
-  plugins: [plugin(function ({ addUtilities, addBase, theme, e, config }) {})],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant("pointer-coarse", "@media (pointer: coarse)");
+      addVariant("pointer-fine", "@media (pointer: fine)");
+    }),
+  ],
 };
