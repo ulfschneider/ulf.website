@@ -8,7 +8,7 @@ module.exports = {
   cacheVersioning: {
     runtime: `${CACHE_VERSION}-0`,
     script: `${CACHE_VERSION}-39`,
-    css: `${CACHE_VERSION}-221`,
+    css: `${CACHE_VERSION}-222`,
     json: `${CACHE_VERSION}-1`,
     image: `${CACHE_VERSION}-1`,
     font: `${CACHE_VERSION}-1`,
@@ -139,7 +139,7 @@ module.exports = {
   navNewer: {
     label: "Newer",
     id: "nav-newer",
-    kbd: "-",
+    kbd: "–",
   },
   navOldest: {
     label: "Oldest",
