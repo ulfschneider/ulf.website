@@ -4,7 +4,7 @@ tags:
   - code
   - css
 ---
-There is a super quick way of adding media variants to your tailwindcss setup.
+There is a super quick way of adding media variants (and plugins in general) to your tailwindcss setup.
 
 Go to your `tailwind.config.js` and add the import
 
