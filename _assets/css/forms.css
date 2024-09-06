@@ -27,7 +27,7 @@
   input[type="reset"],
   button,
   .button {
-    @apply mode-bg-primary px-ryt-sm py-ryt-sm cursor-pointer border-0 align-baseline text-white;
+    @apply mode-bg-primary px-ryt-sm py-ryt-sm cursor-pointer border-0 align-baseline text-white text-balance;
   }
 
   input[type="submit"]:hover,
