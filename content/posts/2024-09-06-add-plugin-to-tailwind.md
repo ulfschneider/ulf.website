@@ -1,5 +1,5 @@
 ---
-title: Adding <code>pointer-coarse</code> and <code>pointer-fine</code> variants to tailwindcss
+title: Adding plugins for <code>pointer-coarse</code> and <code>pointer-fine</code> variants to tailwindcss
 tags:
   - code
   - css
