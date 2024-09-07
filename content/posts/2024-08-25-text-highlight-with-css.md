@@ -26,7 +26,8 @@ Highlighting text on a web page and making it appear like it was done with a hig
   border-radius: 0.125em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  padding: 0.1em;
+  padding: 0;
+  display: inline;
 }
 @media (prefers-color-scheme: dark) {
   .mark-highlight {
@@ -65,7 +66,8 @@ mark,
   border-radius: 0.125em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  padding: 0.1em;
+  padding: 0;
+  display: inline;
 }
 
 @media (prefers-color-scheme: dark) {

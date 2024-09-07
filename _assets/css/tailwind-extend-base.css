@@ -159,7 +159,7 @@
     border-radius: 0.125em;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    padding: 0.1em;
+    padding: 0;
     display: inline;
   }
 
