@@ -29,7 +29,7 @@ plugins: [
 ]
 ```
 
-Now you can do something like in the below example, where the indication of a keyboard navigation is hidden for devices that have only a *coarse* pointer device (your finger). 
+Now you can do something like in the below example, where the indication of a keyboard navigation is hidden for devices that only have a *coarse* pointer device (your finger). 
 
 ```html
 <div class="text-sm whitespace-nowrap">
