@@ -12,9 +12,9 @@ outline: true
 ## Wheels
 
 ### Tools
-- #Wera Click-Torque X 3 Torque Wrench{}
-- #24 mm Hex Socket for the Torque Wrench{}
-- #Shimano TL-LR15 Cassette Removal Tool for HG Cassettes and CenterLock Brake Rotors{}
+- +Wera Click-Torque X 3 Torque Wrench{}
+- +24 mm Hex Socket for the Torque Wrench{}
+- +Shimano TL-LR15 Cassette Removal Tool for HG Cassettes and CenterLock Brake Rotors{}
 
 ### Steps
 
@@ -31,18 +31,18 @@ outline: true
 
 ### Tools
 
-- #My very high end do-it-yourself routing tool – a short and bent steel wire{}.
+- +My very high end do-it-yourself routing tool – a short and bent steel wire{}.
   <figure>
   <img src="/img/strael/high-end-routing-tool.jpg" alt="A hand holding a bent steel wire">
   <figcaption>My high end Di2 wire routing tool</figcaption>
   </figure>
-- #Folding Meter{}
-- #Di2 Plug Tool for EW-SD300 wires (TL-EW300){}
-- #5 mm Hex Key{}
-- #Park Tool Repair Stand PCS-10.3{}. I´m happy with that. It is sturdy, has a secure and stable stand, can be adjusted in height, and the clamp mechanism works pretty well.
-- #Park Tool Handlebar Holder HBH-2{}
-- #Tesa Crepe{}
-- #Electrical Tape{}
+- +Folding Meter{}
+- +Di2 Plug Tool for EW-SD300 wires (TL-EW300){}
+- +5 mm Hex Key{}
+- +Park Tool Repair Stand PCS-10.3{}. I´m happy with that. It is sturdy, has a secure and stable stand, can be adjusted in height, and the clamp mechanism works pretty well.
+- +Park Tool Handlebar Holder HBH-2{}
+- +Tesa Crepe{}
+- +Electrical Tape{}
 
 
 ### Steps
@@ -110,12 +110,12 @@ I use the following process for the wiring: Pushing the Di2 wire through a tube 
 
 ### Tools
 
-- #Pencil{}
+- +Pencil{}
 - Folding Meter
-- #Water Level{}
-- #4 mm Hex Key{}
+- +Water Level{}
+- +4 mm Hex Key{}
 - 5 mm Hex Key
-- #6 mm Hex Key{}
+- +6 mm Hex Key{}
 
 ### Steps
 
@@ -160,11 +160,11 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
 ### Tools
 
 - Tesa Crepe
-- #Hacksaw with Park Tool Carbon Cutting Saw Blade CSB-1. You do not need the Park Tool saw itself if you already have a hacksaw that can hold the 300 mm saw blade.{}
-- #Topeak Threadless Saw Guide{}
-- #Sanding Block with P120 Sanding Paper{}
-- #FFP2 Mask{}
-- #Nitril Gloves{}
+- +Hacksaw with Park Tool Carbon Cutting Saw Blade CSB-1. You do not need the Park Tool saw itself if you already have a hacksaw that can hold the 300 mm saw blade.{}
+- +Topeak Threadless Saw Guide{}
+- +Sanding Block with P120 Sanding Paper{}
+- +FFP2 Mask{}
+- +Nitril Gloves{}
 
 ### Steps
 
@@ -205,13 +205,13 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
 
 ### Tools
 
-- #Shimano Premium Grease{}
+- +Shimano Premium Grease{}
 - Nitril Gloves
-- #Carbon Fitting Paste (came with the Strael frame){}
+- +Carbon Fitting Paste (came with the Strael frame){}
 - 4 mm Hex Key
 - 5 mm Hex Key
 - 6 mm Hex Key
-- #Hazet 5280-3CT Torque Wrench{}
+- +Hazet 5280-3CT Torque Wrench{}
 
 ### Steps
 
@@ -272,7 +272,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
 
 ## Install the calipers
 
-The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake / Dual Control Lever (Di2) R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with them whatever you like without the risk of spilling hydraulic oil.
+The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake + Dual Control Lever (Di2) R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with them whatever you like without the risk of spilling hydraulic oil.
 
 I have the wheels attached to the bike prior to installing the calipers.
 
@@ -369,7 +369,7 @@ Also make sure to use blind plugs for the ports you don´t use.
 - Hazet 5280-3CT Torque Wrench
 - Di2 Plug Tool for EW-SD300 wires (TL-EW300)
 - 5 mm Hex Key
-- #2 mm Hex Key{}
+- +2 mm Hex Key{} +
 
 ### Rear derailleur
 
@@ -400,15 +400,15 @@ The final position of the front derailleur cannot be set at this point because t
 
 1. Connect the two shifters with each other with the wire that´s routed through the handlebars. ==Use the lower satellite ports of the two shifters!==
 2. Then connect the wire dangling out of the down tube with the right shifter by ==plugging it into the upper E-Tube port of the right shifter==.
-3. Charge the battery with an USB AC charging adapter. The battery will be charged after 1.5 to 2 hours. Refer to the @[<cite>Rear Derailleur (Di2) / Battery Charger</cite>](https://si.shimano.com/#/en/iUM/3GK0A/charg_ing_method-title/TOC_CHARG_ING_METHOD-TITLE){} handbook.
+3. Charge the battery with an USB AC charging adapter. The battery will be charged after 1.5 to 2 hours. Refer to the @[<cite>Rear Derailleur (Di2) + Battery Charger</cite>](https://si.shimano.com/#/en/iUM/3GK0A/charg_ing_method-title/TOC_CHARG_ING_METHOD-TITLE){} handbook.
 
 ## Verify Di2
 
-With all Di2 wires connected and the battery charged the Di2 system is ready to be paired. As described in [Rear Derailleur (Di2) Dealer Manual R9250](https://si.shimano.com/#/en/iDM/RARD010) under *System pairing (wired)* this is done by pressing and holding the function button of the rear derailleur until the LED changes from yellow to flashing blue (5 - 8 seconds). The LED flashes green if system pairing succeeds, or flashes red if pairing fails.
+With all Di2 wires connected and the battery charged the Di2 system is ready to be paired. As described in [Rear Derailleur (Di2) Dealer Manual R9250](https://si.shimano.com/#/en/iDM/RARD010) under +System pairing (wired)* this is done by pressing and holding the function button of the rear derailleur until the LED changes from yellow to flashing blue (5 - 8 seconds). The LED flashes green if system pairing succeeds, or flashes red if pairing fails.
 
 After pairing, signals sent from the shifters to the derailleurs should be functioning. Try the shift switches of the two shifters and verify the derailleurs are moving each in their both shifting directions.
 
-Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-tube/project.html){} onto your phone. The app will be necessary later to make gear shifting adjustments and to install software updates into the gearing system.
+Download and install the +[E-Tube Project App](https://bike.shimano.com/en-US/e-tube/project.html){} onto your phone. The app will be necessary later to make gear shifting adjustments and to install software updates into the gearing system.
 
 1. Press the function button of the rear derailleur until the LED flashes blue (0.5 - 2 seconds). The bicycle side is ready to connect. The unit name is displayed on the E-TUBE PROJECT screen.
 2. Start the E-Tube App (Bluetooth must be activated on the phone).
@@ -420,7 +420,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
 
 - Wera Click-Torque X 3 Torque Wrench
 - 24 mm Hex Socket for the Torque Wrench
-- #Pedro´s Bottom Bracket Socket for 16-notch x 44mm External Bearing BB Cups and Disc Brake Lockrings{}
+- +Pedro´s Bottom Bracket Socket for 16-notch x 44mm External Bearing BB Cups and Disc Brake Lockrings{}
 - Isopropyl Alcohol
 - Anti-seize
 - Paper Towel
@@ -459,8 +459,8 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
 
 ### Tools
 
-- #10 mm Hex Key{}
-- #2.5 mm Hex Key{}
+- +10 mm Hex Key{}
+- +2.5 mm Hex Key{}
 - Anti-seize
 - Wera Click-Torque X 3 Torque Wrench
 
@@ -497,7 +497,7 @@ Download and install the #[E-Tube Project App](https://bike.shimano.com/en-US/e-
 
 ### Tools
 
-- #8 mm Hex Key{}
+- +8 mm Hex Key{}
 - Hazet 5280-3CT Torque Wrench
 
 ### Steps
@@ -512,9 +512,9 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 
 ### Tools
 
-- #TOPEAK All Speeds Chain Tool{}
-- #Radon Foldable Chain Holder{}
-- #Quick Link Chain Lock Tool{}
+- +TOPEAK All Speeds Chain Tool{}
+- +Radon Foldable Chain Holder{}
+- +Quick Link Chain Lock Tool{}
 
 ### Steps
 
@@ -526,8 +526,8 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 ## Adjust gear shifting
 
 ### Tools
-- #Shimano GG Adjustment Gauge to set the B-screw of the Rear Derailleur{}, this will come packaged with the derailleur
-- #Phone with E-Tube Project App installed{}
+- +Shimano GG Adjustment Gauge to set the B-screw of the Rear Derailleur{}, this will come packaged with the derailleur
+- +Phone with E-Tube Project App installed{}
 - 2 mm Hex Key
 - 5 mm Hex Key
 - Hazet 5280-3CT Torque Wrench
@@ -550,11 +550,11 @@ The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://
 ### Tools
 
 - 4 mm Hex Key
-- #8 mm Wrench{}
-- Hazet 5280-3CT Torque Wrench with #8 mm Torque Wrench Insert{}
-- #Park Tool  HBT-1 Hydraulic Barb Tool{}
-- #Isopropyl Alcohol{}
-- #Cleaning Paper{}
+- +8 mm Wrench{}
+- Hazet 5280-3CT Torque Wrench with +8 mm Torque Wrench Insert{}
+- +Park Tool  HBT-1 Hydraulic Barb Tool{}
+- +Isopropyl Alcohol{}
+- +Cleaning Paper{}
 - Connector Insert for the Brake Hose (SM-BH90-JK-SSR)
 
 <figure>

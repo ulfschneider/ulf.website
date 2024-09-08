@@ -565,7 +565,11 @@ module.exports = {
       .use(markdownItEmoji)
       .use(markdownItInclude)
       .use(markdownItGitHubAlerts)
-      .use(markdownItCooklang);
+      .use(markdownItCooklang, {
+        cookware: {
+          startWith: "+", //do not interfere with the #, which is used for tags in iA Writer
+        },
+      });
 
     return mdlib;
   },
