@@ -33,5 +33,5 @@ Peter Sagan´s bike is wrapped like that and you can see in the below video how 
 </figure>
 
 > [!Note]Side note
-> Recently I started liking the [Fizik Vento Solocush Tacky](https://www.fizik.com/eu_en/vento-solocush-tacky.html) bartape. It´s very good to wrap, has a soft, tacky, and light cushioned feel, and the bar end plugs stay firm in place. Fizik is saying it´s 2.7 mm thick, but it feels thinner, which is good in my opinion. 
+> Recently I started to like the [Fizik Vento Solocush Tacky](https://www.fizik.com/eu_en/vento-solocush-tacky.html) bartape. It´s very good to wrap, has a soft, tacky, and light cushioned feel, and the bar end plugs stay firm in place. Fizik is saying it´s 2.7 mm thick, but it feels thinner, which is good in my opinion. 
 
