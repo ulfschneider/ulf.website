@@ -6,12 +6,12 @@ hero: /img/strael/strael-3-0-parts.jpg
 outline: true
 ---
 
-
 [[toc]]
 
 ## Wheels
 
 ### Tools
+
 - +Wera Click-Torque X 3 Torque Wrench{}
 - +24 mm Hex Socket for the Torque Wrench{}
 - +Shimano TL-LR15 Cassette Removal Tool for HG Cassettes and CenterLock Brake Rotors{}
@@ -44,10 +44,9 @@ outline: true
 - +Tesa Crepe{}
 - +Electrical Tape{}
 
-
 ### Steps
 
-I use the following process for the wiring: Pushing the Di2 wire through a tube into the desired direction. When the Di2 wire plug becomes visible at the target opening I use my do-it-yourself routing tool to fish the Di2 wire out of the target opening and pull the Di2 wire by hand  further. It´s not necessary to have anything more.
+I use the following process for the wiring: Pushing the Di2 wire through a tube into the desired direction. When the Di2 wire plug becomes visible at the target opening I use my do-it-yourself routing tool to fish the Di2 wire out of the target opening and pull the Di2 wire by hand further. It´s not necessary to have anything more.
 
 1. **Battery:** The wiring starts by inserting the Di2 battery into the seatpost. The Ritchey Battery Mount surrounds the battery nicely and fits well into the Ritchey seat post.
    <figure>
@@ -170,7 +169,7 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
 
 I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.globalcyclingnetwork.com/video/how-to-cut-a-road-bike-steerer-tube){} as presented by the Global Cycling Network. After trying out the desired stem height I draw a line with a pencil around the 5 mm spacer that sits on top of the stem. Then I take away the wheels and disassemble the fork from the bike frame.
 
-1. For the compression bung to work properly I have to cut away  3 mm in addition. Make sure it´s exactly 3 mm because cutting only additional 2 mm is too less and will lead to the compression bung not function. If you cut 2 mm initially you can imagine it´s difficult to cut another 1 mm. I know what I´m talking about because that´s exactly what happened to me.
+1. For the compression bung to work properly I have to cut away 3 mm in addition. Make sure it´s exactly 3 mm because cutting only additional 2 mm is too less and will lead to the compression bung not function. If you cut 2 mm initially you can imagine it´s difficult to cut another 1 mm. I know what I´m talking about because that´s exactly what happened to me.
    <figure>
    <img src="/img/strael/steerer-cut-lines.jpg" alt="A steerer tube with three pencil lines to identify the final cut line">
    <figcaption>On this image you see three lines on the steerer. From top to bottom:
@@ -215,7 +214,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
 
 ### Steps
 
-1. I´m applying a thin layer of grease to the headset top cup. The upper bearing will be placed inside the greased cup. It´s only a thin layer because too much grease would attract dirt and the Hope headset is nicely sealed with two rubbers therefore I think  not much grease is required to protect the headset – I use it only as an anti corrosive and to simplify getting the bearing out of the top cup if maintenance would be required. The bearing itself is a greased cartridge bearing that doesn´t require any additional grease.
+1. I´m applying a thin layer of grease to the headset top cup. The upper bearing will be placed inside the greased cup. It´s only a thin layer because too much grease would attract dirt and the Hope headset is nicely sealed with two rubbers therefore I think not much grease is required to protect the headset – I use it only as an anti corrosive and to simplify getting the bearing out of the top cup if maintenance would be required. The bearing itself is a greased cartridge bearing that doesn´t require any additional grease.
    <figure>
    <img src="/img/strael/shimano-grease.jpg" alt="A plastic can with Shimano quality grease">
    <figcaption>The Shimano grease I´m using. You don´t need much of it.</figcaption>
@@ -239,7 +238,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
    <figcaption>I´m wiping away any excess grease carefully</figcaption>
    </figure>
 4. The headset bottom cup will also receive a thin layer of grease, similar to the top cup.
-5. With the bottom bearing onto the fork steerer tube I insert the fork into the frame and slide the coned ring, the top cup shim,  and the headseat top cap over the steerer tube.
+5. With the bottom bearing onto the fork steerer tube I insert the fork into the frame and slide the coned ring, the top cup shim, and the headseat top cap over the steerer tube.
     <figure>
    <img src="/img/strael/one-headset-shim.jpg">
    <figcaption>After the fork is inserted into the head tube, the coned ring, the top cup shim, and the headset top cap go from bottom to top order onto the steerer</figcaption>
@@ -316,7 +315,7 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <figcaption>C-Clips</figcaption>
    </figure>
 4. From the upper end of the down tube I push the Di2 wire completely through a 50 cm long shrink tube. It´s important to begin with the Di2 wire first and not with the brake hose!
-5. Then I push the brake hose through the shrink tube. The shrink tube has a diameter of 6.4 mm →  3.2 mm. It´s not required to shrink the tube and keep the 6.4 mm in diameter. If you leave it like that it will just look fine in my view.
+5. Then I push the brake hose through the shrink tube. The shrink tube has a diameter of 6.4 mm → 3.2 mm. It´s not required to shrink the tube and keep the 6.4 mm in diameter. If you leave it like that it will just look fine in my view.
    <figure>
    <div class="split">
    <img src="/img/strael/shrink-tube-sign.jpg" alt="A sign indicating the type of shrink type">
@@ -356,7 +355,6 @@ The Strael dropout is prepared to take a 140 mm rotor but I will run 160 mm roto
    <img src="/img/strael/taped-brake-hoses.jpg">
    <figcaption>The brake hoses are put into position</figcaption>
    </figure>
-
 
 ## Install the derailleurs and complete the wiring
 
@@ -432,7 +430,7 @@ Download and install the +[E-Tube Project App](https://bike.shimano.com/en-US/e-
    <img src="/img/strael/clean-shell.jpg" alt="A hand with a paper tower cleaning the bottom bracket shell">
    <figcaption>Preparing the bottom bracket shell with isopropyl alcohol</figcaption>
    </figure>
-2. Tuck away the Di2 wires and push the plastic cover of the Rotor BB1 bottom bracket into the bottom bracket shell. Be careful with the Di2 wires. My first attempt was to install the Shimano Dura-Ace Bottom Bracket but the plastic cover that would shield the axle is a millimeter too wide in diameter which made it impossible for me to get it  past the Di2 wires into its place. The Rotor BB1 plastic cover is ever so slightly smaller and therefore works just fine.
+2. Tuck away the Di2 wires and push the plastic cover of the Rotor BB1 bottom bracket into the bottom bracket shell. Be careful with the Di2 wires. My first attempt was to install the Shimano Dura-Ace Bottom Bracket but the plastic cover that would shield the axle is a millimeter too wide in diameter which made it impossible for me to get it past the Di2 wires into its place. The Rotor BB1 plastic cover is ever so slightly smaller and therefore works just fine.
    <figure>
    <img src="/img/strael/insert-plastic-cover.jpg" alt="A hand holding the Rotor BB1 plastic cover aside of the bottom bracket shell">
    <figcaption>Insert the Rotor BB1 plastic cover</figcaption>
@@ -503,6 +501,7 @@ Download and install the +[E-Tube Project App](https://bike.shimano.com/en-US/e-
 ### Steps
 
 There is not much. I use anti-seize on the pedal threads and screw them into the crankarms. I´m aware the pedals should be torqued to 30 - 40 Nm generally but I torque it to 15 Nm which is already so tight that loosen it later is sometimes difficult.
+
 <figure>
 <img src="/img/strael/pedals.jpg" alt="A hand holding two Shimano XTR pedals">
 <figcaption>The pedals I´m using on all of my bikes</figcaption>
@@ -526,6 +525,7 @@ There is not much. I use anti-seize on the pedal threads and screw them into the
 ## Adjust gear shifting
 
 ### Tools
+
 - +Shimano GG Adjustment Gauge to set the B-screw of the Rear Derailleur{}, this will come packaged with the derailleur
 - +Phone with E-Tube Project App installed{}
 - 2 mm Hex Key
@@ -552,7 +552,7 @@ The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://
 - 4 mm Hex Key
 - +8 mm Wrench{}
 - Hazet 5280-3CT Torque Wrench with +8 mm Torque Wrench Insert{}
-- +Park Tool  HBT-1 Hydraulic Barb Tool{}
+- +Park Tool HBT-1 Hydraulic Barb Tool{}
 - +Isopropyl Alcohol{}
 - +Cleaning Paper{}
 - Connector Insert for the Brake Hose (SM-BH90-JK-SSR)
@@ -566,7 +566,7 @@ The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://
 
 Repeat the steps for each brake hose.
 
-1. Measure the desired length of the brake hoses. The hose will be inserted 21 mm into the connector port of the lever - consider that and make two marks on the hose: one where to cut and another witness mark 21 mm behind the cut mark. I do it so that  there is some slack around the handlebars and at the same time the hoses are not rubbing each other or a part of the bike.
+1. Measure the desired length of the brake hoses. The hose will be inserted 21 mm into the connector port of the lever - consider that and make two marks on the hose: one where to cut and another witness mark 21 mm behind the cut mark. I do it so that there is some slack around the handlebars and at the same time the hoses are not rubbing each other or a part of the bike.
    <figure>
    <img src="/img/strael/measure-brake-hose-length.jpg" alt="The handlebars with two loose brake hoses only fixated with Tesa Crepe">
    <figcaption>The bike prepared for measuring</figcaption>
@@ -599,10 +599,12 @@ Repeat the steps for each brake hose.
 ## Wrap the handlebars
 
 ### Tools
+
 - Scissors
 - Electrical Tape
 
 ### Steps
+
 I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://youtu.be/5MzIiv7pewE){}. Because I´m using Pro Race Comfort Bartape with an adhesive silicone strip rewrapping to get the perfect result is no issue. The tape could be a little bit longer. Unfortunately I cannot install the Wolf Tooth Bar End Plugs because they do not stay in place which might be because the bartape is a bit thicker. The plugs that come with the Pro Race Comfort bartape are working fine instead.
 
 <figure>
@@ -613,6 +615,7 @@ I´m following @[<cite>How to Wrap Handlebars for Road Bikes</cite>](https://you
 ## Install the bell
 
 ### Tools
+
 - 2.5 mm Hex Key
 
 ### Steps
@@ -622,6 +625,7 @@ I´m following @[<cite>Spurcycle Bell Install</cite>](https://vimeo.com/spurcycl
 ## Install the bottle cages
 
 ### Tools
+
 - 4 mm Hex Key
 
 ### Steps
@@ -633,10 +637,10 @@ Straight forward. The Strael frame comes with suitable cage bolts which even inc
 <figcaption>The King Cages – they are satisfyingly light</figcaption>
 </figure>
 
-
 ## Protect the chainstay
 
 ### Tools
+
 - Scissors
 - Isopropyl Alcohol
 - Paper Towels

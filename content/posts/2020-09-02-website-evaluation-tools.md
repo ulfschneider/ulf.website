@@ -2,7 +2,8 @@
 title: Website evaluation tools
 tags: accessibility
 ---
-<figure class="bleedr">
+
+<figure class="heror">
 <table>
 <caption>Tools to validate a website for accessibility.</caption>
 <colgroup>
