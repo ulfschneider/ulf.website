@@ -1,8 +1,15 @@
 :root {
-  --bleed: min(
+  --hero: min(
     max(
-      -1 * (theme(space.md) - theme(space.rg)),
-      -0.5 * (100vw - theme(space.rg) - 2 * theme(space.ryt))
+      -1 * (theme(space.md) - var(--scrollbar-width) - theme(space.rg)) + theme(space.ryt),
+      -0.5 * (100vw - var(--scrollbar-width) - theme(space.rg)) + theme(space.ryt)
+    ),
+    0px
+  );
+
+  --superhero: min(
+    calc(
+      -0.5 * (100vw - var(--scrollbar-width) - theme(space.rg)) + theme(space.ryt)
     ),
     0px
   );
@@ -78,19 +85,58 @@
 
   .hero,
   .hero-layout {
-    margin-left: var(--bleed);
-    margin-right: var(--bleed);
-
-    > img {
+    margin-left: var(--hero);
+    margin-right: var(--hero);
+    > picture {
+      @apply block;
+      > img {
+        @apply block object-center mx-auto;
+      }
+    }
+    > iframe,
+    > picture > img,
+    > img,
+    > table,
+    > div.scroll-table > table {
       @apply object-center mx-auto;
     }
   }
+
+  .superhero,
+  .superhero-layout {
+    margin-left: var(--superhero);
+    margin-right: var(--superhero);
+
+    > picture {
+      @apply block;
+      > img {
+        @apply block object-center mx-auto;
+      }
+    }
+    > iframe,
+    > picture > img,
+    > img,
+    > table,
+    > div.scroll-table > table {
+      @apply object-center mx-auto;
+    }
+  }
+
   .herol,
   .herol-layout {
-    margin-left: var(--bleed);
+    margin-left: var(--hero);
+  }
+
+  .superherol,
+  .superherol-layout {
+    margin-left: var(--superhero);
   }
   .heror,
   .heror-layout {
-    margin-right: var(--bleed);
+    margin-right: var(--hero);
+  }
+  .superheror,
+  .superheror-layout {
+    margin-right: var(--superhero);
   }
 }

@@ -82,6 +82,10 @@
     button.sotable.column .indicator {
       @apply ml-ryt-sm text-sm;
     }
+
+    caption > * + .indicator {
+      @apply !mt-ryt;
+    }
   }
 
   /* tags */

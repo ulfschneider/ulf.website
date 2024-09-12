@@ -135,7 +135,7 @@ For the weight of Shimano's brake hoses and their electronic wiring, I found som
 
 The crankset weights are without Powermeter. The weights of the SRAM cranks are from [r2-bike](https://r2-bike.com/). Please note the AXS Red crankset is _more than 100 grams lighter than the Dura-Ace_ cranks. I don't know what part attributes to the smaller chainrings of AXS gearing, and what to the carbon crank arms. Anyway, that weight saving is impressive.
 
-<div class="hero">
+<div class="superhero">
 <table>
   <caption><strong>Weight comparison of first and second tier electronic groupsets from Shimano and SRAM</strong><p>Weights are provided in gram.</p>
 </caption>
@@ -153,8 +153,8 @@ The crankset weights are without Powermeter. The weights of the SRAM cranks are 
 
 The weight of the Shimano groupsets is competitive, making a decision for either one of Ultegra or Dura-Ace a good move. The weight-saving of Dura-Ace compared to Ultegra is 249g at an additional cost of 1660 €, judged by the pricing for the single components (not entire groupsets) of [bike24](https://www.bike24.de/radfahren/teile/fahrradschaltung/schaltgruppen?manufacturerId%5B0%5D=931) in January 2022. Let's have a look at the details:
 
-<div class="hero">
-<table class="mx-auto">
+<div class="superhero">
+<table>
      <caption>
       <strong>Shimano groupset comparison in terms of weight and cost</strong>
       <p>Weights are provided in gram. Parts that are contained in both groupsets, like wiring and battery, are omitted.</p>
@@ -267,8 +267,8 @@ Rotor cranksets don't have bonded materials as Shimano cranksets. Instead, they 
 
 Please note that I only found the total weights of the Shimano cranksets for the below-given weight comparison without differentiating into their parts. The Rotor ALDHU carbon cranks are not included in the comparison because the carbon cranks are only available for a 30mm axle. I'm only comparing compact chainring sizes for Rotor and Shimano because they are the smallest to get from Shimano.
 
-<div class="hero">
-<table class="mx-auto">
+<div class="superhero">
+<table>
   <caption>
   <strong>Weight comparison of cranksets</strong>
   <p>Weights are provided in grams. Sources of data:</p>
@@ -300,8 +300,8 @@ Please note that I only found the total weights of the Shimano cranksets for the
 
 ## The wheels
 
-<div class="hero">
-<table class="mx-auto">
+<div class="superhero">
+<table>
   <caption>
     <strong>My shortlist of wheels</caption>
   </caption>
@@ -371,8 +371,8 @@ I ride Specialized Phenom Expert on most of my bikes, and that saddle is working
 
 It's a steel frame therefore metal cages should complement it. Ideally, titanium to save weight. The price of these cages is ridiculous when compared to the price of a crankset, for example.
 
-<div class="hero">
-<table class="mx-auto">
+<div class="superhero">
+<table>
     <caption>
       <strong>An overview of titanium bottle cages</strong>
       <p>Weights are in grams.</p>

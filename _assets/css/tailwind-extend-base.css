@@ -10,6 +10,20 @@
     margin: 0;
   }
 
+  /* scrollbar */
+  :root {
+    --scrollbar-width: var(--ryt);
+  }
+
+  * {
+    scrollbar-width: var(--scrollbar-width);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+  }
+
   /* focus */
   *:focus {
     @apply outline-none;
@@ -291,15 +305,15 @@
     @apply my-ryt-xl border-collapse border-y border-y-meta;
 
     caption {
-      @apply py-ryt-sm no-indent text-left;
+      @apply py-ryt-sm no-indent text-left text-balance text-sm font-mono max-w-rg;
     }
 
     th {
-      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-bold leading-tight;
+      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-bold leading-snug max-w-rg;
     }
 
     td {
-      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-normal leading-tight;
+      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-normal leading-snug max-w-rg;
     }
 
     thead {
@@ -330,14 +344,6 @@
 
     figcaption {
       @apply max-w-rg my-ryt-sm text-balance font-mono text-sm;
-    }
-  }
-
-  figure:not(figure figure):not(main * figure):has(iframe, video) {
-    @apply max-sm:-mx-ryt;
-
-    figcaption {
-      @apply max-sm:mx-ryt;
     }
   }
 
