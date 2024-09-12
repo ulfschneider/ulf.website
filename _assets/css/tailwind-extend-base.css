@@ -309,11 +309,11 @@
     }
 
     th {
-      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-bold leading-snug max-w-rg;
+      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-bold max-w-rg;
     }
 
     td {
-      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-normal leading-snug max-w-rg;
+      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-normal max-w-rg;
     }
 
     thead {
