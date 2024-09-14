@@ -141,7 +141,7 @@
   }
 
   details > summary::before {
-    @apply rg:absolute rg:-ml-ryt-lg rg:w-ryt-lg rg:block not-italic font-semibold;
+    @apply rg:absolute rg:-ml-ryt-lg rg:w-ryt-lg rg:block not-italic font-bold;
     content: "+";
   }
   details[open] > summary::before {
@@ -284,7 +284,9 @@
     @apply object-contain object-left dark:brightness-90 dark:contrast-125 dark:filter;
   }
 
-  img:not(.hero img):not(.heror img):not(.herol img) {
+  img:not(.hero img):not(.superhero img):not(.heror img):not(
+      .superheror img
+    ):not(.herol img):not(.superherol img) {
     @media (min-width: theme(screens.sm)) {
       max-height: 80vh;
     }
