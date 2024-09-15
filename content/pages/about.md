@@ -12,7 +12,7 @@ id: about
 
 Welcome! My name is Ulf Schneider and this is my website. I´m a software developer and agile coach.
 
-At this place I´m taking notes about things that resonate with me, like web development, [web accessibility](/2020-08-21-my-approach-to-accessibility/), [agile software development](/blog/agile/), and fast bicycles. My most recent _riding tool_ is a [Fairlight Strael](/2022-04-14-fairlight-strael-build-log/) steel-bike build.
+At this place I´m taking notes about things that resonate with me, like web development, [web accessibility](/2020-08-21-my-approach-to-accessibility/), [agile software development](/blog/agile/), and fast bicycles. My most recent _riding tool_ is a [Fairlight Strael](/2024-09-14-strael-morph/) steel-bike build.
 
 Writing this blog is helping me [to clarify my thoughts](/2023-05-18-blogging/). Over time, it became the _external memory_ of topics I want to have in short reach. Because I get so much inspiration and valuable information from people who are sharing their thoughts via their blogs, I also want to contribute by making available what I have. You might find that useful, or not.
 
