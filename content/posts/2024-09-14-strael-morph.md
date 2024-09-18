@@ -11,7 +11,7 @@ herocaption: Photo by Emil
 
 ## Everything must change
 
-My Strael is not the same it was [when I originally built it up](/2022-04-14-fairlight-strael-build-log/). My understanding changed, my abilities changed, and my Strael followed. Change!^[This is not directly related, but I relate it now: [<cite>Everything must change</cite>](https://youtu.be/zoLFxzNK4Lk?si=b_JYC-uS-U0JjdXF) is a wonderful piece written by Benard Ighner and was first released by Quincy Jones, followed by many others. This version is conducted by master Quincy himself and sung by the great singer Mick Hucknall together with Chaka Khan. I don´t know the name of the excellent trombone soloist. It is a goosebump guarantee for me.] While the frame remained, I adjusted:
+My Strael is not the same it was [when I originally built it up](/2022-04-14-fairlight-strael-build-log/). My understanding changed, my abilities changed, and my Strael followed.^[This is not directly related, but I relate it now: [<cite>Everything must change</cite>](https://youtu.be/zoLFxzNK4Lk?si=b_JYC-uS-U0JjdXF) is a wonderful piece written by Benard Ighner and was first released by Quincy Jones, followed by many others. This version is conducted by master Quincy himself and sung by the great singer Mick Hucknall together with Chaka Khan. I don´t know the name of the excellent trombone soloist. It is a goosebump guarantee for me.] While the frame remained, I adjusted:
 
 - Groupset (to shift mechanical)
 - Stem (to prolongue by 2 cm)
