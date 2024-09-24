@@ -139,7 +139,7 @@ module.exports = {
   navNewer: {
     label: "Newer",
     id: "nav-newer",
-    kbd: "–",
+    kbd: "-",
   },
   navOldest: {
     label: "Oldest",
