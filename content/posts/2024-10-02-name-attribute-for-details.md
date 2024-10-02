@@ -4,5 +4,7 @@ tags: code
 ---
 All major browsers support the `name` attribute for the `<details>` element. 
 
-> [The `name` attribute] … groups `<details>` elements, where only one element within a group can be open at a time. This lets you create an exclusive accordion without using JavaScript.
-> <footer><a href="https://web.dev/blog/web-platform-09-2024">New to the web platform in September</a></footer>
+> This attribute enables multiple `<details>` elements to be connected, with only one open at a time. This allows developers to easily create UI features such as accordions without scripting.
+> The name attribute specifies a group name — give multiple `<details>` elements the same name value to group them. Only one of the grouped `<details>` elements can be open at a time — opening one will cause another to close. 
+> `<details>` elements don't have to be adjacent to one another in the source to be part of the same group.
+> <footer><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details"><cite>The Details disclosure element</cite></a></footer>
