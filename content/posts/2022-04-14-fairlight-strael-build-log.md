@@ -136,7 +136,7 @@ Before cutting the steerer tube I assemble the fork into the frame and put as ma
    <img src="/img/strael/stem-spacers.jpg">
    <figcaption>Lifting the stem by 3 cm</figcaption>
    </figure>
-2. **Handlebars with shifters:** Please refer to the @[<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10){} to see how you can mount the shifters to the handlebars. I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolongue a straight top line for the upper handle bar.
+2. **Handlebars with shifters:** Please refer to the @[<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10){} to see how you can mount the shifters to the handlebars. I adjust the shifters like you see in the image. This way the brake lever has just the right distance to the drop bar hand position and the shifter hoods prolonge a straight top line for the upper handle bar.
    <figure>
    <img src="/img/strael/shifter-top-position.jpg">
    <figcaption>Finding a shifter position</figcaption>
