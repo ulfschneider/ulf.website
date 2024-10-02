@@ -1,5 +1,5 @@
 ---
-title: <code>name</code> attribute for the <code><details></code> element
+title: <code>name</code> attribute for the <code>details</code> element
 tags: code
 ---
 All major browsers support the `name` attribute for the `<details>` element. 
