@@ -141,7 +141,7 @@ The tablist container is selected by `[role="tablist"]`. Basic settings  of the 
 : will wrap the tab into a new line if there is not sufficient space left anymore, this is important to visualize the tab content
 
 `align-items:flex-end`
-: will move the content of each tab label to the bottom, in case there tab labels with different height
+: will move the content of each tab label to the bottom, in case there are tab labels of different height
 
 With 
 
@@ -165,7 +165,7 @@ The assignment
 }
 ```
 
-is targeting the `input[type="radio"]` elements inside the tab labels. They are only visually hidden to allow them receiving a keyboard focus. To then indicate the keyboard focus with an outline, the following assignment is required:
+is targeting the `input[type="radio"]` elements inside the tab labels. They are only visually hidden to allow them receiving a keyboard focus. In that case, to indicate the keyboard focus with an outline, the following assignment is required:
 
 ```css
 [role="tablist"] > label[role="tab"]:focus-within {
@@ -200,7 +200,7 @@ The selected tab is styled by
 }
 ```
 
-It´s important to have a negative bottom margin of the same size as the border width for every tab: `margin-bottom: calc(-1 * var(--tab-border-width))`. The solid background for the active tab, with `background: var(--tab-label-active-background)`, as well plays a role here. Please refer to the styling of the tab content to understand why that´s the case.
+It´s important to have a negative bottom margin of the same size as the used border width for every tab: `margin-bottom: calc(-1 * var(--tab-border-width))`. The solid background for the active tab, with `background: var(--tab-label-active-background)`, as well plays a role here. Please refer to the styling of the tab content to understand why that´s the case.
 
 ### Styling the tab content
 
