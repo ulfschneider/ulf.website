@@ -65,8 +65,8 @@ The `input` of the first tab has the attribute `checked` to visualize the conten
 
 ```css
 [role="tablist"] {
-  --tab-label-x-padding: 0.5em;
-  --tab-label-y-padding: 0.5em;
+  --outline: auto;
+  --tab-label-padding: 0.5em;
   --tab-label-radius: 0.15em;
   --tab-label-min-width: 4em;
   --tab-label-active-background: white;
@@ -75,9 +75,9 @@ The `input` of the first tab has the attribute `checked` to visualize the conten
   --tab-border-color: currentColor;
   --tab-border-width: 1px;
 
-  display: flex;  
-  flex-wrap: wrap;
+  display: flex;
   align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 /* hide everything, except the tab labels */
@@ -94,12 +94,13 @@ The `input` of the first tab has the attribute `checked` to visualize the conten
 
 /* when using the tab key on the keyboard to focus into the tablist, indicate the default outline */
 [role="tablist"] > label[role="tab"]:focus-within {
-  outline-style: auto;
+  outline: var(--outline);
+  outline-offset: calc(-1 * var(--tab-label-padding));
 }
 
 /* tab label */
 [role="tablist"] > label[role="tab"] {
-  padding: var(--tab-label-y-padding) var(--tab-label-x-padding);
+  padding: var(--tab-label-padding) var(--tab-label-padding);
   min-width: var(--tab-label-min-width);
   margin-bottom: calc(-1 * var(--tab-border-width));
   border-left: var(--tab-border-width) solid transparent;
@@ -169,7 +170,8 @@ is targeting the `input[type="radio"]` elements inside the tab labels. They are 
 
 ```css
 [role="tablist"] > label[role="tab"]:focus-within {
-  outline-style: auto;
+  outline: var(--outline);
+  outline-offset: calc(-1 * var(--tab-label-padding));
 }
 ```
 
@@ -177,9 +179,8 @@ Each tab label receives it´s basic styling through
 
 ```css
 [role="tablist"] > label[role="tab"] {
-  padding: var(--tab-label-y-padding) var(--tab-label-x-padding);
+  padding: var(--tab-label-padding) var(--tab-label-padding);
   min-width: var(--tab-label-min-width);
-  position: relative;
   margin-bottom: calc(-1 * var(--tab-border-width));
   border-left: var(--tab-border-width) solid transparent;
   border-top: var(--tab-border-width) solid transparent;
