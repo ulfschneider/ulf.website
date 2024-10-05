@@ -63,6 +63,9 @@ The `input` of the first tab has the attribute `checked` to visualize the conten
 
 ## The CSS
 
+> [!Note] Oct 5, 2024
+> I´ve added styling to use the correct outline color for focused tabs with Webkit browsers and non-Webkit browsers.
+
 ```css
 [role="tablist"] {
   --outline: auto Highlight;
