@@ -65,7 +65,8 @@ The `input` of the first tab has the attribute `checked` to visualize the conten
 
 ```css
 [role="tablist"] {
-  --outline: auto;
+  --outline: auto Highlight;
+  --webkit-outline: auto -webkit-focus-ring-color;
   --tab-label-padding: 0.5em;
   --tab-label-radius: 0.15em;
   --tab-label-min-width: 4em;
@@ -95,6 +96,7 @@ The `input` of the first tab has the attribute `checked` to visualize the conten
 /* when using the tab key on the keyboard to focus into the tablist, indicate the default outline */
 [role="tablist"] > label[role="tab"]:focus-within {
   outline: var(--outline);
+  outline: var(--webkit-outline);
   outline-offset: calc(-1 * var(--tab-label-padding));
 }
 
@@ -166,11 +168,12 @@ The assignment
 }
 ```
 
-is targeting the `input[type="radio"]` elements inside the tab labels. They are only visually hidden to allow them receiving a keyboard focus. In that case, to indicate the keyboard focus with an outline, the following assignment is required:
+is targeting the `input[type="radio"]` elements inside the tab labels. They are only visually hidden to allow them receiving a keyboard focus. In that case, to indicate the keyboard focus with an outline, the following assignment, which must a use a dedicated styling for webkit browsers, is required:
 
 ```css
 [role="tablist"] > label[role="tab"]:focus-within {
   outline: var(--outline);
+  outline: var(--webkit-outline);
   outline-offset: calc(-1 * var(--tab-label-padding));
 }
 ```
