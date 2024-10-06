@@ -40,8 +40,7 @@ permalink: "{{site.search.url}}"
       parent.appendChild(article);
       if (entry.meta.title && entry.meta.title != "notitle") {
         let title = document.createElement("h2");
-        title.classList =
-          "mt-0 font-bold text-base font-body leading-normal my-0";
+        title.classList = "mt-0 font-bold text-base font-body my-0";
         article.appendChild(title);
 
         let linkToArticle = document.createElement("a");
@@ -53,7 +52,7 @@ permalink: "{{site.search.url}}"
 
       if (entry.meta.date) {
         let aside = document.createElement("aside");
-        aside.classList = "text-sm my-ryt-xs leading-normal";
+        aside.classList = "text-sm my-ryt-xs";
         article.appendChild(aside);
 
         let date = document.createElement("time");
@@ -82,7 +81,7 @@ permalink: "{{site.search.url}}"
 
       if (entry.excerpt) {
         let excerpt = document.createElement("p");
-        excerpt.classList = "my-ryt-xs leading-normal";
+        excerpt.classList = "my-ryt-xs";
         article.appendChild(excerpt);
         excerpt.innerHTML = entry.excerpt;
         excerpt.appendChild(document.createTextNode(" …"));
