@@ -338,7 +338,11 @@
   main > .scroll-table,
   main > table,
   main > pre {
-    @apply heror;
+    @apply superheror;
+  }
+
+  pre {
+    @apply overflow-x-auto;
   }
 
   figure {

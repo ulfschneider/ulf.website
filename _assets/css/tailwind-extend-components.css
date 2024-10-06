@@ -113,8 +113,8 @@
       @apply font-sans mb-ryt-sm inline-block text-sm border border-current px-ryt-xs;
     }
 
-    code {
-      @apply block;
+    & > code {
+      @apply whitespace-pre block;
     }
   }
 
