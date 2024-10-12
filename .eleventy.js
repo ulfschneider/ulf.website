@@ -208,6 +208,7 @@ function addFilters(eleventyConfig) {
   eleventyConfig.addFilter("humanDateTime", filters.humanDateTime);
   eleventyConfig.addFilter("isoDate", filters.isoDate);
   eleventyConfig.addFilter("escapeHtmlQuotes", filters.escapeHtmlQuotes);
+  eleventyConfig.addFilter("itemFromUrl", filters.itemFromUrl);
   eleventyConfig.addFilter("authorEmail", filters.authorEmail);
   eleventyConfig.addFilter("authorName", filters.authorName);
   eleventyConfig.addFilter(

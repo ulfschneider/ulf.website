@@ -1,0 +1,21 @@
+<div class="my-ryt-2xl">
+  {%- if topicstitle -%}
+  <p>{{topicstitle}}</p>
+  {%- endif -%}
+  <div class="superheror grid my-ryt-lg gap-ryt-lg grid-cols-1 sm:grid-cols-2">
+    {%- for topic in topics -%}
+    <section>
+      <h2 class="my-0 text-base font-bold font-body">{{topic.title}}</h2>
+      {%- for url in topic.urls -%} {% assign post = collections.liveContent |
+      itemFromUrl: url %} {%- if post -%}
+
+      <a href="{{url}}"
+        ><cite class="block font-normal my-ryt-sm text-balance"
+          >{{post.data.title}}</cite
+        ></a
+      >
+      {%- else -%} {%- endif -%} {%- endfor -%}
+    </section>
+    {%- endfor -%}
+  </div>
+</div>

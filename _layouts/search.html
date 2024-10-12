@@ -39,15 +39,14 @@ permalink: "{{site.search.url}}"
       article.classList.add("my-ryt-lg");
       parent.appendChild(article);
       if (entry.meta.title && entry.meta.title != "notitle") {
-        let title = document.createElement("h2");
-        title.classList = "mt-0 font-bold text-base font-body my-0";
-        article.appendChild(title);
-
         let linkToArticle = document.createElement("a");
-        linkToArticle.classList = "no-underline inline-block";
         linkToArticle.href = entry.url;
-        linkToArticle.innerHTML = entry.meta.title;
-        title.appendChild(linkToArticle);
+        article.appendChild(linkToArticle);
+
+        let title = document.createElement("cite");
+        title.classList = "block text-balance";
+        title.innerHTML = entry.meta.title;
+        linkToArticle.appendChild(title);
       }
 
       if (entry.meta.date) {

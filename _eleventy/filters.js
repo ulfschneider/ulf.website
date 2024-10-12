@@ -109,6 +109,14 @@ module.exports = {
     return tags;
   },
 
+  itemFromUrl: function (collection, url) {
+    for (const p of collection) {
+      if (p.url == url) {
+        return p;
+      }
+    }
+  },
+
   firstImage: function (content) {
     function getFirstImageFromItem(content, data) {
       let src;

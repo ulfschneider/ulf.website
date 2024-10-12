@@ -36,11 +36,9 @@ collections.liveContent | post -%} {%- endif -%}
     <article>
       {% if p.data.title != "" and p.data.title != nil and p.data.title !=
       "notitle" and p.data.notitle == nil %}
-      <h2 class="mt-0 my-0 text-base font-bold font-body">
-        <a class="no-underline inline-block hover:underline" href="{{p.url}}">
-          {{ p.data.title }}
-        </a>
-      </h2>
+      <a href="{{p.url}}">
+        <cite class="block text-balance">{{ p.data.title }}</cite>
+      </a>
       {% endif %} {%- if p.data.abstract -%}
       <p class="my-ryt-xs">{{p.data.abstract}}</p>
       {%- endif -%} {%- if p.data.title == "" or p.data.title == nil or
