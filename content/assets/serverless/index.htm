@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <base href="@@base@@" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
-    <link rel="stylesheet" href="engine/main.css" />
-    <link rel="stylesheet" href="theme/tokyo.css" />
-    <link rel="stylesheet" href="engine/katex/katex.min.css" />
-    <!--<link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />-->
-    <style>
-    :root{
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/tokyo.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+<link rel="stylesheet" href="engine/ia-viewer.css">
+<style>
+:root{
 --logo: ;
 --darkaccent1color: ;
 --lightaccent1color: ;
@@ -33,18 +29,12 @@
 --darkframecolor: #000000;
 } 
 
-    </style>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="engine/print.css"
-      media="print"
-    />
-  </head>
-
-  <body class="responsive">
-    <div class="reveal">
-      <div class="slides"><section class="variable-size-headings dark has-background-image cover-container responsive present has-light-background fitted" data-background-image="images/this-machine-is-a-server-sticker.webp " a="" sticker="" on="" the="" server="" was="" used="" by="" tim="" berners-lee="" to="" invent="" world="" wide="" web.""="" data-background-color="#4ea9e2" style="display: grid;" data-updated="true">
+</style>
+</head>
+<body class="responsive">
+<div class="reveal">
+<div class="slides">
+<section class="variable-size-headings dark has-background-image cover-container responsive present has-light-background fitted" data-background-image="images/this-machine-is-a-server-sticker.webp " a="" sticker="" on="" the="" server="" was="" used="" by="" tim="" berners-lee="" to="" invent="" world="" wide="" web.""="" data-background-color="#4ea9e2" style="display: grid;" data-updated="true">
 
       <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
       <div class="layout-cover" style="width: 100%; font-size: 1rem;">
@@ -326,7 +316,7 @@
       <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
       <div class="layout-section" style="width: 100%; font-size: 1rem;">
         <div style="">
-          <h4 class="kicker" id="serverless">Serverless</h4><h3 id="abstractsawayanynotionofserversorinfrastructure">abstracts away any notion of servers or infrastructure</h3>
+          <h4 class="kicker" id="serverless">Serverless</h4><h3 id="abstractsawayanynotionofserversandinfrastructure">abstracts away any notion of servers and infrastructure</h3>
         </div>
       </div>
       <div class="footnotes"></div>
@@ -419,29 +409,25 @@
       <div class="footnotes"></div>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section></div>
-    </div>
-    <script src="engine/index.js"></script>
-    <!--<script src="engine/d3v4.min.js" charset="utf-8"></script>
-    <script src="engine/charts.min.js" charset="utf-8"></script>
-    <script src="engine/billboard.min.js"></script>-->
-    <script src="engine/pptxgen.min.js"></script>
-                                                   <script src="engine/pfill.js"></script>
-    <script src="engine/published.js"></script>
-
-    <script>
-      Reveal.configure({
-        progress: true,
-        keyboard: true,
-        dependencies: [
-          {
-            src: "engine/highlight.js",
-            sync: true,
-            callback: function () {
-              hljs.initHighlightingOnLoad();
-            },
-          },
-        ],
-      });
-    </script>
-  </body>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/pptxgen.min.js"></script>
+<script src="engine/pfill.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
 </html>

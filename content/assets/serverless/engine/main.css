@@ -2679,11 +2679,11 @@ section.has-footnotes {
   /*--color-background-dark: #000000;*/
 }
 body {
-  font-family: var(--bodyfont, "Arial"), Helvetica, sans-serif;
+  font-family: var(--bodyfont, "Arial"), Helvetica, Arial, sans-serif;
   color: var(--darkbodytextcolor, #000000);
 }
 h1, h2, h3, h4, h5, h6{
-  font-family: var(--titlefont, "Arial"), Helvetica, sans-serif;
+  font-family: var(--titlefont, "Arial"), Helvetica, Arial, sans-serif;
   color: var(--darktitletextcolor, #000000);
 }
 ol,
@@ -3839,7 +3839,7 @@ section:not(.has-header,.has-footer,.has-footnotes) > .layout-v-split.has-2-imag
 }
 .layout-cover > div{
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .layout-caption > div {
   font-size: 0.9375em;
@@ -4523,7 +4523,11 @@ input[type="checkbox"].task-list-item-checkbox:checked::before {
   color: #F2CCE5;
   background-color: rgba(242, 204, 229, 0.16);
 }
-
+section hgroup p.kicker{
+    font-family: var(--titlefont, "Arial"), Helvetica, sans-serif;
+    font-weight:700;
+    font-size: 1.6em;
+}
 /* Small Dynamic Heading */
 .small-variable-size-headings section > :not([class*="layout-"]) h1,
 .small-variable-size-headings [class*="layout-"] > div h1 {
@@ -4826,6 +4830,10 @@ input[type="checkbox"].task-list-item-checkbox:checked::before {
     font-size: 1em;
     line-height: 1.4;
   }
+    
+    section hgroup p.kicker{
+        font-size:1.2em;
+    }
 }
 
  /*Fix to avoid clipping of descender */
@@ -5145,11 +5153,7 @@ section [class*="layout-"] div .layout-grid > img{
   line-height: 1.6;
 }
 
-section hgroup p.kicker{
-    font-family: var(--titlefont, "Arial"), Helvetica, sans-serif;
-    font-weight:700;
-    font-size: 1.6em;
-}
+
 
 .fixed-size-headings hgroup p.kicker{
     font-size: 0.9em;

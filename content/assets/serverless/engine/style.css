@@ -676,3 +676,49 @@ ol .task-list-item {
 img[src$=".svg"] {
     min-height: 200px;
 }
+
+
+.size-cover{
+  -o-object-fit: cover!important;
+     object-fit: cover!important;
+}
+.size-contain{
+  -o-object-fit: contain!important;
+     object-fit: contain!important;
+}
+.position-left-top{
+  -o-object-position: left top!important;
+     object-position: left top!important;
+}
+.position-left-center{
+  -o-object-position: left center!important;
+     object-position: left center!important;
+}
+.position-left-bottom{
+  -o-object-position: left bottom!important;
+     object-position: left bottom!important;
+}
+.position-center-top{
+  -o-object-position: center top!important;
+     object-position: center top!important;
+}
+.position-center-center{
+  -o-object-position: center center!important;
+     object-position: center center!important;
+}
+.position-center-bottom{
+  -o-object-position: center bottom!important;
+     object-position: center bottom!important;
+}
+.position-right-top{
+  -o-object-position: right top!important;
+     object-position: right top!important;
+}
+.position-right-center{
+  -o-object-position: right center!important;
+     object-position: right center!important;
+}
+.position-right-bottom{
+  -o-object-position: right bottom!important;
+     object-position: right bottom!important;
+}
