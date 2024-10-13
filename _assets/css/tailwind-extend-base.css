@@ -8,6 +8,7 @@
   *::after {
     box-sizing: border-box;
     margin: 0;
+    text-decoration-thickness: 0.05em;
   }
 
   /* scrollbar */
