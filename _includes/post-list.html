@@ -1,7 +1,8 @@
 {%- if pagedItems.pageData.length > 0 -%} {%- assign livePosts =
 pagedItems.pageData -%} {%- else -%} {%- assign livePosts =
-collections.liveContent | post -%} {%- endif -%}
-
+collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
+<p class="my-ryt-lg">{{poststitle}}</p>
+{%- endif -%}
 <div class="lg:flex lg:-ml-[200px]">
   <div class="lg:w-[200px] shrink-0">
     {% if livePosts.year or livePosts.yearsInterval %}
