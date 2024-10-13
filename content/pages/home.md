@@ -30,10 +30,12 @@ topics:
       - /2021-10-22-a-smiling-unicorn-with-a-kite/
       - /2020-03-18-emil-pictured-the-coronavirus/
       - /2021-08-15-the-stripling-man/
+      - /2024-07-07-fish/
       - /2024-01-18-dragon/
   - title: Bike
     urls:
       - /2024-09-14-strael-morph/
+      - /2023-10-31-autumn-riding/
       - /2024-08-06-klean-kanteen/
 ---
 
