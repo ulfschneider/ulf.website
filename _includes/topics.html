@@ -6,15 +6,18 @@
     {%- for topic in topics -%}
     <section>
       <h2 class="my-0 text-base font-bold font-body">{{topic.title}}</h2>
-      {%- for url in topic.urls -%} {% assign post = collections.liveContent |
-      itemFromUrl: url %} {%- if post -%}
-
-      <a href="{{url}}"
-        ><cite class="block font-normal my-ryt-sm text-balance"
-          >{{post.data.title}}</cite
-        ></a
-      >
-      {%- else -%} {%- endif -%} {%- endfor -%}
+      <ul class="reset">
+        {%- for url in topic.urls -%} {% assign post = collections.liveContent |
+        itemFromUrl: url %} {%- if post -%}
+        <li class="my-ryt-sm">
+          <a href="{{url}}" class="inline-block"
+            ><cite class="font-normal text-balance"
+              >{{post.data.title}}</cite
+            ></a
+          >
+        </li>
+        {%- endif -%} {%- endfor -%}
+      </ul>
     </section>
     {%- endfor -%}
   </div>

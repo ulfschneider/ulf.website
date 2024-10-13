@@ -15,11 +15,11 @@ getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
         >
       </div>
       <a
-        class="no-underline font-bold rg:text-balance"
         id="{{site.navNewer.id}}"
         href="{{ newerPost.url }}"
+        class="inline-block"
       >
-        {{ newerPost.data.title }}
+        <cite class="rg:text-balance">{{ newerPost.data.title }}</cite>
       </a>
     </div>
     {% endif %} {% if olderPost %}
@@ -31,11 +31,11 @@ getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
         >
       </div>
       <a
-        class="no-underline font-bold rg:text-balance"
         id="{{site.navOlder.id}}"
         href="{{ olderPost.url }}"
+        class="inline-block"
       >
-        {{ olderPost.data.title }}
+        <cite class="rg:text-balance">{{ olderPost.data.title }}</cite>
       </a>
     </div>
     {% endif %}
