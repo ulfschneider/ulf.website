@@ -5,6 +5,7 @@ notags: true
 title: Ulf Schneider
 layout: home
 id: home
+poststitle: "Recent notes:"
 topicstitle: Below is a list of posts I´ve written or collected over the years, and of which I think they should appear here.
 topics:
   - title: Web
@@ -29,6 +30,7 @@ topics:
       - /2021-10-22-a-smiling-unicorn-with-a-kite/
       - /2020-03-18-emil-pictured-the-coronavirus/
       - /2021-08-15-the-stripling-man/
+      - /2024-01-18-dragon/
   - title: Bike
     urls:
       - /2024-09-14-strael-morph/
@@ -36,5 +38,3 @@ topics:
 ---
 
 Hello, I´m Ulf Schneider, a software developer and agile coach. If you like, here is a bit more [about me](/about/).
-
-Recent notes:
