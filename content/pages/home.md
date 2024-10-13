@@ -13,6 +13,7 @@ topics:
       - /2022-09-28-jamstack-in-20-minutes/
       - /2020-03-10-this-is-a-web-page/
       - /2023-08-01-serverless/
+      - /2024-03-15-toggles-suck/
       - /2024-10-04-most-simple-tablist/
       - /2023-12-29-styling-check-boxes-and-radio-buttons/
   - title: Agile
