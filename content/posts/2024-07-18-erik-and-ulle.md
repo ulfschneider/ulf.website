@@ -1,5 +1,5 @@
 ---
-title: Erik and Ulle
+title: Ete and Ulle
 tags: 
   - sports
   - star
