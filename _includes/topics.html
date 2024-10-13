@@ -10,8 +10,8 @@
         {%- for url in topic.urls -%} {% assign post = collections.liveContent |
         itemFromUrl: url %} {%- if post -%}
         <li class="my-ryt-sm">
-          <a href="{{url}}" class="inline-block"
-            ><cite class="font-normal text-balance"
+          <a href="{{url}}"
+            ><cite class="font-normal text-balance block"
               >{{post.data.title}}</cite
             ></a
           >

@@ -14,12 +14,8 @@ getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
           <kbd>{{site.navNewer.kbd}}</kbd></span
         >
       </div>
-      <a
-        id="{{site.navNewer.id}}"
-        href="{{ newerPost.url }}"
-        class="inline-block"
-      >
-        <cite class="rg:text-balance">{{ newerPost.data.title }}</cite>
+      <a id="{{site.navNewer.id}}" href="{{ newerPost.url }}">
+        <cite class="rg:text-balance block">{{ newerPost.data.title }}</cite>
       </a>
     </div>
     {% endif %} {% if olderPost %}
@@ -30,12 +26,8 @@ getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
           <kbd>{{site.navOlder.kbd}}</kbd></span
         >
       </div>
-      <a
-        id="{{site.navOlder.id}}"
-        href="{{ olderPost.url }}"
-        class="inline-block"
-      >
-        <cite class="rg:text-balance">{{ olderPost.data.title }}</cite>
+      <a id="{{site.navOlder.id}}" href="{{ olderPost.url }}">
+        <cite class="rg:text-balance block">{{ olderPost.data.title }}</cite>
       </a>
     </div>
     {% endif %}
