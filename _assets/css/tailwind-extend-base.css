@@ -13,16 +13,33 @@
 
   /* scrollbar */
   :root {
-    --scrollbar-width: var(--ryt);
+    --scrollbar-width: 16px;
   }
 
   * {
     scrollbar-width: var(--scrollbar-width);
+    scrollbar-color: theme(colors.write.dark) transparent;
   }
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: var(--scrollbar-width);
+  }
+  *::-webkit-scrollbar-thumb {
+    background: theme(colors.write.dark);
+  }
+
+  *::-webkit-scrollbar-background {
+    background: transparent;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    * {
+      scrollbar-color: theme(colors.write.light) transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: theme(colors.write.light);
+    }
   }
 
   /* focus */
