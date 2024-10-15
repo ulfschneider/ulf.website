@@ -10,6 +10,7 @@ topicstitle: Below is a list of posts I´ve written or collected over the years,
 topics:
   - title: Web
     urls:
+      - /2024-07-20-prerender-pages/
       - /2022-09-28-jamstack-in-20-minutes/
       - /2020-03-10-this-is-a-web-page/
       - /2023-08-01-serverless/
