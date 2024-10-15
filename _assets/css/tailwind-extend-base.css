@@ -250,7 +250,7 @@
 
   ol > li::before {
     content: counters(ol-counter, ".", decimal) ". ";
-    @apply text-smaller -ml-ryt-lg inline-block min-w-ryt-lg whitespace-nowrap font-bold tabular-nums;
+    @apply text-smaller -ml-ryt-lg inline-block min-w-ryt-lg whitespace-nowrap tabular-nums;
   }
 
   ol > li > ol > li::before {
