@@ -25,13 +25,13 @@ I want to explore this field, develop my skills, and create better, _accessible_
 ## Why accessibility matters to me
 
 - **It´s possible:** As a web developer, I work with a medium that allows people to access content in ways they otherwise couldn’t, like reading a book. Technology enables us to include more people and give them access to content. As a web developer, it’s my responsibility to work towards inclusion and use state-of-the-art techniques. I’m concerned that [web accessibility has deteriorated over the last twelve months](/2020-04-09-website-accessibility-got-worse/).
-<blockquote><p>Without the internet, I´d be stuck. I can´t use books. I´d be sitting in the corner with a dunce´s hat.</p>
-<footer>Sam, in <cite>Accessibility for Everyone</cite> by Laura Kalbag</footer>
-</blockquote>
+  <blockquote><p>Without the internet, I´d be stuck. I can´t use books. I´d be sitting in the corner with a dunce´s hat.</p>
+  <footer>Sam, in <cite>Accessibility for Everyone</cite> by Laura Kalbag</footer>
+  </blockquote>
 - **Our abilities change:** I should not think of enabled and disabled people as being two separate groups. _Our abilities degrade over time._ When considering accessibility, _I think about my future self!_ My field of vision will detoriate and I might develop motoric difficulties, which will make it hard to handle a mouse or trackpad properly. My cognitive abilities might slow down, my attention span might be reduced, and probably it will become difficult to memorize things. Ensuring straightforward access to relevant content will be more important to my future self (and already today it´s _very_ important). How will my future self handle the clever website I am building right now?
 - **Site design improves:** Striving for a direct and frictionless path to relevant content improves overall website design. Making a site more accessible benefits everyone. Consider looking at _[An alphabet of accessibility issues](https://the-pastry-box-project.net/anne-gibson/2014-july-31)_. I think that´s in line with Laura Kalbag´s approach of universal web accessibility:
-<blockquote><p>I take a universal design approach to accessibility wherever possible. Universal web accessibility helps us create sites that are usable by the widest, most diverse audience, rather than creating bolt-on solutions that might benefit one group at the expense of another.</p>
-<footer>Laura Kalbag, in <cite>Accessibility for Everyone</cite></footer></blockquote>
+  <blockquote><p>I take a universal design approach to accessibility wherever possible. Universal web accessibility helps us create sites that are usable by the widest, most diverse audience, rather than creating bolt-on solutions that might benefit one group at the expense of another.</p>
+  <footer>Laura Kalbag, in <cite>Accessibility for Everyone</cite></footer></blockquote>
 - **Design process improves:** Accessibility is not something to put on top of an already completed site design. It must be part of the entire design process, from the start. I believe the very best approach is to collaborate during the entire process with diverse people, including those with disabilities. That could be [_inclusive design_](https://24ways.org/2016/what-the-heck-is-inclusive-design/).
 - **The web improves:** An accessible web is a better web. The more web designers start to learn and think about accessibility, the better our web will become.
 - **Improve myself:** As a web developer, building accessible websites enhances my skills and empathy. It helps me create more usable and inclusive web experiences.
