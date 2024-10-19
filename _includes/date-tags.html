@@ -26,14 +26,14 @@ nil -%}
   -%}
   <ul class="inline reset">
     {% for tag in sortedTags %} {% if tag == site.starTag %}
-    <li class="inline mr-ryt last:mr-0">
+    <li class="inline mr-ryt-sm last:mr-0">
       <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs"
         >{{ site.starTagSymbol }}</a
       >
     </li>
     {% endif %} {% endfor %} {% for tag in sortedTags %} {% if tag !=
     site.starTag %}
-    <li class="inline mr-ryt last:mr-0">
+    <li class="inline mr-ryt-sm last:mr-0">
       <a href="{{tag | tagUrl}}" class="no-underline">#{{ tag }}</a>
     </li>
     {% endif %} {% endfor %}
