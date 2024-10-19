@@ -133,7 +133,7 @@
     }
 
     label:has(input[type="radio"]:not(.native)) {
-      @apply flex flex-row gap-ryt items-center max-w-fit;
+      @apply flex flex-row gap-[1em] items-center max-w-fit;
     }
 
     input[type="radio"]:not(.native) {
@@ -176,7 +176,7 @@
     }
 
     label:has(input[type="checkbox"]:not(.native):not([switch])) {
-      @apply flex flex-row gap-ryt items-center max-w-fit;
+      @apply flex flex-row gap-[1em] items-center max-w-fit;
     }
 
     input[type="checkbox"]:not(.native):not([switch]) {
