@@ -143,6 +143,7 @@
       font-size: inherit;
       cursor: pointer;
       border-radius: 50%;
+      margin: 0;
     }
     input[type="radio"]:not(.native)::after {
       /* preload images */
@@ -171,6 +172,7 @@
       appearance: none;
       font-size: inherit;
       cursor: pointer;
+      margin: 0;
     }
 
     input[type="checkbox"]:not(.native):not([switch])::after {
