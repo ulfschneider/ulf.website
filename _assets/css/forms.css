@@ -145,11 +145,13 @@
       border-radius: 50%;
     }
     input[type="radio"]:not(.native)::after {
+      /* preload images */
       position: absolute;
       width: 0;
       height: 0;
       overflow: hidden;
-      content: var(--unchecked-radio) var(--checked-radio); // preload images
+      z-index: -1;
+      content: var(--unchecked-radio) var(--checked-radio);
     }
 
     input[type="radio"]:not(.native)::before {
@@ -172,11 +174,13 @@
     }
 
     input[type="checkbox"]:not(.native):not([switch])::after {
+      /* preload images */
       position: absolute;
       width: 0;
       height: 0;
       overflow: hidden;
-      content: var(--unchecked-checkbox) var(--checked-checkbox); // preload images
+      z-index: -1;
+      content: var(--unchecked-checkbox) var(--checked-checkbox);
     }
 
     input[type="checkbox"]:not(.native):not([switch])::before {
