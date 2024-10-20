@@ -61,5 +61,5 @@ There was absolutely no need to alter the bell, the computer mount, the saddle, 
 
 <figure>
 <img src="/img/strael/leave-for-a-ride.jpg">
-<figcaption>Let´s go for a ride.<br>Photo by Emil</figcaption>
+<figcaption>Let´s ride.<br>Photo by Emil</figcaption>
 </figure>
