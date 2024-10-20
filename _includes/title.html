@@ -1,12 +1,20 @@
 {%- if title != "" and title != nil and title != "notitle" and notitle == nil
--%} {%- assign hasTitle = true -%} {%- endif -%} {%- if tagIntro != "" and
-tagIntro != nil -%} {%- assign hasTagIntro = true -%} {%- endif -%} {%- if
-tagIntro == "" -%} {%- assign isBlog = true -%} {%- endif -%} {%- if hasTitle ==
-true or hasTagIntro == true or isBlog == true or refer or author -%}
+-%} {%- assign hasTitle = true -%} {%- endif -%}
+<!-- -->
+{%- if tagIntro != "" and tagIntro != nil -%} {%- assign hasTagIntro = true -%}
+{%- endif -%}
+<!-- -->
+{%- if tagIntro == "" -%} {%- assign isBlog = true -%} {%- endif -%}
+<!-- -->
+{%- if hasTitle == true or hasTagIntro == true or isBlog == true or refer or
+author -%}
+<!-- -->
+{%- if layout == "image" -%} {% assign titleClass = "text-base" %} {%- else -%}
+{% assign titleClass = "heror"%} {%- endif -%}
 <header class="my-ryt-2xl">
   {%- if hasTitle == true -%}
 
-  <h1 class="heror">{{ title }}</h1>
+  <h1 class="{{titleClass}}">{{ title }}</h1>
   {%- endif -%} {%- include "hero.html" -%} {%- if abstract -%}
   <div class="my-ryt text-lg heror">{{ abstract }}</div>
   {%- endif -%} {%- if refer -%}
