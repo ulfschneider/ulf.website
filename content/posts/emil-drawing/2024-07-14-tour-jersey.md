@@ -1,5 +1,6 @@
 ---
 title: Tour de France Jersey
+layout: default
 ---
 The Tour de France is going into the final week and the ARD television broadcaster [invited children to design a Tour jersey](https://www.kika.de/sportschau/mach-mit/mitmachen-mein-trikot-tour-de-france-100). Emil has sent his design today (the e-mail address is tour@sportschau.de). It has rainbow colors and the initial letter of the rider name on the left sleeve.
 
