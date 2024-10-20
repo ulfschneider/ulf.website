@@ -33,6 +33,7 @@ topics:
       - /2021-08-15-the-stripling-man/
       - /2024-07-07-fish/
       - /2024-01-18-dragon/
+      - /2024-10-20-boiling-eggs/
   - title: Bike
     urls:
       - /2024-09-14-strael-morph/
