@@ -3,6 +3,7 @@ title: A quick ride into the evening
 tags: 
   - strael
   - sports
+layout: image
 ---
 A beautiful ride. Streets have been wet because of previous rain but during the ride no rain. I came home 15 minutes too late. It was already dark and I did not have lights with me :-(.
 

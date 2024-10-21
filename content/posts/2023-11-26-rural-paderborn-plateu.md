@@ -3,6 +3,7 @@ title: Rural Paderborn plateu during winter
 tags: 
   - sports
   - strael
+layout: image
 ---
 <figure>
 <img src="/img/strael/IMG_4977.jpg" alt="A paved forest road">

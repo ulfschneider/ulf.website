@@ -3,6 +3,7 @@ title: Autumn riding
 tags:
   - strael
   - sports
+layout: image
 ---
 
 Reduced daylight, colder temperatures and wet conditions. What sounds like not so much fun can turn out to be a beautiful and intense ride. For this one I started at 4 pm and finished in the dark evening.

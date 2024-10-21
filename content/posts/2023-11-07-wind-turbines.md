@@ -3,6 +3,7 @@ title: Wind turbines
 tags: 
   - sports
   - strael
+layout: image
 ---
 <figure class="hero">
 <img src="/img/strael/IMG_4924.jpg" alt="A field of wind turbines in the dark evening with red signaling lights.">
