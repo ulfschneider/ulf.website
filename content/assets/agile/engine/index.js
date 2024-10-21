@@ -50608,7 +50608,7 @@
     updateSections,
     setPresentationSize,
     insertYouTubeIFrame: (videoWrapper) => {
-      videoWrapper.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoWrapper.dataset.id}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  />`;
+      videoWrapper.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoWrapper.dataset.id}?disablekb=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  />`;
       resizeSlides();
     }
   };
