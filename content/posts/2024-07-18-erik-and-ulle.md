@@ -14,7 +14,7 @@ The Tour de France is in the third week and I came across this beautiful film fr
 </figcaption>
 </figure>
 
-And even more so, [Rick Zabel](https://www.rickzabel.de), the son of Erik Zabel, and [Tanja Erath](https://www.instagram.com/taennele/) are hosting the excellent podcast <cite>Parallelwelten</cite>. In this calm and sensitive edition they are talking to Jan Ullrich (Ulle) and Erick Zabel. Watch! 
+And even more so, [Rick Zabel](https://www.rickzabel.de), the son of Erik Zabel, and [Tanja Erath](https://www.instagram.com/taennele/) are hosting the excellent podcast <cite>Parallelwelten</cite>. In this calm and sensitive edition they are talking to Jan Ullrich (Ulle) and Erik Zabel (Ete). Watch! 
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AotDuAvcFD0?si=XUS3XxJdTtU6eCTn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
