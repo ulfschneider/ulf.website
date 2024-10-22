@@ -20,7 +20,7 @@
   fieldset,
   label,
   legend {
-    @apply font-body placeholder-meta mode-caret-primary  appearance-none rounded-none font-normal text-inherit;
+    @apply font-body placeholder-meta mode-caret-primary appearance-none rounded-none font-normal text-inherit;
   }
 
   input[type="submit"],
@@ -85,6 +85,7 @@
   input[type="tel"],
   input[type="url"],
   input[list],
+  textarea,
   select {
     @apply border-meta p-ryt-xs bg-field-light dark:bg-field-dark max-w-screen-rg w-full border align-middle leading-none;
   }
@@ -105,7 +106,7 @@
   }
 
   textarea {
-    @apply border-meta py-ryt-xs px-ryt-xs bg-field-light dark:bg-field-dark resize-none border font-normal leading-snug;
+    @apply block border-meta py-ryt-xs px-ryt-xs bg-field-light dark:bg-field-dark resize-none border font-normal leading-snug;
   }
 
   fieldset {
