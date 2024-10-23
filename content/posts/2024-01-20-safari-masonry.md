@@ -4,7 +4,7 @@ tags:
   - css
   - til
 ---
-Masonry layout is available in Safari Technology Preview since Release 163 behind a feature flag. That´s roughly for a year. Apple fixed some issues with Release 171 and 173. Activate it in Safari via **Settings / Feature Flags / CSS Masonry Layout**. This allows the grid CSS to be:
+Masonry layout is available in Safari Technology Preview since Release 163 behind a feature flag. That´s roughly for a year. Apple fixed some issues with Release 171 and 173. Activate it in Safari via **Settings → Feature Flags → CSS Masonry Layout**. This allows the grid CSS to be:
 
 ```css
 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
