@@ -6,13 +6,19 @@ tags: agile
 
 [[toc]]
 
-Agile is about culture and _possibly_ about cultural change. Scaling agile means radically, to scale cultural change. This is an incredibly difficult thing to do. Peter Drucker coined the phrase <q>culture eats strategy for breakfast.</q> You better prepare for the long run. Is it clear, why you want to change? _You_ are: _managers_, who define how the system works, _product managers_, who determine what kind of product to build, _research and development people_, who explore possibilities, _engineers_, who make the product, _salesforce_, who will drive sales, _project managers_, who are in charge of leading one-of-a-kind endeavors – you will identify even more people and roles for your organization.
+## Scaled snake oil
+
+Agile is about culture and _possibly_ about cultural change. Scaling agile means, radically, to scale cultural change. This is an incredibly difficult thing to do. Peter Drucker coined the phrase 
+
+> Culture eats strategy for breakfast.
+
+You better prepare for the long run. Is it clear, why you want to change? _You_ are: _managers_, who define how the system works, _product managers_, who determine what kind of product to build, _research and development people_, who explore possibilities, _engineers_, who make the product, _salesforce_, who will drive sales, _project managers_, who are in charge of leading one-of-a-kind endeavors – you will identify even more people and roles for your organization.
 
 Do your leaders have a sense of urgency that agile is the way to go? Can they argue why agile makes sense, and will they? Do your leaders know what problem they want to solve by being agile?
 
 You have to change, you know that, because the first rule of life is
 
-> adapt or die.
+> Adapt or die.
 
 Do you think it can happen by implementing a new release train process that you have read about in the latest scaled agile book? By disseminating a slide deck to your subordinates, giving the order to work in Sprints and counting Sprints as unsuccessful if tasks are left undone at the end of the Sprint? By letting the Project Management Office give instructions to standardize Scrum Boards in the entire company with predefined columns? By printing sticky note templates to have them all look the same on the boards, without referring to your workforce? These top-down communications are patterns of how to probably get agile wrong. If you think this is scaled agile and will lead to cultural change, then you are heading for scaled snake oil. Mentally, your people will step aside and identify the entire thing as _theater communication._
 
