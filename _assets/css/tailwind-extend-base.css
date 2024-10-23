@@ -290,7 +290,7 @@
   }
 
   p {
-    @apply my-0 indent-0;
+    @apply my-0 indent-0 text-pretty;
   }
 
   p + p {
