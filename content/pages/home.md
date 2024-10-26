@@ -13,7 +13,7 @@ topics:
       - /2024-07-20-prerender-pages/
       - /2022-09-28-jamstack-in-20-minutes/
       - /2024-04-26-pagefind/
-      - /2020-03-10-this-is-a-web-page/
+      - /2023-01-24-my-first-attempt-with-tailwind-css/
       - /2023-08-01-serverless/
       - /2024-03-15-toggles-suck/
       - /2020-08-21-my-approach-to-accessibility/
