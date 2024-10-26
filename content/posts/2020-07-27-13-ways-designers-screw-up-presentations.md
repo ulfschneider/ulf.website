@@ -12,8 +12,8 @@ A lively, enjoyable, and valid talk. Also, I like Mike´s slides very much.
 
 Assumptions prior to the client presentation:
 
-- The work is good
-- The work is tested
+- The work is good.
+- The work is tested.
 
 The 13 things to avoid:
 
