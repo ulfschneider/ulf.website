@@ -16,16 +16,6 @@ The HTML `autocomplete` attribute can be used to hint the browser how to prefill
 </label>
 ```
 
-<figure>
-<form>
-<label class="my-ryt">Street address
-  <input type="text" name="address" autocomplete="street-address address-line1">
-</label>
-<input type="submit" value="Submit">
-</form>
-<figcaption>Autofill the street address. </figcaption>
-</figure>
-
 The [HTML specification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute) lists the following tokens to indicate the browser the purpose of a form field, hinting the browser to prefill with suitable content. The tokens require its associated form control group being  `Text`, if not stated otherwise in the //comment. 
 
 - `name` 
@@ -101,16 +91,6 @@ For example:
   <input type="email" name="email" autocomplete="home email">
 </label>
 ```
-
-<figure>
-<form>
-<label class="my-ryt">Email address
-  <input type="email" name="email" autocomplete="home email">
-</label>
-<input type="submit" value="Submit">
-</form>
-<figcaption>Autofill the email address</figcaption>
-</figure>
 
 ==All the above tokens== can optionally be used together with either `shipping` or `billing` to denote if the form field is part of a shipping address or if it belongs to the billing address. And there are `section-` tokens, that can be used to group, for example, two shipping addresses in the form `section-address1` and `section-address2`. 
 
