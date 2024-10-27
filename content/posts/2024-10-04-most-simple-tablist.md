@@ -46,15 +46,15 @@ abstract: My current approach of building a tablist without JavaScript. It´s re
 For accessibility reasons, the styling depends on roles and not on CSS classes. Please refer to [<cite> ARIA: tablist role</cite>](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) for details. In this case it´s
 
 `role="tablist"`
-: For the overall tablist container
+: for the overall tablist container,
 
 `role="tab"`
-: For each tab label
+: for each tab label,
 
 `role="tabpanel"`
-: For the content of each tab
+: for the content of each tab.
 
-Inside of the tablist container, each tab is described by a `<label role="label">` for the tab label, followed by a `<div role="tabpanel">` for the tab content. The `<label>` wraps an `<input type="radio">`. The `<input>` maintains the state of the tablist, and if checked, indicates the opened tab. It´s an `<input type="radio">`, because checking one input must uncheck all others.
+Inside of the tablist container, each tab is described by a `<label role="tab">` for the tab label, followed by a `<div role="tabpanel">` for the tab content. The `<label>` wraps an `<input type="radio">`. The `<input>` maintains the state of the tablist, and if checked, indicates the opened tab. It´s an `<input type="radio">`, because checking one input must uncheck all others.
 
 The `input` of the first tab has the attribute `checked` to visualize the content of the first tab by default.
 
@@ -64,12 +64,14 @@ The `input` of the first tab has the attribute `checked` to visualize the conten
 ## The CSS
 
 > [!Note] Oct 5, 2024
-> I´ve added styling to use the correct outline color for focused tabs with Webkit browsers and non-Webkit browsers.
+> I´ve added styling for the outline color of focused tabs.
+
+> [!Note] Oct 27, 2024
+> I changed the selector for the focus styling to `:has(:focus-within)` to show a focus indicator only when the element received focus via keyboard. Can it be seen as a bug in Safari, that the initial keyboard focus is visualized, disappears when selecting tabs with the arrow keys, and appears again when reaching the first or last tab?
 
 ```css
 [role="tablist"] {
   --outline: auto Highlight;
-  --webkit-outline: auto -webkit-focus-ring-color;
   --tab-label-padding: 0.5em;
   --tab-label-radius: 0.15em;
   --tab-label-min-width: 4em;
@@ -94,12 +96,12 @@ The `input` of the first tab has the attribute `checked` to visualize the conten
   opacity: 0;
   width: 0;
   height: 0;
+  margin: 0;
 }
 
-/* when using the tab key on the keyboard to focus into the tablist, indicate the default outline */
-[role="tablist"] > label[role="tab"]:focus-within {
+/* when using the tab key on the keyboard to focus into the tablist, indicate the outline */
+[role="tablist"] > label[role="tab"]:has(:focus-visible) {
   outline: var(--outline);
-  outline: var(--webkit-outline);
   outline-offset: calc(-1 * var(--tab-label-padding));
 }
 
@@ -168,15 +170,15 @@ The assignment
   opacity: 0;
   width: 0;
   height: 0;
+  margin: 0;
 }
 ```
 
-is targeting the `input[type="radio"]` elements inside the tab labels. They are only visually hidden to allow them receiving a keyboard focus. In that case, to indicate the keyboard focus with an outline, the following assignment, which must a use a dedicated styling for webkit browsers, is required:
+is targeting the `input[type="radio"]` elements inside the tab labels. They are only visually hidden to allow them receiving a keyboard focus. In that case, to indicate the keyboard focus with an outline, the following assignment is required:
 
 ```css
-[role="tablist"] > label[role="tab"]:focus-within {
+[role="tablist"] > label[role="tab"]:has(:focus-visible) {
   outline: var(--outline);
-  outline: var(--webkit-outline);
   outline-offset: calc(-1 * var(--tab-label-padding));
 }
 ```
