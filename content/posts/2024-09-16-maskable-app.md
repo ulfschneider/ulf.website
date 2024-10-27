@@ -1,5 +1,5 @@
 ---
-title: Verify your maskable icon with Maskable.app
+title: Maskable
 tags: 
   - code
   - apps
