@@ -404,6 +404,11 @@ module.exports = {
   },
 
   resolvePrismLanguage(language) {
+    if (language.startsWith("diff-")) {
+      language = language.substring(5);
+    } else if (language == "diff") {
+      language = "";
+    }
     return PRISM_LANGUAGES[language] || language || "";
   },
 
