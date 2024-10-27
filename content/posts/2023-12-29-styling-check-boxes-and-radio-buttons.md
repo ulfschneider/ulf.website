@@ -47,20 +47,16 @@ The styles will be applied if the browser supports `appearance: none`, which is 
 
 Three custom properties are introduced to adjust the basic appearance of the radio buttons:
 
-```css
-:root {
-  --radio-size: 1.5em;
-  --radio-border-width: 1px;
-  --radio-check-size: calc(0.55 * var(--radio-size));
-}
-```
-
 The `--radio-size` determines the square dimension of the radio control (in this case it´s equal to the diameter, because the control will be a circle). The `--radio-border-width` is the width of the outer border of the radio circle. The `--radio-check-size` determines the diameter of the inner circle of a checked radio control.
 
 Next, the unchecked radio control is styled by using the custom properties:
 
 ```css
 input[type="radio"] {
+  --radio-size: 1.5em;
+  --radio-border-width: 1px;
+  --radio-check-size: calc(0.55 * var(--radio-size));
+
   appearance: none;
   font-size: inherit;
   position: relative;
@@ -106,8 +102,12 @@ That´s the new radio button.
 
 The basic appearance and the tuning of checkboxes is configured with the following custom properties:
 
+The size of the checkbox square will be identical to the size of the radio button. It is set with `--check-size: 1.5em`. The border width of the checkbox square is set with `--check-border-width: 1px`. All other settings are to style the checkmark, which is tweaked to fit into the checkbox square.
+
+The checkbox control is defined as follows:
+
 ```css
-:root {
+input[type="checkbox"] {
   --check-size: 1.5em;
   --check-border-width: 1px;
   --check-mark-width: calc(0.5 * var(--check-size));
@@ -116,15 +116,7 @@ The basic appearance and the tuning of checkboxes is configured with the followi
   --check-mark-rotation: rotate(-60deg);
   --check-mark-adjust-top: calc(-0.4 * var(--check-mark-height));
   --check-mark-adjust-left: calc(-0.1 * var(--check-mark-width));
-}
-```
 
-The size of the checkbox square will be identical to the size of the radio button. It is set with `--check-size: 1.5em`. The border width of the checkbox square is set with `--check-border-width: 1px`. All other settings are to style the checkmark, which is tweaked to fit into the checkbox square.
-
-The checkbox control is defined as follows:
-
-```css
-input[type="checkbox"] {
   appearance: none;
   font-size: inherit;
   position: relative;
@@ -174,13 +166,13 @@ That´s the new checkbox.
 Here is the complete CSS for both, the radio button and the checkbox.
 
 ```css
+
 @supports (appearance: none) {
-  :root {
+  input[type="radio"] {
     --radio-size: 1.5em;
     --radio-border-width: 1px;
     --radio-check-size: calc(0.55 * var(--radio-size));
-  }
-  input[type="radio"] {
+
     appearance: none;
     font-size: inherit;
     position: relative;
@@ -191,6 +183,7 @@ Here is the complete CSS for both, the radio button and the checkbox.
     border-radius: 50%;
     cursor: pointer;
   }
+  
   input[type="radio"]:checked::before {
     content: "";
     position: absolute;
@@ -198,19 +191,17 @@ Here is the complete CSS for both, the radio button and the checkbox.
     height: var(--radio-check-size);
     border-radius: 50%;
     margin-top: calc(
-      (var(--radio-size) - var(--radio-check-size)) / 2 - var(
-          --radio-border-width
-        )
+      (var(--radio-size) - var(--radio-check-size)) / 2 -
+        var(--radio-border-width)
     );
     margin-left: calc(
-      (var(--radio-size) - var(--radio-check-size)) / 2 - var(
-          --radio-border-width
-        )
+      (var(--radio-size) - var(--radio-check-size)) / 2 -
+        var(--radio-border-width)
     );
     background-color: currentColor;
   }
 
-  :root {
+  input[type="checkbox"] {
     --check-size: 1.5em;
     --check-border-width: 1px;
     --check-mark-width: calc(0.5 * var(--check-size));
@@ -219,8 +210,7 @@ Here is the complete CSS for both, the radio button and the checkbox.
     --check-mark-rotation: rotate(-60deg);
     --check-mark-adjust-top: calc(-0.4 * var(--check-mark-height));
     --check-mark-adjust-left: calc(-0.1 * var(--check-mark-width));
-  }
-  input[type="checkbox"] {
+
     appearance: none;
     font-size: inherit;
     position: relative;
@@ -231,6 +221,7 @@ Here is the complete CSS for both, the radio button and the checkbox.
     border-radius: 0;
     cursor: pointer;
   }
+  
   input[type="checkbox"]:checked::before {
     content: "";
     position: absolute;
@@ -241,16 +232,13 @@ Here is the complete CSS for both, the radio button and the checkbox.
     border-top: none;
     border-right: none;
     margin-top: calc(
-      (var(--check-size) - var(--check-mark-height)) / 2 - var(
-          --check-border-width
-        ) + var(--check-mark-adjust-top)
+      (var(--check-size) - var(--check-mark-height)) / 2 -
+        var(--check-border-width) + var(--check-mark-adjust-top)
     );
     margin-left: calc(
-      (var(--check-size) - var(--check-mark-width)) / 2 - var(
-          --check-border-width
-        ) + var(--check-mark-adjust-left)
+      (var(--check-size) - var(--check-mark-width)) / 2 -
+        var(--check-border-width) + var(--check-mark-adjust-left)
     );
     background-color: transparent;
   }
-}
-```
+}```
