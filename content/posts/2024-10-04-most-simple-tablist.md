@@ -227,13 +227,13 @@ The visualized tab content is styled with:
 }
 ```
 
-All tab content is hidden except the tab content that is a direct sibling of the checked tab label label, which is ensured by the selector
+Only the tab content that is a direct sibling of the checked tab label is styled and displayed, which is ensured by the selector:
 
 ```css
 [role="tablist"] > label[role="tab"]:has(input:checked) + [role="tabpanel"]
 ```
 
-The tab content is always placed at the end of the tab labels inside of tablist flexbox container because it has the property `order: 99`.  It will take the full width of the tablist container through `width: 100%; display:block;`, which forces the visible tab content to wrap into the next line of the container.
+The tab content is always placed at the end of the tab labels inside of tablist container, because it is part of a flexbox and has the property `order: 99`.  It will take the full width of the tablist container through `width: 100%; display:block;`, which forces the visible tab content to wrap into the next line of the container.
 
 The tab container has a top border to separate it visually from the tab labels: `border-top: var(--tab-border-width) solid var(--tab-border-color);`. The selected tab label should cover that horizontal line to makle a strong indication of what label belongs to the presented tab content. This is possible because the tab content has `position:relative; z-index: -1;`, which brings the tab content in the stacking context under the tab labels. Because the tab labels have a negative bottom margin, and the checked label has a solid background, the background of the label will cover the horizontal line. 
 
