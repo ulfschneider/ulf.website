@@ -183,7 +183,7 @@ is targeting the `input[type="radio"]` elements inside the tab labels. They are 
 }
 ```
 
-Each tab label receives it´s basic styling through
+Each tab label receives its basic styling through
 
 ```css
 [role="tablist"] > label[role="tab"] {
