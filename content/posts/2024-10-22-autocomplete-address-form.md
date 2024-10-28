@@ -12,7 +12,7 @@ The HTML `autocomplete` attribute can be used to hint the browser how to prefill
 
 ```html
 <label>Street address
-  <input type="text" name="address" autocomplete="street-address address-line1">
+  <input type="text" name="address" autocomplete="address-line1">
 </label>
 ```
 
