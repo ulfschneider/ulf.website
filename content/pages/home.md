@@ -17,7 +17,7 @@ topics:
       - /2023-08-01-serverless/
       - /2024-03-15-toggles-suck/
       - /2020-08-21-my-approach-to-accessibility/
-      - /2024-10-04-most-simple-tablist/
+      - /2024-10-28-responsive-tablist/
       - /2023-12-29-styling-check-boxes-and-radio-buttons/
   - title: Agile
     urls:
