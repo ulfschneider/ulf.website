@@ -333,18 +333,21 @@
 
   /* table */
   table {
-    @apply my-ryt-xl border-collapse border-y border-y-meta;
+    @apply my-ryt-xl text-left border-collapse border-y border-y-meta;
 
     caption {
-      @apply py-ryt-sm no-indent text-left text-balance text-sm font-mono max-w-rg;
+      @apply py-ryt-sm no-indent text-balance text-sm font-mono max-w-rg;
+      text-align: inherit;
     }
 
     th {
-      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-bold max-w-rg;
+      @apply py-ryt-sm pr-ryt-sm align-baseline font-bold max-w-rg;
+      text-align: inherit;
     }
 
     td {
-      @apply py-ryt-sm pr-ryt-sm text-left align-baseline font-normal max-w-rg;
+      @apply py-ryt-sm pr-ryt-sm align-baseline font-normal max-w-rg;
+      text-align: inherit;
     }
 
     thead {
