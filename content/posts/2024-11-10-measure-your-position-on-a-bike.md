@@ -9,8 +9,7 @@ abstract: Combining a cross line laser with the seven centimeter rule is a thing
 ---
 Combining a cross line laser with the *seven centimeter saddle rule* offers an effective way of measuring your position on a bike and comparing it across different bikes. This method is also valuable for documenting your current position on one bike to replicate it on another.
 
-> [!note]
-> It’s important to note that you’re measuring your position relative to the bottom bracket center, you are not measuring the bike itself.
+It’s important to note that you’re measuring your position relative to the bottom bracket center, you are not measuring the bike itself.
 
 The method is simple and fast, with maybe the only drawback of requiring a cross line laser for doing it (like a Bosch Level 2). I don´t own such a device and therefore borrowed one.
 
