@@ -46,7 +46,7 @@ David Arthur shared a video where bike fitter Lee Prescott demonstrates this ste
 
 <table class="noso">
 <caption>
-Measuring the positions on the three bikes I´m riding. 
+Measured positions on the three bikes I´m riding. 
 </caption>
 <thead class="text-right">
 <tr><th></th><th>Fairlight Strael</th><th>Fairlight Secan</th><th>Santa Cruz Blur</th></tr>
