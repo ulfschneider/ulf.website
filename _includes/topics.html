@@ -7,7 +7,7 @@
     >
         {%- for topic in topics -%}
         <section>
-            <h2 class="my-0">{{topic.title}}</h2>
+            <h2 class="mt-0 mb-ryt-lg"">{{topic.title}}</h2>
             <ul class="reset">
                 {%- for url in topic.urls -%} {% assign post =
                 collections.liveContent | itemFromUrl: url %} {%- if post -%}
