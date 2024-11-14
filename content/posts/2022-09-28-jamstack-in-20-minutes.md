@@ -3,7 +3,7 @@ title: Jamstack in 20 minutes
 tags: code
 abstract: The Jamstack comes with the promise to make websites faster, more secure, and to provide a better developer experience. Why is that the case?
 ---
-The Jamstack can bring huge advantages to the process of building websites, as well as to the way these websites are carried out to users. A Jamstack site
+The [Jamstack](https://jamstack.org)^[[<cite>jamstack.org</cite>](https://jamstack.org), an overview site from netlify, who are among the strong advocates of the Jamstack.] can bring huge advantages to the process of building websites, as well as to the way these websites are carried out to users. A Jamstack site
 
 - is fast (probably nothing can be faster than a Jamstack site),
 - can run on any infrastructure and a variety of hosting services,
