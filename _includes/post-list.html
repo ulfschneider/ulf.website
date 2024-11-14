@@ -1,60 +1,60 @@
 {%- if pagedItems.pageData.length > 0 -%} {%- assign livePosts =
 pagedItems.pageData -%} {%- else -%} {%- assign livePosts =
 collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
-<p class="my-ryt-lg">{{poststitle}}</p>
+<h2>{{poststitle}}</h2>
 {%- endif -%}
 <div class="lg:flex lg:-ml-[200px]">
-  <div class="lg:w-[200px] shrink-0">
-    {% if livePosts.year or livePosts.yearsInterval %}
-    <aside
-      class="lg:sticky lg:top-ryt-2xl lg:leading-snug lg:pr-ryt-xl lg:text-right mb-ryt-lg"
-    >
-      <span class="lg:hidden">Posted </span>
-      {% if livePosts.year %}
-      <time class="lg:text-xl">{{livePosts.year}}</time>
-      {% elsif livePosts.yearsInterval %}
-      <time class="lg:text-xl lg:flex lg:flex-col lg:justify-end"
-        ><span>{{livePosts.yearsInterval[0]}}</span><span>–</span
-        ><span>{{livePosts.yearsInterval[1]}}</span></time
-      >
-      {% endif %}
-    </aside>
-    {% endif %}
-  </div>
+    <div class="lg:w-[200px] shrink-0">
+        {% if livePosts.year or livePosts.yearsInterval %}
+        <aside
+            class="lg:sticky lg:top-ryt-2xl lg:leading-snug lg:pr-ryt-xl lg:text-right mb-ryt-lg"
+        >
+            <span class="lg:hidden">Posted </span>
+            {% if livePosts.year %}
+            <time class="lg:text-xl">{{livePosts.year}}</time>
+            {% elsif livePosts.yearsInterval %}
+            <time class="lg:text-xl lg:flex lg:flex-col lg:justify-end"
+                ><span>{{livePosts.yearsInterval[0]}}</span><span>–</span
+                ><span>{{livePosts.yearsInterval[1]}}</span></time
+            >
+            {% endif %}
+        </aside>
+        {% endif %}
+    </div>
 
-  <!-- -->
-  <div class="space-y-ryt-lg">
     <!-- -->
-    {% if pagedItems.pageNumber > 0 %} {%- include "pagination-nav.html" -%}
-    {%endif%} {%- for p in livePosts -%}
-    <!-- -->
-    {% if refDate == nil %} {% assign refDate = p.date | humanDate %} {% endif%}
-    {% assign nowDate = p.date | humanDate %} {% if limit == "day" and nowDate
-    != refDate %} {%- break -%} {%-endif -%}
-    <!-- -->
-    {%- if p.url == page.url -%} {%- continue -%} {%-endif -%}
-    <!-- -->
-    <article>
-      {% if p.data.title != "" and p.data.title != nil and p.data.title !=
-      "notitle" and p.data.notitle == nil %}
-      <a href="{{p.url}}">
-        <cite class="block text-balance">{{ p.data.title }}</cite>
-      </a>
-      {% endif %} {%- if p.data.abstract -%}
-      <p class="my-ryt-xs text-balance">{{p.data.abstract}}</p>
-      {%- endif -%} {%- if p.data.title == "" or p.data.title == nil or
-      p.data.title == "notitle" or p.data.notitle != nil -%}
-      <p class="my-ryt-xs text-balance">
-        {{ p.templateContent | strip_html | strip | truncatewords: 25 , "&nbsp;…
-        " }}
-        <a href="{{p.url}}">Read more</a>
-      </p>
-      {% endif %}
-      <aside class="{{p.data.starred}} my-ryt-xs text-sm">
-        {% include "date-tags.html" posted: p.date tags: p.data.tags notags:
-        p.data.notags %}
-      </aside>
-    </article>
-    {%- endfor -%} {%- include "pagination-nav.html" -%}
-  </div>
+    <div class="space-y-ryt-lg">
+        <!-- -->
+        {% if pagedItems.pageNumber > 0 %} {%- include "pagination-nav.html" -%}
+        {%endif%} {%- for p in livePosts -%}
+        <!-- -->
+        {% if refDate == nil %} {% assign refDate = p.date | humanDate %} {%
+        endif%} {% assign nowDate = p.date | humanDate %} {% if limit == "day"
+        and nowDate != refDate %} {%- break -%} {%-endif -%}
+        <!-- -->
+        {%- if p.url == page.url -%} {%- continue -%} {%-endif -%}
+        <!-- -->
+        <article>
+            {% if p.data.title != "" and p.data.title != nil and p.data.title !=
+            "notitle" and p.data.notitle == nil %}
+            <a href="{{p.url}}">
+                <cite class="block text-balance">{{ p.data.title }}</cite>
+            </a>
+            {% endif %} {%- if p.data.abstract -%}
+            <p class="my-ryt-xs text-balance">{{p.data.abstract}}</p>
+            {%- endif -%} {%- if p.data.title == "" or p.data.title == nil or
+            p.data.title == "notitle" or p.data.notitle != nil -%}
+            <p class="my-ryt-xs text-balance">
+                {{ p.templateContent | strip_html | strip | truncatewords: 25 ,
+                "&nbsp;… " }}
+                <a href="{{p.url}}">Read more</a>
+            </p>
+            {% endif %}
+            <aside class="{{p.data.starred}} my-ryt-xs text-sm">
+                {% include "date-tags.html" posted: p.date tags: p.data.tags
+                notags: p.data.notags %}
+            </aside>
+        </article>
+        {%- endfor -%} {%- include "pagination-nav.html" -%}
+    </div>
 </div>

@@ -5,7 +5,7 @@ notags: true
 title: Ulf Schneider
 layout: home
 id: home
-poststitle: "Recent notes:"
+poststitle: "Recent notes"
 topicstitle: Below is a list of posts I´ve written or collected over the years, and of which I think they should appear here.
 topics:
   - title: Web
