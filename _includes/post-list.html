@@ -1,7 +1,7 @@
 {%- if pagedItems.pageData.length > 0 -%} {%- assign livePosts =
 pagedItems.pageData -%} {%- else -%} {%- assign livePosts =
 collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
-<h2>{{poststitle}}</h2>
+<h2 class="text-base">{{poststitle}}</h2>
 {%- endif -%}
 <div class="lg:flex lg:-ml-[200px]">
     <div class="lg:w-[200px] shrink-0">
