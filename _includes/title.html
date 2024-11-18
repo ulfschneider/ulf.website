@@ -9,19 +9,21 @@
 {%- if hasTitle == true or hasTagIntro == true or isBlog == true or refer or
 author -%}
 <!-- -->
+{%- if layout == "image" -%} {% assign titleClass = "text-base" %} {% assign
+abstractClass = "text-base text-balance" %} {%- else -%} {% assign titleClass =
+"heror"%} {% assign abstractClass = "text-lg heror text-balance"%} {%- endif -%}
 <header class="my-ryt-2xl">
-    {%- if hasTitle == true -%}
-    <h1>{{ title }}</h1>
-    {%- endif -%} {%- include "hero.html" -%} {%- if abstract -%}
-    <div class="my-ryt-sm text-balance">{{ abstract }}</div>
-    {%- endif -%} {%- if refer -%}
-    <div class="heror">{{ refer }}</div>
-    {%- elsif author -%}
-    <div class="my-ryt-xs heror">{{ author }}</div>
-    {%- endif -%} {%- if nodate == nil -%}
-    <aside class="my-ryt-xs text-sm heror">
-        {% include "date-tags.html" %}
-    </aside>
-    {%- endif -%}
+  {%- if hasTitle == true -%}
+
+  <h1 class="{{titleClass}}">{{ title }}</h1>
+  {%- endif -%} {%- include "hero.html" -%} {%- if abstract -%}
+  <div class="my-ryt {{abstractClass}}">{{ abstract }}</div>
+  {%- endif -%} {%- if refer -%}
+  <div class="my-ryt-xs heror">{{ refer }}</div>
+  {%- elsif author -%}
+  <div class="my-ryt-xs heror">{{ author }}</div>
+  {%- endif -%} {%- if nodate == nil -%}
+  <aside class="my-ryt-xs text-sm heror">{% include "date-tags.html" %}</aside>
+  {%- endif -%}
 </header>
 {%- endif -%}

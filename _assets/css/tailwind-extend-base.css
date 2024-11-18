@@ -132,12 +132,12 @@
     /* headings */
     h1,
     .h1 {
-        @apply font-display text-balance break-after-avoid font-bold leading-snug tracking-normal text-base;
+        @apply font-display text-balance break-after-avoid font-bold leading-snug tracking-normal text-2xl rg:text-3xl;
     }
 
     h2,
     .h2 {
-        @apply font-display mt-ryt-2xl mb-ryt-lg text-balance break-after-avoid font-bold leading-snug tracking-normal text-base;
+        @apply font-display mt-ryt-2xl mb-ryt-lg text-balance break-after-avoid font-normal leading-snug tracking-normal text-xl;
     }
 
     h3,
