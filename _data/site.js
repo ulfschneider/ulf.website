@@ -8,7 +8,7 @@ module.exports = {
   cacheVersioning: {
     runtime: `${CACHE_VERSION}-0`,
     script: `${CACHE_VERSION}-41`,
-    css: `${CACHE_VERSION}-240`,
+    css: `${CACHE_VERSION}-241`,
     json: `${CACHE_VERSION}-1`,
     image: `${CACHE_VERSION}-1`,
     font: `${CACHE_VERSION}-1`,

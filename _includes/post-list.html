@@ -1,9 +1,9 @@
 {%- if pagedItems.pageData.length > 0 -%} {%- assign livePosts =
 pagedItems.pageData -%} {%- else -%} {%- assign livePosts =
 collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
-<h2 class="text-base">{{poststitle}}</h2>
+<h2 class="font-normal">{{poststitle}}</h2>
 {%- endif -%}
-<div class="lg:flex lg:-ml-[200px]">
+<div class="lg:flex lg:-ml-[200px] items-baseline">
     <div class="lg:w-[200px] shrink-0">
         {% if livePosts.year or livePosts.yearsInterval %}
         <aside
@@ -11,9 +11,9 @@ collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
         >
             <span class="lg:hidden">Posted </span>
             {% if livePosts.year %}
-            <time class="lg:text-xl">{{livePosts.year}}</time>
+            <time>{{livePosts.year}}</time>
             {% elsif livePosts.yearsInterval %}
-            <time class="lg:text-xl lg:flex lg:flex-col lg:justify-end"
+            <time class=lg:flex lg:flex-col lg:justify-end"
                 ><span>{{livePosts.yearsInterval[0]}}</span><span>–</span
                 ><span>{{livePosts.yearsInterval[1]}}</span></time
             >
