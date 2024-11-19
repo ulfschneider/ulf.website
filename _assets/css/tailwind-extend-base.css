@@ -132,17 +132,17 @@
     /* headings */
     h1,
     .h1 {
-        @apply font-display text-balance break-after-avoid font-bold leading-snug tracking-normal text-2xl rg:text-3xl xl:text-4xl;
+        @apply font-display text-pretty sm:text-balance break-after-avoid font-bold leading-snug tracking-normal text-2xl rg:text-3xl xl:text-4xl;
     }
 
     h2,
     .h2 {
-        @apply font-display mt-ryt-2xl mb-ryt-lg text-balance break-after-avoid font-normal leading-snug tracking-normal text-xl;
+        @apply font-display mt-ryt-2xl mb-ryt-lg text-pretty sm:text-balance break-after-avoid font-normal leading-snug tracking-normal text-xl;
     }
 
     h3,
     .h3 {
-        @apply font-display mt-ryt-xl mb-ryt-lg text-balance break-after-avoid font-bold leading-snug tracking-normal text-base;
+        @apply font-display mt-ryt-xl mb-ryt-lg text-pretty sm:text-balance break-after-avoid font-bold leading-snug tracking-normal text-base;
     }
 
     h4,
@@ -151,7 +151,7 @@
     .h4,
     .h5,
     .h6 {
-        @apply font-display mt-ryt-xl mb-ryt-lg text-balance break-after-avoid text-base font-bold leading-snug tracking-normal;
+        @apply font-display mt-ryt-xl mb-ryt-lg text-pretty sm:text-balance break-after-avoid text-base font-bold leading-snug tracking-normal;
     }
 
     .image {
@@ -340,7 +340,7 @@
         @apply my-ryt-xl text-left border-collapse border-y border-y-meta;
 
         caption {
-            @apply py-ryt-sm no-indent text-balance text-sm font-mono max-w-rg;
+            @apply py-ryt-sm no-indent text-pretty sm:text-balance text-sm font-mono max-w-rg;
             text-align: inherit;
         }
 
@@ -385,7 +385,7 @@
         @apply my-ryt-xl;
 
         figcaption {
-            @apply max-w-rg my-ryt-sm text-balance font-mono text-sm;
+            @apply max-w-rg my-ryt-sm text-pretty sm:text-balance font-mono text-sm;
         }
     }
 
@@ -403,7 +403,7 @@
 
     blockquote > header,
     blockquote > footer {
-        @apply my-ryt-sm text-balance font-mono text-sm;
+        @apply my-ryt-sm text-pretty sm:text-balance font-mono text-sm;
     }
 
     @media (min-width: theme(screens.rg)) {
