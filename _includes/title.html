@@ -23,7 +23,9 @@ abstractClass = "text-base text-balance" %} {%- else -%} {% assign titleClass =
     {%- elsif author -%}
     <div class="my-ryt-xs heror">{{ author }}</div>
     {%- endif -%} {%- if nodate == nil -%}
-    <aside class="text-sm heror">{% include "date-tags.html" %}</aside>
+    <aside class="my-ryt-xs text-sm heror">
+        {% include "date-tags.html" %}
+    </aside>
     {%- endif -%}
 </header>
 {%- endif -%}
