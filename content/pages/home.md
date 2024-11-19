@@ -23,10 +23,10 @@ topics:
   - title: Agile
     urls:
       - /2024-01-21-serious-play/
+      - /2023-05-17-agile-ia-presenter/
       - /2015-07-24-supersize/
       - /2017-02-26-balanced-organization/
       - /2023-12-23-half-arsed-agile/
-      - /2023-05-17-agile-ia-presenter/
       - /2023-06-29-the-lost-interview/
   - title: Emil´s drawings
     urls:
