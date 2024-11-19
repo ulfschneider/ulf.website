@@ -1,28 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html
-  class="no-js"
-  id="{{site.backToTop.id}}"
-  lang="{{site.locale}}"
-  dir="{{site.direction}}"
+    class="no-js"
+    id="{{site.backToTop.id}}"
+    lang="{{site.locale}}"
+    dir="{{site.direction}}"
 >
-  <head>
-    {% include "head.html" %}
-  </head>
+    <head>
+        {% include "head.html" %}
+    </head>
 
-  {%- if nosearch == nil and draft == nil -%} {%assign search_attribute =
-  'data-pagefind-body' %} {%- else -%} {%assign search_attribute =
-  'data-pagefind-ignore="all"' %} {%- endif -%}
+    {%- if nosearch == nil and draft == nil -%} {%assign search_attribute =
+    'data-pagefind-body' %} {%- else -%} {%assign search_attribute =
+    'data-pagefind-ignore="all"' %} {%- endif -%} {%- if title == nil or title
+    == "notitle" or notitle != nil -%} {%- assign contentClass = 'rg:mt-ryt-3xl'
+    -%} {%- endif -%}
 
-  <body class="break-words px-ryt {{layout}}" {{search_attribute}}>
-    {% include "header.html" %}
-    <main id="main" class="max-w-rg mx-auto">
-      {% include "title.html" %} {{ content }}
-      <div class="my-ryt-2xl">
-        {% include "comments.html" %} {% include "webmentions.html" %} {%
-        include "post-nav.html" %}
-      </div>
-    </main>
+    <body class="break-words px-ryt {{layout}}" {{search_attribute}}>
+        {% include "header.html" %}
+        <main id="main" class="max-w-rg mx-auto">
+            {% include "title.html" %}
+            <div class="{{contentClass}}">{{ content }}</div>
+            <div class="my-ryt-2xl">
+                {% include "comments.html" %} {% include "webmentions.html" %}
+                {% include "post-nav.html" %}
+            </div>
+        </main>
 
-    {% include "footer.html" %}
-  </body>
+        {% include "footer.html" %}
+    </body>
 </html>

@@ -2,12 +2,11 @@
 permalink: /
 nodate: true
 notags: true
-title: Ulf Schneider
+notitle: Ulf Schneider
 layout: home
 id: home
-abstract: Hello, I´m Ulf Schneider, a software developer and agile coach. If you like, here is a bit more <a href="/about/">about me</a>.
-poststitle: "My recent notes:"
-topicstitle: Below is a list of selected posts I´ve written or collected over the years.
+poststitle: "Recent notes:"
+topicstitle: Below are selected posts I´ve written or collected over the years.
 topics:
   - title: Web
     urls:
@@ -42,3 +41,4 @@ topics:
       - /2023-10-31-autumn-riding/
       - /2024-08-06-klean-kanteen/
 ---
+Hello, I´m Ulf Schneider, a software developer and agile coach. If you like, here is some more information <a href="/about/">about me</a>.

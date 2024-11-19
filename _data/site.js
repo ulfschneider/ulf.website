@@ -8,7 +8,7 @@ module.exports = {
   cacheVersioning: {
     runtime: `${CACHE_VERSION}-0`,
     script: `${CACHE_VERSION}-41`,
-    css: `${CACHE_VERSION}-243`,
+    css: `${CACHE_VERSION}-244`,
     json: `${CACHE_VERSION}-1`,
     image: `${CACHE_VERSION}-1`,
     font: `${CACHE_VERSION}-1`,
@@ -59,7 +59,7 @@ module.exports = {
   starTagSymbol: "★",
   mainnav: [
     {
-      label: "Home",
+      label: "Ulf Schneider",
       url: BASE,
       id: "home",
       kbd: "h",

@@ -2,7 +2,10 @@
 layout: default
 ---
 
-<div class="no-indent my-ryt-lg">{{ content }}</div>
+{%- if title == nil or title == "notitle" or notitle != nil -%} {%- assign
+contentClass = 'rg:mt-ryt-3xl' -%} {%- endif -%}
+
+<div class="{{contentClass}}">{{ content }}</div>
 <!-- -->
 {%- include "post-list.html" limit: "day" -%}
 <!-- -->
