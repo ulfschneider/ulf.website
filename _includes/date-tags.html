@@ -4,40 +4,40 @@ and nodate == nil %} {%- assign updated = modifiedDate -%} {%- endif -%} {%- if
 tags and notags == nil -%} {%- assign tags = tags -%} {%- else -%} {%- assign
 tags = nil -%} {%- endif -%} {%- if posted != nil or updated != nil or tags !=
 nil -%}
-<div data-pagefind-ignore>
-  {% if posted != nil %}
-  <time
-    datetime="{{posted | isoDate}}"
-    data-pagefind-meta="date:{{posted | isoDate}}"
-    class="whitespace-nowrap {% if updated != nil or tags != nil %}mr-ryt{% endif %}"
-    >{{ posted | humanDate }}</time
-  >
-  {% endif %} {% if updated %}
-  <span class="whitespace-nowrap">
-    <span>Updated</span>
+<div data-pagefind-ignore class="leading-loose">
+    {% if posted != nil %}
     <time
-      datetime="{{updated | isoDate}}"
-      data-pagefind-meta="updated:{{updated | isoDate}}"
-      class="{% if updated != nil or tags != nil %}mr-ryt{%- endif -%}"
-      >{{ updated | humanDate }}</time
+        datetime="{{posted | isoDate}}"
+        data-pagefind-meta="date:{{posted | isoDate}}"
+        class="whitespace-nowrap {% if updated != nil or tags != nil %}mr-ryt{% endif %}"
+        >{{ posted | humanDate }}</time
     >
-  </span>
-  {% endif %} {% if tags != nil %} {%- assign sortedTags = tags | uniq | sort
-  -%}
-  <ul class="inline reset">
-    {% for tag in sortedTags %} {% if tag == site.starTag %}
-    <li class="inline mr-ryt-sm last:mr-0">
-      <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs"
-        >{{ site.starTagSymbol }}</a
-      >
-    </li>
-    {% endif %} {% endfor %} {% for tag in sortedTags %} {% if tag !=
-    site.starTag %}
-    <li class="inline mr-ryt-sm last:mr-0">
-      <a href="{{tag | tagUrl}}" class="no-underline">#{{ tag }}</a>
-    </li>
-    {% endif %} {% endfor %}
-  </ul>
-  {% endif %}
+    {% endif %} {% if updated %}
+    <span class="whitespace-nowrap">
+        <span>Updated</span>
+        <time
+            datetime="{{updated | isoDate}}"
+            data-pagefind-meta="updated:{{updated | isoDate}}"
+            class="{% if updated != nil or tags != nil %}mr-ryt{%- endif -%}"
+            >{{ updated | humanDate }}</time
+        >
+    </span>
+    {% endif %} {% if tags != nil %} {%- assign sortedTags = tags | uniq | sort
+    -%}
+    <ul class="inline reset">
+        {% for tag in sortedTags %} {% if tag == site.starTag %}
+        <li class="inline mr-ryt-sm last:mr-0">
+            <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs"
+                >{{ site.starTagSymbol }}</a
+            >
+        </li>
+        {% endif %} {% endfor %} {% for tag in sortedTags %} {% if tag !=
+        site.starTag %}
+        <li class="inline mr-ryt-sm last:mr-0">
+            <a href="{{tag | tagUrl}}" class="no-underline">#{{ tag }}</a>
+        </li>
+        {% endif %} {% endfor %}
+    </ul>
+    {% endif %}
 </div>
 {%- endif -%}
