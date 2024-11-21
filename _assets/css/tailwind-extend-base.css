@@ -132,7 +132,7 @@
     /* headings */
     h1,
     .h1 {
-        @apply font-display text-pretty sm:text-balance break-after-avoid font-bold leading-snug tracking-normal text-2xl rg:text-3xl xl:text-4xl;
+        @apply font-display text-pretty sm:text-balance break-after-avoid font-bold leading-snug tracking-normal text-2xl rg:text-3xl;
     }
 
     h2,

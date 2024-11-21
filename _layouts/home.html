@@ -2,10 +2,7 @@
 layout: default
 ---
 
-{%- if title == nil or title == "notitle" or notitle != nil -%} {%- assign
-contentClass = 'rg:mt-ryt-3xl' -%} {%- endif -%}
-
-<div class="{{contentClass}}">{{ content }}</div>
+{{ content }}
 <!-- -->
 {%- include "post-list.html" limit: "day" -%}
 <!-- -->

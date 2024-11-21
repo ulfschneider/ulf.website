@@ -11,15 +11,12 @@
 
     {%- if nosearch == nil and draft == nil -%} {%assign search_attribute =
     'data-pagefind-body' %} {%- else -%} {%assign search_attribute =
-    'data-pagefind-ignore="all"' %} {%- endif -%} {%- if title == nil or title
-    == "notitle" or notitle != nil -%} {%- assign contentClass = 'rg:mt-ryt-3xl'
-    -%} {%- endif -%}
+    'data-pagefind-ignore="all"' %} {%- endif -%}
 
     <body class="break-words px-ryt {{layout}}" {{search_attribute}}>
         {% include "header.html" %}
         <main id="main" class="max-w-rg mx-auto">
-            {% include "title.html" %}
-            <div class="{{contentClass}}">{{ content }}</div>
+            {% include "title.html" %} {{ content }}
             <div class="my-ryt-2xl">
                 {% include "comments.html" %} {% include "webmentions.html" %}
                 {% include "post-nav.html" %}
