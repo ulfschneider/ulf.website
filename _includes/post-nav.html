@@ -1,36 +1,44 @@
 {% assign newerPost = collections.liveContent | post |
 getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
 | post | getNextCollectionItem: page %} {%- if newerPost or olderPost -%}
-<div class="heror mt-ryt">
-  <nav
-    data-pagefind-ignore
-    class="flex flex-col sm:gap-ryt-xl rg:gap-ryt-2xl sm:flex-row gap-ryt"
-  >
-    {% if newerPost %}
-    <div class="leading-normal max-w-rg">
-      <div class="text-sm whitespace-nowrap">
-        <span>Newer post</span
-        ><span class="pointer-coarse:hidden">
-          <kbd>{{site.navNewer.kbd}}</kbd></span
-        >
-      </div>
-      <a id="{{site.navNewer.id}}" href="{{ newerPost.url }}">
-        <cite class="rg:text-balance block">{{ newerPost.data.title }}</cite>
-      </a>
-    </div>
-    {% endif %} {% if olderPost %}
-    <div class="max-w-rg">
-      <div class="text-sm whitespace-nowrap">
-        <span>Older post</span
-        ><span class="pointer-coarse:hidden">
-          <kbd>{{site.navOlder.kbd}}</kbd></span
-        >
-      </div>
-      <a id="{{site.navOlder.id}}" href="{{ olderPost.url }}">
-        <cite class="rg:text-balance block">{{ olderPost.data.title }}</cite>
-      </a>
-    </div>
-    {% endif %}
-  </nav>
+<div class="mt-ryt">
+    <nav
+        data-pagefind-ignore
+        class="flex flex-col sm:gap-ryt-xl rg:gap-ryt-2xl sm:flex-row gap-ryt justify-between"
+    >
+        {% if newerPost %}
+        <div class="leading-normal max-w-rg">
+            <div class="text-sm whitespace-nowrap">
+                <span>Newer post</span
+                ><span class="pointer-coarse:hidden">
+                    <kbd>{{site.navNewer.kbd}}</kbd></span
+                >
+            </div>
+            <a id="{{site.navNewer.id}}" href="{{ newerPost.url }}">
+                <cite class="rg:text-balance block"
+                    >{{ newerPost.data.title }}</cite
+                >
+            </a>
+        </div>
+        {% endif %} {% if olderPost %}
+        <div class="max-w-rg">
+            <div class="text-sm whitespace-nowrap text-right">
+                <span>Older post</span
+                ><span class="pointer-coarse:hidden">
+                    <kbd>{{site.navOlder.kbd}}</kbd></span
+                >
+            </div>
+            <a
+                id="{{site.navOlder.id}}"
+                href="{{ olderPost.url }}"
+                class="text-right"
+            >
+                <cite class="rg:text-balance block"
+                    >{{ olderPost.data.title }}</cite
+                >
+            </a>
+        </div>
+        {% endif %}
+    </nav>
 </div>
 {%- endif -%}
