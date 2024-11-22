@@ -4,10 +4,10 @@ getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
 <div class="mt-ryt">
     <nav
         data-pagefind-ignore
-        class="flex flex-col sm:gap-ryt-xl rg:gap-ryt-2xl sm:flex-row gap-ryt justify-between"
+        class="leading-normal flex flex-col w-full sm:gap-ryt-xl rg:gap-ryt-2xl sm:flex-row gap-ryt justify-between"
     >
         {% if newerPost %}
-        <div class="leading-normal max-w-rg">
+        <div>
             <div class="text-sm whitespace-nowrap">
                 <span>Newer post</span
                 ><span class="pointer-coarse:hidden">
@@ -21,7 +21,7 @@ getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
             </a>
         </div>
         {% endif %} {% if olderPost %}
-        <div class="max-w-rg justify-self-end">
+        <div class="ml-auto">
             <div class="text-sm whitespace-nowrap text-right">
                 <span>Older post</span
                 ><span class="pointer-coarse:hidden">
