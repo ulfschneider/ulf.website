@@ -11,9 +11,9 @@
             <ul class="reset">
                 {%- for url in topic.urls -%} {% assign post =
                 collections.liveContent | itemFromUrl: url %} {%- if post -%}
-                <li class="mt-ryt">
+                <li class="mt-ryt text-pretty sm:text-balance">
                     <a href="{{url}}"
-                        ><cite class="font-normal text-pretty sm:text-balance block"
+                        ><cite class="font-normal"
                             >{{post.data.title}}</cite
                         ></a
                     >

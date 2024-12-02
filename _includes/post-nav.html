@@ -4,7 +4,7 @@ getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
 <div class="mt-ryt">
     <nav
         data-pagefind-ignore
-        class="leading-normal flex flex-col w-full sm:gap-ryt-xl rg:gap-ryt-2xl sm:flex-row gap-ryt justify-between"
+        class="leading-normal flex flex-col w-full sm:gap-ryt-xl rg:gap-ryt-2xl sm:flex-row gap-ryt justify-between text-pretty rg:text-balance"
     >
         {% if newerPost %}
         <div>
@@ -15,9 +15,7 @@ getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
                 >
             </div>
             <a id="{{site.navNewer.id}}" href="{{ newerPost.url }}">
-                <cite class="rg:text-balance block"
-                    >{{ newerPost.data.title }}</cite
-                >
+                <cite>{{ newerPost.data.title }}</cite>
             </a>
         </div>
         {% endif %} {% if olderPost %}
@@ -33,9 +31,7 @@ getPreviousCollectionItem: page %} {% assign olderPost = collections.liveContent
                 href="{{ olderPost.url }}"
                 class="text-right"
             >
-                <cite class="rg:text-balance block"
-                    >{{ olderPost.data.title }}</cite
-                >
+                <cite>{{ olderPost.data.title }}</cite>
             </a>
         </div>
         {% endif %}

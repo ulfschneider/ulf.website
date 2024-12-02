@@ -34,21 +34,21 @@ collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
         <!-- -->
         {%- if p.url == page.url -%} {%- continue -%} {%-endif -%}
         <!-- -->
-        <article>
+        <article class="text-pretty sm:text-balance">
             {% if p.data.title != "" and p.data.title != nil and p.data.title !=
             "notitle" and p.data.notitle == nil %}
             <a href="{{p.url}}">
-                <cite class="block text-pretty sm:text-balance"
+                <cite
                     >{{ p.data.title }}</cite
                 >
             </a>
             {% endif %} {%- if p.data.abstract -%}
-            <p class="my-ryt-xs text-pretty sm:text-balance">
+            <p class="my-ryt-xs>
                 {{p.data.abstract}}
             </p>
             {%- endif -%} {%- if p.data.title == "" or p.data.title == nil or
             p.data.title == "notitle" or p.data.notitle != nil -%}
-            <p class="my-ryt-xs text-pretty sm:text-balance">
+            <p class="my-ryt-xs">
                 {{ p.templateContent | strip_html | strip | truncatewords: 25 ,
                 "&nbsp;… " }}
                 <a href="{{p.url}}">Read more</a>
