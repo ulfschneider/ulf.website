@@ -32,7 +32,7 @@ My path through 30 years of software went like this:
   <dt>2014 – 2023 Diebold Nixdorf</dt>
   <dd>Eight years employed as a software developer and agile coach at Diebold Nixdorf, heading the Professional Services Processes & Quality team when leaving the company.</dd>
   <dt>2023 – today Weidmüller Interface</dt>
-  <dd>Since February 2023 I am working as a software developer at Weidmüller Interface on the new Web Rail Configurator.</dd>
+  <dd>Since February 2023 I am the lead developer for the new Weidmüller <a href="https://configurator.weidmueller.com">Web Rail Configurator</a>.</dd>
 </dl>
 
 <h2>Connect with me</h2>
