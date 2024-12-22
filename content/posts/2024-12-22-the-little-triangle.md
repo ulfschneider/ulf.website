@@ -4,7 +4,6 @@ tags:
   - code
   - css
   - bookmark
-layout: bookmark
 ---
 Juan Diego Rodríguez is exploring four techniques to create [<cite>The little triangle in the tooltip</cite>](https://css-tricks.com/the-little-triangle-in-the-tooltip/):
 
