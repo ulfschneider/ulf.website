@@ -3,7 +3,7 @@ title: Zusätzlich abgehängt
 refer: der Freitag Nr. 42 vom 21 Oktober 2021
 tags: journal
 ---
-Carolin und Christop Butterwegge im Gespräch mit Sebastian Puschner, das als [podcast auf freitag.de](https://der-freitag-podcast.podigee.io/60-butterwegge-uber-skandal-kinderarmut) verfügbar ist. Zwei Zitate:
+Carolin und Christoph Butterwegge im Gespräch mit Sebastian Puschner, das als [podcast auf freitag.de](https://der-freitag-podcast.podigee.io/60-butterwegge-uber-skandal-kinderarmut) verfügbar ist. Zwei Zitate:
 
 > 1965 war jedes 75. Kind im Sozialhilfebezug. Heute ist jedes siebte im Hartz-IV-Bezug.
 
