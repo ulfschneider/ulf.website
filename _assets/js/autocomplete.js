@@ -100,7 +100,7 @@ AutoComplete = (function () {
 
       suggestionWrapper.style.top = getSuggestionWrapperTopPosition(
         element,
-        suggestionWrapper
+        suggestionWrapper,
       );
     }
   }
@@ -345,7 +345,7 @@ AutoComplete = (function () {
           threshold: threshold,
           onSelect: onSelect,
         });
-      })
+      }),
     );
 
     addEventListener("resize", function () {
@@ -363,7 +363,7 @@ AutoComplete = (function () {
   return {
     init: function ({ selector, queryData, threshold, onSelect }) {
       let elements = document.querySelectorAll(selector);
-      for (element of elements) {
+      for (const element of elements) {
         prepareElement({
           element: element,
           queryData: debounce(queryData, 200),

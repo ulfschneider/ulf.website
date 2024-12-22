@@ -185,7 +185,6 @@ permalink: "{{site.search.url}}"
 
     async function search() {
         try {
-            const results = [];
             printSearching();
             let start = Date.now();
             query = getQueryParameterByName("query");
@@ -193,9 +192,12 @@ permalink: "{{site.search.url}}"
             pagefind = await initPagefind();
             const search = await pagefind.search(query);
             const promiseCollector = [];
-            for (const entry of search.results) {
+            const results = Array(search.results.length);
+            for (let i = 0; i < search.results.length; i++) {
                 promiseCollector.push(
-                    entry.data().then((data) => results.push(data)),
+                    search.results[i]
+                        .data()
+                        .then((data) => (results[i] = data)),
                 );
             }
             await Promise.allSettled(promiseCollector);
