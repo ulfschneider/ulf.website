@@ -18,13 +18,13 @@ module.exports = function (eleventyConfig) {
     "eleventy.after",
     async ({ dir, results, runMode, outputMode }) => {
       console.log(
-        "******** eleventy after build event, configured in .eleventy.js config file"
+        "******** eleventy after build event, configured in .eleventy.js config file",
       );
       execSync(`npx pagefind --site ${dir.output}`, {
         encoding: "utf-8",
         stdio: "inherit",
       });
-    }
+    },
   );
 
   addLayoutAliases(eleventyConfig);
@@ -83,6 +83,7 @@ function addLayoutAliases(eleventyConfig) {
   eleventyConfig.addLayoutAlias("default", "default.html");
   eleventyConfig.addLayoutAlias("list", "list.html");
   eleventyConfig.addLayoutAlias("image", "default.html");
+  eleventyConfig.addLayoutAlias("bookmark", "default.html");
   eleventyConfig.addLayoutAlias("gallery", "gallery.html");
   eleventyConfig.addLayoutAlias("blank", "blank.html");
   eleventyConfig.addLayoutAlias("none", "none.html");
@@ -213,12 +214,12 @@ function addFilters(eleventyConfig) {
   eleventyConfig.addFilter("authorName", filters.authorName);
   eleventyConfig.addFilter(
     "indicateModifiedDate",
-    filters.indicateModifiedDate
+    filters.indicateModifiedDate,
   );
   eleventyConfig.addFilter("modifiedDate", filters.modifiedDate);
   eleventyConfig.addFilter(
     "commentRootIssueNumber",
-    filters.commentRootIssueNumber
+    filters.commentRootIssueNumber,
   );
   eleventyConfig.addFilter("comments", filters.comments);
   eleventyConfig.addFilter("withComments", filters.withComments);
