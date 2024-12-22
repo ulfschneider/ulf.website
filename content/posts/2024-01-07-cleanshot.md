@@ -1,11 +1,11 @@
 ---
 title: CleanShot
-tags: apps
+tags: app
 ---
 [<cite>CleanShot</cite>](https://cleanshot.com) is a powerful and customizable tool to capture images and record GIF´s and videos on a Mac screen. I cannot count all the productivity features offered, some outstanding:
 
 - Capture an area with the default Mac shortcut <kbd>Shift</kbd> <kbd>⌘</kbd> <kbd>4</kbd>.
-- Get an all-in-one CleanShot capturing frontend with <kbd>Shift</kbd> <kbd>⌘</kbd> <kbd>5</kbd>. 
+- Get an all-in-one CleanShot capturing frontend with <kbd>Shift</kbd> <kbd>⌘</kbd> <kbd>5</kbd>.
 - Set dimensions and ratios for the capturing of areas.
 - Hide desktop icons when capturing the screen.
 - Annotate screenshots.

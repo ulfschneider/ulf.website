@@ -1,5 +1,5 @@
 ---
 title: Scrollbar.app
-tags: apps
+tags: app
 draft: true
 ---

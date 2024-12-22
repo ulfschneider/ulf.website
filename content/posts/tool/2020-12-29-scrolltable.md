@@ -1,8 +1,8 @@
 ---
 title: markdown-it-scrolltable
-tags: tools
+tags: tool
 ---
-A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-scrolltable) to wrap any `<table>` into a `<div>` for horizontal scrolling on narrow screens. 
+A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-scrolltable) to wrap any `<table>` into a `<div>` for horizontal scrolling on narrow screens.
 
 [[toc]]
 
@@ -11,10 +11,10 @@ A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-scrolltable) to
 ```md
 Column | Column
 ------ | ------
-Cell   | Cell  
+Cell   | Cell
 ```
 
-will become 
+will become
 
 ```html
 <div class="scroll-table" style="overflow-x:auto">
@@ -54,7 +54,7 @@ html inside of your markdown, like for example
 </table>
 ```
 
-will be transformed into 
+will be transformed into
 
 ```html
 <div class="scroll-table" style="overflow-x:auto">
@@ -92,5 +92,3 @@ markdownIt({
     })
     .use(markdownItScrollTable);
 ```
-
-

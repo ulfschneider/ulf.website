@@ -1,6 +1,8 @@
 ---
 title: The Pillar
-tags: journal
+tags: 
+  - journal
+  - bookmark
 ---
 Stephen Gill planted a wooden pillar near his house in Sweden and put a motion-sensor camera in front of it. Over the course of several years Stephen captured a collection of raw and beautiful bird photos.
 

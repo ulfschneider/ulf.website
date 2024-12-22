@@ -1,12 +1,12 @@
 ---
 title: Sample letter
 draft: true
-tags: tools
+tags: tool
 ---
 
 @sender
 :Lucy Letter
-:27 Writing Avenue 
+:27 Writing Avenue
 :Garden Town, 12345
 
 @receiver

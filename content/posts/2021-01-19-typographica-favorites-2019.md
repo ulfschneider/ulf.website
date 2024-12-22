@@ -1,6 +1,6 @@
 ---
 title: Public Sans, Arvana, and Brucker
-tags: fonts
+tags: font
 ---
 An [interesting compilation of types](https://typographica.org/features/our-favorite-typefaces-of-2019/) from Typographica. Resonating:
 

@@ -1,6 +1,6 @@
 ---
 title: A new typeface for the city of Amsterdam
-tags: fonts
+tags: font
 ---
 Amsterdam Sans will be [the new typeface for the City of Amsterdam](https://www.thonik.nl/stories/a-new-typeface-for-the-city-of-amsterdam/). thonik, the Amsterdam based collective of designers, together with Bold Monday developed the typeface. Amsterdam Sans will replace the Avenir typeface by Adrian Frutiger. As thonik explains:
 

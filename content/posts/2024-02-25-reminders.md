@@ -1,6 +1,6 @@
 ---
 title: Reminders
-tags: apps
+tags: app
 ---
 To keep track of tasks I want to complete I´m using the Reminders app that comes with MacOS and iOS. The first thing I appreciate about Reminders is the synchronization across all Apple devices I use. You can take it for given, but still, I think it is an important and well working feature. I use the Reminders app in a basic fashion, which means:
 

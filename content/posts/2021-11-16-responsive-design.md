@@ -1,6 +1,6 @@
 ---
 title: Learn Responsive Design
-tags: [courses, css, code, accessibility, star]
+tags: [course, css, code, accessibility, star]
 ---
 [<cite>Learn Responsive Design</cite>](https://web.dev/learn/design/) is
 

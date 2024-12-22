@@ -1,6 +1,6 @@
 ---
 title: Fonts Knowledge
-tags: fonts
+tags: font
 ---
 The [<cite>Google Fonts Knowledge</cite>](https://fonts.google.com/knowledge) library of original guides to the world of typography contains articles about
 

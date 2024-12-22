@@ -3,6 +3,7 @@ title: Nord Design System
 tags: 
   - design
   - accessibility
+  - bookmark
 ---
 The [<cite>Nord Design System</cite>](https://nordhealth.design) is an impressive piece of work. The communication through the design team´s web page is considered.
 

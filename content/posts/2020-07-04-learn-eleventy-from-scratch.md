@@ -1,6 +1,6 @@
 ---
 title: Learn eleventy from scratch
-tags: [code, courses]
+tags: [code, course]
 ---
 [Learn Eleventy From Scratch](
 https://piccalil.li/course/learn-eleventy-from-scratch/) is a training made by Andy Bell. It´s a practical, well organized, and well written course that allows you to get a state-of-the-art, [11ty-powered](https://www.11ty.dev) website up and running.

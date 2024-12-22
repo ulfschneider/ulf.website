@@ -1,6 +1,6 @@
 ---
 title: Fluid type with Tailwind CSS
-tags: [fonts, code, css]
+tags: [font, code, css]
 draft: true
 ---
 Fluid type allows the fonts on your website to smoothly reduce size when the browser window gets smaller and to enlarge size when the browser window gets wider. The transition will not go beyond a minimum and a maximum size to avoid extreme font sizes that wouldn´t be legible.

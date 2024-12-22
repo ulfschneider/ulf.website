@@ -1,6 +1,6 @@
 ---
 title: Design systems for everyone
-tags: [design, css, courses, star]
+tags: [design, css, course, star]
 ---
 Ethan Marcotte has [four new courses on design systems](https://thegymnasium.com/design-systems), available for free at Aquent Gymnasium. These are my notes about the excellent first course, [<cite>Design systems for everyone</cite>](https://thegymnasium.com/design-systems#everyone).
 
@@ -8,9 +8,9 @@ Ethan Marcotte has [four new courses on design systems](https://thegymnasium.com
 
 ## Introduction
 
-- Design systems bring *structure* and *purpose* to design patterns. 
-- Design systems help to make patterns more visible and more organized. 
-- Design systems can help make our products more manageable and consistent. 
+- Design systems bring *structure* and *purpose* to design patterns.
+- Design systems help to make patterns more visible and more organized.
+- Design systems can help make our products more manageable and consistent.
 - *Design systems can help to communicate more clearly.*
 
 ## What is a design system
@@ -23,7 +23,7 @@ Examples:
 - [Starbucks Pattern Library](https://starbucks.com/developer/pattern-library) complemented by [Our new expression](https://creative.starbucks.com)
 - [Salesforce Lightning Design System](https://lightningdesignsystem.com)
 - Further information at [Alla Kholmatova](https://craftui.com)
-    
+
 A design system consists of patterns & components as well as guidelines how to work with those patterns.
 
 <figure>
@@ -144,13 +144,3 @@ Visit *[A design system isn´t a project. It´s a product, serving products](htt
 
 ## Further Reading
 [<cite>Design Systems</cite>](https://shop.smashingmagazine.com/products/design-systems-by-alla-kholmatova), by Alla Kholmatova
-
-
-
-
-
-
-
-
-
-

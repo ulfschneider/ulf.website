@@ -1,7 +1,7 @@
 ---
 title: Hanging punctuation
 tags:
-  - fonts
+  - font
   - til
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Hand stamp slab serif
-tags: fonts
+tags: font
 ---
 [<cite>Hand stamp slab serif</cite>](https://typographicdesign.de/product/font-hand-stamp-slab-serif-rough/) is a display typeface by Manuel Viergutz. It´s very good at keeping the natural expression of hand-stamped letters.
 

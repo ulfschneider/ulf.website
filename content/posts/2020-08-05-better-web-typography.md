@@ -1,12 +1,12 @@
 ---
 title: Better Web Typography
-tags: [fonts, courses]
+tags: [font, course]
 ---
 [Matej´s](https://matejlatin.co.uk) course on [Better Web Typography](https://betterwebtype.com) is structured into seven parts which will be mailed to you, once you subscribed to the course. Matej is passionate about his topic and he is putting great care into the details. What I liked especially about the course are the references to articles, tools, and books for further exploration. I found some interesting new things! The parts of the course are:
 
 [[toc]]
 
-I think the course is like a condensed version of Matej´s book *[Better web typography for a better web](https://betterwebtype.com/web-typography-book/)*, which I didn´t read. 
+I think the course is like a condensed version of Matej´s book *[Better web typography for a better web](https://betterwebtype.com/web-typography-book/)*, which I didn´t read.
 
 ## Introduction to typography
 
@@ -53,7 +53,3 @@ I think the course is like a condensed version of Matej´s book *[Better web typ
 - [More meaningful typography](https://alistapart.com/article/more-meaningful-typography/) *– ALA article by Tim Brown*
 - [Modularscale.com](https://www.modularscale.com/) *– tool*
 - [Modular scale Sketch plugin](https://github.com/automat/sketch-plugin-typographic-scale) *– tool*
-
-
-
-
