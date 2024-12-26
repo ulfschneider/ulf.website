@@ -14,8 +14,8 @@ collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
             <time class="lg:text-xl">{{livePosts.year}}</time>
             {% elsif livePosts.yearsInterval %}
             <time class="lg:text-xl lg:flex lg:flex-col lg:justify-end"
-                ><span>{{livePosts.yearsInterval[0]}}</span><span>–</span
-                ><span>{{livePosts.yearsInterval[1]}}</span></time
+                ><span>{{livePosts.yearsInterval[1]}}</span><span>–</span
+                ><span>{{livePosts.yearsInterval[0]}}</span></time
             >
             {% endif %}
         </aside>
