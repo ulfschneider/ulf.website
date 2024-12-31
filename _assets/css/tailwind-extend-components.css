@@ -1,253 +1,258 @@
 @layer components {
-  /*auto complete */
-  ul.auto-complete-suggestion {
-    @apply reset border border-meta absolute z-10 w-full m-0;
+    /*auto complete */
+    ul.auto-complete-suggestion {
+        @apply reset border border-meta absolute z-10 w-full m-0;
 
-    &::after {
-      content: "";
-      @apply absolute -bottom-ryt-xl h-ryt-xl w-1;
+        &::after {
+            content: "";
+            @apply absolute -bottom-ryt-xl h-ryt-xl w-1;
+        }
+
+        > li {
+            @apply px-ryt-xs py-ryt-sm leading-tight bg-field-light dark:bg-field-dark cursor-pointer font-normal;
+        }
+        > li::before {
+            @apply hidden;
+        }
+        > li:hover,
+        > li[aria-selected="true"] {
+            @apply bg-primary text-white;
+        }
     }
 
-    > li {
-      @apply px-ryt-xs py-ryt-sm leading-tight bg-field-light dark:bg-field-dark cursor-pointer font-normal;
-    }
-    > li::before {
-      @apply hidden;
-    }
-    > li:hover,
-    > li[aria-selected="true"] {
-      @apply bg-primary text-white;
-    }
-  }
+    /* demo box */
+    .demo-box {
+        @apply border border-meta max-w-rg p-ryt;
 
-  /* demo box */
-  .demo-box {
-    @apply border border-meta max-w-rg p-ryt;
+        &::before {
+            content: "Demo";
+            @apply font-body text-sm absolute;
 
-    &::before {
-      content: "Demo";
-      @apply font-body text-sm absolute;
-
-      margin-top: calc(
-        -1 * (theme(spacing.ryt) + theme(spacing.ryt) + theme(spacing.ryt-xs))
-      );
-      margin-left: calc(-1 * (theme(spacing.ryt) + 1px));
-    }
-  }
-
-  /* table of contents */
-  /* markdown-it toc */
-
-  .heading-anchor {
-    @apply no-underline;
-  }
-
-  .table-of-contents {
-    @apply my-ryt-xl;
-
-    &::before {
-      content: "Contents";
-      @apply text-sm;
+            margin-top: calc(
+                -1 * (theme(spacing.ryt) + theme(spacing.ryt) +
+                            theme(spacing.ryt-xs))
+            );
+            margin-left: calc(-1 * (theme(spacing.ryt) + 1px));
+        }
     }
 
-    a {
-      @apply no-underline;
+    /* table of contents */
+    /* markdown-it toc */
+
+    .heading-anchor {
+        @apply no-underline;
     }
 
-    > ol {
-      @apply rg:-ml-ryt-lg my-0;
+    .table-of-contents {
+        @apply my-ryt-xl;
+
+        &::before {
+            content: "Contents";
+            @apply text-sm;
+        }
+
+        a {
+            @apply no-underline;
+        }
+
+        > ol {
+            @apply rg:-ml-ryt-lg my-0;
+        }
+
+        ol > li > ol {
+            @apply hidden;
+        }
     }
 
-    ol > li > ol {
-      @apply hidden;
-    }
-  }
+    /*scroll-table*/
 
-  /*scroll-table*/
-
-  .scroll-table {
-    @apply my-ryt-xl;
-    table {
-      @apply my-0;
-    }
-  }
-
-  /* sotable */
-
-  table.sotable {
-    button.sotable.restore,
-    button.sotable.column {
-      @apply font-bold p-0 m-0 text-inherit text-left bg-transparent;
-    }
-    button.sotable.column .indicator {
-      @apply ml-ryt-sm text-sm;
+    .scroll-table {
+        @apply my-ryt-xl;
+        table {
+            @apply my-0;
+        }
     }
 
-    caption > * + .indicator {
-      @apply !mt-ryt;
-    }
-  }
+    /* sotable */
 
-  /* tags */
-  .site-tags {
-  }
+    table.sotable {
+        button.sotable.restore,
+        button.sotable.column {
+            @apply font-bold p-0 m-0 text-inherit text-left bg-transparent;
+        }
+        button.sotable.column .indicator {
+            @apply ml-ryt-sm text-sm;
+        }
 
-  .tag:not(pre code .tag) {
-    @apply text-sm no-underline px-ryt-xs py-ryt-2xs border border-current rounded whitespace-nowrap hover:bg-primary hover:border-primary hover:text-white hover:brightness-110;
-  }
-  .tag.current:not(pre code .tag) {
-    @apply px-ryt-xs py-ryt-2xs bg-primary border-primary text-white whitespace-nowrap;
-  }
-
-  .outdent-short-text {
-    margin-left: -10em;
-    width: 10em;
-
-    @apply pr-ryt-lg align-baseline sticky top-ryt float-left text-right;
-  }
-
-  /* PrismJS 1.29.0*/
-  pre[data-language]:not([data-language=""]) {
-    &::before {
-      content: attr(data-language);
-      @apply font-sans mb-ryt-sm inline-block text-sm border border-current px-ryt-xs;
-    }
-  }
-
-  pre[data-language] {
-    & > code {
-      @apply whitespace-pre block overflow-x-auto;
-    }
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    @apply text-green-700 dark:text-green-500;
-    font-style: italic;
-  }
-
-  .token.string,
-  .token.attr-value {
-    @apply text-amber-700 dark:text-amber-400;
-  }
-
-  .token.punctuation,
-  .token.operator {
-    @apply text-orange-700 dark:text-orange-400;
-  }
-
-  .token.entity,
-  .token.url,
-  .token.symbol,
-  .token.number,
-  .token.boolean,
-  .token.variable,
-  .token.constant,
-  .token.property,
-  .token.regex,
-  .token.inserted {
-    @apply text-cyan-700 dark:text-cyan-400;
-  }
-
-  .token.atrule,
-  .token.keyword,
-  .token.attr-name,
-  .language-autohotkey .token.selector {
-    @apply text-cyan-700 dark:text-cyan-400;
-  }
-
-  .token.function,
-  .token.deleted,
-  .language-autohotkey .token.tag {
-    @apply text-red-700 dark:text-red-400;
-  }
-
-  .token.tag,
-  .token.selector,
-  .language-autohotkey .token.keyword {
-    @apply text-sky-700 dark:text-sky-400;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  /* markdown-it footnotes */
-
-  hr.footnotes-sep {
-    @apply hidden;
-  }
-
-  .footnote-ref a,
-  .footnote-backref {
-    @apply no-underline;
-  }
-
-  ol.footnotes-list {
-    counter-reset: footnote-counter;
-  }
-
-  ol.footnotes-list::before {
-    content: "Footnotes";
-    @apply h2 mb-ryt block;
-  }
-
-  ol.footnotes-list li {
-    counter-increment: footnote-counter;
-    @apply relative;
-  }
-
-  ol.footnotes-list li::before {
-    content: counter(footnote-counter);
-    @apply normal-nums font-normal;
-  }
-
-  ol.footnotes-list li > p {
-    @apply inline;
-  }
-
-  main > section > ol.footnotes-list {
-    @apply rg:-ml-ryt-lg;
-  }
-
-  main > section > ol.footnotes-list:before {
-    @apply rg:pl-ryt-lg;
-  }
-
-  /* cooklang */
-  ul[class^="cooklang-"] > li::before {
-    content: "＿";
-  }
-
-  .cooklang-ingredients .amount-and-unit {
-    @apply font-bold inline-block;
-  }
-
-  /* eleventy embed tweet */
-  blockquote.tweet-card {
-    @apply font-normal not-italic text-base font-body border-light overflow-x-auto max-w-rg;
-
-    &::before,
-    &::after {
-      display: none;
+        caption > * + .indicator {
+            @apply !mt-ryt;
+        }
     }
 
-    .tweet-author-name,
-    .tweet-author-handle {
-      @apply break-all;
+    /* tags */
+    .site-tags {
     }
-  }
 
-  /* lite youtube */
-  .lty-playbtn:active,
-  .lty-playbtn:focus {
-    outline-width: 0px !important;
-  }
+    .tag:not(pre code .tag) {
+        @apply text-sm no-underline px-ryt-xs py-ryt-2xs border border-current rounded whitespace-nowrap hover:bg-primary hover:border-primary hover:text-white hover:brightness-110;
+    }
+    .tag.current:not(pre code .tag) {
+        @apply px-ryt-xs py-ryt-2xs bg-primary border-primary text-white whitespace-nowrap;
+    }
+
+    .outdent-short-text {
+        margin-left: -10em;
+        width: 10em;
+
+        @apply pr-ryt-lg align-baseline sticky top-ryt float-left text-right;
+    }
+
+    .line-list {
+        @apply reset border-l border-current !pl-[calc(theme("spacing.ryt-lg")-1px)];
+    }
+
+    /* PrismJS 1.29.0*/
+    pre[data-language]:not([data-language=""]) {
+        &::before {
+            content: attr(data-language);
+            @apply font-sans mb-ryt-sm inline-block text-sm border border-current px-ryt-xs;
+        }
+    }
+
+    pre[data-language] {
+        & > code {
+            @apply whitespace-pre block overflow-x-auto;
+        }
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        @apply text-green-700 dark:text-green-500;
+        font-style: italic;
+    }
+
+    .token.string,
+    .token.attr-value {
+        @apply text-amber-700 dark:text-amber-400;
+    }
+
+    .token.punctuation,
+    .token.operator {
+        @apply text-orange-700 dark:text-orange-400;
+    }
+
+    .token.entity,
+    .token.url,
+    .token.symbol,
+    .token.number,
+    .token.boolean,
+    .token.variable,
+    .token.constant,
+    .token.property,
+    .token.regex,
+    .token.inserted {
+        @apply text-cyan-700 dark:text-cyan-400;
+    }
+
+    .token.atrule,
+    .token.keyword,
+    .token.attr-name,
+    .language-autohotkey .token.selector {
+        @apply text-cyan-700 dark:text-cyan-400;
+    }
+
+    .token.function,
+    .token.deleted,
+    .language-autohotkey .token.tag {
+        @apply text-red-700 dark:text-red-400;
+    }
+
+    .token.tag,
+    .token.selector,
+    .language-autohotkey .token.keyword {
+        @apply text-sky-700 dark:text-sky-400;
+    }
+
+    .token.important,
+    .token.bold {
+        font-weight: bold;
+    }
+
+    .token.italic {
+        font-style: italic;
+    }
+
+    /* markdown-it footnotes */
+
+    hr.footnotes-sep {
+        @apply hidden;
+    }
+
+    .footnote-ref a,
+    .footnote-backref {
+        @apply no-underline;
+    }
+
+    ol.footnotes-list {
+        counter-reset: footnote-counter;
+    }
+
+    ol.footnotes-list::before {
+        content: "Footnotes";
+        @apply h2 mb-ryt block;
+    }
+
+    ol.footnotes-list li {
+        counter-increment: footnote-counter;
+        @apply relative;
+    }
+
+    ol.footnotes-list li::before {
+        content: counter(footnote-counter);
+        @apply normal-nums font-normal;
+    }
+
+    ol.footnotes-list li > p {
+        @apply inline;
+    }
+
+    main > section > ol.footnotes-list {
+        @apply rg:-ml-ryt-lg;
+    }
+
+    main > section > ol.footnotes-list:before {
+        @apply rg:pl-ryt-lg;
+    }
+
+    /* cooklang */
+    ul[class^="cooklang-"] > li::before {
+        content: "＿";
+    }
+
+    .cooklang-ingredients .amount-and-unit {
+        @apply font-bold inline-block;
+    }
+
+    /* eleventy embed tweet */
+    blockquote.tweet-card {
+        @apply font-normal not-italic text-base font-body border-light overflow-x-auto max-w-rg;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        .tweet-author-name,
+        .tweet-author-handle {
+            @apply break-all;
+        }
+    }
+
+    /* lite youtube */
+    .lty-playbtn:active,
+    .lty-playbtn:focus {
+        outline-width: 0px !important;
+    }
 }

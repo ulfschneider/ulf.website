@@ -22,7 +22,7 @@ Every now and then my son Emil makes a drawing, which I aim to [capture here](/i
 
 My path through 30 years of software went like this:
 
-<dl class="timeline">
+<dl class="line-list">
   <dt>1991 – 1996 University</dt>
   <dd>I graduated at the University of Paderborn (Dipl.-Wirt. Inform.).</dd>
   <dt>1996 – 2006 IBM Global Services</dt>
