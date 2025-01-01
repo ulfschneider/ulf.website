@@ -4,7 +4,7 @@ tags: [journal, sports]
 updated: 2022-03-07
 ---
 
-<dl class="timeline framed row">
+<dl class="line-list marker">
   <dt>24 Dec 2021</dt>
   <dd><figure>
 <img src="/img/journal/IMG_1581.jpg" class="w-100" alt="">
