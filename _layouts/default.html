@@ -13,7 +13,7 @@
     'data-pagefind-body' %} {%- else -%} {%assign search_attribute =
     'data-pagefind-ignore="all"' %} {%- endif -%}
 
-    <body class="break-words px-ryt {{layout}}" {{search_attribute}}>
+    <body class="break-words px-ryt flow {{layout}}" {{search_attribute}}>
         {% include "header.html" %}
         <main id="main" class="max-w-rg mx-auto">
             {% include "title.html" %} {{ content }}

@@ -1,142 +1,148 @@
 :root {
-  --hero: min(
-    max(
-      -1 * (theme(space.md) - var(--scrollbar-width) - theme(space.rg)) + theme(space.ryt),
-      -0.5 * (100vw - var(--scrollbar-width) - theme(space.rg)) + theme(space.ryt)
-    ),
-    0px
-  );
+    --hero: min(
+        max(
+            -1 * (theme(space.md) - var(--scrollbar-width) - theme(space.rg)) + theme(space.ryt),
+            -0.5 * (100vw - var(--scrollbar-width) - theme(space.rg)) + theme(space.ryt)
+        ),
+        0px
+    );
 
-  --superhero: min(
-    calc(
-      -0.5 * (100vw - var(--scrollbar-width) - theme(space.rg)) + theme(space.ryt)
-    ),
-    0px
-  );
+    --superhero: min(
+        calc(
+            -0.5 * (100vw - var(--scrollbar-width) - theme(space.rg)) + theme(space.ryt)
+        ),
+        0px
+    );
+
+    --flow-space: theme(spacing.ryt);
 }
 
 @layer utilities {
-  .no-js .no-js-hidden {
-    display: none;
-  }
-
-  p.max-w-p-rg,
-  .max-w-p-rg p {
-    @apply max-w-screen-rg;
-  }
-
-  .indent p + p,
-  p.indent {
-    @apply my-0 indent-ryt-lg;
-  }
-
-  p.no-indent,
-  .no-indent p + p,
-  .no-indent + p {
-    @apply mt-ryt indent-0 !important;
-  }
-
-  .outline-indicator {
-    @apply mode-outline-primary outline-4 outline-offset-2 outline;
-  }
-
-  .outline-indicator-lg {
-    @apply mode-outline-primary outline-8 outline-offset-2 outline;
-  }
-
-  /* masonry layout */
-  .grid-masonry {
-    grid-template-rows: masonry;
-  }
-
-  /* split */
-  .split {
-    grid-template-columns: repeat(2, 1fr);
-    @apply grid gap-ryt-lg;
-  }
-
-  .split > * {
-    @apply m-0;
-  }
-
-  .mode-text-primary {
-    @apply text-primary dark:text-primary-light;
-  }
-
-  .mode-bg-primary {
-    @apply bg-primary dark:bg-primary-light;
-  }
-
-  .mode-caret-primary {
-    @apply caret-primary dark:caret-primary-light;
-  }
-
-  .mode-outline-primary {
-    @apply outline-primary dark:outline-primary-light;
-  }
-
-  .mode-text-write {
-    @apply text-write-dark dark:text-write-light;
-  }
-
-  .mode-text-bg {
-    @apply dark:bg-back-dark bg-back-light;
-  }
-
-  .hero,
-  .hero-layout {
-    margin-left: var(--hero);
-    margin-right: var(--hero);
-    > picture {
-      @apply block;
-      > img {
-        @apply block object-center mx-auto;
-      }
+    .no-js .no-js-hidden {
+        display: none;
     }
-    > iframe,
-    > picture > img,
-    > img,
-    > table,
-    > div.scroll-table > table {
-      @apply object-center mx-auto;
+
+    p.max-w-p-rg,
+    .max-w-p-rg p {
+        @apply max-w-screen-rg;
     }
-  }
 
-  .superhero,
-  .superhero-layout {
-    margin-left: var(--superhero);
-    margin-right: var(--superhero);
-
-    > picture {
-      @apply block;
-      > img {
-        @apply block object-center mx-auto;
-      }
+    .indent p + p,
+    p.indent {
+        @apply my-0 indent-ryt-lg;
     }
-    > iframe,
-    > picture > img,
-    > img,
-    > table,
-    > div.scroll-table > table {
-      @apply object-center mx-auto;
+
+    p.no-indent,
+    .no-indent p + p,
+    .no-indent + p {
+        @apply mt-ryt indent-0 !important;
     }
-  }
 
-  .herol,
-  .herol-layout {
-    margin-left: var(--hero);
-  }
+    .outline-indicator {
+        @apply mode-outline-primary outline-4 outline-offset-2 outline;
+    }
 
-  .superherol,
-  .superherol-layout {
-    margin-left: var(--superhero);
-  }
-  .heror,
-  .heror-layout {
-    margin-right: var(--hero);
-  }
-  .superheror,
-  .superheror-layout {
-    margin-right: var(--superhero);
-  }
+    .outline-indicator-lg {
+        @apply mode-outline-primary outline-8 outline-offset-2 outline;
+    }
+
+    /* masonry layout */
+    .grid-masonry {
+        grid-template-rows: masonry;
+    }
+
+    /* split */
+    .split {
+        grid-template-columns: repeat(2, 1fr);
+        @apply grid gap-ryt-lg;
+    }
+
+    .split > * {
+        @apply m-0;
+    }
+
+    .mode-text-primary {
+        @apply text-primary dark:text-primary-light;
+    }
+
+    .mode-bg-primary {
+        @apply bg-primary dark:bg-primary-light;
+    }
+
+    .mode-caret-primary {
+        @apply caret-primary dark:caret-primary-light;
+    }
+
+    .mode-outline-primary {
+        @apply outline-primary dark:outline-primary-light;
+    }
+
+    .mode-text-write {
+        @apply text-write-dark dark:text-write-light;
+    }
+
+    .mode-text-bg {
+        @apply dark:bg-back-dark bg-back-light;
+    }
+
+    .hero,
+    .hero-layout {
+        margin-left: var(--hero);
+        margin-right: var(--hero);
+        > picture {
+            @apply block;
+            > img {
+                @apply block object-center mx-auto;
+            }
+        }
+        > iframe,
+        > picture > img,
+        > img,
+        > table,
+        > div.scroll-table > table {
+            @apply object-center mx-auto;
+        }
+    }
+
+    .superhero,
+    .superhero-layout {
+        margin-left: var(--superhero);
+        margin-right: var(--superhero);
+
+        > picture {
+            @apply block;
+            > img {
+                @apply block object-center mx-auto;
+            }
+        }
+        > iframe,
+        > picture > img,
+        > img,
+        > table,
+        > div.scroll-table > table {
+            @apply object-center mx-auto;
+        }
+    }
+
+    .herol,
+    .herol-layout {
+        margin-left: var(--hero);
+    }
+
+    .superherol,
+    .superherol-layout {
+        margin-left: var(--superhero);
+    }
+    .heror,
+    .heror-layout {
+        margin-right: var(--hero);
+    }
+    .superheror,
+    .superheror-layout {
+        margin-right: var(--superhero);
+    }
+
+    .flow > * + * {
+        margin-block-start: var(--flow-space, 1em);
+    }
 }
