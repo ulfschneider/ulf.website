@@ -137,12 +137,12 @@
 
     h2,
     .h2 {
-        @apply font-display mt-ryt-2xl mb-ryt-lg text-pretty sm:text-balance break-after-avoid font-normal leading-snug tracking-normal text-xl;
+        @apply font-display mt-ryt-2xl mb-ryt-lg text-pretty sm:text-balance break-after-avoid font-bold leading-snug tracking-normal text-xl;
     }
 
     h3,
     .h3 {
-        @apply font-display mt-ryt-xl mb-ryt-lg text-pretty sm:text-balance break-after-avoid font-bold leading-snug tracking-normal text-base;
+        @apply font-display mt-ryt-xl mb-ryt-lg text-pretty sm:text-balance break-after-avoid font-bold leading-snug tracking-normal text-lg;
     }
 
     h4,

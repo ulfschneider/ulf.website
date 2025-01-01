@@ -108,14 +108,25 @@
     }
 
     .line-list {
-        @apply reset border-l border-current !pl-[calc(theme("spacing.ryt-lg")-1px)];
+        /* Pixel based calculations refer to a line list width of 1px */
+        @apply reset border-l-[1px] border-current !pl-[calc(theme(spacing.ryt-lg)-1px)];
     }
+
+    .line-list.marker {
+        & > li::before,
+        & > dt::before {
+            content: "";
+            @apply w-ryt-sm h-ryt-sm inline-block rounded-full bg-current -ml-[calc(theme(spacing.ryt-lg)+theme(spacing.ryt-sm)/2-.5px)] mr-[calc(theme(spacing.ryt-lg)-theme(spacing.ryt-sm)/2+.5px)];
+        }
+    }
+
+    /* mr-[calc(theme("spacing.ryt-lg")-theme("spacing.ryt-sm")+theme("spacing.ryt-sm")/2)]*/
 
     /* PrismJS 1.29.0*/
     pre[data-language]:not([data-language=""]) {
         &::before {
             content: attr(data-language);
-            @apply font-sans mb-ryt-sm inline-block text-sm border border-current px-ryt-xs;
+            @apply font-sans mb-ryt-sm inline-block text-sm border-b-2 border-current pr-ryt;
         }
     }
 

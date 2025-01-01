@@ -1,33 +1,46 @@
 :root {
-  font-size: 16px;
-}
-
-/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-
-:root {
-  --font-size-sm: clamp(0.9375rem, 0.9158rem + 0.1087vi, 1rem);
-  --font-size-base: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem);
-  --font-size-lg: clamp(1.35rem, 1.2761rem + 0.3696vi, 1.5625rem);
-  --font-size-xl: clamp(1.62rem, 1.5041rem + 0.5793vi, 1.9531rem);
-  --font-size-2xl: clamp(1.944rem, 1.771rem + 0.8651vi, 2.4414rem);
-  --font-size-3xl: clamp(2.3328rem, 2.0827rem + 1.2504vi, 3.0518rem);
-  --font-size-4xl: clamp(2.7994rem, 2.4462rem + 1.7658vi, 3.8147rem);
+    font-size: 18px;
+    --font-size-sm: 0.8rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.563rem;
+    --font-size-2xl: 1.953rem;
+    --font-size-3xl: 2.441rem;
+    --font-size-4xl: 3.052rem;
 }
 
 :root {
-  --ryt-3xs: calc(var(--font-size-base) * 0.1);
-  --ryt-2xs: calc(var(--font-size-base) * 0.19);
-  --ryt-xs: calc(var(--font-size-base) * 0.32);
-  --ryt-sm: calc(var(--font-size-base) * 0.57);
-  --ryt: var(--font-size-base);
-  --ryt-lg: calc(var(--font-size-base) * 1.75);
-  --ryt-xl: calc(var(--font-size-base) * 3);
-  --ryt-2xl: calc(var(--font-size-base) * 5.35);
-  --ryt-3xl: calc(var(--font-size-base) * 9.3);
-  --xs: calc(var(--font-size-base) * 16);
-  --sm: calc(var(--font-size-base) * 26);
-  --rg: calc(var(--font-size-base) * 36);
-  --md: calc(var(--font-size-base) * 46);
-  --lg: calc(var(--font-size-base) * 58);
-  --xl: calc(var(--font-size-base) * 70);
+    --ryt-3xs: calc(var(--font-size-base) * 0.1);
+    --ryt-2xs: calc(var(--font-size-base) * 0.19);
+    --ryt-xs: calc(var(--font-size-base) * 0.32);
+    --ryt-sm: calc(var(--font-size-base) * 0.57);
+    --ryt: var(--font-size-base);
+    --ryt-lg: calc(var(--font-size-base) * 1.75);
+    --ryt-xl: calc(var(--font-size-base) * 3);
+    --ryt-2xl: calc(var(--font-size-base) * 5.35);
+    --ryt-3xl: calc(var(--font-size-base) * 9.3);
+    --xs: calc(var(--font-size-base) * 16);
+    --sm: calc(var(--font-size-base) * 26);
+    --rg: calc(var(--font-size-base) * 36);
+    --md: calc(var(--font-size-base) * 46);
+    --lg: calc(var(--font-size-base) * 58);
+    --xl: calc(var(--font-size-base) * 70);
+}
+
+@media (min-width: theme(screens.md)) {
+    :root {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: theme(screens.md)) {
+    :root {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: theme(screens.lg)) {
+    :root {
+        font-size: 20px;
+    }
 }
