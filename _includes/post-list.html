@@ -1,7 +1,7 @@
 {%- if pagedItems.pageData.length > 0 -%} {%- assign livePosts =
 pagedItems.pageData -%} {%- else -%} {%- assign livePosts =
 collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
-<h2 class="text-base">{{poststitle}}</h2>
+<h2 class="text-base font-normal">{{poststitle}}</h2>
 {%- endif -%}
 <div class="lg:flex lg:-ml-[200px]">
     <div class="lg:w-[200px] shrink-0">
@@ -38,14 +38,10 @@ collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
             {% if p.data.title != "" and p.data.title != nil and p.data.title !=
             "notitle" and p.data.notitle == nil %}
             <a href="{{p.url}}">
-                <cite
-                    >{{ p.data.title }}</cite
-                >
+                <cite>{{ p.data.title }}</cite>
             </a>
             {% endif %} {%- if p.data.abstract -%}
-            <p class="my-ryt-xs>
-                {{p.data.abstract}}
-            </p>
+            <p class="my-ryt-xs">{{p.data.abstract}}</p>
             {%- endif -%} {%- if p.data.title == "" or p.data.title == nil or
             p.data.title == "notitle" or p.data.notitle != nil -%}
             <p class="my-ryt-xs">
