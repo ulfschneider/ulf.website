@@ -3,6 +3,7 @@ title: Practical SVG
 tags: 
   - code
   - bookmark
+layout: bookmark
 ---
 Chris Coyier makes his book [<cite>Practical SVG</cite>](https://practical-svg.chriscoyier.net) available on the web. Mat Marquis did the same for [<cite>JavaScript for Web Designers</cite>](https://javascript-for-web-designers.abookapart.com).
 

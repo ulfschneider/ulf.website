@@ -83,6 +83,7 @@ function addLayoutAliases(eleventyConfig) {
   eleventyConfig.addLayoutAlias("default", "default.html");
   eleventyConfig.addLayoutAlias("list", "list.html");
   eleventyConfig.addLayoutAlias("image", "default.html");
+  eleventyConfig.addLayoutAlias("bookmark", "default.html");
   eleventyConfig.addLayoutAlias("gallery", "gallery.html");
   eleventyConfig.addLayoutAlias("blank", "blank.html");
   eleventyConfig.addLayoutAlias("none", "none.html");
