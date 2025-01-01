@@ -5,6 +5,11 @@ tags: [sports, video]
 Please also check [favorite HIIT workouts](/2021-07-09-hiit-workouts/).
 
 <figure>
+https://www.youtube.com/watch?v=xfHSq-Fmm50https://m.youtube.com/watch?v=xfHSq-Fmm50
+<figcaption> Yoga Ganzkörper Workout | stark, flexibel & ästhetisch | 25 Min. Strong Elegance Flow 🖤</figcaption>
+</figure>
+
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rjbrTr_EbB4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <figcaption>Yoga Ganzkörper Flow | Bauch, Beine & Balance | 30 Minuten für Kraft & Stabilität</figcaption>
 </figure>
