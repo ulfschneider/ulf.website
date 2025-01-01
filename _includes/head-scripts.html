@@ -1,106 +1,117 @@
 <!-- speculation rules for prerendering -->
 <script type="speculationrules">
-  {
-    "prerender": [
-      {
-        "where": {
-          "href_matches": "/*"
-        },
-        "eagerness": "moderate"
-      }
-    ]
-  }
+    {
+        "prerender": [
+            {
+                "where": {
+                    "href_matches": "/*"
+                },
+                "eagerness": "moderate"
+            }
+        ]
+    }
 </script>
 
 <script>
-  addEventListener("keydown", (event) => {
-    let focus = document.querySelector(":focus");
+    addEventListener("keydown", (event) => {
+        let focus = document.querySelector(":focus");
 
-    if (
-      focus &&
-      "INPUT" == focus.tagName &&
-      "submit" != focus.type &&
-      "reset" != focus.type
-    ) {
-      return;
-    } else if (focus && "TEXTAREA" == focus.tagName) {
-      return;
-    }
-
-    if (!(event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)) {
-      if ("{{site.search.url}}" && event.key === "{{site.search.kbd}}") {
-        let queryField = document.querySelector("#search-query");
-        if (queryField && queryField != focus) {
-          event.preventDefault();
-          queryField.focus();
-          return;
-        } else if (!queryField) {
-          event.preventDefault();
-          location.href = "{{site.search.url}}";
-          return;
-        }
-      }
-
-      if ("{{site.navOlder.id}}" && event.key === "{{site.navOlder.kbd}}") {
-        let navOlder = document.querySelector("#{{site.navOlder.id}}");
-        if (navOlder) {
-          event.preventDefault();
-          if (navOlder.href) {
-            location.href = navOlder.href;
+        if (
+            focus &&
+            "INPUT" == focus.tagName &&
+            "submit" != focus.type &&
+            "reset" != focus.type
+        ) {
             return;
-          } else {
-            navOlder.click();
+        } else if (focus && "TEXTAREA" == focus.tagName) {
             return;
-          }
         }
-      }
 
-      if ("{{site.navNewer.id}}" && event.key === "{{site.navNewer.kbd}}") {
-        let navNewer = document.querySelector("#{{site.navNewer.id}}");
-        if (navNewer) {
-          event.preventDefault();
-          if (navNewer.href) {
-            location.href = navNewer.href;
-            return;
-          } else {
-            navNewer.click();
-            return;
-          }
+        if (
+            !(event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
+        ) {
+            if ("{{site.search.url}}" && event.key === "{{site.search.kbd}}") {
+                let queryField = document.querySelector("#search-query");
+                if (queryField && queryField != focus) {
+                    event.preventDefault();
+                    queryField.focus();
+                    return;
+                } else if (!queryField) {
+                    event.preventDefault();
+                    location.href = "{{site.search.url}}";
+                    return;
+                }
+            }
+
+            if (
+                "{{site.navOlder.id}}" &&
+                event.key === "{{site.navOlder.kbd}}"
+            ) {
+                let navOlder = document.querySelector("#{{site.navOlder.id}}");
+                if (navOlder) {
+                    event.preventDefault();
+                    if (navOlder.href) {
+                        location.href = navOlder.href;
+                        return;
+                    } else {
+                        navOlder.click();
+                        return;
+                    }
+                }
+            }
+
+            if (
+                "{{site.navNewer.id}}" &&
+                event.key === "{{site.navNewer.kbd}}"
+            ) {
+                let navNewer = document.querySelector("#{{site.navNewer.id}}");
+                if (navNewer) {
+                    event.preventDefault();
+                    if (navNewer.href) {
+                        location.href = navNewer.href;
+                        return;
+                    } else {
+                        navNewer.click();
+                        return;
+                    }
+                }
+            }
+
+            if (
+                "{{site.backToTop.id}}" &&
+                event.key === "{{site.backToTop.kbd}}"
+            ) {
+                event.preventDefault();
+                location.href = "#{{site.backToTop.id}}";
+                return;
+            }
+
+            for (let nav of {{site.mainnav | json}}) {
+                if (event.key == nav.kbd && nav.url) {
+                    event.preventDefault();
+                    if (nav.id == "edit-on-github") {
+                        window.open(nav.url + "{{page.inputPath}}", "_blank");
+                    } else {
+                        location.href = nav.url;
+                    }
+                    return;
+                }
+            }
+
+            for (let nav of {{site.footernav | json}}) {
+                if (event.key == nav.kbd && nav.url) {
+                    event.preventDefault();
+                    if (nav.id == "edit-on-github") {
+                        window.open(nav.url + "{{page.inputPath}}", "_blank");
+                    } else {
+                        location.href = nav.url;
+                    }
+                    return;
+                }
+            }
         }
-      }
-
-      if ("{{site.backToTop.id}}" && event.key === "{{site.backToTop.kbd}}") {
-        event.preventDefault();
-        location.href = "#{{site.backToTop.id}}";
-        return;
-      }
-
-      for (let nav of {{site.mainnav | json}}) {
-        if (event.key == nav.kbd && nav.url) {
-          event.preventDefault();
-          if (nav.id == "edit-on-github") {
-            window.open(nav.url + "{{page.inputPath}}", "_blank");
-          } else {
-            location.href = nav.url;
-          }
-          return;
-        }
-      }
-
-      for (let nav of {{site.footernav | json}}) {
-        if (event.key == nav.kbd && nav.url) {
-          event.preventDefault();
-          if (nav.id == "edit-on-github") {
-            window.open(nav.url + "{{page.inputPath}}", "_blank");
-          } else {
-            location.href = nav.url;
-          }
-          return;
-        }
-      }
-    }
-  });
-  addEventListener("load", () => {
-    sotable();
-  });
+    });
+    addEventListener("load", () => {
+        sotable();
+    });
 </script>
