@@ -29,8 +29,11 @@
             @apply font-body text-sm absolute;
 
             margin-top: calc(
-                -1 * (theme(spacing.ryt) + theme(spacing.ryt) +
-                            theme(spacing.ryt-xs))
+                -1 *
+                    (
+                        theme(spacing.ryt) + theme(spacing.ryt) +
+                            theme(spacing.ryt-xs)
+                    )
             );
             margin-left: calc(-1 * (theme(spacing.ryt) + 1px));
         }
@@ -48,7 +51,7 @@
 
         &::before {
             content: "Contents";
-            @apply text-sm;
+            @apply text-sm font-mono;
         }
 
         a {
