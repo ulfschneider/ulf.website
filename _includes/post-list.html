@@ -50,7 +50,7 @@ collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
                 <a href="{{p.url}}">Read more</a>
             </p>
             {% endif %}
-            <aside class="{{p.data.starred}} text-sm">
+            <aside class="{{p.data.starred}} text-sm font-mono">
                 {% include "date-tags.html" posted: p.date tags: p.data.tags
                 notags: p.data.notags %}
             </aside>
