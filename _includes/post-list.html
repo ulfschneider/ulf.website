@@ -25,8 +25,9 @@ collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
     <!-- -->
     <div class="space-y-ryt-lg">
         <!-- -->
-        {% if pagedItems.pageNumber > 0 %} {%- include "pagination-nav.html" -%}
-        {%endif%} {%- for p in livePosts -%}
+        {% if pagedItems.pageNumber > 0 and pagedItems.pageData.length > 10%}
+        {%- include "pagination-nav.html" -%} {%endif%} {%- for p in livePosts
+        -%}
         <!-- -->
         {% if refDate == nil %} {% assign refDate = p.date | humanDate %} {%
         endif%} {% assign nowDate = p.date | humanDate %} {% if limit == "day"
