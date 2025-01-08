@@ -7,4 +7,4 @@ tags:
   - bookmark
 layout: bookmark
 ---
-[<cite>Tire Pressure Guide</cite>](https://axs.sram.com/guides/tire/pressure).
+SRAM [<cite>Tire Pressure Guide</cite>](https://axs.sram.com/guides/tire/pressure)
