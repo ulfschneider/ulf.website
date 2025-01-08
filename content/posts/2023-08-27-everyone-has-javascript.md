@@ -3,5 +3,7 @@ title: Everyone has JavaScript, right?
 tags: 
   - code
   - accessibility
+  - bookmark
+layout: bookmark
 ---
-There might be [situations when not everyone has JavaScript](https://www.kryogenix.org/code/browser/everyonehasjs.html)!
+[<cite>Everyone has JavaScript, right?</cite>](https://www.kryogenix.org/code/browser/everyonehasjs.html)
