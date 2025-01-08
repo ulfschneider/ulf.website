@@ -9,13 +9,12 @@
 {%- if hasTitle == true or hasTagIntro == true or isBlog == true or refer or
 author -%}
 <!-- -->
-{%- if layout != "default" and layout != "gallery" -%} {% assign titleClass =
-"text-base" %} {% assign abstractClass = "text-base text-pretty sm:text-balance"
-%} {%- else -%} {% assign titleClass = "heror"%} {% assign abstractClass =
-"text-lg heror text-pretty sm:text-balance"%} {%- endif -%}
+{%- if layout != "default" and layout != "gallery" -%} {% assign titleClass
+="text-base" %} {% assign abstractClass = "text-base text-pretty
+sm:text-balance"%} {%- else -%} {% assign titleClass = "heror"%} {% assign
+abstractClass = "text-lg heror text-pretty sm:text-balance"%} {%- endif -%}
 <header class="my-ryt-2xl">
-    {%- if hasTitle == true -%}
-
+    {%- if layout != "bookmark" -%} {%- if hasTitle == true -%}
     <h1 class="{{titleClass}}">{{ title }}</h1>
     {%- endif -%} {%- include "hero.html" -%} {%- if abstract -%}
     <div class="my-ryt-xs {{abstractClass}}">{{ abstract }}</div>
@@ -23,7 +22,7 @@ author -%}
     <div class="my-ryt-xs heror">{{ refer }}</div>
     {%- elsif author -%}
     <div class="my-ryt-xs heror">{{ author }}</div>
-    {%- endif -%} {%- if nodate == nil -%}
+    {%- endif -%} {%- endif -%} {%- if nodate == nil -%}
     <aside class="my-ryt-xs heror text-sm font-mono">
         {% include "date-tags.html" %}
     </aside>
