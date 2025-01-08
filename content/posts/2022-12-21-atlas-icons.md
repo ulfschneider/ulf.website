@@ -1,6 +1,9 @@
 ---
 title: Atlas Icons
-tags: design
+tags: 
+ - design
+ - bookmark
+layout: bookmark
 ---
 [<cite>Atlas Icons</cite>](https://atlasicons.vectopus.com) is a
 
