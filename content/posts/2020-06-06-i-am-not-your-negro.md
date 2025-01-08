@@ -6,12 +6,12 @@ tags: [video, star]
 <footer>James Baldwin</footer>
 </blockquote>
 
-*[I am not your Negro](https://fsk12.bpb.de/mediathek/283417/i-am-not-your-negro)* is a documentary made by Raoul Peck, based on notes of James Baldwin. 
+[<cite>I am not your Negro</cite>](https://fsk12.bpb.de/mediathek/283417/i-am-not-your-negro) is a documentary made by Raoul Peck, based on notes of James Baldwin.
 
 James Baldwin was a friend of Marthin Luther King, Medgar Evers, and Malcolm X. The film makes a link from the human rights movement of the 1950´s to the black-lives-matter movement of today.
 
 It is provided in German language by *Bundeszentrale für politische Bildung.*
 
 <figure>
-<img src="/img/journal/i-am-not-your-negro.jpg" alt="Film poster for I am not your negro">
+<img src="/img/journal/i-am-not-your-negro.jpg" alt="Film poster of the movie 'I am not your negro'">
 </figure>
