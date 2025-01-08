@@ -13,8 +13,18 @@ author -%}
 ="text-base" %} {% assign abstractClass = "text-base text-pretty
 sm:text-balance"%} {%- else -%} {% assign titleClass = "heror"%} {% assign
 abstractClass = "text-lg heror text-pretty sm:text-balance"%} {%- endif -%}
+<!--  -->
+{%- if layout == "bookmark" -%}
+<header class="mt-ryt-2xl">
+    {%- if nodate == nil -%}
+    <aside class="my-ryt-xs heror text-sm font-mono">
+        {% include "date-tags.html" %}
+    </aside>
+    {%- endif -%}
+</header>
+{%- else -%}
 <header class="my-ryt-2xl">
-    {%- if layout != "bookmark" -%} {%- if hasTitle == true -%}
+    {%- if hasTitle == true -%}
     <h1 class="{{titleClass}}">{{ title }}</h1>
     {%- endif -%} {%- include "hero.html" -%} {%- if abstract -%}
     <div class="my-ryt-xs {{abstractClass}}">{{ abstract }}</div>
@@ -22,10 +32,10 @@ abstractClass = "text-lg heror text-pretty sm:text-balance"%} {%- endif -%}
     <div class="my-ryt-xs heror">{{ refer }}</div>
     {%- elsif author -%}
     <div class="my-ryt-xs heror">{{ author }}</div>
-    {%- endif -%} {%- endif -%} {%- if nodate == nil -%}
+    {%- endif -%} {%- if nodate == nil -%}
     <aside class="my-ryt-xs heror text-sm font-mono">
         {% include "date-tags.html" %}
     </aside>
     {%- endif -%}
 </header>
-{%- endif -%}
+{%- endif -%} {%- endif -%}

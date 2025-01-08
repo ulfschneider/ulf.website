@@ -35,9 +35,10 @@ collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
         <!-- -->
         {%- if p.url == page.url -%} {%- continue -%} {%-endif -%}
         <!-- -->
-        <article class="text-pretty sm:text-balance">
-            {% if p.data.title != "" and p.data.title != nil and p.data.title !=
-            "notitle" and p.data.notitle == nil %}
+        <article class="text-pretty">
+            {% if p.data.layout != "bookmark" %} {% if p.data.title != "" and
+            p.data.title != nil and p.data.title != "notitle" and p.data.notitle
+            == nil %}
             <a href="{{p.url}}">
                 <cite>{{ p.data.title }}</cite>
             </a>
@@ -50,6 +51,9 @@ collections.liveContent | post -%} {%- endif -%} {%- if poststitle -%}
                 "&nbsp;… " }}
                 <a href="{{p.url}}">Read more</a>
             </p>
+            {% endif %} {% else %}
+            <div class="text-sm font-mono my-ryt-xs">Bookmark</div>
+            <div>{{p.templateContent}}</div>
             {% endif %}
             <aside class="{{p.data.starred}} text-sm font-mono">
                 {% include "date-tags.html" posted: p.date tags: p.data.tags
