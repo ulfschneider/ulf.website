@@ -1,6 +1,9 @@
 ---
 title: Setting up a screen reader testing environment on your computer
-tags: accessibility
+tags:
+  - accessibility
+  - bookmark
+layout: bookmark
 ---
 Sara Soueidan explains how to [<cite>Setting up a screen reader testing environment on your computer</cite>](https://www.sarasoueidan.com/blog/testing-environment-setup/). From her document abstract:
 
