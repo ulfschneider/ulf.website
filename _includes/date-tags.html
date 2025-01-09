@@ -9,6 +9,7 @@ nil -%}
     <time
         datetime="{{posted | isoDate}}"
         data-pagefind-meta="date:{{posted | isoDate}}"
+        data-pagefind-meta="updated:{{updated | isoDate}}"
         class="whitespace-nowrap {% if updated != nil or tags != nil %}mr-ryt{% endif %}"
         >{{ posted | humanDate }}</time
     >
