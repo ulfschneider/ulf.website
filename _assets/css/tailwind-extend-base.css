@@ -337,7 +337,7 @@
 
     /* table */
     table {
-        @apply my-ryt-xl text-left border-collapse border-y border-y-meta;
+        @apply my-ryt-lg text-left border-collapse border-y border-y-meta;
 
         caption {
             @apply py-ryt-sm no-indent text-pretty sm:text-balance text-sm font-mono max-w-rg;
@@ -382,7 +382,7 @@
     }
 
     figure {
-        @apply my-ryt-xl;
+        @apply my-ryt-lg;
 
         figcaption {
             @apply max-w-rg my-ryt-sm text-pretty sm:text-balance font-mono text-sm;
@@ -398,7 +398,7 @@
 
     blockquote {
         padding-left: calc(theme(spacing.ryt-lg) - theme(borderWidth.2));
-        @apply my-ryt-xl border-l-2 border-l-current;
+        @apply my-ryt-lg border-l-2 border-l-current;
     }
 
     blockquote > header,
@@ -426,7 +426,7 @@
 
     /* pre and pre code */
     pre {
-        @apply my-ryt;
+        @apply my-ryt-lg;
     }
 
     pre,

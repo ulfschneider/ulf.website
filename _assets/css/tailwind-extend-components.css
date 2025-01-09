@@ -47,7 +47,7 @@
     }
 
     .table-of-contents {
-        @apply my-ryt-xl;
+        @apply my-ryt-lg;
 
         &::before {
             content: "Contents";
@@ -70,7 +70,7 @@
     /*scroll-table*/
 
     .scroll-table {
-        @apply my-ryt-xl;
+        @apply my-ryt-lg;
         table {
             @apply my-0;
         }
