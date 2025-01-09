@@ -38,6 +38,7 @@ permalink: "{{site.search.url}}"
             let article = document.createElement("article");
             article.classList.add("my-ryt-lg");
             parent.appendChild(article);
+
             if (entry.meta.title && entry.meta.title != "notitle") {
                 let linkToArticle = document.createElement("a");
                 linkToArticle.href = entry.url;

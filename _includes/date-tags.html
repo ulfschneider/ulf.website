@@ -4,7 +4,11 @@ and nodate == nil %} {%- assign updated = modifiedDate -%} {%- endif -%} {%- if
 tags and notags == nil -%} {%- assign tags = tags -%} {%- else -%} {%- assign
 tags = nil -%} {%- endif -%} {%- if posted != nil or updated != nil or tags !=
 nil -%}
-<div data-pagefind-ignore class="leading-loose">
+<div
+    data-pagefind-ignore
+    class="leading-loose"
+    data-pagefind-meta="layout:{{layout}}"
+>
     {% if posted != nil %}
     <time
         datetime="{{posted | isoDate}}"
@@ -25,7 +29,10 @@ nil -%}
     </span>
     {% endif %} {% if tags != nil %} {%- assign sortedTags = tags | uniq | sort
     -%}
-    <ul class="inline reset">
+    <ul
+        class="inline reset"
+        data-pagefind-meta="tags:{{sortedTags | join: ','}}"
+    >
         {% for tag in sortedTags %} {% if tag == site.starTag %}
         <li class="inline mr-ryt-sm last:mr-0">
             <a href="{{tag | tagUrl}}" class="no-underline px-ryt-2xs text-base"
