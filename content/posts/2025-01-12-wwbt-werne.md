@@ -28,12 +28,12 @@ Second run of the series. The weather was much better than last week in Capelle.
 
 <figure>
 <img src="/img/sports/IMG_6898.jpg">
-<figcaption>A muddy Santa Cruz Blur</figcaption>
+<figcaption>My muddy Santa Cruz Blur</figcaption>
 </figure>
 
 <figure>
 <img src="/img/sports/IMG_6899.jpg">
-<figcaption>Muddy legs</figcaption>
+<figcaption>My muddy legs</figcaption>
 </figure>
 
 
