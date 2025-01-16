@@ -3,6 +3,7 @@ title: Set the space between direct siblings
 tags:
   - code
   - css
+  - star
 ---
 ```css
 .flow > * + * {
