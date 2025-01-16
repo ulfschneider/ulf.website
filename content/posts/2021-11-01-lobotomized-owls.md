@@ -1,6 +1,9 @@
 ---
 title: Axiomatic CSS and Lobotomized Owls
-tags: css
+tags: 
+  - css
+  - bookmark
+layout: bookmark
 ---
 <figure>
 <div class="fs-3">* + *</div>
