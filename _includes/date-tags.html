@@ -30,7 +30,7 @@ nil -%}
     {% endif %} {% if tags != nil %} {%- assign sortedTags = tags | uniq | sort
     -%}
     <ul
-        class="inline reset"
+        class="inline-block reset"
         data-pagefind-meta="tags:{{sortedTags | join: ','}}"
     >
         {% for tag in sortedTags %} {% if tag == site.starTag %}
