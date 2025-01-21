@@ -24,7 +24,7 @@ Again, a joyful Winter Bike Trophy riding event.
 
 <figure>
 <img src="/img/sports/IMG_6944.jpg" >
-<figcaption>Every now and then we come across a group of riders, but we usually we pass them and continue our ride as a pair. </figcaption>
+<figcaption>Every now and then we come across a group of riders, but we pass them and continue our ride as a pair. </figcaption>
 </figure>
 
 <figure>
