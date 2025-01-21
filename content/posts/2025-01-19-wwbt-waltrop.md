@@ -58,3 +58,8 @@ Again, a joyful Winter Bike Trophy riding event.
 <img src="/img/sports/IMG_6963.jpg" >
 <figcaption>The catering, which included chili con carne, BBQ sausages, steaks and cakes with coffee, took place in the facilities of <a href="https://www.hasebikes.com/">Hase Bikes</a>.</figcaption>
 </figure>
+
+<figure>
+<img src="/img/sports/IMG_6965.jpg" >
+<figcaption>Hase Bikes provided the changing rooms of their employees for the riders. On one of the lockers, we found this sticker. </figcaption>
+</figure>
