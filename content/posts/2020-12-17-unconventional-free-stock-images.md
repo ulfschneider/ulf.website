@@ -1,6 +1,8 @@
 ---
 title: Unconventional and free stock images
-tags: journal
+tags: 
+  - journal
+  - bookmark
 ---
 A list of unconventional and free stock images by Mel Choyce in her [CSS-Tricks article](https://css-tricks.com/unconventional-stock-image-sources/):
 - [British Library](https://unsplash.com/@britishlibrary) (unsplash)
@@ -21,3 +23,4 @@ Added later (not mentioned in Mel´s article):
 - [Old Book Illustrations](https://www.oldbookillustrations.com), wich for example Robin Rendle is using in his [essay on newsletters](https://www.robinrendle.com/essays/newsletters).
 - [Stanford Libraries Data Visualization](https://exhibits.stanford.edu/dataviz/), old visualizations which date back into 18th century.
 - [openverse.org](https://openverse.org)
+- [Public Domain Image Archive](https://pdimagearchive.org/)
