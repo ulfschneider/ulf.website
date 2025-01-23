@@ -4,7 +4,7 @@ tags:
   - code
   - bookmark
 ---
-Anthony Fu has an interesting proposal for [<cite>Epoch Semantic Versioning</cite>](https://antfu.me/posts/epoch-semver) for high-level, end-user-facing libraries and frameworks. Anthony´s idea is based on [<cite>Semantic Versioning</cite>](https://semver.org) (SemVer), without breaking it. SemVer follows the three digit scheme `MAJOR.MINOR.PATCH`, where:
+Anthony Fu has an interesting proposal for [<cite>Epoch Semantic Versioning</cite>](https://antfu.me/posts/epoch-semver) of high-level, end-user-facing libraries and frameworks. Anthony´s idea is based on [<cite>Semantic Versioning</cite>](https://semver.org) (SemVer), without breaking it. SemVer follows the three digit scheme `MAJOR.MINOR.PATCH`, where:
 
 `MAJOR`
 : Version when you make incompatible API changes. Major version zero (`0.MINOR.PATCH`) is for initial development. Anything MAY change at any time. The public API SHOULD NOT be considered stable.
