@@ -3,7 +3,7 @@ title: Every prompt a connection that could have been. A world of missed connect
 tags: 
   - code
 ---
-Jim is addressing a serious problem here, I believe. As much as the result triggered by a text prompt can sometimes feel like magic, the associated depersonalization and dehumanization simultaneously represent a missed opportunity for result validation.
+Jim is addressing a serious problem here, I believe. As much as the result triggered by a text prompt can sometimes feel like magic, the associated depersonalization and dehumanization represent a missed opportunity for result validation.
 
 > Today you have a problem.
 > You bang your head on it.
