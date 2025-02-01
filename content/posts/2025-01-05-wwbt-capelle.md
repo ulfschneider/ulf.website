@@ -12,3 +12,8 @@ The cycling club in Capelle did an excellent job of organizing the event. The fi
 <img src="/img/sports/IMG_6869.jpg" alt="An outdoor backyard of the Nordkirchen castle in a wet and snowy setting cyclists are gathering around a campfire and catering desks.">
 <figcaption>The catering at the Nordkirchen castle was very good, and the campfires not only created a great atmosphere but were also very useful given the weather.</figcaption>
 </figure>
+
+<figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-XEkZxw_kDE?si=r1_I_QCUMi8sVU25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>Here is a video about the day by Dennis B.</figcaption>
+</figure>
