@@ -2,7 +2,7 @@
 title: Westfalen Winter Bike Trophy – Waltrop
 tags: sports
 ---
-Several hundred riders found their way to Waltrop, where the RC Sprinter Waltrop carried out an excellent Winter Bike Trophy event. We started at 9 AM and -4 °C under dry conditions. The hard frozen soil allowed for fast riding. After roughly 25 km flat terrain along beautiful canals Martin and I reached the single central checkpoint (and catering station), which was close to Haard forest. From there we headed into a hilly loop through the forest and came back a second time to the checkpoint. We decided to ride back to the arrival zone and not to enter into the 95 km loop, which was sort of a possibility we talked about while driving with our car to Waltrop. At the decision point we felt it was a bit too cold, so we ended up riding just the 65 km loop. The "Alte Schaltwerk", which is now used as a show room by Hase Bikes, was the center of the arrival area, where chili con carne, cakes, coffee and barbecue was on the list of meals provided to all the riders. We were pleasantly surprised to meet Meinhard, a friend we know from our home cycling club. Meinhard started into the run without us knowing. 
+Several hundred riders found their way to Waltrop, where the RC Sprinter Waltrop carried out an excellent Winter Bike Trophy event. We started at 9 AM and -4 °C under dry conditions. The hard frozen soil allowed for fast riding. After roughly 25 km flat terrain along beautiful canals Martin and I reached the single central checkpoint (and catering station), which was close to Haard forest. From there we headed into a hilly loop through the forest and came back a second time to the checkpoint. We decided to ride back to the arrival zone and not to enter into the 95 km loop, which was sort of a possibility we talked about while driving with our car to Waltrop. At the decision point we felt it was a bit too cold, so we ended up riding just the 65 km loop. The "Alte Schaltwerk", which is now used as a show room by Hase Bikes, was the center of the arrival area, where chili con carne, cakes, coffee and barbecue was on the list of meals provided to all the riders. We were pleasantly surprised to meet Meinhard, a friend we know from our home cycling club. Meinhard started into the run without us knowing.  
 
 Again, a joyful Winter Bike Trophy riding event.
 
@@ -62,4 +62,9 @@ Again, a joyful Winter Bike Trophy riding event.
 <figure>
 <img src="/img/sports/IMG_6965.jpg" >
 <figcaption>Hase Bikes provided the changing rooms of their employees for the riders. On one of the lockers, we found this sticker. </figcaption>
+</figure>
+
+<figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dJ_751YpYoQ?si=eMVubTg6FcLY8klR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>Video by GravelEmVee</figcaption>
 </figure>

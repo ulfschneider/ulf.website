@@ -14,6 +14,6 @@ The cycling club in Capelle did an excellent job of organizing the event. The fi
 </figure>
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-XEkZxw_kDE?si=r1_I_QCUMi8sVU25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>Here is a video about the day by Dennis B.</figcaption>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7yd4MQAeJbU?si=HisbTgKYfIR37w4J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>Video by GravelEmVee</figcaption>
 </figure>
