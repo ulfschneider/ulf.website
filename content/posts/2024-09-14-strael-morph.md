@@ -39,7 +39,8 @@ I have a short torso and was compensating for that with a shorter 80 mm stem on 
 
 ## Stack height
 
-On some rides I developed pain between the shoulder blades. I realized this was because my upper body wanted to be lower on the bike. To accommodate for that, I tried to shorten my arms by pulling my shoulders back, which was the reason for the pain. The logical thing to do was to remove all stack spacers (not in one go, it was by experimenting), which led to a satisfying result. Without knowing if that´s desirable, it could be I´m capable of going lower, but in terms of reducing spacers I cannot go further. All of them are removed already. A next step would be a stem with a more negative angle and a second next step would be a different frame. As I am on a Strael 56T I know for sure that a Strael 56R would be too long for me. Staying in the Strael universe would mean to go for a 54R or a 54T.
+On some rides I developed pain between the shoulder blades. I realized this was because my upper body wanted to be lower on the bike. To accommodate for that, I tried to shorten my arms by pulling my shoulders back, which was the reason for the pain. The logical thing to do was to remove all stack spacers (not in one go, it was by experimenting), which led to a satisfying result. Without knowing if that´s desirable, it could be I´m capable of going lower, but in terms of reducing spacers I cannot go further. All of them are removed already. A next step would be a stem with a more negative angle and a second next step would be a different frame. 
+~~As I am on a Strael 56T I assume that a Strael 56R would be too long for me. Staying in the Strael universe would mean to go for a 54R or a 54T.~~ I am not sure if a Strael 56R would work for me. 
 
 ## Handlebars and bartape
 
