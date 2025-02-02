@@ -1,5 +1,5 @@
 ---
-Westfalen Winter Bike Trophy – Soest
+title: Westfalen Winter Bike Trophy – Soest
 tags: sports
 ---
 Unfortunately I couldn´t start because of sickness. For the records, here is the video by GravelEmVee.
