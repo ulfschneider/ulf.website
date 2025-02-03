@@ -3,8 +3,6 @@ title: Every prompt a connection that could have been. A world of missed connect
 tags: 
   - code
 ---
-Jim is addressing a serious problem here, I believe. As much as the result triggered by a text prompt can sometimes feel like magic, the associated depersonalization and dehumanization represent a missed opportunity for result validation.
-
 > Today you have a problem.
 > You bang your head on it.
 > You ask a question in a prompt.
@@ -15,3 +13,4 @@ Jim is addressing a serious problem here, I believe. As much as the result trigg
 > Every prompt a connection that could have been. A world of missed connections.
 > <footer><a href="https://blog.jim-nielsen.com/2025/missed-connections/"><cite>Missed Connections</cite></a>, Jim Nielsen</footer>
 
+Jim is addressing a serious problem here, I believe. As much as the result triggered by a text prompt can sometimes feel like magic, the associated depersonalization and dehumanization represent a missed opportunity for result validation.
