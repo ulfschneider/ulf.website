@@ -4,7 +4,7 @@ tags: code
 ---
 I´m maintaining a Meteor JavaScript server application that collects data from Jira and SAP each night and provides reports about the data to web browser users. The application is managed with the PM2 cluster manager and is split into 4 frontend processes and 4 backend processes. The frontend processes have shortrunning actions and ensure the application responds quickly to user requests. The backend processes do the data collection. Unfortunately, collecting the data and calculating the reports can sometimes take quite long. So long, that every now and then I get exceptions like the one below in the log:
 
-```
+```log
 Exception in setInterval callback: MongoServerSelectionError: connection <monitor> to 127.0.0.1:27017 timed out
     at Timeout._onTimeout (/home/strael/bundle/programs/server/npm/node_modules/meteor/npm-mongo/node_modules/mongodb/lib/core/sdam/topology.js:437:30)
     at listOnTimeout (internal/timers.js:557:17)
