@@ -10,4 +10,4 @@ tags:
 - [<cite>hihayk.github.io/scale/</cite>](https://hihayk.github.io/scale/) allows to take a hex color and create lighter and darker colors with a beautiful and focused user interface. It does not indicate WCAG contrast. The tool is part of [<cite>hayk.design</cite>](https://hayk.design/).
 - [<cite>huetone.ardov.me </cite>](https://huetone.ardov.me) has sample palettes of Stripe, Chakra, IBM, GitHub and the like.
 - [<cite>github.com/primer/prism/</cite>](https://github.com/primer/prism) is an experimental GitHub tool for defining accessible color palettes to be used for light mode and dark mode. See the blog post [<cite> Accelerating GitHub theme creation with color tooling</cite>](https://github.blog/2022-06-14-accelerating-github-theme-creation-with-color-tooling/).
-- [<cite>convertacolor.com</cite>](https://convertacolor.com). Convert colors between formats HEX, RGB, HSL and CMYK. 
+- [<cite>convertacolor.com</cite>](https://convertacolor.com), by [Tim Bennetto](https://timb.com/). Convert colors between formats HEX, RGB, HSL and CMYK. 
