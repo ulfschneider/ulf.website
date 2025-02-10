@@ -10,8 +10,8 @@ showTitle: false
 layout: default
 ---
 
-{%- assign gallery = collections.imagesByTag[tagPath] -%}
-{{content}}{{gallery.tagIntro}}
+{%- assign gallery = collections.imagesByTag[tagPath] -%} {%- assign tag =
+collections.imagesByTag[tagPath].tag -%} {{content}}{{gallery.tagIntro}}
 
 <div
     class="grid grid-masonry gap-xl my-xl grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
@@ -30,5 +30,5 @@ layout: default
 
 <div class="my-xl">
     <div class="mb-base h2">Choose posts by tag</div>
-    {%- include "site-tags.html" -%}
+    {%- include "site-tags.html" currentTag: tag-%}
 </div>

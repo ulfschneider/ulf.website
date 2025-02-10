@@ -10,7 +10,8 @@ postNav: false
 showTitle: false
 ---
 
-{%- assign posts = collections.postsByTagAndYear[tagAndYearPath] -%}
+{%- assign posts = collections.postsByTagAndYear[tagAndYearPath] -%} {%- assign
+tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
 <div class="xl:flex xl:flex-row xl:gap-xl">
     <div class="xl:basis-8/12">
         {%- if content != "" or posts.tagIntro != nil and posts.tagIntro != ""
@@ -86,7 +87,7 @@ showTitle: false
     <div class="my-xl xl:m-0 xl:basis-4/12">
         <div class="xl:sticky xl:top-lg">
             <div class="mb-base mt-0 h2">Choose posts by tag</div>
-            {%- include "site-tags.html" -%}
+            {%- include "site-tags.html" currentTag: tag-%}
         </div>
     </div>
 </div>
