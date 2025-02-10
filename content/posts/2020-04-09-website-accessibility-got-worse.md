@@ -2,11 +2,7 @@
 title: Website accessibility got worse
 tags: accessibility
 ---
-Dave Rupert made me aware with his tweet
-
-https://twitter.com/davatron5000/status/1247179071890640896
-
-The average website accessibility got worse during the last twelve months!
+Dave Rupert made me aware with a [tweet](https://twitter.com/davatron5000/status/1247179071890640896). The average website accessibility got worse during the last twelve months!
 
 This is according to the [WebAIM annual accessibility analysis](https://webaim.org/projects/million/) of a list of one million homepages. [WebAIM](https://webaim.org/about/), which stands for Web Accessibility In Mind, is a non-profit organization based at the [Center for people with Disabilities](https://www.cpd.usu.edu/) of the Utah State University.
 
@@ -24,6 +20,6 @@ WebAIM provides a [Web Accessibility Evaluation Tool (WAVE)](https://wave.webaim
 
 I immediately [checked my site](https://wave.webaim.org/report#/{{site.origin}}) by using the tool and got hints for improvements.
 
-The accessibility situation also seems to resonate with others. For example, Ethan Marcotte explains his approach of writing an [Accessibility Statement](https://ethanmarcotte.com/wrote/an-accessibility-statement/) for his site. 
+The accessibility situation also seems to resonate with others. For example, Ethan Marcotte explains his approach of writing an [Accessibility Statement](https://ethanmarcotte.com/wrote/an-accessibility-statement/) for his site.
 
-I like the idea of writing an accessibility statement. I want to focus on accessibility. Writing the statement is an excellent way of making me conscious, and to set a level to reach. 
+I like the idea of writing an accessibility statement. I want to focus on accessibility. Writing the statement is an excellent way of making me conscious, and to set a level to reach.

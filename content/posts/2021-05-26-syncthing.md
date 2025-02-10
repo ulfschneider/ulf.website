@@ -11,6 +11,4 @@ tags:
 - the syncing itself is quick and flawless,
 - security is one of the [primary project goals](https://docs.syncthing.net/users/security.html).
 
-👌 The tool is so good, you should give it a try! I got aware via the following tweet:
-
-https://twitter.com/frontstuff_io/status/1393107304841728000
+👌 The tool is good, you should give it a try! 
