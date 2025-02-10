@@ -1,5 +1,5 @@
 ---
-tags: emil-drawing
+gallery: true
 ---
 
 A collection of drawings made by my son

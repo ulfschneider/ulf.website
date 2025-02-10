@@ -1,0 +1,38 @@
+<nav data-pagefind-ignore>
+    <ul class="reset flex flex-col gap-base">
+        <li>
+            <a href="/">Home</a> {% include "key.html" key: site.nav.home path:
+            "/" %}
+        </li>
+        <li>
+            <a href="/blog/">Blog</a> {% include "key.html" key: site.nav.blog
+            path: "/blog/" %}
+        </li>
+        <li>
+            <a href="/about/">About</a> {% include "key.html" key:
+            site.nav.about path: "/about/" %}
+        </li>
+        <li>
+            <a href="/colophon/">Colophon</a> {% include "key.html" key:
+            site.nav.colophon path: "/colophon/" %}
+        </li>
+        <li>
+            <a href="/search/">Search</a> {% include "key.html" key:
+            site.nav.search path: "/search/" focusSelector: "#search-query" %}
+        </li>
+        <li><a href="{{site.rss.url}}">RSS</a></li>
+    </ul>
+
+    <div
+        id="back-to-top"
+        class="meta m-base p-sm flex-col justify-end bg-write text-canvas border border-current fixed right-0 bottom-0"
+    >
+        <div id="heading-hint" class="right text-sm hidden mb-sm leading-tight">
+            <a href="#" class="no-underline !text-current"></a>
+        </div>
+        <div class="text-right">
+            <a href="#" class="!text-current">Back to Top</a> {% include
+            "key.html" key: site.nav.top path: "#" %}
+        </div>
+    </div>
+</nav>

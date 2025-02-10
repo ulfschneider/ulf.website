@@ -1,12 +1,7 @@
 ---
 permalink: /
-nodate: true
-notags: true
-notitle: Ulf Schneider
-layout: home
-id: home
-poststitle: "Recent notes"
-topicstitle: Below are selected posts I´ve written or collected over the years.
+layout: default
+showTitle: false
 topics:
   - title: Web
     urls:
@@ -41,4 +36,15 @@ topics:
       - /2023-10-31-autumn-riding/
       - /2024-08-06-klean-kanteen/
 ---
-Hello, I´m Ulf Schneider, a software developer and agile coach. If you like, here is some more information <a href="/about/">about me</a>.
+
+Hello, I´m Ulf Schneider, a software developer and agile coach. If you like, here is some more information [about me](/about/).
+
+<div class="my-lg">
+{% include "post-list.html" posts: collections.recentNotes stream: true%}
+</div>
+
+<a href="/blog/" class="tag">All posts {% include "key.html" key: site.nav.blog path: "/blog/" %}</a>
+
+## Selected posts
+
+{% include "topics.html" topics: topics %}

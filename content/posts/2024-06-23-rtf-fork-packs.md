@@ -1,13 +1,15 @@
 ---
 title:  Signposting the RTF with the help of Fork Packs
-hero: /img/secan/IMG_5856.jpg
 tags:
   - sports
   - secan
 ---
+<figure>
+    <img src="/img/secan/IMG_5856.jpg">
+<figure>
 Under ideal weather conditions for this weekend, the [Rad-Treff Borchen](https://rad-treff-borchen.de) invited road bike riders to the RTF "Through the Hochstift Paderborn". Participants could choose between routes ranging from 46 km to 153 km.
 
-The preparation for such an event is shared among many people, and my task was to signpost a section of the 108 km route on the Friday before the event. 
+The preparation for such an event is shared among many people, and my task was to signpost a section of the 108 km route on the Friday before the event.
 
 <figure>
 <iframe src="https://www.komoot.com/de-de/tour/1483549485/embed?share_token=ate6ItleRV8M5QIDycTyNYxVI1LzuKWKIdGSHFMWXxMQjIQPcU&profile=1" height="1000" width="500" frameborder="0" scrolling="no"></iframe>
@@ -30,9 +32,3 @@ In most cases, the road bike routes are driven by car and then signposted. This 
 I was impressed by the Fork Packs, the 5.8 l variant I used. The riding characteristics are only minimally affected because the bags' center of gravity is low and they don't wobble due to the secure attachment. Additionally, the handlebars remain free for the bike computer, which was important for navigation in this case. There is a 4.1 l variant of these bags, which, with its smaller volume, also has a maximum allowed weight of 3 kg. From my perspective, there is no reason to limit yourself to the 4.1 l size – it would have been too small for my signs anyway. The larger bag allows for more flexible use, and if you are interested in the Fork Packs and wondering which size is right, I recommend the larger 5.8 l variant. The bags in my photos are not closed and therefore look larger than they actually are. As usual with Ortlieb, the closure must be rolled three times to ensure the best possible protection against moisture and dust. However, since I had to keep stopping to access my signs, I left them open.
 
 On the way back from Borchen, I slipped in a roundabout on the wet road and skidded through the roundabout. The Fork Packs remained unscathed, but unfortunately, the left brake lever, handlebar tape, left pedal, saddle, and rear wheel axle suffered some scratches. I also didn't escape without some scrapes. You simply can't lean into a curve with Conti Race King mountain bike tires the way you can with your road bike equipped with Conti Grand Prix 5000 tires …
-
-
-
-
-
-

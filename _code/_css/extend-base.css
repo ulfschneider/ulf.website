@@ -1,0 +1,404 @@
+@layer base {
+    :root {
+        font-size: 17px;
+        color-scheme: light dark;
+    }
+
+    @media (min-width: theme(screens.md)) {
+        :root {
+            font-size: 18px;
+        }
+    }
+
+    @media (min-width: theme(screens.lg)) {
+        :root {
+            font-size: 18px;
+        }
+    }
+
+    @media (min-width: theme(screens.xl)) {
+        :root {
+            font-size: 19px;
+        }
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        text-decoration-thickness: 0.05em;
+        text-underline-offset: 0.15em;
+    }
+
+    /* scrollbar */
+    :root {
+        --scrollbar-width: 16px;
+    }
+
+    * {
+        scrollbar-width: var(--scrollbar-width);
+        scrollbar-color: theme(colors.write) transparent;
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: var(--scrollbar-width);
+    }
+    *::-webkit-scrollbar-thumb {
+        background: theme(colors.write);
+    }
+
+    *::-webkit-scrollbar-background {
+        background: transparent;
+    }
+
+    /* focus */
+    *:focus {
+        @apply outline-none;
+    }
+    *:focus-visible:not(disabled) {
+        @apply outline-indicator;
+    }
+
+    *:focus[autofocus] {
+        @apply outline-indicator;
+    }
+
+    ::selection {
+        @apply bg-primary text-white;
+    }
+
+    @view-transition {
+        navigation: auto; /* required to enable cross-document view transitions*/
+    }
+
+    ::view-transition-old(main) {
+        animation: fade 0.2s linear forwards;
+    }
+
+    ::view-transition-new(main) {
+        animation: fade 0.4s linear reverse;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+    html {
+        scroll-behavior: smooth;
+        /*https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/*/
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    a:hover {
+        @apply text-primary underline;
+    }
+
+    a[href*="//"]:not([href*="ulfschneider.io"])::after
+    {
+        content: "↗";
+        display: inline-block;
+        margin-left: 0.25em;
+    }
+
+    main a {
+        @apply underline;
+    }
+
+    h1,
+    .h1 {
+        @apply text-base font-bold;
+    }
+
+    h2,
+    .h2 {
+        @apply text-base font-bold mt-xl mb-base;
+    }
+
+    h3,
+    .h3 {
+        @apply text-base font-bold mt-xl mb-base;
+    }
+
+    h4,
+    .h4 {
+        @apply text-base font-bold mt-lg mb-base;
+    }
+
+    h5,
+    .h5 {
+        @apply text-base font-bold mt-lg mb-base;
+    }
+
+    h6,
+    .h6 {
+        @apply text-base font-bold mt-lg mb-base;
+    }
+
+    /* ul and ol */
+
+    /* ul, ol */
+    ol,
+    ul {
+        @apply my-base mx-0 list-none p-0;
+    }
+
+    li > ol,
+    li > ul {
+        @apply my-0;
+    }
+
+    li {
+        @apply pl-md m-0 p-0;
+    }
+
+    li > p:first-child {
+        @apply inline;
+    }
+
+    li > ol {
+        counter-reset: ol-counter;
+    }
+
+    ol > li {
+        counter-increment: ol-counter;
+    }
+
+    ol > li::before {
+        content: counters(ol-counter, ".", decimal) ". ";
+        @apply text-smaller outdent whitespace-nowrap tabular-nums;
+    }
+
+    ol > li > ol > li::before {
+        content: counters(ol-counter, ".", decimal) " ";
+    }
+
+    ul > li::before {
+        content: "–" " "; /*•●*/
+        @apply outdent whitespace-nowrap not-italic;
+    }
+
+    ul.reset,
+    ol.reset {
+        @apply my-0 list-none p-0;
+
+        > li {
+            @apply p-0;
+        }
+
+        > li::before {
+            content: "";
+            @apply hidden;
+        }
+    }
+
+    main > ul,
+    main > ol {
+        @apply md:outdent-prose-flow;
+    }
+
+    /* dl */
+
+    dl {
+        @apply my-base mx-0 p-0;
+    }
+
+    dt {
+        @apply font-bold;
+    }
+
+    dd {
+        @apply pl-md;
+    }
+
+    dd + dt,
+    dt + dt {
+        @apply mt-base;
+    }
+
+    /* quote and blockquote */
+
+    q {
+        @apply italic;
+        quotes: "„" "“" "‘" "’";
+    }
+
+    blockquote {
+        padding-left: calc(theme(spacing.md) - theme(borderWidth.2));
+        @apply my-md border-l-2 border-current;
+    }
+
+    blockquote > header,
+    blockquote > footer {
+        @apply my-sm text-pretty sm:text-balance meta;
+    }
+
+    main > blockquote {
+        @apply md:outdent-prose-flow;
+    }
+
+    /* figure */
+
+    figure {
+        @apply my-xl;
+
+        figcaption {
+            @apply my-sm text-pretty sm:text-balance meta;
+        }
+    }
+
+    /* address */
+    address {
+        @apply not-italic font-normal;
+    }
+
+    /* typography */
+    cite {
+        @apply font-bold not-italic;
+    }
+
+    kbd {
+        @apply meta text-inherit border border-current rounded-sm leading-none px-[0.2em] font-normal;
+    }
+
+    mark,
+    .mark {
+        background: linear-gradient(
+                100deg,
+                rgba(255, 221, 64, 0) 0.9%,
+                rgba(255, 221, 64, 1) 2.4%,
+                rgba(255, 221, 64, 0.5) 5.8%,
+                rgba(255, 221, 64, 0.2) 93%,
+                rgba(255, 221, 64, 0.7) 96%,
+                rgba(255, 221, 64, 0) 98%
+            ),
+            linear-gradient(
+                180deg,
+                rgba(255, 221, 64, 0) 0%,
+                rgba(255, 221, 64, 0.3) 7.9%,
+                rgba(255, 221, 64, 0) 15%
+            );
+        border-radius: 0.125em;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        mark,
+        .mark {
+            background: rgb(255, 221, 64);
+            border-radius: 0;
+            @apply text-canvas;
+        }
+    }
+
+    /*vertical rhythm*/
+    img + img,
+    picture + picture {
+        @apply mt-md inline-block;
+    }
+
+    p {
+        @apply my-0 indent-0 text-pretty;
+    }
+
+    p + p {
+        @apply mt-base;
+    }
+
+    /* img */
+    img {
+        @apply object-contain object-left dark:brightness-90 dark:contrast-125 dark:filter;
+    }
+
+    img {
+        @media (min-width: theme(screens.sm)) {
+            max-height: 80vh;
+        }
+    }
+
+    /* hr */
+    hr {
+        @apply border-0 block h-fit;
+    }
+
+    hr::before {
+        content: "* * *";
+        @apply block my-xl text-center;
+    }
+
+    /* table */
+    table {
+        @apply my-md text-left border-collapse border-y border-write;
+
+        caption {
+            @apply py-sm sm:text-balance meta;
+            text-align: inherit;
+        }
+
+        tr {
+            @apply border-collapse border-b border-write;
+        }
+
+        th {
+            @apply py-sm pr-sm align-baseline font-bold mt-base;
+            text-align: inherit;
+        }
+
+        td {
+            @apply py-sm pr-sm align-baseline font-normal;
+            text-align: inherit;
+        }
+
+        thead {
+            th,
+            td {
+                @apply align-bottom;
+            }
+        }
+
+        th + th,
+        td + td {
+            @apply pl-sm;
+        }
+    }
+
+    main > .scroll-table,
+    main > table,
+    main > pre {
+        /*FIXME */
+    }
+
+    pre {
+        @apply overflow-x-auto my-md;
+    }
+
+    pre,
+    pre > code {
+        @apply whitespace-pre-wrap break-words font-mono leading-normal font-normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+        font-size: 0.9em;
+    }
+
+    code:not(pre code) {
+        font-size: 0.9em;
+        @apply font-mono font-normal bg-code-canvas;
+    }
+}

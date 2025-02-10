@@ -1,9 +1,0 @@
-[functions]
-directory = "_api"
-
-[[redirects]]
-from = "/api/comments/*"
-to = "/.netlify/functions/comments/:splat"
-status = 200
-
-

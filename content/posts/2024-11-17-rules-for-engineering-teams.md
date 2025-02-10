@@ -10,4 +10,4 @@ I came across Ariel Salminen´s [rules for a remote first engineering culture](h
 > - Use as few tools and platforms as possible.
 > - Focus on persistent iteration over flashy launches.
 > - Be kind.
-> <footer>Some of the Ariel Salminen´s <a href="https://arie.ls/2023/leading-successful-product-teams/ ">rules for a remote first engineering culture</a>.</footer>
+> <footer>Some of Ariel Salminen´s <a href="https://arie.ls/2023/leading-successful-product-teams/ ">rules for a remote first engineering culture</a>.</footer>

@@ -1,0 +1,218 @@
+@layer components {
+    :root {
+        --form-error-border-width: 2px;
+        --form-input-border-width: 1px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"],
+    input[list],
+    input[type="submit"],
+    input[type="reset"],
+    button,
+    select,
+    textarea,
+    fieldset,
+    label,
+    legend {
+        @apply font-body placeholder-meta caret-primary appearance-none rounded-none font-normal text-inherit;
+    }
+
+    input[type="submit"],
+    input[type="reset"],
+    button,
+    .button {
+        @apply bg-primary px-sm py-sm cursor-pointer border-0 align-baseline text-white text-balance;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    button:hover,
+    .button:hover,
+    input[type="submit"]:active,
+    input[type="reset"]:active,
+    button:active,
+    .button:active {
+        @apply brightness-110;
+    }
+
+    input[type="submit"]:disabled,
+    input[type="reset"]:disabled,
+    button:disabled,
+    .button:disabled {
+        @apply cursor-not-allowed opacity-75;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"],
+    select,
+    textarea {
+        @apply text-write;
+    }
+
+    label {
+        @apply cursor-pointer;
+    }
+
+    label > * {
+        @apply my-xs;
+    }
+
+    label,
+    legend {
+        @apply block align-baseline font-bold;
+    }
+
+    form .hint {
+        @apply text-meta font-normal;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"],
+    input[list],
+    textarea,
+    select {
+        @apply border-meta p-xs bg-field border align-middle leading-none;
+    }
+
+    select {
+        @apply max-w-max cursor-pointer overflow-ellipsis pr-[2.5em] align-baseline;
+
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cpath vector-effect='non-scaling-stroke' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' d='M26 12 16 22 6 12'/%3E%3C/svg%3E");
+        background-repeat: no-repeat, repeat;
+        background-position:
+            right 0.7em top 50%,
+            0 0;
+        background-size:
+            1em auto,
+            100%;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cpath vector-effect='non-scaling-stroke' stroke='#fff' stroke-linecap='round' stroke-linejoin='round' d='M26 12 16 22 6 12'/%3E%3C/svg%3E");
+        }
+    }
+
+    textarea {
+        @apply block border-meta p-xs bg-field resize-none border font-normal leading-snug;
+    }
+
+    fieldset {
+        @apply border-none p-0;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="password"]:focus,
+    input[type="search"]:focus,
+    input[type="tel"]:focus,
+    input[type="url"]:focus,
+    input[list]:focus,
+    select:focus,
+    textarea:focus {
+        @apply border-transparent;
+    }
+
+    @supports (appearance: none) {
+        :root {
+            --radio-size: 1.5em;
+            --radio-border-width: 1px;
+            --radio-check-size: calc(0.55 * var(--radio-size));
+        }
+
+        label:has(input[type="radio"]:not(.native)) {
+            @apply flex flex-row gap-[1em] items-center max-w-fit;
+        }
+
+        input[type="radio"]:not(.native) {
+            appearance: none;
+            font-size: inherit;
+            position: relative;
+            width: var(--radio-size);
+            height: var(--radio-size);
+            margin: 0;
+            border: var(--radio-border-width) solid currentColor;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        input[type="radio"]:not(.native):checked::before {
+            content: "";
+            position: absolute;
+            width: var(--radio-check-size);
+            height: var(--radio-check-size);
+            border-radius: 50%;
+            margin-top: calc(
+                (var(--radio-size) - var(--radio-check-size)) / 2 -
+                    var(--radio-border-width)
+            );
+            margin-left: calc(
+                (var(--radio-size) - var(--radio-check-size)) / 2 -
+                    var(--radio-border-width)
+            );
+            background-color: currentColor;
+        }
+
+        :root {
+            --check-size: 1.5em;
+            --check-border-width: 1px;
+            --check-mark-width: calc(0.7 * var(--check-size));
+            --check-mark-height: calc(var(--check-mark-width) / 1.8);
+            --check-mark-line-width: 0.2em;
+            --check-mark-rotation: rotate(-60deg);
+            --check-mark-adjust-top: calc(-0.2 * var(--check-mark-height));
+            --check-mark-adjust-left: calc(-0 * var(--check-mark-width));
+        }
+
+        label:has(input[type="checkbox"]:not(.native):not([switch])) {
+            @apply flex flex-row gap-[1em] items-center max-w-fit;
+        }
+
+        input[type="checkbox"]:not(.native):not([switch]) {
+            appearance: none;
+            font-size: inherit;
+            position: relative;
+            width: var(--check-size);
+            height: var(--check-size);
+            margin: 0;
+            border: var(--check-border-width) solid currentColor;
+            border-radius: 0;
+            cursor: pointer;
+        }
+        input[type="checkbox"]:not(.native):not([switch]):checked::before {
+            content: "";
+            position: absolute;
+            width: var(--check-mark-width);
+            height: calc(var(--check-mark-height));
+            transform: var(--check-mark-rotation);
+            border: var(--check-mark-line-width) solid currentColor;
+            border-top: none;
+            border-right: none;
+            margin-top: calc(
+                (var(--check-size) - var(--check-mark-height)) / 2 -
+                    var(--check-border-width) + var(--check-mark-adjust-top)
+            );
+            margin-left: calc(
+                (var(--check-size) - var(--check-mark-width)) / 2 -
+                    var(--check-border-width) + var(--check-mark-adjust-left)
+            );
+            background-color: transparent;
+        }
+    }
+}

@@ -2,9 +2,10 @@
 title: Fairlight Strael Build Notes
 tags: [sports, strael]
 abstract: I´m building up a new road bike with a Fairlight Strael steel frame. Here is my thought process for choosing the parts.
-hero: /img/strael/strael-3-0-top-tube.png
-outline: true
 ---
+<figure>
+    <img src="/img/strael/strael-3-0-top-tube.png">
+</figure>
 
 [[toc]]
 
@@ -236,7 +237,7 @@ Every now and then, I hear or read that 12-speed is unnecessary and 11-speed is 
 
 <table class="noso">
   <caption>
-    <strong>Gear steps of different cassettes</strong>    
+    <strong>Gear steps of different cassettes</strong>
       <p>Color-coding for tooth-jumps:</p>
       <ul class="reset"><li class="bg-green text-white inline-block mr-ryt-sm">1 tooth</li><li class="bg-blue text-white inline-block mr-ryt-sm">2 tooths</li><li class="bg-orange text-white inline-block mr-ryt-sm">3 tooths</li><li class="bg-purple text-white inline-block mr-ryt-sm">4 tooths</li><li class="bg-red text-white inline-block mr-ryt-sm">5 tooths</li>
     </ul>

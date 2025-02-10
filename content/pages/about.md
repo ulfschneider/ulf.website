@@ -1,12 +1,9 @@
 ---
 permalink: /about/
 title: About Ulf Schneider
-nodate: true
-notags: true
-id: about
 ---
 
-<figure>
+<figure class="max-w-prose">
 <img src="/img/ulf/ulf-16x9.jpg" alt="Portrait of Ulf Schneider">
 </figure>
 
@@ -37,10 +34,7 @@ My path through 30 years of software went like this:
 
 ## Connect with me
 
-**[Email](mailto:{{site.ownership.email}}):** {{site.ownership.email}}
-**[Mastodon]({{site.ownership.mastodon.profile}}):** {{site.ownership.mastodon.user}}
-**[RSS]({{site.origin}}{{site.rss}}):** {{site.hostname}}{{site.rss}}
-**Phone:** {{site.ownership.phone}}
+{% include "contact.md" %}
 
 ## Content ownership
 

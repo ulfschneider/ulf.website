@@ -2,8 +2,10 @@
 title: Fairlight Strael Learnings
 tags: [sports, strael]
 abstract: A short summary of what I´ve learned from my <a href="/2022-04-14-fairlight-strael-build-log/">Fairlight Strael Build</a>.
-hero: /img/strael/strael-in-the-wild.jpg
 ---
+<figure>
+    <img src="/img/strael/strael-in-the-wild.jpg">
+</figure>
 
 - **Weight:** My setup weighs 9.1 kg including pedals.
 - **Ride quality:** The ride quality of the Strael frame is beautiful. The handling is stable, calm, comfortable, and direct. It is not squishy. Once on the bike everything feels natural. I wouldn´t want to change anything.

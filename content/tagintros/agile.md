@@ -1,6 +1,4 @@
----
-tags: agile
----
+
 Articles and notes about my experiences within the agile movement and the agile value system. Popular:
 
 - [Scrum and Architecture](/2011-06-27-scrum-and-architecture/)

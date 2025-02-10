@@ -1,0 +1,17 @@
+<div class="grid my-lg grid-cols-1 md:grid-cols-2 gap-xl">
+    {%- for topic in topics -%}
+    <section>
+        <h3 class="mt-0 mb-base text-base">{{topic.title}}</h3>
+        <ul class="line-list reset">
+            {%- for url in topic.urls -%} {% assign post = collections.livePosts
+            | item_from_url: url %} {%- if post -%}
+            <li class="mt-base text-pretty sm:text-balance">
+                <a href="{{url}}"
+                    ><cite class="font-normal">{{post.data.title}}</cite></a
+                >
+            </li>
+            {%- endif -%} {%- endfor -%}
+        </ul>
+    </section>
+    {%- endfor -%}
+</div>

@@ -1,0 +1,365 @@
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import eleventySyntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
+import feedPlugin from "@11ty/eleventy-plugin-rss";
+import { execSync } from "node:child_process";
+import through from "through2";
+import path from "node:path";
+import { capitalize } from "lodash-es";
+import { minify } from "terser";
+import markdownItDeflist from "markdown-it-deflist";
+import markdownItMark from "markdown-it-mark";
+import markdownItRSSFriendlyGitHubAlerts from "markdown-it-rss-friendly-github-alerts";
+import markdownItTableOfContents from "markdown-it-table-of-contents";
+import markdownItAnchor from "markdown-it-anchor";
+import markdownItTrimmer from "markdown-it-trimmer";
+import markdownItScrolltable from "markdown-it-scrolltable";
+import markdownItFootnote from "markdown-it-footnote";
+import markdownItCooklang from "markdown-it-cooklang";
+import markdownItAttrs from "markdown-it-attrs";
+import { full as markdownItEmoji } from "markdown-it-emoji";
+import markdownItMathjax from "markdown-it-mathjax3";
+import markdownItContainer from "markdown-it-container";
+
+import site from "./_code/_data/site.mjs";
+import {
+  sortTags,
+  getItemsByTagAndYear,
+  isLive,
+  openGraphImage,
+  getImagesByTag,
+  isGallery,
+} from "./_code/_11ty/collections.mjs";
+import prismLanguages from "./_code/_data/prism-languages.mjs";
+import dayjs from "dayjs";
+
+export default async function (eleventyConfig) {
+  eleventyConfig.setServerOptions({
+    //dev server options
+
+    // Whether DOM diffing updates are applied where possible instead of page reloads
+    domDiff: false,
+    // Additional files to watch that will trigger server updates
+    // Accepts an Array of file paths or globs (passed to `chokidar.watch`).
+    // Works great with a separate bundler writing files to your output folder.
+    // e.g. `watch: ["_site/**/*.css"]`
+    watch: ["_code/_css/**/*", "!_code/_css/style.css"],
+  });
+
+  eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.setTemplateFormats(["md", "html", "njk"]);
+
+  eleventyConfig.addPassthroughCopy({ "content/assets": "assets" });
+
+  eleventyConfig.addPassthroughCopy(
+    { "_code/_fonts": "fonts" },
+    {
+      overwrite: true,
+      rename: (filePath) => {
+        if (!path.basename(filePath)) {
+          return filePath;
+        }
+
+        return (
+          path.basename(filePath, path.extname(filePath)) +
+          site.cache.deriveVersion(site.cache.version.font) +
+          path.extname(filePath)
+        );
+      },
+    },
+  );
+  eleventyConfig.addPassthroughCopy(
+    { "_code/_css/": "." },
+    {
+      overwrite: true,
+      filter: ["style.css"],
+      transform: (src, dest, stats) => {
+        return through((chunk, enc, done) => {
+          let content = chunk.toString();
+
+          //get the site data settings into the service worker
+
+          content = content.replace(
+            /\{\{site.cache.version.font\}\}/gi,
+            site.cache.deriveVersion(site.cache.version.font),
+          );
+
+          done(null, content);
+        });
+      },
+      rename: (filePath) => {
+        if (!path.basename(filePath)) {
+          return filePath;
+        }
+
+        return `style${site.cache.deriveVersion(site.cache.version.css)}.css`;
+      },
+    },
+  );
+
+  eleventyConfig.addPassthroughCopy(
+    { "_code/_js/": "js" },
+    {
+      overwrite: true,
+      transform: (src, dest, stats) => {
+        if (path.extname(src) != ".js" && path.extname(src) != ".mjs") {
+          return null;
+        }
+
+        return through((chunk, enc, done) => {
+          let content = chunk.toString();
+          minify(content).then((result) => done(null, result.code));
+        });
+      },
+      rename: (filePath) => {
+        if (!path.basename(filePath)) {
+          return filePath;
+        }
+
+        return (
+          path.basename(filePath, path.extname(filePath)) +
+          site.cache.deriveVersion(site.cache.version.script) +
+          path.extname(filePath)
+        );
+      },
+    },
+  );
+
+  eleventyConfig.addPassthroughCopy(
+    { "_code/_root": "." },
+    {
+      overwrite: true,
+      transform: (src, dest, stats) => {
+        if (path.extname(src) != ".js" && path.extname(src) != ".mjs") {
+          return null;
+        }
+
+        return through((chunk, enc, done) => {
+          let content = chunk.toString();
+
+          //get the site data settings into the service worker
+          content = content.replace(
+            /let site = \{\};/,
+            `let site = ${JSON.stringify(site)};`,
+          );
+          minify(content).then((result) => done(null, result.code));
+        });
+      },
+    },
+  );
+  eleventyConfig.addLayoutAlias("default", "default.html");
+  eleventyConfig.addLayoutAlias("image", "default.html");
+  eleventyConfig.addLayoutAlias("bookmark", "default.html");
+  eleventyConfig.addLayoutAlias("blog", "blog.html");
+  eleventyConfig.addLayoutAlias("gallery", "gallery.html");
+  eleventyConfig.addPlugin(eleventySyntaxHighlightPlugin, {
+    preAttributes: {
+      // Added in 4.1.0 you can use callback functions too
+      "data-language": function ({ language, content, options }) {
+        return resolvePrismLanguage(language);
+      },
+    },
+    codeAttributes: {},
+  });
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["webp", null],
+
+    // output image widths
+    widths: [200, 600, "auto"],
+
+    sharpOptions: {
+      animated: true,
+    },
+
+    // optional, attributes assigned on <img> nodes override these values
+    htmlOptions: {
+      imgAttributes: {
+        alt: "",
+        loading: "lazy",
+        decoding: "async",
+      },
+      pictureAttributes: {},
+    },
+  });
+
+  eleventyConfig.addPlugin(feedPlugin);
+
+  let markdownLib;
+  eleventyConfig.amendLibrary("md", (mdLib) => {
+    markdownLib = mdLib;
+    mdLib.use(markdownItDeflist);
+    mdLib.use(markdownItMark);
+    mdLib.use(markdownItRSSFriendlyGitHubAlerts);
+    mdLib.use(markdownItAnchor);
+    mdLib.use(markdownItTableOfContents, { listType: "ol" });
+    mdLib.use(markdownItTrimmer);
+    mdLib.use(markdownItContainer);
+    mdLib.use(markdownItEmoji);
+    mdLib.use(markdownItMathjax);
+    mdLib.use(markdownItScrolltable);
+    mdLib.use(markdownItFootnote);
+    mdLib.use(markdownItAttrs);
+    mdLib.use(markdownItCooklang, {
+      cookware: {
+        startWith: "+", //do not interfere with the #, which is used for tags in iA Writer
+      },
+    });
+  });
+
+  eleventyConfig.addFilter("markdown", (content) =>
+    content ? markdownLib.render(content) : "",
+  );
+  eleventyConfig.addFilter("iso_date", (date) => dayjs(date).format());
+  eleventyConfig.addFilter("capitalize", (value) => capitalize(value));
+  eleventyConfig.addFilter("adjust_tag_label", (tag) => {
+    if (tag == site.tags.star) {
+      return "❤️";
+    } else if (tag == "") {
+      return "All posts";
+    } else {
+      return "#" + tag;
+    }
+  });
+  eleventyConfig.addFilter("adjust_tag_path", (tag) => {
+    if (isGallery(tag)) {
+      if (tag) {
+        return `/gallery/${tag}/`;
+      } else {
+        return "/gallery/";
+      }
+    } else {
+      if (tag) {
+        return `/blog/${tag}/`;
+      } else {
+        return "/blog/";
+      }
+    }
+  });
+  eleventyConfig.addFilter("og_image", (html) => openGraphImage(html));
+  eleventyConfig.addFilter("strip_quotes", (content) =>
+    content.replace(/"|'/gi, ""),
+  );
+  eleventyConfig.addFilter("item_from_url", (collection, url) => {
+    for (const item of collection) {
+      if (item.page.url == url) {
+        return item;
+      }
+    }
+  });
+  eleventyConfig.addShortcode("first_image", (post) =>
+    extractFirstImageTag(post.templateContent),
+  );
+
+  eleventyConfig.addCollection("livePosts", (collectionsApi) => {
+    //all live posts
+    return collectionsApi
+      .getAllSorted()
+      .filter((item) => isLive(item))
+      .reverse();
+  });
+
+  eleventyConfig.addCollection("rssPosts", (collectionsApi) => {
+    //all live posts
+    return collectionsApi
+      .getAllSorted()
+      .filter((item) => isLive(item) && item.data.rss);
+  });
+
+  eleventyConfig.addCollection("siteTags", (collectionsApi) => {
+    //all live posts
+    const tags = new Set();
+    collectionsApi
+      .getAllSorted()
+      .filter((item) => isLive(item))
+      .map((item) => {
+        if (item.data.tags?.length) {
+          tags.add(...item.data.tags);
+        }
+      });
+
+    return sortTags(["", ...tags]);
+  });
+
+  eleventyConfig.addCollection("postsByTagAndYear", (collectionsApi) => {
+    //all live posts
+    const livePosts = collectionsApi
+      .getAllSorted()
+      .filter((item) => isLive(item))
+      .reverse();
+
+    const postsByTagAndYear = getItemsByTagAndYear(
+      livePosts,
+      collectionsApi,
+      markdownLib,
+    );
+
+    return postsByTagAndYear;
+  });
+
+  eleventyConfig.addCollection("imagesByTag", (collectionsApi) => {
+    const livePosts = collectionsApi
+      .getAllSorted()
+      .filter((item) => isLive(item))
+      .reverse();
+
+    const imagesByTag = getImagesByTag(livePosts, collectionsApi, markdownLib);
+
+    return imagesByTag;
+  });
+
+  eleventyConfig.addCollection("recentNotes", (collectionsApi) => {
+    let recentPublishedDate;
+    return collectionsApi
+      .getAllSorted()
+      .reverse()
+      .filter((item) => {
+        if (!isLive(item)) {
+          return false;
+        }
+        if (!recentPublishedDate) {
+          recentPublishedDate = dayjs(item.data.publishedDate).format(
+            "YYYY-MM-DD",
+          );
+          return true;
+        } else if (
+          recentPublishedDate ==
+          dayjs(item.data.publishedDate).format("YYYY-MM-DD")
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+  });
+
+  eleventyConfig.on(
+    "eleventy.after",
+    async ({ dir, results, runMode, outputMode }) => {
+      console.log(
+        "******** eleventy after build event, configured in .eleventy.js config file",
+      );
+      execSync(`npx pagefind --site ${dir.output}`, {
+        cwd: "./",
+        encoding: "utf-8",
+        stdio: "inherit",
+      });
+    },
+  );
+}
+
+export const config = {
+  dir: {
+    data: "_code/_data",
+    includes: "_code/_includes",
+    layouts: "_code/_layouts",
+    output: "_site",
+  },
+};
+
+function resolvePrismLanguage(language) {
+  if (language.startsWith("diff-")) {
+    language = language.substring(5);
+  } else if (language == "diff") {
+    language = "";
+  }
+  return prismLanguages[language] || language || "";
+}

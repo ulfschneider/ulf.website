@@ -1,8 +1,6 @@
-node_modules/
-_site/
-.cache
+_site
+node_modules
+_code/_css/style.css
 .DS_Store
 .env
-
-# Local Netlify folder
-.netlify/
+.vscode

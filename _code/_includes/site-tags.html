@@ -1,0 +1,11 @@
+<nav data-pagefind-ignore>
+    <ul class="reset flex flex-row flex-wrap gap-sm">
+        {%-for tag in collections.siteTags -%}
+        <li>
+            <a href="{{tag | adjust_tag_path}}" class="tag"
+                >{{tag | adjust_tag_label}}</a
+            >
+        </li>
+        {%- endfor -%}
+    </ul>
+</nav>

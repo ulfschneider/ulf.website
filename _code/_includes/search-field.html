@@ -1,0 +1,138 @@
+<search data-pagefind-ignore>
+    <form id="search-form" class="max-w-prose">
+        <label id="search-label"
+            ><span>Search {{ site.name }}</span> {% include "key.html" key:
+            site.nav.search path: "/search/" focusSelector: "#search-query" %}
+            <div class="flex flex-row gap-base">
+                <input
+                    id="search-query"
+                    name="query"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    enterkeyhint="search"
+                    type="search"
+                    suggestion-wrapper-id="autocomplete-search"
+                    class="grow self-stretch"
+                    type="text"
+                />
+                <input
+                    class="shrink-0"
+                    type="submit"
+                    id="search-submit"
+                    style="
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                    "
+                    value="Search"
+                />
+            </div>
+        </label>
+        <ul id="autocomplete-search" class="shadow-xl"></ul>
+        <script type="module">
+            import { AutoComplete } from "/js/autocomplete{{site.cache.version.script}}.mjs";
+
+            var pagefind;
+            async function initPagefind() {
+                try {
+                    if (!pagefind) {
+                        pagefind = await import("{{site.pagefind.path}}");
+                        pagefind.init();
+                    }
+                    return pagefind;
+                } catch (err) {
+                    console.error("Failure when initializing pagefind", err);
+                }
+            }
+
+            //export
+            window.initPagefind = initPagefind;
+
+            function setQueryParameterByName(name, value) {
+                history.replaceState(null, null, "?" + name + "=" + value);
+            }
+
+            function getQueryParameterByName(name, url) {
+                let params = new URL(url || document.location).searchParams;
+                const param = params.get(name);
+                return param;
+            }
+
+            //export
+            window.getQueryParameterByName = getQueryParameterByName;
+
+            async function suggestPages(query, callback) {
+                const LIMIT_ENTRIES = 7;
+                try {
+                    const pagefind = await initPagefind();
+                    const search = await pagefind.search(query);
+                    const suggestions = Array(
+                        Math.min(LIMIT_ENTRIES, search.results.length),
+                    );
+                    const promiseCollector = [];
+
+                    for (
+                        let i = 0;
+                        i < LIMIT_ENTRIES && i < search.results.length;
+                        i++
+                    ) {
+                        promiseCollector.push(
+                            search.results[i].data().then((data) => {
+                                suggestions[i] = data;
+                            }),
+                        );
+                    }
+                    await Promise.allSettled(promiseCollector);
+                    callback(null, suggestions);
+                } catch (error) {
+                    callback(error, []);
+                }
+            }
+
+            function openPage(suggestion) {
+                location.href = suggestion.url;
+            }
+
+            function submitQuery(event) {
+                if (event) {
+                    event.preventDefault();
+                }
+                const query = document.querySelector("#search-query").value;
+                if (query && query.trim()) {
+                    location.href =
+                        "{{site.search.path}}" +
+                        "?query=" +
+                        encodeURIComponent(query.trim());
+                } else {
+                    location.href = "{{site.search.path}}";
+                }
+            }
+
+            function setQueryValue() {
+                let query = getQueryParameterByName("query");
+                let queryField = document.querySelector("#search-query");
+                queryField.value = query;
+            }
+
+            function registerEvents() {
+                const searchForm = document.querySelector("#search-form");
+                searchForm.addEventListener("submit", submitQuery);
+
+                addEventListener("DOMContentLoaded", (event) => {
+                    AutoComplete({
+                        selector: "#search-query",
+                        queryData: suggestPages,
+                        threshold: 1,
+                        onSelect: openPage,
+                    });
+                });
+                const searchField = document.querySelector("#search-query");
+                searchField.addEventListener("focus", initPagefind);
+            }
+
+            setQueryValue();
+            registerEvents();
+        </script>
+    </form>
+</search>

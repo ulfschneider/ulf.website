@@ -1,0 +1,276 @@
+@layer components {
+    :root {
+        --line-list-width: 1px;
+    }
+
+    /* line list */
+
+    .line-list {
+        /* Pixel based calculations refer to a line list width of 1px */
+        border-left: var(--line-list-width) solid currentColor;
+        @apply !pl-[calc(theme(spacing.md)-var(--line-list-width))];
+    }
+
+    .line-list.marker {
+        & > li::before,
+        & > dt::before {
+            content: "";
+            @apply w-sm h-sm inline-block rounded-full bg-current -ml-[calc(theme(space.md)-var(--line-list-width)+theme(space.sm)/2)] mr-[calc(theme(space.md)-var(--line-list-width)-theme(space.sm)/2)];
+        }
+    }
+
+    a.tag {
+        @apply meta border font-normal border-current rounded py-[.2em] px-[.4em] no-underline inline-block hover:bg-primary hover:text-white hover:no-underline;
+    }
+
+    /*auto complete */
+    ul.auto-complete-suggestion {
+        @apply border border-meta absolute z-10 w-full m-0;
+
+        &::after {
+            content: "";
+            @apply absolute -bottom-xl h-xl w-1;
+        }
+
+        > li {
+            @apply px-xs py-sm leading-tight bg-field cursor-pointer font-normal;
+        }
+        > li::before {
+            @apply hidden;
+        }
+        > li:hover,
+        > li[aria-selected="true"] {
+            @apply bg-primary text-white;
+        }
+    }
+
+    /* table of contents */
+
+    main > .table-of-contents {
+        @apply my-xl;
+        &::before {
+            content: "Contents";
+            @apply meta;
+        }
+        & > ol {
+            @apply md:outdent-prose-flow my-0;
+        }
+    }
+
+    /* PrismJS 1.29.0*/
+    pre[data-language]:not([data-language=""]) {
+        &::before {
+            content: attr(data-language);
+            @apply font-body mb-sm inline-block text-sm border-b-2 border-current pr-base;
+        }
+    }
+
+    pre[data-language] {
+        & > code {
+            @apply whitespace-pre block overflow-x-auto;
+        }
+    }
+
+    /* PrismJS 1.29.0
+        https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+    /**
+         * prism.js default theme for JavaScript, CSS and HTML
+         * Based on dabblet (http://dabblet.com)
+         * @author Lea Verou
+         */
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        color: slategray;
+    }
+
+    .token.punctuation {
+        color: #999;
+    }
+
+    .token.namespace {
+        opacity: 0.7;
+    }
+
+    .token.property,
+    .token.tag,
+    .token.boolean,
+    .token.number,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+        color: #905;
+    }
+
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted {
+        color: #690;
+    }
+
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string {
+        color: #9a6e3a;
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.keyword {
+        color: #07a;
+    }
+
+    .token.function,
+    .token.class-name {
+        color: #dd4a68;
+    }
+
+    .token.regex,
+    .token.important,
+    .token.variable {
+        color: #e90;
+    }
+
+    .token.important,
+    .token.bold {
+        font-weight: bold;
+    }
+    .token.italic {
+        font-style: italic;
+    }
+
+    .token.entity {
+        cursor: help;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .token.comment,
+        .token.block-comment,
+        .token.prolog,
+        .token.doctype,
+        .token.cdata {
+            color: #999;
+        }
+
+        .token.punctuation {
+            color: #ccc;
+        }
+
+        .token.tag,
+        .token.attr-name,
+        .token.namespace,
+        .token.deleted {
+            color: #e2777a;
+        }
+
+        .token.function-name {
+            color: #6196cc;
+        }
+
+        .token.boolean,
+        .token.number,
+        .token.function {
+            color: #f08d49;
+        }
+
+        .token.property,
+        .token.class-name,
+        .token.constant,
+        .token.symbol {
+            color: #f8c555;
+        }
+
+        .token.selector,
+        .token.important,
+        .token.atrule,
+        .token.keyword,
+        .token.builtin {
+            color: #cc99cd;
+        }
+
+        .token.string,
+        .token.char,
+        .token.attr-value,
+        .token.regex,
+        .token.variable {
+            color: #7ec699;
+        }
+
+        .token.operator,
+        .token.entity,
+        .token.url {
+            color: #67cdcc;
+        }
+
+        .token.important,
+        .token.bold {
+            font-weight: bold;
+        }
+        .token.italic {
+            font-style: italic;
+        }
+
+        .token.entity {
+            cursor: help;
+        }
+
+        .token.inserted {
+            color: green;
+        }
+    }
+
+    /* markdown-it footnotes */
+
+    hr.footnotes-sep {
+        @apply hidden;
+    }
+
+    .footnote-ref a,
+    .footnote-backref {
+        @apply no-underline;
+    }
+
+    ol.footnotes-list {
+        counter-reset: footnote-counter;
+    }
+
+    ol.footnotes-list::before {
+        content: "Footnotes";
+        @apply h2 mb-base block;
+    }
+
+    ol.footnotes-list li {
+        counter-increment: footnote-counter;
+        @apply relative;
+    }
+
+    ol.footnotes-list li::before {
+        content: counter(footnote-counter);
+        @apply normal-nums font-normal;
+    }
+
+    ol.footnotes-list li > p {
+        @apply inline;
+    }
+
+    main > section > ol.footnotes-list {
+        @apply md:-ml-md;
+    }
+
+    main > section > ol.footnotes-list:before {
+        @apply md:pl-md;
+    }
+
+    /* cooklang */
+
+    .cooklang-ingredients .amount-and-unit {
+        @apply font-bold inline-block;
+    }
+}

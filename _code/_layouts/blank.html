@@ -1,0 +1,18 @@
+<!doctype html>
+<html
+    class="auto-dark-mode hover-rows no-js"
+    id="{{site.backToTop.id}}"
+    lang="{{site.locale}}"
+    dir="{{site.direction}}"
+>
+    <head>
+        {% include "head.html" %}
+    </head>
+
+    {%- if search == true -%} {%assign search_attribute = 'data-pagefind-body'
+    %} {%- else -%} {%assign search_attribute = 'data-pagefind-ignore="all"' %}
+    {%- endif -%}
+    <body class="p-hr blank break-word outdent flow" {{search_attribute}}>
+        <main id="main">{{ content }}</main>
+    </body>
+</html>

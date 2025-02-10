@@ -1,0 +1,31 @@
+---
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.locale or page.lang }}">
+  <title>{{ site.title}}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="{{ site.rss.url }}" rel="self" />
+  <link href="{{ site.origin }}" />
+  <updated>{{ collections.rssPosts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ site.origin }}</id>
+  <author>
+    <name>{{ site.ownership.name }}</name>
+    <email>{{ site.ownership.email }}</email>
+  </author>
+  {%- for post in collections.rssPosts  %}
+  {%- set absolutePostUrl %}{{site.origin}}{{ post.url | url }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}" />
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.content | renderTransforms(post.data.page, site.origin) }}
+    <hr/><p><strong><a href="{{absolutePostURL}}">{{ post.data.title }}</a></strong> appeared on <a href="{{site.origin}}">{{site.name}}</a>.</p>
+    {%- if site.ownership.email -%}
+            <p><a href="mailto:{{site.ownership.email}}?body={{absolutePostUrl}}">Reply via email</a></p>
+          {%- endif -%}
+    </content>
+  </entry>
+  {%- endfor %}
+</feed>
