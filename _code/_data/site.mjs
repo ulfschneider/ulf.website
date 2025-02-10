@@ -1,4 +1,5 @@
 import "dotenv/config";
+import chalk from "chalk";
 const environment = process.env.DEV ? "DEV" : "PRD";
 const hostname = environment == "DEV" ? "localhost:8080" : "ulfschneider.io";
 const origin =
@@ -10,7 +11,27 @@ function deriveVersion(version) {
 }
 
 function useServiceWorker() {
-  return environment == "DEV" ? false : true;
+  if (environment == "DEV") {
+    console.log(
+      chalk.yellow(
+        "Not registering service worker because of local dev environment",
+      ),
+    );
+    return false;
+  }
+  return true;
+}
+
+function getGitCommitDates() {
+  if (environment == "DEV") {
+    console.log(
+      chalk.yellow(
+        "Not getting git commit dates because of local dev environment",
+      ),
+    );
+    return false;
+  }
+  return true;
 }
 
 export default {
@@ -25,6 +46,7 @@ export default {
   origin: origin,
   buildTime: buildTime,
   useServiceWorker: useServiceWorker(),
+  getGitCommitDates: getGitCommitDates(),
   cache: {
     name: "",
     ignore: undefined,
