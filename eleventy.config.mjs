@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventySyntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
@@ -151,6 +152,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addLayoutAlias("bookmark", "default.html");
   eleventyConfig.addLayoutAlias("blog", "blog.html");
   eleventyConfig.addLayoutAlias("gallery", "gallery.html");
+  eleventyConfig.addLayoutAlias("about", "about.html");
   eleventyConfig.addPlugin(eleventySyntaxHighlightPlugin, {
     preAttributes: {
       // Added in 4.1.0 you can use callback functions too
@@ -335,7 +337,9 @@ export default async function (eleventyConfig) {
     "eleventy.after",
     async ({ dir, results, runMode, outputMode }) => {
       console.log(
-        "******** eleventy after build event, configured in .eleventy.js config file",
+        chalk.yellow(
+          "******** eleventy after build event, configured in .eleventy.js config file",
+        ),
       );
       execSync(`npx pagefind --site ${dir.output}`, {
         cwd: "./",

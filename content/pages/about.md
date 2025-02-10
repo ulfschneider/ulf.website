@@ -1,11 +1,10 @@
 ---
 permalink: /about/
 title: About Ulf Schneider
+layout: about
+aboutImgPath: /img/ulf/ulf-16x9.jpg
+aboutAltText: Portrait of Ulf Schneider
 ---
-
-<figure class="max-w-prose">
-<img src="/img/ulf/ulf-16x9.jpg" alt="Portrait of Ulf Schneider">
-</figure>
 
 Welcome! My name is Ulf Schneider and this is my website. I´m a software developer and agile coach.
 
