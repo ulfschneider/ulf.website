@@ -69,7 +69,7 @@ export default {
   },
   modifiedDate: (data) => {
     let date = dateCache.get(data.page.inputPath);
-    if (!date) {
+    if (site.getGitCommitDates && !date) {
       date = data.page.date;
 
       try {
