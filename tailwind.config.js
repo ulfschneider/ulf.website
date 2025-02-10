@@ -17,6 +17,13 @@ export default {
       primary: "light-dark(#007aff,#007aff)",
       meta: "light-dark(#777,#999)",
       field: "light-dark(white, #272727)",
+      select: "#007aff",
+      orange: "light-dark(orange, orange)",
+      red: "light-dark(red, red)",
+      green: "light-dark(green, green)",
+      purple: "light-dark(mediumpurple, mediumpurple)",
+      blue: "light-dark(#007aff,#007aff)",
+      yellow: "light-dark(gold, gold)",
     },
     spacing: {
       0: "0px",
