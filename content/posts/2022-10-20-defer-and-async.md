@@ -43,8 +43,7 @@ For classic scripts, if the `async` attribute is present, then the classic scrip
 
 <table>
 <tr><td>(1) Parsing of the HTML document starts.</td><td class="bg-primary text-white">Parse HTML</td><td></td><td></td></tr>
-<tr><td>(2) A script tag is found while parsing the HTML.</td><td class="bg-primary text-white"></td><td class="bg-primary text-white">Load script</td><td></td></tr>
-<tr><td> The parsing of HTML is not paused while downloading the script and will continue until the parsing is finished.</td><td class="bg-primary white"></td><td></td><td></td></tr>
+<tr><td>(2) A script tag is found while parsing the HTML. The parsing of HTML is not paused while downloading the script and will continue until the parsing is finished.</td><td class="bg-primary text-white"></td><td class="bg-primary text-white">Load script</td><td></td></tr>
 <tr><td>(3) When the parsing of the HTML is finished and the script is downloaded the script will be executed.</td><td></td><td></td><td class="bg-orange text-white">Execute script</td></tr>
 </table>
 
