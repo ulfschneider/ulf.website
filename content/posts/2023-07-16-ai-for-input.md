@@ -5,7 +5,7 @@ tags:
   - code
   - journal
 ---
-Jeremy Keith published a transcript and the slides of his talk about *Web3, AI and Design*. The AI-part is helping me a lot to get a better understanding about the topic. 
+Jeremy Keith published a transcript and the slides of his talk about [Web3, AI and Design](https://adactio.com/articles/20290). The AI-part is helping me a lot to get a better understanding about the topic. 
 
 > Use these tools for inputs, not outputs. I would never publish the output of one of these tools publicly. But I might use one of these tools at the beginning of the process to get over the blank page. If I want to get a bunch of mediocre ideas out of the way quickly, these tools can help.
 > <footer>Jeremy Keith</footer>
