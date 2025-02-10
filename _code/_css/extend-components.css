@@ -57,6 +57,14 @@
         }
     }
 
+    /* scroll table */
+    .scroll-table {
+        @apply my-xl;
+        & > table {
+            @apply !my-0;
+        }
+    }
+
     /* PrismJS 1.29.0*/
     pre[data-language]:not([data-language=""]) {
         &::before {
