@@ -59,12 +59,12 @@ export default {
     preCacheUrls: ["/", "/offline/"],
     ignoreCacheRegex: "",
     version: {
-      script: getVersion(1),
-      html: getVersion(1),
-      json: getVersion(1),
+      script: getVersion(2),
+      html: getVersion(2),
+      json: getVersion(2),
       image: getVersion(1),
       font: getVersion(1),
-      css: getVersion(1),
+      css: getVersion(2),
     },
   },
   ownership: {
