@@ -65,6 +65,11 @@
         }
     }
 
+    /* nojs */
+    .no-js .js {
+        @apply hidden;
+    }
+
     /* PrismJS 1.29.0*/
     pre[data-language]:not([data-language=""]) {
         &::before {
