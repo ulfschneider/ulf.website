@@ -147,6 +147,9 @@ export default async function (eleventyConfig) {
       },
     },
   );
+
+  eleventyConfig.addPassthroughCopy("img");
+
   eleventyConfig.addLayoutAlias("default", "default.html");
   eleventyConfig.addLayoutAlias("image", "default.html");
   eleventyConfig.addLayoutAlias("bookmark", "default.html");
@@ -165,6 +168,11 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp", null],
 
+    sharpOptions: {
+      animated: true,
+      limitInputPixels: false,
+    },
+
     // output image widths
     widths: [200, 600, "auto"],
 
@@ -177,6 +185,7 @@ export default async function (eleventyConfig) {
       imgAttributes: {
         alt: "",
         loading: "lazy",
+        sizes: "100vw",
         decoding: "async",
       },
       pictureAttributes: {},
