@@ -12,13 +12,7 @@ const origin =
 const buildTime = new Date();
 
 function getVersion(version) {
-  return process.env.ELEVENTY_RUN_MODE === "serve" ? "" : `${version}`;
-}
-
-function getVersionFileNamePart(version) {
-  return process.env.ELEVENTY_RUN_MODE === "serve"
-    ? ""
-    : `-${getVersion(version)}`;
+  return process.env.ELEVENTY_RUN_MODE === "serve" ? "" : `-${version}`;
 }
 
 function useServiceWorker() {
@@ -64,7 +58,6 @@ export default {
     noCacheUrls: ["/feed.xml"],
     preCacheUrls: ["/", "/offline/"],
     ignoreCacheRegex: "",
-    getVersionFileNamePart: getVersionFileNamePart,
     version: {
       script: getVersion(1),
       html: getVersion(1),
