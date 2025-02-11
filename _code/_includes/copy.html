@@ -1,0 +1,6 @@
+<button id="{{copyId}}" class="js py-0 px-xs text-sm">Copy</button>
+<script>
+    document.querySelector("#{{copyId}}").addEventListener("click", () => {
+        navigator.clipboard.writeText("{{copyText}}");
+    });
+</script>
