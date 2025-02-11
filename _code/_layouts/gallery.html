@@ -7,11 +7,37 @@ permalink: "/gallery{{ tagPath }}"
 search: false
 postNav: false
 showTitle: false
+eleventyComputed:
+    title: "{{collections.imagesByTag[tagPath].title}}"
 layout: default
 ---
 
-{%- assign gallery = collections.imagesByTag[tagPath] -%} {%- assign tag =
-collections.imagesByTag[tagPath].tag -%} {{content}}{{gallery.tagIntro}}
+{%- assign gallery = collections.imagesByTag[tagPath] -%} {%- assign title =
+collections.imagesByTag[tagPath].title -%} {%- assign tag =
+collections.imagesByTag[tagPath].tag -%}
+
+<h1 class="my-0">
+    {%- if gallery.multipleYears == true -%}
+    <span>{{gallery.fromYear}} – {{gallery.toYear }}: </span>
+    {%- else -%}
+    <span>{{gallery.year}}: </span>
+    {%- endif -%} {%- if gallery.tag != "" -%} {%- if gallery.tag ==
+    site.tags.star -%} {%- assign tagStyle = "!border-none no-underline" -%} {%-
+    else -%} {%- assign tagStyle = "" -%} {%- endif -%}
+    <span
+        >Images tagged
+        <a href="/gallery/{{gallery.tag}}/" class="tag {{tagStyle}}"
+            >{{ gallery.tag | adjust_tag_label }}</a
+        ></span
+    >
+    {%- else -%}
+    <span>All posts</span>
+    {%- endif -%}
+</h1>
+
+{%- if content != "" or gallery.tagIntro != nil and gallery.tagIntro != "" -%}
+<div class="my-lg">{{content}}{{gallery.tagIntro}}</div>
+{%- endif -%}
 
 <div
     class="grid grid-masonry gap-xl my-xl grid-cols-1 md:grid-cols-2 xl:grid-cols-3"

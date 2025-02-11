@@ -8,16 +8,14 @@ layout: default
 search: false
 postNav: false
 showTitle: false
+eleventyComputed:
+    title: "{{collections.postsByTagAndYear[tagAndYearPath].title}}"
 ---
 
 {%- assign posts = collections.postsByTagAndYear[tagAndYearPath] -%} {%- assign
 tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
 <div class="xl:flex xl:flex-row xl:gap-xl">
     <div class="xl:basis-8/12">
-        {%- if content != "" or posts.tagIntro != nil and posts.tagIntro != ""
-        -%}
-        <div class="mb-lg">{{content}}{{posts.tagIntro}}</div>
-        {%- endif -%}
         <h1 class="mt-0 mb-base">
             {%- if posts.multipleYears == true -%}
             <span>{{posts.fromYear}} – {{posts.toYear }}: </span>
@@ -56,6 +54,9 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
             <a href="/blog{{posts.oldest.key}}">Oldest</a>
             {%- endif -%}
         </nav>
+        {%- endif -%} {%- if content != "" or posts.tagIntro != nil and
+        posts.tagIntro != "" -%}
+        <div class="my-lg">{{content}}{{posts.tagIntro}}</div>
         {%- endif -%}
 
         <div class="my-lg">

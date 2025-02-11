@@ -107,6 +107,22 @@ export function getItemsByTagAndYear(collection, collectionsApi, markdownLib) {
     }
   }
 
+  function getTitle(dataByTagAndYear, tag) {
+    if (dataByTagAndYear.multipleYears) {
+      if (tag) {
+        return `${dataByTagAndYear.fromYear} – ${dataByTagAndYear.toYear}: Posts tagged #${tag}`;
+      } else {
+        return `${dataByTagAndYear.fromYear} – ${dataByTagAndYear.toYear}: All posts`;
+      }
+    } else {
+      if (tag) {
+        return `${dataByTagAndYear.year}: Posts tagged #${tag}`;
+      } else {
+        return `${dataByTagAndYear.year}: All posts`;
+      }
+    }
+  }
+
   function formatResults(dataByTagAndYear) {
     const itemsByTagAndYear = {};
     for (const tag in dataByTagAndYear) {
@@ -121,6 +137,7 @@ export function getItemsByTagAndYear(collection, collectionsApi, markdownLib) {
       } else {
         itemsForMostCurrentYear = Object.values(dataByTagAndYear[tag]).at(-1);
       }
+      itemsForMostCurrentYear.title = getTitle(itemsForMostCurrentYear, tag);
       if (tag) {
         itemsByTagAndYear[`/${tag}/`] = itemsForMostCurrentYear;
       } else {
@@ -137,6 +154,7 @@ export function getItemsByTagAndYear(collection, collectionsApi, markdownLib) {
         itemsByTagAndYear[key] = dataByTagAndYear[tag][year];
         itemsByTagAndYear[key].pageIndex = yearsForTag.length - index;
         itemsByTagAndYear[key].pageCount = yearsForTag.length;
+        itemsByTagAndYear[key].title = getTitle(itemsByTagAndYear[key], tag);
 
         if (index + 1 < yearsForTag.length) {
           itemsByTagAndYear[key].newer =
@@ -263,11 +281,40 @@ export function getImagesByTag(collection, collectionsApi, markdownLib) {
     return data;
   }
 
+  function getMaxYear(a, b) {
+    if (a && b) {
+      return Math.max(parseInt(a), parseInt(b)).toString();
+    } else if (a) {
+      return a;
+    } else if (b) {
+      return b;
+    }
+  }
+
+  function getMinYear(a, b) {
+    if (a && b) {
+      return Math.min(parseInt(a), parseInt(b)).toString();
+    } else if (a) {
+      return a;
+    } else if (b) {
+      return b;
+    }
+  }
+
   function formatResults(dataByTag) {
     const imagesByTag = {};
     for (const tag in dataByTag) {
       const key = dataByTag[tag].key;
       imagesByTag[key] = dataByTag[tag];
+
+      if (!dataByTag[tag].multipleYears) {
+        imagesByTag[key].year = imagesByTag[key].fromYear;
+        imagesByTag[key].title =
+          `${imagesByTag[key].year}: Images tagged #${tag}`;
+      } else {
+        imagesByTag[key].title =
+          `${imagesByTag[key].fromYear} – ${imagesByTag[key].toYear}: Images tagged #${tag}`;
+      }
     }
     return imagesByTag;
   }
@@ -288,7 +335,15 @@ export function getImagesByTag(collection, collectionsApi, markdownLib) {
         if (img) {
           img.url = item.url;
           img.title = item.data.title;
+          img.year = dayjs(item.data.publishedDate).format("YYYY");
           dataByTag[tag].items.push(img);
+          dataByTag[tag].fromYear = getMaxYear(
+            dataByTag[tag].fromYear,
+            img.year,
+          );
+          dataByTag[tag].toYear = getMinYear(dataByTag[tag].toYear, img.year);
+          dataByTag[tag].multipleYears =
+            dataByTag[tag].fromYear != dataByTag[tag].toYear;
         }
       }
     });
