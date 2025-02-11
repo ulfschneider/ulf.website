@@ -1,6 +1,5 @@
 import dayjs from "dayjs";
 import { execSync } from "node:child_process";
-import * as fs from "fs";
 import site from "./site.mjs";
 import { sortTags } from "../_11ty/collections.mjs";
 
