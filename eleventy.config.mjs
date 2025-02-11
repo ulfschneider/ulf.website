@@ -274,9 +274,12 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addCollection("rssPosts", (collectionsApi) => {
     //all live posts
-    return collectionsApi
-      .getAllSorted()
-      .filter((item) => isLive(item) && item.data.rss);
+    return [
+      ...collectionsApi
+        .getAllSorted()
+        .filter((item) => isLive(item) && item.data.rss)
+        .reverse(),
+    ].slice(0, 50);
   });
 
   eleventyConfig.addCollection("siteTags", (collectionsApi) => {
