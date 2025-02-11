@@ -20,14 +20,14 @@
     fieldset,
     label,
     legend {
-        @apply font-body placeholder-meta caret-primary appearance-none rounded-none font-normal text-inherit;
+        @apply font-body placeholder-meta caret-write appearance-none rounded-none font-normal text-inherit;
     }
 
     input[type="submit"],
     input[type="reset"],
     button,
     .button {
-        @apply bg-primary px-sm py-sm cursor-pointer border-0 align-baseline text-white text-balance;
+        @apply text-button-write bg-button-canvas px-sm py-sm cursor-pointer border-0 align-baseline text-balance;
     }
 
     input[type="submit"]:hover,
@@ -38,7 +38,7 @@
     input[type="reset"]:active,
     button:active,
     .button:active {
-        @apply brightness-110;
+        @apply bg-active-button-canvas text-active-button-write;
     }
 
     input[type="submit"]:disabled,
