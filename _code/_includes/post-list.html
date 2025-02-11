@@ -1,47 +1,35 @@
-<ul class="reset flow-lg">
-    {%- for post in posts -%}
-    <li>
-        <article>
-            {%- if stream == true -%}
-            <aside
-                class="meta my-xs flex flex-wrap flex-row gap-x-[.5em] gap-y-xs"
-            >
-                {%- if post.data.docType == "bookmark" -%}
-                <div>{{post.data.docType | capitalize}}</div>
-                {%- endif -%}
-                <div class="flex flex-wrap flex-row gap-x-md gap-y-xs">
-                    {%- include "dates.html" publishedDate:
-                    post.data.publishedDate published: post.data.published
-                    modifiedDate: post.data.modifiedData modified:
-                    post.data.modified -%}{%- include "tags.html" tags:
-                    post.data.tags -%}
-                </div>
-            </aside>
-            {%-else -%}{%- if post.data.docType == "bookmark" -%}
-            <div class="meta my-xs">{{post.data.docType | capitalize}}</div>
-            {%- endif -%}{%- endif -%} {%- if post.data.docType != "bookmark"
-            -%}
-            <a class="h2 my-xs block" href="{{post.url}}"
-                ><cite>{{post.data.title}}</cite></a
-            >
-            {%- endif -%} {%- if stream == true or post.data.docType ==
-            "bookmark"-%} {{post.templateContent}} {%- else -%} {%- if
-            post.data.abstract -%}
-            <p>{{post.data.abstract}}</p>
-            {%- endif -%} {%- endif -%} {%- if stream != true -%}
-            <aside
-                class="meta my-xs flex flex-wrap flex-row gap-x-[.5em] gap-y-xs"
-            >
-                <div class="flex flex-wrap flex-row gap-x-md gap-y-xs">
-                    {%- include "dates.html" publishedDate:
-                    post.data.publishedDate published: post.data.published
-                    modifiedDate: post.data.modifiedData modified:
-                    post.data.modified -%}{%- include "tags.html" tags:
-                    post.data.tags -%}
-                </div>
-            </aside>
-            {%- endif -%}
-        </article>
-        {%- endfor -%}
-    </li>
-</ul>
+{%- for post in posts -%}
+<article>
+    {%- if stream == true -%}
+    <aside class="meta my-xs flex flex-wrap flex-row gap-x-[.5em] gap-y-xs">
+        {%- if post.data.docType == "bookmark" -%}
+        <div>{{post.data.docType | capitalize}}</div>
+        {%- endif -%}
+        <div class="flex flex-wrap flex-row gap-x-md gap-y-xs">
+            {%- include "dates.html" publishedDate: post.data.publishedDate
+            published: post.data.published modifiedDate: post.data.modifiedData
+            modified: post.data.modified -%}{%- include "tags.html" tags:
+            post.data.tags -%}
+        </div>
+    </aside>
+    {%-else -%}{%- if post.data.docType == "bookmark" -%}
+    <div class="meta my-xs">{{post.data.docType | capitalize}}</div>
+    {%- endif -%}{%- endif -%} {%- if post.data.docType != "bookmark" -%}
+    <a class="h2 my-xs block" href="{{post.url}}"
+        ><cite>{{post.data.title}}</cite></a
+    >
+    {%- endif -%} {%- if stream == true or post.data.docType == "bookmark"-%}
+    {{post.templateContent}} {%- else -%} {%- if post.data.abstract -%}
+    <p>{{post.data.abstract}}</p>
+    {%- endif -%} {%- endif -%} {%- if stream != true -%}
+    <aside class="meta my-xs flex flex-wrap flex-row gap-x-[.5em] gap-y-xs">
+        <div class="flex flex-wrap flex-row gap-x-md gap-y-xs">
+            {%- include "dates.html" publishedDate: post.data.publishedDate
+            published: post.data.published modifiedDate: post.data.modifiedData
+            modified: post.data.modified -%}{%- include "tags.html" tags:
+            post.data.tags -%}
+        </div>
+    </aside>
+    {%- endif -%}
+</article>
+{%- endfor -%}
