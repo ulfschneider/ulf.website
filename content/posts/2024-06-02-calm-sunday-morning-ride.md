@@ -1,6 +1,6 @@
 ---
 title: Calm Sunday morning ride
-tags: 
+tags:
   - sports
   - strael
 layout: image
@@ -16,7 +16,7 @@ This Sunday morning ride startet out misty but became so wet that sometimes I co
 </figure>
 
 <figure>
-<img src="/img/strael/IMG_5764.jpg" "A wet but paved dirt track.">
+<img src="/img/strael/IMG_5764.jpg" alt="A wet but paved dirt track.">
 </figure>
 
 <figure>
