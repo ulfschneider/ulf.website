@@ -62,14 +62,14 @@ export default async function (eleventyConfig) {
 
         return (
           path.basename(filePath, path.extname(filePath)) +
-          site.cache.deriveVersion(site.cache.version.font) +
+          site.cache.getVersionFileNamePart(site.cache.version.font) +
           path.extname(filePath)
         );
       },
     },
   );
   eleventyConfig.addPassthroughCopy(
-    { "_code/_css/": "." },
+    { "_code/_css/": "css" },
     {
       overwrite: true,
       filter: ["style.css"],
@@ -81,7 +81,7 @@ export default async function (eleventyConfig) {
 
           content = content.replace(
             /\{\{site.cache.version.font\}\}/gi,
-            site.cache.deriveVersion(site.cache.version.font),
+            site.cache.getVersionFileNamePart(site.cache.version.font),
           );
 
           done(null, content);
@@ -92,7 +92,7 @@ export default async function (eleventyConfig) {
           return filePath;
         }
 
-        return `style${site.cache.deriveVersion(site.cache.version.css)}.css`;
+        return `style${site.cache.getVersionFileNamePart(site.cache.version.css)}.css`;
       },
     },
   );
@@ -118,7 +118,7 @@ export default async function (eleventyConfig) {
 
         return (
           path.basename(filePath, path.extname(filePath)) +
-          site.cache.deriveVersion(site.cache.version.script) +
+          site.cache.getVersionFileNamePart(site.cache.version.script) +
           path.extname(filePath)
         );
       },

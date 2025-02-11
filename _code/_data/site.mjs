@@ -11,8 +11,14 @@ const origin =
     : `https://${hostname}`;
 const buildTime = new Date();
 
-function deriveVersion(version) {
-  return process.env.ELEVENTY_RUN_MODE === "serve" ? "" : `-${version}`;
+function getVersion(version) {
+  return process.env.ELEVENTY_RUN_MODE === "serve" ? "" : `${version}`;
+}
+
+function getVersionFileNamePart(version) {
+  return process.env.ELEVENTY_RUN_MODE === "serve"
+    ? ""
+    : `-${getVersion(version)}`;
 }
 
 function useServiceWorker() {
@@ -58,14 +64,14 @@ export default {
     noCacheUrls: ["/feed.xml"],
     preCacheUrls: ["/", "/offline/"],
     ignoreCacheRegex: "",
-    deriveVersion: deriveVersion,
+    getVersionFileNamePart: getVersionFileNamePart,
     version: {
-      script: deriveVersion(1),
-      html: deriveVersion(1),
-      json: deriveVersion(1),
-      image: deriveVersion(1),
-      font: deriveVersion(1),
-      css: deriveVersion(1),
+      script: getVersion(1),
+      html: getVersion(1),
+      json: getVersion(1),
+      image: getVersion(1),
+      font: getVersion(1),
+      css: getVersion(1),
     },
   },
   ownership: {
