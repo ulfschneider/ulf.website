@@ -85,7 +85,9 @@
 />
 {%- endif -%} {%- assign ogimg = content | og_image -%}
 <meta property="og:image" content="{{ogimg.src}}" />
+{%- if ogimg.alt != nil and ogimg.alt != "" -%}
 <meta
     property="og:image:alt"
     content="{{ogimg.alt | strip_html | strip_quotes}}"
 />
+{%- endif -%}
