@@ -108,6 +108,10 @@ export default async function (eleventyConfig) {
 
         return through((chunk, enc, done) => {
           let content = chunk.toString();
+          content = content.replace(
+            /\{\{site.cache.version.script\}\}/g,
+            site.cache.version.script,
+          );
           minify(content).then((result) => done(null, result.code));
         });
       },
