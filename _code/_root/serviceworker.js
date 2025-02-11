@@ -18,9 +18,6 @@ function makeCacheName(cacheType) {
   name += cacheType;
 
   if (site.cache?.version && site.cache.version[cacheType]) {
-    if (name) {
-      name += "-";
-    }
     name += site.cache.version[cacheType];
   }
   return name;
