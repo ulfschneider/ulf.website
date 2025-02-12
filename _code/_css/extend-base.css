@@ -354,20 +354,13 @@
         }
 
         th {
-            @apply py-sm px-0 align-baseline font-bold mt-base;
+            @apply p-sm align-baseline font-bold mt-base;
             text-align: inherit;
         }
 
         td {
-            @apply py-sm px-0 align-baseline font-normal;
+            @apply p-sm align-baseline font-normal;
             text-align: inherit;
-        }
-
-        tr {
-            > th + th,
-            > td + td {
-                @apply pl-base;
-            }
         }
 
         thead {
