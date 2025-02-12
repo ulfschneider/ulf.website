@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-import plugin from "tailwindcss/plugin";
+import plugin from "./node_modules/tailwindcss/plugin.js";
 
 export default {
   content: ["./_code/**/*", "./content/**/*"],

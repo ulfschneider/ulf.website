@@ -17,6 +17,7 @@ import markdownItScrolltable from "markdown-it-scrolltable";
 import markdownItFootnote from "markdown-it-footnote";
 import markdownItCooklang from "markdown-it-cooklang";
 import markdownItAttrs from "markdown-it-attrs";
+import markdownItFitVids from "markdown-it-fitvids";
 import { full as markdownItEmoji } from "markdown-it-emoji";
 import markdownItMathjax from "markdown-it-mathjax3";
 import markdownItContainer from "markdown-it-container";
@@ -33,6 +34,10 @@ import {
 import prismLanguages from "./_code/_data/prism-languages.mjs";
 import dayjs from "dayjs";
 
+import resolveConfig from "./node_modules/tailwindcss/resolveConfig.js";
+import myTailwindConfig from "./tailwind.config.js";
+const tailwindConfig = resolveConfig(myTailwindConfig);
+
 export default async function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     //dev server options
@@ -43,7 +48,7 @@ export default async function (eleventyConfig) {
     // Accepts an Array of file paths or globs (passed to `chokidar.watch`).
     // Works great with a separate bundler writing files to your output folder.
     // e.g. `watch: ["_site/**/*.css"]`
-    watch: ["_code/_css/**/*", "tailwind.config.js", "!_code/_css/style.css"],
+    watch: ["_site/css/**/*", "tailwind.config.js"],
   });
 
   eleventyConfig.setDataDeepMerge(true);
@@ -213,6 +218,9 @@ export default async function (eleventyConfig) {
     mdLib.use(markdownItScrolltable);
     mdLib.use(markdownItFootnote);
     mdLib.use(markdownItAttrs);
+    mdLib.use(markdownItFitVids, {
+      applyStyle: ` width:${tailwindConfig.theme.maxWidth.prose};`,
+    });
     mdLib.use(markdownItCooklang, {
       cookware: {
         startWith: "+", //do not interfere with the #, which is used for tags in iA Writer

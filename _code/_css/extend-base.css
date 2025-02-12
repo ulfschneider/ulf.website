@@ -321,9 +321,7 @@
     }
 
     img {
-        @media (min-width: theme(screens.sm)) {
-            max-height: 80vh;
-        }
+        @apply sm:max-h-[80vh];
     }
 
     /* hr */
