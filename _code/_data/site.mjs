@@ -64,7 +64,7 @@ export default {
       json: getVersion(2),
       image: getVersion(1),
       font: getVersion(1),
-      css: getVersion(2),
+      css: getVersion(3),
     },
   },
   ownership: {
