@@ -42,13 +42,18 @@ showTitle: false
             article.classList.add("my-lg");
             parent.appendChild(article);
 
-            if (entry.meta.title && entry.meta.title != "notitle") {
+            if (entry.meta.title && entry.meta.showTitle !== false) {
+                let titleWrapper = document.createElement("div");
+                titleWrapper.classList =
+                    "max-w-prose text-pretty sm:text-balance";
+                article.appendChild(titleWrapper);
+
                 let linkToArticle = document.createElement("a");
                 linkToArticle.href = entry.url;
-                article.appendChild(linkToArticle);
+                linkToArticle.classList = "h2 my-xs";
+                titleWrapper.appendChild(linkToArticle);
 
                 let title = document.createElement("cite");
-                title.classList = "block text-pretty sm:text-balance my-xs";
                 title.innerHTML = entry.meta.title;
                 linkToArticle.appendChild(title);
             }
@@ -118,7 +123,7 @@ showTitle: false
 
     function printResultCount(searchResults, results) {
         let count = document.createElement("div");
-        count.classList.add("legible-rem-width");
+        count.classList.add("max-w-prose");
         if (results.length == 0) {
             count.innerHTML =
                 "Your search for " +
