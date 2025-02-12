@@ -176,7 +176,7 @@
 
     ol > li::before {
         content: counters(ol-counter, ".", decimal) ". ";
-        @apply text-smaller outdent whitespace-nowrap tabular-nums;
+        @apply text-smaller outdent inline-block whitespace-nowrap tabular-nums;
     }
 
     ol > li > ol > li::before {
@@ -185,7 +185,7 @@
 
     ul > li::before {
         content: "–" " "; /*•●*/
-        @apply outdent whitespace-nowrap not-italic;
+        @apply outdent inline-block whitespace-nowrap not-italic;
     }
 
     ul.reset,

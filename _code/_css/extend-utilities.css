@@ -60,7 +60,6 @@
     }
 
     .outdent {
-        @apply inline-block min-w-md;
         margin-left: calc(-1 * var(--outdent-indent-space));
         min-width: var(--outdent-indent-space);
     }
