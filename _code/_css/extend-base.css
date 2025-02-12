@@ -112,7 +112,7 @@
 
     [id],
     [name] {
-        @apply scroll-my-base;
+        @apply scroll-my-md;
     }
 
     main a {
