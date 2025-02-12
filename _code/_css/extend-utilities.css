@@ -1,6 +1,7 @@
 @layer utilities {
     :root {
         --flow-space: 1em;
+        --outdent-indent-space: theme(spacing.md);
     }
 
     .flow > * + * {
@@ -59,7 +60,9 @@
     }
 
     .outdent {
-        @apply -ml-md inline-block min-w-md;
+        @apply inline-block min-w-md;
+        margin-left: calc(-1 * var(--outdent-indent-space));
+        min-width: var(--outdent-indent-space);
     }
 
     .prose-flow {
@@ -84,6 +87,6 @@
     }
 
     .outdent-prose-flow {
-        @apply !-ml-md !max-w-[calc(theme(maxWidth.prose)+theme(spacing.md))];
+        @apply outdent !max-w-[calc(theme(maxWidth.prose)+var(--outdent-indent-space))];
     }
 }

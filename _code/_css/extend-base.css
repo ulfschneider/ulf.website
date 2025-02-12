@@ -158,7 +158,8 @@
     }
 
     li {
-        @apply pl-md m-0 p-0;
+        @apply m-0 p-0;
+        padding-left: var(--outdent-indent-space);
     }
 
     li > p:first-child {
@@ -217,7 +218,7 @@
     }
 
     dd {
-        @apply pl-md;
+        padding-left: var(--outdent-indent-space);
     }
 
     dd + dt,
@@ -233,7 +234,7 @@
     }
 
     blockquote {
-        padding-left: calc(theme(spacing.md) - theme(borderWidth.2));
+        padding-left: calc(var(--outdent-indent-space) - theme(borderWidth.2));
         @apply my-md border-l-2 border-current;
     }
 
