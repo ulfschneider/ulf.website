@@ -110,6 +110,11 @@
         margin-left: 0.25em;
     }
 
+    [id],
+    [name] {
+        @apply scroll-my-base;
+    }
+
     main a {
         @apply underline;
     }
