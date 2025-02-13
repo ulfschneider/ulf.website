@@ -6,7 +6,8 @@ tags:
 ---
 <figure>
     <img src="/img/secan/IMG_5856.jpg">
-<figure>
+</figure>
+
 Under ideal weather conditions for this weekend, the [Rad-Treff Borchen](https://rad-treff-borchen.de) invited road bike riders to the RTF "Through the Hochstift Paderborn". Participants could choose between routes ranging from 46 km to 153 km.
 
 The preparation for such an event is shared among many people, and my task was to signpost a section of the 108 km route on the Friday before the event.
