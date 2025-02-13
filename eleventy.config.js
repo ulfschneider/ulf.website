@@ -231,6 +231,9 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("markdown", (content) =>
     content ? markdownLib.render(content) : "",
   );
+  eleventyConfig.addFilter("markdown_inline", (content) =>
+    content ? markdownLib.renderInline(content) : "",
+  );
   eleventyConfig.addFilter("iso_date", (date) => dayjs(date).format());
   eleventyConfig.addFilter("capitalize", (value) => capitalize(value));
   eleventyConfig.addFilter("adjust_tag_label", (tag) => {
