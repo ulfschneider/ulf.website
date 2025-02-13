@@ -87,7 +87,7 @@
     input[list],
     textarea,
     select {
-        @apply border-meta p-xs bg-field border align-middle leading-none;
+        @apply border-meta p-xs bg-field-canvas border align-middle leading-none;
     }
 
     select {
@@ -110,7 +110,7 @@
     }
 
     textarea {
-        @apply block border-meta p-xs bg-field resize-none border font-normal leading-snug;
+        @apply block border-meta p-xs bg-field-canvas resize-none border font-normal leading-snug;
     }
 
     fieldset {

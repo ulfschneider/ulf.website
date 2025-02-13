@@ -33,7 +33,7 @@
         }
 
         > li {
-            @apply px-xs py-sm leading-tight bg-field cursor-pointer font-normal;
+            @apply px-xs py-sm leading-tight bg-field-canvas cursor-pointer font-normal;
         }
         > li::before {
             @apply hidden;

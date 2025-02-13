@@ -1,7 +1,6 @@
 @layer base {
     :root {
         font-size: 17px;
-        color-scheme: light dark;
     }
 
     @media (min-width: theme(screens.md)) {
@@ -65,7 +64,7 @@
     }
 
     ::selection {
-        @apply bg-select text-white;
+        @apply bg-select-canvas text-select-write;
     }
 
     @view-transition {
@@ -392,6 +391,6 @@
 
     code:not(pre code) {
         font-size: 0.9em;
-        @apply font-mono font-normal bg-code-canvas;
+        @apply font-mono font-normal bg-code-canvas text-code-write;
     }
 }
