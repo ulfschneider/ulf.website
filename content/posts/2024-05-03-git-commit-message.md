@@ -10,7 +10,7 @@ A Git commit should contain a <q>whole idea of completed work.</q>^[[<cite>Deali
 Example Git commit messages:
 - Repair CSS class assignment for images
 - Remove underlines for slide navigation
-- Increase line height by a factor of 0.1
+- Increase line height by a factor of 1.1
 
 Chris has a checklist to follow along when writing a Git commit message:
 
