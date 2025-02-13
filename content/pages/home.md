@@ -41,7 +41,7 @@ Hello, I´m Ulf Schneider, a software developer and agile coach. This is my webs
 
 ## Recent notes
 
-<div class="my-lg flow-lg">
+<div class="my-lg flow-xl">
 {% include "post-list.html" posts: collections.recentNotes stream: true%}
 </div>
 
