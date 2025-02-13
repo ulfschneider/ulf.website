@@ -87,8 +87,10 @@ export default {
         );
       }
       dateCache.set(data.page.inputPath, date);
+      return date;
+    } else {
+      return data.page.date;
     }
-    return date;
   },
   published: (data) => dayjs(data.publishedDate).format("MMM D, YYYY"),
   modified: (data) => dayjs(data.modifiedDate).format("MMM D, YYYY"),

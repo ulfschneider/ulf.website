@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
   <subtitle>{{ site.description }}</subtitle>
   <link href="{{ site.rss.url }}" rel="self" />
   <link href="{{ site.origin }}" />
-  <updated>{{ site.buildTime }}</updated>
+  <updated>{{ site.buildTime | dateToRfc3339 }}</updated>
   <id>{{ site.origin }}</id>
   <author>
     <name>{{ site.ownership.name }}</name>
@@ -18,7 +18,7 @@ eleventyExcludeFromCollections: true
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}" />
-    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <updated>{{ post.data.modifiedDate | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html">{{ post.content | renderTransforms(post.data.page, site.origin) }}
     <hr/><p><strong><a href="{{absolutePostURL}}">{{ post.data.title }}</a></strong> appeared on <a href="{{site.origin}}">{{site.name}}</a>.</p>
