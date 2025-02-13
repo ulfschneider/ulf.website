@@ -5,7 +5,7 @@ tags:
   - css
   - accessibility
 ---
-The [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark) function is an excellent tool to simplify the handling of colors when a website should support light mode and dark mode. The function allows to decouple the colors of the two modes from the rest of your CSS and as such it is reducing CSS complexity! 
+The [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark) function is an excellent tool to simplify the handling of colors when a website should support light mode and dark mode. The function allows to decouple the colors of the two modes from the rest of the CSS and as such it is reducing CSS complexity! 
 
 [[toc]]
 
@@ -84,4 +84,4 @@ The colors are then applied to your HTML like:
 
 ## Conclusion
 
-Using `light-dark()` as a progressive enhancement, like shown, allows to reach more users and simplifies the setup of colors for light mode and dark mode. It even provides a central point in your code to adjust the colors without affecting the rest of the CSS. When integrating the approach into Tailwind CSS, the resulting Tailwind code is simplified because the `dark:` and `light:` variants can be omitted.
+Using `light-dark()` as a progressive enhancement, like shown, allows to reach more users and simplifies the setup of colors for light mode and dark mode. It even provides a central point in the CSS code to adjust the colors without affecting the rest of the CSS. When integrating the approach into Tailwind CSS, the resulting Tailwind code is simplified because the `dark:` and `light:` variants can be omitted.
