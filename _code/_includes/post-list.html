@@ -17,7 +17,7 @@
     {%-else -%}{%- if post.data.docType == "bookmark" -%}
     <div class="meta my-xs">{{post.data.docType | capitalize}}</div>
     {%- endif -%}{%- endif -%} {%- if post.data.docType != "bookmark" -%}
-    <div class="max-w-prose text-pretty sm:text-balance">
+    <div class="max-w-prose my-xs text-pretty sm:text-balance">
         <a class="h2" href="{{post.url}}"
             ><cite>{{post.data.title | markdown_inline }}</cite></a
         >
