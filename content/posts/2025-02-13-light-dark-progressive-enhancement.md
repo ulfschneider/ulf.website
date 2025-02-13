@@ -42,7 +42,7 @@ The solution requires a little bit more code, but it is worth it to reach way mo
 First, set the colors to be used when `light-dark()` is not supported:
 
 ```css
-/* this CSS code will support only a single mode! **/
+/* this CSS code will support only a single mode! */
 --canvas: #f7f7f7; 
 --write: #262626;
 ```
@@ -55,7 +55,7 @@ Second, introduce `light-dark()` when the browser supports it. This code must co
     color-scheme: light dark;
     --canvas: light-dark(#f7f7f7, #171717);
     --write: light-dark(#262626, #c3c3c3);
-    }
+}
 ```
 
 Browsers not supporting `light-dark()` will show your website in a single mode, others will show two modes. 
