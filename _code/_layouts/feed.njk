@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
   <subtitle>{{ site.description }}</subtitle>
   <link href="{{ site.rss.url }}" rel="self" />
   <link href="{{ site.origin }}" />
-  <updated>{{ collections.rssPosts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{ site.buildTime }}</updated>
   <id>{{ site.origin }}</id>
   <author>
     <name>{{ site.ownership.name }}</name>
