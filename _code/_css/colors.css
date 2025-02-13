@@ -34,7 +34,7 @@ method to keep any knowledge about the color scheme away from subsequent CSS. */
         --button-canvas: light-dark(#262626, #c3c3c3);
         --button-write: light-dark(white, #262626);
         --active-button-canvas: var(--primary);
-        --active-button-write: white;
+        --active-button-write: light-dark(white, black);
         --field-canvas: light-dark(white, #272727);
         --field-write: var(--write);
         --select-canvas: light-dark(#007aff, #22b6ff);

@@ -20,12 +20,12 @@
     }
 
     a.tag {
-        @apply meta border font-normal border-current rounded py-[.2em] px-[.4em] no-underline inline-block hover:bg-primary hover:text-white hover:no-underline;
+        @apply meta border font-normal border-current rounded py-[.2em] px-[.4em] no-underline inline-block hover:!bg-active-button-canvas hover:!text-active-button-write hover:!border-active-button-canvas hover:no-underline;
     }
 
     /*auto complete */
     ul.auto-complete-suggestion {
-        @apply border border-meta absolute z-10 w-full m-0;
+        @apply border border-current absolute z-10 w-full m-0;
 
         &::after {
             content: "";
@@ -40,7 +40,7 @@
         }
         > li:hover,
         > li[aria-selected="true"] {
-            @apply bg-primary text-white;
+            @apply bg-active-button-canvas text-active-button-write;
         }
     }
 
