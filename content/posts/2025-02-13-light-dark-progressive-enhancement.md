@@ -21,7 +21,7 @@ color-scheme: light dark;
 --canvas: light-dark(#f7f7f7, #171717); 
 --write: light-dark(#262626, #c3c3c3);
 
-/* use the defined colors without knowing whether two color modes are supported or not*/
+/* use the defined colors without knowing whether two color modes are supported or not */
 
 body {
 	background-color: var(--canvas);
@@ -62,7 +62,7 @@ Browsers not supporting `light-dark()` will show your website in a single mode, 
 
 ## Integrate into Tailwind CSS
 
-The above code is functional on its own. You can go one step further in case Tailwind CSS is part of your current coding setup. By integrating the above approach into your Tailwind configuration you can avoid the use of the Tailwind `dark:` and `light:` variants, which will simplify the Tailwind code. You only have to use the previously introduced custom properties within your `tailwind.config.js` to tell Tailwind about your colors:
+The above code is functional on its own. In case Tailwind CSS is part of your current coding setup, you can go one step further and integrate the previously introduced custom properties into your `tailwind.config.js`. This will let you avoid the use of the Tailwind `dark:` and `light:` variants, which will simplify your Tailwind code. Set the Tailwind colors as follows:
 
 ```js
 export default {
