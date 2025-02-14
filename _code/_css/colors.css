@@ -37,15 +37,15 @@ method to keep any knowledge about the color scheme away from subsequent CSS. */
         --active-button-write: light-dark(white, black);
         --field-canvas: light-dark(white, #272727);
         --field-write: var(--write);
-        --select-canvas: light-dark(#007aff, #22b6ff);
+        --select-canvas: light-dark(#007aff, #29c1ff);
         --select-write: white;
-        --primary: light-dark(#007aff, #22b6ff);
+        --primary: light-dark(#007aff, #29c1ff);
         --meta: light-dark(#777, #999);
         --orange: orange;
         --red: red;
         --green: green;
         --purple: mediumpurple;
-        --blue: light-dark(#007aff, #22b6ff);
+        --blue: light-dark(#007aff, #29c1ff);
         --yellow: gold;
     }
 }
