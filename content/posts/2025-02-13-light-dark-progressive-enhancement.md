@@ -24,8 +24,8 @@ color-scheme: light dark;
 /* use the defined colors without knowing whether two color modes are supported or not */
 
 body {
-	background-color: var(--canvas);
-	color: var(--write);
+  background-color: var(--canvas);
+  color: var(--write);
 }
 
 /* and so on ... */
