@@ -45,7 +45,9 @@ Hello, I´m Ulf Schneider, a software developer and agile coach. This is my webs
 {% include "post-list.html" posts: collections.recentNotes stream: true%}
 </div>
 
+<div class="my-xl">
 <a href="/blog/" class="font-bold">All posts</a>
+</div>
 
 ## Selected posts
 
