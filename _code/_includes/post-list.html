@@ -1,4 +1,6 @@
-{%- for post in posts -%}
+{%- for post in posts -%} {%- if stream == true and forloop.index > 1 -%}
+<div>*</div>
+{%- endif -%}
 <article>
     {%- if stream == true -%}
     <aside
