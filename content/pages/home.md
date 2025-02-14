@@ -46,7 +46,8 @@ Hello, I´m Ulf Schneider, a software developer and agile coach. This is my webs
 </div>
 
 <div class="my-xl">
-<a href="/blog/" class="font-bold">All posts</a>
+<a href="/blog/" class="font-bold">All posts</a> {% include "key.html" key: site.nav.older
+path: "/blog/" %}
 </div>
 
 ## Selected posts
