@@ -3292,55 +3292,55 @@ section > :not([class*="layout-"]),
   }
 }
 section.dark > :not([class*="layout-"]),
-.dark [class*="layout-"] > div {
+.dark:not(body) [class*="layout-"] > div {
   color: var(--lightbodytextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) a,
-.dark [class*="layout-"] > div a {
+.dark:not(body) [class*="layout-"] > div a {
   color: var(--lightbodytextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) a:hover,
-.dark [class*="layout-"] > div a:hover {
+.dark:not(body) [class*="layout-"] > div a:hover {
   color: var(--lightbodytextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) h1,
-.dark [class*="layout-"] > div h1 {
+.dark:not(body) [class*="layout-"] > div h1 {
   color: var(--lighttitletextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) h2,
-.dark [class*="layout-"] > div h2 {
+.dark:not(body) [class*="layout-"] > div h2 {
   color: var(--lighttitletextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) h3,
-.dark [class*="layout-"] > div h3 {
+.dark:not(body) [class*="layout-"] > div h3 {
   color: var(--lighttitletextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) h4,
-.dark [class*="layout-"] > div h4 {
+.dark:not(body) [class*="layout-"] > div h4 {
   color: var(--lighttitletextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) h5,
-.dark [class*="layout-"] > div h5 {
+.dark:not(body) [class*="layout-"] > div h5 {
   color: var(--lighttitletextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) h6,
-.dark [class*="layout-"] > div h6 {
+.dark:not(body) [class*="layout-"] > div h6 {
   color: var(--lighttitletextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) strong,
-.dark [class*="layout-"] > div strong {
+.dark:not(body) [class*="layout-"] > div strong {
   color: var(--lightbodytextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) code,
-.dark [class*="layout-"] > div code {
+.dark:not(body) [class*="layout-"] > div code {
   color: var(--lightbodytextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) figcaption,
-.dark [class*="layout-"] > div figcaption {
+.dark:not(body) [class*="layout-"] > div figcaption {
   color: var(--lightbodytextcolor, #d1d5db);
 }
 section.dark > :not([class*="layout-"]) thead,
-.dark [class*="layout-"] > div thead {
+.dark:not(body) [class*="layout-"] > div thead {
   /*color: var(--lighttitletextcolor, #d1d5db);*/
   /*border-bottom-color: var(--color-typography-200);
   border-top-color: var(--color-typography-200);*/
