@@ -148,8 +148,6 @@
         @apply text-base font-bold mt-lg mb-base;
     }
 
-    /* ul and ol */
-
     /* ul, ol */
     ol,
     ul {
@@ -163,7 +161,20 @@
 
     li {
         @apply m-0 p-0;
-        padding-left: var(--outdent-indent-space);
+        padding-inline-start: var(--outdent-indent-space);
+
+        &::before {
+            @apply outdent inline-block whitespace-nowrap tabular-nums !pe-[0.5em] not-italic;
+        }
+    }
+
+    ol > li::before {
+        content: counters(ol-counter, ".", decimal) ". ";
+        @apply text-smaller;
+    }
+
+    ul > li::before {
+        content: "–"; /*•●*/
     }
 
     li > p:first-child {
@@ -178,18 +189,8 @@
         counter-increment: ol-counter;
     }
 
-    ol > li::before {
-        content: counters(ol-counter, ".", decimal) ". ";
-        @apply text-smaller outdent inline-block whitespace-nowrap tabular-nums;
-    }
-
     ol > li > ol > li::before {
         content: counters(ol-counter, ".", decimal) " ";
-    }
-
-    ul > li::before {
-        content: "–" " "; /*•●*/
-        @apply outdent inline-block whitespace-nowrap not-italic;
     }
 
     ul.reset,

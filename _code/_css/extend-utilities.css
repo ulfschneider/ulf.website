@@ -60,7 +60,7 @@
     }
 
     .outdent {
-        margin-left: calc(-1 * var(--outdent-indent-space));
+        margin-inline-start: calc(-1 * var(--outdent-indent-space));
         min-width: var(--outdent-indent-space);
     }
 

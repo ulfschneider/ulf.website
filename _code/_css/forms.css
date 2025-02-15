@@ -91,7 +91,7 @@
     }
 
     select {
-        @apply max-w-max cursor-pointer overflow-ellipsis pr-[2.5em] align-baseline;
+        @apply max-w-max cursor-pointer overflow-ellipsis pe-[2.5em] align-baseline;
 
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cpath vector-effect='non-scaling-stroke' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' d='M26 12 16 22 6 12'/%3E%3C/svg%3E");
         background-repeat: no-repeat, repeat;
@@ -162,7 +162,7 @@
                 (var(--radio-size) - var(--radio-check-size)) / 2 -
                     var(--radio-border-width)
             );
-            margin-left: calc(
+            margin-inline-start: calc(
                 (var(--radio-size) - var(--radio-check-size)) / 2 -
                     var(--radio-border-width)
             );
@@ -208,7 +208,7 @@
                 (var(--check-size) - var(--check-mark-height)) / 2 -
                     var(--check-border-width) + var(--check-mark-adjust-top)
             );
-            margin-left: calc(
+            margin-inline-start: calc(
                 (var(--check-size) - var(--check-mark-width)) / 2 -
                     var(--check-border-width) + var(--check-mark-adjust-left)
             );
