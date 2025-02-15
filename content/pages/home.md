@@ -43,12 +43,12 @@ Hello, I´m Ulf Schneider, a software developer and agile coach. This is my webs
 
 <div class="my-lg flow-xl">
 {% include "post-list.html" posts: collections.recentNotes stream: true%}
-</div>
-
-<div class="my-xl">
+<div>
 <a href="/blog/" class="font-bold">All posts</a> {% include "key.html" key: site.nav.older
 path: "/blog/" %}
 </div>
+</div>
+
 
 ## Selected posts
 
