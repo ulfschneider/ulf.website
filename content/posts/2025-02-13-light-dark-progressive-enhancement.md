@@ -1,5 +1,5 @@
 ---
-title: Using the `light-dark()` function to simplify light mode and dark mode CSS
+title: Simplifying light mode and dark mode CSS with the `light-dark()` function
 tags:
   - code
   - css
@@ -84,4 +84,4 @@ The colors are then applied to your HTML like:
 
 ## Conclusion
 
-Using `light-dark()` as a progressive enhancement, like shown, allows to reach more users and simplifies the setup of colors for light mode and dark mode. It even provides a central point in the CSS code to adjust the colors without affecting the rest of the CSS. When integrating the approach into Tailwind CSS, the resulting Tailwind code is simplified because the `dark:` and `light:` variants can be omitted.
+Using `light-dark()` as a progressive enhancement allows to reach more users and simplifies the setup of colors for light mode and dark mode. The approach provides a central point in the CSS code to adjust the colors without affecting the rest of the CSS. When integrating into Tailwind CSS, the resulting code is simplified because the `dark:` and `light:` variants can be omitted.
