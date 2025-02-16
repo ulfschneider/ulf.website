@@ -1,14 +1,14 @@
 <nav data-pagefind-ignore>
     <ul class="reset flex flex-row flex-wrap gap-x-md gap-y-base">
-        <li>
-            <a href="/">Ulf Schneider</a> {% include "key.html" key:
-            site.nav.home path: "/" %}
+        <li class="flex flex-row gap-sm">
+            <a href="/">Ulf Schneider</a>
+            {% include "key.html" key: site.nav.home path: "/" %}
         </li>
-        <li>
+        <li class="flex flex-row gap-sm">
             <a href="/blog/">Blog</a> {% include "key.html" key: site.nav.blog
             path: "/blog/" %}
         </li>
-        <li class="js">
+        <li class="jsj flex flex-row gap-sm">
             <a href="/search/">Search</a> {% include "key.html" key:
             site.nav.search path: "/search/"focusSelector: "#search-query" %}
         </li>

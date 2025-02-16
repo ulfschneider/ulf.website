@@ -106,7 +106,7 @@
     {
         content: "↗";
         display: inline-block;
-        margin-left: 0.25em;
+        margin-inline-start: 0.25em;
     }
 
     [id],
@@ -223,7 +223,7 @@
     }
 
     dd {
-        padding-left: var(--outdent-indent-space);
+        padding-inline-start: var(--outdent-indent-space);
     }
 
     dd + dt,
@@ -239,8 +239,10 @@
     }
 
     blockquote {
-        padding-left: calc(var(--outdent-indent-space) - theme(borderWidth.2));
-        @apply my-md border-l-2 border-current;
+        padding-inline-start: calc(
+            var(--outdent-indent-space) - theme(borderWidth.2)
+        );
+        @apply my-md border-s-2 border-current;
     }
 
     blockquote > header,
@@ -326,6 +328,10 @@
         @apply object-contain object-left dark:brightness-90 dark:contrast-125 dark:filter;
     }
 
+    img:dir(rtl) {
+        @apply object-right;
+    }
+
     img {
         @apply sm:max-h-[80vh];
     }
@@ -342,15 +348,15 @@
 
     /* table */
     table {
-        @apply my-xl text-left border-collapse border-y border-write;
+        @apply my-xl text-start border-collapse border-y border-write;
 
         caption {
-            @apply sm:text-balance meta pb-sm;
+            @apply sm:text-balance meta pe-sm;
             text-align: inherit;
         }
 
         tr {
-            @apply border-collapse border-b border-write;
+            @apply border-collapse border-e border-write;
         }
 
         th {

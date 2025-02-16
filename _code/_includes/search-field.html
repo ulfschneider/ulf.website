@@ -1,8 +1,11 @@
 <search data-pagefind-ignore class="js">
     <form id="search-form" class="max-w-prose">
         <label id="search-label"
-            ><span>Search {{ site.name }}</span> {% include "key.html" key:
-            site.nav.search path: "/search/" focusSelector: "#search-query" %}
+            ><span class="flex flex-row gap-sm"
+                ><span>Search {{ site.name }}</span> {% include "key.html" key:
+                site.nav.search path: "/search/" focusSelector: "#search-query"
+                %}</span
+            >
             <div class="flex flex-row gap-base">
                 <input
                     id="search-query"

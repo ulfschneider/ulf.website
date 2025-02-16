@@ -7,15 +7,15 @@
 
     .line-list {
         /* Pixel based calculations refer to a line list width of 1px */
-        border-left: var(--line-list-width) solid currentColor;
-        @apply !pl-[calc(theme(spacing.md)-var(--line-list-width))];
+        border-inline-start: var(--line-list-width) solid currentColor;
+        @apply !ps-[calc(theme(spacing.md)-var(--line-list-width))];
     }
 
     .line-list.marker {
         & > li::before,
         & > dt::before {
             content: "";
-            @apply w-sm h-sm inline-block rounded-full bg-current -ml-[calc(theme(space.md)-var(--line-list-width)+theme(space.sm)/2)] mr-[calc(theme(space.md)-var(--line-list-width)-theme(space.sm)/2)];
+            @apply w-sm h-sm inline-block rounded-full bg-current -ms-[calc(theme(space.md)-var(--line-list-width)+theme(space.sm)/2)] me-[calc(theme(space.md)-var(--line-list-width)-theme(space.sm)/2)];
         }
     }
 
@@ -29,7 +29,7 @@
 
         &::after {
             content: "";
-            @apply absolute -bottom-xl h-xl w-1;
+            @apply absolute -end-xl h-xl w-1;
         }
 
         > li {
@@ -74,7 +74,7 @@
     pre[data-language]:not([data-language=""]) {
         &::before {
             content: attr(data-language);
-            @apply font-body mb-sm inline-block text-sm border-b-2 border-current pr-base;
+            @apply font-body me-sm inline-block text-sm border-e-2 border-current pe-base;
         }
     }
 
@@ -256,7 +256,7 @@
 
     ol.footnotes-list::before {
         content: "Footnotes";
-        @apply h2 mb-base block;
+        @apply h2 me-base block;
     }
 
     ol.footnotes-list li {
@@ -274,11 +274,11 @@
     }
 
     main > section > ol.footnotes-list {
-        @apply md:-ml-md;
+        @apply md:-ms-md;
     }
 
     main > section > ol.footnotes-list:before {
-        @apply md:pl-md;
+        @apply md:ps-md;
     }
 
     /* cooklang */

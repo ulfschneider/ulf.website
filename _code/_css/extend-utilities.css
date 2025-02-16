@@ -9,27 +9,27 @@
     }
 
     .flow-xs > * + * {
-        @apply mt-xs;
+        margin-block-start: theme(spacing.xs);
     }
 
     .flow-sm > * + * {
-        @apply mt-sm;
+        margin-block-start: theme(spacing.sm);
     }
 
     .flow-base > * + * {
-        @apply mt-base;
+        margin-block-start: them(espacing.base);
     }
 
     .flow-md > * + * {
-        @apply mt-md;
+        margin-block-start: theme(spacing.md);
     }
 
     .flow-lg > * + * {
-        @apply mt-lg;
+        margin-block-start: theme(spacing.lg);
     }
 
     .flow-xl > * + * {
-        @apply mt-xl;
+        margin-block-start: theme(spacing.xl);
     }
 
     .meta {

@@ -8,9 +8,9 @@ if newerPost or olderPost -%}
 >
     {% if newerPost %}
     <div>
-        <div class="meta whitespace-nowrap">
-            <span>Newer post</span> {% include "key.html" key: site.nav.newer
-            path: newerPost.url %}
+        <div class="meta whitespace-nowrap flex flex-row gap-sm">
+            {% include "key.html" key: site.nav.newer path: newerPost.url %}
+            <span>Newer post</span>
         </div>
         <div>
             <a href="{{ newerPost.url }}">
@@ -19,12 +19,12 @@ if newerPost or olderPost -%}
         </div>
     </div>
     {% endif %} {% if olderPost %}
-    <div class="ml-auto">
-        <div class="meta whitespace-nowrap text-right">
+    <div class="ms-auto">
+        <div class="meta whitespace-nowrap justify-end flex flex-row gap-sm">
             <span>Older post</span> {% include "key.html" key: site.nav.older
             path: olderPost.url %}
         </div>
-        <div class="text-right">
+        <div class="flex flex-row justify-end gap-sm">
             <a href="{{ olderPost.url }}">
                 <cite>{{ olderPost.data.title }}</cite>
             </a>

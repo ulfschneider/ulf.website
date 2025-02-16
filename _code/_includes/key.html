@@ -1,8 +1,10 @@
-{%- if key.key -%} {%- if key.keyLabel -%}
-<kbd class="js pointer-coarse:hidden">{{ key.keyLabel }}</kbd>
-{%- else -%}
-<kbd class="js pointer-coarse:hidden">{{ key.key }}</kbd>
-{%- endif -%}
+<span
+    >{%- if key.key -%} {%- if key.keyLabel -%}
+    <kbd class="js pointer-coarse:hidden">{{ key.keyLabel }}</kbd>
+    {%- else -%}
+    <kbd class="js pointer-coarse:hidden">{{ key.key }}</kbd>
+    {%- endif -%}
+</span>
 <script>
     registerKeyNav("{{key.key}}", "{{path}}", "{{focusSelector}}");
 </script>
