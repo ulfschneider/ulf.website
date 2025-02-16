@@ -27,7 +27,7 @@
     input[type="reset"],
     button,
     .button {
-        @apply text-button-write bg-button-canvas px-sm py-sm cursor-pointer border-0 align-baseline text-balance;
+        @apply text-button-write bg-button-canvas p-sm cursor-pointer border-0 align-baseline text-balance;
     }
 
     input[type="submit"]:hover,
@@ -158,7 +158,7 @@
             width: var(--radio-check-size);
             height: var(--radio-check-size);
             border-radius: 50%;
-            margin-top: calc(
+            margin-block-start: calc(
                 (var(--radio-size) - var(--radio-check-size)) / 2 -
                     var(--radio-border-width)
             );
@@ -176,8 +176,12 @@
             --check-mark-height: calc(var(--check-mark-width) / 1.8);
             --check-mark-line-width: 0.2em;
             --check-mark-rotation: rotate(-60deg);
-            --check-mark-adjust-top: calc(-0.2 * var(--check-mark-height));
-            --check-mark-adjust-left: calc(-0 * var(--check-mark-width));
+            --check-mark-adjust-block-start: calc(
+                -0.2 * var(--check-mark-height)
+            );
+            --check-mark-adjust-inline-start: calc(
+                -0 * var(--check-mark-width)
+            );
         }
 
         label:has(input[type="checkbox"]:not(.native):not([switch])) {
@@ -202,15 +206,17 @@
             height: calc(var(--check-mark-height));
             transform: var(--check-mark-rotation);
             border: var(--check-mark-line-width) solid currentColor;
-            border-top: none;
-            border-right: none;
-            margin-top: calc(
+            border-inline-start: none;
+            border-inline-end: none;
+            margin-block-start: calc(
                 (var(--check-size) - var(--check-mark-height)) / 2 -
-                    var(--check-border-width) + var(--check-mark-adjust-top)
+                    var(--check-border-width) +
+                    var(--check-mark-adjust-block-start)
             );
             margin-inline-start: calc(
                 (var(--check-size) - var(--check-mark-width)) / 2 -
-                    var(--check-border-width) + var(--check-mark-adjust-left)
+                    var(--check-border-width) +
+                    var(--check-mark-adjust-inline-start)
             );
             background-color: transparent;
         }
