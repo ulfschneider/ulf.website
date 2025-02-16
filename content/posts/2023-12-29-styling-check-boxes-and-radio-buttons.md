@@ -241,4 +241,5 @@ Here is the complete CSS for both, the radio button and the checkbox.
     );
     background-color: transparent;
   }
-}```
+}
+```
