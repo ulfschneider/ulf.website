@@ -1,8 +1,9 @@
-<span
-    >{%- if key.key -%} {%- if key.keyLabel -%}
-    <kbd class="js pointer-coarse:hidden">{{ key.keyLabel }}</kbd>
+{%- if key.key -%}
+<span class="js pointer-coarse:hidden">
+    {%- if key.keyLabel -%}
+    <kbd>{{ key.keyLabel }}</kbd>
     {%- else -%}
-    <kbd class="js pointer-coarse:hidden">{{ key.key }}</kbd>
+    <kbd>{{ key.key }}</kbd>
     {%- endif -%}
 </span>
 <script>
