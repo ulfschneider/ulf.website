@@ -74,7 +74,7 @@
     pre[data-language]:not([data-language=""]) {
         &::before {
             content: attr(data-language);
-            @apply font-body me-sm inline-block text-sm border-e-2 border-current pe-base;
+            @apply font-body mb-sm inline-block text-sm border-b-2 border-current pe-base;
         }
     }
 
@@ -256,7 +256,7 @@
 
     ol.footnotes-list::before {
         content: "Footnotes";
-        @apply h2 me-base block;
+        @apply h2 mb-base block;
     }
 
     ol.footnotes-list li {
