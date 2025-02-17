@@ -206,8 +206,8 @@
             height: calc(var(--check-mark-height));
             transform: var(--check-mark-rotation);
             border: var(--check-mark-line-width) solid currentColor;
-            border-inline-start: none;
-            border-inline-end: none;
+            border-top: none;
+            border-right: none;
             margin-block-start: calc(
                 (var(--check-size) - var(--check-mark-height)) / 2 -
                     var(--check-border-width) +
