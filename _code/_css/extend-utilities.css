@@ -1,7 +1,6 @@
 @layer utilities {
     :root {
         --flow-space: 1em;
-        --outdent-indent-space: theme(spacing.md);
     }
 
     .flow > * + * {

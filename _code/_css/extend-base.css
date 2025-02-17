@@ -1,6 +1,7 @@
 @layer base {
     :root {
         font-size: 17px;
+        --outdent-indent-space: 2rem;
     }
 
     @media (min-width: theme(screens.md)) {
