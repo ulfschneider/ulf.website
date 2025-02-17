@@ -352,12 +352,12 @@
         @apply my-xl text-start border-collapse border-y border-write;
 
         caption {
-            @apply sm:text-balance meta pe-sm;
+            @apply sm:text-balance meta pb-sm;
             text-align: inherit;
         }
 
         tr {
-            @apply border-collapse border-e border-write;
+            @apply border-collapse border-b-[0.5px]  border-write;
         }
 
         th {

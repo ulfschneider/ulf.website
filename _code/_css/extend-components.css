@@ -8,14 +8,14 @@
     .line-list {
         /* Pixel based calculations refer to a line list width of 1px */
         border-inline-start: var(--line-list-width) solid currentColor;
-        @apply !ps-[calc(theme(spacing.md)-var(--line-list-width))];
+        @apply !ps-[calc(var(--outdent-indent-space)-var(--line-list-width))];
     }
 
     .line-list.marker {
         & > li::before,
         & > dt::before {
             content: "";
-            @apply w-sm h-sm inline-block rounded-full bg-current -ms-[calc(theme(space.md)-var(--line-list-width)+theme(space.sm)/2)] me-[calc(theme(space.md)-var(--line-list-width)-theme(space.sm)/2)];
+            @apply w-sm h-sm inline-block rounded-full bg-current -ms-[calc(var(--outdent-indent-space)-var(--line-list-width)+theme(space.sm)/2)] me-[calc(var(--outdent-indent-space)-var(--line-list-width)-theme(space.sm)/2)];
         }
     }
 
