@@ -57,7 +57,7 @@ After a four-week forced break due to illness, I took part in the eighth run of 
 
 <figure>
 <img src="/img/secan/IMG_7109.jpg">
-<figcaption>Slope</figcaption>
+<figcaption>Winding dirt road</figcaption>
 </figure>
 
 <figure>
