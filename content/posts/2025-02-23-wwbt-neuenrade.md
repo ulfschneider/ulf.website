@@ -41,7 +41,7 @@ After a four-week forced break due to illness, I took part in the eighth run of 
 
 <figure>
 <img src="/img/secan/IMG_7102.jpg">
-<figcaption>Checkpoint two was at a local farmer. Unfortunately I didn´t take a note about the name. </figcaption>
+<figcaption>The second checkpoint was at a local farmer. Unfortunately I didn´t take a note about the name. </figcaption>
 </figure>
 
 <figure>
