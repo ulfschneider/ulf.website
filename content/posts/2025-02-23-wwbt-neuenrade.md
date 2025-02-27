@@ -26,7 +26,7 @@ After a four-week forced break due to illness, I took part in the eighth run of 
 
 <figure>
 <img src="/img/secan/IMG_7092.jpg">
-<figcaption>The first checkpoint and the comrades from the cycling club TUS Neuenrade Radsport were in great spirits, and well prepared for us. Thank you very much!</figcaption>
+<figcaption>At the first checkpoint the comrades from the cycling club TUS Neuenrade Radsport were in great spirits, and well prepared for the riders. Thank you very much!</figcaption>
 </figure>
 
 <figure>
@@ -41,7 +41,7 @@ After a four-week forced break due to illness, I took part in the eighth run of 
 
 <figure>
 <img src="/img/secan/IMG_7102.jpg">
-<figcaption>The second checkpoint was at a local farmer. Unfortunately I didn´t take a note about the name. </figcaption>
+<figcaption>The second checkpoint was at a local farm. Again a welcomed refreshment. From there it was only about 10 km to the finish.</figcaption>
 </figure>
 
 <figure>
@@ -52,12 +52,12 @@ After a four-week forced break due to illness, I took part in the eighth run of 
 
 <figure>
 <img src="/img/secan/IMG_7106.jpg">
-<figcaption> It was the first deployment of my new <a href="https://fairlightcycles.com">Fairlight</a> Secan 3.0, which I ride in a frame size 56 R with 650 B wheels and 2.2 inch Continental Race King tires. The ride is pretty comfortable with the big rubber and the bike itself is capable, efficient, and fast. Did I mention it is a joy to ride? In case you don´t know, it´s made of Reynods 853 steel.</figcaption>
+<figcaption> It was the first deployment of my new <a href="https://fairlightcycles.com">Fairlight</a> Secan 3.0, which I ride in a frame size 56 R with 650 B wheels and 2.2 inch Continental Race King tires. The ride is pretty comfortable with the big rubber and the bike itself is capable, efficient, and fast. Did I mention it is a joy to ride? In case you don´t know, it´s made of Reynolds 853 steel.</figcaption>
 </figure>
 
 <figure>
 <img src="/img/secan/IMG_7109.jpg">
-<figcaption>Winding dirt road</figcaption>
+<figcaption>Winding road</figcaption>
 </figure>
 
 <figure>
