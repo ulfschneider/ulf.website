@@ -16,7 +16,7 @@ This site is also my playing field for web technologies. It´s here, where I imp
 
 Every now and then my son Emil makes a drawing, which I aim to [capture here](/gallery/emil-drawing/). Emil created a picture of [the virus](/2020-03-18-emil-pictured-the-coronavirus/) at the beginning of the Corona pandemic. Emil also made a drawing of a [smiling unicorn](/2021-10-22-a-smiling-unicorn-with-a-kite/).
 
-My path through 30 years of software went like this:
+My path through 35 years of software went like this:
 
 <dl class="line-list marker">
   <dt>1991 – 1996 University</dt>
