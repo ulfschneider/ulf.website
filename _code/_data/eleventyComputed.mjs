@@ -26,6 +26,8 @@ export default {
   docType: (data) => {
     if (data.docType) {
       return data.docType;
+    } else if (data.bookmark == true) {
+      return "bookmark";
     } else if (data.isPage) {
       return "page";
     } else {
