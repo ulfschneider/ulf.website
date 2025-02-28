@@ -6,7 +6,7 @@ tags:
 ---
 Tyler Sticka: [<cite>Why I like designing in the browser</cite>](https://cloudfour.com/thinks/why-i-like-designing-in-the-browser/). I couldn´t agree more.
 
-My notes of the advantages Tyler mentions when when designing in the browser:
+My notes of the advantages Tyler mentions when designing in the browser:
 
 - **True to life:** Most design tools only approximate how the end result will look and feel. When already working with HTML and CSS, there is no guessing.
 - **No waiting:** Current browser features can immediately be used. No waiting until they arrive in design tools.
