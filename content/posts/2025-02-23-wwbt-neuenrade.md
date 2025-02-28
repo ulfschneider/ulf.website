@@ -52,7 +52,7 @@ After a four-week forced break due to illness, I took part in the eighth run of 
 
 <figure>
 <img src="/img/secan/IMG_7106.jpg">
-<figcaption> It was the first deployment of my new <a href="https://fairlightcycles.com">Fairlight</a> Secan 3.0, which I ride in a frame size 56 R with 650 B wheels and 2.2 inch Continental Race King tires. The ride is pretty comfortable with the big rubber and the bike itself is capable, efficient, and fast. Did I mention it is a joy to ride? In case you don´t know, it´s made of Reynolds 853 steel.</figcaption>
+<figcaption> It was the first deployment of my new <a href="https://fairlightcycles.com">Fairlight</a> Secan 3.0, which I ride in a frame size 56 R with 650 B wheels and 2.2 inch Continental Race King tires. The ride is pretty comfortable with the big rubber and the bike itself is capable, efficient, and fast. Did I mention it is a joy to ride? In case you don´t know, it´s made of Reynolds 853 steel and it carries <a href="/2024-08-06-klean-kanteen/">steel drinking bottles</a>.</figcaption>
 </figure>
 
 <figure>
