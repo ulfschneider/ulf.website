@@ -7,7 +7,7 @@ tags:
 ---
 For many years I´ve been using CamelBak drinking bottles on my bicycles. They are made of plastic, which is the norm in cycling. 
 
-Two or three months ago my bottles were filled with pure water instead of the usual apple juice-water-mix. Every sip tasted like plastic. Bike-riding should help to stay healthy. In my view, drinking water with a plastic taste while riding doesn´t seem to help with that. I was looking for a change.
+Two or three months ago my bottles were filled with pure water instead of the usual apple-juice-water-mix. Every sip tasted like plastic. Bike-riding should help to stay healthy. In my view, drinking water with a plastic taste while riding doesn´t seem to help with that. I was looking for a change.
 
 I ended up buying two [Klean Kanteen](https://www.kleankanteen.com/) Classic 800 ml Sport Cap bottles for a good price at [outnorth](https://www.outnorth.com/).
 
@@ -16,7 +16,7 @@ I ended up buying two [Klean Kanteen](https://www.kleankanteen.com/) Classic 800
 <figcaption>Two Klean Kanteen steel bottles attached to my Fairlight Secan steel gravel bike</figcaption>
 </figure>
 
-Whatever you carry within the steel bottles tastes like it should. Pure. It´s a big difference to the plastic bottles. To apply the steel bottles to a bike requires a bit more change, and along the way I discovered things I didn´t expect.
+Whatever you carry within the steel bottles tastes like it should. Pure. It´s a big difference to the plastic bottles.
 
 Because of the straight bottle shape it´s not ideal to use regular bike bottle cages. The usual bottle cage has a nose at the top to fixate the bottle, and bike bottles typically have a recess where that nose can fit in. The Klean Kanteen bottles do not have this kind of shape and the bottle cage nose therefore makes it more difficult to put the bottle into the cage, and it does not help to fixate the bottle.
 
