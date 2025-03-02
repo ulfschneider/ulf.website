@@ -6,9 +6,9 @@ tags:
 ---
 The final event of the WWBT 2025 series took place around Iserlohn and was excellently organized by the Polizeisportverein Iserlohn. It was a sunny ride, though the morning started off quite cold (there was a point where I couldn´t feel my hands anymore).
 
-I chose the 56 km route instead of the 80 km to ease back into riding, but my health seems to be coming back on track now. Since I was riding without Martin once again and had an early start, I found myself ahead of the main group and mostly alone on the course. As a result, most of my photos capture the stunning landscape rather than other riders.
+I chose the 56 km route instead of the 80 km to ease back into riding, and my health seems to be coming back on track now. Since I was riding without Martin once again and had an early start, I found myself ahead of the main group and mostly alone on the course. As a result, most of my photos capture the stunning landscape rather than other riders.
 
-Overall, I found that taking part in the WWBT is a good way to start the new year and slip into spring, stay in the saddle, and connect with fellow riders. The cycling clubs do a fantastic job of organizing the events with great care.
+Overall, I found that taking part in the WWBT is a good way to start the new year and slip into spring, stay in the saddle, and connect with fellow riders. The cycling clubs do a fantastic job of organizing the events.
 
 <figure>
 <img src="/img/sports/IMG_7167.jpg">
