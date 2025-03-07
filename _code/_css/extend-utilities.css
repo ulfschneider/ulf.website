@@ -84,6 +84,13 @@
         }
     }
 
+    .prose-justify {
+        p {
+            @apply text-justify hyphens-auto text-pretty;
+            hyphenate-limit-chars: 7;
+        }
+    }
+
     .outdent-prose-flow {
         @apply outdent !max-w-[calc(theme(maxWidth.prose)+var(--outdent-indent-space))];
     }
