@@ -8,7 +8,7 @@ To get the last instance of ==abc== from the below string
 
 use a regular expression negative lookahead that searches for abc not followed by any further abc. As Justin Cooney describes in his [article](https://jwcooney.com/2014/03/03/regular-expression-to-get-the-last-instance-of-a-word/), the syntax is:
 
-```regexp
+```regex
 abc(?!.*abc)
 ```
 
