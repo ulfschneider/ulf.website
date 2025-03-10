@@ -49,5 +49,10 @@ Overall, I found that taking part in the WWBT is a good way to start the new yea
 <img src="/img/sports/IMG_7201.jpg">
 <figcaption>The first coffee out of the new mug.<br>Photo by Emil</figcaption>
 </figure>
+</figure>
+
 <figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/17let8Q_8x0?si=8Ff8HTyh6sZYw2fS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>Video of the final WWBT 2025 run in Iserlohn by Gravelpresso</figcaption>
+</figure>
 
