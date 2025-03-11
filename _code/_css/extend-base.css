@@ -379,7 +379,7 @@
     }
 
     pre {
-        @apply overflow-x-auto my-md;
+        @apply overflow-x-auto my-base;
     }
 
     pre,

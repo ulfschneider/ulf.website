@@ -41,7 +41,7 @@ Hello, I´m Ulf Schneider, a software developer and agile coach. This is my webs
 
 ## Recent notes
 
-<div class="my-lg flow-xl">
+<div class="my-xl flow-xl">
 {% include "post-list.html" posts: collections.recentNotes stream: true%}
 <div class="flex flex-row gap-sm">
 <a href="/blog/" class="font-bold">All posts</a> {% include "key.html" key: site.nav.older
