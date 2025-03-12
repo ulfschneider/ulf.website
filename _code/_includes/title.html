@@ -2,7 +2,7 @@
 {%- if abstract -%}
 <p class="my-xs">{{abstract | markdown_inline }}</p>
 {%- endif -%} {%- if isPost -%}
-<aside class="meta my-xs flex flex-wrap flex-row gap-x-md gap-y-xs">
+<aside class="meta mt-base mb-xs flex flex-wrap flex-row gap-x-md gap-y-xs">
     {%- include "dates.html" -%}{%- include "tags.html" -%}
 </aside>
 {%-endif-%}
