@@ -13,32 +13,32 @@ Overall, I found that taking part in the WWBT is a good way to start the new yea
 <figure>
 <img src="/img/sports/IMG_7167.jpg">
 <figcaption>Start zone in Iserlohn</figcaption>
-<figure>
+</figure>
 
 <figure>
 <img src="/img/sports/IMG_7170.jpg">
 <figcaption>It was freezing cold until the sun came out</figcaption>
-<figure>
+</figure>
 
 <figure>
 <img src="/img/sports/IMG_7188.jpg">
 <figcaption>River Ruhr</figcaption>
-<figure>
+</figure>
 
 <figure>
 <img src="/img/sports/IMG_7191.jpg">
 <figcaption>There was even a trail-like section.</figcaption>
-<figure>
+</figure>
 
 <figure>
 <img src="/img/sports/IMG_7195.jpg">
 <figcaption>The central checkpoint. I crossed it two times. I repeat myself, but the catering was as great as on any WWBT event.</figcaption>
-<figure>
+</figure>
 
 <figure>
 <img src="/img/sports/IMG_7197.jpg">
 <figcaption>Another rider</figcaption>
-<figure>
+</figure>
 
 <figure class="md:split">
 <figure>
