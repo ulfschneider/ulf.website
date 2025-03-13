@@ -243,7 +243,7 @@
         padding-inline-start: calc(
             var(--outdent-indent-space) - theme(borderWidth.2)
         );
-        @apply my-md border-s-2 border-current;
+        @apply my-base border-s-2 border-current;
     }
 
     blockquote > header,
