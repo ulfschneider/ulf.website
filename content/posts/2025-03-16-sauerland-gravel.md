@@ -38,7 +38,7 @@ One of the great things about a gravel bike, especially when exploring new roads
 
 <figure>
 <img src="/img/secan/IMG_7238.jpg">
-<figcaption>Castle Körtlinghausen</figcaption>
+<figcaption>Körtlinghausen Manor </figcaption>
 </figure>
 
 <figure>
