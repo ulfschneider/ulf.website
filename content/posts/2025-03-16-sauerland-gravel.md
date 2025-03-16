@@ -10,7 +10,7 @@ Last weekend was excellent weather, it was sunny and 16 °C, which was 10 °C wa
 <figcaption>
 One of the great things about a gravel bike, especially when exploring new roads or covering long distances, is its ability to handle almost any terrain. This versatility not only expands your route options but also gives you greater flexibility on your journey, making for a more dynamic and adventurous riding experience.
 </figcaption>
-<div class="split">
+<div class="md:split">
 <img src="/img/secan/IMG_7212.jpg" >
 <img src="/img/secan/IMG_7213.jpg" >
 <img src="/img/secan/IMG_7214.jpg" >
@@ -29,7 +29,7 @@ One of the great things about a gravel bike, especially when exploring new roads
 
 <figure>
 <figcaption>Sometimes the "road" disappears</figcaption>
-<div class="split">
+<div class="md:split">
 <img src="/img/secan/IMG_7220.jpg">
 <img src="/img/secan/IMG_7221.jpg">
 <img src="/img/secan/IMG_7234.jpg">
