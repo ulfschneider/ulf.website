@@ -50,12 +50,11 @@
 
     /* split */
     .split {
-        grid-template-columns: repeat(2, 1fr);
-        @apply grid gap-lg;
+        @apply grid auto-cols-fr grid-flow-col  gap-lg;
     }
 
     .split > * {
-        @apply m-0;
+        @apply m-0 object-scale-down;
     }
 
     .outdent {
