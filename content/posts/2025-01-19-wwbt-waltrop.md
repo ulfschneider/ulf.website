@@ -18,8 +18,10 @@ Again, a joyful Winter Bike Trophy riding event.
 
 <figure>
 <figcaption>After starting in Zeche Waltrop, we are soon riding along the canals.</figcaption>
+<div class="md:split">
 <img src="/img/sports/IMG_6936.jpg" >
 <img src="/img/sports/IMG_6938.jpg" >
+</div>
 </figure>
 
 <figure>
@@ -34,9 +36,11 @@ Again, a joyful Winter Bike Trophy riding event.
 
 <figure>
 <figcaption>After the first checkpoint we enter into a loop through the Haard forest.</figcaption>
+<div class="md:split">
 <img src="/img/sports/IMG_6950.jpg" >
 <img src="/img/sports/IMG_6952.jpg" >
 <img src="/img/sports/IMG_6956.jpg" >
+</div>
 </figure>
 
 <figure>
@@ -44,14 +48,15 @@ Again, a joyful Winter Bike Trophy riding event.
 <figcaption>We passed the central checkpoint two times.</figcaption>
 </figure>
 
+<figure class="md:split">
 <figure>
 <img src="/img/sports/IMG_6960.jpg">
 <figcaption>Martin shortly before our final 20 km long stretch back to Zeche Waltrop.</figcaption>
 </figure>
-
 <figure>
 <img src="/img/sports/IMG_6961.jpg" >
 <figcaption>Arrival in Zeche Waltrop.</figcaption>
+</figure>
 </figure>
 
 <figure>
