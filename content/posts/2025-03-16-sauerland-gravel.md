@@ -28,6 +28,11 @@ One of the great things about a gravel bike, especially when exploring new roads
 </figure>
 
 <figure>
+<img src="/img/secan/IMG_7228.jpg">
+<figcaption>The bare areas were densely covered with deep green spruce trees until a few years ago, but all the trees were destroyed by the bark beetle, and the wood had to be felled.</figcaption>
+</figure>
+
+<figure>
 <figcaption>Sometimes the "road" disappears</figcaption>
 <div class="md:split">
 <img src="/img/secan/IMG_7220.jpg">
