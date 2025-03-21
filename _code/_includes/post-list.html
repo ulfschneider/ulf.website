@@ -10,10 +10,10 @@
             ><cite>{{post.data.title | markdown_inline }}</cite></a
         >
     </div>
-    {%- endif -%} {%- if stream == true or post.data.docType == "bookmark"-%}
-    {{post.templateContent}} {%- else -%} {%- if post.data.abstract -%}
+    {%- endif -%} {%- if post.data.abstract -%}
     <p class="my-xs">{{post.data.abstract | markdown_inline }}</p>
-    {%- endif -%} {%- endif -%}
+    {%- endif -%} {%- if stream == true or post.data.docType == "bookmark"-%}
+    {{post.templateContent}} {%- else -%} {%- endif -%}
     <aside
         class="max-w-prose meta my-xs flex flex-wrap flex-row gap-x-[.5em] gap-y-xs"
     >

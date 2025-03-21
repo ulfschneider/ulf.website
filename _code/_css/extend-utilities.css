@@ -50,11 +50,22 @@
 
     /* split */
     .split {
-        @apply grid auto-cols-fr grid-flow-col  gap-lg;
+        @apply grid auto-cols-fr grid-flow-col gap-lg;
     }
-
+    .split img {
+        @apply object-scale-down;
+    }
     .split > * {
-        @apply m-0 object-scale-down;
+        @apply m-0;
+    }
+    .split.start > * {
+        @apply flex flex-col justify-start;
+    }
+    .split.center > * {
+        @apply flex flex-col justify-center;
+    }
+    .split.end > * {
+        @apply flex flex-col justify-end;
     }
 
     .outdent {
