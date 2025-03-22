@@ -61,11 +61,20 @@
     .split.start > * {
         @apply flex flex-col justify-start;
     }
+    .split.start.reverse > * {
+        @apply flex flex-col-reverse justify-end;
+    }
     .split.center > * {
         @apply flex flex-col justify-center;
     }
+    .split.center.reverse > * {
+        @apply flex flex-col-reverse justify-center;
+    }
     .split.end > * {
         @apply flex flex-col justify-end;
+    }
+    .split.end.reverse > * {
+        @apply flex flex-col-reverse justify-start;
     }
 
     .outdent {
