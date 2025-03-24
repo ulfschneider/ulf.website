@@ -63,7 +63,8 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
             {%- include "post-list.html" posts: posts.items -%}
         </div>
 
-        {%- if posts.items.length > 10 -%} {%- if posts.newer or posts.older -%}
+        {%- if posts.items.length > site.posts.doubleNavThreshold -%} {%- if
+        posts.newer or posts.older -%}
         <nav class="meta mt-xl flex flex-row flex-wrap gap-md">
             {%- if posts.newest -%}
             <a href="/blog{{posts.newest.key}}">Newest</a>

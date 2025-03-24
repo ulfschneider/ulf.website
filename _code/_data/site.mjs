@@ -88,6 +88,9 @@ export default {
     star: "star",
     combineThreshold: 30,
   },
+  posts: {
+    doubleNavThreshold: 3,
+  },
   nav: {
     home: {
       key: "h",
