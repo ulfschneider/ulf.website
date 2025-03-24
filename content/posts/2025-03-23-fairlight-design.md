@@ -18,7 +18,7 @@ To me, Dom stands for what design is about. He is seeing design as a patient, pr
 > We try to make the most thoughtful compromise we can.
 > <footer>Dom Thomas</footer>
 
-I once heard someone say the best bikes are the ones that adapt to you over time, and I agree. A bike should evolve with its rider. It might require hands-on adjustments to meet changing needs. For example, try swapping stem spacers on a bike where the cables run through the handlebars, the stem, and the headset. You might just decide to leave it as is, because it is such a hassle, and you end up with bike not being set up correctly. Fairlight bikes, on the other hand, remain adaptable, elegant in use, and built for real-world riding.
+I once heard someone say the best bikes are the ones that adapt to you over time, and I agree. A bike should evolve with its rider. It might require hands-on adjustments to meet changing needs. For example, try swapping stem spacers on a bike where the cables run through the handlebars, the stem, and the headset. You might just decide to leave it as is, because it is such a hassle, and you end up with a bike not being set up properly. Fairlight bikes, on the other hand, remain adaptable, elegant in use, and built for real-world riding.
 
 Bringing a steel road frame below 1700 grams is an achievement in itself, and watching Dom explain his craft deepens my pride in riding Fairlight.
 
