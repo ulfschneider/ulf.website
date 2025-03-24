@@ -13,12 +13,12 @@ tags:
 
 Dom Thomas, the visionary behind Fairlight’s bike designs, delves into the tubing of the new Strael 4.0 and explains why he continues to route the cables externally, which to him is for weight savings and practicality (20:19). You wouldn’t believe the level of thought and craftsmanship that went into the new tube set (29:20).
 
-To me, Dom stands for what design is about. Seeing design as a patient, problem-solving process driven by the will to improve functionality rather than fleeting industry trends like internal cable routing (which prioritizes [cleanliness over clarity](/2025-02-10-design-is-about-clarity/)). Read Dom´s [<cite>Streal 4.0 Detailed Design Notes </cite>](https://fairlightcycles.com/wp-content/uploads/2025/01/Fairlight-Strael-4.0-Design-Notes-v1.pdf) to learn more about the decisions that go into a Fairlight frame.
+To me, Dom stands for what design is about. He is seeing design as a patient, problem-solving process, driven by the will to improve functionality rather than fleeting industry trends like internal cable routing (which prioritizes [cleanliness over clarity](/2025-02-10-design-is-about-clarity/)). Read Dom´s [<cite>Streal 4.0 Detailed Design Notes </cite>](https://fairlightcycles.com/wp-content/uploads/2025/01/Fairlight-Strael-4.0-Design-Notes-v1.pdf) to learn more about the decisions that go into a Fairlight frame.
 
 > We try to make the most thoughtful compromise we can.
 > <footer>Dom Thomas</footer>
 
-I once heard someone say the best bikes are the ones that adapt to you over time, and I agree. A bike should evolve with its rider, requiring hands-on adjustments to meet changing needs. Try swapping stem spacers when the cables run through the handlebars, the stem, and the headset, you might just decide to leave it as is, because it is such a hassle. Fairlight bikes, on the other hand, remain adaptable, elegant in use, and built for real-world riding.
+I once heard someone say the best bikes are the ones that adapt to you over time, and I agree. A bike should evolve with its rider. It might require hands-on adjustments to meet changing needs. For example, try swapping stem spacers on a bike where the cables run through the handlebars, the stem, and the headset. You might just decide to leave it as is, because it is such a hassle, and you end up with bike not being set up correctly. Fairlight bikes, on the other hand, remain adaptable, elegant in use, and built for real-world riding.
 
 Bringing a steel road frame below 1700 grams is an achievement in itself, and watching Dom explain his craft deepens my pride in riding Fairlight.
 
