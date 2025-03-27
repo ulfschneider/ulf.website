@@ -14,7 +14,7 @@ if newerPost or olderPost -%}
         </div>
         <div>
             <a href="{{ newerPost.url }}">
-                <cite>{{ newerPost.data.title | markdown }}</cite>
+                <cite>{{ newerPost.data.title | markdown_inline }}</cite>
             </a>
         </div>
     </div>
@@ -28,7 +28,7 @@ if newerPost or olderPost -%}
         </div>
         <div class="text-end">
             <a href="{{ olderPost.url }}">
-                <cite>{{ olderPost.data.title | markdown }}</cite>
+                <cite>{{ olderPost.data.title | markdown_inline }}</cite>
             </a>
         </div>
     </div>
