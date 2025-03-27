@@ -2,10 +2,7 @@
     <ul class="reset flex flex-row flex-wrap gap-sm">
         {%-for tag in collections.siteTags -%} {%- if tag == currentTag -%}
         <li>
-            <a
-                href="{{tag | adjust_tag_path}}"
-                aria-current="true"
-                class="tag button"
+            <a href="{{tag | adjust_tag_path}}" aria-current="true" class="tag"
                 >{{tag | adjust_tag_label}}</a
             >
         </li>

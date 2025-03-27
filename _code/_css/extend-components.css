@@ -23,6 +23,10 @@
         @apply meta border font-normal border-current rounded py-[.2em] px-[.4em] no-underline inline-block hover:!bg-active-button-canvas hover:!text-active-button-write hover:!border-active-button-canvas hover:no-underline;
     }
 
+    a.tag[aria-current="true"] {
+        @apply bg-button-canvas border-button-canvas text-button-write;
+    }
+
     /*auto complete */
     ul.auto-complete-suggestion {
         @apply border border-current absolute z-10 w-full m-0;

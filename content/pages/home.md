@@ -5,6 +5,7 @@ showTitle: false
 topics:
   - title: Web
     urls:
+      - /2025-02-13-light-dark-progressive-enhancement/
       - /2024-07-20-prerender-pages/
       - /2022-09-28-jamstack-in-20-minutes/
       - /2024-04-26-pagefind/

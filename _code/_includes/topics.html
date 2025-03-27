@@ -7,7 +7,9 @@
             | item_from_url: url %} {%- if post -%}
             <li class="mt-base text-pretty sm:text-balance">
                 <a href="{{url}}"
-                    ><cite class="font-normal">{{post.data.title}}</cite></a
+                    ><cite class="font-normal"
+                        >{{post.data.title | markdown }}</cite
+                    ></a
                 >
             </li>
             {%- endif -%} {%- endfor -%}
