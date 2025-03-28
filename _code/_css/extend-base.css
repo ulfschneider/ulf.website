@@ -384,7 +384,7 @@
 
     pre,
     pre > code {
-        @apply whitespace-pre-wrap break-words font-mono leading-normal font-normal;
+        @apply whitespace-pre-wrap break-long-words font-mono leading-normal font-normal;
         word-spacing: normal;
         word-wrap: normal;
         -moz-tab-size: 4;

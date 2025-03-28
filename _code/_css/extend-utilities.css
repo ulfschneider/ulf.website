@@ -113,4 +113,11 @@
     .outdent-prose-flow {
         @apply outdent !max-w-[calc(theme(maxWidth.prose)+var(--outdent-indent-space))];
     }
+
+    .break-long-words {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+    }
 }

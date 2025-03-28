@@ -1,6 +1,13 @@
 import "dotenv/config";
 import chalk from "chalk";
 
+const SCRIPT_VERSION = 2;
+const HTML_VERSION = 2;
+const JSON_VERSION = 2;
+const IMGAGE_VERSION = 2;
+const FONT_VERSION = 1;
+const CSS_VERSION = 25;
+
 const hostname =
   process.env.ELEVENTY_RUN_MODE === "serve"
     ? "localhost:8080"
@@ -11,7 +18,7 @@ const origin =
     : `https://${hostname}`;
 const buildTime = new Date();
 
-function getVersion(version) {
+function prepareVersion(version) {
   return process.env.ELEVENTY_RUN_MODE === "serve" ? "" : `-${version}`;
 }
 
@@ -59,12 +66,12 @@ export default {
     preCacheUrls: ["/", "/offline/"],
     ignoreCacheRegex: "",
     version: {
-      script: getVersion(2),
-      html: getVersion(2),
-      json: getVersion(2),
-      image: getVersion(1),
-      font: getVersion(1),
-      css: getVersion(24),
+      script: prepareVersion(SCRIPT_VERSION),
+      html: prepareVersion(HTML_VERSION),
+      json: prepareVersion(JSON_VERSION),
+      image: prepareVersion(IMGAGE_VERSION),
+      font: prepareVersion(FONT_VERSION),
+      css: prepareVersion(CSS_VERSION),
     },
   },
   ownership: {
