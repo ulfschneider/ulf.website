@@ -171,7 +171,7 @@
 
     ol > li::before {
         content: counters(ol-counter, ".", decimal) ". ";
-        @apply text-smaller;
+        @apply text-sm;
     }
 
     ul > li::before {
@@ -243,7 +243,11 @@
         padding-inline-start: calc(
             var(--outdent-indent-space) - theme(borderWidth.2)
         );
-        @apply my-base border-s-2 border-current;
+        @apply my-lg border-s-2 border-current;
+    }
+
+    blockquote + blockquote {
+        @apply mt-lg;
     }
 
     blockquote > header,
@@ -258,11 +262,15 @@
     /* figure */
 
     figure {
-        @apply my-xl;
+        @apply my-lg;
 
         figcaption {
             @apply my-sm text-pretty sm:text-balance meta;
         }
+    }
+
+    figure + figure {
+        @apply mt-xl;
     }
 
     /* address */

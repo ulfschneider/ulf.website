@@ -1,7 +1,7 @@
 {%- for post in posts -%} {%- if stream == true and forloop.index > 1 -%}
 <div>*</div>
 {%- endif -%}
-<article>
+<article class="post-list {{post.data.docType}}">
     {%- if stream != true -%} {%- if post.data.docType == "bookmark" -%}
     <div class="meta my-xs">{{post.data.docType | capitalize}}</div>
     {%- endif -%}{%- endif -%} {%- if post.data.docType != "bookmark" -%}
