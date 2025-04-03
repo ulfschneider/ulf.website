@@ -270,7 +270,7 @@
     }
 
     figure + figure {
-        @apply mt-xl;
+        @apply mt-2xl;
     }
 
     /* address */
