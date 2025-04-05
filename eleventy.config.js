@@ -48,7 +48,7 @@ export default async function (eleventyConfig) {
     // Accepts an Array of file paths or globs (passed to `chokidar.watch`).
     // Works great with a separate bundler writing files to your output folder.
     // e.g. `watch: ["_site/**/*.css"]`
-    watch: ["_site/css/**/*", "tailwind.config.js"],
+    watch: ["_code/_css/**/*", "tailwind.config.js"],
   });
 
   eleventyConfig.setDataDeepMerge(true);
