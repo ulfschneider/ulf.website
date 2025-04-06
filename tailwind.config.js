@@ -3,7 +3,13 @@
 import plugin from "./node_modules/tailwindcss/plugin.js";
 
 export default {
-  content: ["./_code/**/*", "./content/**/*"],
+  content: [
+    "./_code/**/*",
+    "!./_code/_css/**/*",
+    "./content/**/*",
+    "!./content/assets/**/*",
+    "!./content/api/**/*",
+  ],
   theme: {
     colors: {
       current: "currentColor",

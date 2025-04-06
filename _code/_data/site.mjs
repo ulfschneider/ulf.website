@@ -1,12 +1,13 @@
 import "dotenv/config";
 import chalk from "chalk";
 
+//cache versions
 const SCRIPT_VERSION = 2;
 const HTML_VERSION = 2;
 const JSON_VERSION = 2;
-const IMGAGE_VERSION = 2;
+const IMAGE_VERSION = 2;
 const FONT_VERSION = 1;
-const CSS_VERSION = 27;
+const CSS_VERSION = 28;
 
 const hostname =
   process.env.ELEVENTY_RUN_MODE === "serve"
@@ -69,7 +70,7 @@ export default {
       script: prepareVersion(SCRIPT_VERSION),
       html: prepareVersion(HTML_VERSION),
       json: prepareVersion(JSON_VERSION),
-      image: prepareVersion(IMGAGE_VERSION),
+      image: prepareVersion(IMAGE_VERSION),
       font: prepareVersion(FONT_VERSION),
       css: prepareVersion(CSS_VERSION),
     },

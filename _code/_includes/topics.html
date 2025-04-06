@@ -2,10 +2,10 @@
     {%- for topic in topics -%}
     <section>
         <h3 class="mt-0 mb-base text-base">{{topic.title}}</h3>
-        <ul class="line-list reset">
+        <ul class="line-list flow-base">
             {%- for url in topic.urls -%} {% assign post = collections.livePosts
             | item_from_url: url %} {%- if post -%}
-            <li class="mt-base text-pretty sm:text-balance">
+            <li class="text-pretty sm:text-balance">
                 <a href="{{url}}"
                     ><cite class="font-normal"
                         >{{post.data.title | markdown_inline }}</cite

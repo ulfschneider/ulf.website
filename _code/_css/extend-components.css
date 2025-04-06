@@ -1,21 +1,50 @@
 @layer components {
     :root {
-        --line-list-width: 1px;
+        --list-line-width: 1px;
     }
 
     /* line list */
 
-    .line-list {
-        /* Pixel based calculations refer to a line list width of 1px */
-        border-inline-start: var(--line-list-width) solid currentColor;
-        @apply !ps-[calc(var(--outdent-indent-space)-var(--line-list-width))];
+    dl.line-list {
+        border-inline-start: var(--list-line-width) solid currentColor;
+        @apply !ps-[calc(var(--outdent-indent-space)-var(--list-line-width))];
     }
 
-    .line-list.marker {
-        & > li::before,
+    dl.line-list.marker {
         & > dt::before {
             content: "";
-            @apply w-sm h-sm inline-block rounded-full bg-current -ms-[calc(var(--outdent-indent-space)-var(--line-list-width)+theme(space.sm)/2)] me-[calc(var(--outdent-indent-space)-var(--line-list-width)-theme(space.sm)/2)];
+            @apply w-sm h-sm inline-block rounded-full bg-current -ms-[calc(var(--outdent-indent-space)-var(--list-line-width)+theme(space.sm)/2)] me-[calc(var(--outdent-indent-space)-var(--list-line-width)-theme(space.sm)/2)];
+        }
+    }
+
+    ul.line-list {
+        border-inline-start: var(--list-line-width) solid currentColor;
+        & > li::before {
+            content: "";
+            @apply hidden;
+        }
+
+        & > li {
+            @apply !ps-[calc(var(--outdent-indent-space)-var(--list-line-width))];
+        }
+    }
+
+    ul.line-list.marker {
+        & > li::before {
+            content: "";
+            @apply w-sm h-sm min-w-0 inline-block rounded-full bg-current -ms-[calc(var(--outdent-indent-space)-var(--list-line-width)+theme(space.sm)/2)] me-[calc(var(--outdent-indent-space)-var(--list-line-width)-theme(space.sm)/2)];
+        }
+        & > li {
+            @apply !ps-[calc(var(--outdent-indent-space)-var(--list-line-width))];
+        }
+    }
+
+    ol.marker {
+        counter-reset: ol-marker;
+        & > li::before {
+            counter-increment: ol-marker;
+            content: counter(ol-marker);
+            @apply w-[calc(var(--outdent-indent-space))] h-[calc(var(--outdent-indent-space))] min-w-0 border border-current inline-block rounded-full !ps-0 !pe-0 !p-0 text-center;
         }
     }
 
