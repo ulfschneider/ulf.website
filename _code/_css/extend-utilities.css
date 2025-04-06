@@ -16,7 +16,7 @@
     }
 
     .flow-base > * + * {
-        margin-block-start: them(espacing.base);
+        margin-block-start: theme(spacing.base);
     }
 
     .flow-md > * + * {
