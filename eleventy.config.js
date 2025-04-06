@@ -48,12 +48,11 @@ export default async function (eleventyConfig) {
     // Accepts an Array of file paths or globs (passed to `chokidar.watch`).
     // Works great with a separate bundler writing files to your output folder.
     // e.g. `watch: ["_site/**/*.css"]`
-    watch: ["_site/css/**/*", "tailwind.config.js"],
+    watch: ["tailwind.config.js"],
   });
 
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setTemplateFormats(["md", "html", "njk"]);
-
   eleventyConfig.addPassthroughCopy({ "content/assets": "assets" });
 
   eleventyConfig.addPassthroughCopy(
@@ -361,20 +360,45 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.on(
+    "eleventy.before",
+    async ({ dir, results, runMode, outputMode }) => {
+      console.log(
+        chalk.cyan.bold(
+          "******** eleventy before build event, configured in .eleventy.js config file",
+        ),
+      );
+      prepareTailwind();
+    },
+  );
+
+  eleventyConfig.on(
     "eleventy.after",
     async ({ dir, results, runMode, outputMode }) => {
       console.log(
-        chalk.yellow(
+        chalk.cyan.bold(
           "******** eleventy after build event, configured in .eleventy.js config file",
         ),
       );
-      execSync(`npx pagefind --site ${dir.output}`, {
-        cwd: "./",
-        encoding: "utf-8",
-        stdio: "inherit",
-      });
+      preparePagefind();
     },
   );
+}
+
+function preparePagefind() {
+  execSync(`npx pagefind --site ${config.dir.output}`, {
+    cwd: "./",
+    encoding: "utf-8",
+    stdio: "inherit",
+  });
+}
+
+function prepareTailwind() {
+  console.log(chalk.cyan.bold("\nPrepare Tailwind CSS"));
+  execSync(`npm run build:css`, {
+    cwd: "./",
+    encoding: "utf-8",
+    stdio: "inherit",
+  });
 }
 
 export const config = {
