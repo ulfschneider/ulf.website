@@ -369,12 +369,12 @@
         }
 
         th {
-            @apply p-sm align-baseline font-bold mt-base;
+            @apply p-sm align-baseline font-bold mt-base break-normal;
             text-align: inherit;
         }
 
         td {
-            @apply p-sm align-baseline font-normal;
+            @apply p-sm align-baseline font-normal break-normal;
             text-align: inherit;
         }
 
