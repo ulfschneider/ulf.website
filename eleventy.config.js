@@ -215,7 +215,20 @@ export default async function (eleventyConfig) {
     mdLib.use(markdownItEmoji);
     mdLib.use(markdownItMathjax);
     mdLib.use(markdownItScrolltable);
+
     mdLib.use(markdownItFootnote);
+    //customizing how footnote captions appear in the text
+    mdLib.renderer.rules.footnote_caption = (
+      tokens,
+      idx /*, options, env, slf */,
+    ) => {
+      let n = Number(tokens[idx].meta.id + 1).toString();
+
+      if (tokens[idx].meta.subId > 0) n += `:${tokens[idx].meta.subId}`;
+
+      return n;
+    };
+
     mdLib.use(markdownItAttrs);
     mdLib.use(markdownItFitVids, {
       applyStyle: ` width:${tailwindConfig.theme.maxWidth.prose};`,
