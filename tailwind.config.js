@@ -10,6 +10,8 @@ export default {
     "!./content/assets/**/*",
     "!./content/api/**/*",
   ],
+  safelist: [{ pattern: /footnote/ }, { pattern: /cooklang/ }],
+
   theme: {
     colors: {
       current: "currentColor",
