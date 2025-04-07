@@ -272,7 +272,7 @@ I´m following @[<cite>How To Cut A Road Bike Steerer Tube</cite>](https://www.g
 
 ## Install the calipers
 
-The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake + Dual Control Lever (Di2) R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with them whatever you like without the risk of spilling hydraulic oil.
+The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake and Dual Control Lever (Di2) R9250</cite>](https://si.shimano.com/#/en/iDM/RADBR10) is an essential source for setting up the brakes. My calipers came pre-bled and with brake hoses attached. Until the hoses are cut you can do with them whatever you like without the risk of spilling hydraulic oil.
 
 I have the wheels attached to the bike prior to installing the calipers.
 
@@ -368,7 +368,7 @@ Also make sure to use blind plugs for the ports you don´t use.
 - Hazet 5280-3CT Torque Wrench
 - Di2 Plug Tool for EW-SD300 wires (TL-EW300)
 - 5 mm Hex Key
-- +2 mm Hex Key{} +
+- +2 mm Hex Key{}
 
 ### Rear derailleur
 
@@ -399,11 +399,11 @@ The final position of the front derailleur cannot be set at this point because t
 
 1. Connect the two shifters with each other with the wire that´s routed through the handlebars. ==Use the lower satellite ports of the two shifters!==
 2. Then connect the wire dangling out of the down tube with the right shifter by ==plugging it into the upper E-Tube port of the right shifter==.
-3. Charge the battery with an USB AC charging adapter. The battery will be charged after 1.5 to 2 hours. Refer to the @[<cite>Rear Derailleur (Di2) + Battery Charger</cite>](https://si.shimano.com/#/en/iUM/3GK0A/charg_ing_method-title/TOC_CHARG_ING_METHOD-TITLE){} handbook.
+3. Charge the battery with an USB AC charging adapter. The battery will be charged after 1.5 to 2 hours. Refer to the @[<cite>Rear Derailleur (Di2) and Battery Charger</cite>](https://si.shimano.com/#/en/iUM/3GK0A/charg_ing_method-title/TOC_CHARG_ING_METHOD-TITLE){} handbook.
 
 ## Verify Di2
 
-With all Di2 wires connected and the battery charged the Di2 system is ready to be paired. As described in [Rear Derailleur (Di2) Dealer Manual R9250](https://si.shimano.com/#/en/iDM/RARD010) under +System pairing (wired)* this is done by pressing and holding the function button of the rear derailleur until the LED changes from yellow to flashing blue (5 - 8 seconds). The LED flashes green if system pairing succeeds, or flashes red if pairing fails.
+With all Di2 wires connected and the battery charged the Di2 system is ready to be paired. As described in [Rear Derailleur (Di2) Dealer Manual R9250](https://si.shimano.com/#/en/iDM/RARD010) under *System pairing (wired)* this is done by pressing and holding the function button of the rear derailleur until the LED changes from yellow to flashing blue (5 - 8 seconds). The LED flashes green if system pairing succeeds, or flashes red if pairing fails.
 
 After pairing, signals sent from the shifters to the derailleurs should be functioning. Try the shift switches of the two shifters and verify the derailleurs are moving each in their both shifting directions.
 
@@ -552,7 +552,7 @@ The [<cite>Shimano Dealer Manual for Hydraulic Disc Brake R9250</cite>](https://
 
 - 4 mm Hex Key
 - +8 mm Wrench{}
-- Hazet 5280-3CT Torque Wrench with +8 mm Torque Wrench Insert{}
+- Hazet 5280-3CT Torque Wrench with 8 mm Torque Wrench Insert{}
 - +Park Tool HBT-1 Hydraulic Barb Tool{}
 - +Isopropyl Alcohol{}
 - +Cleaning Paper{}
