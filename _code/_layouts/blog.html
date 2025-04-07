@@ -35,7 +35,8 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
             {%- endif -%}
         </h1>
 
-        {%- if posts.newer or posts.older -%}
+        {%- if posts.items.length > site.posts.doubleNavThreshold -%} {%- if
+        posts.newer or posts.older -%}
         <nav class="meta flex flex-row flex-wrap gap-md">
             {%- if posts.newest -%}
             <a href="/blog{{posts.newest.key}}">Newest</a>
@@ -54,8 +55,8 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
             <a href="/blog{{posts.oldest.key}}">Oldest</a>
             {%- endif -%}
         </nav>
-        {%- endif -%} {%- if content != "" or posts.tagIntro != nil and
-        posts.tagIntro != "" -%}
+        {%- endif -%}{%- endif -%} {%- if content != "" or posts.tagIntro != nil
+        and posts.tagIntro != "" -%}
         <div class="my-xl">{{content}}{{posts.tagIntro}}</div>
         {%- endif -%}
 
@@ -63,8 +64,7 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
             {%- include "post-list.html" posts: posts.items -%}
         </div>
 
-        {%- if posts.items.length > site.posts.doubleNavThreshold -%} {%- if
-        posts.newer or posts.older -%}
+        {%- if posts.newer or posts.older -%}
         <nav class="meta mt-xl flex flex-row flex-wrap gap-md">
             {%- if posts.newest -%}
             <a href="/blog{{posts.newest.key}}">Newest</a>
@@ -84,7 +84,7 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
             <a href="/blog{{posts.oldest.key}}">Oldest</a>
             {%- endif -%}
         </nav>
-        {%-endif-%} {%-endif-%}
+        {%-endif-%}
     </div>
     <div class="my-xl xl:m-0 xl:basis-4/12">
         <div class="xl:sticky xl:top-lg">
