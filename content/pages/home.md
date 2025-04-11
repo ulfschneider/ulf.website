@@ -38,19 +38,24 @@ topics:
       - /2024-08-06-klean-kanteen/
 ---
 
+
 Hello, I´m Ulf Schneider, a software developer and agile coach. This is my website. If you like, here is some more information [about me](/about/).
 
 ## Recent notes
 
-<div class="my-xl flow-xl">
-{% include "post-list.html" posts: collections.recentNotes stream: true%}
-<div class="flex flex-row gap-sm">
-<a href="/blog/" class="font-bold">All posts</a> {% include "key.html" key: site.nav.older
+<div class="flow-xl mt-lg">
+{%- include "post-list.html" posts: collections.recentNotes stream: true -%}
+</div>
+
+<div class="flex flex-row gap-sm my-xl align-baseline meta">
+<a href="/blog/">All posts</a> {% include "key.html" key: site.nav.older
 path: "/blog/" %}
 </div>
-</div>
+
 
 
 ## Selected posts
 
+<div class="mt-lg">
 {% include "topics.html" topics: topics %}
+</div>
