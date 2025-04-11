@@ -15,6 +15,7 @@ topics:
       - /2020-08-21-my-approach-to-accessibility/
       - /2024-10-28-responsive-tablist/
       - /2023-12-29-styling-check-boxes-and-radio-buttons/
+      - /2023-01-02-size-images/
   - title: Agile
     urls:
       - /2024-01-21-serious-play/
