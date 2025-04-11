@@ -1,5 +1,5 @@
 ---
-title: Learn eleventy from scratch
+title: Learn Eleventy from scratch
 tags: [code, course]
 ---
 [Learn Eleventy From Scratch](
