@@ -205,6 +205,7 @@ export default async function (eleventyConfig) {
   let markdownLib;
   eleventyConfig.amendLibrary("md", (mdLib) => {
     markdownLib = mdLib;
+    mdLib.disable("code");
     mdLib.use(markdownItDeflist);
     mdLib.use(markdownItMark);
     mdLib.use(markdownItRSSFriendlyGitHubAlerts);
@@ -374,7 +375,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.on(
     "eleventy.before",
-    async ({ dir, results, runMode, outputMode }) => {
+    ({ dir, results, runMode, outputMode }) => {
       console.log(
         chalk.cyan.bold(
           "******** eleventy before build event, configured in .eleventy.js config file",
@@ -407,7 +408,7 @@ function preparePagefind() {
 
 function prepareTailwind() {
   console.log(chalk.cyan.bold("\nPrepare Tailwind CSS"));
-  execSync(`npm run build:css`, {
+  execSync("npm run build:css", {
     cwd: "./",
     encoding: "utf-8",
     stdio: "inherit",
