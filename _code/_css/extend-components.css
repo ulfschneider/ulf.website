@@ -306,12 +306,14 @@
         @apply inline;
     }
 
-    ol.footnotes-list {
-        @apply md:-ms-[var(--outdent-indent-space)];
-    }
+    main > section.footnotes {
+        ol.footnotes-list {
+            @apply md:-ms-[var(--outdent-indent-space)];
+        }
 
-    ol.footnotes-list:before {
-        @apply md:ps-[var(--outdent-indent-space)];
+        ol.footnotes-list:before {
+            @apply md:ps-[var(--outdent-indent-space)];
+        }
     }
 
     /* cooklang */
