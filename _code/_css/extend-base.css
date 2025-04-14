@@ -252,7 +252,7 @@
 
     blockquote > header,
     blockquote > footer {
-        @apply my-sm text-pretty sm:text-balance meta;
+        @apply my-sm text-pretty sm:text-pretty meta;
     }
 
     main > blockquote {
@@ -265,7 +265,7 @@
         @apply my-lg;
 
         figcaption {
-            @apply my-sm text-pretty sm:text-balance meta;
+            @apply my-sm text-pretty text-pretty meta;
         }
     }
 
@@ -360,7 +360,7 @@
         @apply my-xl text-start border-collapse border-y border-write;
 
         caption {
-            @apply sm:text-balance meta pb-sm;
+            @apply text-pretty meta pb-sm;
             text-align: inherit;
         }
 
