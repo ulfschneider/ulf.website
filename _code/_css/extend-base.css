@@ -1,6 +1,6 @@
 @layer base {
     :root {
-        font-size: 17px;
+        font-size: 18px;
         --outdent-indent-space: 2rem;
     }
 
@@ -12,7 +12,7 @@
 
     @media (min-width: theme(screens.lg)) {
         :root {
-            font-size: 18px;
+            font-size: 19px;
         }
     }
 
