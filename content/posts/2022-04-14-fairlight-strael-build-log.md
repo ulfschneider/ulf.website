@@ -675,27 +675,30 @@ The weight of the bike is 9.1 kg including pedals.
 
 ## Torque table
 
+> [!Note]Note on Apr. 20, 2025
+> Fairlight now has page with [torque settings](https://fairlightcycles.com/bicycle-torque-settings/?v=5f02f0889301) for their bikes. In case they recommend something different than what I´ve used, their value is now added to the last column of the below table.
+
 <table>
 <thead>
 <tr>
-<th>Component</th><th>Torque I used in Nm<div class="smaller">Max allowed Torque in Nm</div></th></tr>
+<th>Component</th><th>Torque I used in Nm<div class="smaller">Max allowed Torque in Nm</div></th><th>Fairlight</th></tr>
 </tr>
 </thead>
 <tbody>
-<tr><td>Bottom Bracket Cups</td><td>40</td></tr>
-<tr><td>Brake Rotor Centerlock</td><td>40</td></tr>
-<tr><td>Calipers to the fork or frame</td><td>6<div class="smaller whitespace-nowrap">max 6 - 8</div></td></tr>
-<tr><td>Cassette to freehub body</td><td>40</td></tr>
-<tr><td>Compression bung</td><td>6<div class="smaller whitespace-nowrap">max 10</div></td></tr>
-<tr><td>Dual Control Lever clamp screw</td><td>5<div class="smaller whitespace-nowrap">max 6 - 8</div></td></tr></tr>
-<tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<div class="smaller whitespace-nowrap">max 5 - 6</div></td></tr>
-<tr><td>Front derailleur clamp screw to mount the clamp to the frame</td><td>5<div class="smaller whitespace-nowrap">max 5 - 7</div></td></tr>
-<tr><td>Front derailleur fixing screw to attach the derailleur to the clamp band</td><td>5<div class="smaller whitespace-nowrap">max 5 - 7</div></td></tr>
-<tr><td>Pedals to crankarms</td><td>40<div class="smaller whitespace-nowrap">max 35 - 55</div></td></tr>
-<tr><td>Rear Derailleur Hanger</td><td>8<div class="smaller" whitespace-nowrap>max 8 - 10</div></td></tr>
-<tr><td>Ritchey stem bolts (not the top cap screw)</td><td>4<div class="smaller whitespace-nowrap">max 5</div></td></tr>
-<tr><td>Ritchey seatpost saddle clamp</td><td>10<div class="smaller whitespace-nowrap">max 16</div></td></tr>
-<tr><td>Rotor crankarms to axle</td><td>40<div class="smaller whitespace-nowrap">max 35 - 40</div></td></tr>
-<tr><td>Seatpost collar</td><td>4<div class="smaller whitespace-nowrap">max 8</div></td></tr></tr>
+<tr><td>Bottom Bracket Cups</td><td>40</td><td>45</td></tr>
+<tr><td>Brake Rotor Centerlock</td><td>40</td><td></td></tr>
+<tr><td>Calipers to the fork or frame</td><td>6<div class="smaller whitespace-nowrap">max 6 - 8</div></td><td></td></tr>
+<tr><td>Cassette to freehub body</td><td>40</td><td></td></tr>
+<tr><td>Compression bung</td><td>6<div class="smaller whitespace-nowrap">max 10</div></td><td>10</td></tr>
+<tr><td>Dual Control Lever clamp screw</td><td>5<div class="smaller whitespace-nowrap">max 6 - 8</div></td><td></td></tr></tr>
+<tr><td>Flare nut to fix hydraulic hose with shifter</td><td>5<div class="smaller whitespace-nowrap">max 5 - 6</div></td><td></td></tr>
+<tr><td>Front derailleur clamp screw to mount the clamp to the frame</td><td>5<div class="smaller whitespace-nowrap">max 5 - 7</div><td>5 - 6</td></tr>
+<tr><td>Front derailleur fixing screw to attach the derailleur to the clamp band</td><td>5<div class="smaller whitespace-nowrap">max 5 - 7</div></td><td>5 - 6</td><td></td></tr>
+<tr><td>Pedals to crankarms</td><td>40<div class="smaller whitespace-nowrap">max 35 - 55</div></td><td></td></tr>
+<tr><td>Rear Derailleur Hanger</td><td>8<div class="smaller" whitespace-nowrap>max 8 - 10</div></td><td></td></tr>
+<tr><td>Ritchey stem bolts (not the top cap screw)</td><td>4<div class="smaller whitespace-nowrap">max 5</div></td><td></td></tr>
+<tr><td>Ritchey seatpost saddle clamp</td><td>10<div class="smaller whitespace-nowrap">max 16</div></td><td></td></tr>
+<tr><td>Rotor crankarms to axle</td><td>40<div class="smaller whitespace-nowrap">max 35 - 40</div></td><td></td></tr>
+<tr><td>Seatpost collar</td><td>4</td><td>6</td></tr></tr>
 </tbody>
 </table>

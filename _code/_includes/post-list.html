@@ -2,9 +2,9 @@
 <div>*</div>
 {%- endif -%}
 <article class="post-list {{post.data.docType}}">
-    {%- if stream != true -%} {%- if post.data.docType == "bookmark" -%}
+    {%- if post.data.docType == "bookmark" -%}
     <div class="meta my-xs">{{post.data.docType | capitalize}}</div>
-    {%- endif -%}{%- endif -%} {%- if post.data.docType != "bookmark" -%}
+    {%- endif -%} {%- if post.data.docType != "bookmark" -%}
     <div class="max-w-prose my-xs text-pretty sm:text-balance">
         <a class="h2 my-xs" href="{{post.url}}"
             ><cite>{{post.data.title | markdown_inline }}</cite></a
