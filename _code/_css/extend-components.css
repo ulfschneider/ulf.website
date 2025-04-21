@@ -42,7 +42,8 @@
         }
     }
 
-    ol.marker {
+    ol.marker,
+    ol.line-list {
         counter-reset: ol-marker;
         margin-inline-start: 0;
         & > li {
@@ -54,9 +55,6 @@
             border: var(--line-list-line-width) solid currentColor;
             @apply shrink-0 my-0 flex w-[var(--line-list-ol-marker-diameter)] h-[var(--line-list-ol-marker-diameter)] min-w-0 rounded-full !ps-0 !pe-0 !p-0 justify-center items-center bg-canvas font-bold;
         }
-    }
-
-    ol.marker {
         & > li.current::before {
             @apply text-larger border-dashed;
         }
@@ -66,7 +64,7 @@
         }
     }
 
-    ol.line-list.marker {
+    ol.line-list {
         border-inline-start: var(--line-list-line-width) solid currentColor;
         @apply ms-[calc((var(--line-list-ol-marker-diameter))/2)];
         & > li {
