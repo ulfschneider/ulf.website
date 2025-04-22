@@ -1,50 +1,75 @@
 @layer components {
     :root {
-        --list-line-width: 1px;
+        --line-list-line-width: 1px;
+        --line-list-ol-marker-diameter: var(--outdent-indent-space);
     }
 
     /* line list */
 
     dl.line-list {
-        border-inline-start: var(--list-line-width) solid currentColor;
-        @apply !ps-[calc(var(--outdent-indent-space)-var(--list-line-width))];
+        border-inline-start: var(--line-list-line-width) solid currentColor;
+        @apply !ps-[calc(var(--outdent-indent-space)-var(--line-list-line-width))];
     }
 
     dl.line-list.marker {
+        @apply !ms-[calc(theme(spacing.sm)/2-var(--line-list-line-width)/2)] !ps-[calc(var(--outdent-indent-space)-var(--line-list-line-width)/2-theme(spacing.sm)/2)];
         & > dt::before {
             content: "";
-            @apply w-sm h-sm inline-block rounded-full bg-current -ms-[calc(var(--outdent-indent-space)-var(--list-line-width)+theme(space.sm)/2)] me-[calc(var(--outdent-indent-space)-var(--list-line-width)-theme(space.sm)/2)];
+            @apply w-sm h-sm inline-block rounded-full bg-current -ms-[var(--outdent-indent-space)] me-[calc(var(--outdent-indent-space)-theme(space.sm))];
         }
     }
 
     ul.line-list {
-        border-inline-start: var(--list-line-width) solid currentColor;
+        border-inline-start: var(--line-list-line-width) solid currentColor;
+        @apply ms-0;
         & > li::before {
             content: "";
             @apply hidden;
         }
 
         & > li {
-            @apply !ps-[calc(var(--outdent-indent-space)-var(--list-line-width))];
+            @apply ps-[calc(var(--outdent-indent-space)-var(--line-list-line-width))];
         }
     }
 
     ul.line-list.marker {
+        @apply ms-[calc(theme(spacing.sm)/2-var(--line-list-line-width)/2)];
         & > li::before {
             content: "";
-            @apply w-sm h-sm min-w-0 inline-block rounded-full bg-current -ms-[calc(var(--outdent-indent-space)-var(--list-line-width)+theme(space.sm)/2)] me-[calc(var(--outdent-indent-space)-var(--list-line-width)-theme(space.sm)/2)];
+            @apply w-sm h-sm min-w-0 inline-block rounded-full bg-current -ms-[calc(theme(spacing.sm)/2+var(--line-list-line-width)/2)] me-[calc(var(--outdent-indent-space)-theme(spacing.sm))];
         }
         & > li {
-            @apply !ps-[calc(var(--outdent-indent-space)-var(--list-line-width))];
+            @apply ps-0;
         }
     }
 
-    ol.marker {
+    ol.marker,
+    ol.line-list {
         counter-reset: ol-marker;
-        & > li::before {
+        margin-inline-start: 0;
+        & > li {
             counter-increment: ol-marker;
+            @apply flex flex-row items-baseline gap-[calc(2*var(--outdent-indent-space)-var(--line-list-ol-marker-diameter))] my-base;
+        }
+        & > li::before {
             content: counter(ol-marker);
-            @apply w-[calc(var(--outdent-indent-space))] h-[calc(var(--outdent-indent-space))] min-w-0 border border-current inline-block rounded-full !ps-0 !pe-0 !p-0 text-center;
+            border: var(--line-list-line-width) solid currentColor;
+            @apply shrink-0 my-0 flex w-[var(--line-list-ol-marker-diameter)] h-[var(--line-list-ol-marker-diameter)] min-w-0 rounded-full !ps-0 !pe-0 !p-0 justify-center items-center bg-canvas;
+        }
+        & > li.current::before {
+            @apply text-canvas border-write bg-write text-larger font-bold;
+        }
+        & > li.check::before {
+            content: "⎷";
+            @apply text-canvas border-write bg-write text-larger font-bold;
+        }
+    }
+
+    ol.line-list {
+        border-inline-start: var(--line-list-line-width) solid currentColor;
+        @apply ms-[calc((var(--line-list-ol-marker-diameter))/2)];
+        & > li {
+            @apply -ms-[calc((var(--line-list-ol-marker-diameter)+var(--line-list-line-width))/2)];
         }
     }
 
