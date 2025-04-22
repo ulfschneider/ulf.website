@@ -161,11 +161,10 @@
     }
 
     li {
-        @apply m-0 p-0;
-        padding-inline-start: var(--outdent-indent-space);
+        @apply m-0 p-0 ps-[var(--outdent-indent-space)];
 
         &::before {
-            @apply outdent inline-block whitespace-nowrap tabular-nums !pe-[0.5em] not-italic;
+            @apply outdent inline-block whitespace-nowrap tabular-nums !pe-[0.5em] not-italic ps-0;
         }
     }
 
