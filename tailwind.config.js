@@ -26,7 +26,7 @@ export default {
       "active-button-canvas": "var(--active-button-canvas)",
       "active-button-write": "var(--active-button-write)",
       primary: "var(--primary)",
-      meta: "var(--meta-write)",
+      meta: "var(--meta)",
       "field-canvas": "var(--field-canvas)",
       "field-write": "var(--field-write)",
       "select-canvas": "var(--select-canvas)",

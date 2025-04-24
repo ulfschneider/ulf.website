@@ -283,7 +283,7 @@
     }
 
     kbd {
-        @apply meta text-inherit border border-current rounded-sm leading-none px-[0.2em] font-normal;
+        @apply meta text-inherit border border-meta shadow-md rounded-sm leading-none px-[0.2em];
     }
 
     mark,
