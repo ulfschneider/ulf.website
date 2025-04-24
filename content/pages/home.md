@@ -44,19 +44,13 @@ Hello, I´m Ulf Schneider, a software developer and agile coach. This is my webs
 
 ## Recent notes
 
-<div class="flow-xl mt-lg">
+<div class="flow-xl mt-md">
 {%- include "post-list.html" posts: collections.recentNotes stream: true -%}
 </div>
-
-<div class="flex flex-row gap-sm my-xl align-baseline meta">
-<a href="/blog/">All posts</a> {% include "key.html" key: site.nav.older
-path: "/blog/" %}
-</div>
-
 
 
 ## Selected posts
 
-<div class="mt-lg">
+<div class="mt-md">
 {% include "topics.html" topics: topics %}
 </div>
