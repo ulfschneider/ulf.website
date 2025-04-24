@@ -106,8 +106,7 @@
     a[href*="//"]:not([href*="ulfschneider.io"])::after
     {
         content: "↗";
-        display: inline-block;
-        margin-inline-start: 0.25em;
+        @apply inline-block ms-[.25em] font-normal meta no-underline;
     }
 
     [id],

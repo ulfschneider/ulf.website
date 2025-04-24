@@ -63,10 +63,10 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
         </nav>
         {%- endif -%}{%- endif -%} {%- if content != "" or posts.tagIntro != nil
         and posts.tagIntro != "" -%}
-        <div class="my-xl">{{content}}{{posts.tagIntro}}</div>
+        <div class="my-2xl">{{content}}{{posts.tagIntro}}</div>
         {%- endif -%}
 
-        <div class="my-xl flow-xl">
+        <div class="mt-xl flow-xl">
             {%- include "post-list.html" posts: posts.items -%}
         </div>
 

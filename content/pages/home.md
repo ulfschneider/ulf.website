@@ -42,15 +42,18 @@ topics:
 
 Hello, I´m Ulf Schneider, a software developer and agile coach. This is my website. If you like, here is some more information [about me](/about/).
 
-## Recent notes
 
-<div class="flow-xl mt-md">
+<div class="my-2xl">
+<h2>Latest</h2>
+<div class="flow-xl mt-lg">
 {%- include "post-list.html" posts: collections.recentNotes stream: true -%}
+</div>
 </div>
 
 
-## Selected posts
-
-<div class="mt-md">
+<div class="my-2xl">
+<h2>Selected posts</h2>
+<div class="mt-lg">
 {% include "topics.html" topics: topics %}
+</div>
 </div>
