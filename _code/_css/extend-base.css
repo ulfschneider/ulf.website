@@ -250,7 +250,7 @@
 
     blockquote > header,
     blockquote > footer {
-        @apply my-sm text-pretty sm:text-pretty meta;
+        @apply my-base text-pretty sm:text-pretty meta;
     }
 
     main > blockquote {
@@ -263,7 +263,7 @@
         @apply my-lg;
 
         figcaption {
-            @apply my-sm text-pretty text-pretty meta;
+            @apply my-base text-pretty text-pretty meta;
         }
     }
 
