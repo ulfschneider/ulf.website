@@ -244,10 +244,6 @@
         @apply my-lg border-s-2 border-current;
     }
 
-    blockquote + blockquote {
-        @apply mt-lg;
-    }
-
     blockquote > header,
     blockquote > footer {
         @apply my-base text-pretty sm:text-pretty meta;

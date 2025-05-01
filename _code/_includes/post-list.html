@@ -1,21 +1,22 @@
 {%- for post in posts -%} {%- if stream == true and forloop.index > 1 -%}
 <div>*</div>
 {%- endif -%}
-<article class="post-list {{post.data.docType}}">
+<article class="post-list {{post.data.docType}} flow-xs">
     {%- if post.data.docType == "bookmark" -%}
-    <div class="meta my-xs">{{post.data.docType | capitalize}}</div>
+    <div class="meta">{{post.data.docType | capitalize}}</div>
     {%- endif -%} {%- if post.data.docType != "bookmark" -%}
-    <div class="max-w-prose my-xs text-pretty sm:text-balance">
-        <a class="h2 my-xs" href="{{post.url}}"
+    <div class="max-w-prose text-pretty sm:text-balance">
+        <a class="h2" href="{{post.url}}"
             ><cite>{{post.data.title | markdown_inline }}</cite></a
         >
     </div>
     {%- endif -%} {%- if post.data.abstract -%}
-    <p class="my-xs">{{post.data.abstract | markdown_inline }}</p>
-    {%- endif -%} {%- if stream == true or post.data.docType == "bookmark"%} {{-
-    post.templateContent -}} {%- endif -%}
+    <p>{{post.data.abstract | markdown_inline }}</p>
+    {%- endif -%} {%- if stream == true or post.data.docType == "bookmark"%}
+    <div>{{- post.templateContent -}}</div>
+    {%- endif -%}
     <aside
-        class="max-w-prose meta my-xs flex flex-wrap flex-row gap-x-[.5em] gap-y-xs"
+        class="max-w-prose meta flex flex-wrap flex-row gap-x-[.5em] gap-y-xs"
     >
         <div class="flex flex-wrap flex-row gap-x-md gap-y-xs">
             {%- include "dates.html" publishedDate: post.data.publishedDate
