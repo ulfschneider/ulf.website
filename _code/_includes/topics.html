@@ -2,7 +2,7 @@
     {%- for topic in topics -%}
     <section>
         <h3 class="mt-0 mb-base text-base">{{topic.title}}</h3>
-        <ul class="line-list flow-base">
+        <ul class="line-list flow">
             {%- for url in topic.urls -%} {% assign post = collections.livePosts
             | item_from_url: url %} {%- if post -%}
             <li class="text-pretty sm:text-balance">

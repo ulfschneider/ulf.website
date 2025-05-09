@@ -1,10 +1,20 @@
 @layer utilities {
-    :root {
-        --flow-space: 1em;
+    .flow > * + *,
+    .mt-flow {
+        margin-block-start: 1em;
+        margin-block-start: 1lh;
     }
 
-    .flow > * + * {
-        margin-block-start: var(--flow-space, 1em);
+    .mb-flow {
+        margin-block-end: 1em;
+        margin-block-end: 1lh;
+    }
+
+    .my-flow {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-block-start: 1lh;
+        margin-block-end: 1lh;
     }
 
     .flow-xs > * + * {

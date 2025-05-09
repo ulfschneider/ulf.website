@@ -151,7 +151,7 @@
     /* ul, ol */
     ol,
     ul {
-        @apply my-base mx-0 list-none p-0;
+        @apply my-flow mx-0 list-none p-0;
     }
 
     li > ol,
@@ -214,7 +214,7 @@
     /* dl */
 
     dl {
-        @apply my-base mx-0 p-0;
+        @apply my-flow mx-0 p-0;
     }
 
     dt {
@@ -227,7 +227,7 @@
 
     dd + dt,
     dt + dt {
-        @apply mt-base;
+        @apply mt-flow;
     }
 
     /* quote and blockquote */
@@ -246,7 +246,7 @@
 
     blockquote > header,
     blockquote > footer {
-        @apply my-base text-pretty sm:text-pretty meta;
+        @apply my-flow text-pretty sm:text-pretty meta;
     }
 
     main > blockquote {
@@ -259,7 +259,7 @@
         @apply my-lg;
 
         figcaption {
-            @apply my-base text-pretty text-pretty meta;
+            @apply my-flow text-pretty text-pretty meta;
         }
     }
 
@@ -323,7 +323,8 @@
     }
 
     p + p {
-        @apply mt-base;
+        margin-block-start: 1em;
+        margin-block-start: 1lh;
     }
 
     /* img */
@@ -381,7 +382,7 @@
     }
 
     pre {
-        @apply overflow-x-auto my-base;
+        @apply overflow-x-auto my-flow;
     }
 
     pre,
