@@ -125,27 +125,27 @@
 
     h2,
     .h2 {
-        @apply text-base font-bold mt-xl mb-base;
+        @apply text-base font-bold mt-xl mb-flow;
     }
 
     h3,
     .h3 {
-        @apply text-base font-bold mt-xl mb-base;
+        @apply text-base font-bold mt-xl mb-flow;
     }
 
     h4,
     .h4 {
-        @apply text-base font-bold mt-lg mb-base;
+        @apply text-base font-bold mt-lg mb-flow;
     }
 
     h5,
     .h5 {
-        @apply text-base font-bold mt-lg mb-base;
+        @apply text-base font-bold mt-lg mb-flow;
     }
 
     h6,
     .h6 {
-        @apply text-base font-bold mt-lg mb-base;
+        @apply text-base font-bold mt-lg mb-flow;
     }
 
     /* ul, ol */
@@ -259,7 +259,7 @@
         @apply my-lg;
 
         figcaption {
-            @apply my-flow text-pretty text-pretty meta;
+            @apply my-flow text-pretty meta;
         }
     }
 
