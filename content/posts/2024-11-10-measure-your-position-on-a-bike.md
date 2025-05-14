@@ -7,7 +7,7 @@ tags:
   - til
 abstract: Combining a cross-line laser with the seven centimeter rule is a thing
 ---
-Combining a cross line-laser with the *seven centimeter saddle rule* offers an effective way of measuring your position on a bike and comparing it across different bikes. This method is also valuable for documenting your current position on one bike to replicate it on another.
+Combining a cross-line laser with the *seven centimeter saddle rule* offers an effective way of measuring your position on a bike and comparing it across different bikes. This method is also valuable for documenting your current position on one bike to replicate it on another.
 
 It’s important to note that you’re measuring your position relative to the bottom bracket center, you are not measuring the bike itself.
 
@@ -23,7 +23,7 @@ David Arthur shared a video where bike fitter Lee Prescott demonstrates this ste
 - **Set the laser:** Place the cross-line laser beside the bike, aligning it so that the laser intersects the center of the bottom bracket spindle. This setup projects a vertical line extending upwards from the bottom bracket and a horizontal line spanning left and right from the same point.
   <figure>
   <img src="/img/strael/IMG_6615.jpg">
-  <figcaption>The leveled bike with a cross line laser pointing towards the bottom bracket center. I´ve edited the picture into black and white to enhance the visibility of the laser lines.</figcaption>
+  <figcaption>The leveled bike with a cross-line laser pointing towards the bottom bracket center. I´ve edited the picture into black and white to enhance the visibility of the laser lines.</figcaption>
   </figure>
 
 ## Measuring
@@ -46,7 +46,7 @@ David Arthur shared a video where bike fitter Lee Prescott demonstrates this ste
 
 <table class="noso">
 <caption>
-Measured positions on the three bikes I´m riding. 
+Measured positions on the three bikes I´m riding.
 </caption>
 <thead class="text-right">
 <tr><th></th><th>Fairlight Strael</th><th>Fairlight Secan</th><th>Santa Cruz Blur</th></tr>
@@ -70,4 +70,4 @@ I was surprised by the consistency in saddle heights across the three bikes. It�
 
 I may consider lowering the saddle slightly on the Blur, but overall, I feel comfortable and don’t see the need for adjustments.
 
-The Fairlights are a different case. I came to the point to prefer a lower front position on both, but the stems are already as low as possible. I’m currently transitioning from a *56 tall* frame to a *56 standard* frame for the Secan, as I enjoy the bike but seek a better fit. 
+The Fairlights are a different case. I came to the point to prefer a lower front position on both, but the stems are already as low as possible. I’m currently transitioning from a *56 tall* frame to a *56 standard* frame for the Secan, as I enjoy the bike but seek a better fit.
