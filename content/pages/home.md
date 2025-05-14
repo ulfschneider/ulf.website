@@ -34,13 +34,16 @@ topics:
       - /2024-10-20-boiling-eggs/
   - title: Bike
     urls:
+      - /2024-11-10-measure-your-position-on-a-bike/
       - /2024-09-14-strael-morph/
       - /2023-10-31-autumn-riding/
       - /2024-08-06-klean-kanteen/
 ---
 
 
-<img class="max-w-[200px] my-lg" src="/img/ulf/ulf-1x1-300.webp" />
+
+
+<img class="max-w-[150px] my-lg" src="/img/ulf/ulf-1x1-300.webp" />
 
 Hello, I´m Ulf Schneider, a software developer and agile coach. This is my website. If you like, here is some more information [about me](/about/).
 
