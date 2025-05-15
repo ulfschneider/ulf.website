@@ -1,6 +1,7 @@
 ---
 title: Building the main navigation for a website
-tags: [code, accessibility]
+tags: [code, accessibility, bookmark]
+bookmark: true
 ---
 Manuel Matuzović prepared a tutorial on web.dev: [<cite>Building the main navigation for a website</cite>](https://web.dev/website-navigation/).
 
