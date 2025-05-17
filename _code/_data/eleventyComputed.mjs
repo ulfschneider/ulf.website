@@ -16,7 +16,17 @@ export default {
       return data.layout;
     }
   },
-  tags: (data) => sortTags(data.tags, site.tags.star),
+  tags: (data) => {
+    if (
+      (data.bookmark ||
+        data.docType == "boomark" ||
+        data.layout == "bookmark") &&
+      !data.tags.includes("bookmark")
+    ) {
+      data.tags.push("bookmark");
+    }
+    return sortTags(data.tags, site.tags.star);
+  },
   title: (data) => {
     if (!data.title) {
       data.title = site.title;
