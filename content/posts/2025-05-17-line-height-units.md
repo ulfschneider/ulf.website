@@ -4,6 +4,7 @@ tags:
   - css
   - code
   - font
+  - bookmark
 bookmark: true
 ---
 With [<cite>Polishing your typography with line height units</cite>](https://webkit.org/blog/16831/line-height-units/) Jen Simmons is putting a spotlight on the overlooked `lh` unit. It makes a big difference!
