@@ -17,12 +17,12 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
 <div class="xl:flex xl:flex-row-reverse xl:gap-xl">
     <div class="my-xl xl:m-0 xl:basis-4/12">
         <div class="xl:sticky xl:top-lg">
-            <div class="mb-base mt-0 h2">Choose posts by tag</div>
+            <div class="mb-flow mt-0 h2">Choose posts by tag</div>
             {%- include "site-tags.html" currentTag: tag-%}
         </div>
     </div>
     <div class="xl:basis-8/12">
-        <h1 class="mt-0 mb-base">
+        <h1 class="mt-0 mb-flow">
             {%- if posts.multipleYears == true -%}
             <span>{{posts.fromYear}} – {{posts.toYear }}: </span>
             {%- else -%}

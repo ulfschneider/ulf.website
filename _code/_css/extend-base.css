@@ -364,7 +364,7 @@
         }
 
         th {
-            @apply p-sm align-baseline font-bold mt-base break-normal;
+            @apply p-sm align-baseline font-bold mt-flow break-normal;
             text-align: inherit;
         }
 
