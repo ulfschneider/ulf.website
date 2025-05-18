@@ -70,4 +70,4 @@ I was surprised by the consistency in saddle heights across the three bikes. It�
 
 I may consider lowering the saddle slightly on the Blur, but overall, I feel comfortable and don’t see the need for adjustments.
 
-The Fairlights are a different case. I came to the point to prefer a lower front position on both, but the stems are already as low as possible. I’m currently transitioning from a *56 tall* frame to a *56 standard* frame for the Secan, as I enjoy the bike but seek a better fit.
+The Fairlights are a different case. I came to the point to prefer a lower front position on both, but the stems are already as low as possible. I’m currently transitioning from a *56 tall* frame to a *56 standard* frame for the Secan, and likely will do the same with the Strael.
