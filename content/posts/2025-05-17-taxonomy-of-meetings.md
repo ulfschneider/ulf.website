@@ -8,3 +8,5 @@ bookmark: true
 1. **Divergent meetings:** Generate ideas.
 2. **Convergent meetings:** Come to a decision.
 3. **Chemistry Meetings:** No tangible output. Get to know each other.
+
+It´s a good idea to communicate upfront what type of meeting you are planning to have to help avoiding frustration among participants about the meeting outcome.
