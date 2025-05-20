@@ -43,6 +43,8 @@
         }
     }
 
+    /* ol marker list */
+
     ol.marker,
     ol.line-list {
         counter-reset: ol-marker;

@@ -10,9 +10,15 @@
             ><cite>{{post.data.title | markdown_inline }}</cite></a
         >
     </div>
-    {%- endif -%} {%- if post.data.abstract -%}
+    {%- endif -%} {%- if post.data.abstract -%} {%- if stream == true or
+    post.data.docType == "bookmark"-%}
+    <p class="after:content-['↓'] after:mt-flow after:block">
+        {{post.data.abstract | markdown_inline }}
+    </p>
+    {%- else -%}
     <p>{{post.data.abstract | markdown_inline }}</p>
-    {%- endif -%} {%- if stream == true or post.data.docType == "bookmark"%}
+    {%- endif -%} {%- endif -%} {%- if stream == true or post.data.docType ==
+    "bookmark"%}
     <div>{{- post.templateContent -}}</div>
     {%- endif -%}
     <aside
