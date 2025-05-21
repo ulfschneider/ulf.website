@@ -125,33 +125,33 @@
 
     h2,
     .h2 {
-        @apply text-base font-bold mt-xl mb-flow;
+        @apply text-base font-bold mt-xl flow-b;
     }
 
     h3,
     .h3 {
-        @apply text-base font-bold mt-xl mb-flow;
+        @apply text-base font-bold mt-xl flow-b;
     }
 
     h4,
     .h4 {
-        @apply text-base font-bold mt-lg mb-flow;
+        @apply text-base font-bold mt-lg flow-b;
     }
 
     h5,
     .h5 {
-        @apply text-base font-bold mt-lg mb-flow;
+        @apply text-base font-bold mt-lg flow-b;
     }
 
     h6,
     .h6 {
-        @apply text-base font-bold mt-lg mb-flow;
+        @apply text-base font-bold mt-lg flow-b;
     }
 
     /* ul, ol */
     ol,
     ul {
-        @apply my-flow mx-0 list-none p-0;
+        @apply flow-y mx-0 list-none p-0;
     }
 
     li > ol,
@@ -214,7 +214,7 @@
     /* dl */
 
     dl {
-        @apply my-flow mx-0 p-0;
+        @apply flow-y mx-0 p-0;
     }
 
     dt {
@@ -227,7 +227,7 @@
 
     dd + dt,
     dt + dt {
-        @apply mt-flow;
+        @apply flow-t;
     }
 
     /* quote and blockquote */
@@ -246,7 +246,7 @@
 
     blockquote > header,
     blockquote > footer {
-        @apply my-flow text-pretty sm:text-pretty meta;
+        @apply flow-y text-pretty sm:text-pretty meta;
     }
 
     main > blockquote {
@@ -259,7 +259,7 @@
         @apply my-lg;
 
         figcaption {
-            @apply my-flow text-pretty meta;
+            @apply flow-y text-pretty meta;
         }
     }
 
@@ -364,7 +364,7 @@
         }
 
         th {
-            @apply p-sm align-baseline font-bold mt-flow break-normal;
+            @apply p-sm align-baseline font-bold flow-t break-normal;
             text-align: inherit;
         }
 
@@ -382,7 +382,7 @@
     }
 
     pre {
-        @apply overflow-x-auto my-flow;
+        @apply overflow-x-auto flow-y;
     }
 
     pre,

@@ -316,7 +316,7 @@
 
     ol.footnotes-list::before {
         content: "Footnotes";
-        @apply h2 mb-flow block;
+        @apply h2 flow-b block;
     }
 
     ol.footnotes-list li {

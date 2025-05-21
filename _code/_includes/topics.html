@@ -1,7 +1,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-y-lg md:gap-x-xl">
     {%- for topic in topics -%}
     <section>
-        <h3 class="mt-0 mb-flow text-base">{{topic.title}}</h3>
+        <h3 class="mt-0 flow-b text-base">{{topic.title}}</h3>
         <ul class="line-list flow">
             {%- for url in topic.urls -%} {% assign post = collections.livePosts
             | item_from_url: url %} {%- if post -%}

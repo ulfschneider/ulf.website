@@ -1,16 +1,16 @@
 @layer utilities {
     .flow > * + *,
-    .mt-flow {
+    .flow-t {
         margin-block-start: 1em;
         margin-block-start: 1lh;
     }
 
-    .mb-flow {
+    .flow-b {
         margin-block-end: 1em;
         margin-block-end: 1lh;
     }
 
-    .my-flow {
+    .flow-y {
         margin-block-start: 1em;
         margin-block-end: 1em;
         margin-block-start: 1lh;

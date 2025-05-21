@@ -12,7 +12,7 @@
     </div>
     {%- endif -%} {%- if post.data.abstract -%} {%- if stream == true or
     post.data.docType == "bookmark"-%}
-    <p class="after:content-['↓'] after:mt-flow after:block">
+    <p class="after:content-['↓'] after:flow-t after:block">
         {{post.data.abstract | markdown_inline }}
     </p>
     {%- else -%}
