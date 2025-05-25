@@ -6,9 +6,7 @@ tags: [design, video, star]
 A lively, enjoyable, and valid talk. Also, I like Mike´s slides very much.
 
 <figure>
-<iframe src="https://player.vimeo.com/video/121082134" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-<figcaption>Mike Monteiro´s <a href="https://vimeo.com/121082134">Keynote</a> for <a href="https://vimeo.com/ixdaglobal">Interaction Design Association</a>.</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IXXKqwrEql4?si=oWnxMaRHUo9j8IN6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></figure>
 
 Assumptions prior to the client presentation:
 
