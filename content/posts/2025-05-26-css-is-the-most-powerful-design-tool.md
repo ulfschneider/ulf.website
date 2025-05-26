@@ -4,6 +4,7 @@ tags:
   - design
   - code
   - css
+  - video
 ---
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1Pq7VqNrtk4?si=rK7RxSrw6btks96p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -21,5 +22,5 @@ To properly design for a medium, one has to have a proper understanding about th
 
 > CSS has become so capable, it is now the most powerful design tool for the web.
 
-Therefore we have to use HTML and CSS much earlier in the design process and ==decide in the browser what works and what doesn´t==. That means working at the intersection of design and development, which is now called *web design engineering*.
+Therefore we have to use HTML and CSS much earlier in the design process and ==decide in the browser what works and what doesn´t==. That means working at the intersection of design and development, which is now called *design engineering*.
 
