@@ -267,6 +267,10 @@
         @apply mt-2xl;
     }
 
+    figure > figure {
+        @apply flow-y;
+    }
+
     /* address */
     address {
         @apply not-italic font-normal;
