@@ -259,7 +259,15 @@
         @apply my-lg;
 
         figcaption {
-            @apply flow-y text-pretty meta;
+            @apply text-pretty meta;
+        }
+
+        figcaption:first-child {
+            @apply flow-b;
+        }
+
+        figcaption:last-child {
+            @apply flow-t;
         }
     }
 
@@ -267,8 +275,8 @@
         @apply mt-2xl;
     }
 
-    figure > figure {
-        @apply flow-y;
+    figcaption + * {
+        @apply mt-0;
     }
 
     /* address */

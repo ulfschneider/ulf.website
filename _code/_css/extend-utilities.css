@@ -41,6 +41,10 @@
         margin-block-start: theme(spacing.xl);
     }
 
+    .flow-2xl > * + * {
+        margin-block-start: theme(spacing.2xl);
+    }
+
     .meta {
         @apply text-sm font-mono;
     }
