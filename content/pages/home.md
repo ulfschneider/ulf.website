@@ -39,12 +39,6 @@ topics:
       - /2023-10-31-autumn-riding/
       - /2024-08-06-klean-kanteen/
 ---
-
-
-
-
-<img class="max-w-[150px] my-lg" src="/img/ulf/ulf-1x1-300.webp" />
-
 Hello, I´m Ulf Schneider, a software developer and agile coach. This is my website. If you like, here is some more information [about me](/about/).
 
 
