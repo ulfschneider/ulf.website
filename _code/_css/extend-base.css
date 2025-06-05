@@ -271,6 +271,18 @@
         }
     }
 
+    .split.reverse figure {
+        figcaption:first-child {
+            margin-block-end: 0;
+            @apply flow-t;
+        }
+
+        figcaption:last-child {
+            margin-block-start: 0;
+            @apply flow-b ms-0;
+        }
+    }
+
     figure + figure {
         @apply mt-2xl;
     }
