@@ -25,7 +25,7 @@ tags:
 
 ## Day 1, Paderborn to Landesbergen
 
-The route starts in Paderborn and goes through Detmold, Lemgo, and Minden to Landesbergen. My initial plan is to ride 10 km further to Nienburg, but the Mühlengasthof Landesbergen looks inviting to stay for the night, therefore I cut off the route at 127 km for the day.
+The route starts in Paderborn and goes through Detmold, Lemgo, and Minden, ending in Landesbergen. My initial plan is to ride 10 km further to Nienburg, but the Mühlengasthof Landesbergen looks inviting to stay for the night, therefore I cut off the route at 127 km for the day.
 
 <figure>
 <figcaption>The ride kicks off</figcaption>
