@@ -184,7 +184,7 @@ The third day brings me north, through Naturpark Wendland, Dannenberg, Ludwigslu
 
 <figure>
 <img src="/img/secan/IMG_7613.jpg">
-<figcaption>The people living in Schwerin were protesting for safer bicycle lanes</figcaption>
+<figcaption>The people living in Schwerin are protesting for safer bicycle lanes</figcaption>
 </figure>
 
 <figure>
@@ -270,10 +270,10 @@ The last day of this journey starts on a chilly but sunny morning in Wismar. Fro
 
 A list of selected pieces of equipment that worked pretty well during the ride.
 
-- **Fairlight Secan 3.0:** You might have spotted the bike in the pictures. It’s a steel frame gravel bike that I’ve been riding since the start of this year. I´m a Fairlight fan for several years and this is my second Secan. I’m riding the 56 R frame, and it’s super efficient as well as practical. It’s especially great for these kinds of rides because it’s so sturdy and has mounting points to attach mud guards or packs. I ride a mechanical Shimano GRX 820 group – no charging required, flawless functionality, always prepared.
+- **Fairlight Secan 3.0:** You might have spotted the bike in the pictures. It’s a steel frame gravel bike that I’ve been riding since the start of this year and I find it super efficient as well as practical. I´m a Fairlight fan for several years and this is my second Secan (with a 56 R frame). The bike is especially great for these kinds of rides because it’s sturdy and has mounting points to attach mud guards or packs. I ride a mechanical Shimano GRX 820 group – no charging required, flawless functionality, always prepared.
 - **Specialized Phenom Expert saddle:** A great saddle. No seating issues whatsoever. It´s claimed to be a mountain bike saddle, but you can as well ride it on gravel and road race bikes, it´s so versatile.
-- **Ortlieb Fork-Packs:** Whenever I have to pack something on this bike, it starts with the Ortlieb Fork-Packs. I like how their minimal impact on the bike handling, because they are so deep on the front. With one action you can attach it to the bike and detach it, which is overly practical wheny arriving somewhere to stay for the night.
-- **Tailfin Pannier Rack + Tailfin Aero Pack Cargo:** For the current trip I had to pack a little more than what fits into the Fork-Packs. I ended up to solve this with the most expensive solution, a Tailfin Pannier Rack with an Aero Pack Cargo. I can assure you, when you are willing to pay the money you get an excellent rear packing system that is designed through and through. The rack is light enough (I used the aluminium version) and holds the attached pack without swaying by any means. The rack stands on a special thru axle and is attached with a quick release system. It does not touch the bike frame. The rolltop pack, similar to the Ortlieb Fork-Packs, can be attached and detached to the rack with another quick release system. The rolltop closing mechanism of the pack itself is flexible and can be used with gloves. The extendible outer pockets allow to carry whatever you want to have in short reach. The closing straps are replaceable, as well as many parts of the rack. I cannot say anything about the waterproofness, because it did not rain during my journey, but I expect the pack is fine in this area too. I found this system to be very practical.
+- **Ortlieb Fork-Packs:** Whenever I have to pack something on this bike, it starts with the Ortlieb Fork-Packs. I like their minimal impact on the bike handling, because they are so deep on the front. They have a quick release mechanism for attaching them to the bike and as well to detach theam, which is overly practical when arriving somewhere to stay for the night.
+- **Tailfin Pannier Rack + Tailfin Aero Pack Cargo:** For the current trip I had to pack a little more than what fits into the Fork-Packs. I ended up to solve this with the most expensive solution, a Tailfin Pannier Rack with an Aero Pack Cargo. I can assure you, when you are willing to pay the money you get an excellent rear packing system that is designed through and through. The rack is light and strong (I used the aluminium version), and it holds the attached pack without swaying by any means. The rack stands on a special thru axle and is attached with a quick release system. It does not touch the bike frame. The rolltop pack, similar to the Ortlieb Fork-Packs, can be attached and detached to the rack with another quick release system. The rolltop closing mechanism of the pack itself is flexible and can be used with gloves. The extendible outer pockets allow to carry whatever you want to have in short reach. The closing straps are replaceable, as well as many parts of the rack. I cannot say anything about the waterproofness, because it did not rain during my journey, but I expect the pack is fine in this area too. I found this system to be very practical.
   <figure>
   <figure><img src="/img/secan/IMG_7654.jpg"><figcaption>The Tailfin Rack stands on the thru axle and is attached with a quick release mechanism</figcaption></figure>
   <figure><img src="/img/secan/IMG_7655.jpg"><figcaption>The rolltop closure of the Aero Pack Cargo at first doesn´t look fancy, but it works exceptionally well. You can adjust the volume of the pack and fixate gear under the crossing strap.</figcaption></figure>
@@ -285,7 +285,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 ### Route
 
 - The routes for each day, downloaded to the Garmin Edge bike computer
-- I did bookings for the first two nights in advance and the booking for the the third night during the ride via booking.com.
+- I did bookings for the first two nights in advance and the booking for the third night during the ride via booking.com.
 
 ### Packing system
 
@@ -320,7 +320,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 - Tire levers
 - Minitool (Topeak Mini 18+)
 - Air pump (Topeak Racerocket)
-- Bike lock with key (Texlock eyelet, size M)
+- Bike lock with key ([Texlock eyelet, size M](https://tex-lock.com/product/tex-lock-eyelet/))
 
 ### Eating and drinking
 - 2 steel water bottles (Klean Kanteen)
