@@ -369,7 +369,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 - A piece of soap (I use the same piece for my hair, the body, and the laundry) with [transport packaging](https://ichbinpur.de/collections/shop/products/seifentasche-mit-reissverschluss)
 - Foldable washing bowl
 - Clothespins
-- Thin cord, e.g. for clothesline
+- Thin cord, e.g. to be used as clothesline
 - 3 packs of paper tissues
 - Nail scissors, nail clipper
 - Sun protection
