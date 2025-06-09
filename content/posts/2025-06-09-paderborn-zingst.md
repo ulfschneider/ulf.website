@@ -13,7 +13,7 @@ tags:
 
 <figure>
 <img src="/img/secan/paderborn-zingst.png" />
-<figcaption>My route from Paderborn to Zingst, which I planned with komoot collections. My collection there is named <a href="https://www.komoot.com/de-de/collection/3434196/-paderborn-zingst">Paderborn – Zingst</a>, of course. I divided the route into the four following four stages. The figures represent my measured Garmin data.
+<figcaption>My route from Paderborn to Zingst, which I planned with komoot collections. My collection is named <a href="https://www.komoot.com/de-de/collection/3434196/-paderborn-zingst">Paderborn – Zingst</a>, of course. I divided the route into the four following stages. The figures represent my measured Garmin data.
 <ol>
 <li>Paderborn to Landesbergen, 127 km, 876 m up</li>
 <li>Landesbergen to Bad Bevensen, 150 km, 546 m up</li>
