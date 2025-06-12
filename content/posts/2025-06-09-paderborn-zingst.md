@@ -81,7 +81,7 @@ The second day takes me eastward across long stretches of the Southern Heath, be
 
 <figure>
 <img src="/img/secan/IMG_7560.jpg" />
-<figcaption>Crossing highway A7. I´m glad I´m not stuck in one of those cars</figcaption>
+<figcaption>Crossing highway A7. I´m glad I´m not stuck in one of those cars.</figcaption>
 </figure>
 
 <figure>
@@ -193,7 +193,7 @@ The third day brings me north, through Naturpark Wendland, Dannenberg, Ludwigslu
 </figure>
 
 <figure>
-<figcaption>Arriving in Wismar, I stayed in Fründts hotel, which  I can recommend. It´s well organized, they have a lockable bike shed and the breakfast is excellent.</figcaption>
+<figcaption>Arriving in Wismar, I stay in Fründts hotel, which  I can recommend. It´s well organized, they have a lockable bike shed and the breakfast is excellent.</figcaption>
 <figure class="md:split">
 <figure>
 <img src="/img/secan/IMG_7619.jpg">
