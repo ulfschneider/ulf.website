@@ -264,6 +264,11 @@ The last day of this journey starts on a chilly but sunny morning in Wismar. Fro
 <figcaption>The baltic sea in Zingst. I´m sorry I didn´t take a photo of the actual arrival – I forgot it because my son Emil was already waiting there and welcoming me, asking about the journey and picking me up to show me the facilities. Therefore the journey ends with this image.</figcaption>
 </figure>
 
+<figure>
+<figcaption>P.S. June 14th: Actually there is a picture of my arrival. It´s together with Emil and my wife took it. ❤️</figcaption>
+<img src="/img/secan/arrival-with-emil.jpg">
+</figure>
+
 
 
 ## Equipment
