@@ -208,7 +208,7 @@ The third day brings me north, through Naturpark Wendland, Dannenberg, Ludwigslu
 
 <figure>
 <img src="/img/secan/IMG_7624.jpg">
-<figcaption>I had dinner at the tavern *Nikolaiblick*, which has its name from the Nikolai church that is near by. I found it to be a good place for ending the day.</figcaption>
+<figcaption>I had dinner at the tavern <em>Nikolaiblick</em>, which has its name from the Nikolai church that is near by. I found it to be a good place for ending the day.</figcaption>
 </figure>
 
 <figure>
