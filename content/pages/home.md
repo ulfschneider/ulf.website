@@ -44,7 +44,7 @@ Hello, I´m Ulf Schneider, a software developer and agile coach. This is my webs
 
 <div class="my-2xl">
 <h2>Latest</h2>
-<div class="flow-xl mt-lg">
+<div class="flow-2xl mt-lg">
 {%- include "post-list.html" posts: collections.recentNotes stream: true -%}
 </div>
 </div>
