@@ -28,7 +28,7 @@ My path through 35 years of software went like this:
   <dt>2014 – 2023 Diebold Nixdorf</dt>
   <dd>Eight years employed as a software developer and agile coach at Diebold Nixdorf, heading the Professional Services Processes & Quality team when leaving the company.</dd>
   <dt>2023 – today Weidmüller Interface</dt>
-  <dd>Since February 2023 I am the architect and lead developer of the new <a href="https://configurator.weidmueller.com">Online Weidmüller Configurator</a>.</dd>
+  <dd>Since February 2023 I am the software architect of the new <a href="https://configurator.weidmueller.com">Online Weidmüller Configurator</a>.</dd>
 </dl>
 
 ## Connect with me
