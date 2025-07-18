@@ -1,0 +1,12 @@
+.section {
+    fill: #c4e0ff !important;
+}
+
+.edgeLabel {
+    background-color: white !important;
+    padding: 2px 4px;
+}
+
+.mermaid svg[aria-roledescription="xychart"] g.main rect.background {
+    fill: #f7f7f7 !important;
+}

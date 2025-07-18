@@ -19,8 +19,8 @@ import markdownItCooklang from "markdown-it-cooklang";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItFitVids from "markdown-it-fitvids";
 import markdownItMermaidServer from "markdown-it-mermaid-server";
-import mermaidConfig from "./_code/_mermaid/mermaid.config.json" with { type: "json" };
-import puppeteerConfig from "./_code/_mermaid/mermaid.puppeteer.config.json" with { type: "json" };
+import mermaidConfig from "./_code/_mermaidSettings/mermaid.config.json" with { type: "json" };
+import puppeteerConfig from "./_code/_mermaidSettings/mermaid.puppeteer.config.json" with { type: "json" };
 import { full as markdownItEmoji } from "markdown-it-emoji";
 import markdownItMathjax from "markdown-it-mathjax3";
 import markdownItContainer from "markdown-it-container";
@@ -224,7 +224,7 @@ export default async function (eleventyConfig) {
 
     eleventyConfig.ignores.add("_mermaid/");
     const mermaidCSS = fs
-      .readFileSync("./_code/_mermaid/mermaid.css")
+      .readFileSync("./_code/_mermaidSettings/mermaid.css")
       .toString();
     mdLib.use(markdownItMermaidServer, {
       workingFolder: "_mermaid",
