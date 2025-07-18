@@ -18,9 +18,13 @@ import markdownItFootnote from "markdown-it-footnote";
 import markdownItCooklang from "markdown-it-cooklang";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItFitVids from "markdown-it-fitvids";
+import markdownItMermaidServer from "markdown-it-mermaid-server";
+import mermaidConfig from "./_code/_mermaid/mermaid.config.json" with { type: "json" };
+import puppeteerConfig from "./_code/_mermaid/mermaid.puppeteer.config.json" with { type: "json" };
 import { full as markdownItEmoji } from "markdown-it-emoji";
 import markdownItMathjax from "markdown-it-mathjax3";
 import markdownItContainer from "markdown-it-container";
+import * as fs from "node:fs";
 
 import site from "./_code/_data/site.mjs";
 import {
@@ -36,6 +40,7 @@ import dayjs from "dayjs";
 
 import resolveConfig from "./node_modules/tailwindcss/resolveConfig.js";
 import myTailwindConfig from "./tailwind.config.js";
+import { getRandomValues } from "node:crypto";
 const tailwindConfig = resolveConfig(myTailwindConfig);
 
 export default async function (eleventyConfig) {
@@ -174,7 +179,7 @@ export default async function (eleventyConfig) {
     codeAttributes: {},
   });
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ["webp", null],
+    formats: ["webp", "svg"],
 
     sharpOptions: {
       animated: true,
@@ -182,7 +187,7 @@ export default async function (eleventyConfig) {
     },
 
     // output image widths
-    widths: [200, 600, "auto"],
+    widths: [200, "auto"],
 
     sharpOptions: {
       animated: true,
@@ -203,7 +208,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(feedPlugin);
 
   let markdownLib;
-  eleventyConfig.amendLibrary("md", (mdLib) => {
+  eleventyConfig.amendLibrary("md", async (mdLib) => {
     markdownLib = mdLib;
     mdLib.disable("code");
     mdLib.use(markdownItDeflist);
@@ -216,6 +221,19 @@ export default async function (eleventyConfig) {
     mdLib.use(markdownItEmoji);
     mdLib.use(markdownItMathjax);
     mdLib.use(markdownItScrolltable);
+
+    eleventyConfig.ignores.add("_mermaid/");
+    const mermaidCSS = fs
+      .readFileSync("./_code/_mermaid/mermaid.css")
+      .toString();
+    mdLib.use(markdownItMermaidServer, {
+      workingFolder: "_mermaid",
+      clearWorkingFolder: true,
+      backgroundColor: "'#f7f7f7'",
+      themeCSS: mermaidCSS,
+      mermaidConfig: mermaidConfig,
+      puppeteerConfig: puppeteerConfig,
+    });
 
     mdLib.use(markdownItFootnote);
     //customizing how footnote captions appear in the text
