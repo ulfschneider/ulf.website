@@ -8,14 +8,11 @@
             ><cite>{{post.data.title | markdown_inline }}</cite></a
         >
     </div>
-    {%- endif -%} {%- if post.data.abstract -%} {%- if stream == true or
-    post.data.docType == "bookmark"-%}
-    <p class="after:content-['↓'] after:flow-t after:block">
-        {{post.data.abstract | markdown_inline }}
-    </p>
-    {%- else -%}
+    {%- endif -%} {%- if post.data.abstract -%}
     <p>{{post.data.abstract | markdown_inline }}</p>
-    {%- endif -%} {%- endif -%} {%- if stream == true or post.data.docType ==
+    {%- if stream == true or post.data.docType == "bookmark"%}
+    <div aria-hidden="true" class="border-l border-current h-[1lh]"></div>
+    {%-endif-%} {%- endif -%} {%- if stream == true or post.data.docType ==
     "bookmark"%}
     <div>{{- post.templateContent -}}</div>
     {%- endif -%}
