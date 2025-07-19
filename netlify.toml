@@ -3,5 +3,3 @@
 from = "/*"
 to = "/404/"
 status = 404
-
-[build.environment]
