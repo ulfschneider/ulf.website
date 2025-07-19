@@ -233,6 +233,7 @@ export default async function (eleventyConfig) {
       themeCSS: mermaidCSS,
       mermaidConfig: mermaidConfig,
       puppeteerConfig: puppeteerConfig,
+      throwOnError: true,
     });
 
     mdLib.use(markdownItFootnote);
