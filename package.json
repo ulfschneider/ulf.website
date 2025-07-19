@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run build:puppeteer && npx @11ty/eleventy --serve",
-    "build:clean": "npx rimraf _site",
+    "build:clean": "npx rimraf _site .cache node_modules/.cache",
     "build:puppeteer": "npx @puppeteer/browsers install chrome-headless-shell",
     "build:11ty": "npx @11ty/eleventy",
     "build:css": "npx tailwindcss --minify -i _code/_css/main.css -o _code/_css/style.css",
