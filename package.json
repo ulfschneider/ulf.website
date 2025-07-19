@@ -5,13 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "npm run build:puppeteer && npx @11ty/eleventy --serve",
+    "dev": "npx @11ty/eleventy --serve",
     "build:clean": "npx rimraf _site .cache node_modules/.cache dist",
     "build:puppeteer": "npx @puppeteer/browsers install chrome-headless-shell",
     "build:11ty": "npx @11ty/eleventy",
     "build:css": "npx tailwindcss --minify -i _code/_css/main.css -o _code/_css/style.css",
     "build:minify": "npx html-minifier --input-dir _site --output-dir _site --file-ext html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true",
-    "build": "npm run build:clean && npm run build:puppeteer && npm run build:11ty && npm run build:minify",
+    "build": "npm run build:clean && npm run build:11ty && npm run build:minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ulf Schneider",
