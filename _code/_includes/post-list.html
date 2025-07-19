@@ -16,18 +16,11 @@
     "bookmark"%}
     <div>{{- post.templateContent -}}</div>
     {%- endif -%}
-    <aside
-        class="max-w-prose meta flex flex-wrap flex-row gap-x-[.5em] gap-y-xs"
-    >
-        {%- if stream == true -%}
-        <div aria-hidden="true">◼</div>
-        {%- endif -%}
-        <div class="flex flex-wrap flex-row gap-x-md gap-y-xs">
-            {%- include "dates.html" publishedDate: post.data.publishedDate
-            published: post.data.published modifiedDate: post.data.modifiedData
-            modified: post.data.modified -%}{%- include "tags.html" tags:
-            post.data.tags -%}
-        </div>
+    <aside class="max-w-prose meta flex flex-wrap flex-row gap-x-md gap-y-xs">
+        {%- include "dates.html" publishedDate: post.data.publishedDate
+        published: post.data.published modifiedDate: post.data.modifiedData
+        modified: post.data.modified -%}{%- include "tags.html" tags:
+        post.data.tags -%}
     </aside>
 </article>
 {%- endfor -%}
