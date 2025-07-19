@@ -11,7 +11,7 @@
     {%- endif -%} {%- if post.data.abstract -%}
     <p>{{post.data.abstract | markdown_inline }}</p>
     {%- if stream == true or post.data.docType == "bookmark"%}
-    <div aria-hidden="true" class="border-l border-current h-[1lh]"></div>
+    <div aria-hidden="true" class="border-l border-current">&nbsp;</div>
     {%-endif-%} {%- endif -%} {%- if stream == true or post.data.docType ==
     "bookmark"%}
     <div>{{- post.templateContent -}}</div>
