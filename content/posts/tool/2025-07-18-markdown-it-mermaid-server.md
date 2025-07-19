@@ -23,6 +23,28 @@ A(["Start"]) --> B{"Decision"}
 B --> C["Option A"] & D["Option B"]
 ```
 
-The plugin relies on [@mermaid-js/mermaid-cli](https://www.npmjs.com/package/@mermaid-js/mermaid-cli/) as a npm peer dependency, which allows you to update the Mermaid library independent of the plugin.
+The plugin relies on [@mermaid-js/mermaid-cli](https://www.npmjs.com/package/@mermaid-js/mermaid-cli/) as a npm peer dependency, allowing you to update the Mermaid library independently of the plugin.
 
 The chart creation process can be configured by the optional providing of a `mermaidConfig` object, a `puppeteerConfig` object, and a `themeCSS` string.
+
+To improve the accessibility of the resulting charts, the plugin allows to add a `figcaption` and `alt` text to every diagram definition, introduced by the keywords `figcaption` and `alt`. For example:
+
+~~~markdown
+```mermaid
+flowchart LR
+figcaption This is the figcaption of the image
+alt This is the alt text of the image
+A(["Start"]) --> B{"Decision"}
+B --> C["Option A"] & D["Option B"]
+```
+~~~
+
+will render an `arial-label` for the alt text and a `figcaption` into the resulting `figure`:
+
+```mermaid
+flowchart LR
+figcaption This is the figcaption of the flow chart
+alt This is the alt text of the flow chart
+A(["Start"]) --> B{"Decision"}
+B --> C["Option A"] & D["Option B"]
+```
