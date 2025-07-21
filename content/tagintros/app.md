@@ -1,3 +1,3 @@
 
 
-Whenever someone is sharing their stack of apps and tools, I find that very interesting. Choosing tools, especially as a coder, is a personal thing. Some of the apps I´m using originated from bloggers mentioning their lists of tools. This is my list.
+Choosing apps and tools for your digital workflow is personal. Some of the apps I´m using originated from bloggers mentioning their lists of digital tools, therefore I share my list of *apps* here. I´ve another list with the [*tools*](/blog/tool/) I´ve created myself.
