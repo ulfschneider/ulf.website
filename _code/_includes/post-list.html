@@ -9,12 +9,12 @@
         >
     </div>
     {%- endif -%} {%- if post.data.abstract -%}
-    <p>{{post.data.abstract | markdown_inline }}</p>
-    {%- if stream == true or post.data.docType == "bookmark"%}
+    <div class="content">{{- post.data.abstract | markdown -}}</div>
+    {%- if stream == true or post.data.docType == "bookmark" -%}
     <div aria-hidden="true" class="border-l border-current">&nbsp;</div>
     {%-endif-%} {%- endif -%} {%- if stream == true or post.data.docType ==
-    "bookmark"%}
-    <div class="content stream">{{- post.templateContent -}}</div>
+    "bookmark" -%}
+    <div class="content">{{- post.templateContent -}}</div>
     {%- endif -%}
     <aside class="max-w-prose meta flex flex-wrap flex-row gap-x-md gap-y-xs">
         <span class="flex flex-row flex-wrap gap-x-sm">
