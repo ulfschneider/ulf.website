@@ -27,8 +27,9 @@
                         {%- include "dates.html" -%}{%- include "tags.html" -%}
                     </span>
                 </aside>
-                {%- endif -%} {%- endif -%} {{content}} {%- if postNav != false
-                -%}
+                {%- endif -%} {%- endif -%}
+                <div class="content">{{content}}</div>
+                {%- if postNav != false -%}
                 <div class="max-w-prose my-xl">
                     {%- include "post-nav.html" -%}
                 </div>

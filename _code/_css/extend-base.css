@@ -206,11 +206,6 @@
         }
     }
 
-    main > ul,
-    main > ol {
-        @apply md:outdent-prose-flow;
-    }
-
     /* dl */
 
     dl {
@@ -307,7 +302,8 @@
 
     mark,
     .mark {
-        background: linear-gradient(
+        background:
+            linear-gradient(
                 100deg,
                 rgba(255, 221, 64, 0) 0.9%,
                 rgba(255, 221, 64, 1) 2.4%,
