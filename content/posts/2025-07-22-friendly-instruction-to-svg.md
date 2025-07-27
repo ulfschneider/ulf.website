@@ -1,5 +1,5 @@
 ---
-title: A friendly instruction to SVG
+title: A friendly introduction to SVG
 tags: 
   - code
   - CSS
