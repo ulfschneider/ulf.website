@@ -2,9 +2,10 @@
 title: Unconventional and free stock images
 tags: 
   - journal
-  - bookmark
+bookmark: true
 ---
 A list of unconventional and free stock images by Mel Choyce in her [CSS-Tricks article](https://css-tricks.com/unconventional-stock-image-sources/):
+
 - [British Library](https://unsplash.com/@britishlibrary) (unsplash)
 - [New York Public Library](https://www.nypl.org/research/collections/digital-collections/public-domain)
 - ==[The State Library of New South Wales](https://www.flickr.com/people/statelibraryofnsw/) (flickr), this one is very good for presentations!==
@@ -24,3 +25,7 @@ Added later (not mentioned in Mel´s article):
 - [Stanford Libraries Data Visualization](https://exhibits.stanford.edu/dataviz/), old visualizations which date back into 18th century.
 - [openverse.org](https://openverse.org)
 - [Public Domain Image Archive](https://pdimagearchive.org/)
+
+
+Jul. 27, 2025
+- [Beautiful Public Data](https://www.beautifulpublicdata.com/), curated by Jon Keegan
