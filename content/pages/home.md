@@ -52,6 +52,7 @@ Hello, I´m Ulf Schneider, a software developer and agile coach. This is my webs
 
 <div class="my-2xl">
 <h2>Selected posts</h2>
+<p>Here is a selection of posts I want to highlight. You can find more in the <a href="/blog/">blog</a>.</p>
 <div class="mt-lg">
 {% include "topics.html" topics: topics %}
 </div>

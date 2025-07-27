@@ -4,9 +4,6 @@
     "fontSize": "16px",
     "fontFamily": "system-ui,sans-serif",
     "primaryColor": "#B3D7FF",
-    "primaryTextColor": "#262626",
-    "primaryBorderColor": "#262626",
-    "lineColor": "#262626",
     "noteBkgColor": "#FFDD40",
     "noteTextColor": "#262626",
     "noteBorderColor": "#FFDD40",
@@ -27,17 +24,7 @@
     "pie11": "#C4FAF8",
     "pie12": "#E6E6FA",
     "xyChart": {
-      "plotColorPalette": "#B3D7FF,#FFD6A5,#C3FBD8,#FFCBCB",
-      "backgroundColor": "#f7f7f7",
-      "titleColor": "#262626",
-      "xAxisLabelColor": "#262626",
-      "xAxisTitleColor": "#262626",
-      "xAxisTickColor": "#262626",
-      "xAxisLineColor": "#262626",
-      "yAxisLabelColor": "#262626",
-      "yAxisTitleColor": "#262626",
-      "yAxisTickColor": "#262626",
-      "yAxisLineColor": "#262626"
+      "plotColorPalette": "#B3D7FF,#FFD6A5,#C3FBD8,#FFCBCB"
     }
   }
 }

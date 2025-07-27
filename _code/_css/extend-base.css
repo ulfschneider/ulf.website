@@ -318,6 +318,7 @@
                 rgba(255, 221, 64, 0.3) 7.9%,
                 rgba(255, 221, 64, 0) 15%
             );
+        @apply text-mark-write;
         border-radius: 0.125em;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
@@ -326,9 +327,8 @@
     @media (prefers-color-scheme: dark) {
         mark,
         .mark {
-            background: rgb(255, 221, 64);
             border-radius: 0;
-            @apply text-canvas;
+            @apply bg-mark-canvas text-mark-write;
         }
     }
 

@@ -7,6 +7,8 @@ method to keep any knowledge about the color scheme away from subsequent CSS. */
     --write: #262626;
     --code-canvas: #ddd;
     --code-write: #262626;
+    --mark-canvas: #ffdd41;
+    --mark-write: #262626;
     --button-canvas: #262626;
     --button-write: white;
     --active-button-canvas: var(--primary);

@@ -11,8 +11,8 @@
     }
 
     /* chart.js */
-    figure.chart-js {
-        @apply h-[80vh];
+    .chart-js-container {
+        @apply max-h-[70vh];
     }
 
     /* line list */

@@ -26,6 +26,8 @@ export default {
       write: "var(--write)",
       "code-canvas": "var(--code-canvas)",
       "code-write": "var(--code-write)",
+      "mark-canvas": "var(--mark-canvas)",
+      "mark-write": "var(--mark-write)",
       "button-canvas": "var(--button-canvas)",
       "button-write": "var(--button-write)",
       "active-button-canvas": "var(--active-button-canvas)",
