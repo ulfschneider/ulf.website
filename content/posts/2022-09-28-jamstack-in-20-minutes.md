@@ -133,7 +133,7 @@ Let´s have a look at what a PWA is. I think of a PWA as: <q>You can have an app
 To quote [Aaron Gustafson](https://www.aaron-gustafson.com), Accessibility Strategist at Microsoft:
 
 <blockquote>PWAs start with a great web experience and then enhance that experience for performance, resilience, installation, and engagement.
-<footer>Aaron Gustafson, <cite><a href="https://aneventapart.com/news/post/progressive-web-apps-where-do-i-begin-aea-video">Progressive Web Apps: Where Do I Begin?</a></cite></footer>
+<footer>Aaron Gustafson, <cite><a href="https://www.aaron-gustafson.com/speaking-engagements/progressive-web-apps-where-do-i-begin/">Progressive Web Apps: Where Do I Begin?</a></cite></footer>
 </blockquote>
 
 Have a look at [MishiPay´s](https://mishipay.com) Scan and Go app, which empowers shoppers to scan and pay for their shopping with their smartphones, rather than wasting time queuing at the checkout. 
