@@ -229,7 +229,7 @@ export default async function (eleventyConfig) {
     mdLib.use(markdownItMermaidServer, {
       workingFolder: "_mermaidTmp",
       clearWorkingFolder: true,
-      backgroundColor: "'#f7f7f7'",
+      backgroundColor: "transparent",
       themeCSS: mermaidCSS,
       mermaidConfig: mermaidConfig,
       puppeteerConfig: puppeteerConfig,
