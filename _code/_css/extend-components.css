@@ -345,7 +345,16 @@
 
     /* cooklang */
 
+<<<<<<< Updated upstream
     .cooklang-ingredients .amount-and-unit {
         @apply font-bold inline-block;
+=======
+    .content {
+        > ul,
+        > ol,
+        > blockquote {
+            @apply md:outdent-prose-flow;
+        }
+>>>>>>> Stashed changes
     }
 }

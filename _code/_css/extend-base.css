@@ -249,10 +249,6 @@
         @apply flow-y text-pretty sm:text-pretty meta;
     }
 
-    main > blockquote {
-        @apply md:outdent-prose-flow;
-    }
-
     /* figure */
 
     figure {
