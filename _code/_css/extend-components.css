@@ -4,6 +4,27 @@
         --line-list-ol-marker-diameter: var(--outdent-indent-space);
     }
 
+    /*  content */
+    .content {
+        > :first-child {
+            margin-top: 0;
+            margin-block-start: 0;
+        }
+        > :last-child {
+            margin-bottom: 0;
+            margin-block-end: 0;
+        }
+        > ul,
+        > ol,
+        > blockquote {
+            @apply md:outdent-prose-flow;
+        }
+        ,
+        a {
+            @apply underline;
+        }
+    }
+
     /* cooklang */
 
     .cooklang-ingredients .amount-and-unit {
@@ -351,30 +372,6 @@
 
         ol.footnotes-list:before {
             @apply md:ps-[var(--outdent-indent-space)];
-        }
-    }
-
-    /*  content */
-    .content {
-        > :first-child {
-            margin-top: 0;
-            margin-block-start: 0;
-        }
-        > :last-child {
-            margin-bottom: 0;
-            margin-block-end: 0;
-        }
-    }
-
-    .content {
-        > ul,
-        > ol,
-        > blockquote {
-            @apply md:outdent-prose-flow;
-        }
-        ,
-        a {
-            @apply underline;
         }
     }
 }
