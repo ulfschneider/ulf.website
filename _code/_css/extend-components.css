@@ -366,8 +366,15 @@
         }
     }
 
-    .content > ul,
-    .content > ol {
-        @apply md:outdent-prose-flow;
+    .content {
+        > ul,
+        > ol,
+        > blockquote {
+            @apply md:outdent-prose-flow;
+        }
+        ,
+        a {
+            @apply underline;
+        }
     }
 }

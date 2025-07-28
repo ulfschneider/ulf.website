@@ -114,10 +114,6 @@
         @apply scroll-my-md;
     }
 
-    main a {
-        @apply underline;
-    }
-
     h1,
     .h1 {
         @apply text-base font-bold;
@@ -242,10 +238,6 @@
     blockquote > header,
     blockquote > footer {
         @apply flow-y text-pretty sm:text-pretty meta;
-    }
-
-    main > blockquote {
-        @apply md:outdent-prose-flow;
     }
 
     /* figure */
