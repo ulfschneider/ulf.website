@@ -26,6 +26,7 @@ topics:
       - /2023-06-29-the-lost-interview/
   - title: Emil´s drawings
     urls:
+      - /2025-07-28-tosbot/
       - /2021-10-22-a-smiling-unicorn-with-a-kite/
       - /2020-03-18-emil-pictured-the-coronavirus/
       - /2021-08-15-the-stripling-man/
