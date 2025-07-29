@@ -16,16 +16,14 @@
     "bookmark" -%}
     <div class="content">{{- post.templateContent -}}</div>
     {%- endif -%}
-    <aside class="max-w-prose meta flex flex-wrap flex-row gap-x-md gap-y-xs">
-        <span class="flex flex-row flex-wrap gap-x-sm">
-            <span aria-hidden="true">◼</span>
-            <div class="flex flex-row gap-x-md flex-wrap">
-                {%- include "dates.html" publishedDate: post.data.publishedDate
-                published: post.data.published modifiedDate:
-                post.data.modifiedData modified: post.data.modified -%}{%-
-                include "tags.html" tags: post.data.tags -%}
-            </div>
-        </span>
+    <aside class="max-w-prose meta flex flex-row gap-x-sm gap-y-xs">
+        <span aria-hidden="true">◼</span>
+        <div class="flex flex-row gap-x-md gap-y-xs flex-wrap">
+            {%- include "dates.html" publishedDate: post.data.publishedDate
+            published: post.data.published modifiedDate: post.data.modifiedData
+            modified: post.data.modified -%}{%- include "tags.html" tags:
+            post.data.tags -%}
+        </div>
     </aside>
 </article>
 {%- endfor -%}
