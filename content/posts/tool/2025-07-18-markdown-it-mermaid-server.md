@@ -23,7 +23,7 @@ A(["Start"]) --> B{"Decision"}
 B --> C["Option A"] & D["Option B"]
 ```
 
-The plugin relies on [@mermaid-js/mermaid-cli](https://www.npmjs.com/package/@mermaid-js/mermaid-cli/) as a npm peer dependency [^peer], allowing you to update the Mermaid library independently of the plugin.
+The plugin relies on [@mermaid-js/mermaid-cli](https://www.npmjs.com/package/@mermaid-js/mermaid-cli/) as a npm peer dependency,[^peer] allowing you to update the Mermaid library independently of the plugin.
 
 The chart creation process can be configured by the optional providing of a `mermaidConfig` object, a `puppeteerConfig` object, and a `themeCSS` string.
 
