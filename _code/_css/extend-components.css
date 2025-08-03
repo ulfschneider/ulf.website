@@ -32,7 +32,7 @@
     }
 
     .mermaid svg {
-        background: #f7f7f7;
+        background: var(--mermaid-canvas);
     }
 
     /* chart.js */

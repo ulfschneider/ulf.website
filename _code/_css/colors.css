@@ -17,6 +17,7 @@ method to keep any knowledge about the color scheme away from subsequent CSS. */
     --field-write: var(--write);
     --select-canvas: var(--primary);
     --select-write: white;
+    --mermaid-canvas: #f7f7f7;
     --primary: #007aff;
     --meta: #777;
     --orange: orange;
@@ -41,6 +42,7 @@ method to keep any knowledge about the color scheme away from subsequent CSS. */
         --field-write: var(--write);
         --select-canvas: light-dark(#007aff, #29c1ff);
         --select-write: white;
+        --mermaid-canvas: light-dark(#f7f7f7, #c3c3c3);
         --primary: light-dark(#007aff, #29c1ff);
         --meta: light-dark(#777, #999);
         --orange: orange;
