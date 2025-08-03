@@ -5,6 +5,16 @@ tags: [sports, video]
 Please also check [favorite HIIT workouts](/2021-07-09-hiit-workouts/).
 
 <figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4pfCBO3BGvg?si=UQuDTa82cZH9Ie-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>10 Min. Daily Mobility Routine for all Levels | Do this Stretch every day (to stay flexible).<br>I did this with Emil and both of us liked it.</figcaption>
+</figure>
+
+<figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HzXkMnvqojE?si=7hG1WwKWzL-LgFW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>Stretches for Lower Back Pain Relief & Tight Hips | 15 Min. Recovery and flexibility<br>I did this one as well together with Emil and we enjoyed it.</figcaption>
+</figure>
+
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xfHSq-Fmm50?si=DdR28if4kb4GmI6j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <figcaption> Yoga Ganzkörper Workout | stark, flexibel & ästhetisch | 25 Min. Strong Elegance Flow 🖤</figcaption>
 </figure>
