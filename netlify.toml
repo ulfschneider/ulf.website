@@ -1,7 +1,4 @@
 
-[build]
-command = "./playwright-setup.sh && npm run build"
-
 # Show a custom 404
 [[redirects]]
 from = "/*"
