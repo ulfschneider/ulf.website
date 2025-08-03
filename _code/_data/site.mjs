@@ -7,7 +7,7 @@ const HTML_VERSION = 2;
 const JSON_VERSION = 2;
 const IMAGE_VERSION = 2;
 const FONT_VERSION = 1;
-const CSS_VERSION = 62;
+const CSS_VERSION = 63;
 
 const hostname =
   process.env.ELEVENTY_RUN_MODE === "serve"
