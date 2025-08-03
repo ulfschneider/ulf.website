@@ -19,8 +19,6 @@ import markdownItCooklang from "markdown-it-cooklang";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItFitVids from "markdown-it-fitvids";
 import markdownItMermaidServer from "markdown-it-mermaid-server";
-import mermaidConfig from "./_code/_mermaid/mermaid.config.json" with { type: "json" };
-import puppeteerConfig from "./_code/_mermaid/mermaid.puppeteer.config.json" with { type: "json" };
 import { full as markdownItEmoji } from "markdown-it-emoji";
 import markdownItMathjax from "markdown-it-mathjax3";
 import markdownItContainer from "markdown-it-container";
@@ -40,7 +38,7 @@ import dayjs from "dayjs";
 
 import resolveConfig from "./node_modules/tailwindcss/resolveConfig.js";
 import myTailwindConfig from "./tailwind.config.js";
-import { getRandomValues } from "node:crypto";
+
 const tailwindConfig = resolveConfig(myTailwindConfig);
 
 export default async function (eleventyConfig) {
@@ -223,16 +221,9 @@ export default async function (eleventyConfig) {
     mdLib.use(markdownItScrolltable);
 
     eleventyConfig.ignores.add("_mermaidTmp/");
-    const mermaidCSS = fs
-      .readFileSync("./_code/_mermaid/mermaid.css")
-      .toString();
     mdLib.use(markdownItMermaidServer, {
       workingFolder: "_mermaidTmp",
       clearWorkingFolder: true,
-      backgroundColor: "transparent",
-      themeCSS: mermaidCSS,
-      mermaidConfig: mermaidConfig,
-      puppeteerConfig: puppeteerConfig,
       throwOnError: true,
     });
 
