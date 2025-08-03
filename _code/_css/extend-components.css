@@ -31,6 +31,10 @@
         @apply font-bold inline-block;
     }
 
+    .mermaid svg {
+        background: #f7f7f7;
+    }
+
     /* chart.js */
     .chart-js-container {
         @apply max-h-[70vh];
