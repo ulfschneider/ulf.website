@@ -15,6 +15,7 @@ export default {
     { pattern: /cooklang/ },
     { pattern: /mermaid/ },
     { pattern: /chart-js/ },
+    { pattern: /echarts/ },
   ],
 
   theme: {

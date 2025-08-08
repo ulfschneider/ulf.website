@@ -151,6 +151,7 @@
             border: var(--radio-border-width) solid currentColor;
             border-radius: 50%;
             cursor: pointer;
+            @apply shrink-0;
         }
         input[type="radio"]:not(.native):checked::before {
             content: "";
@@ -198,6 +199,7 @@
             border: var(--check-border-width) solid currentColor;
             border-radius: 0;
             cursor: pointer;
+            @apply shrink-0;
         }
         input[type="checkbox"]:not(.native):not([switch]):checked::before {
             content: "";

@@ -19,10 +19,10 @@ import markdownItCooklang from "markdown-it-cooklang";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItFitVids from "markdown-it-fitvids";
 import markdownItMermaidServer from "markdown-it-mermaid-server";
+import markdownItEcharts from "markdown-it-responsive-echarts";
 import { full as markdownItEmoji } from "markdown-it-emoji";
 import markdownItMathjax from "markdown-it-mathjax3";
 import markdownItContainer from "markdown-it-container";
-import * as fs from "node:fs";
 
 import site from "./_code/_data/site.mjs";
 import {
@@ -225,6 +225,107 @@ export default async function (eleventyConfig) {
       workingFolder: "_mermaidTmp",
       clearWorkingFolder: true,
       throwOnError: true,
+    });
+
+    /*
+    mdLib.use(markdownItChartJs, {
+      verbose: true,
+      defaults: {
+        font: {
+          size: 18,
+          family: "'iA Writer Quattro', system-ui, sans-serif",
+        },
+      },
+    });*/
+
+    mdLib.use(markdownItEcharts, {
+      defaults: {
+        color: [
+          "#007affa0",
+          "#ffa500a0",
+          "#008000a0",
+          "#9370DBa0",
+          "#FFD700a0",
+          "#ff0000a0",
+        ],
+        aria: {
+          show: true,
+        },
+        toolbox: {
+          feature: {
+            restore: {},
+            saveAsImage: {},
+          },
+        },
+        title: {
+          textStyle: {
+            fontFamily: "'iA Writer Quattro', system-ui, sans-serif",
+            fontSize: 18,
+            color: "#262626",
+          },
+        },
+        legend: {
+          textStyle: {
+            fontFamily: "'iA Writer Quattro', system-ui, sans-serif",
+            fontSize: 18,
+            color: "#262626",
+          },
+        },
+        textStyle: {
+          fontFamily: "'iA Writer Quattro', system-ui, sans-serif",
+          fontSize: 18,
+          color: "#262626",
+        },
+        series: {
+          label: {
+            show: true,
+            textStyle: {
+              fontFamily: "'iA Writer Quattro', system-ui, sans-serif",
+              fontSize: 18,
+              color: "#262626",
+            },
+          },
+          markPoint: {
+            label: {
+              show: true,
+              textStyle: {
+                fontFamily: "'iA Writer Quattro', system-ui, sans-serif",
+                fontSize: 18,
+                color: "#262626",
+              },
+            },
+          },
+        },
+        darkMode: {
+          title: {
+            textStyle: {
+              color: "#c3c3c3",
+            },
+          },
+          textStyle: {
+            color: "#c3c3c3",
+          },
+          legend: {
+            textStyle: {
+              color: "#c3c3c3",
+            },
+          },
+          series: {
+            label: {
+              textStyle: {
+                color: "#c3c3c3",
+              },
+            },
+            markPoint: {
+              label: {
+                textStyle: {
+                  color: "#c3c3c3",
+                },
+              },
+            },
+          },
+        },
+      },
     });
 
     mdLib.use(markdownItFootnote);

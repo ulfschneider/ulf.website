@@ -35,9 +35,27 @@
         background: var(--mermaid-canvas);
     }
 
+    .mermaid svg[aria-roledescription="xychart"] > g > rect {
+        fill: var(--mermaid-canvas) !important;
+    }
+
     /* chart.js */
     .chart-js-container {
-        @apply max-h-[70vh];
+        @apply max-h-[60vh];
+    }
+
+    .chart-js-container[data-aspect-ratio="1"] {
+        @apply max-w-prose;
+    }
+
+    /* echarts */
+    .echarts-container {
+        @apply h-[60vh] w-full;
+        &.pie {
+            height: unset;
+            aspect-ratio: 1 / 1;
+            @apply max-w-prose max-h-[60vh];
+        }
     }
 
     /* line list */

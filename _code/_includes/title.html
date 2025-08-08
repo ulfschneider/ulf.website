@@ -1,7 +1,7 @@
 <div class="flow">
-    <h1 class="sm:text-balance">{{title | markdown_inline }}</h1>
+    <h1 class="sm:text-balance content">{{title | markdown_inline }}</h1>
     {%- if abstract -%}
-    <p class="flow-y">{{abstract | markdown_inline }}</p>
+    <p class="flow-y content">{{abstract | markdown_inline }}</p>
     {%- endif -%} {%- if isPost -%}
     <aside class="meta flex flex-wrap flex-row gap-x-md gap-y-xs">
         {%- include "dates.html" -%}{%- include "tags.html" -%}
