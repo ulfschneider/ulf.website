@@ -36,7 +36,7 @@
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mark": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
-    "markdown-it-mermaid-server": "^0.8.4",
+    "markdown-it-mermaid-server": "^0.8.5",
     "markdown-it-responsive-echarts": "^0.2.0",
     "markdown-it-rss-friendly-github-alerts": "^0.1.6",
     "markdown-it-scrolltable": "^0.1.6",
