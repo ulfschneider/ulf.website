@@ -1,6 +1,8 @@
 ---
 title: cached-commit-date
-tags: tool
+tags: 
+  - tool
+  - code
 ---
 A [npm package](https://www.npmjs.com/package/cached-commit-date) to get the latest commit date for a given file path. As getting the commit date is a time consuming step (like 100 ms) those dates are cached so that subsequent queries for a commit date of the same file path would use the cache. I´m using it in my 11ty-powered website to show a posts date of modification.
 

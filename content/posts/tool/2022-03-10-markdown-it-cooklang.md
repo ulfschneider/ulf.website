@@ -1,6 +1,8 @@
 ---
 title: markdown-it-cooklang
-tags: tool
+tags: 
+  - tool
+  - code
 ---
 A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-cooklang) that provides an incomplete implementation of [cooklang.org](https://cooklang.org).
 

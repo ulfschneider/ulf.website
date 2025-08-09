@@ -1,7 +1,9 @@
 ---
 title: markdown-it-mermaid-server
 abstract: A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-mermaid-server) to render [Mermaid](https://mermaid.js.org) charts on the server.
-tags: tool
+tags: 
+  - tool
+  - code
 ---
 [<cite>markdown-it-mermaid-server</cite>](https://www.npmjs.com/package/markdown-it-mermaid-server) is a markdown-it plugin that generates Mermaid diagrams on the server and references them as inline SVG images in the Markdown-rendered HTML documents. The approach eliminates the need for Mermaid code on the browser client.
 

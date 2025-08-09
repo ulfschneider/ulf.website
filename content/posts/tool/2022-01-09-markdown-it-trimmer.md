@@ -1,6 +1,8 @@
 ---
 title: markdown-it-trimmer
-tags: tool
+tags: 
+  - tool
+  - code
 ---
 
 A [markdown-it plugin](https://www.npmjs.com/package/markdown-it-trimmer) to trim whitespace from the resulting markup. The trimming occurs during the rendering process of the markup.

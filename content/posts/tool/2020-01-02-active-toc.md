@@ -1,7 +1,9 @@
 ---
 layout: blank
 title: active-toc
-tags: tool
+tags: 
+  - tool
+  - code
 abstract: Highlight the entries of your table of contents while scrolling
 ---
 
