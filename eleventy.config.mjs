@@ -248,6 +248,7 @@ export default async function (eleventyConfig) {
           "#FFD700a0",
           "#ff0000a0",
         ],
+        renderer: "svg",
         aria: {
           show: true,
         },
