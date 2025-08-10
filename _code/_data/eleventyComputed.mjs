@@ -33,6 +33,7 @@ export default {
     }
     return data.title;
   },
+  now: () => Date.now(),
   docType: (data) => {
     if (data.docType) {
       return data.docType;
@@ -40,6 +41,12 @@ export default {
       return "bookmark";
     } else if (data.isPage) {
       return "page";
+    } else if (
+      data.layout == "image" ||
+      data.page.inputPath.includes("/emil-drawing/") ||
+      data.image == true
+    ) {
+      return "image";
     } else {
       return "post";
     }
