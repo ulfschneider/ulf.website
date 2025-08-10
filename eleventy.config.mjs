@@ -248,7 +248,9 @@ export default async function (eleventyConfig) {
           "#FFD700a0",
           "#ff0000a0",
         ],
-        renderer: "svg",
+        renderOptions: {
+          renderer: "svg",
+        },
         aria: {
           show: true,
         },
@@ -256,6 +258,7 @@ export default async function (eleventyConfig) {
           feature: {
             restore: {},
             saveAsImage: {},
+            dataView: {},
           },
         },
         title: {
@@ -279,7 +282,6 @@ export default async function (eleventyConfig) {
         },
         series: {
           label: {
-            show: true,
             textStyle: {
               fontFamily: "'iA Writer Quattro', system-ui, sans-serif",
               fontSize: 18,
@@ -288,7 +290,6 @@ export default async function (eleventyConfig) {
           },
           markPoint: {
             label: {
-              show: true,
               textStyle: {
                 fontFamily: "'iA Writer Quattro', system-ui, sans-serif",
                 fontSize: 18,
@@ -297,7 +298,7 @@ export default async function (eleventyConfig) {
             },
           },
         },
-        darkMode: {
+        darkModeConfig: {
           title: {
             textStyle: {
               color: "#c3c3c3",
@@ -311,10 +312,54 @@ export default async function (eleventyConfig) {
               color: "#c3c3c3",
             },
           },
+          xAxis: {
+            axisLine: {
+              lineStyle: {
+                color: "#888",
+              },
+            },
+            markLine: {
+              lineStyle: {
+                color: "#888",
+              },
+            },
+            splitLine: {
+              lineStyle: {
+                color: "#888",
+              },
+            },
+          },
+          yAxis: {
+            axisLine: {
+              lineStyle: {
+                color: "#888",
+              },
+            },
+            markLine: {
+              lineStyle: {
+                color: "#888",
+              },
+            },
+            splitLine: {
+              lineStyle: {
+                color: "#888",
+              },
+            },
+          },
           series: {
             label: {
               textStyle: {
                 color: "#c3c3c3",
+              },
+            },
+            markLine: {
+              lineStyle: {
+                color: "#888",
+              },
+            },
+            splitLine: {
+              lineStyle: {
+                color: "#888",
               },
             },
             markPoint: {
