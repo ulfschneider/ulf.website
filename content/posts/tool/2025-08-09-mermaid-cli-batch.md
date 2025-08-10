@@ -1,6 +1,6 @@
 ---
 title: mermaid-cli-batch
-abstract: A command line tool to process multiple diagrams in one pass into SVG diagrams.
+abstract: A command line tool to process multiple diagrams in one pass into SVG  images.
 tags: 
   - tool
   - code
