@@ -1,0 +1,1 @@
+For several years I´m riding Fairlight bicycles. I started with their flagship, a fast road bike named [Strael](/blog/strael/). Later, the Secan, a fast gravel bike joined my Strael. You find here what I´ve done with the Secan. Links to the Strael might as well appear.
