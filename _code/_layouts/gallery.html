@@ -14,7 +14,10 @@ layout: default
 
 {%- assign gallery = collections.imagesByTag[tagPath] -%} {%- assign title =
 collections.imagesByTag[tagPath].title -%} {%- assign tag =
-collections.imagesByTag[tagPath].tag -%}
+collections.imagesByTag[tagPath].tag -%} {%- if content != "" or
+gallery.tagIntro != nil and gallery.tagIntro != "" -%}
+<div class="my-2xl">{{content}}{{gallery.tagIntro}}</div>
+{%- endif -%}
 
 <h1 class="my-0">
     {%- if gallery.multipleYears == true -%}
@@ -34,10 +37,6 @@ collections.imagesByTag[tagPath].tag -%}
     <span>All posts</span>
     {%- endif -%}
 </h1>
-
-{%- if content != "" or gallery.tagIntro != nil and gallery.tagIntro != "" -%}
-<div class="my-2xl">{{content}}{{gallery.tagIntro}}</div>
-{%- endif -%}
 
 <div
     class="grid grid-masonry gap-xl my-xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"

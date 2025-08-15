@@ -22,6 +22,12 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
         </div>
     </div>
     <div class="xl:basis-8/12">
+        {%- if content != "" or posts.tagIntro != nil and posts.tagIntro != ""
+        -%}
+        <div class="my-2xl xl:mt-0 xl:mb-2xl">
+            {{content}}{{posts.tagIntro}}
+        </div>
+        {%- endif -%}
         <h1 class="mt-0 flow-b">
             {%- if posts.multipleYears == true -%}
             <span>{{posts.fromYear}} – {{posts.toYear }}: </span>
@@ -61,11 +67,7 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
             <a href="/blog{{posts.oldest.key}}">Oldest</a>
             {%- endif -%}
         </nav>
-        {%- endif -%}{%- endif -%} {%- if content != "" or posts.tagIntro != nil
-        and posts.tagIntro != "" -%}
-        <div class="my-2xl">{{content}}{{posts.tagIntro}}</div>
-        {%- endif -%}
-
+        {%- endif -%}{%- endif -%}
         <div class="mt-xl flow-xl">
             {%- include "post-list.html" posts: posts.items -%}
         </div>
