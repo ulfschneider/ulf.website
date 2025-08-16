@@ -35,31 +35,31 @@
     }
 
     .flow-xs > * + * {
-        margin-block-start: theme(spacing.xs);
+        margin-block-start: theme("spacing.xs");
     }
 
     .flow-sm > * + * {
-        margin-block-start: theme(spacing.sm);
+        margin-block-start: theme("spacing.sm");
     }
 
     .flow-base > * + * {
-        margin-block-start: theme(spacing.base);
+        margin-block-start: theme("spacing.base");
     }
 
     .flow-md > * + * {
-        margin-block-start: theme(spacing.md);
+        margin-block-start: theme("spacing.md");
     }
 
     .flow-lg > * + * {
-        margin-block-start: theme(spacing.lg);
+        margin-block-start: theme("spacing.lg");
     }
 
     .flow-xl > * + * {
-        margin-block-start: theme(spacing.xl);
+        margin-block-start: theme("spacing.xl");
     }
 
     .flow-2xl > * + * {
-        margin-block-start: theme(spacing.2xl);
+        margin-block-start: theme("spacing.2xl");
     }
 
     .meta {

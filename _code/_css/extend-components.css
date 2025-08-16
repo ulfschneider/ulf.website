@@ -31,13 +31,24 @@
         @apply font-bold inline-block;
     }
 
-    .mermaid svg {
-        background: var(--mermaid-canvas);
-        max-width: 100%;
-    }
+    .mermaid {
+        svg {
+            background: var(--mermaid-canvas);
+            height: unset !important;
+            width: unset !important;
+            max-width: 100%;
+        }
+        svg[aria-roledescription="xychart"] > g > rect {
+            fill: var(--mermaid-canvas) !important;
+        }
 
-    .mermaid svg[aria-roledescription="xychart"] > g > rect {
-        fill: var(--mermaid-canvas) !important;
+        svg[aria-roledescription="radar"] {
+            aspect-ratio: 1 !important;
+        }
+
+        svg[aria-roledescription="pie"] {
+            aspect-ratio: 1 !important;
+        }
     }
 
     /* chart.js */
