@@ -5,15 +5,14 @@ showTitle: false
 topics:
   - title: Web
     urls:
+      - /2020-08-21-my-approach-to-accessibility/
+      - /2023-08-01-serverless/
+      - /2022-09-28-jamstack-in-20-minutes/
       - /2025-02-13-light-dark-progressive-enhancement/
       - /2024-07-20-prerender-pages/
-      - /2022-09-28-jamstack-in-20-minutes/
       - /2024-04-26-pagefind/
       - /2023-01-24-my-first-attempt-with-tailwind-css/
-      - /2023-08-01-serverless/
       - /2024-03-15-toggles-suck/
-      - /2020-08-21-my-approach-to-accessibility/
-      - /2024-10-28-responsive-tablist/
       - /2023-12-29-styling-check-boxes-and-radio-buttons/
       - /2023-01-02-size-images/
   - title: Agile
