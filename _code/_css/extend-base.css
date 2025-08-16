@@ -4,19 +4,19 @@
         --outdent-indent-space: 2rem;
     }
 
-    @media (min-width: theme(screens.md)) {
+    @media (min-width: theme("screens.md")) {
         :root {
             font-size: 18px;
         }
     }
 
-    @media (min-width: theme(screens.lg)) {
+    @media (min-width: theme("screens.lg")) {
         :root {
             font-size: 18px;
         }
     }
 
-    @media (min-width: theme(screens.xl)) {
+    @media (min-width: theme("screens.xl")) {
         :root {
             font-size: 19px;
         }
@@ -37,7 +37,7 @@
 
     * {
         scrollbar-width: var(--scrollbar-width);
-        scrollbar-color: theme(colors.write) transparent;
+        scrollbar-color: theme("colors.write") transparent;
     }
 
     /* Chrome, Edge, and Safari */
@@ -45,7 +45,7 @@
         width: var(--scrollbar-width);
     }
     *::-webkit-scrollbar-thumb {
-        background: theme(colors.write);
+        background: theme("colors.write");
     }
 
     *::-webkit-scrollbar-background {
@@ -144,6 +144,27 @@
         @apply text-base font-bold mt-lg flow-b;
     }
 
+    /* details summary */
+
+    details {
+        > summary {
+            @apply cursor-pointer list-none;
+            &::before {
+                @apply inline-block !pe-[0.5em] min-w-[var(--outdent-indent-space)] content-["▶"] text-smaller;
+            }
+            &::-webkit-details-marker {
+                @apply hidden;
+            }
+            > * {
+                @apply inline;
+            }
+        }
+    }
+
+    details[open] > summary::before {
+        @apply content-["▼"];
+    }
+
     /* ul, ol */
     ol,
     ul {
@@ -230,7 +251,7 @@
 
     blockquote {
         padding-inline-start: calc(
-            var(--outdent-indent-space) - theme(borderWidth.2)
+            var(--outdent-indent-space) - theme("borderWidth.2")
         );
         @apply my-lg border-s-2 border-current;
     }

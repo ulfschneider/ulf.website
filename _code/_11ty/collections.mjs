@@ -240,7 +240,11 @@ export function openGraphImage(html) {
     if (
       firstImg.src.indexOf(site.origin) == -1 &&
       firstImg.src.indexOf("//") == -1 &&
-      (ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif")
+      (ext == ".jpg" ||
+        ext == ".jpeg" ||
+        ext == ".png" ||
+        ext == ".gif" ||
+        ext == ".webp")
     ) {
       return {
         src: site.origin + firstImg.src,

@@ -11,6 +11,7 @@ import markdownItDeflist from "markdown-it-deflist";
 import markdownItMark from "markdown-it-mark";
 import markdownItRSSFriendlyGitHubAlerts from "markdown-it-rss-friendly-github-alerts";
 import markdownItTableOfContents from "markdown-it-table-of-contents";
+import markdownItCollapsible from "markdown-it-collapsible";
 import markdownItAnchor from "markdown-it-anchor";
 import markdownItTrimmer from "markdown-it-trimmer";
 import markdownItScrolltable from "markdown-it-scrolltable";
@@ -213,7 +214,11 @@ export default async function (eleventyConfig) {
     mdLib.use(markdownItMark);
     mdLib.use(markdownItRSSFriendlyGitHubAlerts);
     mdLib.use(markdownItAnchor);
-    mdLib.use(markdownItTableOfContents, { listType: "ol" });
+    mdLib.use(markdownItCollapsible);
+    mdLib.use(markdownItTableOfContents, {
+      listType: "ol",
+      includeLevel: [2, 3],
+    });
     mdLib.use(markdownItTrimmer);
     mdLib.use(markdownItContainer);
     mdLib.use(markdownItEmoji);

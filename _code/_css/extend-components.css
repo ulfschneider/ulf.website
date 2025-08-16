@@ -16,10 +16,10 @@
         }
         > ul,
         > ol,
+        > details > summary,
         > blockquote {
             @apply md:outdent-prose-flow;
         }
-        ,
         a {
             @apply underline;
         }
@@ -33,6 +33,7 @@
 
     .mermaid svg {
         background: var(--mermaid-canvas);
+        max-width: 100%;
     }
 
     .mermaid svg[aria-roledescription="xychart"] > g > rect {
@@ -55,6 +56,19 @@
             height: unset;
             aspect-ratio: 1 / 1;
             @apply max-w-prose max-h-[60vh];
+        }
+    }
+
+    /* page layout */
+    html.post {
+        h1 {
+            @apply !text-xl sm:!text-3xl tracking-tight;
+        }
+        h2 {
+            @apply !text-lg tracking-tight;
+        }
+        h3 {
+            @apply !text-md tracking-tight;
         }
     }
 
