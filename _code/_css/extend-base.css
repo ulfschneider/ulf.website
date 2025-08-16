@@ -150,7 +150,7 @@
         > summary {
             @apply cursor-pointer list-none;
             &::before {
-                @apply inline-block !pe-[0.5em] min-w-[var(--outdent-indent-space)] content-["▶"] text-smaller;
+                @apply inline-block !pe-[0.5em] min-w-[var(--outdent-indent-space)] content-[">"] text-smaller;
             }
             &::-webkit-details-marker {
                 @apply hidden;
