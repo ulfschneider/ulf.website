@@ -34,30 +34,14 @@
     .mermaid {
         svg {
             background: var(--mermaid-canvas);
-            height: unset !important;
-            width: unset !important;
-            max-width: 100%;
+            @apply max-h-[60vh] max-w-full;
         }
         svg[aria-roledescription="xychart"] > g > rect {
             fill: var(--mermaid-canvas) !important;
         }
-
-        svg[aria-roledescription="radar"] {
-            aspect-ratio: 1 !important;
+        svg[data-aspect-ratio="1"] {
+            @apply max-w-prose;
         }
-
-        svg[aria-roledescription="pie"] {
-            aspect-ratio: 1 !important;
-        }
-    }
-
-    /* chart.js */
-    .chart-js-container {
-        @apply max-h-[60vh];
-    }
-
-    .chart-js-container[data-aspect-ratio="1"] {
-        @apply max-w-prose;
     }
 
     /* echarts */

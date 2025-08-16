@@ -14,7 +14,6 @@ export default {
     { pattern: /footnote/ },
     { pattern: /cooklang/ },
     { pattern: /mermaid/ },
-    { pattern: /chart-js/ },
     { pattern: /echarts/ },
   ],
 
