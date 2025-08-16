@@ -3,7 +3,7 @@ title: Serverless
 tags: code
 ---
 
-In our team everyone can ask to have a concept or anything of interest explained by a colleague who might know _at least something_ about it. It´s really not formal – it´s more that we are trying to help each other to understand the things around us better. This time it is on me to say something about _Serverless_.
+In our team everyone can ask to have a concept or anything of interest explained by a colleague who might know _at least something_ about it. It´s not formal – it´s more that we are trying to help each other to understand the things around us better. This time it is on me to say something about _Serverless_.
 
 Here are my prepared materials: <a href="/assets/serverless/index.htm"><cite>Serverless</cite></a>
 
@@ -21,4 +21,3 @@ This presentation discusses the concept of serverless computing and its evolutio
 - Serverless covers various aspects, such as functions, storage, authentication, monitoring, and alerting, putting the focus on business logic.
 - Serverless is known for its reliability, speed, and global availability.
 
-This presentation encourages us to consider the shift to serverless as a significant advancement in cloud computing.
