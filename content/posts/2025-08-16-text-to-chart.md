@@ -369,6 +369,13 @@ const config = {
         { value: 3, name: 'Family' },
         { value: 45, name: 'Nose' }
       ],
+      label: {
+        show: true,
+        formatter: '{b}: {c} ≈ {d}%'
+        // {b} = data name
+        // {c} = raw value
+        // {d} = percentage
+      }
   }
   ]
 };
