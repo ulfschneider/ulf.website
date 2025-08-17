@@ -47,7 +47,8 @@
     /* echarts */
     .echarts-container {
         @apply h-[60vh] w-full;
-        &.pie {
+        &.pie,
+        &.radar {
             height: unset;
             aspect-ratio: 1 / 1;
             @apply max-w-prose max-h-[60vh];

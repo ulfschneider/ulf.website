@@ -3,7 +3,7 @@ title: Text-to-Chart
 abstract: |
   Text-to-chart is the process of describing a chart or diagram in text form,  and letting software render the actual output. I´ve been investigating the topic by examining [Mermaid](https://mermaid.js.org), a free software library created in 2014 by Knut Sveidqvist with a focus on *development related charts*, and [ECharts](https://echarts.apache.org/), a flexible general-purpose diagramming solution that follows the code-to-chart approach. Unlike Mermaid, which uses a domain-specific language, ECharts uses JavaScript to describe the diagrams it renders.
 
-  Along the way I couldn´t resist to create two markdown-it plugins which allow to integrate the two charting solutions into your [Markdown](https://daringfireball.net/projects/markdown/syntax) writing:
+  Along the way I couldn´t resist to create two markdown-it plugins which allow to integrate the charting solutions into your [Markdown](https://daringfireball.net/projects/markdown/syntax) writing:
 
   - [markdown-it-mermaid-server](https://www.npmjs.com/package/markdown-it-mermaid-server), and
   - [markdown-it-responsive-echarts](https://www.npmjs.com/package/markdown-it-responsive-echarts).
