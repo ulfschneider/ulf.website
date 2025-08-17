@@ -366,7 +366,7 @@ const config = {
   series: [
     {
       type: 'pie',
-      radius: '70%',
+      radius: containerWidth > 600 ? '70%' : '50%',
       data: [
         { value: 2, name: 'Friends' },
         { value: 3, name: 'Family' },
@@ -397,7 +397,7 @@ const config = {
   series: [
     {
       type: 'pie',
-      radius: '70%',
+      radius: containerWidth > 600 ? '70%' : '50%',
       data: [
         { value: 2, name: 'Friends' },
         { value: 3, name: 'Family' },
