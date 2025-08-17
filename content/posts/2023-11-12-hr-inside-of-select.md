@@ -1,5 +1,5 @@
 ---
-title: hr tags inside of the select options list
+title:  Horizontal rulers with `<hr>` tags inside of the `<select>` `<option>` list
 tags: 
   - til
   - code
