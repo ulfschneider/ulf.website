@@ -232,17 +232,6 @@ export default async function (eleventyConfig) {
       throwOnError: true,
     });
 
-    /*
-    mdLib.use(markdownItChartJs, {
-      verbose: true,
-      defaults: {
-        font: {
-          size: 18,
-          family: "'iA Writer Quattro', system-ui, sans-serif",
-        },
-      },
-    });*/
-
     mdLib.use(markdownItEcharts, {
       defaults: {
         color: [
@@ -276,7 +265,7 @@ export default async function (eleventyConfig) {
         legend: {
           textStyle: {
             fontFamily: "'iA Writer Quattro', system-ui, sans-serif",
-            fontSize: 18,
+            fontSize: 16,
             color: "#262626",
           },
         },
@@ -285,11 +274,24 @@ export default async function (eleventyConfig) {
           fontSize: 18,
           color: "#262626",
         },
+        radar: {
+          name: {
+            textStyle: {
+              color: "#262626",
+            },
+          },
+          splitLine: {
+            show: false,
+          },
+          splitArea: {
+            show: false,
+          },
+        },
         series: {
           label: {
             textStyle: {
               fontFamily: "'iA Writer Quattro', system-ui, sans-serif",
-              fontSize: 18,
+              fontSize: 16,
               color: "#262626",
             },
           },
@@ -297,7 +299,7 @@ export default async function (eleventyConfig) {
             label: {
               textStyle: {
                 fontFamily: "'iA Writer Quattro', system-ui, sans-serif",
-                fontSize: 18,
+                fontSize: 16,
                 color: "#262626",
               },
             },
@@ -309,6 +311,13 @@ export default async function (eleventyConfig) {
               color: "#c3c3c3",
             },
           },
+          radar: {
+            name: {
+              textStyle: {
+                color: "#c3c3c3",
+              },
+            },
+          },
           textStyle: {
             color: "#c3c3c3",
           },
@@ -317,41 +326,12 @@ export default async function (eleventyConfig) {
               color: "#c3c3c3",
             },
           },
-          xAxis: {
-            axisLine: {
-              lineStyle: {
-                color: "#888",
-              },
-            },
-            markLine: {
-              lineStyle: {
-                color: "#888",
-              },
-            },
-            splitLine: {
-              lineStyle: {
-                color: "#888",
-              },
-            },
-          },
-          yAxis: {
-            axisLine: {
-              lineStyle: {
-                color: "#888",
-              },
-            },
-            markLine: {
-              lineStyle: {
-                color: "#888",
-              },
-            },
-            splitLine: {
-              lineStyle: {
-                color: "#888",
-              },
-            },
-          },
           series: {
+            name: {
+              textStyle: {
+                color: "#c3c3c3",
+              },
+            },
             label: {
               textStyle: {
                 color: "#c3c3c3",
