@@ -1,7 +1,7 @@
 ---
 permalink: /
 layout: default
-title: Hello
+title: Ulf Schneider
 topics:
   - title: Web
     urls:

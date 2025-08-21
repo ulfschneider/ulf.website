@@ -274,6 +274,10 @@ export default async function (eleventyConfig) {
           fontSize: 18,
           color: "#262626",
         },
+        grid: {
+          left: 0, // eliminate left padding
+          containLabel: true, // keeps axis labels inside the grid
+        },
         radar: {
           name: {
             textStyle: {

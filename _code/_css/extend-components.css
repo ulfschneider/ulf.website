@@ -34,7 +34,7 @@
     .mermaid {
         svg {
             background: var(--mermaid-canvas);
-            @apply max-h-[60vh] max-w-full;
+            @apply max-h-[80vh] sm:max-h-[60vh] max-w-full;
         }
         svg[aria-roledescription="xychart"] > g > rect {
             fill: var(--mermaid-canvas) !important;
@@ -46,12 +46,12 @@
 
     /* echarts */
     .echarts-container {
-        @apply h-[60vh] w-full;
+        @apply h-[80vh] sm:h-[60vh] w-full;
         &.pie,
         &.radar {
             height: unset;
             aspect-ratio: 1 / 1;
-            @apply max-w-prose max-h-[60vh];
+            @apply max-w-prose max-h-[80vh] sm:max-h-[60vh];
         }
     }
 
@@ -59,13 +59,25 @@
     html.post,
     html.page {
         h1 {
-            @apply !text-xl sm:!text-3xl;
+            @apply text-xl sm:text-3xl;
         }
         h2 {
-            @apply !text-lg;
+            @apply text-lg;
         }
         h3 {
-            @apply !text-md;
+            @apply text-md;
+        }
+
+        article {
+            h1 {
+                @apply text-base;
+            }
+            h2 {
+                @apply text-base;
+            }
+            h3 {
+                @apply text-base;
+            }
         }
     }
 
