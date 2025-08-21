@@ -2,6 +2,7 @@
 permalink: /
 layout: default
 title: Ulf Schneider
+abstract: Hello, I´m Ulf Schneider, a software developer and agile coach. This is my website. If you like, here is some more information [about me](/about/).
 topics:
   - title: Web
     urls:
@@ -39,9 +40,6 @@ topics:
       - /2023-10-31-autumn-riding/
       - /2024-08-06-klean-kanteen/
 ---
-Hello, I´m Ulf Schneider, a software developer and agile coach. This is my website. If you like, here is some more information [about me](/about/).
-
-
 <div class="my-2xl">
 <h2>Latest</h2>
 <div class="flow-2xl mt-lg">
