@@ -1,7 +1,7 @@
 ---
 permalink: /
 layout: default
-showTitle: false
+title: Hello
 topics:
   - title: Web
     urls:
