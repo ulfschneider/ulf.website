@@ -17,7 +17,7 @@ tags:
 
 ## Text-to-chart, what is it good for?
 
-The idea of creating charts from text is appealing to me since I got aware of Mermaid several years ago. Especially in the context creating output for the web by writing Markdown, text-to-chart has similar advantages as [Markdown](https://daringfireball.net/projects/markdown/syntax). The approach allows to:
+The idea of creating charts from text is appealing to me since I got aware of Mermaid several years ago. When creating output for the web by writing Markdown, text-to-chart has similar advantages as [Markdown](https://daringfireball.net/projects/markdown/syntax). The approach allows to:
 
 - **Use your environment**: Write chart definitions with any text editor, which means, you can stay in your familiar writing environment without installing additional software to create the charts.
 - **Quick**: Save time because the focus of the chart creator is on data, content and writing, and not on formatting. It´s important to mention, the time-saving aspect is only achieved if the text-to-chart software suits your context in terms of syntax and available diagram types!
