@@ -58,24 +58,30 @@
     /* page layout */
     html.post,
     html.page {
-        h1 {
-            @apply text-xl sm:text-3xl;
+        h1,
+        .h1 {
+            @apply text-xl sm:text-3xl tracking-tight;
         }
-        h2 {
-            @apply text-lg;
+        h2,
+        .h2 {
+            @apply text-lg tracking-tight;
         }
-        h3 {
-            @apply text-md;
+        h3,
+        .h3 {
+            @apply text-md tracking-tight;
         }
 
         article {
-            h1 {
+            h1,
+            .h1 {
                 @apply text-base;
             }
-            h2 {
+            h2,
+            .h2 {
                 @apply text-base;
             }
-            h3 {
+            h3,
+            .h3 {
                 @apply text-base;
             }
         }
