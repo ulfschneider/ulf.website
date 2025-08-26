@@ -1,5 +1,5 @@
 {%- for post in posts -%}
-<article class="post-list {{post.data.docType}} flow-xs">
+<article class="post-list {{post.data.docType}} flow-sm">
     {%- if post.data.docType == "bookmark" -%}
     <div class="meta">{{post.data.docType | capitalize}}</div>
     {%- endif -%} {%- if post.data.docType != "bookmark" -%}
