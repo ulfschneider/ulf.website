@@ -17,7 +17,7 @@ tags:
 
 ## Text-to-chart, what is it good for?
 
-The idea of creating charts from text is appealing to me since I got aware of Mermaid several years ago. When creating output for the web by writing Markdown, text-to-chart has similar advantages as [Markdown](https://daringfireball.net/projects/markdown/syntax). The approach allows to:
+The idea of creating charts from text is appealing to me since I got aware of Mermaid several years ago. When creating output for the web by writing Markdown, text-to-chart has similar advantages as [Markdown](https://daringfireball.net/projects/markdown/syntax). 
 
 - **Use your environment**: Write chart definitions with any text editor, which means, you can stay in your familiar writing environment without installing additional software to create the charts.
 - **Quick**: Save time because the focus of the chart creator is on data, content and writing, and not on formatting. It´s important to mention, the time-saving aspect is only achieved if the text-to-chart software suits your context in terms of syntax and available diagram types!
@@ -30,7 +30,7 @@ The idea of creating charts from text is appealing to me since I got aware of Me
 
 ## Could there be problems?
 
-There can be downsides:
+There can be downsides.
 
 - **Syntax**: The syntax of text-to-chart, in this case the Mermaid-syntax, as simple as the maintainers are aiming to keep it, takes time to learn. I sometimes have to visit the Mermaid website to understand how to achieve certain results. Same comes true with code-to-chart in ECharts. There are certain building blocks which appear repeatedly, which helps a lot getting into the concepts, but the resulting charts can cover such a wide range of visualization variants that it´s natural the code handling requires learning.
 - **Feedback loop**: When rendering the charts within the build process of a static website, the feedback cycle to see what chart is getting produced by processing your textual definition is slowed down, because every change of the chart definition requires a build step to see the chart results.  To overcome this problem, Mermaid has a free online editor [mermaid.live](https://mermaid.live/) which you can use to set up diagrams and see immediately how your chart does look like. Once you have your desired result, you can copy your code and paste it into the final location. ECharts is the same. Their online editor is [echarts.apache.org/examples/editor.html](https://echarts.apache.org/examples/editor.html).
