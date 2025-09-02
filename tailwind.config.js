@@ -78,6 +78,7 @@ export default {
       xl: ["1.728rem", 1.25],
       "2xl": ["2.074rem", 1.25],
       "3xl": ["2.488rem", 1.25],
+      hero: ["8rem", 1.25],
       smaller: "smaller",
       larger: "larger",
     },
