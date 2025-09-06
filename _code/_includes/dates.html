@@ -1,4 +1,4 @@
-{% if publishedDate or modifiedDate %}
+{%- if publishedDate or modifiedDate -%}
 <span class="flex flex-row flex-wrap gap-x-sm gap-y-xs">
     {%- if showSymbol == true -%}
     <span aria-hidden="true">◼</span>
@@ -25,5 +25,5 @@
         </span>
         {% endif -%}
     </span>
-    {% endif %}
 </span>
+{%- endif -%}
