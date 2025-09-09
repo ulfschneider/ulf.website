@@ -2,9 +2,9 @@ import "dotenv/config";
 import chalk from "chalk";
 
 //cache versions
-const SCRIPT_VERSION = 2;
-const HTML_VERSION = 2;
-const JSON_VERSION = 2;
+const SCRIPT_VERSION = 3;
+const HTML_VERSION = 3;
+const JSON_VERSION = 3;
 const IMAGE_VERSION = 2;
 const FONT_VERSION = 1;
 const CSS_VERSION = 78;
