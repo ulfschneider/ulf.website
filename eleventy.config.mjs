@@ -177,6 +177,7 @@ export default async function (eleventyConfig) {
     },
     codeAttributes: {},
   });
+
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp", "svg"],
 
@@ -191,6 +192,8 @@ export default async function (eleventyConfig) {
     sharpOptions: {
       animated: true,
     },
+
+    failOnError: false,
 
     // optional, attributes assigned on <img> nodes override these values
     htmlOptions: {
