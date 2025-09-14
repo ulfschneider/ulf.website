@@ -173,7 +173,7 @@ The third day brings me north, through Naturpark Wendland, Dannenberg, Ludwigslu
 
 <figure>
 <img src="/img/secan/IMG_7609.jpg">
-<figcaption>Overpass above the railway tracks. The elevator to take me up was working fine, but the one on the other side was out of order. It´s not an unusual situation when you’re using the facilities of the Deutsch Bahn.
+<figcaption>Overpass above the railway tracks. The elevator to take me up was working fine, but the one on the other side was out of order. It´s not an unusual situation when you’re using the facilities of the Deutsche Bahn.
 </figcaption>
 </figure>
 
