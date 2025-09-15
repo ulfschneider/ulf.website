@@ -74,6 +74,17 @@
         @apply outline-primary outline-8 outline-offset-2 outline;
     }
 
+    /* hero */
+    .hero {
+        width: calc(100vw - calc(2 * theme("spacing.base")));
+        margin-left: calc(50% - 50vw + theme("spacing.base"));
+        overflow-x: hidden;
+
+        > * {
+            @apply mx-auto;
+        }
+    }
+
     /*grid masonry*/
     .grid-masonry {
         grid-template-rows: masonry;
