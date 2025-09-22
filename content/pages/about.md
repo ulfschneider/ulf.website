@@ -24,7 +24,7 @@ My path through 35 years of software went like this:
   <dt>1996 – 2006 IBM Global Services</dt>
   <dd>Ten years with IBM Global Services as a developer and software architect.</dd>
   <dt>2006 – 2014 Self-employment</dt>
-  <dd>Seven years self-employed as an agile coach, architect and trainer.</dd>
+  <dd>Seven years delivering agile coaching and architecture consulting with my own company, Datenlabor GmbH.</dd>
   <dt>2014 – 2023 Diebold Nixdorf</dt>
   <dd>Eight years employed as a software developer and agile coach at Diebold Nixdorf, heading the Professional Services Processes & Quality team when leaving the company.</dd>
   <dt>2023 – today Weidmüller Interface</dt>
