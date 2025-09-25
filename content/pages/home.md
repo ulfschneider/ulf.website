@@ -40,6 +40,9 @@ topics:
       - /2024-09-14-strael-morph/
       - /2023-10-31-autumn-riding/
       - /2024-08-06-klean-kanteen/
+      - /2025-09-06-remove-pedals/
+      - /2025-05-17-bike-bleed/
+      - /2022-02-06-how-to-change-an-inner-tube/
 ---
 <div class="my-2xl">
 <h2>Latest</h2>
