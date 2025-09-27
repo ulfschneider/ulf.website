@@ -6,7 +6,7 @@ tags:
 ---
 My Zed editor was complaining about unknown at rules (like `@apply`) when using Tailwind CSS. 
 
-<figure>
+<figure class="max-w-prose">
 <img src="/img/code/zed-unknown-at-rule.png" >
 <figcaption>Unknown at rule @apply</figcaption>
 </figure>
