@@ -6,7 +6,7 @@ aboutImgPath: /img/ulf/ulf-16x9.jpg
 aboutAltText: Portrait of Ulf Schneider
 ---
 
-Welcome! My name is Ulf Schneider and this is my website. I´m a software developer and agile coach.
+Welcome! My name is Ulf Schneider and this is my website. I´m a software engineer and agile coach.
 
 At this place I´m taking notes about things that resonate with me, like web development, [web accessibility](/2020-08-21-my-approach-to-accessibility/), [agile software development](/blog/agile/), and fast bicycles. My most recent _riding tool_ is a [Fairlight Strael](/2024-09-14-strael-morph/) steel-bike build.
 
