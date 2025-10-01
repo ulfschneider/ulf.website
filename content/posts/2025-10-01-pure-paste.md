@@ -2,7 +2,7 @@
 title: Pure Paste
 tags: app
 ---
-[<cite>Pure Paste</cite>](https://sindresorhus.com/pure-paste) is a tiny *Sindre Sorhus-style* app that sits in the menu bar and clears the formatting of text pasted from the clipboard.
+The tiny *Sindre Sorhus-style* app [<cite>Pure Paste</cite>](https://sindresorhus.com/pure-paste) sits in the menu bar and clears the formatting of text pasted from the clipboard.
 
 For example, you can paste text into an email and avoid polluting your message with the source formatting. That makes a lot of sense to me and is probably useful in any text-authoring situation.
 
