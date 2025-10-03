@@ -43,6 +43,7 @@ topics:
       - /2025-09-06-remove-pedals/
       - /2025-05-17-bike-bleed/
       - /2022-02-06-how-to-change-an-inner-tube/
+      - /2025-04-20-fairlight-torque/
 ---
 <div class="my-2xl">
 <h2>Latest</h2>
