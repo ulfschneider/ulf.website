@@ -5,7 +5,7 @@
         <ul class="line-list flow">
             {%- for url in topic.urls -%} {% assign post = collections.livePosts
             | item_from_url: url %} {%- if post -%}
-            <li class="sm:text-balance">
+            <li class="sm:text-pretty">
                 <a href="{{url}}"
                     ><cite class="font-normal"
                         >{{post.data.title | markdown_inline }}</cite
