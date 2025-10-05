@@ -96,7 +96,7 @@ There is one thing left: _the weight of a steel frame._ The frame of the current
   <figcaption>The Strael 3.0 frameset in color putty.<br>The image is taken from the Fairlight Strael 3.0 Lookbook.</figcaption>
 </figure>
 
-<figure class="md:split hero">
+<figure class="md:split">
   <figure class="md:pdr-2">
     <img src="/img/strael/strael-3-0-frame-parts.png" alt="">
     <figcaption>Parts that come with the frame.<br>The image is taken from the Fairlight Strael 3.0 Design Notes.<br>As you might notice, you should decide upfront what kind of groupset you want to put on your bike, and Fairlight would provide the correct 3D-printed cable guides. Because these are special parts from Fairlight which you cannot get somewhere else, and because I was not sure initially what groupset to use, and to be more flexible for future frame usage, I asked Sebastian from Fairlights customer service if I could order all the cable guides in addition. Sebastian ensured I get all the cable guides with my frameset at no extra cost, excluding the parts that typically would also come with the frame for a chosen group setup, but which I would get at any bike shop when I was clear with my final decision (e.g. Shimano Di2 grommets). I'm absolutely fine with that approach. I want to add that it was never an issue to reach Sebastian via mail, and he always was very kind and supportive.</figcaption>
@@ -136,7 +136,7 @@ For the weight of Shimano's brake hoses and their electronic wiring, I found som
 
 The crankset weights are without Powermeter. The weights of the SRAM cranks are from [r2-bike](https://r2-bike.com/). Please note the AXS Red crankset is _more than 100 grams lighter than the Dura-Ace_ cranks. I don't know what part attributes to the smaller chainrings of AXS gearing, and what to the carbon crank arms. Anyway, that weight saving is impressive.
 
-<div class="superhero">
+<div>
 <table>
   <caption><strong>Weight comparison of first and second tier electronic groupsets from Shimano and SRAM</strong><p>Weights are provided in gram.</p>
 </caption>
@@ -154,7 +154,7 @@ The crankset weights are without Powermeter. The weights of the SRAM cranks are 
 
 The weight of the Shimano groupsets is competitive, making a decision for either one of Ultegra or Dura-Ace a good move. The weight-saving of Dura-Ace compared to Ultegra is 249g at an additional cost of 1660 €, judged by the pricing for the single components (not entire groupsets) of [bike24](https://www.bike24.de/radfahren/teile/fahrradschaltung/schaltgruppen?manufacturerId%5B0%5D=931) in January 2022. Let's have a look at the details:
 
-<div class="superhero">
+<div>
 <table>
      <caption>
       <strong>Shimano groupset comparison in terms of weight and cost</strong>
@@ -268,7 +268,7 @@ Rotor cranksets don't have bonded materials as Shimano cranksets. Instead, they 
 
 Please note that I only found the total weights of the Shimano cranksets for the below-given weight comparison without differentiating into their parts. The Rotor ALDHU carbon cranks are not included in the comparison because the carbon cranks are only available for a 30mm axle. I'm only comparing compact chainring sizes for Rotor and Shimano because they are the smallest to get from Shimano.
 
-<div class="superhero">
+<div>
 <table>
   <caption>
   <strong>Weight comparison of cranksets</strong>
@@ -301,7 +301,7 @@ Please note that I only found the total weights of the Shimano cranksets for the
 
 ## The wheels
 
-<div class="superhero">
+<div>
 <table>
   <caption>
     <strong>My shortlist of wheels</caption>
@@ -372,7 +372,7 @@ I ride Specialized Phenom Expert on most of my bikes, and that saddle is working
 
 It's a steel frame therefore metal cages should complement it. Ideally, titanium to save weight. The price of these cages is ridiculous when compared to the price of a crankset, for example.
 
-<div class="superhero">
+<div>
 <table>
     <caption>
       <strong>An overview of titanium bottle cages</strong>

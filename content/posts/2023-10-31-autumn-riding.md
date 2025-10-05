@@ -11,16 +11,16 @@ Reduced daylight, colder temperatures and wet conditions. What sounds like not s
 <figure>
 <img src="/img/strael/IMG_4806.jpg" alt="A wet road surrounded by green hills pointing into the evening sunset with dramatic skies.">
 </figure>
-<figure class="hero">
+<figure>
 <img src="/img/strael/IMG_4808.jpg" alt="Intense blue, orange and green in a pattern-like picture of the skies and the forrest.">
 </figure>
-<figure class="hero" >
+<figure >
 <img src="/img/strael/IMG_4815.jpg" alt="A green meadow with a hut in the evening mist.">
 </figure>
-<figure class="hero">
+<figure>
 <img src="/img/strael/IMG_4820.jpg" alt="A field in the dense evening mist.">
 </figure>
-<figure class="hero">
+<figure>
 <img src="/img/strael/IMG_4824.jpg" alt="An intense dark blue evening sky with a small street and a car with lights on surrounded by green fields.">
 </figure>
 <figure>

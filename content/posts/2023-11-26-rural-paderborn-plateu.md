@@ -1,6 +1,6 @@
 ---
 title: Rural Paderborn plateu during winter
-tags: 
+tags:
   - sports
   - strael
 layout: image
@@ -9,11 +9,11 @@ layout: image
 <img src="/img/strael/IMG_4977.jpg" alt="A paved forest road">
 </figure>
 
-<figure class="hero" alt="A plowed field with dramatic clouds">
+<figure alt="A plowed field with dramatic clouds">
 <img src="/img/strael/IMG_4978.jpg">
 </figure>
 
-<figure class="hero" alt="A wide dark green meadow with a dark blue, dramatic sky">
+<figure alt="A wide dark green meadow with a dark blue, dramatic sky">
 <img src="/img/strael/IMG_4979.jpg">
 </figure>
 

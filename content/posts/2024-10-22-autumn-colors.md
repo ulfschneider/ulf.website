@@ -5,10 +5,10 @@ tags:
   - sports
 layout: image
 ---
-<figure class="hero">
+<figure>
 <img src="/img/strael/IMG_6513.jpg" alt="">
 </figure>
-<figure class="heror-layout">
+<figure>
 <div class="ml-auto max-w-[50%]">
 <img src="/img/strael/IMG_6515.jpg" alt="">
 </div>

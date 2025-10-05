@@ -3,7 +3,7 @@ title: Conversation with a gnome
 ---
 Emil prepared a house to provide a home for a gnome and invite for a stay. A gnome named *wulli* came along and the gnome liked the house and stayed long enough to have a conversation in written form with Emil. Both of them never met each other face to face. The conversation happened in German language.
 
-<figure class="hero split">
+<figure class="split">
 <figure>
 <img src="/img/emil-drawing/IMG_5046.jpg" alt="A house made of paperboard and painted colorful with watercolors. The is house standing on the floor.">
 <figcaption>The house for the gnome …</figcaption>

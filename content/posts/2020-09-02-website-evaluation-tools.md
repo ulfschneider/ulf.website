@@ -3,7 +3,7 @@ title: Website evaluation tools
 tags: accessibility
 ---
 
-<figure class="heror">
+<figure>
 <table>
 <caption>Tools to validate a website for accessibility.</caption>
 <colgroup>

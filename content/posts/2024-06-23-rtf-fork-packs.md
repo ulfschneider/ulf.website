@@ -19,7 +19,7 @@ The preparation for such an event is shared among many people, and my task was t
 
 In most cases, the road bike routes are driven by car and then signposted. This time, my plan was to cycle the route and carry the necessary signs in panniers and a backpack. To do this, I equipped my Fairlight Secan with Ortlieb Fork Packs, each of which can hold 3 kg, roughly equivalent to 35 signs per bag. The remaining signs, cable ties, and spray paint were packed in my backpack. At 11:30 in the morning, I set off from Paderborn on the 30 km route to my starting point in Steinhausen. There, I began signposting the 70 km long section. The route took me through Weiberg, Hegensdorf, past Bad Wünnenberg, through Ebbinhausen and Dalheim to Borchen. Upon reaching the destination, there were still 15 km to go to get home, where I arrived at 8:00 PM. It was humid, and the weather forecast had announced possible thunderstorms, but luckily the heavy rain began only when I was near Borchen and the signposting was almost complete.
 
-<figure class="heror split">
+<figure class="split">
 <figure>
 <img src="/img/secan/IMG_5857.jpg">
 <figcaption> Pretty exhausted after a hard day's work </figcaption>

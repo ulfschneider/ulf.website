@@ -1,13 +1,13 @@
 ---
 title: A quick ride into the evening
-tags: 
+tags:
   - strael
   - sports
 layout: image
 ---
 A beautiful ride. Streets have been wet because of previous rain but during the ride no rain. I came home 15 minutes too late. It was already dark and I did not have lights with me :-(.
 
-<figure class="hero">
+<figure>
 <img src="/img/strael/IMG_4538.jpg" alt="A misty green valley with woods and meadows">
 <figcaption>Bauerkamp near Veldrom</figcaption>
 </figure>
@@ -22,7 +22,7 @@ A beautiful ride. Streets have been wet because of previous rain but during the 
 <figcaption>Rolling into Feldrom</figcaption>
 </figure>
 
-<figure class="split hero">
+<figure class="sm:split">
 <img src="/img/strael/IMG_4533.jpg" alt="An ascending wet road through dense forest">
 <img src="/img/strael/IMG_4532.jpg" alt="The legs of a person standing over a white Fairlight Strael bicycle">
 </figure>

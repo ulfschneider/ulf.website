@@ -9,7 +9,7 @@ My Strael is equipped with a mechanical GRX 820 (since I´m [no longer](/2023-11
 
 The current x 12 mechanical Shimano groupsets are 105, GRX 610, and GRX 820. Here are the weights and prices:
 
-<div class="superhero">
+<div>
 <table class="mx-auto noso">
 <caption>
 <p>Weights of the three x 12 mechanical Shimano groupsets in grams. The weights are taken from the Shimano website, except those marked with a *, which have been taken from the measures of <a href="https://r2-bike.com">r2-bike.com</a>. Weights <mark>marked yellow</mark> are standing out for  their reduced weight in comparison to the similar components of the other groupsets.</p>

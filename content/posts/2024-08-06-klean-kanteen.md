@@ -1,15 +1,15 @@
 ---
 title: Klean Kanteen steel bottles
-tags: 
+tags:
   - sports
   - strael
   - secan
 ---
-For many years I´ve been using CamelBak drinking bottles on my bicycles. They are made of plastic, which is the norm in cycling. 
+For many years I´ve been using CamelBak drinking bottles on my bicycles. They are made of plastic, which is the norm in cycling.
 
 Two or three months ago my bottles were filled with pure water instead of the usual apple-juice-water-mix. Every sip tasted like plastic. Bike-riding should help to stay healthy. In my view, drinking water with a plastic taste while riding doesn´t seem to help with that. I was looking for a change and ended up buying two [Klean Kanteen](https://www.kleankanteen.com/) Classic 800 ml Sport Cap bottles for a good price at [outnorth](https://www.outnorth.com/).
 
-<figure class="hero">
+<figure>
 <img src="/img/secan/IMG_6126.jpg" alt="A black Fairlight Secan Gravel bike leaning to a wooden door in the warm evening sun.">
 <figcaption>Two Klean Kanteen steel bottles attached to my Fairlight Secan steel gravel bike</figcaption>
 </figure>
@@ -20,7 +20,7 @@ Because of the straight bottle shape it´s not ideal to use regular bike bottle 
 
 The solution in my case were the [King stainless steel flat tops](https://kingcage.com/collections/all-products/products/stainless-steel-flat-top). Flat top means these cages do not have a nose, or, how it´s named for the steel cages, they do not have a bend. These cages allow to take a variety of bottles, as long as they have a diameter of 74 mm.
 
-Be aware, the bottles are not held as tight as with bended cages and the steel bottles inside of the steel cages can rattle every now and then. But in my gravel and road riding over the last couple of months no bottle fell off the bike. 
+Be aware, the bottles are not held as tight as with bended cages and the steel bottles inside of the steel cages can rattle every now and then. But in my gravel and road riding over the last couple of months no bottle fell off the bike.
 
 <figure>
 <img src="/img/secan/IMG_6121.jpg" alt="A Klean Kanteen bottle inside of the King Flat Top Cage, mounted to a black Fairlight Secan frame.">
@@ -42,12 +42,5 @@ In regular use I noticed some things were functioning better than expected.
 	<img src="/img/secan/IMG_6122.jpg" alt="Two Klean Kanteen bottles held with one hand by using the handle on the sport cap of the bottles.">
 	<figcaption>Holding two bottles with one hand is possible because of the carrying loop</figcaption>
 	</figure>
-	
+
 If pure drinking on the bike is important to you, steel drinking bottles could be a solution. I enjoy the taste and the good feeling of drinking healthy.
-
-  
-
-
-
-
-

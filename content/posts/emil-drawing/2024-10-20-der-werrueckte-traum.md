@@ -1,6 +1,6 @@
 ---
 title: Der werrückte Traum
 ---
-<figure class="hero">
+<figure>
 <img src="/img/emil-drawing/IMG_6506.jpg" alt="">
 </figure>
