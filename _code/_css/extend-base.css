@@ -258,7 +258,7 @@
 
     blockquote > header,
     blockquote > footer {
-        @apply flow-y text-pretty sm:text-pretty meta;
+        @apply flow-y sm:text-pretty meta;
     }
 
     /* figure */
@@ -267,7 +267,7 @@
         @apply my-lg;
 
         figcaption {
-            @apply text-pretty meta;
+            @apply sm:text-pretty meta;
         }
 
         figcaption:first-child {
@@ -352,7 +352,7 @@
     }
 
     p {
-        @apply my-0 indent-0 text-pretty;
+        @apply my-0 indent-0 sm:text-pretty;
     }
 
     p + p {
@@ -388,7 +388,7 @@
         @apply my-xl text-start border-collapse border-y border-write;
 
         caption {
-            @apply text-pretty meta pb-sm;
+            @apply sm:text-pretty meta pb-sm;
             text-align: inherit;
         }
 

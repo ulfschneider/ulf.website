@@ -3,7 +3,7 @@
     {%- if post.data.docType == "bookmark" -%}
     <div class="meta">{{post.data.docType | capitalize}}</div>
     {%- endif -%} {%- if post.data.docType != "bookmark" -%}
-    <div class="max-w-prose text-pretty sm:text-balance">
+    <div class="max-w-prose sm:text-balance">
         <a class="h2" href="{{post.url}}"
             ><cite>{{post.data.title | markdown_inline }}</cite></a
         >

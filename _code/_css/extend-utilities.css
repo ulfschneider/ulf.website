@@ -147,7 +147,7 @@
 
     .prose-justify {
         p {
-            @apply text-justify hyphens-auto text-pretty;
+            @apply text-justify hyphens-auto;
             hyphenate-limit-chars: 7;
         }
     }
