@@ -78,10 +78,10 @@
     .hero {
         width: calc(100vw - calc(2 * theme("spacing.base")));
         margin-left: calc(50% - 50vw + theme("spacing.base"));
-        overflow-x: hidden;
+        @apply flex flex-col items-center overflow-x-hidden;
 
         > * {
-            @apply mx-auto;
+            @apply w-fit max-w-full;
         }
     }
 
