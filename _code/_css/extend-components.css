@@ -25,6 +25,15 @@
         }
     }
 
+    .blog,
+    .post-list,
+    .scroll-table {
+        blockquote,
+        figure:not(figure figure) {
+            @apply my-base;
+        }
+    }
+
     /* cooklang */
 
     .cooklang-ingredients .amount-and-unit {
