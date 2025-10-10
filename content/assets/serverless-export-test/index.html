@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<style>
+:root{
+--logo: ;
+--logo-size: ;
+--text-scale-intensity: ;
+--darkaccent1color: ;
+--lightaccent1color: ;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #ffffff;
+--darktitletextcolor: #000000;
+--lightbodytextcolor: #ffffff;
+--darkbodytextcolor: #000000;
+--lightbackgroundcolor: transparent;
+--darkbackgroundcolor: transparent;
+--bodyfont: system-ui;
+--titlefont: system-ui;
+--lightframecolor: #FFFFFF;
+--darkframecolor: #000000;
+} 
+
+</style>
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/tokyo.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+</head>
+<body class="responsive ">
+<div class="reveal">
+<div class="slides">
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#4ea9e2"style="--darkbackgroundcolor: #4ea9e2;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="serverless">Serverless</h1> 
+  <p>Ulf Schneider, November 2023</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive"  data-background-color="#4699d5"style="--darkbackgroundcolor: #4699d5;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents media-grid"> 
+ <div class="element-group has-media has-media-first">
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/this-machine-is-a-server-sticker.webp" class=" position-center-center" />
+    <figcaption>
+     A sticker on the server was used by Tim Berners-Lee to invent the World Wide Web.
+    </figcaption>
+   </figure>
+  </div> 
+  <h3 id="aservermustalwaysbeon.">A server must always be <em>on</em>.</h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive"  data-background-color="#3e89c9"style="--darkbackgroundcolor: #3e89c9;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents media-grid"> 
+ <div class="element-group has-media has-media-first">
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/the-first-web-server.webp" class=" position-center-center" />
+    <figcaption>
+     Source: https://de.wikipedia.org/wiki/CERN_httpd
+    </figcaption>
+   </figure>
+  </div> 
+  <h3 id="thestickersayingqthismachineisaserver.donotpoweritdownqisawayofprotectingtheserver.">The sticker saying <q>This machine is a server. DO NOT POWER IT DOWN!!</q> is a way of protecting the server.</h3> 
+  <p>At a side note: Tim Berners-Lee invented the World Wide Web with the Next computer shown on the picture. The first website, http://info.cern.ch/, went online Christmas 1990. </p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#367abd"style="--darkbackgroundcolor: #367abd;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="inserverlessaremanyserversbuttheybelongtosomeoneelse">In Serverless are many servers, but they belong to someone else</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#3d71b5"style="--darkbackgroundcolor: #3d71b5;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="thetermserverlessdescribesthedeveloperexperience">The term Serverless describes the developer experience</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-footnotes dark default-container responsive"  data-background-color="#5a73b4"style="--darkbackgroundcolor: #5a73b4;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="withserverlessdeveloperswill">With Serverless, developers will</h1> 
+  <ul> 
+   <li>not recognize servers,</li> 
+   <li>they will not manage them,</li> 
+   <li>and they will not interact with them in any way<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"> 
+ <ol> 
+  <li id="fn1"> <p><a href="https://www.ibm.com/topics/serverless/">ibm.com/topics/serverless</a> <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p> </li> 
+ </ol> 
+</div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#7675b3"style="--darkbackgroundcolor: #7675b3;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="serverlesscanbeseenasacurrentlaststepofthevirtualizationevolution">Serverless can be seen as a current last step of the virtualization evolution</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-footnotes dark v-split-container responsive"  data-background-color="#9376b3"style="--darkbackgroundcolor: #9376b3;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h1 id="thevirtualizationevolutionibm.comblogsnordic-mspserverlesshttps:www.ibm.comblogsnordic-mspserverless">The virtualization evolution<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h1>
+ </div> 
+ <div class="element-group">
+  <p>Hardware servers</p> 
+  <p>↓</p> 
+  <p>Virtual machines</p> 
+  <p>↓</p> 
+  <p>Containers</p> 
+  <p>↓</p> 
+  <p>Serverless</p>
+ </div> 
+</div> 
+<div class="footnotes"> 
+ <ol> 
+  <li id="fn1"> <p><a href="https://www.ibm.com/blogs/nordic-msp/serverless/">ibm.com/blogs/nordic-msp/serverless/</a> <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p> </li> 
+ </ol> 
+</div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#a566a3"style="--darkbackgroundcolor: #a566a3;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="let´sexaminethetraitsofeachevolutionarystep">Let´s examine the traits of each evolutionary step</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#b5528f"style="--darkbackgroundcolor: #b5528f;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="hardwareservers">Hardware servers</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#c53e7b"style="--darkbackgroundcolor: #c53e7b;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Hardware servers</p> 
+   <h1 id="havetobelocatedsomewherethinkofcablingcoolingpower-supplyandphysicalprotection">have to be located somewhere (think of cabling, cooling, power-supply, and physical protection)</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#d12e67"style="--darkbackgroundcolor: #d12e67;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Hardware servers</p> 
+   <h1 id="havetobeinstalledwithsoftwarefromthegroundup">have to be installed with software from the ground up</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#cf2e54"style="--darkbackgroundcolor: #cf2e54;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Hardware servers</p> 
+   <h1 id="havetobereplacedbynewhardwarewhentheybecometooold">have to be replaced by new hardware when they become too old</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#cd2f40"style="--darkbackgroundcolor: #cd2f40;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Hardware servers </p> 
+   <h1 id="havetobeadministered">have to be administered</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#cb2f2d"style="--darkbackgroundcolor: #cb2f2d;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="virtualmachines">Virtual machines</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#c63727"style="--darkbackgroundcolor: #c63727;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Virtual machines</p> 
+   <h1 id="decouplefromtheunderlyinghardwareandoperatingsystem">decouple from the underlying hardware and operating system</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#bf432a"style="--darkbackgroundcolor: #bf432a;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Virtual machines</p> 
+   <h1 id="canbepreparedonceandinstalledmultipletimesondifferenthardwareservers">can be prepared once and installed multiple times on different hardware servers</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#b84f2d"style="--darkbackgroundcolor: #b84f2d;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Virtual machines</p> 
+   <h1 id="canbeappliedmultipletimestoasinglehardwareserver">can be applied multiple times to a single hardware server</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#b25b30"style="--darkbackgroundcolor: #b25b30;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Virtual machines</p> 
+   <h1 id="havetobeadministered">have to be administered</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#be633e"style="--darkbackgroundcolor: #be633e;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="containers">Containers</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#cb6c4c"style="--darkbackgroundcolor: #cb6c4c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Containers</p> 
+   <h1 id="candowhatvirtualmachinescando">can do what virtual machines can do</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#d8755a"style="--darkbackgroundcolor: #d8755a;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Containers</p> 
+   <h1 id="aremorelightweightcpustoragethanvirtualmachines">are more lightweight (cpu, storage) than virtual machines</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#e07f5e"style="--darkbackgroundcolor: #e07f5e;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Containers</p> 
+   <h1 id="canbedistributedmoreeasilythanvirtualmachines">can be distributed more easily than virtual machines</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#e28b53"style="--darkbackgroundcolor: #e28b53;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Containers</p> 
+   <h1 id="startupmuchfasterthanvirtualmachines">startup much faster than virtual machines</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#e49747"style="--darkbackgroundcolor: #e49747;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Containers</p> 
+   <h1 id="havetobeadministered">have to be administered</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#e5a33c"style="--darkbackgroundcolor: #e5a33c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="serverless">Serverless</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#dca93b"style="--darkbackgroundcolor: #dca93b;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Serverless</p> 
+   <h1 id="abstractsawayanynotionofserversandinfrastructure">abstracts away any notion of servers and infrastructure</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#d1ad3c"style="--darkbackgroundcolor: #d1ad3c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Serverless</p> 
+   <h1 id="doesnotrequireanykindofadministrationorminimal">does not require any kind of administration (or minimal)</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#c5b13e"style="--darkbackgroundcolor: #c5b13e;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Serverless</p> 
+   <h1 id="reliesonacloudproviderofferingtheserviceibmgooglemicrosoftamazon">relies on a cloud provider offering the service (IBM, Google, Microsoft, Amazon)</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#b6b340"style="--darkbackgroundcolor: #b6b340;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Serverless</p> 
+   <h1 id="ispayedbyusage">is payed by usage</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#9aad45"style="--darkbackgroundcolor: #9aad45;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Serverless</p> 
+   <h1 id="scalesupanddownautomatically">scales up and down automatically</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#7fa74a"style="--darkbackgroundcolor: #7fa74a;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Serverless</p> 
+   <h1 id="isreliableandfastaroundtheglobe">is reliable and fast around the globe</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#63a14f"style="--darkbackgroundcolor: #63a14f;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Serverless</p> 
+   <h1 id="putsthebusinesslogicintofocus">puts the business logic into focus</h1>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive"  data-background-color="#57a05c"style="--darkbackgroundcolor: #57a05c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="serverlesscovers">Serverless covers</h1> 
+  <ul> 
+   <li>functions</li> 
+   <li>storage</li> 
+   <li>authentication</li> 
+   <li>monitoring</li> 
+   <li>alerting</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#54a370"style="--darkbackgroundcolor: #54a370;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="inserverlessaremanyserversbuttheybelongtosomeoneelse">In Serverless are many servers, but they belong to someone else</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark full-image-container responsive"  data-background-color="#51a684"style="--darkbackgroundcolor: #51a684;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-full-image slide-contents media-grid"> 
+ <figure class="">
+  <img src="media/what-are-clouds-made-of.webp" class=" size-contain position-center-center" />
+  <figcaption>
+   Source: Edgar Landivar, https://x.com/elandivar/status/868321220453969920
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive"  data-background-color="#4ea998"style="--darkbackgroundcolor: #4ea998;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="thankyou">Thank you</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+</div>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/pptxgen.min.js"></script>
+<script src="engine/pfill.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
+</html>
