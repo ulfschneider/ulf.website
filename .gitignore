@@ -3,6 +3,7 @@ node_modules
 _code/_css/style.css
 .DS_Store
 .env
+.cache
 .vscode
 _mermaidTmp/
 chrome-headless-shell
