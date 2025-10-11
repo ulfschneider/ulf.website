@@ -7,35 +7,35 @@
 :root{
 --logo: ;
 --logo-size: ;
---text-scale-intensity: ;
---darkaccent1color: ;
---lightaccent1color: ;
+--text-scale-intensity: 1.0;
+--darkaccent1color: #fff;
+--lightaccent1color: #fff;
 --accent2: #43aa8b;
 --accent3: #f9c74f;
 --accent4: #90be6d;
 --accent5: #f8961e;
 --accent6: #577590;
---lighttitletextcolor: #ffffff;
---darktitletextcolor: #000000;
---lightbodytextcolor: #ffffff;
---darkbodytextcolor: #000000;
+--lighttitletextcolor: #fff;
+--darktitletextcolor: #fff;
+--lightbodytextcolor: #fff;
+--darkbodytextcolor: #fff;
 --lightbackgroundcolor: transparent;
 --darkbackgroundcolor: transparent;
---bodyfont: system-ui;
---titlefont: system-ui;
+--bodyfont: IBM Plex Sans;
+--titlefont: IBM Plex Sans;
 --lightframecolor: #FFFFFF;
 --darkframecolor: #000000;
 } 
 
 </style>
 <link rel="stylesheet" href="engine/main.css">
-<link rel="stylesheet" href="theme/tokyo.css">
+<link rel="stylesheet" href="theme/ulfschneider.io.css">
 <link rel="stylesheet" href="engine/katex/katex.min.css">
 </head>
 <body class="responsive ">
 <div class="reveal">
 <div class="slides">
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#4ea9e2"style="--darkbackgroundcolor: #4ea9e2;">
+<section class="light cover-container responsive"  data-background-color="#2e3bff"style="--lightbackgroundcolor: #2e3bff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -54,7 +54,7 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark default-container responsive"  data-background-color="#4699d5"style="--darkbackgroundcolor: #4699d5;">
+<section class="light default-container responsive"  data-background-color="#372dff"style="--lightbackgroundcolor: #372dff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -80,7 +80,7 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark default-container responsive"  data-background-color="#3e89c9"style="--darkbackgroundcolor: #3e89c9;">
+<section class="light default-container responsive"  data-background-color="#4120ff"style="--lightbackgroundcolor: #4120ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -96,8 +96,7 @@
     </figcaption>
    </figure>
   </div> 
-  <h3 id="thestickersayingqthismachineisaserver.donotpoweritdownqisawayofprotectingtheserver.">The sticker saying <q>This machine is a server. DO NOT POWER IT DOWN!!</q> is a way of protecting the server.</h3> 
-  <p>At a side note: Tim Berners-Lee invented the World Wide Web with the Next computer shown on the picture. The first website, http://info.cern.ch/, went online Christmas 1990. </p>
+  <h3 id="thestickersayingqthismachineisaserver.donotpoweritdownqisawayofprotectingtheserver.">The sticker saying <q>This machine is a server. DO NOT POWER IT DOWN!!</q> is a way of protecting the server.</h3>
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -107,15 +106,15 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#367abd"style="--darkbackgroundcolor: #367abd;">
+<section class="light section-container responsive"  data-background-color="#4a13ff"style="--lightbackgroundcolor: #4a13ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
-  <h1 id="inserverlessaremanyserversbuttheybelongtosomeoneelse">In Serverless are many servers, but they belong to someone else</h1>
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="inserverlessaremanyserversbuttheybelongtosomeoneelse">In Serverless are many servers, but they belong to someone else</h3> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -125,15 +124,15 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#3d71b5"style="--darkbackgroundcolor: #3d71b5;">
+<section class="light section-container responsive"  data-background-color="#5406ff"style="--lightbackgroundcolor: #5406ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
-  <h1 id="thetermserverlessdescribesthedeveloperexperience">The term Serverless describes the developer experience</h1>
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="thetermserverlessdescribesthedeveloperexperience">The term Serverless describes the developer experience</h3> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -143,7 +142,7 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings has-footnotes dark default-container responsive"  data-background-color="#5a73b4"style="--darkbackgroundcolor: #5a73b4;">
+<section class="has-footnotes light default-container responsive"  data-background-color="#5d00ff"style="--lightbackgroundcolor: #5d00ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -153,7 +152,7 @@
  <div class="element-group">
   <hgroup>
    <p class="kicker">With Serverless </p> 
-   <h1 id="developerswillnotrecognizeserversnormanageandinteractwiththemibm.comtopicsserverlesshttps:www.ibm.comtopicsserverless">Developers will not recognize servers, nor manage and interact with them <sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h1>
+   <h3 id="developerswillnotrecognizeserversnormanageandinteractwiththemibm.comtopicsserverlesshttps:www.ibm.comtopicsserverless">Developers will not recognize servers, nor manage and interact with them <sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h3>
   </hgroup>
  </div> 
 </div> 
@@ -168,15 +167,15 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#7675b3"style="--darkbackgroundcolor: #7675b3;">
+<section class="light section-container responsive"  data-background-color="#6600ff"style="--lightbackgroundcolor: #6600ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
-  <h1 id="serverlesscanbeseenasacurrentlaststepofthevirtualizationevolution">Serverless can be seen as a current last step of the virtualization evolution</h1>
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="serverlesscanbeseenasacurrentlaststepofthevirtualizationevolution">Serverless can be seen as a current last step of the virtualization evolution</h3> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -186,7 +185,7 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings has-footnotes dark v-split-container responsive"  data-background-color="#9376b3"style="--darkbackgroundcolor: #9376b3;">
+<section class="has-footnotes light v-split-container responsive"  data-background-color="#7000ff"style="--lightbackgroundcolor: #7000ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -194,16 +193,16 @@
 </div> 
 <div class="layout-v-split slide-contents"> 
  <div class="element-group">
-  <h1 id="thevirtualizationevolutionibm.comblogsnordic-mspserverlesshttps:www.ibm.comblogsnordic-mspserverless">The virtualization evolution <sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h1>
+  <h3 id="thevirtualizationevolutionibm.comblogsnordic-mspserverlesshttps:www.ibm.comblogsnordic-mspserverless">The virtualization evolution <sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h3>
  </div> 
  <div class="element-group">
-  <p>Hardware servers</p> 
-  <p>↓</p> 
-  <p>Virtual machines</p> 
-  <p>↓</p> 
-  <p>Containers</p> 
-  <p>↓</p> 
-  <p>Serverless</p>
+  <h3 id="hardwareservers">Hardware servers</h3> 
+  <h3 id="↓">↓</h3> 
+  <h3 id="virtualmachines">Virtual machines</h3> 
+  <h3 id="↓">↓</h3> 
+  <h3 id="containers">Containers</h3> 
+  <h3 id="↓">↓</h3> 
+  <h3 id="serverless">Serverless</h3>
  </div> 
 </div> 
 <div class="footnotes"> 
@@ -217,15 +216,15 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#a566a3"style="--darkbackgroundcolor: #a566a3;">
+<section class="light section-container responsive"  data-background-color="#7900ff"style="--lightbackgroundcolor: #7900ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
-  <h1 id="let´sexaminethetraitsofeachevolutionarystep">Let´s examine the traits of each evolutionary step</h1>
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="let´sexaminethetraitsofeachevolutionarystep">Let´s examine the traits of each evolutionary step</h3> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -235,15 +234,15 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#b5528f"style="--darkbackgroundcolor: #b5528f;">
+<section class="light section-container responsive"  data-background-color="#8300ff"style="--lightbackgroundcolor: #8300ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
-  <h1 id="hardwareservers">Hardware servers</h1>
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="hardwareservers">Hardware servers</h3> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -253,18 +252,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#c53e7b"style="--darkbackgroundcolor: #c53e7b;">
+<section class="light section-container responsive"  data-background-color="#8f00ff"style="--lightbackgroundcolor: #8f00ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Hardware servers</p> 
-   <h1 id="havetobelocatedsomewherethinkofcablingcoolingpower-supplyandphysicalprotection">have to be located somewhere (think of cabling, cooling, power-supply, and physical protection)</h1>
-  </hgroup>
+   <h3 id="havetobelocatedsomewherethinkofcablingcoolingpower-supplyandphysicalprotection">have to be located somewhere (think of cabling, cooling, power-supply, and physical protection)</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -274,18 +273,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#d12e67"style="--darkbackgroundcolor: #d12e67;">
+<section class="light section-container responsive"  data-background-color="#9c00ff"style="--lightbackgroundcolor: #9c00ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Hardware servers</p> 
-   <h1 id="havetobeinstalledwithsoftwarefromthegroundup">have to be installed with software from the ground up</h1>
-  </hgroup>
+   <h3 id="havetobeinstalledwithsoftwarefromthegroundup">have to be installed with software from the ground up</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -295,18 +294,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#cf2e54"style="--darkbackgroundcolor: #cf2e54;">
+<section class="light section-container responsive"  data-background-color="#a900ff"style="--lightbackgroundcolor: #a900ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Hardware servers</p> 
-   <h1 id="havetobereplacedbynewhardwarewhentheybecometooold">have to be replaced by new hardware when they become too old</h1>
-  </hgroup>
+   <h3 id="havetobereplacedbynewhardwarewhentheybecometooold">have to be replaced by new hardware when they become too old</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -316,18 +315,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#cd2f40"style="--darkbackgroundcolor: #cd2f40;">
+<section class="light section-container responsive"  data-background-color="#b500ff"style="--lightbackgroundcolor: #b500ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Hardware servers </p> 
-   <h1 id="havetobeadministered">have to be administered</h1>
-  </hgroup>
+   <h3 id="havetobeadministered">have to be administered</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -337,15 +336,15 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#cb2f2d"style="--darkbackgroundcolor: #cb2f2d;">
+<section class="light section-container responsive"  data-background-color="#c000fb"style="--lightbackgroundcolor: #c000fb;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
-  <h1 id="virtualmachines">Virtual machines</h1>
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="virtualmachines">Virtual machines</h3> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -355,18 +354,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#c63727"style="--darkbackgroundcolor: #c63727;">
+<section class="light section-container responsive"  data-background-color="#ca00f3"style="--lightbackgroundcolor: #ca00f3;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Virtual machines</p> 
-   <h1 id="decouplefromtheunderlyinghardwareandoperatingsystem">decouple from the underlying hardware and operating system</h1>
-  </hgroup>
+   <h3 id="decouplefromtheunderlyinghardwareandoperatingsystem">decouple from the underlying hardware and operating system</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -376,18 +375,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#bf432a"style="--darkbackgroundcolor: #bf432a;">
+<section class="light section-container responsive"  data-background-color="#d300ec"style="--lightbackgroundcolor: #d300ec;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Virtual machines</p> 
-   <h1 id="canbepreparedonceandinstalledmultipletimesondifferenthardwareservers">can be prepared once and installed multiple times on different hardware servers</h1>
-  </hgroup>
+   <h3 id="canbepreparedonceandinstalledmultipletimesondifferenthardwareservers">can be prepared once and installed multiple times on different hardware servers</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -397,18 +396,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#b84f2d"style="--darkbackgroundcolor: #b84f2d;">
+<section class="light section-container responsive"  data-background-color="#dc00e5"style="--lightbackgroundcolor: #dc00e5;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Virtual machines</p> 
-   <h1 id="canbeappliedmultipletimestoasinglehardwareserver">can be applied multiple times to a single hardware server</h1>
-  </hgroup>
+   <h3 id="canbeappliedmultipletimestoasinglehardwareserver">can be applied multiple times to a single hardware server</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -418,18 +417,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#b25b30"style="--darkbackgroundcolor: #b25b30;">
+<section class="light section-container responsive"  data-background-color="#e600de"style="--lightbackgroundcolor: #e600de;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Virtual machines</p> 
-   <h1 id="havetobeadministered">have to be administered</h1>
-  </hgroup>
+   <h3 id="havetobeadministered">have to be administered</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -439,15 +438,15 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#be633e"style="--darkbackgroundcolor: #be633e;">
+<section class="light section-container responsive"  data-background-color="#eb01d0"style="--lightbackgroundcolor: #eb01d0;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
-  <h1 id="containers">Containers</h1>
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="containers">Containers</h3> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -457,18 +456,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#cb6c4c"style="--darkbackgroundcolor: #cb6c4c;">
+<section class="light section-container responsive"  data-background-color="#f103c2"style="--lightbackgroundcolor: #f103c2;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Containers</p> 
-   <h1 id="candowhatvirtualmachinescando">can do what virtual machines can do</h1>
-  </hgroup>
+   <h3 id="candowhatvirtualmachinescando">can do what virtual machines can do</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -478,18 +477,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#d8755a"style="--darkbackgroundcolor: #d8755a;">
+<section class="light section-container responsive"  data-background-color="#f605b5"style="--lightbackgroundcolor: #f605b5;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Containers</p> 
-   <h1 id="aremorelightweightcpustoragethanvirtualmachines">are more lightweight (cpu, storage) than virtual machines</h1>
-  </hgroup>
+   <h3 id="aremorelightweightcpustoragethanvirtualmachines">are more lightweight (cpu, storage) than virtual machines</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -499,18 +498,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#e07f5e"style="--darkbackgroundcolor: #e07f5e;">
+<section class="light section-container responsive"  data-background-color="#fc07a7"style="--lightbackgroundcolor: #fc07a7;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Containers</p> 
-   <h1 id="canbedistributedmoreeasilythanvirtualmachines">can be distributed more easily than virtual machines</h1>
-  </hgroup>
+   <h3 id="canbedistributedmoreeasilythanvirtualmachines">can be distributed more easily than virtual machines</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -520,18 +519,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#e28b53"style="--darkbackgroundcolor: #e28b53;">
+<section class="light section-container responsive"  data-background-color="#ff0d98"style="--lightbackgroundcolor: #ff0d98;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Containers</p> 
-   <h1 id="startupmuchfasterthanvirtualmachines">startup much faster than virtual machines</h1>
-  </hgroup>
+   <h3 id="startupmuchfasterthanvirtualmachines">startup much faster than virtual machines</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -541,18 +540,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#e49747"style="--darkbackgroundcolor: #e49747;">
+<section class="light section-container responsive"  data-background-color="#ff1786"style="--lightbackgroundcolor: #ff1786;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Containers</p> 
-   <h1 id="havetobeadministered">have to be administered</h1>
-  </hgroup>
+   <h3 id="havetobeadministered">have to be administered</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -562,15 +561,15 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#e5a33c"style="--darkbackgroundcolor: #e5a33c;">
+<section class="light section-container responsive"  data-background-color="#ff2275"style="--lightbackgroundcolor: #ff2275;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
-  <h1 id="serverless">Serverless</h1>
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="serverless">Serverless</h3> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -580,18 +579,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#dca93b"style="--darkbackgroundcolor: #dca93b;">
+<section class="light section-container responsive"  data-background-color="#ff2d63"style="--lightbackgroundcolor: #ff2d63;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Serverless</p> 
-   <h1 id="abstractsawayanynotionofserversandinfrastructure">abstracts away any notion of servers and infrastructure</h1>
-  </hgroup>
+   <h3 id="abstractsawayanynotionofserversandinfrastructure">abstracts away any notion of servers and infrastructure</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -601,18 +600,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#d1ad3c"style="--darkbackgroundcolor: #d1ad3c;">
+<section class="light section-container responsive"  data-background-color="#ff3852"style="--lightbackgroundcolor: #ff3852;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Serverless</p> 
-   <h1 id="doesnotrequireanykindofadministrationorminimal">does not require any kind of administration (or minimal)</h1>
-  </hgroup>
+   <h3 id="doesnotrequireanykindofadministrationorminimal">does not require any kind of administration (or minimal)</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -622,18 +621,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#c5b13e"style="--darkbackgroundcolor: #c5b13e;">
+<section class="light section-container responsive"  data-background-color="#ff3f45"style="--lightbackgroundcolor: #ff3f45;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Serverless</p> 
-   <h1 id="reliesonacloudproviderofferingtheserviceibmgooglemicrosoftamazon">relies on a cloud provider offering the service (IBM, Google, Microsoft, Amazon)</h1>
-  </hgroup>
+   <h3 id="reliesonacloudproviderofferingtheserviceibmgooglemicrosoftamazon">relies on a cloud provider offering the service (IBM, Google, Microsoft, Amazon)</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -643,18 +642,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#b6b340"style="--darkbackgroundcolor: #b6b340;">
+<section class="light section-container responsive"  data-background-color="#ff4738"style="--lightbackgroundcolor: #ff4738;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Serverless</p> 
-   <h1 id="ispayedbyusage">is payed by usage</h1>
-  </hgroup>
+   <h3 id="ispayedperusage">is payed per usage</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -664,18 +663,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#9aad45"style="--darkbackgroundcolor: #9aad45;">
+<section class="light section-container responsive"  data-background-color="#ff4e2b"style="--lightbackgroundcolor: #ff4e2b;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Serverless</p> 
-   <h1 id="scalesupanddownautomatically">scales up and down automatically</h1>
-  </hgroup>
+   <h3 id="scalesupanddownautomatically">scales up and down automatically</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -685,18 +684,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#7fa74a"style="--darkbackgroundcolor: #7fa74a;">
+<section class="light section-container responsive"  data-background-color="#ff561f"style="--lightbackgroundcolor: #ff561f;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Serverless</p> 
-   <h1 id="isreliableandfastaroundtheglobe">is reliable and fast around the globe</h1>
-  </hgroup>
+   <h3 id="isreliableandfastaroundtheglobe">is reliable and fast around the globe</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -706,18 +705,18 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#63a14f"style="--darkbackgroundcolor: #63a14f;">
+<section class="light section-container responsive"  data-background-color="#ff5e16"style="--lightbackgroundcolor: #ff5e16;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
   <hgroup>
    <p class="kicker">Serverless</p> 
-   <h1 id="putsthebusinesslogicintofocus">puts the business logic into focus</h1>
-  </hgroup>
+   <h3 id="putsthebusinesslogicintofocus">puts the business logic into focus</h3>
+  </hgroup> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -727,22 +726,22 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark default-container responsive"  data-background-color="#57a05c"style="--darkbackgroundcolor: #57a05c;">
+<section class="light v-split-container responsive"  data-background-color="#ff6710"style="--lightbackgroundcolor: #ff6710;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-default slide-contents"> 
+<div class="layout-v-split slide-contents"> 
  <div class="element-group">
-  <h1 id="serverlesscovers">Serverless covers</h1> 
-  <ul> 
-   <li>functions</li> 
-   <li>storage</li> 
-   <li>authentication</li> 
-   <li>monitoring</li> 
-   <li>alerting</li> 
-  </ul>
+  <h3 id="serverlesscovers">Serverless covers</h3>
+ </div> 
+ <div class="element-group">
+  <h3 id="-functions">- functions</h3> 
+  <h3 id="-storage">- storage</h3> 
+  <h3 id="-authentication">- authentication</h3> 
+  <h3 id="-monitoring">- monitoring</h3> 
+  <h3 id="-alerting">- alerting</h3>
  </div> 
 </div> 
 <div class="footnotes"></div> 
@@ -752,7 +751,7 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#54a370"style="--darkbackgroundcolor: #54a370;">
+<section class="light cover-container responsive"  data-background-color="#ff700b"style="--lightbackgroundcolor: #ff700b;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -770,7 +769,7 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark full-image-container responsive"  data-background-color="#51a684"style="--darkbackgroundcolor: #51a684;">
+<section class="light full-image-container responsive"  data-background-color="#ff7905"style="--lightbackgroundcolor: #ff7905;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -791,7 +790,7 @@
  <div class="trailing"></div>
 </div>
 </section>
-<section class="variable-size-headings dark cover-container responsive"  data-background-color="#4ea998"style="--darkbackgroundcolor: #4ea998;">
+<section class="light cover-container responsive"  data-background-color="#ff8300"style="--lightbackgroundcolor: #ff8300;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
