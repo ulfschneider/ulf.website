@@ -1,7 +1,17 @@
-/* add below your custom Theme CSS */
-/*************************************************************************************************/
-/* TYPOGRAPHY   */
 
+:root {
+  --text-horizontal-align-layout-cover: left;
+  --text-vertical-align-layout-cover: center;
+  --text-horizontal-align-layout-title: left;
+  --text-vertical-align-layout-title: center;
+  --text-horizontal-align-layout-section: left;
+  --text-vertical-align-layout-section: center;
+  --text-horizontal-align-layout-default: left;
+  --text-vertical-align-layout-default: center;
+  --text-horizontal-align-layout-caption: left;
+  --text-vertical-align-layout-split: center;
+  --text-vertical-align-layout-3-column: center;
+}
 
 @font-face {
     font-family: "IBM Plex Sans";
@@ -99,20 +109,6 @@ section.light code, section.dark code {
     background: transparent !important;
     font-family: "IBM Plex Mono" !important;
     padding: 0;
-}
-
-/* Make all titles left aligned */
-.layout-title,
-.layout-heading {
-  justify-content: flex-start !important;
-  align-items: flex-start !important;
-}
-
-section .slide-contents.layout-title .element-group h1,
-section .slide-contents.layout-title .element-group h2,
-section .slide-contents.layout-title .element-group h3,
-section .slide-contents.layout-title .element-group h4 {
-    text-align: left !important;
 }
 
 

@@ -3,7 +3,8 @@
   "TitleFont": "IBM Plex Sans",
   "BodyFont": "IBM Plex Sans",
   "Author": "Ulf Schneider",
-  "Description": "A theme based on IBM Plex",
+  "ShortDescription": "A theme based on IBM Plex",
+  "LongDescription": "A theme leveraging the IBM Plex typeface and a vibrant gradient background.",
   "Css": "ulfschneider.io.css",
   "Version": 1
 }
