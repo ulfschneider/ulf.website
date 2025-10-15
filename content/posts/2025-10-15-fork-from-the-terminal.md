@@ -14,6 +14,6 @@ As a one-time prerequisite, install the Fork Command Line Tools from the Fork me
 
 From any folder within the terminal, to open the current folder in the Finder, issue the command:
 
-```
+```sh
 open .
 ```
