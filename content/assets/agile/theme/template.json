@@ -1,10 +1,10 @@
 {
-  "Name": "ulfschneider.io",
+  "Name": "Plex",
   "TitleFont": "IBM Plex Sans",
   "BodyFont": "IBM Plex Sans",
   "Author": "Ulf Schneider",
-  "ShortDescription": "A theme based on IBM Plex",
-  "LongDescription": "A theme leveraging the IBM Plex typeface and a vibrant gradient background.",
-  "Css": "ulfschneider.io.css",
-  "Version": 1
+  "ShortDescription": "IBM Plex typeface in action",
+  "LongDescription": "A theme based on the IBM Plex typeface with a vibrant gradient background.",
+  "Css": "plex.css",
+  "Version": 2
 }
