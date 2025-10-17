@@ -89,15 +89,18 @@
 blockquote, blockquote * {
     font-family: "IBM Plex Serif" !important;
     font-style: italic;
+    > h1,h2,h3,h4,h5,h6,strong,b {
+        font-weight: 600 !important;
+    }
 }
 
 blockquote {
     footer, header {
         font-family: "IBM Plex Sans" !important;
         font-style: normal;
-        text-align: left; /* FIXME */
+        text-align: left;
         color: white;
-        margin: .5em 0; /* FIXME */
+        margin: .5em 0; /
     }
     footer::before, header::after {
         content: "—"
