@@ -21,9 +21,13 @@ export default {
       (data.bookmark ||
         data.docType == "boomark" ||
         data.layout == "bookmark") &&
-      !data.tags.includes("bookmark")
+      (!data.tags || !data.tags.includes("bookmark"))
     ) {
-      data.tags.push("bookmark");
+      if (!data.tags) {
+        data.tags = "bookmark";
+      } else {
+        data.tags.push("bookmark");
+      }
     }
     return sortTags(data.tags, site.tags.star);
   },
