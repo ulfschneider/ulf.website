@@ -94,13 +94,24 @@ blockquote, blockquote * {
     }
 }
 
+section.dark  {
+    pre, blockquote header, blockquote footer {
+      color: var(--darkbodytextcolor, inherit);
+    }
+}
+
+section.light  {
+    pre, blockquote header, blockquote footer {
+      color: var(--lightbodytextcolor, inherit);
+    }
+}
+
 blockquote {
     footer, header {
         font-family: "IBM Plex Sans" !important;
         font-style: normal;
         text-align: left;
-        color: white;
-        margin: .5em 0; /
+        margin: .5em 0;
     }
     footer::before, header::after {
         content: "—"
