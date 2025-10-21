@@ -107,6 +107,8 @@ section.light  {
 }
 
 blockquote {
+    max-width: 65ch;
+    text-wrap: pretty;
     footer, header {
         font-family: "IBM Plex Sans" !important;
         font-style: normal;
