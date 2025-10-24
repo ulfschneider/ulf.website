@@ -1,50 +1,50 @@
-import "dotenv/config";
-import chalk from "chalk";
+import chalk from "chalk"
+import "dotenv/config"
 
 //cache versions
-const SCRIPT_VERSION = 3;
-const HTML_VERSION = 3;
-const JSON_VERSION = 3;
-const IMAGE_VERSION = 2;
-const FONT_VERSION = 1;
-const CSS_VERSION = 85;
+const SCRIPT_VERSION = 3
+const HTML_VERSION = 3
+const JSON_VERSION = 3
+const IMAGE_VERSION = 2
+const FONT_VERSION = 1
+const CSS_VERSION = 85
 
 const hostname =
   process.env.ELEVENTY_RUN_MODE === "serve"
     ? "localhost:8080"
-    : "ulfschneider.io";
+    : "ulfschneider.io"
 const origin =
   process.env.ELEVENTY_RUN_MODE === "serve"
     ? `http://${hostname}`
-    : `https://${hostname}`;
-const buildTime = new Date();
+    : `https://${hostname}`
+const buildTime = new Date()
 
 function prepareVersion(version) {
-  return process.env.ELEVENTY_RUN_MODE === "serve" ? "" : `-${version}`;
+  return process.env.ELEVENTY_RUN_MODE === "serve" ? "" : `-${version}`
 }
 
 function useServiceWorker() {
   if (process.env.SERVICE_WORKER == "false") {
     console.log(
       chalk.yellow(
-        "Not registering service worker because of environment variable setting SERVICE_WORKER=false",
-      ),
-    );
-    return false;
+        "Not registering service worker because of environment variable setting SERVICE_WORKER=false"
+      )
+    )
+    return false
   }
-  return true;
+  return true
 }
 
 function getGitCommitDates() {
   if (process.env.GIT_COMMIT_DATES == "false") {
     console.log(
       chalk.yellow(
-        "Not getting git commit dates because of environment variable setting GIT_COMMIT_DATES=false",
-      ),
-    );
-    return false;
+        "Not getting git commit dates because of environment variable setting GIT_COMMIT_DATES=false"
+      )
+    )
+    return false
   }
-  return true;
+  return true
 }
 
 export default {
@@ -72,65 +72,65 @@ export default {
       json: prepareVersion(JSON_VERSION),
       image: prepareVersion(IMAGE_VERSION),
       font: prepareVersion(FONT_VERSION),
-      css: prepareVersion(CSS_VERSION),
-    },
+      css: prepareVersion(CSS_VERSION)
+    }
   },
   ownership: {
     name: "Ulf Schneider",
-    email: "mail@ulfschneider.io",
+    email: "mail@ulfschneider.io"
   },
   rss: {
     url: `${origin}/feed.xml`,
-    path: "/feed.xml",
+    path: "/feed.xml"
   },
   search: {
-    path: "/search/",
+    path: "/search/"
   },
   openGraph: {
-    imgUrl: `${origin}/og-image.jpg`,
+    imgUrl: `${origin}/og-image.jpg`
   },
   pagefind: {
-    path: "/pagefind/pagefind.js",
+    path: "/pagefind/pagefind.js"
   },
   tags: {
     star: "star",
-    combineThreshold: 30,
+    combineThreshold: 30
   },
   posts: {
-    doubleNavThreshold: 3,
+    doubleNavThreshold: 3
   },
   nav: {
     home: {
-      key: "h",
+      key: "h"
     },
     blog: {
-      key: "b",
+      key: "b"
     },
     search: {
-      key: "s",
+      key: "s"
     },
     query: {
-      key: "f",
+      key: "f"
     },
     older: {
       key: "ArrowRight",
-      keyLabel: "→",
+      keyLabel: "→"
     },
     newer: {
       key: "ArrowLeft",
-      keyLabel: "←",
+      keyLabel: "←"
     },
     top: {
-      key: "t",
+      key: "t"
     },
     about: {
-      key: "u",
+      key: "u"
     },
     colophon: {
-      key: "c",
+      key: "c"
     },
     top: {
-      key: "t",
-    },
-  },
-};
+      key: "t"
+    }
+  }
+}

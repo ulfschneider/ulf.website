@@ -1,41 +1,41 @@
-import chalk from "chalk";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-import eleventySyntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
-import { execSync } from "node:child_process";
-import through from "through2";
-import path from "node:path";
+import eleventySyntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
+import chalk from "chalk";
 import { capitalize } from "lodash-es";
-import { minify } from "terser";
-import markdownItDeflist from "markdown-it-deflist";
-import markdownItMark from "markdown-it-mark";
-import markdownItRSSFriendlyGitHubAlerts from "markdown-it-rss-friendly-github-alerts";
-import markdownItTableOfContents from "markdown-it-table-of-contents";
-import markdownItCollapsible from "markdown-it-collapsible";
 import markdownItAnchor from "markdown-it-anchor";
-import markdownItTrimmer from "markdown-it-trimmer";
-import markdownItScrolltable from "markdown-it-scrolltable";
-import markdownItFootnote from "markdown-it-footnote";
-import markdownItCooklang from "markdown-it-cooklang";
 import markdownItAttrs from "markdown-it-attrs";
+import markdownItCollapsible from "markdown-it-collapsible";
+import markdownItContainer from "markdown-it-container";
+import markdownItCooklang from "markdown-it-cooklang";
+import markdownItDeflist from "markdown-it-deflist";
+import { full as markdownItEmoji } from "markdown-it-emoji";
 import markdownItFitVids from "markdown-it-fitvids";
+import markdownItFootnote from "markdown-it-footnote";
+import markdownItMark from "markdown-it-mark";
+import markdownItMathjax from "markdown-it-mathjax3";
 import markdownItMermaidServer from "markdown-it-mermaid-server";
 import markdownItEcharts from "markdown-it-responsive-echarts";
-import { full as markdownItEmoji } from "markdown-it-emoji";
-import markdownItMathjax from "markdown-it-mathjax3";
-import markdownItContainer from "markdown-it-container";
+import markdownItRSSFriendlyGitHubAlerts from "markdown-it-rss-friendly-github-alerts";
+import markdownItScrolltable from "markdown-it-scrolltable";
+import markdownItTableOfContents from "markdown-it-table-of-contents";
+import markdownItTrimmer from "markdown-it-trimmer";
+import { execSync } from "node:child_process";
+import path from "node:path";
+import { minify } from "terser";
+import through from "through2";
 
-import site from "./_code/_data/site.mjs";
+import dayjs from "dayjs";
 import {
-  sortTags,
+  getImagesByTag,
   getItemsByTagAndYear,
+  isGallery,
   isLive,
   openGraphImage,
-  getImagesByTag,
-  isGallery,
+  sortTags,
 } from "./_code/_11ty/collections.mjs";
 import prismLanguages from "./_code/_data/prism-languages.mjs";
-import dayjs from "dayjs";
+import site from "./_code/_data/site.mjs";
 
 import resolveConfig from "./node_modules/tailwindcss/resolveConfig.js";
 import myTailwindConfig from "./tailwind.config.js";
