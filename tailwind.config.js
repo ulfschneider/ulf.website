@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-import plugin from "./node_modules/tailwindcss/plugin.js";
+import plugin from "./node_modules/tailwindcss/plugin.js"
 
 export default {
   content: [
@@ -8,13 +8,13 @@ export default {
     "!./_code/_css/**/*",
     "./content/**/*",
     "!./content/assets/**/*",
-    "!./content/api/**/*",
+    "!./content/api/**/*"
   ],
   safelist: [
     { pattern: /footnote/ },
     { pattern: /cooklang/ },
     { pattern: /mermaid/ },
-    { pattern: /echarts/ },
+    { pattern: /echarts/ }
   ],
 
   theme: {
@@ -45,7 +45,7 @@ export default {
       green: "var(--green)",
       purple: "var(--purple)",
       blue: "var(--blue)",
-      yellow: "var(--yellow)",
+      yellow: "var(--yellow)"
     },
     spacing: {
       0: "0px",
@@ -60,7 +60,7 @@ export default {
       xl: "4.25rem",
       "2xl": "6.88rem",
       "3xl": "11.16rem",
-      "4xl": "18.06rem",
+      "4xl": "18.06rem"
     },
     lineHeight: {
       none: 1,
@@ -68,7 +68,7 @@ export default {
       snug: 1.375,
       normal: 1.5,
       base: 1.625,
-      loose: 2,
+      loose: 2
     },
     fontSize: {
       sm: ["0.8rem", 1.625],
@@ -80,20 +80,20 @@ export default {
       "3xl": ["2.488rem", 1.25],
       hero: ["8rem", 1.25],
       smaller: "smaller",
-      larger: "larger",
+      larger: "larger"
     },
     fontFamily: {
       sans: ['"iA Writer Quattro"', "sans-serif"],
       serif: ['"iA Writer Quattro"', "sans-serif"],
       mono: ['"iA Writer Mono"', '"iA Writer Quattro"', "monospace"],
       display: ['"iA Writer Quattro"', "sans-serif"],
-      body: ['"iA Writer Quattro"', "sans-serif"],
-    },
+      body: ['"iA Writer Quattro"', "sans-serif"]
+    }
   },
   plugins: [
     plugin(function ({ addVariant }) {
-      addVariant("pointer-coarse", "@media (pointer: coarse)");
-      addVariant("pointer-fine", "@media (pointer: fine)");
-    }),
-  ],
-};
+      addVariant("pointer-coarse", "@media (pointer: coarse)")
+      addVariant("pointer-fine", "@media (pointer: fine)")
+    })
+  ]
+}
