@@ -5,7 +5,6 @@
 @import "extend-components.css";
 @import "extend-utilities";
 @import "forms";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

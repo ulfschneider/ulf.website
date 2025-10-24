@@ -1,165 +1,165 @@
 @layer utilities {
-    .flow > * + *,
-    .flow-t {
-        margin-block-start: 1em;
-        margin-block-start: 1lh;
-    }
+  .flow > * + *,
+  .flow-t {
+    margin-block-start: 1em;
+    margin-block-start: 1lh;
+  }
 
-    .flow-t-0 {
-        margin-block-start: 0;
-        margin-block-start: 0;
-    }
+  .flow-t-0 {
+    margin-block-start: 0;
+    margin-block-start: 0;
+  }
 
-    .flow-b {
-        margin-block-end: 1em;
-        margin-block-end: 1lh;
-    }
+  .flow-b {
+    margin-block-end: 1em;
+    margin-block-end: 1lh;
+  }
 
-    .flow-b-0 {
-        margin-block-end: 0;
-        margin-block-end: 0;
-    }
+  .flow-b-0 {
+    margin-block-end: 0;
+    margin-block-end: 0;
+  }
 
-    .flow-y {
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-block-start: 1lh;
-        margin-block-end: 1lh;
-    }
+  .flow-y {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-block-start: 1lh;
+    margin-block-end: 1lh;
+  }
 
-    .flow-y-0 {
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin-block-start: 0;
-        margin-block-end: 0;
-    }
+  .flow-y-0 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
 
-    .flow-xs > * + * {
-        margin-block-start: theme("spacing.xs");
-    }
+  .flow-xs > * + * {
+    margin-block-start: theme("spacing.xs");
+  }
 
-    .flow-sm > * + * {
-        margin-block-start: theme("spacing.sm");
-    }
+  .flow-sm > * + * {
+    margin-block-start: theme("spacing.sm");
+  }
 
-    .flow-base > * + * {
-        margin-block-start: theme("spacing.base");
-    }
+  .flow-base > * + * {
+    margin-block-start: theme("spacing.base");
+  }
 
-    .flow-md > * + * {
-        margin-block-start: theme("spacing.md");
-    }
+  .flow-md > * + * {
+    margin-block-start: theme("spacing.md");
+  }
 
-    .flow-lg > * + * {
-        margin-block-start: theme("spacing.lg");
-    }
+  .flow-lg > * + * {
+    margin-block-start: theme("spacing.lg");
+  }
 
-    .flow-xl > * + * {
-        margin-block-start: theme("spacing.xl");
-    }
+  .flow-xl > * + * {
+    margin-block-start: theme("spacing.xl");
+  }
 
-    .flow-2xl > * + * {
-        margin-block-start: theme("spacing.2xl");
-    }
+  .flow-2xl > * + * {
+    margin-block-start: theme("spacing.2xl");
+  }
 
-    .meta {
-        @apply text-sm font-mono;
-    }
+  .meta {
+    @apply text-sm font-mono;
+  }
 
-    .outline-indicator {
-        @apply outline-primary outline-4 outline-offset-2 outline;
-    }
+  .outline-indicator {
+    @apply outline-primary outline-4 outline-offset-2 outline;
+  }
 
-    .outline-indicator-lg {
-        @apply outline-primary outline-8 outline-offset-2 outline;
-    }
+  .outline-indicator-lg {
+    @apply outline-primary outline-8 outline-offset-2 outline;
+  }
 
-    /* hero */
-    .hero {
-        width: calc(100vw - calc(2 * theme("spacing.base")));
-        margin-left: calc(50% - 50vw + theme("spacing.base"));
-        @apply flex flex-col items-center overflow-x-hidden;
+  /* hero */
+  .hero {
+    width: calc(100vw - calc(2 * theme("spacing.base")));
+    margin-left: calc(50% - 50vw + theme("spacing.base"));
+    @apply flex flex-col items-center overflow-x-hidden;
 
-        > * {
-            @apply w-fit max-w-full;
-        }
+    > * {
+      @apply w-fit max-w-full;
     }
+  }
 
-    /*grid masonry*/
-    .grid-masonry {
-        grid-template-rows: masonry;
-    }
+  /*grid masonry*/
+  .grid-masonry {
+    grid-template-rows: masonry;
+  }
 
-    /* split */
-    .split {
-        @apply grid auto-cols-fr grid-flow-col gap-lg;
-    }
-    .split img {
-        @apply object-scale-down;
-    }
-    .split > * {
-        @apply m-0;
-    }
-    .split.start > * {
-        @apply flex flex-col justify-start;
-    }
-    .split.start.reverse > * {
-        @apply flex flex-col-reverse justify-end;
-    }
-    .split.center > * {
-        @apply flex flex-col justify-center;
-    }
-    .split.center.reverse > * {
-        @apply flex flex-col-reverse justify-center;
-    }
-    .split.end > * {
-        @apply flex flex-col justify-end;
-    }
-    .split.end.reverse > * {
-        @apply flex flex-col-reverse justify-start;
-    }
+  /* split */
+  .split {
+    @apply grid auto-cols-fr grid-flow-col gap-lg;
+  }
+  .split img {
+    @apply object-scale-down;
+  }
+  .split > * {
+    @apply m-0;
+  }
+  .split.start > * {
+    @apply flex flex-col justify-start;
+  }
+  .split.start.reverse > * {
+    @apply flex flex-col-reverse justify-end;
+  }
+  .split.center > * {
+    @apply flex flex-col justify-center;
+  }
+  .split.center.reverse > * {
+    @apply flex flex-col-reverse justify-center;
+  }
+  .split.end > * {
+    @apply flex flex-col justify-end;
+  }
+  .split.end.reverse > * {
+    @apply flex flex-col-reverse justify-start;
+  }
 
-    .outdent {
-        margin-inline-start: calc(-1 * var(--outdent-indent-space));
-        min-width: var(--outdent-indent-space);
-    }
+  .outdent {
+    margin-inline-start: calc(-1 * var(--outdent-indent-space));
+    min-width: var(--outdent-indent-space);
+  }
 
-    .prose-flow {
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        ul,
-        ol,
-        dl,
-        td,
-        th,
-        caption,
-        blockquote,
-        hr,
-        figcaption {
-            @apply max-w-prose;
-        }
+  .prose-flow {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl,
+    td,
+    th,
+    caption,
+    blockquote,
+    hr,
+    figcaption {
+      @apply max-w-prose;
     }
+  }
 
-    .prose-justify {
-        p {
-            @apply text-justify hyphens-auto;
-            hyphenate-limit-chars: 7;
-        }
+  .prose-justify {
+    p {
+      @apply text-justify hyphens-auto;
+      hyphenate-limit-chars: 7;
     }
+  }
 
-    .outdent-prose-flow {
-        @apply outdent !max-w-[calc(theme(maxWidth.prose)+var(--outdent-indent-space))];
-    }
+  .outdent-prose-flow {
+    @apply outdent !max-w-[calc(theme(maxWidth.prose)+var(--outdent-indent-space))];
+  }
 
-    .break-long-words {
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        word-break: break-all;
-        word-break: break-word;
-    }
+  .break-long-words {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+  }
 }

@@ -1,428 +1,428 @@
 @layer components {
-    :root {
-        --line-list-line-width: 1px;
-        --line-list-ol-marker-diameter: var(--outdent-indent-space);
+  :root {
+    --line-list-line-width: 1px;
+    --line-list-ol-marker-diameter: var(--outdent-indent-space);
+  }
+
+  /*  content */
+  .content {
+    > :first-child {
+      margin-top: 0;
+      margin-block-start: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+      margin-block-end: 0;
+    }
+    > ul,
+    > ol,
+    > details > summary,
+    > blockquote {
+      @apply md:outdent-prose-flow;
+    }
+    a {
+      @apply underline;
+    }
+  }
+
+  /* cooklang */
+
+  .cooklang-ingredients .amount-and-unit {
+    @apply font-bold inline-block;
+  }
+
+  .mermaid {
+    svg {
+      background: var(--mermaid-canvas);
+      @apply max-h-[60vh] max-w-full;
+    }
+    svg[aria-roledescription="xychart"] > g > rect {
+      fill: var(--mermaid-canvas) !important;
+    }
+    svg[data-aspect-ratio="1"] {
+      @apply max-w-prose;
+    }
+  }
+
+  /* echarts */
+  .echarts-container {
+    @apply h-[60vh] w-full;
+    &.pie,
+    &.radar {
+      height: unset;
+      aspect-ratio: 1 / 1;
+      @apply max-w-prose max-h-[60vh];
+    }
+  }
+
+  /* page layout */
+  html.post,
+  html.page {
+    h1,
+    .h1 {
+      @apply text-xl sm:text-3xl tracking-tight;
+    }
+    h2,
+    .h2 {
+      @apply text-lg tracking-tight;
+    }
+    h3,
+    .h3 {
+      @apply text-md tracking-tight;
     }
 
-    /*  content */
-    .content {
-        > :first-child {
-            margin-top: 0;
-            margin-block-start: 0;
-        }
-        > :last-child {
-            margin-bottom: 0;
-            margin-block-end: 0;
-        }
-        > ul,
-        > ol,
-        > details > summary,
-        > blockquote {
-            @apply md:outdent-prose-flow;
-        }
-        a {
-            @apply underline;
-        }
+    article {
+      h1,
+      .h1 {
+        @apply text-base;
+      }
+      h2,
+      .h2 {
+        @apply text-base;
+      }
+      h3,
+      .h3 {
+        @apply text-base;
+      }
+    }
+  }
+
+  /* line list */
+
+  dl.line-list {
+    border-inline-start: var(--line-list-line-width) solid currentColor;
+    @apply !ps-[calc(var(--outdent-indent-space)-var(--line-list-line-width))];
+  }
+
+  dl.line-list.marker {
+    @apply !ms-[calc(theme(spacing.sm)/2-var(--line-list-line-width)/2)] !ps-[calc(var(--outdent-indent-space)-var(--line-list-line-width)/2-theme(spacing.sm)/2)];
+    > dt::before {
+      content: "";
+      @apply w-sm h-sm inline-block rounded-full bg-current -ms-[var(--outdent-indent-space)] me-[calc(var(--outdent-indent-space)-theme(space.sm))];
+    }
+  }
+
+  ul.line-list {
+    border-inline-start: var(--line-list-line-width) solid currentColor;
+    @apply ms-0;
+    > li::before {
+      content: "";
+      @apply hidden;
     }
 
-    /* cooklang */
+    > li {
+      @apply ps-[calc(var(--outdent-indent-space)-var(--line-list-line-width))];
+    }
+  }
 
-    .cooklang-ingredients .amount-and-unit {
-        @apply font-bold inline-block;
+  ul.line-list.marker {
+    @apply ms-[calc(theme(spacing.sm)/2-var(--line-list-line-width)/2)];
+    > li::before {
+      content: "";
+      @apply w-sm h-sm min-w-0 inline-block rounded-full bg-current -ms-[calc(theme(spacing.sm)/2+var(--line-list-line-width)/2)] me-[calc(var(--outdent-indent-space)-theme(spacing.sm))];
+    }
+    > li {
+      @apply ps-0;
+    }
+  }
+
+  /* ol marker list */
+
+  ol.marker,
+  ol.line-list {
+    counter-reset: ol-marker;
+    margin-inline-start: 0;
+    > li {
+      counter-increment: ol-marker;
+      @apply flex flex-row items-baseline gap-[calc(2*var(--outdent-indent-space)-var(--line-list-ol-marker-diameter))] my-base;
+    }
+    > li::before {
+      content: counter(ol-marker);
+      border: var(--line-list-line-width) solid currentColor;
+      @apply shrink-0 my-0 flex w-[var(--line-list-ol-marker-diameter)] h-[var(--line-list-ol-marker-diameter)] min-w-0 rounded-full !ps-0 !pe-0 !p-0 justify-center items-center bg-canvas;
+    }
+    > li.current::before {
+      @apply text-canvas border-write bg-write text-larger font-bold;
+    }
+    > li.check::before {
+      content: "⎷";
+      @apply text-canvas border-write bg-write text-larger font-bold;
+    }
+  }
+
+  ol.line-list {
+    border-inline-start: var(--line-list-line-width) solid currentColor;
+    @apply ms-[calc((var(--line-list-ol-marker-diameter))/2)];
+    > li {
+      @apply -ms-[calc((var(--line-list-ol-marker-diameter)+var(--line-list-line-width))/2)];
+    }
+  }
+
+  a.tag {
+    @apply meta border font-normal border-current rounded py-[.2em] px-[.4em] no-underline inline-block hover:!bg-active-button-canvas hover:!text-active-button-write hover:!border-active-button-canvas hover:no-underline;
+  }
+
+  a.tag[aria-current="true"] {
+    @apply bg-button-canvas border-button-canvas text-button-write;
+  }
+
+  /*auto complete */
+  ul.auto-complete-suggestion {
+    @apply border border-current absolute z-10 w-full m-0;
+
+    &::after {
+      content: "";
+      @apply absolute -end-xl h-xl w-1;
     }
 
-    .mermaid {
-        svg {
-            background: var(--mermaid-canvas);
-            @apply max-h-[60vh] max-w-full;
-        }
-        svg[aria-roledescription="xychart"] > g > rect {
-            fill: var(--mermaid-canvas) !important;
-        }
-        svg[data-aspect-ratio="1"] {
-            @apply max-w-prose;
-        }
+    > li {
+      @apply px-xs py-sm leading-tight bg-field-canvas cursor-pointer font-normal;
     }
-
-    /* echarts */
-    .echarts-container {
-        @apply h-[60vh] w-full;
-        &.pie,
-        &.radar {
-            height: unset;
-            aspect-ratio: 1 / 1;
-            @apply max-w-prose max-h-[60vh];
-        }
+    > li::before {
+      @apply hidden;
     }
-
-    /* page layout */
-    html.post,
-    html.page {
-        h1,
-        .h1 {
-            @apply text-xl sm:text-3xl tracking-tight;
-        }
-        h2,
-        .h2 {
-            @apply text-lg tracking-tight;
-        }
-        h3,
-        .h3 {
-            @apply text-md tracking-tight;
-        }
-
-        article {
-            h1,
-            .h1 {
-                @apply text-base;
-            }
-            h2,
-            .h2 {
-                @apply text-base;
-            }
-            h3,
-            .h3 {
-                @apply text-base;
-            }
-        }
+    > li:hover,
+    > li[aria-selected="true"] {
+      @apply bg-active-button-canvas text-active-button-write;
     }
+  }
 
-    /* line list */
+  /* table of contents */
 
-    dl.line-list {
-        border-inline-start: var(--line-list-line-width) solid currentColor;
-        @apply !ps-[calc(var(--outdent-indent-space)-var(--line-list-line-width))];
+  .table-of-contents {
+    @apply my-xl;
+    &::before {
+      content: "On this page";
+      @apply meta;
     }
-
-    dl.line-list.marker {
-        @apply !ms-[calc(theme(spacing.sm)/2-var(--line-list-line-width)/2)] !ps-[calc(var(--outdent-indent-space)-var(--line-list-line-width)/2-theme(spacing.sm)/2)];
-        > dt::before {
-            content: "";
-            @apply w-sm h-sm inline-block rounded-full bg-current -ms-[var(--outdent-indent-space)] me-[calc(var(--outdent-indent-space)-theme(space.sm))];
-        }
+    > ol {
+      @apply md:outdent-prose-flow flow-y-0;
     }
+  }
 
-    ul.line-list {
-        border-inline-start: var(--line-list-line-width) solid currentColor;
-        @apply ms-0;
-        > li::before {
-            content: "";
-            @apply hidden;
-        }
-
-        > li {
-            @apply ps-[calc(var(--outdent-indent-space)-var(--line-list-line-width))];
-        }
+  /* scroll table */
+  .scroll-table {
+    @apply my-xl;
+    > table {
+      @apply !my-0;
     }
+  }
 
-    ul.line-list.marker {
-        @apply ms-[calc(theme(spacing.sm)/2-var(--line-list-line-width)/2)];
-        > li::before {
-            content: "";
-            @apply w-sm h-sm min-w-0 inline-block rounded-full bg-current -ms-[calc(theme(spacing.sm)/2+var(--line-list-line-width)/2)] me-[calc(var(--outdent-indent-space)-theme(spacing.sm))];
-        }
-        > li {
-            @apply ps-0;
-        }
+  /* nojs */
+  .no-js .js {
+    @apply hidden;
+  }
+
+  /* PrismJS 1.29.0*/
+  pre[data-language]:not([data-language=""]) {
+    &::before {
+      content: attr(data-language);
+      @apply font-body mb-sm inline-block text-sm border-b-2 border-current pe-base;
     }
+  }
 
-    /* ol marker list */
-
-    ol.marker,
-    ol.line-list {
-        counter-reset: ol-marker;
-        margin-inline-start: 0;
-        > li {
-            counter-increment: ol-marker;
-            @apply flex flex-row items-baseline gap-[calc(2*var(--outdent-indent-space)-var(--line-list-ol-marker-diameter))] my-base;
-        }
-        > li::before {
-            content: counter(ol-marker);
-            border: var(--line-list-line-width) solid currentColor;
-            @apply shrink-0 my-0 flex w-[var(--line-list-ol-marker-diameter)] h-[var(--line-list-ol-marker-diameter)] min-w-0 rounded-full !ps-0 !pe-0 !p-0 justify-center items-center bg-canvas;
-        }
-        > li.current::before {
-            @apply text-canvas border-write bg-write text-larger font-bold;
-        }
-        > li.check::before {
-            content: "⎷";
-            @apply text-canvas border-write bg-write text-larger font-bold;
-        }
+  pre[data-language] {
+    > code {
+      @apply whitespace-pre block overflow-x-auto;
     }
+  }
 
-    ol.line-list {
-        border-inline-start: var(--line-list-line-width) solid currentColor;
-        @apply ms-[calc((var(--line-list-ol-marker-diameter))/2)];
-        > li {
-            @apply -ms-[calc((var(--line-list-ol-marker-diameter)+var(--line-list-line-width))/2)];
-        }
-    }
-
-    a.tag {
-        @apply meta border font-normal border-current rounded py-[.2em] px-[.4em] no-underline inline-block hover:!bg-active-button-canvas hover:!text-active-button-write hover:!border-active-button-canvas hover:no-underline;
-    }
-
-    a.tag[aria-current="true"] {
-        @apply bg-button-canvas border-button-canvas text-button-write;
-    }
-
-    /*auto complete */
-    ul.auto-complete-suggestion {
-        @apply border border-current absolute z-10 w-full m-0;
-
-        &::after {
-            content: "";
-            @apply absolute -end-xl h-xl w-1;
-        }
-
-        > li {
-            @apply px-xs py-sm leading-tight bg-field-canvas cursor-pointer font-normal;
-        }
-        > li::before {
-            @apply hidden;
-        }
-        > li:hover,
-        > li[aria-selected="true"] {
-            @apply bg-active-button-canvas text-active-button-write;
-        }
-    }
-
-    /* table of contents */
-
-    .table-of-contents {
-        @apply my-xl;
-        &::before {
-            content: "On this page";
-            @apply meta;
-        }
-        > ol {
-            @apply md:outdent-prose-flow flow-y-0;
-        }
-    }
-
-    /* scroll table */
-    .scroll-table {
-        @apply my-xl;
-        > table {
-            @apply !my-0;
-        }
-    }
-
-    /* nojs */
-    .no-js .js {
-        @apply hidden;
-    }
-
-    /* PrismJS 1.29.0*/
-    pre[data-language]:not([data-language=""]) {
-        &::before {
-            content: attr(data-language);
-            @apply font-body mb-sm inline-block text-sm border-b-2 border-current pe-base;
-        }
-    }
-
-    pre[data-language] {
-        > code {
-            @apply whitespace-pre block overflow-x-auto;
-        }
-    }
-
-    /* PrismJS 1.29.0
+  /* PrismJS 1.29.0
         https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
-    /**
+  /**
          * prism.js default theme for JavaScript, CSS and HTML
          * Based on dabblet (http://dabblet.com)
          * @author Lea Verou
          */
 
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  @media (prefers-color-scheme: dark) {
     .token.comment,
+    .token.block-comment,
     .token.prolog,
     .token.doctype,
     .token.cdata {
-        color: slategray;
+      color: #999;
     }
 
     .token.punctuation {
-        color: #999;
+      color: #ccc;
     }
 
-    .token.namespace {
-        opacity: 0.7;
+    .token.tag,
+    .token.attr-name,
+    .token.namespace,
+    .token.deleted {
+      color: #e2777a;
+    }
+
+    .token.function-name {
+      color: #6196cc;
+    }
+
+    .token.boolean,
+    .token.number,
+    .token.function {
+      color: #f08d49;
     }
 
     .token.property,
-    .token.tag,
-    .token.boolean,
-    .token.number,
+    .token.class-name,
     .token.constant,
-    .token.symbol,
-    .token.deleted {
-        color: #905;
+    .token.symbol {
+      color: #f8c555;
     }
 
     .token.selector,
-    .token.attr-name,
+    .token.important,
+    .token.atrule,
+    .token.keyword,
+    .token.builtin {
+      color: #cc99cd;
+    }
+
     .token.string,
     .token.char,
-    .token.builtin,
-    .token.inserted {
-        color: #690;
+    .token.attr-value,
+    .token.regex,
+    .token.variable {
+      color: #7ec699;
     }
 
     .token.operator,
     .token.entity,
-    .token.url,
-    .language-css .token.string,
-    .style .token.string {
-        color: #9a6e3a;
-    }
-
-    .token.atrule,
-    .token.attr-value,
-    .token.keyword {
-        color: #07a;
-    }
-
-    .token.function,
-    .token.class-name {
-        color: #dd4a68;
-    }
-
-    .token.regex,
-    .token.important,
-    .token.variable {
-        color: #e90;
+    .token.url {
+      color: #67cdcc;
     }
 
     .token.important,
     .token.bold {
-        font-weight: bold;
+      font-weight: bold;
     }
     .token.italic {
-        font-style: italic;
+      font-style: italic;
     }
 
     .token.entity {
-        cursor: help;
+      cursor: help;
     }
 
-    @media (prefers-color-scheme: dark) {
-        .token.comment,
-        .token.block-comment,
-        .token.prolog,
-        .token.doctype,
-        .token.cdata {
-            color: #999;
-        }
-
-        .token.punctuation {
-            color: #ccc;
-        }
-
-        .token.tag,
-        .token.attr-name,
-        .token.namespace,
-        .token.deleted {
-            color: #e2777a;
-        }
-
-        .token.function-name {
-            color: #6196cc;
-        }
-
-        .token.boolean,
-        .token.number,
-        .token.function {
-            color: #f08d49;
-        }
-
-        .token.property,
-        .token.class-name,
-        .token.constant,
-        .token.symbol {
-            color: #f8c555;
-        }
-
-        .token.selector,
-        .token.important,
-        .token.atrule,
-        .token.keyword,
-        .token.builtin {
-            color: #cc99cd;
-        }
-
-        .token.string,
-        .token.char,
-        .token.attr-value,
-        .token.regex,
-        .token.variable {
-            color: #7ec699;
-        }
-
-        .token.operator,
-        .token.entity,
-        .token.url {
-            color: #67cdcc;
-        }
-
-        .token.important,
-        .token.bold {
-            font-weight: bold;
-        }
-        .token.italic {
-            font-style: italic;
-        }
-
-        .token.entity {
-            cursor: help;
-        }
-
-        .token.inserted {
-            color: green;
-        }
+    .token.inserted {
+      color: green;
     }
+  }
 
-    /* markdown-it footnotes */
+  /* markdown-it footnotes */
 
-    hr.footnotes-sep {
-        @apply hidden;
-    }
+  hr.footnotes-sep {
+    @apply hidden;
+  }
 
-    .footnote-ref a,
-    .footnote-backref {
-        @apply no-underline;
-    }
+  .footnote-ref a,
+  .footnote-backref {
+    @apply no-underline;
+  }
 
+  ol.footnotes-list {
+    counter-reset: footnote-counter;
+  }
+
+  ol.footnotes-list::before {
+    content: "Footnotes";
+    @apply h2 flow-b block;
+  }
+
+  ol.footnotes-list li {
+    counter-increment: footnote-counter;
+    @apply relative;
+  }
+
+  ol.footnotes-list li::before {
+    content: counter(footnote-counter);
+    @apply normal-nums font-normal;
+  }
+
+  ol.footnotes-list li > p {
+    @apply inline;
+  }
+
+  section.footnotes {
     ol.footnotes-list {
-        counter-reset: footnote-counter;
+      @apply md:-ms-[var(--outdent-indent-space)];
     }
 
-    ol.footnotes-list::before {
-        content: "Footnotes";
-        @apply h2 flow-b block;
+    ol.footnotes-list:before {
+      @apply md:ps-[var(--outdent-indent-space)];
     }
-
-    ol.footnotes-list li {
-        counter-increment: footnote-counter;
-        @apply relative;
-    }
-
-    ol.footnotes-list li::before {
-        content: counter(footnote-counter);
-        @apply normal-nums font-normal;
-    }
-
-    ol.footnotes-list li > p {
-        @apply inline;
-    }
-
-    section.footnotes {
-        ol.footnotes-list {
-            @apply md:-ms-[var(--outdent-indent-space)];
-        }
-
-        ol.footnotes-list:before {
-            @apply md:ps-[var(--outdent-indent-space)];
-        }
-    }
+  }
 }

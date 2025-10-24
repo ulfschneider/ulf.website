@@ -1,440 +1,440 @@
 @layer base {
+  :root {
+    font-size: 17px;
+    --outdent-indent-space: 2rem;
+  }
+
+  @media (min-width: theme("screens.md")) {
     :root {
-        font-size: 17px;
-        --outdent-indent-space: 2rem;
+      font-size: 18px;
     }
+  }
 
-    @media (min-width: theme("screens.md")) {
-        :root {
-            font-size: 18px;
-        }
-    }
-
-    @media (min-width: theme("screens.lg")) {
-        :root {
-            font-size: 18px;
-        }
-    }
-
-    @media (min-width: theme("screens.xl")) {
-        :root {
-            font-size: 19px;
-        }
-    }
-
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-        text-decoration-thickness: 0.05em;
-        text-underline-offset: 0.15em;
-    }
-
-    /* scrollbar */
+  @media (min-width: theme("screens.lg")) {
     :root {
-        --scrollbar-width: 16px;
+      font-size: 18px;
     }
+  }
 
-    * {
-        scrollbar-width: var(--scrollbar-width);
-        scrollbar-color: theme("colors.write") transparent;
+  @media (min-width: theme("screens.xl")) {
+    :root {
+      font-size: 19px;
     }
+  }
 
-    /* Chrome, Edge, and Safari */
-    *::-webkit-scrollbar {
-        width: var(--scrollbar-width);
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    text-decoration-thickness: 0.05em;
+    text-underline-offset: 0.15em;
+  }
+
+  /* scrollbar */
+  :root {
+    --scrollbar-width: 16px;
+  }
+
+  * {
+    scrollbar-width: var(--scrollbar-width);
+    scrollbar-color: theme("colors.write") transparent;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+  }
+  *::-webkit-scrollbar-thumb {
+    background: theme("colors.write");
+  }
+
+  *::-webkit-scrollbar-background {
+    background: transparent;
+  }
+
+  /* focus */
+  *:focus {
+    @apply outline-none;
+  }
+  *:focus-visible:not(disabled) {
+    @apply outline-indicator;
+  }
+
+  *:focus[autofocus] {
+    @apply outline-indicator;
+  }
+
+  ::selection {
+    @apply bg-select-canvas text-select-write;
+  }
+
+  @view-transition {
+    navigation: auto; /* required to enable cross-document view transitions*/
+  }
+
+  ::view-transition-old(main) {
+    animation: fade 0.2s linear forwards;
+  }
+
+  ::view-transition-new(main) {
+    animation: fade 0.4s linear reverse;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 1;
     }
-    *::-webkit-scrollbar-thumb {
-        background: theme("colors.write");
+    to {
+      opacity: 0;
     }
+  }
 
-    *::-webkit-scrollbar-background {
-        background: transparent;
-    }
+  html {
+    scroll-behavior: smooth;
+    /*https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/*/
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    /* focus */
-    *:focus {
-        @apply outline-none;
-    }
-    *:focus-visible:not(disabled) {
-        @apply outline-indicator;
-    }
+  a:hover {
+    @apply text-primary underline;
+  }
 
-    *:focus[autofocus] {
-        @apply outline-indicator;
-    }
+  a[href*="//"]:not([href*="ulfschneider.io"])::after
+  {
+    content: "↗";
+    @apply inline-block ms-[.25em] font-normal font-mono no-underline;
+  }
 
-    ::selection {
-        @apply bg-select-canvas text-select-write;
-    }
+  [id],
+  [name] {
+    @apply scroll-my-md;
+  }
 
-    @view-transition {
-        navigation: auto; /* required to enable cross-document view transitions*/
-    }
+  h1,
+  .h1 {
+    @apply text-base font-semibold font-display sm:text-balance;
+  }
 
-    ::view-transition-old(main) {
-        animation: fade 0.2s linear forwards;
-    }
+  h2,
+  .h2 {
+    @apply text-base font-semibold mt-xl flow-b font-display sm:text-balance;
+  }
 
-    ::view-transition-new(main) {
-        animation: fade 0.4s linear reverse;
-    }
+  h3,
+  .h3 {
+    @apply text-base font-semibold mt-xl flow-b font-display sm:text-balance;
+  }
 
-    @keyframes fade {
-        from {
-            opacity: 1;
-        }
-        to {
-            opacity: 0;
-        }
-    }
+  h4,
+  .h4 {
+    @apply text-base font-semibold mt-lg flow-b font-display sm:text-balance;
+  }
 
-    html {
-        scroll-behavior: smooth;
-        /*https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/*/
-        -moz-text-size-adjust: none;
-        -webkit-text-size-adjust: none;
-        text-size-adjust: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-    }
+  h5,
+  .h5 {
+    @apply text-base font-semibold mt-lg flow-b font-display sm:text-balance;
+  }
 
-    a:hover {
-        @apply text-primary underline;
-    }
+  h6,
+  .h6 {
+    @apply text-base font-semibold mt-lg flow-b font-display sm:text-balance;
+  }
 
-    a[href*="//"]:not([href*="ulfschneider.io"])::after
-    {
-        content: "↗";
-        @apply inline-block ms-[.25em] font-normal font-mono no-underline;
-    }
+  /* details summary */
 
-    [id],
-    [name] {
-        @apply scroll-my-md;
-    }
-
-    h1,
-    .h1 {
-        @apply text-base font-semibold font-display sm:text-balance;
-    }
-
-    h2,
-    .h2 {
-        @apply text-base font-semibold mt-xl flow-b font-display sm:text-balance;
-    }
-
-    h3,
-    .h3 {
-        @apply text-base font-semibold mt-xl flow-b font-display sm:text-balance;
-    }
-
-    h4,
-    .h4 {
-        @apply text-base font-semibold mt-lg flow-b font-display sm:text-balance;
-    }
-
-    h5,
-    .h5 {
-        @apply text-base font-semibold mt-lg flow-b font-display sm:text-balance;
-    }
-
-    h6,
-    .h6 {
-        @apply text-base font-semibold mt-lg flow-b font-display sm:text-balance;
-    }
-
-    /* details summary */
-
-    details {
-        > summary {
-            @apply cursor-pointer list-none;
-            &::before {
-                @apply inline-block !pe-[0.5em] min-w-[var(--outdent-indent-space)] content-[">"] text-smaller;
-            }
-            &::-webkit-details-marker {
-                @apply hidden;
-            }
-            > * {
-                @apply inline;
-            }
-        }
-    }
-
-    details[open] > summary::before {
-        @apply content-["▼"];
-    }
-
-    /* ul, ol */
-    ol,
-    ul {
-        @apply flow-y mx-0 list-none p-0;
-    }
-
-    li > ol,
-    li > ul {
-        @apply my-0;
-    }
-
-    li {
-        @apply m-0 p-0 ps-[var(--outdent-indent-space)];
-
-        &::before {
-            @apply outdent inline-block whitespace-nowrap tabular-nums !pe-[0.5em] not-italic ps-0;
-        }
-    }
-
-    ol > li::before {
-        content: counters(ol-counter, ".", decimal) ". ";
-        @apply text-sm;
-    }
-
-    ul > li::before {
-        content: "–"; /*•●*/
-    }
-
-    li > p:first-child {
+  details {
+    > summary {
+      @apply cursor-pointer list-none;
+      &::before {
+        @apply inline-block !pe-[0.5em] min-w-[var(--outdent-indent-space)] content-[">"] text-smaller;
+      }
+      &::-webkit-details-marker {
+        @apply hidden;
+      }
+      > * {
         @apply inline;
+      }
+    }
+  }
+
+  details[open] > summary::before {
+    @apply content-["▼"];
+  }
+
+  /* ul, ol */
+  ol,
+  ul {
+    @apply flow-y mx-0 list-none p-0;
+  }
+
+  li > ol,
+  li > ul {
+    @apply my-0;
+  }
+
+  li {
+    @apply m-0 p-0 ps-[var(--outdent-indent-space)];
+
+    &::before {
+      @apply outdent inline-block whitespace-nowrap tabular-nums !pe-[0.5em] not-italic ps-0;
+    }
+  }
+
+  ol > li::before {
+    content: counters(ol-counter, ".", decimal) ". ";
+    @apply text-sm;
+  }
+
+  ul > li::before {
+    content: "–"; /*•●*/
+  }
+
+  li > p:first-child {
+    @apply inline;
+  }
+
+  li > ol {
+    counter-reset: ol-counter;
+  }
+
+  ol > li {
+    counter-increment: ol-counter;
+  }
+
+  ol > li > ol > li::before {
+    content: counters(ol-counter, ".", decimal) " ";
+  }
+
+  ul.reset,
+  ol.reset {
+    @apply my-0 list-none p-0;
+
+    > li {
+      @apply p-0;
     }
 
-    li > ol {
-        counter-reset: ol-counter;
+    > li::before {
+      content: "";
+      @apply hidden;
+    }
+  }
+
+  /* dl */
+
+  dl {
+    @apply flow-y mx-0 p-0;
+  }
+
+  dt {
+    @apply font-bold;
+  }
+
+  dd {
+    padding-inline-start: var(--outdent-indent-space);
+  }
+
+  dd + dt,
+  dt + dt {
+    @apply flow-t;
+  }
+
+  /* quote and blockquote */
+
+  q {
+    @apply italic;
+    quotes: "„" "“" "‘" "’";
+  }
+
+  blockquote {
+    padding-inline-start: calc(
+      var(--outdent-indent-space) - theme("borderWidth.2")
+    );
+    @apply my-lg border-s-2 border-current italic;
+  }
+
+  blockquote > header,
+  blockquote > footer {
+    @apply flow-y sm:text-pretty meta not-italic;
+  }
+
+  /* figure */
+
+  figure {
+    @apply my-lg;
+
+    figcaption {
+      @apply sm:text-pretty meta;
     }
 
-    ol > li {
-        counter-increment: ol-counter;
+    figcaption:first-child {
+      @apply flow-b;
     }
 
-    ol > li > ol > li::before {
-        content: counters(ol-counter, ".", decimal) " ";
+    figcaption:last-child {
+      @apply flow-t;
+    }
+  }
+
+  .split.reverse figure {
+    figcaption:first-child {
+      margin-block-end: 0;
+      @apply flow-t;
     }
 
-    ul.reset,
-    ol.reset {
-        @apply my-0 list-none p-0;
-
-        > li {
-            @apply p-0;
-        }
-
-        > li::before {
-            content: "";
-            @apply hidden;
-        }
+    figcaption:last-child {
+      margin-block-start: 0;
+      @apply flow-b ms-0;
     }
+  }
 
-    /* dl */
+  figure + figure {
+    @apply mt-2xl;
+  }
 
-    dl {
-        @apply flow-y mx-0 p-0;
-    }
+  figcaption + * {
+    @apply mt-0;
+  }
 
-    dt {
-        @apply font-bold;
-    }
+  /* address */
+  address {
+    @apply not-italic font-normal;
+  }
 
-    dd {
-        padding-inline-start: var(--outdent-indent-space);
-    }
+  /* typography */
+  cite {
+    @apply font-bold not-italic;
+  }
 
-    dd + dt,
-    dt + dt {
-        @apply flow-t;
-    }
+  kbd {
+    @apply meta text-inherit border border-current shadow-sm rounded-sm leading-none px-[0.2em] font-normal;
+  }
 
-    /* quote and blockquote */
+  mark,
+  .mark {
+    background:
+      linear-gradient(
+        100deg,
+        rgba(255, 221, 64, 0) 0.9%,
+        rgba(255, 221, 64, 1) 2.4%,
+        rgba(255, 221, 64, 0.5) 5.8%,
+        rgba(255, 221, 64, 0.2) 93%,
+        rgba(255, 221, 64, 0.7) 96%,
+        rgba(255, 221, 64, 0) 98%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 221, 64, 0) 0%,
+        rgba(255, 221, 64, 0.3) 7.9%,
+        rgba(255, 221, 64, 0) 15%
+      );
+    @apply text-mark-write;
+    border-radius: 0.125em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
 
-    q {
-        @apply italic;
-        quotes: "„" "“" "‘" "’";
-    }
-
-    blockquote {
-        padding-inline-start: calc(
-            var(--outdent-indent-space) - theme("borderWidth.2")
-        );
-        @apply my-lg border-s-2 border-current;
-    }
-
-    blockquote > header,
-    blockquote > footer {
-        @apply flow-y sm:text-pretty meta;
-    }
-
-    /* figure */
-
-    figure {
-        @apply my-lg;
-
-        figcaption {
-            @apply sm:text-pretty meta;
-        }
-
-        figcaption:first-child {
-            @apply flow-b;
-        }
-
-        figcaption:last-child {
-            @apply flow-t;
-        }
-    }
-
-    .split.reverse figure {
-        figcaption:first-child {
-            margin-block-end: 0;
-            @apply flow-t;
-        }
-
-        figcaption:last-child {
-            margin-block-start: 0;
-            @apply flow-b ms-0;
-        }
-    }
-
-    figure + figure {
-        @apply mt-2xl;
-    }
-
-    figcaption + * {
-        @apply mt-0;
-    }
-
-    /* address */
-    address {
-        @apply not-italic font-normal;
-    }
-
-    /* typography */
-    cite {
-        @apply font-bold not-italic;
-    }
-
-    kbd {
-        @apply meta text-inherit border border-current shadow-sm rounded-sm leading-none px-[0.2em] font-normal;
-    }
-
+  @media (prefers-color-scheme: dark) {
     mark,
     .mark {
-        background:
-            linear-gradient(
-                100deg,
-                rgba(255, 221, 64, 0) 0.9%,
-                rgba(255, 221, 64, 1) 2.4%,
-                rgba(255, 221, 64, 0.5) 5.8%,
-                rgba(255, 221, 64, 0.2) 93%,
-                rgba(255, 221, 64, 0.7) 96%,
-                rgba(255, 221, 64, 0) 98%
-            ),
-            linear-gradient(
-                180deg,
-                rgba(255, 221, 64, 0) 0%,
-                rgba(255, 221, 64, 0.3) 7.9%,
-                rgba(255, 221, 64, 0) 15%
-            );
-        @apply text-mark-write;
-        border-radius: 0.125em;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
+      border-radius: 0;
+      @apply bg-mark-canvas text-mark-write;
+    }
+  }
+
+  /*vertical rhythm*/
+  img + img,
+  picture + picture {
+    @apply mt-md inline-block;
+  }
+
+  p {
+    @apply my-0 indent-0 sm:text-pretty;
+  }
+
+  p + p {
+    margin-block-start: 1em;
+    margin-block-start: 1lh;
+  }
+
+  /* img */
+  img {
+    @apply object-contain object-left dark:brightness-90 dark:contrast-125 dark:filter;
+  }
+
+  img:dir(rtl) {
+    @apply object-right;
+  }
+
+  img {
+    @apply sm:max-h-[80vh];
+  }
+
+  /* hr */
+  hr {
+    @apply border-0 block h-fit;
+  }
+
+  hr::before {
+    content: "* * *";
+    @apply block my-xl text-center;
+  }
+
+  /* table */
+  table {
+    @apply my-xl text-start border-collapse border-y border-write;
+
+    caption {
+      @apply sm:text-pretty meta pb-sm;
+      text-align: inherit;
     }
 
-    @media (prefers-color-scheme: dark) {
-        mark,
-        .mark {
-            border-radius: 0;
-            @apply bg-mark-canvas text-mark-write;
-        }
+    tr {
+      @apply border-collapse border-b-[0.5px]  border-write;
     }
 
-    /*vertical rhythm*/
-    img + img,
-    picture + picture {
-        @apply mt-md inline-block;
+    th {
+      @apply p-sm align-baseline font-bold flow-t break-normal;
+      text-align: inherit;
     }
 
-    p {
-        @apply my-0 indent-0 sm:text-pretty;
+    td {
+      @apply p-sm align-baseline font-normal break-normal;
+      text-align: inherit;
     }
 
-    p + p {
-        margin-block-start: 1em;
-        margin-block-start: 1lh;
+    thead {
+      th,
+      td {
+        @apply align-bottom;
+      }
     }
+  }
 
-    /* img */
-    img {
-        @apply object-contain object-left dark:brightness-90 dark:contrast-125 dark:filter;
-    }
+  pre {
+    @apply overflow-x-auto flow-y;
+  }
 
-    img:dir(rtl) {
-        @apply object-right;
-    }
+  pre,
+  pre > code {
+    @apply whitespace-pre-wrap break-long-words font-mono leading-normal font-normal;
+    word-spacing: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    font-size: 0.9em;
+  }
 
-    img {
-        @apply sm:max-h-[80vh];
-    }
-
-    /* hr */
-    hr {
-        @apply border-0 block h-fit;
-    }
-
-    hr::before {
-        content: "* * *";
-        @apply block my-xl text-center;
-    }
-
-    /* table */
-    table {
-        @apply my-xl text-start border-collapse border-y border-write;
-
-        caption {
-            @apply sm:text-pretty meta pb-sm;
-            text-align: inherit;
-        }
-
-        tr {
-            @apply border-collapse border-b-[0.5px]  border-write;
-        }
-
-        th {
-            @apply p-sm align-baseline font-bold flow-t break-normal;
-            text-align: inherit;
-        }
-
-        td {
-            @apply p-sm align-baseline font-normal break-normal;
-            text-align: inherit;
-        }
-
-        thead {
-            th,
-            td {
-                @apply align-bottom;
-            }
-        }
-    }
-
-    pre {
-        @apply overflow-x-auto flow-y;
-    }
-
-    pre,
-    pre > code {
-        @apply whitespace-pre-wrap break-long-words font-mono leading-normal font-normal;
-        word-spacing: normal;
-        word-wrap: normal;
-        -moz-tab-size: 4;
-        -o-tab-size: 4;
-        tab-size: 4;
-        -webkit-hyphens: none;
-        -moz-hyphens: none;
-        -ms-hyphens: none;
-        hyphens: none;
-        font-size: 0.9em;
-    }
-
-    code:not(pre code) {
-        font-size: 0.9em;
-        @apply font-mono font-normal bg-code-canvas text-code-write;
-    }
+  code:not(pre code) {
+    font-size: 0.9em;
+    @apply font-mono font-normal bg-code-canvas text-code-write;
+  }
 }

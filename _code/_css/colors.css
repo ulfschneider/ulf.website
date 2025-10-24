@@ -3,52 +3,52 @@ only when the browser supports the light-dark() function. light-dark() is an exc
 method to keep any knowledge about the color scheme away from subsequent CSS. */
 
 :root {
-    --canvas: #f7f7f7;
-    --write: #262626;
-    --code-canvas: #ddd;
-    --code-write: #262626;
-    --mark-canvas: #ffdd41;
-    --mark-write: #262626;
-    --button-canvas: #262626;
-    --button-write: white;
+  --canvas: #f7f7f7;
+  --write: #262626;
+  --code-canvas: #ddd;
+  --code-write: #262626;
+  --mark-canvas: #ffdd41;
+  --mark-write: #262626;
+  --button-canvas: #262626;
+  --button-write: white;
+  --active-button-canvas: var(--primary);
+  --active-button-write: white;
+  --field-canvas: white;
+  --field-write: var(--write);
+  --select-canvas: var(--primary);
+  --select-write: white;
+  --mermaid-canvas: #f7f7f7;
+  --primary: #007aff;
+  --meta: #777;
+  --orange: orange;
+  --red: red;
+  --green: green;
+  --purple: mediumpurple;
+  --blue: var(--primary);
+  --yellow: gold;
+
+  /* light-dark() is supported by 87% of browsers (2025-02-13)*/
+  @supports (color: light-dark(black, white)) {
+    color-scheme: light dark;
+    --canvas: light-dark(#f7f7f7, #171717);
+    --write: light-dark(#262626, #c3c3c3);
+    --code-canvas: light-dark(#ddd, #333);
+    --code-write: light-dark(#262626, #c3c3c3);
+    --button-canvas: light-dark(#262626, #c3c3c3);
+    --button-write: light-dark(white, #262626);
     --active-button-canvas: var(--primary);
-    --active-button-write: white;
-    --field-canvas: white;
+    --active-button-write: light-dark(white, black);
+    --field-canvas: light-dark(white, #272727);
     --field-write: var(--write);
-    --select-canvas: var(--primary);
+    --select-canvas: light-dark(#007aff, #29c1ff);
     --select-write: white;
-    --mermaid-canvas: #f7f7f7;
-    --primary: #007aff;
-    --meta: #777;
+    --primary: light-dark(#007aff, #29c1ff);
+    --meta: light-dark(#777, #999);
     --orange: orange;
     --red: red;
     --green: green;
     --purple: mediumpurple;
-    --blue: var(--primary);
+    --blue: light-dark(#007aff, #29c1ff);
     --yellow: gold;
-
-    /* light-dark() is supported by 87% of browsers (2025-02-13)*/
-    @supports (color: light-dark(black, white)) {
-        color-scheme: light dark;
-        --canvas: light-dark(#f7f7f7, #171717);
-        --write: light-dark(#262626, #c3c3c3);
-        --code-canvas: light-dark(#ddd, #333);
-        --code-write: light-dark(#262626, #c3c3c3);
-        --button-canvas: light-dark(#262626, #c3c3c3);
-        --button-write: light-dark(white, #262626);
-        --active-button-canvas: var(--primary);
-        --active-button-write: light-dark(white, black);
-        --field-canvas: light-dark(white, #272727);
-        --field-write: var(--write);
-        --select-canvas: light-dark(#007aff, #29c1ff);
-        --select-write: white;
-        --primary: light-dark(#007aff, #29c1ff);
-        --meta: light-dark(#777, #999);
-        --orange: orange;
-        --red: red;
-        --green: green;
-        --purple: mediumpurple;
-        --blue: light-dark(#007aff, #29c1ff);
-        --yellow: gold;
-    }
+  }
 }
