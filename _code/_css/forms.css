@@ -146,16 +146,18 @@
       font-size: inherit;
       position: relative;
       width: var(--radio-size);
+      height: var(--radio-size);
       margin: 0;
       border: var(--radio-border-width) solid currentColor;
       border-radius: 50%;
       cursor: pointer;
-      @apply shrink-0 aspect-square;
+      @apply shrink-0;
     }
     input[type="radio"]:not(.native):checked::before {
       content: "";
       position: absolute;
       width: var(--radio-check-size);
+      height: var(--radio-check-size);
       border-radius: 50%;
       margin-block-start: calc(
         (var(--radio-size) - var(--radio-check-size)) / 2 -
@@ -166,7 +168,7 @@
           var(--radio-border-width)
       );
       background-color: currentColor;
-      @apply shrink-0 aspect-square;
+      @apply shrink-0;
     }
 
     :root {
@@ -189,11 +191,12 @@
       font-size: inherit;
       position: relative;
       width: var(--check-size);
+      height: var(--check-size);
       margin: 0;
       border: var(--check-border-width) solid currentColor;
       border-radius: 0;
       cursor: pointer;
-      @apply shrink-0 aspect-square;
+      @apply shrink-0;
     }
     input[type="checkbox"]:not(.native):not([switch]):checked::before {
       content: "";
