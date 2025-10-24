@@ -275,5 +275,5 @@ export default {
   xquery: "XQuery",
   yaml: "YAML",
   yml: "YAML",
-  yang: "YANG",
-};
+  yang: "YANG"
+}
