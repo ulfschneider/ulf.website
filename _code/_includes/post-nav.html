@@ -3,35 +3,35 @@
 if newerPost or olderPost -%}
 
 <nav
-    data-pagefind-ignore
-    class="leading-normal flex flex-col w-full gap-xl md:gap-2xl sm:flex-row justify-between md:text-balance"
+  data-pagefind-ignore
+  class="leading-normal flex flex-col w-full gap-xl md:gap-2xl sm:flex-row justify-between md:text-balance"
 >
-    {% if newerPost %}
+  {% if newerPost %}
+  <div>
+    <div class="meta whitespace-nowrap flex flex-row gap-sm">
+      {% include "key.html" key: site.nav.newer path: newerPost.url %}
+      <span>Newer post</span>
+    </div>
     <div>
-        <div class="meta whitespace-nowrap flex flex-row gap-sm">
-            {% include "key.html" key: site.nav.newer path: newerPost.url %}
-            <span>Newer post</span>
-        </div>
-        <div>
-            <a href="{{ newerPost.url }}">
-                <cite>{{ newerPost.data.title | markdown_inline }}</cite>
-            </a>
-        </div>
+      <a href="{{ newerPost.url }}">
+        <cite>{{ newerPost.data.title | markdown_inline }}</cite>
+      </a>
     </div>
-    {% endif %} {% if olderPost %}
-    <div class="ms-auto">
-        <div
-            class="meta whitespace-nowrap justify-end flex flex-row gap-sm text-end"
-        >
-            <span>Older post</span> {% include "key.html" key: site.nav.older
-            path: olderPost.url %}
-        </div>
-        <div class="text-end">
-            <a href="{{ olderPost.url }}">
-                <cite>{{ olderPost.data.title | markdown_inline }}</cite>
-            </a>
-        </div>
+  </div>
+  {% endif %} {% if olderPost %}
+  <div class="ms-auto">
+    <div
+      class="meta whitespace-nowrap justify-end flex flex-row gap-sm text-end"
+    >
+      <span>Older post</span> {% include "key.html" key: site.nav.older path:
+      olderPost.url %}
     </div>
-    {% endif %}
+    <div class="text-end">
+      <a href="{{ olderPost.url }}">
+        <cite>{{ olderPost.data.title | markdown_inline }}</cite>
+      </a>
+    </div>
+  </div>
+  {% endif %}
 </nav>
 {%- endif -%}

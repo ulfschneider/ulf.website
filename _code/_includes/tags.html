@@ -1,15 +1,15 @@
 {%- if tags -%}
 <nav data-pagefind-ignore data-pagefind-meta="tags:{{tags | join: ','}}">
-    <ul class="reset flex flex-row flex-wrap gap-x-base gap-y-xs">
-        {%- for tag in tags -%} {%- if tag == site.tags.star -%} {%- assign
-        tagStyle = "!no-underline" -%} {%- else -%} {%- assign tagStyle =
-        "underline" -%} {%- endif -%}
-        <li>
-            <a href="{{tag | adjust_tag_path}}" class="{{tagStyle}}"
-                >{{tag | adjust_tag_label}}</a
-            >
-        </li>
-        {%- endfor -%}
-    </ul>
+  <ul class="reset flex flex-row flex-wrap gap-x-base gap-y-xs">
+    {%- for tag in tags -%} {%- if tag == site.tags.star -%} {%- assign tagStyle
+    = "!no-underline" -%} {%- else -%} {%- assign tagStyle = "underline" -%} {%-
+    endif -%}
+    <li>
+      <a href="{{tag | adjust_tag_path}}" class="{{tagStyle}}"
+        >{{tag | adjust_tag_label}}</a
+      >
+    </li>
+    {%- endfor -%}
+  </ul>
 </nav>
 {%- endif -%}

@@ -1,29 +1,26 @@
 {%- if publishedDate or modifiedDate -%}
 <span class="flex flex-row flex-wrap gap-x-sm gap-y-xs">
-    {%- if showSymbol == true -%}
-    <span aria-hidden="true">◼</span>
-    {%- endif -%}
-    <span
-        data-pagefind-ignore
-        class="flex flex-row gap-x-md gap-y-xs flex-wrap"
+  {%- if showSymbol == true -%}
+  <span aria-hidden="true">◼</span>
+  {%- endif -%}
+  <span data-pagefind-ignore class="flex flex-row gap-x-md gap-y-xs flex-wrap">
+    {%- if publishedDate -%}
+    <time
+      datetime="{{publishedDate | iso_date}}"
+      data-pagefind-meta="date:{{publishedDate | iso_date}}"
+      data-pagefind-meta="updated:{{updated | iso_date}}"
+      >{{published}}</time
     >
-        {%- if publishedDate -%}
-        <time
-            datetime="{{publishedDate | iso_date}}"
-            data-pagefind-meta="date:{{publishedDate | iso_date}}"
-            data-pagefind-meta="updated:{{updated | iso_date}}"
-            >{{published}}</time
-        >
-        {%- endif -%} {% if modified and modified != published -%}
-        <span>
-            <span>Modified</span>
-            <time
-                datetime="{{modifiedDate | iso_date}}"
-                data-pagefind-meta="updated:{{modifiedDate | iso_date}}"
-                >{{modified}}</time
-            >
-        </span>
-        {% endif -%}
+    {%- endif -%} {% if modified and modified != published -%}
+    <span>
+      <span>Modified</span>
+      <time
+        datetime="{{modifiedDate | iso_date}}"
+        data-pagefind-meta="updated:{{modifiedDate | iso_date}}"
+        >{{modified}}</time
+      >
     </span>
+    {% endif -%}
+  </span>
 </span>
 {%- endif -%}

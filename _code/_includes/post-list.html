@@ -1,26 +1,26 @@
 {%- for post in posts -%}
 <article class="post-list {{post.data.docType}} flow-sm">
-    {%- if post.data.docType == "bookmark" -%}
-    <div class="meta">{{post.data.docType | capitalize}}</div>
-    {%- endif -%} {%- if post.data.docType != "bookmark" -%}
-    <div class="max-w-prose sm:text-balance">
-        <a class="h2" href="{{post.url}}"
-            ><cite>{{post.data.title | markdown_inline }}</cite></a
-        >
-    </div>
-    {%- endif -%} {%- if post.data.abstract -%}
-    <div class="content">{{- post.data.abstract | markdown -}}</div>
-    {%- if stream == true or post.data.docType == "bookmark" -%}
-    <div aria-hidden="true" class="border-l border-current">&nbsp;</div>
-    {%-endif-%} {%- endif -%} {%- if stream == true or post.data.docType ==
-    "bookmark" -%}
-    <div class="content">{{- post.templateContent -}}</div>
-    {%- endif -%}
-    <aside class="max-w-prose meta flex flex-row flex-wrap gap-x-md gap-y-xs">
-        {%- include "dates.html" showSymbol: true publishedDate:
-        post.data.publishedDate published: post.data.published modifiedDate:
-        post.data.modifiedData modified: post.data.modified -%}{%- include
-        "tags.html" tags: post.data.tags -%}
-    </aside>
+  {%- if post.data.docType == "bookmark" -%}
+  <div class="meta">{{post.data.docType | capitalize}}</div>
+  {%- endif -%} {%- if post.data.docType != "bookmark" -%}
+  <div class="max-w-prose sm:text-balance">
+    <a class="h2" href="{{post.url}}"
+      ><cite>{{post.data.title | markdown_inline }}</cite></a
+    >
+  </div>
+  {%- endif -%} {%- if post.data.abstract -%}
+  <div class="content">{{- post.data.abstract | markdown -}}</div>
+  {%- if stream == true or post.data.docType == "bookmark" -%}
+  <div aria-hidden="true" class="border-l border-current">&nbsp;</div>
+  {%-endif-%} {%- endif -%} {%- if stream == true or post.data.docType ==
+  "bookmark" -%}
+  <div class="content">{{- post.templateContent -}}</div>
+  {%- endif -%}
+  <aside class="max-w-prose meta flex flex-row flex-wrap gap-x-md gap-y-xs">
+    {%- include "dates.html" showSymbol: true publishedDate:
+    post.data.publishedDate published: post.data.published modifiedDate:
+    post.data.modifiedData modified: post.data.modified -%}{%- include
+    "tags.html" tags: post.data.tags -%}
+  </aside>
 </article>
 {%- endfor -%}

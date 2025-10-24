@@ -1,15 +1,15 @@
 ---
 pagination:
-    data: collections.imagesByTag
-    size: 1
-    alias: tagPath
+  data: collections.imagesByTag
+  size: 1
+  alias: tagPath
 permalink: "/gallery{{ tagPath }}"
 search: false
 postNav: false
 showTitle: false
 docType: gallery
 eleventyComputed:
-    title: "{{collections.imagesByTag[tagPath].title}}"
+  title: "{{collections.imagesByTag[tagPath].title}}"
 layout: default
 ---
 
@@ -21,40 +21,40 @@ gallery.tagIntro != nil and gallery.tagIntro != "" -%}
 {%- endif -%}
 
 <h1 class="my-0">
-    {%- if gallery.multipleYears == true -%}
-    <span>{{gallery.fromYear}} – {{gallery.toYear }}: </span>
-    {%- else -%}
-    <span>{{gallery.year}}: </span>
-    {%- endif -%} {%- if gallery.tag != "" -%} {%- if gallery.tag ==
-    site.tags.star -%} {%- assign tagStyle = "!border-none no-underline" -%} {%-
-    else -%} {%- assign tagStyle = "" -%} {%- endif -%}
-    <span
-        >Images tagged
-        <a href="/gallery/{{gallery.tag}}/" class="tag {{tagStyle}}"
-            >{{ gallery.tag | adjust_tag_label }}</a
-        ></span
-    >
-    {%- else -%}
-    <span>All posts</span>
-    {%- endif -%}
+  {%- if gallery.multipleYears == true -%}
+  <span>{{gallery.fromYear}} – {{gallery.toYear }}: </span>
+  {%- else -%}
+  <span>{{gallery.year}}: </span>
+  {%- endif -%} {%- if gallery.tag != "" -%} {%- if gallery.tag ==
+  site.tags.star -%} {%- assign tagStyle = "!border-none no-underline" -%} {%-
+  else -%} {%- assign tagStyle = "" -%} {%- endif -%}
+  <span
+    >Images tagged
+    <a href="/gallery/{{gallery.tag}}/" class="tag {{tagStyle}}"
+      >{{ gallery.tag | adjust_tag_label }}</a
+    ></span
+  >
+  {%- else -%}
+  <span>All posts</span>
+  {%- endif -%}
 </h1>
 
 <div
-    class="grid grid-masonry gap-xl my-xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
+  class="grid grid-masonry gap-xl my-xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
 >
-    {%- for image in gallery.items -%}
-    <a href="{{image.url}}" class="no-underline">
-        <figure class="m-0">
-            <img src="{{image.src}}" />
-            {%- if image.title -%}
-            <figcaption>{{image.title}}</figcaption>
-            {%- endif -%}
-        </figure>
-    </a>
-    {%- endfor -%}
+  {%- for image in gallery.items -%}
+  <a href="{{image.url}}" class="no-underline">
+    <figure class="m-0">
+      <img src="{{image.src}}" />
+      {%- if image.title -%}
+      <figcaption>{{image.title}}</figcaption>
+      {%- endif -%}
+    </figure>
+  </a>
+  {%- endfor -%}
 </div>
 
 <div class="my-xl">
-    <div class="flow-b h2">Choose posts by tag</div>
-    {%- include "site-tags.html" currentTag: tag-%}
+  <div class="flow-b h2">Choose posts by tag</div>
+  {%- include "site-tags.html" currentTag: tag-%}
 </div>

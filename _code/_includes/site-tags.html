@@ -1,17 +1,17 @@
 <nav data-pagefind-ignore>
-    <ul class="reset flex flex-row flex-wrap gap-sm">
-        {%-for tag in collections.siteTags -%} {%- if tag == currentTag -%}
-        <li>
-            <a href="{{tag | adjust_tag_path}}" aria-current="true" class="tag"
-                >{{tag | adjust_tag_label}}</a
-            >
-        </li>
-        {%- else -%}
-        <li>
-            <a href="{{tag | adjust_tag_path}}" class="tag"
-                >{{tag | adjust_tag_label}}</a
-            >
-        </li>
-        {%- endif -%} {%- endfor -%}
-    </ul>
+  <ul class="reset flex flex-row flex-wrap gap-sm">
+    {%-for tag in collections.siteTags -%} {%- if tag == currentTag -%}
+    <li>
+      <a href="{{tag | adjust_tag_path}}" aria-current="true" class="tag"
+        >{{tag | adjust_tag_label}}</a
+      >
+    </li>
+    {%- else -%}
+    <li>
+      <a href="{{tag | adjust_tag_path}}" class="tag"
+        >{{tag | adjust_tag_label}}</a
+      >
+    </li>
+    {%- endif -%} {%- endfor -%}
+  </ul>
 </nav>

@@ -1,37 +1,36 @@
 <nav data-pagefind-ignore>
-    <ul class="reset flow">
-        <li class="flex flex-row gap-sm">
-            <a href="/">Home</a> {% include "key.html" key: site.nav.home path:
-            "/" %}
-        </li>
-        <li class="flex flex-row gap-sm">
-            <a href="/blog/">Blog</a> {% include "key.html" key: site.nav.blog
-            path: "/blog/" %}
-        </li>
-        <li class="flex flex-row gap-sm">
-            <a href="/about/">About</a> {% include "key.html" key:
-            site.nav.about path: "/about/" %}
-        </li>
-        <li class="flex flex-row gap-sm">
-            <a href="/colophon/">Colophon</a> {% include "key.html" key:
-            site.nav.colophon path: "/colophon/" %}
-        </li>
-        <li class="js flex flex-row gap-sm">
-            <a href="/search/">Search</a> {% include "key.html" key:
-            site.nav.search path: "/search/" focusSelector: "#search-query" %}
-        </li>
-        <li class="flex flex-row gap-sm">
-            <a href="{{site.rss.url}}" type="application/rss+xml">RSS</a>
-        </li>
-    </ul>
+  <ul class="reset flow">
+    <li class="flex flex-row gap-sm">
+      <a href="/">Home</a> {% include "key.html" key: site.nav.home path: "/" %}
+    </li>
+    <li class="flex flex-row gap-sm">
+      <a href="/blog/">Blog</a> {% include "key.html" key: site.nav.blog path:
+      "/blog/" %}
+    </li>
+    <li class="flex flex-row gap-sm">
+      <a href="/about/">About</a> {% include "key.html" key: site.nav.about
+      path: "/about/" %}
+    </li>
+    <li class="flex flex-row gap-sm">
+      <a href="/colophon/">Colophon</a> {% include "key.html" key:
+      site.nav.colophon path: "/colophon/" %}
+    </li>
+    <li class="js flex flex-row gap-sm">
+      <a href="/search/">Search</a> {% include "key.html" key: site.nav.search
+      path: "/search/" focusSelector: "#search-query" %}
+    </li>
+    <li class="flex flex-row gap-sm">
+      <a href="{{site.rss.url}}" type="application/rss+xml">RSS</a>
+    </li>
+  </ul>
 
-    <div
-        id="back-to-top"
-        class="js meta m-base p-sm bg-button-canvas text-button-write border border-current fixed end-0 bottom-0"
-    >
-        <div class="flex flex-row gap-sm justify-end">
-            <a href="#top" class="!text-current">Back to Top</a> {% include
-            "key.html" key: site.nav.top path: "#top" %}
-        </div>
+  <div
+    id="back-to-top"
+    class="js meta m-base p-sm bg-button-canvas text-button-write border border-current fixed end-0 bottom-0"
+  >
+    <div class="flex flex-row gap-sm justify-end">
+      <a href="#top" class="!text-current">Back to Top</a> {% include "key.html"
+      key: site.nav.top path: "#top" %}
     </div>
+  </div>
 </nav>

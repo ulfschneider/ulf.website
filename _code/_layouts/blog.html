@@ -1,8 +1,8 @@
 ---
 pagination:
-    data: collections.postsByTagAndYear
-    size: 1
-    alias: tagAndYearPath
+  data: collections.postsByTagAndYear
+  size: 1
+  alias: tagAndYearPath
 permalink: "/blog{{ tagAndYearPath }}"
 layout: default
 search: false
@@ -10,89 +10,86 @@ postNav: false
 showTitle: false
 docType: blog
 eleventyComputed:
-    title: "{{collections.postsByTagAndYear[tagAndYearPath].title}}"
+  title: "{{collections.postsByTagAndYear[tagAndYearPath].title}}"
 ---
 
 {%- assign posts = collections.postsByTagAndYear[tagAndYearPath] -%} {%- assign
 tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
 <div class="xl:flex xl:flex-row-reverse xl:gap-xl">
-    <div class="my-xl xl:m-0 xl:basis-4/12">
-        <div class="xl:sticky xl:top-lg">
-            <div class="flow-b mt-0 h2">Choose posts by tag</div>
-            {%- include "site-tags.html" currentTag: tag-%}
-        </div>
+  <div class="my-xl xl:m-0 xl:basis-4/12">
+    <div class="xl:sticky xl:top-lg">
+      <div class="flow-b mt-0 h2">Choose posts by tag</div>
+      {%- include "site-tags.html" currentTag: tag-%}
     </div>
-    <div class="xl:basis-8/12">
-        {%- if content != "" or posts.tagIntro != nil and posts.tagIntro != ""
-        -%}
-        <div class="my-2xl xl:mt-0 xl:mb-2xl">
-            {{content}}{{posts.tagIntro}}
-        </div>
-        {%- endif -%}
-        <h1 class="mt-0 flow-b">
-            {%- if posts.multipleYears == true -%}
-            <span>{{posts.fromYear}} – {{posts.toYear }}: </span>
-            {%- else -%}
-            <span>{{posts.year}}: </span>
-            {%- endif -%} {%- if posts.tag != "" -%} {%- if posts.tag ==
-            site.tags.star -%} {%- assign tagStyle = "!border-none no-underline"
-            -%} {%- else -%} {%- assign tagStyle = "" -%} {%- endif -%}
-            <span
-                >Posts tagged
-                <a href="/blog/{{posts.tag}}/" class="tag {{tagStyle}}"
-                    >{{ posts.tag | adjust_tag_label }}</a
-                ></span
-            >
-            {%- else -%}
-            <span>All posts</span>
-            {%- endif -%}
-        </h1>
+  </div>
+  <div class="xl:basis-8/12">
+    {%- if content != "" or posts.tagIntro != nil and posts.tagIntro != "" -%}
+    <div class="my-2xl xl:mt-0 xl:mb-2xl">{{content}}{{posts.tagIntro}}</div>
+    {%- endif -%}
+    <h1 class="mt-0 flow-b">
+      {%- if posts.multipleYears == true -%}
+      <span>{{posts.fromYear}} – {{posts.toYear }}: </span>
+      {%- else -%}
+      <span>{{posts.year}}: </span>
+      {%- endif -%} {%- if posts.tag != "" -%} {%- if posts.tag ==
+      site.tags.star -%} {%- assign tagStyle = "!border-none no-underline" -%}
+      {%- else -%} {%- assign tagStyle = "" -%} {%- endif -%}
+      <span
+        >Posts tagged
+        <a href="/blog/{{posts.tag}}/" class="tag {{tagStyle}}"
+          >{{ posts.tag | adjust_tag_label }}</a
+        ></span
+      >
+      {%- else -%}
+      <span>All posts</span>
+      {%- endif -%}
+    </h1>
 
-        {%- if posts.items.length > site.posts.doubleNavThreshold -%} {%- if
-        posts.newer or posts.older -%}
-        <nav class="meta flex flex-row flex-wrap gap-md">
-            {%- if posts.newest -%}
-            <a href="/blog{{posts.newest.key}}">Newest</a>
-            {%- endif -%} {%- if posts.newer -%} {% assign newerPath = "/blog" |
-            append: posts.newer.key %}
-            <span
-                ><a href="{{newerPath}}">Newer</a> {% include "key.html" key:
-                site.nav.newer path: newerPath %}</span
-            >
-            {%- endif -%}{%- if posts.older -%} {% assign olderPath = "/blog" |
-            append: posts.older.key %}
-            <span
-                ><a href="{{olderPath}}">Older</a> {% include "key.html" key:
-                site.nav.older path: olderPath %} </span
-            >{%- endif -%}{%- if posts.oldest -%}
-            <a href="/blog{{posts.oldest.key}}">Oldest</a>
-            {%- endif -%}
-        </nav>
-        {%- endif -%}{%- endif -%}
-        <div class="mt-xl flow-xl">
-            {%- include "post-list.html" posts: posts.items -%}
-        </div>
-
-        {%- if posts.newer or posts.older -%}
-        <nav class="meta mt-xl flex flex-row flex-wrap gap-md">
-            {%- if posts.newest -%}
-            <a href="/blog{{posts.newest.key}}">Newest</a>
-            {%- endif -%} {%- if posts.newer -%} {% assign newerPath = "/blog" |
-            append: posts.newer.key %}
-            <span
-                ><a href="{{newerPath}}">Newer</a> {% include "key.html" key:
-                site.nav.newer path: newerPath %}</span
-            >
-            {%- endif -%}{%- if posts.older -%} {% assign olderPath = "/blog" |
-            append: posts.older.key %}
-            <span
-                ><a href="{{olderPath}}">Older</a> {% include "key.html" key:
-                site.nav.older path: olderPath %}</span
-            >
-            {%- endif -%}{%- if posts.oldest -%}
-            <a href="/blog{{posts.oldest.key}}">Oldest</a>
-            {%- endif -%}
-        </nav>
-        {%-endif-%}
+    {%- if posts.items.length > site.posts.doubleNavThreshold -%} {%- if
+    posts.newer or posts.older -%}
+    <nav class="meta flex flex-row flex-wrap gap-md">
+      {%- if posts.newest -%}
+      <a href="/blog{{posts.newest.key}}">Newest</a>
+      {%- endif -%} {%- if posts.newer -%} {% assign newerPath = "/blog" |
+      append: posts.newer.key %}
+      <span
+        ><a href="{{newerPath}}">Newer</a> {% include "key.html" key:
+        site.nav.newer path: newerPath %}</span
+      >
+      {%- endif -%}{%- if posts.older -%} {% assign olderPath = "/blog" |
+      append: posts.older.key %}
+      <span
+        ><a href="{{olderPath}}">Older</a> {% include "key.html" key:
+        site.nav.older path: olderPath %} </span
+      >{%- endif -%}{%- if posts.oldest -%}
+      <a href="/blog{{posts.oldest.key}}">Oldest</a>
+      {%- endif -%}
+    </nav>
+    {%- endif -%}{%- endif -%}
+    <div class="mt-xl flow-xl">
+      {%- include "post-list.html" posts: posts.items -%}
     </div>
+
+    {%- if posts.newer or posts.older -%}
+    <nav class="meta mt-xl flex flex-row flex-wrap gap-md">
+      {%- if posts.newest -%}
+      <a href="/blog{{posts.newest.key}}">Newest</a>
+      {%- endif -%} {%- if posts.newer -%} {% assign newerPath = "/blog" |
+      append: posts.newer.key %}
+      <span
+        ><a href="{{newerPath}}">Newer</a> {% include "key.html" key:
+        site.nav.newer path: newerPath %}</span
+      >
+      {%- endif -%}{%- if posts.older -%} {% assign olderPath = "/blog" |
+      append: posts.older.key %}
+      <span
+        ><a href="{{olderPath}}">Older</a> {% include "key.html" key:
+        site.nav.older path: olderPath %}</span
+      >
+      {%- endif -%}{%- if posts.oldest -%}
+      <a href="/blog{{posts.oldest.key}}">Oldest</a>
+      {%- endif -%}
+    </nav>
+    {%-endif-%}
+  </div>
 </div>

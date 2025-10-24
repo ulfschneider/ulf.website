@@ -8,237 +8,226 @@ showTitle: false
 ---
 
 <noscript>
-    <p>
-        You cannot perform a search because JavaScript is disabled for your
-        browser. Please consider enabling JavaScript.
-    </p>
+  <p>
+    You cannot perform a search because JavaScript is disabled for your browser.
+    Please consider enabling JavaScript.
+  </p>
 </noscript>
 <div>{% include "search-field.html" %}</div>
 
 <div class="my-xl" id="search-results"></div>
 
 <script>
-    function removeChildren(parent) {
-        if (parent) {
-            parent.innerHTML = "";
+  function removeChildren(parent) {
+    if (parent) {
+      parent.innerHTML = ""
+    }
+  }
+
+  function humanDate(date) {
+    return new Intl.DateTimeFormat("{{site.locale}}", {
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    }).format(date)
+  }
+
+  function isoDate(date) {
+    return date.toISOString()
+  }
+
+  function printResultEntry(parent, entry) {
+    if (parent) {
+      let article = document.createElement("article")
+      article.classList.add("my-xl")
+      parent.appendChild(article)
+
+      if (entry.meta.title && entry.meta.showTitle !== false) {
+        let titleWrapper = document.createElement("div")
+        titleWrapper.classList = "max-w-prose my-xs sm:text-balance"
+        article.appendChild(titleWrapper)
+
+        let linkToArticle = document.createElement("a")
+        linkToArticle.href = entry.url
+        linkToArticle.classList = "h2 my-xs"
+        titleWrapper.appendChild(linkToArticle)
+
+        let title = document.createElement("cite")
+        title.innerHTML = entry.meta.title
+        linkToArticle.appendChild(title)
+      }
+
+      if (entry.excerpt) {
+        let excerpt = document.createElement("p")
+        excerpt.classList = "my-xs"
+        article.appendChild(excerpt)
+        excerpt.innerHTML = entry.excerpt
+        excerpt.appendChild(document.createTextNode(" …"))
+        if (!entry.meta.title) {
+          let linkToArticle = document.createElement("a")
+          linkToArticle.href = entry.id
+          linkToArticle.innerHTML = "Read more"
+          excerpt.appendChild(document.createTextNode(" "))
+          excerpt.appendChild(linkToArticle)
         }
-    }
+      }
 
-    function humanDate(date) {
-        return new Intl.DateTimeFormat("{{site.locale}}", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-        }).format(date);
-    }
+      if (entry.meta.date) {
+        let aside = document.createElement("aside")
+        aside.classList = "meta my-xs flex flex-row flex-rap gap-x-md gap-y-xs"
+        article.appendChild(aside)
 
-    function isoDate(date) {
-        return date.toISOString();
-    }
+        let date = document.createElement("time")
+        date.innerHTML += humanDate(new Date(entry.meta.date))
+        date.setAttribute("datetime", isoDate(new Date(entry.meta.date)))
+        aside.appendChild(date)
+        aside.appendChild(document.createTextNode(" "))
 
-    function printResultEntry(parent, entry) {
-        if (parent) {
-            let article = document.createElement("article");
-            article.classList.add("my-xl");
-            parent.appendChild(article);
-
-            if (entry.meta.title && entry.meta.showTitle !== false) {
-                let titleWrapper = document.createElement("div");
-                titleWrapper.classList = "max-w-prose my-xs sm:text-balance";
-                article.appendChild(titleWrapper);
-
-                let linkToArticle = document.createElement("a");
-                linkToArticle.href = entry.url;
-                linkToArticle.classList = "h2 my-xs";
-                titleWrapper.appendChild(linkToArticle);
-
-                let title = document.createElement("cite");
-                title.innerHTML = entry.meta.title;
-                linkToArticle.appendChild(title);
-            }
-
-            if (entry.excerpt) {
-                let excerpt = document.createElement("p");
-                excerpt.classList = "my-xs";
-                article.appendChild(excerpt);
-                excerpt.innerHTML = entry.excerpt;
-                excerpt.appendChild(document.createTextNode(" …"));
-                if (!entry.meta.title) {
-                    let linkToArticle = document.createElement("a");
-                    linkToArticle.href = entry.id;
-                    linkToArticle.innerHTML = "Read more";
-                    excerpt.appendChild(document.createTextNode(" "));
-                    excerpt.appendChild(linkToArticle);
-                }
-            }
-
-            if (entry.meta.date) {
-                let aside = document.createElement("aside");
-                aside.classList =
-                    "meta my-xs flex flex-row flex-rap gap-x-md gap-y-xs";
-                article.appendChild(aside);
-
-                let date = document.createElement("time");
-                date.innerHTML += humanDate(new Date(entry.meta.date));
-                date.setAttribute(
-                    "datetime",
-                    isoDate(new Date(entry.meta.date)),
-                );
-                aside.appendChild(date);
-                aside.appendChild(document.createTextNode(" "));
-
-                if (entry.meta.updated) {
-                    let wrapper = document.createElement("span");
-                    wrapper.classList = "whitespace-nowrap";
-                    aside.append(wrapper);
-                    let label = document.createElement("span");
-                    label.innerHTML = "Updated";
-                    wrapper.appendChild(label);
-                    wrapper.appendChild(document.createTextNode(" "));
-                    let date = document.createElement("time");
-                    date.innerHTML = humanDate(new Date(entry.meta.updated));
-                    date.setAttribute(
-                        "datetime",
-                        isoDate(new Date(entry.meta.updated)),
-                    );
-                    wrapper.appendChild(date);
-                    wrapper.appendChild(document.createTextNode(" "));
-                }
-            }
+        if (entry.meta.updated) {
+          let wrapper = document.createElement("span")
+          wrapper.classList = "whitespace-nowrap"
+          aside.append(wrapper)
+          let label = document.createElement("span")
+          label.innerHTML = "Updated"
+          wrapper.appendChild(label)
+          wrapper.appendChild(document.createTextNode(" "))
+          let date = document.createElement("time")
+          date.innerHTML = humanDate(new Date(entry.meta.updated))
+          date.setAttribute("datetime", isoDate(new Date(entry.meta.updated)))
+          wrapper.appendChild(date)
+          wrapper.appendChild(document.createTextNode(" "))
         }
+      }
     }
+  }
 
-    function printTitle() {
-        document.title = `Search "${humanQuery()}"`;
+  function printTitle() {
+    document.title = `Search "${humanQuery()}"`
+  }
+
+  function humanQuery() {
+    return getQueryParameterByName("query")
+  }
+
+  function humanHtmlQuery() {
+    return `<mark>${humanQuery()}</mark>`
+  }
+
+  function printResultCount(searchResults, results) {
+    let count = document.createElement("div")
+    count.classList.add("max-w-prose")
+    if (results.length == 0) {
+      count.innerHTML =
+        "Your search for " + humanHtmlQuery() + " did not return any results."
+    } else if (results.length == 1) {
+      count.innerHTML = "One result for " + humanHtmlQuery() + ":"
+    } else {
+      count.innerHTML =
+        results.length + " results for " + humanHtmlQuery() + ":"
     }
+    searchResults.append(count)
+  }
 
-    function humanQuery() {
-        return getQueryParameterByName("query");
+  function printSearching() {
+    let searchResults = document.querySelector("#search-results")
+    if (!searchResults) {
+      console.error(
+        "The page does not have a DOM element with id=[#search-results]"
+      )
+      return
     }
+    searchResults.innerHTML = "Searching " + humanHtmlQuery() + " ..."
+  }
 
-    function humanHtmlQuery() {
-        return `<mark>${humanQuery()}</mark>`;
+  function printSearchResults(results) {
+    let searchResults = document.querySelector("#search-results")
+    if (!searchResults) {
+      console.error(
+        "The page does not have a DOM element with id=[#search-results]"
+      )
+      return
     }
-
-    function printResultCount(searchResults, results) {
-        let count = document.createElement("div");
-        count.classList.add("max-w-prose");
-        if (results.length == 0) {
-            count.innerHTML =
-                "Your search for " +
-                humanHtmlQuery() +
-                " did not return any results.";
-        } else if (results.length == 1) {
-            count.innerHTML = "One result for " + humanHtmlQuery() + ":";
-        } else {
-            count.innerHTML =
-                results.length + " results for " + humanHtmlQuery() + ":";
-        }
-        searchResults.append(count);
+    removeChildren(searchResults)
+    printTitle()
+    printResultCount(searchResults, results)
+    if (results.length) {
+      for (let entry of results) {
+        printResultEntry(searchResults, entry)
+      }
     }
+  }
 
-    function printSearching() {
-        let searchResults = document.querySelector("#search-results");
-        if (!searchResults) {
-            console.error(
-                "The page does not have a DOM element with id=[#search-results]",
-            );
-            return;
-        }
-        searchResults.innerHTML = "Searching " + humanHtmlQuery() + " ...";
+  function printError(error) {
+    console.log(error)
+
+    let searchResults = document.querySelector("#search-results")
+    if (!searchResults) {
+      console.error(
+        "The page does not have a DOM element with id=[#search-results]"
+      )
+      return
     }
-
-    function printSearchResults(results) {
-        let searchResults = document.querySelector("#search-results");
-        if (!searchResults) {
-            console.error(
-                "The page does not have a DOM element with id=[#search-results]",
-            );
-            return;
-        }
-        removeChildren(searchResults);
-        printTitle();
-        printResultCount(searchResults, results);
-        if (results.length) {
-            for (let entry of results) {
-                printResultEntry(searchResults, entry);
-            }
-        }
+    removeChildren(searchResults)
+    let errorMessage = document.createElement("div")
+    errorMessage.innerHTML =
+      "Your search for " +
+      humanHtmlQuery() +
+      " could not be completed because of a failure."
+    if (error && error.status && error.statusText) {
+      errorMessage.innerHTML += "</br>"
+      errorMessage.innerHTML +=
+        "Status code " + error.status + ": " + error.statusText
     }
+    searchResults.append(errorMessage)
+  }
 
-    function printError(error) {
-        console.log(error);
+  async function search() {
+    try {
+      printSearching()
+      let start = Date.now()
+      query = getQueryParameterByName("query")
 
-        let searchResults = document.querySelector("#search-results");
-        if (!searchResults) {
-            console.error(
-                "The page does not have a DOM element with id=[#search-results]",
-            );
-            return;
-        }
-        removeChildren(searchResults);
-        let errorMessage = document.createElement("div");
-        errorMessage.innerHTML =
-            "Your search for " +
-            humanHtmlQuery() +
-            " could not be completed because of a failure.";
-        if (error && error.status && error.statusText) {
-            errorMessage.innerHTML += "</br>";
-            errorMessage.innerHTML +=
-                "Status code " + error.status + ": " + error.statusText;
-        }
-        searchResults.append(errorMessage);
+      pagefind = await initPagefind()
+      const search = await pagefind.search(query)
+      const promiseCollector = []
+      const results = Array(search.results.length)
+      for (let i = 0; i < search.results.length; i++) {
+        promiseCollector.push(
+          search.results[i].data().then((data) => (results[i] = data))
+        )
+      }
+      await Promise.allSettled(promiseCollector)
+
+      let duration = Date.now() - start
+
+      console.log(
+        "The search for [" +
+          humanQuery() +
+          "] returned " +
+          results.length +
+          " results within " +
+          (duration / 1000).toFixed(2) +
+          " seconds"
+      )
+
+      printSearchResults(results)
+    } catch (error) {
+      printError(error)
     }
+  }
 
-    async function search() {
-        try {
-            printSearching();
-            let start = Date.now();
-            query = getQueryParameterByName("query");
-
-            pagefind = await initPagefind();
-            const search = await pagefind.search(query);
-            const promiseCollector = [];
-            const results = Array(search.results.length);
-            for (let i = 0; i < search.results.length; i++) {
-                promiseCollector.push(
-                    search.results[i]
-                        .data()
-                        .then((data) => (results[i] = data)),
-                );
-            }
-            await Promise.allSettled(promiseCollector);
-
-            let duration = Date.now() - start;
-
-            console.log(
-                "The search for [" +
-                    humanQuery() +
-                    "] returned " +
-                    results.length +
-                    " results within " +
-                    (duration / 1000).toFixed(2) +
-                    " seconds",
-            );
-
-            printSearchResults(results);
-        } catch (error) {
-            printError(error);
-        }
+  function submitSearch() {
+    const query = getQueryParameterByName("query")
+    if (query && query.trim()) {
+      search()
     }
+  }
 
-    function submitSearch() {
-        const query = getQueryParameterByName("query");
-        if (query && query.trim()) {
-            search();
-        }
+  addEventListener("pageshow", (event) => {
+    if (!event.persisted) {
+      submitSearch()
+    } else {
+      setTimeout(setQueryValue, 50)
     }
-
-    addEventListener("pageshow", (event) => {
-        if (!event.persisted) {
-            submitSearch();
-        } else {
-            setTimeout(setQueryValue, 50);
-        }
-    });
+  })
 </script>
