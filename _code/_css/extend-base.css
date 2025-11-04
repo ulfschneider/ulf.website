@@ -103,10 +103,10 @@
     @apply text-primary underline;
   }
 
-  a[href*="//"]:not([href*="ulfschneider.io"])::after
+  a[href*="//"]:not([href*="ulfschneider.io"])::before
   {
     content: "↗";
-    @apply inline-block ms-[.25em] font-normal font-mono no-underline;
+    @apply inline font-normal font-mono no-underline;
   }
 
   [id],
