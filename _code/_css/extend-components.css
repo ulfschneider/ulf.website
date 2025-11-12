@@ -382,6 +382,11 @@
     }
   }
 
+  /* markdown alert */
+  blockquote.markdown-alert * {
+    @apply not-italic;
+  }
+
   /* markdown-it footnotes */
 
   hr.footnotes-sep {
