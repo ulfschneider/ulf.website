@@ -1,2 +1,1 @@
-
-I like these things especially.
+I like these things especially

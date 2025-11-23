@@ -1,2 +1,1 @@
-
-Things I´ve learned.
+Things I´ve learned

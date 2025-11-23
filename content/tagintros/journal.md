@@ -1,2 +1,1 @@
-
-Things I come across from day to day.
+Things I come across from day to day
