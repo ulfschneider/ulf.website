@@ -12,30 +12,22 @@
     class="px-base md:px-xl lg:px-2xl pt-md pb-xl prose-flow text-base break-long-words"
   >
     <a id="top" class="scroll-mt-md"></a>
-    <div class="max-w-screen-xl mx-auto">
-      <header class="mb-2xl">{%- include "primary-links.html" -%}</header>
-      <main>
-        {%- if showTitle != false -%} {%- if docType != "bookmark" -%}
-        <header class="my-2xl">{%- include "title.html" -%}</header>
-        {%- else -%}
-        <aside class="meta flow-b flex flex-wrap flex-row gap-x-sm gap-y-xs">
-          <span>{{docType | capitalize}}</span>
+    <header>{%- include "primary-links.html" -%}</header>
 
-          <span class="flex flex-wrap flex-row gap-x-md gap-y-xs">
-            {%- include "dates.html" -%}{%- include "tags.html" -%}
-          </span>
-        </aside>
-        {%- endif -%} {%- endif -%}
-        <div class="content">{{content}}</div>
-        {%- if postNav != false -%}
-        <div class="max-w-prose my-xl">{%- include "post-nav.html" -%}</div>
-        {%- endif -%}
-      </main>
-      <footer class="mt-2xl">
-        {%- if searchField != false -%}
-        <div class="my-xl">{%- include "search-field.html" -%}</div>
-        {%- endif -%} {%- include "secondary-links.html" -%}
-      </footer>
-    </div>
+    <main class="max-w-screen-xl mx-auto">
+      {%- if showTitle != false -%} {%- if docType != "bookmark" -%}
+      <header class="my-2xl">{%- include "title.html" -%}</header>
+      {%- else -%}
+      <aside class="meta flow-b flex flex-wrap flex-row gap-x-sm gap-y-xs">
+        <span>{{docType | capitalize}}</span>
+
+        <span class="flex flex-wrap flex-row gap-x-md gap-y-xs">
+          {%- include "dates.html" -%}{%- include "tags.html" -%}
+        </span>
+      </aside>
+      {%- endif -%} {%- endif -%}
+      <div class="content">{{content}}</div>
+      {%- if postNav != false -%} {%- include "post-nav.html" -%} {%- endif -%}
+    </main>
   </body>
 </html>

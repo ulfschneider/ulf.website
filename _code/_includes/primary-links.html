@@ -1,16 +1,59 @@
-<nav data-pagefind-ignore>
-  <ul class="reset flex flex-row flex-wrap gap-x-md gap-y-base">
-    <li class="flex flex-row gap-sm">
-      <a href="/">Ulf Schneider</a>
-      {% include "key.html" key: site.nav.home path: "/" %}
-    </li>
-    <li class="flex flex-row gap-sm">
-      <a href="/blog/">Blog</a> {% include "key.html" key: site.nav.blog path:
-      "/blog/" %}
-    </li>
-    <li class="jsj flex flex-row gap-sm">
-      <a href="/search/">Search</a> {% include "key.html" key: site.nav.search
-      path: "/search/"focusSelector: "#search-query" %}
-    </li>
-  </ul>
+<nav
+  data-pagefind-ignore
+  class="fixed z-50 top-0 left-0 right-0 pt-base px-base md:px-xl lg:px-2xl"
+>
+  <div class="max-w-screen-xl mx-auto">
+    <button class="open-primary-menu">Menu</button>
+  </div>
 </nav>
+<dialog
+  class="primary-menu p-base md:px-xl lg:px-2xl inset-0 max-w-none max-h-none bg-canvas hidden open:block open:w-screen open:h-screen fixed z-50"
+>
+  <div class="max-w-screen-xl mx-auto">
+    <button class="close-primary-menu">Close Menu</button>
+    <div class="my-xl">{%- include "search-field.html" -%}</div>
+    <div class="my-xl">
+      <ul class="reset flex flex-col flex-wrap gap-y-base">
+        <li class="flex flex-row gap-sm">
+          <a href="/">Home</a>
+          {% include "key.html" key: site.nav.home path: "/" %}
+        </li>
+        <li class="flex flex-row gap-sm">
+          <a href="/blog/">Blog</a> {% include "key.html" key: site.nav.blog
+          path: "/blog/" %}
+        </li>
+        <li class="flex flex-row gap-sm">
+          <a href="/about/">About</a> {% include "key.html" key: site.nav.about
+          path: "/about/" %}
+        </li>
+        <li class="flex flex-row gap-sm">
+          <a href="/colophon/">Colophon</a> {% include "key.html" key:
+          site.nav.colophon path: "/colophon/" %}
+        </li>
+        <li class="flex flex-row gap-sm">
+          <a href="{{site.rss.url}}" type="application/rss+xml">RSS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</dialog>
+<script>
+  const menu = document.querySelector("dialog.primary-menu")
+  const menuOpen = document.querySelector("button.open-primary-menu")
+  const menuClose = document.querySelector("button.close-primary-menu")
+  const body = document.querySelector("body")
+
+  menuOpen.addEventListener("click", () => {
+    menu.showModal()
+    body.classList.add("overflow-hidden")
+  })
+  menuClose.addEventListener("click", () => {
+    menu.close()
+    body.classList.remove("overflow-hidden")
+  })
+  menu.addEventListener("cancel", (e) => {
+    e.preventDefault()
+    menu.close()
+    body.classList.remove("overflow-hidden")
+  })
+</script>
