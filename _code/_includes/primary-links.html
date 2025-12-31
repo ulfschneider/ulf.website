@@ -1,18 +1,27 @@
 <nav
   data-pagefind-ignore
-  class="fixed z-50 top-0 left-0 right-0 pt-base px-base md:px-xl lg:px-2xl"
+  class="fixed z-50 top-0 left-0 right-0 p-base md:px-xl lg:px-2xl bg-canvas"
 >
-  <div class="max-w-screen-xl mx-auto">
-    <button class="open-primary-menu">Menu</button>
+  <div class="max-w-screen-xl mx-auto flex flex-row gap-md">
+    <button class="open-primary-menu meta">Menu</button>
+    <a
+      id="back-to-top"
+      href="#top"
+      class="js meta button flex flex-row gap-sm !no-underline"
+    >
+      <span>Back to Top</span> {% include "key.html" key: site.nav.top path:
+      "#top" %}
+    </a>
   </div>
 </nav>
 <dialog
+  data-pagefind-ignore
   class="primary-menu p-base md:px-xl lg:px-2xl inset-0 max-w-none max-h-none bg-canvas hidden open:block open:w-screen open:h-screen fixed z-50"
 >
-  <div class="max-w-screen-xl mx-auto">
-    <button class="close-primary-menu">Close Menu</button>
-    <div class="my-xl">{%- include "search-field.html" -%}</div>
-    <div class="my-xl">
+  <div class="max-w-screen-xl mx-auto flow-xl">
+    <button class="close-primary-menu meta">Close Menu</button>
+    <h1>Navigate {{site.name}}</h1>
+    <div>
       <ul class="reset flex flex-col flex-wrap gap-y-base">
         <li class="flex flex-row gap-sm">
           <a href="/">Home</a>
@@ -35,6 +44,7 @@
         </li>
       </ul>
     </div>
+    <div>{%- include "search-field.html" -%}</div>
   </div>
 </dialog>
 <script>

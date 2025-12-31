@@ -17,7 +17,7 @@ eleventyComputed:
 tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
 <div class="xl:flex xl:flex-row-reverse xl:gap-xl">
   <div class="my-2xl xl:basis-4/12">
-    <div class="xl:sticky xl:top-lg">
+    <div class="xl:sticky xl:top-xl">
       <div class="flow-b mt-0 h2">Choose posts by tag</div>
       {%- include "site-tags.html" currentTag: tag-%}
     </div>
