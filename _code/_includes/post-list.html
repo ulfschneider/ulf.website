@@ -17,10 +17,9 @@
   <div class="content">{{- post.templateContent -}}</div>
   {%- endif -%}
   <aside class="max-w-prose meta flex flex-row flex-wrap gap-x-md gap-y-xs">
-    {%- include "dates.html" showSymbol: true publishedDate:
-    post.data.publishedDate published: post.data.published modifiedDate:
-    post.data.modifiedData modified: post.data.modified -%}{%- include
-    "tags.html" tags: post.data.tags -%}
+    {%- include "dates.html" publishedDate: post.data.publishedDate published:
+    post.data.published modifiedDate: post.data.modifiedData modified:
+    post.data.modified -%}{%- include "tags.html" tags: post.data.tags -%}
   </aside>
 </article>
 {%- endfor -%}
