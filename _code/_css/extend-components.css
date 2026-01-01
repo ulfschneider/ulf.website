@@ -209,7 +209,11 @@
   }
 
   /* nojs */
-  .no-js .js {
+  html.no-js .js {
+    @apply hidden;
+  }
+
+  html.js .no-js {
     @apply hidden;
   }
 

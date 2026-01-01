@@ -7,13 +7,11 @@
       <span>Navigate</span>
       {% include "key.html" key: site.nav.navigate %}
     </button>
-    <a
-      id="back-to-top"
-      href="#top"
-      class="js button flex flex-row gap-sm !no-underline"
-    >
-      <span>Back to Top</span> {% include "key.html" key: site.nav.top path:
-      "#top" %}
+    <a id="back-to-top" href="#top" class="js button hidden !no-underline">
+      <nav class="flex flex-row gap-sm">
+        <span>Back to Top</span> {% include "key.html" key: site.nav.top path:
+        "#top" %}
+      </nav>
     </a>
   </div>
 </nav>

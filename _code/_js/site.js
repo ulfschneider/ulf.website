@@ -1,3 +1,7 @@
+const html = document.querySelector("html")
+html.classList.remove("no-js")
+html.classList.add("js")
+
 //service worker
 if (navigator.serviceWorker && "{{site.useServiceWorker}}" !== "false") {
   addEventListener("DOMContentLoaded", function () {
@@ -11,15 +15,6 @@ if (navigator.serviceWorker && "{{site.useServiceWorker}}" !== "false") {
     }
   })
 }
-
-//javascript detector
-addEventListener("DOMContentLoaded", () => {
-  let noJs = document.querySelectorAll(".no-js")
-  for (let element of noJs) {
-    element.classList.remove("no-js")
-    element.classList.add("js")
-  }
-})
 
 function debounce(func, wait = 100, immediate) {
   let timeout
