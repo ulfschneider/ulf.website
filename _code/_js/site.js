@@ -83,10 +83,10 @@ addEventListener("scroll", throttle(maintainBackToTop))
 addEventListener("resize", throttle(maintainBackToTop))
 
 //keyboard navigation
-function registerKeyNav(key, path, focusSelector) {
+function registerKeyNav(key, path, callback) {
   const registerKey =
-    key + (path ? `.${path}` : "") + (focusSelector ? `.${focusSelector}` : "")
-  if (key && (path || focusSelector) && !window["keynav." + registerKey]) {
+    key + (path ? `.${path}` : "") + (callback ? `.${callback}` : "")
+  if (key && (path || callback) && !window["keynav." + registerKey]) {
     window["keynav." + registerKey] = true
 
     addEventListener("keydown", (event) => {
@@ -111,13 +111,10 @@ function registerKeyNav(key, path, focusSelector) {
             event.preventDefault()
             event.stopPropagation()
             location.href = path
-          } else if (focusSelector) {
+          } else if (callback) {
             event.preventDefault()
             event.stopPropagation()
-            const field = document.querySelector(focusSelector)
-            if (field) {
-              field.focus()
-            }
+            callback()
           }
         }
       }

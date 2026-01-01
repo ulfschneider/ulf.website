@@ -1,13 +1,12 @@
 <search data-pagefind-ignore class="js">
-  <form id="search-form" class="max-w-prose">
+  <form id="{{id}}" class="search-form max-w-prose">
     <label id="search-label"
       ><span class="flex flex-row gap-sm"
         ><span>Search {{ site.name }}</span> {% include "key.html" key:
-        site.nav.search path: "/search/" focusSelector: "#search-query" %}</span
+        site.nav.search path: "/search/" focusSelector: ".search-query" %}</span
       >
       <div class="flex flex-row gap-base">
         <input
-          id="search-query"
           name="query"
           autocomplete="off"
           autocorrect="off"
@@ -15,8 +14,8 @@
           spellcheck="false"
           enterkeyhint="search"
           type="search"
-          suggestion-wrapper-id="autocomplete-search"
-          class="grow self-stretch"
+          suggestion-wrapper-id="{{id}}-autocomplete-search"
+          class="grow self-stretch search-query"
           type="text"
         />
         <input
@@ -27,7 +26,7 @@
         />
       </div>
     </label>
-    <ul id="autocomplete-search" class="shadow-xl"></ul>
+    <ul id="{{id}}-autocomplete-search" class="shadow-xl"></ul>
     <script type="module">
       import { AutoComplete } from "/js/autocomplete{{site.cache.version.script}}.mjs"
 
@@ -88,11 +87,22 @@
         location.href = suggestion.url
       }
 
+      function getSearchForm() {
+        return document.querySelector("#{{id}}")
+      }
+
+      function getQueryField() {
+        const searchForm = getSearchForm()
+        return searchForm.querySelector(".search-query")
+      }
+
       function submitQuery(event) {
         if (event) {
           event.preventDefault()
         }
-        const query = document.querySelector("#search-query").value
+
+        const queryField = getQueryField()
+        const query = queryField.value
         if (query && query.trim()) {
           location.href =
             "{{site.search.path}}" +
@@ -105,24 +115,24 @@
 
       function setQueryValue() {
         let query = getQueryParameterByName("query")
-        let queryField = document.querySelector("#search-query")
+        let queryField = getQueryField()
         queryField.value = query
       }
 
       function registerEvents() {
-        const searchForm = document.querySelector("#search-form")
+        const searchForm = getSearchForm()
         searchForm.addEventListener("submit", submitQuery)
 
         addEventListener("DOMContentLoaded", (event) => {
           AutoComplete({
-            selector: "#search-query",
+            selector: "#{{id}} .search-query",
             queryData: suggestPages,
             threshold: 1,
             onSelect: openPage
           })
         })
-        const searchField = document.querySelector("#search-query")
-        searchField.addEventListener("focus", initPagefind)
+        const queryField = getQueryField()
+        queryField.addEventListener("focus", initPagefind)
       }
 
       setQueryValue()

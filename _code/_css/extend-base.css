@@ -73,11 +73,19 @@
   }
 
   ::view-transition-old(main) {
-    animation: fade 0.2s linear forwards;
+    @apply disappear;
   }
 
   ::view-transition-new(main) {
+    @apply appear;
+  }
+
+  .appear {
     animation: fade 0.4s linear reverse;
+  }
+
+  .disappear {
+    animation: fade 0.2s linear forwards;
   }
 
   @keyframes fade {
@@ -103,8 +111,7 @@
     @apply text-primary underline;
   }
 
-  a[href*="//"]:not([href*="ulfschneider.io"])::after
-  {
+  a[href*="//"]:not([href*="ulfschneider.io"])::after {
     content: "↗";
     @apply font-normal font-mono;
   }

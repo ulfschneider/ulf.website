@@ -1,9 +1,12 @@
 <nav
   data-pagefind-ignore
-  class="fixed z-50 top-0 left-0 right-0 p-base md:px-xl lg:px-2xl bg-canvas"
+  class="js fixed z-50 top-0 left-0 right-0 p-base md:px-xl lg:px-2xl bg-canvas"
 >
   <div class="max-w-screen-xl mx-auto flex flex-row gap-md">
-    <button class="open-primary-menu">Menu</button>
+    <button class="open-primary-menu flex flex-row gap-sm">
+      <span>Navigate</span>
+      {% include "key.html" key: site.nav.navigate %}
+    </button>
     <a
       id="back-to-top"
       href="#top"
@@ -16,43 +19,76 @@
 </nav>
 <dialog
   data-pagefind-ignore
-  class="primary-menu p-base md:px-xl lg:px-2xl inset-0 max-w-none max-h-none bg-canvas hidden open:block open:w-screen open:h-screen fixed z-50"
+  class="js primary-menu p-base md:px-xl lg:px-2xl inset-0 max-w-none max-h-none bg-canvas hidden w-screen h-screen fixed z-50 open:block"
 >
   <div class="max-w-screen-xl mx-auto flow-xl">
-    <button class="close-primary-menu">Close Menu</button>
-    <h1>Navigate {{site.name}}</h1>
+    <button class="close-primary-menu flex flex-row gap-sm">
+      <span>Close navigation</span>
+      {% include "key.html" key: site.nav.navigate %}
+    </button>
     <div>
-      <ul class="reset flex flex-col flex-wrap gap-y-base">
-        <li class="flex flex-row gap-sm">
-          <a href="/">Home</a>
-          {% include "key.html" key: site.nav.home path: "/" %}
-        </li>
-        <li class="flex flex-row gap-sm">
-          <a href="/blog/">Blog</a> {% include "key.html" key: site.nav.blog
-          path: "/blog/" %}
-        </li>
-        <li class="flex flex-row gap-sm">
-          <a href="/about/">About</a> {% include "key.html" key: site.nav.about
-          path: "/about/" %}
-        </li>
-        <li class="flex flex-row gap-sm">
-          <a href="/colophon/">Colophon</a> {% include "key.html" key:
-          site.nav.colophon path: "/colophon/" %}
-        </li>
-        <li class="flex flex-row gap-sm">
-          <a href="{{site.rss.url}}" type="application/rss+xml">RSS</a>
-        </li>
-      </ul>
+      <div class="h1">Navigate {{site.name}}</div>
+      <div class="mt-base">
+        <ul class="reset flex flex-col flex-wrap gap-y-base w-2xl">
+          <li class="flex flex-row gap-sm">
+            <a href="/" class="grow">Home</a>
+            {% include "key.html" key: site.nav.home path: "/" %}
+          </li>
+          <li class="flex flex-row gap-sm">
+            <a href="/blog/" class="grow">Blog</a> {% include "key.html" key:
+            site.nav.blog path: "/blog/" %}
+          </li>
+          <li class="flex flex-row gap-sm">
+            <a href="/about/" class="grow">About</a> {% include "key.html" key:
+            site.nav.about path: "/about/" %}
+          </li>
+          <li class="flex flex-row gap-sm">
+            <a href="/colophon/" class="grow">Colophon</a> {% include "key.html"
+            key: site.nav.colophon path: "/colophon/" %}
+          </li>
+          <li class="flex flex-row gap-sm">
+            <a href="{{site.rss.url}}" class="grow" type="application/rss+xml"
+              >RSS</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-    <div>{%- include "search-field.html" -%}</div>
+    <div>{%- include "search-field.html" id: "dialog" -%}</div>
   </div>
 </dialog>
+<nav class="no-js" data-pagefind-ignore>
+  <ul class="reset flex flex-row flex-wrap gap-x-base">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/blog/">Blog</a>
+    </li>
+    <li>
+      <a href="/about/">About</a>
+    </li>
+    <li>
+      <a href="/colophon/">Colophon</a>
+    </li>
+    <li>
+      <a href="{{site.rss.url}}" type="application/rss+xml">RSS</a>
+    </li>
+  </ul>
+</nav>
 <script>
   const menu = document.querySelector("dialog.primary-menu")
   const menuOpen = document.querySelector("button.open-primary-menu")
   const menuClose = document.querySelector("button.close-primary-menu")
   const body = document.querySelector("body")
 
+  registerKeyNav("{{site.nav.navigate.key}}", "", () => {
+    if (menu.open) {
+      menu.close()
+    } else {
+      menu.showModal()
+    }
+  })
   menuOpen.addEventListener("click", () => {
     menu.showModal()
     body.classList.add("overflow-hidden")

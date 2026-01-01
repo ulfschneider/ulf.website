@@ -100,6 +100,9 @@ export default {
     doubleNavThreshold: 3
   },
   nav: {
+    navigate: {
+      key: "n"
+    },
     home: {
       key: "h"
     },
