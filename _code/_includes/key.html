@@ -9,16 +9,10 @@
 <script>
   if ("{{focusSelector}}") {
     registerKeyNav("{{key.key}}", "{{path}}", () => {
-      const elements = document.querySelectorAll("{{focusSelector}}")
-      for (const e of elements) {
-        const visible = e.checkVisibility()
-        if (visible && e.focus) {
-          e.focus()
-          break
-        }
-      }
+      const element = document.querySelector("{{focusSelector}}")
+      element?.focus()
     })
-  } else {
+  } else if ("{{path}}") {
     registerKeyNav("{{key.key}}", "{{path}}")
   }
 </script>

@@ -79,18 +79,17 @@ addEventListener("resize", throttle(maintainBackToTop))
 
 //keyboard navigation
 function registerKeyNav(key, path, callback) {
-  const registerKey =
-    key + (path ? `.${path}` : "") + (callback ? `.${callback}` : "")
-  if (key && (path || callback) && !window["keynav." + registerKey]) {
-    window["keynav." + registerKey] = true
-
+  if (key && (path || callback)) {
     addEventListener("keydown", (event) => {
       let focus = document.querySelector(":focus")
       if (
         focus &&
         "INPUT" == focus.tagName &&
         "submit" != focus.type &&
-        "reset" != focus.type
+        "button" != focus.type &&
+        "image" != focus.type &&
+        "reset" != focus.type &&
+        "hidden" != focus.type
       ) {
         return
       } else if (focus && "TEXTAREA" == focus.tagName) {
@@ -102,14 +101,18 @@ function registerKeyNav(key, path, callback) {
           !(event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
         ) {
           const url = new URL(location.href)
+
+          if (callback) {
+            event.preventDefault()
+            event.stopPropagation()
+            if (callback() !== false) {
+              return
+            }
+          }
           if (path && url.pathname != path) {
             event.preventDefault()
             event.stopPropagation()
             location.href = path
-          } else if (callback) {
-            event.preventDefault()
-            event.stopPropagation()
-            callback()
           }
         }
       }

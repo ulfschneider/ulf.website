@@ -3,7 +3,7 @@
     <label id="search-label"
       ><span class="flex flex-row gap-sm"
         ><span>Search {{ site.name }}</span> {% include "key.html" key:
-        site.nav.search path: "/search/" focusSelector: ".search-query" %}</span
+        site.nav.search %}</span
       >
       <div class="flex flex-row gap-base">
         <input
@@ -120,6 +120,19 @@
       }
 
       function registerEvents() {
+        registerKeyNav(
+          "{{site.nav.search.key}}",
+          "{{site.search.path}}",
+          () => {
+            const queryField = getQueryField()
+            if (queryField.checkVisibility && queryField.checkVisibility()) {
+              queryField.focus()
+              return true
+            } else {
+              return false
+            }
+          }
+        )
         const searchForm = getSearchForm()
         searchForm.addEventListener("submit", submitQuery)
 
