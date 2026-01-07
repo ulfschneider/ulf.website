@@ -83,9 +83,6 @@ export default {
     url: `${origin}/feed.xml`,
     path: "/feed.xml"
   },
-  search: {
-    path: "/search/"
-  },
   openGraph: {
     imgUrl: `${origin}/og-image.jpg`
   },
@@ -101,19 +98,32 @@ export default {
   },
   nav: {
     navigate: {
-      key: "n"
+      key: "n",
+      path: "/navigate/"
     },
     home: {
-      key: "h"
+      key: "h",
+      path: "/"
     },
     blog: {
-      key: "b"
+      key: "b",
+      path: "/blog/"
     },
     search: {
-      key: "s"
+      key: "s",
+      path: "/search/"
     },
-    query: {
-      key: "f"
+    about: {
+      key: "u",
+      path: "/about/"
+    },
+    colophon: {
+      key: "c",
+      path: "/colophon/"
+    },
+    top: {
+      key: "t",
+      path: "#top"
     },
     older: {
       key: "ArrowRight",
@@ -122,18 +132,6 @@ export default {
     newer: {
       key: "ArrowLeft",
       keyLabel: "←"
-    },
-    top: {
-      key: "t"
-    },
-    about: {
-      key: "u"
-    },
-    colophon: {
-      key: "c"
-    },
-    top: {
-      key: "t"
     }
   }
 }

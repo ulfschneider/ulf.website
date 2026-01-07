@@ -1,0 +1,69 @@
+<!doctype html>
+<html
+  data-pagefind-ignore
+  class="no-js bg-canvas text-write {{docType}}"
+  lang="{{site.locale}}"
+  dir="{{site.direction}}"
+>
+  <head>
+    {%- include "head.html" -%}
+  </head>
+  <body
+    class="px-base md:px-xl lg:px-2xl pt-base pb-xl prose-flow text-base break-long-words navigate-page"
+  >
+    <div class="max-w-screen-xl mx-auto flow-xl">
+      <a
+        id="go-back"
+        href="{{site.nav.home.path}}"
+        class="button !no-underline inline-block"
+      >
+        <span class="flex flex-row gap-sm">
+          <span>Close navigation</span>
+          {% include "key.html" key: site.nav.navigate %}
+        </span>
+      </a>
+      <div>
+        <div class="h1">Navigate {{site.name}}</div>
+        <div class="mt-md">
+          <ul class="reset flex flex-col flex-wrap gap-y-md w-2xl">
+            <li class="flex flex-row gap-sm">
+              <a href="{{site.nav.home.path}}" class="grow">Home</a>
+              {% include "key.html" key: site.nav.home %}
+            </li>
+            <li class="flex flex-row gap-sm">
+              <a href="{{site.nav.blog.path}}" class="grow">Blog</a> {% include
+              "key.html" key: site.nav.blog %}
+            </li>
+            <li class="flex flex-row gap-sm">
+              <a href="{{site.nav.about.path}}" class="grow">About</a> {%
+              include "key.html" key: site.nav.about %}
+            </li>
+            <li class="flex flex-row gap-sm">
+              <a href="{{site.nav.colophon.path}}" class="grow">Colophon</a> {%
+              include "key.html" key: site.nav.colophon %}
+            </li>
+            <li class="flex flex-row gap-sm">
+              <a href="{{site.rss.url}}" class="grow" type="application/rss+xml"
+                >RSS</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>{%- include "search-field.html" id: "navigate-page" -%}</div>
+    </div>
+  </body>
+  <script>
+    function goBack() {
+      history.back()
+    }
+    const backLink = document.querySelector("#go-back")
+
+    backLink.addEventListener("click", goBack)
+    registerKeyNav(
+      "{{site.nav.navigate.key}}",
+      "{{site.nav.home.path}}",
+      goBack
+    )
+  </script>
+</html>

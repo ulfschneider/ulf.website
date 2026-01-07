@@ -2,8 +2,9 @@
   <form id="{{id}}" class="search-form max-w-prose">
     <label id="search-label"
       ><span class="flex flex-row gap-sm"
-        ><span>Search {{ site.name }}</span> {% include "key.html" key:
-        site.nav.search %}</span
+        >{% assign selector = "#" | append: id | append: " .search-query" %}
+        <span>Search {{ site.name }}</span> {% include "key.html" key:
+        site.nav.search focusSelector: selector %}</span
       >
       <div class="flex flex-row gap-base">
         <input
@@ -88,6 +89,9 @@
       }
 
       function getSearchForm() {
+        if (!"{{id}}") {
+          console.error("Missing search form id")
+        }
         return document.querySelector("#{{id}}")
       }
 
@@ -105,11 +109,11 @@
         const query = queryField.value
         if (query && query.trim()) {
           location.href =
-            "{{site.search.path}}" +
+            "{{site.nav.search.path}}" +
             "?query=" +
             encodeURIComponent(query.trim())
         } else {
-          location.href = "{{site.search.path}}"
+          location.href = "{{site.nav.search.path}}"
         }
       }
 
@@ -120,19 +124,6 @@
       }
 
       function registerEvents() {
-        registerKeyNav(
-          "{{site.nav.search.key}}",
-          "{{site.search.path}}",
-          () => {
-            const queryField = getQueryField()
-            if (queryField.checkVisibility && queryField.checkVisibility()) {
-              queryField.focus()
-              return true
-            } else {
-              return false
-            }
-          }
-        )
         const searchForm = getSearchForm()
         searchForm.addEventListener("submit", submitQuery)
 

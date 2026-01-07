@@ -1,62 +1,31 @@
 <nav
   data-pagefind-ignore
-  class="js fixed z-50 top-0 left-0 right-0 p-base md:px-xl lg:px-2xl bg-canvas"
+  class="fixed z-50 top-0 left-0 right-0 p-base md:px-xl lg:px-2xl bg-canvas"
 >
-  <div class="max-w-screen-xl mx-auto flex flex-row gap-md">
-    <button class="open-primary-menu flex flex-row gap-sm">
-      <span>Navigate</span>
-      {% include "key.html" key: site.nav.navigate %}
-    </button>
-    <a id="back-to-top" href="#top" class="js button hidden !no-underline">
-      <nav class="flex flex-row gap-sm">
-        <span>Back to Top</span> {% include "key.html" key: site.nav.top path:
-        "#top" %}
-      </nav>
+  <div class="js max-w-screen-xl mx-auto flex flex-row gap-md">
+    <a href="{{site.nav.navigate.path}}" class="button !no-underline">
+      <span class="flex flex-row gap-sm">
+        <span>Navigate</span> {% include "key.html" key: site.nav.navigate %}
+      </span>
     </a>
+    <a
+      id="back-to-top"
+      href="{{site.nav.top.path}}"
+      class="button hidden !no-underline"
+    >
+      <span class="flex flex-row gap-sm">
+        <span>Back to Top</span> {% include "key.html" key: site.nav.top %}
+      </span>
+    </a>
+    <script>
+      registerKeyNav("{{site.nav.home.key}}", "{{site.nav.home.path}}")
+      registerKeyNav("{{site.nav.blog.key}}", "{{site.nav.blog.path}}")
+      registerKeyNav("{{site.nav.about.key}}", "{{site.nav.about.path}}")
+      registerKeyNav("{{site.nav.search.key}}", "{{site.nav.search.path}}")
+      registerKeyNav("{{site.nav.colophon.key}}", "{{site.nav.colophon.path}}")
+    </script>
   </div>
-</nav>
-<dialog
-  data-pagefind-ignore
-  class="js primary-menu p-base md:px-xl lg:px-2xl inset-0 max-w-none max-h-none bg-canvas hidden top-0 left-0 w-screen h-[100dvh] fixed z-50 open:block backdrop:bg-canvas"
->
-  <div class="max-w-screen-xl mx-auto flow-xl">
-    <button class="close-primary-menu flex flex-row gap-sm">
-      <span>Close navigation</span>
-      {% include "key.html" key: site.nav.navigate %}
-    </button>
-    <div>
-      <div class="h1">Navigate {{site.name}}</div>
-      <div class="mt-md">
-        <ul class="reset flex flex-col flex-wrap gap-y-md w-2xl">
-          <li class="flex flex-row gap-sm">
-            <a href="/" class="grow">Home</a>
-            {% include "key.html" key: site.nav.home path: "/" %}
-          </li>
-          <li class="flex flex-row gap-sm">
-            <a href="/blog/" class="grow">Blog</a> {% include "key.html" key:
-            site.nav.blog path: "/blog/" %}
-          </li>
-          <li class="flex flex-row gap-sm">
-            <a href="/about/" class="grow">About</a> {% include "key.html" key:
-            site.nav.about path: "/about/" %}
-          </li>
-          <li class="flex flex-row gap-sm">
-            <a href="/colophon/" class="grow">Colophon</a> {% include "key.html"
-            key: site.nav.colophon path: "/colophon/" %}
-          </li>
-          <li class="flex flex-row gap-sm">
-            <a href="{{site.rss.url}}" class="grow" type="application/rss+xml"
-              >RSS</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div>{%- include "search-field.html" id: "dialog" -%}</div>
-  </div>
-</dialog>
-<nav class="no-js" data-pagefind-ignore>
-  <ul class="reset flex flex-row flex-wrap gap-x-base">
+  <ul class="no-js reset flex flex-row flex-wrap gap-x-base">
     <li>
       <a href="/">Home</a>
     </li>
@@ -74,30 +43,3 @@
     </li>
   </ul>
 </nav>
-<script>
-  const menu = document.querySelector("dialog.primary-menu")
-  const menuOpen = document.querySelector("button.open-primary-menu")
-  const menuClose = document.querySelector("button.close-primary-menu")
-  const body = document.querySelector("body")
-
-  registerKeyNav("{{site.nav.navigate.key}}", "", () => {
-    if (menu.open) {
-      menu.close()
-    } else {
-      menu.showModal()
-    }
-  })
-  menuOpen.addEventListener("click", () => {
-    menu.showModal()
-    body.classList.add("overflow-hidden")
-  })
-  menuClose.addEventListener("click", () => {
-    menu.close()
-    body.classList.remove("overflow-hidden")
-  })
-  menu.addEventListener("cancel", (e) => {
-    e.preventDefault()
-    menu.close()
-    body.classList.remove("overflow-hidden")
-  })
-</script>

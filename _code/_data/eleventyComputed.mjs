@@ -25,7 +25,7 @@ export default {
       (!data.tags || !data.tags.includes("bookmark"))
     ) {
       if (!data.tags) {
-        data.tags = "bookmark"
+        data.tags = ["bookmark"]
       } else {
         data.tags.push("bookmark")
       }

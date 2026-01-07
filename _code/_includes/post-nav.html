@@ -9,7 +9,7 @@ if newerPost or olderPost -%}
   {% if newerPost %}
   <div>
     <div class="meta whitespace-nowrap flex flex-row gap-sm">
-      {% include "key.html" key: site.nav.newer path: newerPost.url %}
+      {% include "key.html" key: site.nav.newer nav: newerPost.url %}
       <span>Newer post</span>
     </div>
     <div>
@@ -23,7 +23,7 @@ if newerPost or olderPost -%}
     <div
       class="meta whitespace-nowrap justify-end flex flex-row gap-sm text-end"
     >
-      <span>Older post</span> {% include "key.html" key: site.nav.older path:
+      <span>Older post</span> {% include "key.html" key: site.nav.older nav:
       olderPost.url %}
     </div>
     <div class="text-end">

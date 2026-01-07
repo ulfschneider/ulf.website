@@ -105,7 +105,7 @@ function registerKeyNav(key, path, callback) {
           if (callback) {
             event.preventDefault()
             event.stopPropagation()
-            if (callback() !== false) {
+            if (callback(event) !== false) {
               return
             }
           }

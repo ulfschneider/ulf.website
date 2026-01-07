@@ -1,4 +1,5 @@
-{%- if key.key -%}
+{%- if key.key -%} {% if nav == nil %} {% assign path = key.path %} {%else%} {%
+assign path = nav %}{% endif %}
 <span class="js pointer-coarse:hidden">
   {%- if key.keyLabel -%}
   <kbd>{{ key.keyLabel }}</kbd>

@@ -54,13 +54,13 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
       append: posts.newer.key %}
       <span
         ><a href="{{newerPath}}">Newer</a> {% include "key.html" key:
-        site.nav.newer path: newerPath %}</span
+        site.nav.newer nav: newerPath %}</span
       >
       {%- endif -%}{%- if posts.older -%} {% assign olderPath = "/blog" |
       append: posts.older.key %}
       <span
         ><a href="{{olderPath}}">Older</a> {% include "key.html" key:
-        site.nav.older path: olderPath %} </span
+        site.nav.older nav: olderPath %} </span
       >{%- endif -%}{%- if posts.oldest -%}
       <a href="/blog{{posts.oldest.key}}">Oldest</a>
       {%- endif -%}
@@ -78,13 +78,13 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
       append: posts.newer.key %}
       <span
         ><a href="{{newerPath}}">Newer</a> {% include "key.html" key:
-        site.nav.newer path: newerPath %}</span
+        site.nav.newer nav: newerPath %}</span
       >
       {%- endif -%}{%- if posts.older -%} {% assign olderPath = "/blog" |
       append: posts.older.key %}
       <span
         ><a href="{{olderPath}}">Older</a> {% include "key.html" key:
-        site.nav.older path: olderPath %}</span
+        site.nav.older nav: olderPath %}</span
       >
       {%- endif -%}{%- if posts.oldest -%}
       <a href="/blog{{posts.oldest.key}}">Oldest</a>
