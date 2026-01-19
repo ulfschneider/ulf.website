@@ -64,7 +64,7 @@ export default {
     ignore: undefined,
     offlineUrl: "/offline/",
     noCacheUrls: ["/feed.xml"],
-    preCacheUrls: ["/", "/offline/"],
+    preCacheUrls: ["/offline/", "/navigate/"],
     ignoreCacheRegex: "",
     version: {
       script: prepareVersion(SCRIPT_VERSION),

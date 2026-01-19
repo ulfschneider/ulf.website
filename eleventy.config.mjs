@@ -150,8 +150,8 @@ export default async function (eleventyConfig) {
 
           //get the site data settings into the service worker
           content = content.replace(
-            /let site = \{\};/,
-            `let site = ${JSON.stringify(site)};`
+            /let site = \{\}/,
+            `let site = ${JSON.stringify(site)}`
           )
           minify(content).then((result) => done(null, result.code))
         })
