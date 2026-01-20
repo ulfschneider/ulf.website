@@ -16,7 +16,7 @@ eleventyComputed:
 {%- assign posts = collections.postsByTagAndYear[tagAndYearPath] -%} {%- assign
 tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
 <div class="xl:flex xl:flex-row-reverse xl:gap-xl">
-  <div class="my-2xl xl:basis-4/12">
+  <div class="pt-md my-2xl xl:basis-4/12">
     <div class="xl:sticky xl:top-xl">
       <div class="flow-b mt-0 h2">Choose posts by tag</div>
       {%- include "site-tags.html" currentTag: tag-%}
@@ -24,7 +24,7 @@ tag = collections.postsByTagAndYear[tagAndYearPath].tag -%}
   </div>
   <div class="xl:basis-8/12">
     {%- if content != "" or posts.tagIntro != nil and posts.tagIntro != "" -%}
-    <div class="my-2xl">{{content}}{{posts.tagIntro}}</div>
+    <div class="pt-md my-2xl">{{content}}{{posts.tagIntro}}</div>
     {%- endif -%}
     <h1 class="mt-0 flow-b">
       {%- if posts.multipleYears == true -%}
