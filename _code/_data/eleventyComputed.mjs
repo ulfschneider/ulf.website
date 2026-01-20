@@ -87,6 +87,7 @@ export default {
     }
   },
   buildTime: site.buildTime,
+  buildTimestamp: site.buildTimestamp,
   publishedDate: (data) => {
     return data.page.date
   },

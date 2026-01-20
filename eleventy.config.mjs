@@ -69,7 +69,7 @@ export default async function (eleventyConfig) {
 
         return (
           path.basename(filePath, path.extname(filePath)) +
-          site.cache.version.font +
+          site.buildTimestamp +
           path.extname(filePath)
         )
       }
@@ -87,8 +87,8 @@ export default async function (eleventyConfig) {
           //get the site data settings into the service worker
 
           content = content.replace(
-            /\{\{site.cache.version.font\}\}/gi,
-            site.cache.version.font
+            /\{\{site.buildTimestamp\}\}/gi,
+            site.buildTimestamp
           )
 
           done(null, content)
@@ -99,7 +99,7 @@ export default async function (eleventyConfig) {
           return filePath
         }
 
-        return `style${site.cache.version.css}.css`
+        return `style${site.buildTimestamp}.css`
       }
     }
   )
@@ -116,8 +116,8 @@ export default async function (eleventyConfig) {
         return through((chunk, enc, done) => {
           let content = chunk.toString()
           content = content.replace(
-            /\{\{site.cache.version.script\}\}/g,
-            site.cache.version.script
+            /\{\{site.buildTimestamp\}\}/g,
+            site.buildTimestamp
           )
           minify(content).then((result) => done(null, result.code))
         })
@@ -129,7 +129,7 @@ export default async function (eleventyConfig) {
 
         return (
           path.basename(filePath, path.extname(filePath)) +
-          site.cache.version.script +
+          site.buildTimestamp +
           path.extname(filePath)
         )
       }

@@ -11,16 +11,15 @@ const NO_CACHE_URLS = site.cache?.noCacheUrls || []
 
 const PRE_CACHE_URLS = site.cache?.preCacheUrls || []
 
+const CACHE_VERSION = site.buildTimestamp || ""
+
 function makeCacheName(cacheType) {
   let name = ""
   if (CACHE_NAME) {
     name = CACHE_NAME + "-"
   }
   name += cacheType
-
-  if (site.cache?.version && site.cache.version[cacheType]) {
-    name += site.cache.version[cacheType]
-  }
+  name += CACHE_VERSION
   return name
 }
 

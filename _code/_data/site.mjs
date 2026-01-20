@@ -1,27 +1,17 @@
 import chalk from "chalk"
 import "dotenv/config"
 
-//cache versions
-const SCRIPT_VERSION = 6
-const HTML_VERSION = 3
-const JSON_VERSION = 3
-const IMAGE_VERSION = 2
-const FONT_VERSION = 1
-const CSS_VERSION = 100
-
 const hostname =
-  process.env.ELEVENTY_RUN_MODE === "serve"
-    ? "localhost:8080"
-    : "ulfschneider.io"
-const origin =
-  process.env.ELEVENTY_RUN_MODE === "serve"
-    ? `http://${hostname}`
-    : `https://${hostname}`
-const buildTime = new Date()
+  process.env.ELEVENTY_RUN_MODE === "build"
+    ? "ulfschneider.io"
+    : "localhost:8080"
 
-function prepareVersion(version) {
-  return process.env.ELEVENTY_RUN_MODE === "serve" ? "" : `-${version}`
-}
+const origin =
+  process.env.ELEVENTY_RUN_MODE === "build"
+    ? `https://${hostname}`
+    : `http://${hostname}`
+const buildTime = new Date()
+const buildTimestamp = Date.now()
 
 function useServiceWorker() {
   if (process.env.SERVICE_WORKER == "false") {
@@ -57,6 +47,7 @@ export default {
   hostname: hostname,
   origin: origin,
   buildTime: buildTime,
+  buildTimestamp: `${buildTimestamp}`,
   useServiceWorker: useServiceWorker(),
   getGitCommitDates: getGitCommitDates(),
   cache: {
@@ -65,15 +56,7 @@ export default {
     offlineUrl: "/offline/",
     noCacheUrls: ["/feed.xml"],
     preCacheUrls: ["/offline/", "/navigate/"],
-    ignoreCacheRegex: "",
-    version: {
-      script: prepareVersion(SCRIPT_VERSION),
-      html: prepareVersion(HTML_VERSION),
-      json: prepareVersion(JSON_VERSION),
-      image: prepareVersion(IMAGE_VERSION),
-      font: prepareVersion(FONT_VERSION),
-      css: prepareVersion(CSS_VERSION)
-    }
+    ignoreCacheRegex: ""
   },
   ownership: {
     name: "Ulf Schneider",
