@@ -54,12 +54,15 @@
     </div>
   </body>
   <script>
-    function goBack() {
+    function goBack(e) {
+      e?.preventDefault()
+      e?.stopPropagation()
       history.back()
     }
-    const backLink = document.querySelector("#go-back")
 
+    const backLink = document.querySelector("#go-back")
     backLink.addEventListener("click", goBack)
+
     registerKeyNav(
       "{{site.nav.navigate.key}}",
       "{{site.nav.home.path}}",
