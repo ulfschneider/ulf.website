@@ -40,7 +40,7 @@ const CACHE_NAMES = [
 ]
 
 const CACHE_FIRST_FOR_EXPIRED = false
-const NO_REVALIDATE_WITHIN_MINUTES = 10
+const NO_REVALIDATE_WITHIN_MINUTES = 5
 
 //maxAgeMinutes < 0: do not use the cache
 //maxAgeMinutes = 0: cache forever
@@ -57,7 +57,7 @@ const CACHE_SETTINGS = {
   },
   [HTML_CACHE_NAME]: {
     maxAgeMinutes: 60 * 24 //expire html entries after one day
-    //serveNetworkFirst: true is default
+    //serveCacheFirst: true is default
   },
   [CSS_CACHE_NAME]: {
     maxAgeMinutes: 60 * 24 //expire css after one day
@@ -78,24 +78,12 @@ const CACHE_SETTINGS = {
 
 function isNetworkFirst(cacheName) {
   let cache = CACHE_SETTINGS[cacheName]
-  if (cacheName == HTML_CACHE_NAME) {
-    //the html cache default is network first if nothing is configured
-    if (cache && cache.serveCacheFirst) {
-      return false
-    } else if (cache && cache.serveNetworkFirst === false) {
-      return false
-    } else {
-      return true
-    }
+  if (cache && cache.serveCacheFirst === false) {
+    return true
+  } else if (cache && cache.serveNetworkFirst) {
+    return true
   } else {
-    //all other caches are cache first if nothing is configured
-    if (cache && cache.serveCacheFirst === false) {
-      return true
-    } else if (cache && cache.serveNetworkFirst) {
-      return true
-    } else {
-      return false
-    }
+    return false
   }
 }
 
@@ -261,7 +249,7 @@ function getCacheNameForRequest(request) {
     return HTML_CACHE_NAME
   } else if (/\/.*\.(json|(web)?manifest)$/i.test(url.pathname)) {
     return JSON_CACHE_NAME
-  } else if (/\.js$/i.test(url.pathname)) {
+  } else if (/\.(js|mjs)$/i.test(url.pathname)) {
     return SCRIPT_CACHE_NAME
   } else if (/\.css(2)?$/i.test(url.pathname)) {
     return CSS_CACHE_NAME
@@ -276,7 +264,6 @@ async function fetchAndCache(request, options) {
   options = options ? options : {}
   if (
     options.responseFromCache &&
-    getExpireTimestamp(options.responseFromCache) > 0 &&
     !isExpired(options.responseFromCache) &&
     !options.revalidate
   ) {
@@ -345,16 +332,16 @@ function makeURL(url) {
 }
 
 //extract the expiration timestamp
-//from our self-invented `cache-expires` header
+//from the self-invented `cache-expires` header
 function getExpireTimestamp(response) {
-  const expires = response.headers.get("cache-expires")
+  const expires = response?.headers?.get("cache-expires")
   return expires ? Date.parse(expires) : 0
 }
 
 //extract the timestamp from the
 //http date header
 function getDateTimestamp(response) {
-  const date = response.headers.get("date")
+  const date = response?.headers?.get("date")
   return date ? Date.parse(date) : 0
 }
 
