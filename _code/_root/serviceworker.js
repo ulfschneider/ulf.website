@@ -48,39 +48,53 @@ const NO_REVALIDATE_WITHIN_MINUTES = 5
 
 const CACHE_SETTINGS = {
   [SCRIPT_CACHE_NAME]: {
-    maxAgeMinutes: 60 * 24 * 30 //expire scripts after 30 days
-    //serveCacheFirst: true is default
+    cacheName: SCRIPT_CACHE_NAME,
+    maxAgeMinutes: 60 * 24 * 30, //expire scripts after 30 days
+    serveCacheFirst: true, //true is default
+    revalidate: true
   },
   [FONT_CACHE_NAME]: {
-    maxAgeMinutes: 60 * 24 * 300 //expire fonts after 300 days
-    //serveCacheFirst: true is default
+    cacheName: FONT_CACHE_NAME,
+    maxAgeMinutes: 60 * 24 * 300, //expire fonts after 300 days
+    serveCacheFirst: true, //true is default
+    revalidate: false
   },
   [HTML_CACHE_NAME]: {
+    cacheName: HTML_CACHE_NAME,
     maxAgeMinutes: 60 * 24 //expire html entries after one day
-    //serveCacheFirst: true is default
+    //serveCacheFirst: no matter what is configured, it will always be treated as false! HTML must be network first!
   },
   [CSS_CACHE_NAME]: {
-    maxAgeMinutes: 60 * 24 //expire css after one day
-    //serveCacheFirst: true is default
+    cacheName: CSS_CACHE_NAME,
+    maxAgeMinutes: 60 * 24, //expire css after one day
+    serveCacheFirst: true, //true is default
+    revalidate: true
   },
   [JSON_CACHE_NAME]: {
-    maxAgeMinutes: 60 * 24 //expire json after one day
-    //serveCacheFirst: true is default
+    cacheName: JSON_CACHE_NAME,
+    maxAgeMinutes: 60 * 24, //expire json after one day
+    serveCacheFirst: true, //true is default
+    revalidate: false
   },
   [IMAGE_CACHE_NAME]: {
+    cacheName: IMAGE_CACHE_NAME,
     maxAgeMinutes: 60 * 24 * 10, //expire images after 10 days
-    maxItems: 100 //cache this amount of images, not more
-    //serveCacheFirst: true is default
+    maxItems: 100, //cache this amount of images, not more
+    serveCacheFirst: true, //true is default
+    revalidate: false
   }
 }
 
 //// helpers
 
 function isNetworkFirst(cacheName) {
-  let cache = CACHE_SETTINGS[cacheName]
-  if (cache && cache.serveCacheFirst === false) {
+  let cacheSettings = CACHE_SETTINGS[cacheName]
+
+  if (cacheName == HTML_CACHE_NAME) {
     return true
-  } else if (cache && cache.serveNetworkFirst) {
+  } else if (cacheSettings?.serveCacheFirst === false) {
+    return true
+  } else if (cacheSettings?.serveNetworkFirst) {
     return true
   } else {
     return false
@@ -88,8 +102,7 @@ function isNetworkFirst(cacheName) {
 }
 
 function isHtmlRequest(request) {
-  let accept = request.headers.get("Accept")
-  return accept && accept.includes("text/html")
+  return request.destination === "document"
 }
 
 //service worker install event
@@ -106,13 +119,11 @@ addEventListener("install", (event) => {
 
 //service worker activate event
 addEventListener("activate", (event) => {
-  event.waitUntil(clearOldCaches())
-
+  event.waitUntil(Promise.all([clearOldCaches(), clients.claim()]))
   //By default, a page's fetches won't go through a service worker
   //unless the page request itself went through a service worker.
   //So you'll need to refresh the page to see the effects of the service worker.
   //clients.claim() overrides this default, and take control of non-controlled pages.
-  clients.claim()
 })
 
 addEventListener("message", (event) => {
@@ -137,22 +148,16 @@ addEventListener("message", (event) => {
 addEventListener("fetch", (event) => {
   const request = event.request
   const cacheName = getCacheNameForRequest(request)
+  let cacheSettings = Object.assign({}, CACHE_SETTINGS[cacheName]) //clone
 
   const handleEvent = async function () {
-    if (
-      isNetworkFirst(cacheName) &&
-      !hasMatchingUrl(PRE_CACHE_URLS, new URL(request.url))
-    ) {
+    if (isNetworkFirst(cacheName) || isHtmlRequest(request)) {
       let networkFirstResponse = await networkFirst(event)
       if (networkFirstResponse) {
         return networkFirstResponse
       }
-    }
-    //from here on it´s cache first
-    if (isHtmlRequest(request)) {
-      return cacheFirst(event, { revalidate: true })
     } else {
-      return cacheFirst(event)
+      return cacheFirst(event, cacheSettings)
     }
   }
 
@@ -202,10 +207,9 @@ async function networkFirst(event) {
 
 async function cacheFirst(event, options) {
   const request = event.request
-  const cacheName = getCacheNameForRequest(request)
-  options = Object.assign({ cacheName: cacheName }, options)
+
   let responseFromCache
-  if (cacheName) {
+  if (options.cacheName) {
     responseFromCache = await caches.match(request, options)
   }
 
@@ -213,7 +217,7 @@ async function cacheFirst(event, options) {
     responseFromCache &&
     (CACHE_FIRST_FOR_EXPIRED || !isExpired(responseFromCache))
   ) {
-    log(`Responding from ${cacheName} ${request.url}`)
+    log(`Responding from ${options.cacheName} ${request.url}`)
 
     if (
       (isExpired(responseFromCache) || options.revalidate) &&
@@ -264,6 +268,7 @@ async function fetchAndCache(request, options) {
   options = options ? options : {}
   if (
     options.responseFromCache &&
+    isHtmlRequest(request) &&
     !isExpired(options.responseFromCache) &&
     !options.revalidate
   ) {

@@ -8,7 +8,29 @@
 {%- else -%}
 <title>{{site.title}}</title>
 {%- endif -%}
+<script>
+  const html = document.querySelector("html")
+  html.classList.remove("no-js")
+  html.classList.add("js")
 
+  //service worker
+  if (navigator.serviceWorker && "{{site.useServiceWorker}}" !== "false") {
+    //prevent HTML old / assets new mismatch
+    navigator.serviceWorker.addEventListener("controllerchange", () =>
+      location.reload()
+    )
+    //register the serviceworker
+    navigator.serviceWorker.register("/serviceworker.js").catch((error) => {
+      console.error(error)
+    })
+    //send a trim cache signal to the service worker
+    if (navigator.serviceWorker.controller) {
+      navigator.serviceWorker.controller.postMessage({
+        command: "trimCache"
+      })
+    }
+  }
+</script>
 <script type="speculationrules">
   {
     "prerender": [

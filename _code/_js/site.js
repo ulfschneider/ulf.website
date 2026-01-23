@@ -1,21 +1,3 @@
-const html = document.querySelector("html")
-html.classList.remove("no-js")
-html.classList.add("js")
-
-//service worker
-if (navigator.serviceWorker && "{{site.useServiceWorker}}" !== "false") {
-  addEventListener("DOMContentLoaded", function () {
-    navigator.serviceWorker.register("/serviceworker.js").catch((error) => {
-      console.error(error)
-    })
-    if (navigator.serviceWorker.controller) {
-      navigator.serviceWorker.controller.postMessage({
-        command: "trimCache"
-      })
-    }
-  })
-}
-
 function debounce(func, wait = 100, immediate) {
   let timeout
   return function () {
