@@ -15,10 +15,6 @@
 
   //service worker
   if (navigator.serviceWorker && "{{site.useServiceWorker}}" !== "false") {
-    //prevent HTML old / assets new mismatch
-    navigator.serviceWorker.addEventListener("controllerchange", () =>
-      location.reload()
-    )
     //register the serviceworker
     navigator.serviceWorker.register("/serviceworker.js").catch((error) => {
       console.error(error)
