@@ -217,11 +217,13 @@ async function cacheFirst(event, options) {
     responseFromCache &&
     (CACHE_FIRST_FOR_EXPIRED || !isExpired(responseFromCache))
   ) {
-    log(`Responding from ${options.cacheName} ${request.url}`)
+    log(
+      `Responding from ${options.cacheName} ${request.url}, ${options.revalidate ? "revalidates immediately" : "revalidates after expiry"}`
+    )
 
     if (
       (isExpired(responseFromCache) || options.revalidate) &&
-      isAllowRevalidate(responseFromCache, request.url)
+      isBelowRevalidateThreshold(responseFromCache, request.url)
     ) {
       //clone response and call without await
       options.responseFromCache = responseFromCache.clone()
@@ -528,7 +530,7 @@ function isExpired(response) {
 
 //only revalidate if the last cache update
 //is more than NO_REVALIDATE_WITHIN_MINUTES ago
-function isAllowRevalidate(response, url) {
+function isBelowRevalidateThreshold(response, url) {
   let date = getDateTimestamp(response)
 
   if (date > 0) {
