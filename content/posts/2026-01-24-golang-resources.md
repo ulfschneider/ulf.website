@@ -7,14 +7,16 @@ tags: code
 [[TOC]]
 
 ## Go
-- [<cite>gobyexample.com</cite>](https://gobyexample.com)  excellent examples with short and clear explanations, by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> and <a href="https://eli.thegreenplace.net">Eli Bendersky</a>
+
+- [<cite>gobyexample.com</cite>](https://gobyexample.com) excellent examples with short and clear explanations, by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> and <a href="https://eli.thegreenplace.net">Eli Bendersky</a>
 - [<cite>Go in one evening</cite>](https://threedots.tech/go-in-one-evening/) a practical course for experienced programmers. It´s excellent, but it took me more than one evening.
 - [<cite>youtube.com/@FloWoelki</cite>](https://www.youtube.com/@FloWoelki) watch and listen while Florian is coding
 - [<cite>Google Go Styleguide</cite>](https://google.github.io/styleguide/go/index) <q>The Go Style Guide and accompanying documents codify the current best approaches for writing readable and idiomatic Go</q> at Google. It has three parts: the style guide, a more verbose style decisions, and best practices.
 - [<cite>100 Go mistakes and how to avoid them</cite>](https://100go.co) a summary of the mistakes in the 100 Go Mistakes and How to Avoid Them book by Teiva Harsanyi
 
 ## Test
-[<cite>Testen in Go (Golang) in 90 Minuten // deutsch</cite>](https://www.youtube.com/watch?v=TG5cRcBihCM), Golo Rode, the the native web GmbH
+
+[<cite>Testen in Go (Golang) in 90 Minuten // deutsch</cite>](https://www.youtube.com/watch?v=TG5cRcBihCM), Golo Roden, the the native web GmbH
 
 ## Error handling
 
@@ -28,7 +30,7 @@ tags: code
 
 - [<cite>Standard Go Project Layout</cite>](https://github.com/golang-standards/project-layout)
 - [<cite>Go (Golang): Endlich Struktur im Code // deutsch</cite>](https://www.youtube.com/watch?v=2k0GYWBGGFM), Golo Roden, the native Web GmbH, the recommendation is to not create a pkg folder
-- https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2 
+- [Go Project Layout](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) article on Medium by Kyle C. Quest
 - [<cite>Embrace the Internal Package: A Go-Project Structure for Clarity.</cite>](https://bontus.medium.com/embrace-the-internal-package-a-go-project-structure-for-clarity-2207bacb4bed) article on Medium by Ikwechegh Ukandu
 
 ## Logging
