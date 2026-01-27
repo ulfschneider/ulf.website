@@ -28,6 +28,7 @@ tags: code
 
 ## Folder structure
 
+- [<cite>Organizing a Go module</cite>](https://go.dev/doc/modules/layout) the official Go guide
 - [<cite>Standard Go Project Layout</cite>](https://github.com/golang-standards/project-layout)
 - [<cite>Go (Golang): Endlich Struktur im Code // deutsch</cite>](https://www.youtube.com/watch?v=2k0GYWBGGFM), Golo Roden, the native Web GmbH, the recommendation is to not create a pkg folder
 - [Go Project Layout](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) article on Medium by Kyle C. Quest
