@@ -31,7 +31,7 @@ tags: code
 - [<cite>Organizing a Go module</cite>](https://go.dev/doc/modules/layout) the official Go guide
 - [<cite>Standard Go Project Layout</cite>](https://github.com/golang-standards/project-layout)
 - [<cite>Go (Golang): Endlich Struktur im Code // deutsch</cite>](https://www.youtube.com/watch?v=2k0GYWBGGFM), Golo Roden, the native Web GmbH, the recommendation is to not create a pkg folder
-- [Go Project Layout](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) article on Medium by Kyle C. Quest
+- [<cite>Go Project Layout</cite>](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) article on Medium by Kyle C. Quest
 - [<cite>Embrace the Internal Package: A Go-Project Structure for Clarity.</cite>](https://bontus.medium.com/embrace-the-internal-package-a-go-project-structure-for-clarity-2207bacb4bed) article on Medium by Ikwechegh Ukandu
 
 ## Logging
