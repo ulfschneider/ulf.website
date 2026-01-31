@@ -38,6 +38,8 @@ tags: code
 
 - [<cite>Logging in Go with Slog: The Ultimate Guide</cite>](https://betterstack.com/community/guides/logging/logging-in-go/) a betterstack.com article by Ayooluwa Isaiah
 - [<cite>Contextual Logging in Go with Slog</cite>](https://betterstack.com/community/guides/logging/golang-contextual-logging/) a betterstack.com article by Percy Bolmér
+- [<cite>Creating a pretty console logger using Go's slog package</cite>](https://dusted.codes/creating-a-pretty-console-logger-using-gos-slog-package), a concrete explanation resulting in a pretty useful slog TextHandler with colored console output that does not add any dependency to your code, Dusted Codes
+- [<cite>A guide to writing slog handlers</cite>](https://github.com/golang/example/tree/master/slog-handler-guide), Jonathan Amsterdam, jba@google.com
 - [<cite>Slog Handler für bessere Lesbarkeit in lokalen Logs</cite>](https://pkuebler.de/posts/slog-glossy/)
 - [<cite>A Guide to Writing slog Handlers</cite>](https://github.com/golang/example/tree/master/slog-handler-guide)
 - [<cite>Implementing a Dynamic Package-Level Logger in Go</cite>](https://medium.com/@thisara.weerakoon2001/implementing-a-dynamic-package-level-logger-in-go-949d573a2192) a medium.com article by Thisara Weerakoon, this shows how to dynamically set log levels for certain packages and touches the [<cite>koanf</cite>](https://github.com/knadh/koanf) package to manage the logging configuration
