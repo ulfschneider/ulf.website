@@ -3,7 +3,7 @@ title: Serverless
 tags: code
 ---
 
-<a href="/assets/serverless/"><cite>Serverless</cite></a> is a brief overview that compares the Serverless virtualization strategy to hardware servers, virtual machines, and containers.
+<a href="/assets/serverless/"><cite>Serverless</cite></a> is a brief presentation that compares the Serverless virtualization strategy with hardware servers, virtual machines, and [containers](/2023-06-13-docker-kubernetes/).
 
 ## ChatGPT Summary of the presentation
 
