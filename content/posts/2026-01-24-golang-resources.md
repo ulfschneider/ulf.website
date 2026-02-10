@@ -16,7 +16,7 @@ tags: code
 
 ## Test
 
-[<cite>Testen in Go (Golang) in 90 Minuten // deutsch</cite>](https://www.youtube.com/watch?v=TG5cRcBihCM), Golo Roden, the the native web GmbH
+[<cite>Testen in Go (Golang) in 90 Minuten // deutsch</cite>](https://www.youtube.com/watch?v=TG5cRcBihCM), Golo Roden, the native web GmbH
 
 ## Error handling
 
