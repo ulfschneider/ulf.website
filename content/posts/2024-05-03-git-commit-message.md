@@ -5,7 +5,7 @@ tags: code
 ---
 A Git commit should contain a <q>whole idea of completed work.</q>^[[<cite>Dealing with Emergencies in Git</cite>](https://24ways.org/2014/dealing-with-emergencies-in-git/),  Emma Jane Westby, 24 Ways, 2014] Your completed work idea can be communicated well in a Git commit message by following Chris Beams´^[[<cite>How to Write a Git Commit Message</cite>](https://cbea.ms/git-commit/), Chris Beams, 2014]  suggestion of ending the following sentence:
 
-> If applied, this commit will `Your commit subject line will come here`
+> If applied, this commit will ==Your commit subject line==
 
 Example Git commit messages:
 - Repair CSS class assignment for images
