@@ -45,13 +45,23 @@ topics:
       - /2022-02-06-how-to-change-an-inner-tube/
       - /2025-04-20-fairlight-torque/
 ---
+
+{% if collections.pinned.length > 0 %}
+
+<div class="my-2xl">
+  <h2>Pinned</h2>
+  <div class="flow-xl mt-lg">
+  {%- include "post-list.html" posts: collections.pinned stream: false -%}
+  </div>
+</div>
+{% endif %}
+
 <div class="my-2xl">
 <h2>Latest</h2>
 <div class="flow-2xl mt-lg">
 {%- include "post-list.html" posts: collections.recentNotes stream: true -%}
 </div>
 </div>
-
 
 <div class="my-2xl">
 <h2>Selected posts</h2>

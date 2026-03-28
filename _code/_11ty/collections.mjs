@@ -271,6 +271,10 @@ export function isLive(content) {
   return content.data.draft != true && content.data.isPost
 }
 
+export function isPinned(content) {
+  return content.data.pinned
+}
+
 export function getImagesByTag(collection, collectionsApi, markdownLib) {
   function initData(tag = "") {
     const data = {

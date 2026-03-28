@@ -31,6 +31,7 @@ import {
   getItemsByTagAndYear,
   isGallery,
   isLive,
+  isPinned,
   openGraphImage,
   sortTags
 } from "./_code/_11ty/collections.mjs"
@@ -444,6 +445,42 @@ export default async function (eleventyConfig) {
       .reverse()
   })
 
+  function getRecent(collectionsApi) {
+    let recentPublishedDate
+    return collectionsApi
+      .getAllSorted()
+      .reverse()
+      .filter((item) => {
+        if (!isLive(item)) {
+          return false
+        }
+        if (!recentPublishedDate) {
+          recentPublishedDate = dayjs(item.data.publishedDate).format(
+            "YYYY-MM-DD"
+          )
+          return true
+        } else if (
+          recentPublishedDate ==
+          dayjs(item.data.publishedDate).format("YYYY-MM-DD")
+        ) {
+          return true
+        } else {
+          return false
+        }
+      })
+  }
+
+  eleventyConfig.addCollection("pinned", (collectionsApi) => {
+    let recent = getRecent(collectionsApi)
+    //all pinned posts
+    return collectionsApi
+      .getAllSorted()
+      .filter((item) => isLive(item))
+      .filter((item) => isPinned(item))
+      .filter((item) => !recent.includes(item))
+      .reverse()
+  })
+
   eleventyConfig.addCollection("rssPosts", (collectionsApi) => {
     //all live posts
     return [
@@ -497,28 +534,7 @@ export default async function (eleventyConfig) {
   })
 
   eleventyConfig.addCollection("recentNotes", (collectionsApi) => {
-    let recentPublishedDate
-    return collectionsApi
-      .getAllSorted()
-      .reverse()
-      .filter((item) => {
-        if (!isLive(item)) {
-          return false
-        }
-        if (!recentPublishedDate) {
-          recentPublishedDate = dayjs(item.data.publishedDate).format(
-            "YYYY-MM-DD"
-          )
-          return true
-        } else if (
-          recentPublishedDate ==
-          dayjs(item.data.publishedDate).format("YYYY-MM-DD")
-        ) {
-          return true
-        } else {
-          return false
-        }
-      })
+    return getRecent(collectionsApi)
   })
 
   eleventyConfig.on(
