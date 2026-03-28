@@ -50,7 +50,7 @@ topics:
 
 <div class="my-2xl">
   <h2>Pinned</h2>
-  <div class="flow-xl mt-lg">
+  <div class="flow-xl">
   {%- include "post-list.html" posts: collections.pinned stream: false -%}
   </div>
 </div>
@@ -58,7 +58,7 @@ topics:
 
 <div class="my-2xl">
 <h2>Latest</h2>
-<div class="flow-2xl mt-lg">
+<div class="flow-2xl">
 {%- include "post-list.html" posts: collections.recentNotes stream: true -%}
 </div>
 </div>
