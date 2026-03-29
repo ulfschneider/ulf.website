@@ -9,6 +9,8 @@ const OFFLINE_URL = site.cache?.offlineUrl || "/offline/"
 
 const NO_CACHE_URLS = site.cache?.noCacheUrls || []
 
+const CACHE_FIRST_URLS = site.cache?.cacheFirstUrls || []
+
 const PRE_CACHE_URLS = site.cache?.preCacheUrls || []
 
 const CACHE_VERSION = site.buildTimestamp || ""
@@ -61,8 +63,8 @@ const CACHE_SETTINGS = {
   },
   [HTML_CACHE_NAME]: {
     cacheName: HTML_CACHE_NAME,
-    maxAgeMinutes: 60 * 24 //expire html entries after one day
-    //serveCacheFirst: no matter what is configured, it will always be treated as false! HTML must be network first!
+    maxAgeMinutes: 60 * 24 * 30 //expire html entries after 30 days
+    //serveCacheFirst: no matter what is configured, it will always be treated as false! HTML must be network first, except for CACHE_FIRST_URLS
   },
   [CSS_CACHE_NAME]: {
     cacheName: CSS_CACHE_NAME,
@@ -87,43 +89,47 @@ const CACHE_SETTINGS = {
 
 //// helpers
 
-function isNetworkFirst(cacheName) {
-  let cacheSettings = CACHE_SETTINGS[cacheName]
-
-  if (cacheName == HTML_CACHE_NAME) {
-    return true
-  } else if (cacheSettings?.serveCacheFirst === false) {
-    return true
-  } else if (cacheSettings?.serveNetworkFirst) {
-    return true
-  } else {
+function isNetworkFirst(request) {
+  if (isCacheFirstUrl(request)) {
     return false
   }
+
+  if (isHtmlRequest(request)) {
+    return true
+  }
+
+  const cacheName = getCacheNameForRequest(request)
+  let cacheSettings = CACHE_SETTINGS[cacheName]
+  if (cacheSettings?.serveCacheFirst === false) {
+    return true
+  }
+
+  if (cacheSettings?.serveNetworkFirst) {
+    return true
+  }
+
+  return false
 }
 
 function isHtmlRequest(request) {
-  return request.destination === "document"
+  let url = makeURL(request.url)
+
+  return (
+    request.mode == "navigate" ||
+    request.destination == "document" ||
+    url.pathname.endsWith("/") // heuristic
+  )
 }
 
 //service worker install event
 addEventListener("install", (event) => {
   event.waitUntil(preCache())
-
-  //Once successfully installed,
-  //the updated worker will wait until the existing worker is controlling zero clients.
-  //(Note that clients overlap during a refresh.)
-  //skipWaiting() prevents the waiting,
-  //meaning the service worker activates as soon as it's finished installing.
   skipWaiting()
 })
 
 //service worker activate event
 addEventListener("activate", (event) => {
   event.waitUntil(Promise.all([clearOldCaches(), clients.claim()]))
-  //By default, a page's fetches won't go through a service worker
-  //unless the page request itself went through a service worker.
-  //So you'll need to refresh the page to see the effects of the service worker.
-  //clients.claim() overrides this default, and take control of non-controlled pages.
 })
 
 addEventListener("message", (event) => {
@@ -147,30 +153,31 @@ addEventListener("message", (event) => {
 //react on requests
 addEventListener("fetch", (event) => {
   const request = event.request
-  const cacheName = getCacheNameForRequest(request)
-  let cacheSettings = Object.assign({}, CACHE_SETTINGS[cacheName]) //clone
 
   const handleEvent = async function () {
-    if (isNetworkFirst(cacheName) || isHtmlRequest(request)) {
+    if (isNetworkFirst(request)) {
       let networkFirstResponse = await networkFirst(event)
       if (networkFirstResponse) {
         return networkFirstResponse
       }
     } else {
+      const cacheName = getCacheNameForRequest(request)
+      let cacheSettings = Object.assign({}, CACHE_SETTINGS[cacheName]) //clone
       return cacheFirst(event, cacheSettings)
     }
   }
 
-  log("Requesting " + request.url)
+  log(`Requesting ${request.url}`)
   event.respondWith(handleEvent())
 })
 
 async function preCache() {
+  log("Pre-caching")
   for (let url of PRE_CACHE_URLS) {
     try {
       await fetchAndCache(makeURL(url))
     } catch (err) {
-      errorlog(`Failure when caching ${url}:` + err)
+      errorlog(`Failure when pre-caching ${url}:` + err)
     }
   }
 }
@@ -250,7 +257,7 @@ async function cacheFirst(event, options) {
 }
 
 function getCacheNameForRequest(request) {
-  let url = new URL(request.url)
+  let url = makeURL(request.url)
   if (isHtmlRequest(request)) {
     return HTML_CACHE_NAME
   } else if (/\/.*\.(json|(web)?manifest)$/i.test(url.pathname)) {
@@ -301,8 +308,10 @@ async function fetchAndCache(request, options) {
     //to fetch a response from the network
     log(`Responding from network ${url}`)
   }
+
   return fetch(request).then(async (responseFromNetwork) => {
     let cacheName = getCacheNameForRequest(request)
+
     if (cacheName) {
       await stashInCache({
         cacheName: cacheName,
@@ -315,16 +324,16 @@ async function fetchAndCache(request, options) {
   })
 }
 
-function log(message) {
-  console.log(message)
+function log(...message) {
+  console.log(...message)
 }
 
-function warnlog(message) {
-  console.warn(message)
+function warnlog(...message) {
+  console.warn(...message)
 }
 
-function errorlog(message) {
-  console.error(message)
+function errorlog(...message) {
+  console.error(...message)
 }
 
 //ensure to get a nice URL
@@ -426,17 +435,30 @@ function hasMatchingUrl(urls, url) {
   }
 }
 
-function isPreCacheUrl({ request, response }) {
+function isPreCacheUrl(request) {
   let url = new URL(request.url)
 
   for (let p of PRE_CACHE_URLS) {
     if (p instanceof RegExp) {
       if (p.test(url.pathname + url.search)) {
-        log(`Pre-caching: ${url}`)
         return true
       }
     } else if (p == url.pathname + url.search) {
-      log(`Pre-caching: ${url}`)
+      return true
+    }
+  }
+  return false
+}
+
+function isCacheFirstUrl(request) {
+  let url = new URL(request.url)
+
+  for (let p of CACHE_FIRST_URLS) {
+    if (p instanceof RegExp) {
+      if (p.test(url.pathname + url.search)) {
+        return true
+      }
+    } else if (p == url.pathname + url.search) {
       return true
     }
   }
@@ -444,8 +466,8 @@ function isPreCacheUrl({ request, response }) {
 }
 
 function isValidToCache({ request, response, cacheName, options }) {
-  if (isPreCacheUrl({ request: request, response: response })) {
-    //pre cache urls are always valid to cahce
+  if (isPreCacheUrl(request) || isCacheFirstUrl(request)) {
+    //pre cache urls and cache first urls are always valid to cahce
     return true
   }
 

@@ -63,6 +63,7 @@ export default {
       "/colophon/",
       "/blog/"
     ],
+    cacheFirstUrls: ["/navigate/", "/offline/"],
     ignoreCacheRegex: ""
   },
   ownership: {
