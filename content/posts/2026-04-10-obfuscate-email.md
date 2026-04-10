@@ -36,4 +36,22 @@ function observe() {
 addEventListener("DOMContentLoaded", observe)
 ```
 
-To challenge the crawler a bit more, it´s probably a good idea to put the script into a dedicated file and load it with the `defer` attribute.
+To challenge the crawler a bit more, you could put that script into a dedicated file `mail.js`, and load it from inside of your `head`, like:
+
+```js
+<script>
+  //challenge the crawler!
+  const s = document.createElement("script")
+  s.src = "/js/mail.js"
+  document.head.appendChild(s)
+</script>
+```
+
+This will require the crawler to
+
+- execute JS
+- discover dynamic script
+- load it
+- execute it
+
+to get your email address.

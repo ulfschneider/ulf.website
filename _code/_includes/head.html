@@ -39,7 +39,13 @@
     ]
   }
 </script>
-<script defer src="/js/site{{site.buildTimestamp}}.js"></script>
+<script src="/js/site{{site.buildTimestamp}}.js"></script>
+<script>
+  //challenge the crawler!
+  const s = document.createElement("script")
+  s.src = "/js/mail{{site.buildTimestamp}}.js"
+  document.head.appendChild(s)
+</script>
 <link rel="stylesheet" href="/css/style{{site.buildTimestamp}}.css" />
 <!-- preload fonts -->
 <link

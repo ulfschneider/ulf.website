@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "npm run build:playwright && npx @11ty/eleventy --serve",
+    "dev": "npm run build:clean && npm run build:playwright && npx @11ty/eleventy --serve",
     "build:clean": "npx rimraf _site",
     "build:playwright": "npx playwright install chromium",
     "build:11ty": "npx @11ty/eleventy",
