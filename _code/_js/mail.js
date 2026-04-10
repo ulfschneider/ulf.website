@@ -27,4 +27,8 @@ function observe() {
   }
 }
 
-addEventListener("DOMContentLoaded", observe)
+if (document.readyState == "loading") {
+  document.addEventListener("DOMContentLoaded", observe)
+} else {
+  observe()
+}

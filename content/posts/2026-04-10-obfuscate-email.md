@@ -33,7 +33,11 @@ function observe() {
     mObserver.observe(o)
   }
 }
-addEventListener("DOMContentLoaded", observe)
+if (document.readyState == "loading") {
+  document.addEventListener("DOMContentLoaded", observe)
+} else {
+  observe()
+}
 ```
 
 To challenge the crawler a bit more, you could put that script into a dedicated file `mail.js`, and load it from inside of your `head`, like:
