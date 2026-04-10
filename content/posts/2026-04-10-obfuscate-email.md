@@ -16,7 +16,7 @@ const mObserver = new IntersectionObserver(decode, {
   threshold: 0.1
 })
 function decode(entries, observer) {
-  const parts = ["don", "ald", "@", "du", "ck, ".c", "om"]
+  const parts = ["don", "ald", "@", "du", "ck", ".c", "om"]
   for (const e of entries) {
     if (e.isIntersecting && e.target.classList.contains("m-link")) {
       e.target.setAttribute("href", "mai" + "lto:" + parts.join(""))
