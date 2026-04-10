@@ -23,23 +23,23 @@ function decode(entries, observer) {
         e.target
           .getAttribute("href")
           .replace("-", "mai")
-          .replace("-", "lto:mai")
-          .replace("-", "l")
+          .replace("-", "lto:don")
+          .replace("-", "ald")
           .replace("-", "@")
-          .replace("-", "ulfschneider")
+          .replace("-", "duck")
           .replace("-", ".")
-          .replace("-", "io")
+          .replace("-", "com")
       )
       mObserver.unobserve(e.target)
     }
     if (e.isIntersecting && e.target.classList.contains("m")) {
       e.target.innerText = e.target.innerText
-        .replace("-", "mai")
-        .replace("-", "l")
+        .replace("-", "don")
+        .replace("-", "ald")
         .replace("-", "@")
-        .replace("-", "ulfschneider")
+        .replace("-", "duck")
         .replace("-", ".")
-        .replace("-", "io")
+        .replace("-", "com")
       mObserver.unobserve(e.target)
     }
   }
