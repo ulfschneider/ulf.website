@@ -59,6 +59,53 @@ addEventListener("DOMContentLoaded", throttle(maintainBackToTop))
 addEventListener("scroll", throttle(maintainBackToTop))
 addEventListener("resize", throttle(maintainBackToTop))
 
+// email obfuscation
+const mObserver = new IntersectionObserver(decode, {
+  root: document.querySelector("body"),
+  rootMargin: "0px",
+  scrollMargin: "0px",
+  threshold: 0.1
+})
+
+function decode(entries, observer) {
+  for (const e of entries) {
+    if (e.isIntersecting && e.target.classList.contains("m-link")) {
+      e.target.setAttribute(
+        "href",
+        e.target
+          .getAttribute("href")
+          .replace("-", "mai")
+          .replace("-", "lto:mai")
+          .replace("-", "l")
+          .replace("-", "@")
+          .replace("-", "ulfschneider")
+          .replace("-", ".")
+          .replace("-", "io")
+      )
+      mObserver.unobserve(e.target)
+    }
+
+    if (e.isIntersecting && e.target.classList.contains("m")) {
+      e.target.innerText = e.target.innerText
+        .replace("-", "mai")
+        .replace("-", "l")
+        .replace("-", "@")
+        .replace("-", "ulfschneider")
+        .replace("-", ".")
+        .replace("-", "io")
+      mObserver.unobserve(e.target)
+    }
+  }
+}
+
+function observe() {
+  for (o of document.querySelectorAll(".m-link,.m")) {
+    mObserver.observe(o)
+  }
+}
+
+addEventListener("DOMContentLoaded", observe)
+
 //keyboard navigation
 function registerKeyNav(key, path, callback) {
   if (key && (path || callback)) {

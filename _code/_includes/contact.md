@@ -1,7 +1,7 @@
 {% if site.ownership.email %}
 
-**[e-mail](mailto:{{site.ownership.email}})**
-: {{site.ownership.email}} {% include "copy.html" copyId: "email" copyText: site.ownership.email %}
+**<a href="-------" class="m-link">e-mail</a>**
+: <span id="m" class="m">------</span> {% include "copy.html" copyId: "mail" copyContentId: "m" %}
 
 {% endif %}
 {% if site.rss.url %}
