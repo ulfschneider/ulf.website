@@ -5,7 +5,7 @@ bookmark: true
 ---
 Use [<cite>Email address obfuscation: What works in 2026?</cite>](https://spencermortensen.com/articles/email-obfuscation/) by Spencer Mortensen to keep your email address away from spammers.
 
-This could be a case for a web component combining multiple of the presented techniques. Unfortunately, what really works requires JavaScript, which can be an issue. When you are willing to accept that, my favorite is *2.10, User Interaction*. I am using this pattern with the IntersectionObserver API:
+This could be a case for a web component combining multiple of the presented techniques. Unfortunately, what really works requires JavaScript, which can be an issue. When you are willing to accept that, my favorite is *2.10, User Interaction*. I am using this pattern with the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API):
 
 ```js
 // email obfuscation
