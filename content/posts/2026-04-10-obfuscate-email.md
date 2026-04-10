@@ -35,3 +35,5 @@ function observe() {
 }
 addEventListener("DOMContentLoaded", observe)
 ```
+
+To challenge the crawler a bit more, it´s probably a good idea to put the script into a dedicated file and load it with the `defer` attribute.
