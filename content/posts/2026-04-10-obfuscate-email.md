@@ -16,30 +16,14 @@ const mObserver = new IntersectionObserver(decode, {
   threshold: 0.1
 })
 function decode(entries, observer) {
+  const parts = ["don", "ald", "@", "du", "ck, ".c", "om"]
   for (const e of entries) {
     if (e.isIntersecting && e.target.classList.contains("m-link")) {
-      e.target.setAttribute(
-        "href",
-        e.target
-          .getAttribute("href")
-          .replace("-", "mai")
-          .replace("-", "lto:don")
-          .replace("-", "ald")
-          .replace("-", "@")
-          .replace("-", "duck")
-          .replace("-", ".")
-          .replace("-", "com")
-      )
+      e.target.setAttribute("href", "mai" + "lto:" + parts.join(""))
       mObserver.unobserve(e.target)
     }
     if (e.isIntersecting && e.target.classList.contains("m")) {
-      e.target.innerText = e.target.innerText
-        .replace("-", "don")
-        .replace("-", "ald")
-        .replace("-", "@")
-        .replace("-", "duck")
-        .replace("-", ".")
-        .replace("-", "com")
+      e.target.innerText = parts.join("")
       mObserver.unobserve(e.target)
     }
   }

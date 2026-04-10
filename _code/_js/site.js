@@ -68,31 +68,15 @@ const mObserver = new IntersectionObserver(decode, {
 })
 
 function decode(entries, observer) {
+  const parts = ["mai", "l", "@", "ul", "fschnei", "der.", "io"]
   for (const e of entries) {
     if (e.isIntersecting && e.target.classList.contains("m-link")) {
-      e.target.setAttribute(
-        "href",
-        e.target
-          .getAttribute("href")
-          .replace("-", "mai")
-          .replace("-", "lto:mai")
-          .replace("-", "l")
-          .replace("-", "@")
-          .replace("-", "ulfschneider")
-          .replace("-", ".")
-          .replace("-", "io")
-      )
+      e.target.setAttribute("href", "mai" + "lto:" + parts.join(""))
       mObserver.unobserve(e.target)
     }
 
     if (e.isIntersecting && e.target.classList.contains("m")) {
-      e.target.innerText = e.target.innerText
-        .replace("-", "mai")
-        .replace("-", "l")
-        .replace("-", "@")
-        .replace("-", "ulfschneider")
-        .replace("-", ".")
-        .replace("-", "io")
+      e.target.innerText = parts.join("")
       mObserver.unobserve(e.target)
     }
   }
