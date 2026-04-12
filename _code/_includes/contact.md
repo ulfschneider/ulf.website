@@ -1,7 +1,7 @@
 {% if site.ownership.email %}
 
-**<a href="#" class="m-link">e-mail</a>**
-: <span id="m" class="m"></span> {% include "copy.html" copyId: "mail" copyContentId: "m" %}
+**<a href="#" class="oml">e-mail</a>**
+: <span id="m" class="oma"></span> {% include "copy.html" copyId: "copy-m" copyContentId: "m" %}
 
 {% endif %}
 {% if site.rss.url %}

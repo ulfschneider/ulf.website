@@ -120,6 +120,10 @@ export default async function (eleventyConfig) {
             /\{\{site.buildTimestamp\}\}/g,
             site.buildTimestamp
           )
+          content = content.replace(
+            /const parts = \[\]/,
+            `const parts = ${JSON.stringify(site.ownership.email.split(""))}`
+          )
           minify(content).then((result) => done(null, result.code))
         })
       },
