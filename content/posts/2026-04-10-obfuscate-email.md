@@ -9,12 +9,7 @@ This could be a case for a web component combining multiple of the presented tec
 
 ```js
 // email obfuscation
-const mObserver = new IntersectionObserver(decode, {
-  root: document.querySelector("body"),
-  rootMargin: "0px",
-  scrollMargin: "0px",
-  threshold: 0.1
-})
+const mObserver = new IntersectionObserver(decode)
 function decode(entries, observer) {
   const parts = ["d", "o", "n", "a", "l", "d", "@", "d", "u", "c", "k", ".", "c", "o", "m"]
   for (const e of entries) {
