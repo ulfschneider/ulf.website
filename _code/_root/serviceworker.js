@@ -160,11 +160,10 @@ addEventListener("fetch", (event) => {
       if (networkFirstResponse) {
         return networkFirstResponse
       }
-    } else {
-      const cacheName = getCacheNameForRequest(request)
-      let cacheSettings = Object.assign({}, CACHE_SETTINGS[cacheName]) //clone
-      return cacheFirst(event, cacheSettings)
     }
+    const cacheName = getCacheNameForRequest(request)
+    let cacheSettings = Object.assign({}, CACHE_SETTINGS[cacheName]) //clone
+    return cacheFirst(event, cacheSettings)
   }
 
   log(`Requesting ${request.url}`)
