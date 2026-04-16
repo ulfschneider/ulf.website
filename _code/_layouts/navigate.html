@@ -68,5 +68,21 @@
       "{{site.nav.home.path}}",
       goBack
     )
+
+    //take the menu page out of the browser history
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("a[href]").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          const url = link.href
+
+          // ignore new tab / modifiers
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+          if (link.target === "_blank") return
+
+          e.preventDefault()
+          location.replace(url)
+        })
+      })
+    })
   </script>
 </html>
