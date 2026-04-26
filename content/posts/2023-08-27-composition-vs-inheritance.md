@@ -19,7 +19,7 @@ In my words:**Use composition for <em>has-a</em> relationships**.
 >
 > <footer>Steven Lowe</footer>
 
-In my words:**Use inheritance for <em>is-a</em> relationships**. By Steven´s guidance, inheritance should only be used when:
+In my words:**Use inheritance for <em>is-a</em> relationships**. By Steven's guidance, inheritance should only be used when:
 
 - Both classes are in the same logical domain.
 - The subclass is a proper subtype of the superclass.

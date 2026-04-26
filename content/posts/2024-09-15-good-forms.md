@@ -2,8 +2,8 @@
 title: Good forms
 tags: accessibility
 ---
-Dave Rupert compiled a list of properties that should play a role for [<cite>good forms</cite>](https://daverupert.com/2024/09/good-forms/). Among the many, here are the last five points from Dave´s list:
 
+Dave Rupert compiled a list of properties that should play a role for [<cite>good forms</cite>](https://daverupert.com/2024/09/good-forms/). Among the many, here are the last five points from Dave's list:
 
 > - Good forms make the baby Jesus smile
 > - Good authenticated forms should have a server-generated nonce value

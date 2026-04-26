@@ -2,8 +2,9 @@
 title: Sunday early morning walk
 tags: journal
 ---
+
 <figure>
-<img src="/img/journal/IMG_5270.jpg" alt="A straight uphill path in the snow with a shed at the right side of the path. It´s dark dawn with purple and pink skies.">
+<img src="/img/journal/IMG_5270.jpg" alt="A straight uphill path in the snow with a shed at the right side of the path. It's dark dawn with purple and pink skies.">
 </figure>
 
 <figure>

@@ -15,7 +15,7 @@ As Chris states:
 
 > I think hanging-punctuation is nice! Just a nice bonus where supported and not a huge deal if it’s not.
 
-Because it is a cascading property, Chris´ suggestion to start a new project with, is:
+Because it is a cascading property, Chris' suggestion to start a new project with, is:
 
 ```css
 html {
@@ -24,4 +24,4 @@ html {
 ```
 
 > [!NOTE]
-> **18 Dec. 2023:** I´ve played with the setting for a while and I come to the conclusion to better avoid it. Safari will outdent not only quotation marks, but also square brackets and at least on my blog I find it distracts the reading process, which is probably the opposite of what it´s meant for. I switched it off.
+> **18 Dec. 2023:** I've played with the setting for a while and I come to the conclusion to better avoid it. Safari will outdent not only quotation marks, but also square brackets and at least on my blog I find it distracts the reading process, which is probably the opposite of what it's meant for. I switched it off.

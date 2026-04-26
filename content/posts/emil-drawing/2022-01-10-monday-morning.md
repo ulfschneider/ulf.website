@@ -1,7 +1,8 @@
 ---
 title: Monday morning
 ---
-It´s Monday morning 7 am and I want to kick work off. This is what my desk looks like.
+
+It's Monday morning 7 am and I want to kick work off. This is what my desk looks like.
 
 <figure>
 <img src="/img/emil-drawing/IMG_1600D.jpg" alt="">

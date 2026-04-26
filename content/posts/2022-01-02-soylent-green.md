@@ -2,8 +2,9 @@
 title: Soylent Green is 2022
 tags: journal
 ---
+
 <figure>
-<figcaption>Do you remember that movie? This is a film poster of <cite>Soylent Green</cite> with Charlton Heston. It´s from 1973 and the story play is in 2022.</figcaption>
+<figcaption>Do you remember that movie? This is a film poster of <cite>Soylent Green</cite> with Charlton Heston. It's from 1973 and the story play is in 2022.</figcaption>
 <img src="/img/journal/soylent-green.jpg" alt="A movie poster of the 1973 movie 'Soylent Green'">
 </figure>
 

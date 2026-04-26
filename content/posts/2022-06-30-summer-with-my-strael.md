@@ -3,7 +3,8 @@ title: A summer evening with my Strael
 tags: [sports, strael]
 layout: image
 ---
-It´s the kind of evening to remember.
+
+It's the kind of evening to remember.
 
 <figure>
 <img src="/img/strael/IMG_2543.jpg" alt="A green valley">

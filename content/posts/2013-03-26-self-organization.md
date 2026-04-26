@@ -18,7 +18,7 @@ Leaders in agile organizations have the vital function of actively giving self-o
 </blockquote>
 
 <blockquote>
-<p>… the only possibility of transcending the capacity of individual minds is to rely on those super personal, ´self-organizing´ forces which create spontaneous orders. </p>
+<p>… the only possibility of transcending the capacity of individual minds is to rely on those super personal, 'self-organizing' forces which create spontaneous orders. </p>
 <footer>Friedrich A. von Hayek</footer>
 </blockquote>
 
@@ -34,11 +34,9 @@ With the dawning industrialization, a new type of organization arises. Reading a
 
 But how can this new world be connected to the evolution principle?
 
-
 <blockquote><p>The new world is the result of humans acting, but it is not made by a central constructing instance and in this way not the result of human design. </p>
 <footer>Friedrich A. von Hayek</footer>
 </blockquote>
-
 
 The connection is, 150 years ago as well as today, no mastermind can overview this world, construct it, and plan it. The system organized itself in evolutionary steps.
 
@@ -64,7 +62,7 @@ The spontaneous development of new system properties will happen while these pro
 
 We can find many examples in nature for strong self-organizational forces. The heart is a complex, self-organizing system. Single heart cells generate a synchronized electrical pulse excitation, leading to contractions in a steady rhythm.
 
-The neurons of the human brain can be described. Even their communication protocols can be analyzed. But who, by looking at these components of the system called a brain, could predict that from these neurons and synapses something like articles, feelings, music, dreams, and consciousness will develop? And isn´t it astonishing that the total number of neurons is determined with our birth – no further will be added  –  only the connections between the neurons and by that the possibility of interdependencies will increase during our lifetime.
+The neurons of the human brain can be described. Even their communication protocols can be analyzed. But who, by looking at these components of the system called a brain, could predict that from these neurons and synapses something like articles, feelings, music, dreams, and consciousness will develop? And isn't it astonishing that the total number of neurons is determined with our birth – no further will be added – only the connections between the neurons and by that the possibility of interdependencies will increase during our lifetime.
 
 Language develops in the same manner. The interdependencies within our brains continue in the outer world. Thinking and speaking are connected and speaking – as only being one of many ways to communicate – connects our thinking with the thought of others. The language we use is not the result of a central construction process with the grammar specified upfront. Language evolves and can function without a primary constructing instance.
 
@@ -125,7 +123,7 @@ Do the things that produce results now. Repeat.
 
 ## Divergent-convergent thinking and responsibility
 
-Explore and expand possible solution spaces for a given problem. In other words, think divergent and do it in a team before deciding for a solution. Don´t settle easily for the first and obvious solution. Diversity is something valuable. Bear with different perspectives from different team members for a while and then start to converge.
+Explore and expand possible solution spaces for a given problem. In other words, think divergent and do it in a team before deciding for a solution. Don't settle easily for the first and obvious solution. Diversity is something valuable. Bear with different perspectives from different team members for a while and then start to converge.
 
 Possible techniques for divergent-convergent thinking are silent-brainstorming or the dynamics group decision making model by Sam Kaner [Kaner et al. 2007].
 

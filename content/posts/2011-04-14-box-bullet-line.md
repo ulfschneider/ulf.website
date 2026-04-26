@@ -3,6 +3,7 @@ title: The Box-Bullet-Line (BBL)
 abstract: Many important aspects of software development are invisible. When creating software we work through different abstraction layers by analyzing symbols and writing code.
 tags: agile
 ---
+
 [[toc]]
 
 Writing software is comparable to the work of an author writing a book. Of course, there are engineering elements and creative and social aspects that characterize the work of a software developer, but the contemplative articulation of a model into code is authoring to me. The better we can communicate the underlying model, the better the system can grow. Indeed the ability of the system to develop is coupled to our _shared_ mental model about the system.
@@ -30,7 +31,7 @@ The here proposed Box-Bullet-Line notation is an easy to use drop-in, that allow
 
 ## Dependency
 
-Let´s start with the basics. A line between two boxes indicates a dependency between two system components. A box is a component. In early phases, when you explore an existing system or design a new one when directions of communication are not of highest importance, the undirected dependency between components is a good starting point.
+Let's start with the basics. A line between two boxes indicates a dependency between two system components. A box is a component. In early phases, when you explore an existing system or design a new one when directions of communication are not of highest importance, the undirected dependency between components is a good starting point.
 
 <figure>
 <img src="/img/agile/bbl_dependency.png" />

@@ -5,7 +5,8 @@ tags:
   - strael
 layout: image
 ---
-This Sunday morning ride startet out misty but became so wet that sometimes I couldn´t tell if it´s rainy or foggy. Still, because it was not too cold and there was no traffic at all, I could much enjoy it. Arriving at home, the warm shower was appreciated.
+
+This Sunday morning ride startet out misty but became so wet that sometimes I couldn't tell if it's rainy or foggy. Still, because it was not too cold and there was no traffic at all, I could much enjoy it. Arriving at home, the warm shower was appreciated.
 
 <figure>
 <img src="/img/strael/IMG_5762.jpg" alt="A green rape field after flowering with a gray and deep fog. A telephone line with three high masts is visible.">

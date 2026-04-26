@@ -4,9 +4,11 @@ tags:
   - code
   - css
 ---
+
 [[toc]]
 
 ## The goal
+
 When using [11ty](https://11ty.dev) to build your blog, you likely are using the plugin `@11ty/eleventy-plugin-syntaxhighlight` for syntax highlighting. The plugin is running [Prism](https://prismjs.com) under the hood. To indicate your readers the names of the highlighted languages with the correct spelling, you can map the language key processed by Prism to a correctly spelled language name, and assign it to a HTML attribute, which you can name however you want. That again will allow you to display and style the name of the language with CSS. The resulting HTML will look similar to the example below. You see, I named the attribute `data-language` and it has the value `JavaScript` assigned:
 
 ```html
@@ -17,7 +19,7 @@ When using [11ty](https://11ty.dev) to build your blog, you likely are using the
 </pre>
 ```
 
-## How it´s achieved
+## How it's achieved
 
 To achieve that result, add the [syntax highlighting plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/) to your npm dependencies, with
 
@@ -34,18 +36,18 @@ eleventyConfig.addPlugin(syntaxHighlight, {
   preAttributes: {
     "data-language": function ({ language, content, options }) {
       return resolvePrismLanguage(language)
-    },
+    }
   },
   //define the attribute for the code tag,
   //we do not need that currently
-  codeAttributes: {},
-});
+  codeAttributes: {}
+})
 ```
 
-The `preAttributes` property of the highlighting plugin is used to ensure the surrounding `pre` tag of syntax-highlighted code blocks is getting the attribute `data-language` assigned. The exact value for the attribute is resolved by the function `resolvePrismLanguage()`.  The code of the function is listed below (the key-values of `PRISM_LANGUAGES` are copied from [Prism: Show Language](https://prismjs.com/plugins/show-language/)):
+The `preAttributes` property of the highlighting plugin is used to ensure the surrounding `pre` tag of syntax-highlighted code blocks is getting the attribute `data-language` assigned. The exact value for the attribute is resolved by the function `resolvePrismLanguage()`. The code of the function is listed below (the key-values of `PRISM_LANGUAGES` are copied from [Prism: Show Language](https://prismjs.com/plugins/show-language/)):
 
 ```js
-//this code could be inside your eleventy.js, 
+//this code could be inside your eleventy.js,
 //or move it into something like utils.js
 //
 //the contents of PRISM_LANGUAGES is copied from
@@ -330,7 +332,7 @@ const PRISM_LANGUAGES = {
   yang: "YANG",
 };
 
-//map the given prism language key, like "js", to 
+//map the given prism language key, like "js", to
 //a correctly spelled language name, like "JavaScript"
 resolvePrismLanguage(language) {
   return PRISM_LANGUAGES[language] || language || "";
@@ -347,4 +349,3 @@ pre[data-language]:not([data-language=""]) {
   }
 }
 ```
-

@@ -6,7 +6,7 @@ tags: font
 
 https://twitter.com/typographica/status/268091875746009088
 
-"[How we read](https://alistapart.com/article/how-we-read/)" is about reading typography in general, with excursions to reading on computers. And Jason´s short text invites the reader. *I wanted to read it.*
+"[How we read](https://alistapart.com/article/how-we-read/)" is about reading typography in general, with excursions to reading on computers. And Jason's short text invites the reader. _I wanted to read it._
 
 Did you know, for example, upper parts of characters convey more information than their lower parts?
 

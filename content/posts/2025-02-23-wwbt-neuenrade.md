@@ -4,7 +4,8 @@ tags:
   - sports
   - secan
 ---
-After a four-week forced break due to illness, I took part in the eighth run of the Westfalen Winter Bike Trophy in Neuenrade. To ease back into riding, I opted for the shorter 36 km route, which still had 676 meters of elevation. Neuenrade lies in the Sauerland region, known for its hills and quick elevation gains. Having grown up in the area – near Arnsberg, though not in Neuenrade – I’m well accustomed to the terrain. The weather was fine and even mild for the time of the year, the route was beautiful, and, like with all WWBT events, the catering was excellent and delivered with great care. Unfortunately, Martin, my riding companion during all the previous WWBT events, couldn´t join this time, so I set off on my own.
+
+After a four-week forced break due to illness, I took part in the eighth run of the Westfalen Winter Bike Trophy in Neuenrade. To ease back into riding, I opted for the shorter 36 km route, which still had 676 meters of elevation. Neuenrade lies in the Sauerland region, known for its hills and quick elevation gains. Having grown up in the area – near Arnsberg, though not in Neuenrade – I’m well accustomed to the terrain. The weather was fine and even mild for the time of the year, the route was beautiful, and, like with all WWBT events, the catering was excellent and delivered with great care. Unfortunately, Martin, my riding companion during all the previous WWBT events, couldn't join this time, so I set off on my own.
 
 <figure>
 <img src="/img/sports/IMG_7087.jpg">
@@ -52,7 +53,7 @@ After a four-week forced break due to illness, I took part in the eighth run of 
 
 <figure>
 <img src="/img/sports/IMG_7106.jpg">
-<figcaption> It was the first deployment of my new <a href="https://fairlightcycles.com">Fairlight</a> Secan 3.0, which I ride in a frame size 56 R with 650 B wheels and 2.2 inch Continental Race King tires. The ride is pretty comfortable with the big rubber and the bike itself is capable, efficient, and fast. Did I mention it is a joy to ride? In case you don´t know, it´s made of Reynolds 853 steel and it carries <a href="/2024-08-06-klean-kanteen/">steel drinking bottles</a>.</figcaption>
+<figcaption> It was the first deployment of my new <a href="https://fairlightcycles.com">Fairlight</a> Secan 3.0, which I ride in a frame size 56 R with 650 B wheels and 2.2 inch Continental Race King tires. The ride is pretty comfortable with the big rubber and the bike itself is capable, efficient, and fast. Did I mention it is a joy to ride? In case you don't know, it's made of Reynolds 853 steel and it carries <a href="/2024-08-06-klean-kanteen/">steel drinking bottles</a>.</figcaption>
 </figure>
 
 <figure>
@@ -69,4 +70,3 @@ After a four-week forced break due to illness, I took part in the eighth run of 
 <img src="/img/sports/IMG_7114.jpg">
 <figcaption>Arrival zone</figcaption>
 </figure>
-

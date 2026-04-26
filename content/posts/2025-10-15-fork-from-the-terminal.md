@@ -4,7 +4,8 @@ tags:
   - code
   - til
 ---
-When you are in the Terminal on a Mac inside of a Git repository, and you use the [Fork Git client](https://git-fork.com), it´s perfectly doable to open the current repo in Fork by issuing the command:
+
+When you are in the Terminal on a Mac inside of a Git repository, and you use the [Fork Git client](https://git-fork.com), it's perfectly doable to open the current repo in Fork by issuing the command:
 
 ```sh
 fork .

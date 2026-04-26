@@ -3,7 +3,7 @@ title: The most simple tablist
 tags:
   - css
   - code
-abstract: My current approach of building a tablist without JavaScript. It´s relying on flexbox, relative positioning, and the :has() selector.
+abstract: My current approach of building a tablist without JavaScript. It's relying on flexbox, relative positioning, and the :has() selector.
 ---
 
 [[toc]]
@@ -23,27 +23,21 @@ abstract: My current approach of building a tablist without JavaScript. It´s re
 
 ```html
 <div role="tablist">
-	<!-- tab 1 -->
-  <label role="tab">
-    <input type="radio" name="tab" checked>Tab 1
-  </label>
+  <!-- tab 1 -->
+  <label role="tab"> <input type="radio" name="tab" checked />Tab 1 </label>
   <div role="tabpanel">Tab 1 content</div>
 
-	<!-- tab 2 -->
-  <label role="tab">
-    <input type="radio" name="tab">Tab 2
-  </label>
+  <!-- tab 2 -->
+  <label role="tab"> <input type="radio" name="tab" />Tab 2 </label>
   <div role="tabpanel">Tab 2 content</div>
 
-	<!-- tab 3 -->
-  <label role="tab">
-    <input type="radio" name="tab">Tab 3
-  </label>
+  <!-- tab 3 -->
+  <label role="tab"> <input type="radio" name="tab" />Tab 3 </label>
   <div role="tabpanel">Tab 3 content</div>
 </div>
 ```
 
-For accessibility reasons, the styling depends on roles and not on CSS classes. Please refer to [<cite> ARIA: tablist role</cite>](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) for details. In this case it´s
+For accessibility reasons, the styling depends on roles and not on CSS classes. Please refer to [<cite> ARIA: tablist role</cite>](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) for details. In this case it's
 
 `role="tablist"`
 : for the overall tablist container,
@@ -54,17 +48,17 @@ For accessibility reasons, the styling depends on roles and not on CSS classes. 
 `role="tabpanel"`
 : for the content of each tab.
 
-Inside of the tablist container, each tab is described by a `<label role="tab">` for the tab label, followed by a `<div role="tabpanel">` for the tab content. The `<label>` wraps an `<input type="radio">`. The `<input>` maintains the state of the tablist, and if checked, indicates the opened tab. It´s an `<input type="radio">`, because checking one input must uncheck all others.
+Inside of the tablist container, each tab is described by a `<label role="tab">` for the tab label, followed by a `<div role="tabpanel">` for the tab content. The `<label>` wraps an `<input type="radio">`. The `<input>` maintains the state of the tablist, and if checked, indicates the opened tab. It's an `<input type="radio">`, because checking one input must uncheck all others.
 
 The `input` of the first tab has the attribute `checked` to visualize the content of the first tab by default.
 
->[!Note]
->All the `<input>` elements of a single tablist must share the same value for the `name` attribute, in the above example it is `name="tab"`. A second tablist on the same page must choose a different value for the `name` attribute to not share the state between the two tablists! 
+> [!Note]
+> All the `<input>` elements of a single tablist must share the same value for the `name` attribute, in the above example it is `name="tab"`. A second tablist on the same page must choose a different value for the `name` attribute to not share the state between the two tablists!
 
 ## The CSS
 
 > [!Note] Oct 5, 2024
-> I´ve added styling for the outline color of focused tabs.
+> I've added styling for the outline color of focused tabs.
 
 > [!Note] Oct 27, 2024
 > I changed the selector for the focus styling to `:has(:focus-within)` to show a focus indicator only when the element received focus via keyboard. Can it be seen as a bug in Safari, that the initial keyboard focus is visualized, disappears when selecting tabs with the arrow keys, and appears again when reaching the first or last tab?
@@ -137,12 +131,11 @@ The `input` of the first tab has the attribute `checked` to visualize the conten
 }
 ```
 
-
 ### The styling of the tablist container
 
-The tablist container is selected by `[role="tablist"]`. Basic settings  of the tablist, like tabbing and border-width, are stored in the [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) to allow for easy adjustment.
+The tablist container is selected by `[role="tablist"]`. Basic settings of the tablist, like tabbing and border-width, are stored in the [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) to allow for easy adjustment.
 
-`display: flex` 
+`display: flex`
 : allows to have all tab labels placed in a row.
 
 `flex-wrap: wrap`
@@ -151,7 +144,7 @@ The tablist container is selected by `[role="tablist"]`. Basic settings  of the 
 `align-items:flex-end`
 : will move the content of each tab label to the bottom, in case there are tab labels of different height
 
-With 
+With
 
 ```css
 [role="tablist"] > *:not(label[role="tab"]) {
@@ -197,7 +190,7 @@ Each tab label receives its basic styling through
 }
 ```
 
-The selected tab is styled by 
+The selected tab is styled by
 
 ```css
 [role="tablist"] > label[role="tab"]:has(input[type="radio"]:checked) {
@@ -209,7 +202,7 @@ The selected tab is styled by
 }
 ```
 
-It´s important to have a negative bottom margin of the same size as the used border width for every tab: `margin-bottom: calc(-1 * var(--tab-border-width))`. The solid background for the active tab, with `background: var(--tab-label-active-background)`, as well plays a role here. Please refer to the styling of the tab content to understand why that´s the case.
+It's important to have a negative bottom margin of the same size as the used border width for every tab: `margin-bottom: calc(-1 * var(--tab-border-width))`. The solid background for the active tab, with `background: var(--tab-label-active-background)`, as well plays a role here. Please refer to the styling of the tab content to understand why that's the case.
 
 ### Styling the tab content
 
@@ -233,7 +226,6 @@ Only the tab content that is a direct sibling of the checked tab label is styled
 [role="tablist"] > label[role="tab"]:has(input:checked) + [role="tabpanel"]
 ```
 
-The tab content is always placed at the end of the tab labels inside of tablist container, because it is part of a flexbox and has the property `order: 99`.  It will take the full width of the tablist container through `width: 100%; display:block;`, which forces the visible tab content to wrap into the next line of the container.
+The tab content is always placed at the end of the tab labels inside of tablist container, because it is part of a flexbox and has the property `order: 99`. It will take the full width of the tablist container through `width: 100%; display:block;`, which forces the visible tab content to wrap into the next line of the container.
 
-The tab container has a top border to separate it visually from the tab labels: `border-top: var(--tab-border-width) solid var(--tab-border-color);`. The selected tab label should cover that horizontal line to makle a strong indication of what label belongs to the presented tab content. This is possible because the tab content has `position:relative; z-index: -1;`, which brings the tab content in the stacking context under the tab labels. Because the tab labels have a negative bottom margin, and the checked label has a solid background, the background of the label will cover the horizontal line. 
-
+The tab container has a top border to separate it visually from the tab labels: `border-top: var(--tab-border-width) solid var(--tab-border-color);`. The selected tab label should cover that horizontal line to makle a strong indication of what label belongs to the presented tab content. This is possible because the tab content has `position:relative; z-index: -1;`, which brings the tab content in the stacking context under the tab labels. Because the tab labels have a negative bottom margin, and the checked label has a solid background, the background of the label will cover the horizontal line.

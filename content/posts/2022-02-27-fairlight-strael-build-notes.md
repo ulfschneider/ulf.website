@@ -1,8 +1,9 @@
 ---
 title: Fairlight Strael Build Notes
 tags: [sports, strael]
-abstract: I´m building up a new road bike with a Fairlight Strael steel frame. Here is my thought process for choosing the parts.
+abstract: I'm building up a new road bike with a Fairlight Strael steel frame. Here is my thought process for choosing the parts.
 ---
+
 <figure>
     <img src="/img/strael/strael-3-0-top-tube.png">
 </figure>
@@ -40,7 +41,7 @@ Now, imagine how lucky I was to see that a _Tall_ Fairlight frame would do that:
 </cite> on <a href="https://vimeo.com/180866780">Vimeo</a>.</figcaption>
 </figure>
 
-Once the first contact was made, I started paying attention to what else was going on with Fairlight. The next thing I noticed was [James Hayden](https://jamesmarkhayden.eu) riding a Strael during the [Transcontinental](https://www.transcontinental.cc) race – and winning it! James won the race two times, on a Strael, in 2017 and 2018. His reasoning for the bike was: For a self-supported 3500 km race to be ridden within around nine days, sitting 400km a day on a bike means you need a comfortable and capable bike to be competitive.^[James Hayden´s Fairlight Strael for the 2017 Transcontinental on [road.cc](https://road.cc/content/tech-news/227259-transcontinental-race-2017-winner-james-haydens-fairlight-strael)]^[James Hayden´s Fairlight Strael for the 2018 Transcontinental on [YouTube](https://www.YouTube.com/watch?v=ZIsuG8agZDI) and [road.cc](https://road.cc/content/tech-news/246373-james-hayden-wins-transcontinental-race-second-year-running-fairlight)]
+Once the first contact was made, I started paying attention to what else was going on with Fairlight. The next thing I noticed was [James Hayden](https://jamesmarkhayden.eu) riding a Strael during the [Transcontinental](https://www.transcontinental.cc) race – and winning it! James won the race two times, on a Strael, in 2017 and 2018. His reasoning for the bike was: For a self-supported 3500 km race to be ridden within around nine days, sitting 400km a day on a bike means you need a comfortable and capable bike to be competitive.^[James Hayden's Fairlight Strael for the 2017 Transcontinental on [road.cc](https://road.cc/content/tech-news/227259-transcontinental-race-2017-winner-james-haydens-fairlight-strael)]^[James Hayden's Fairlight Strael for the 2018 Transcontinental on [YouTube](https://www.YouTube.com/watch?v=ZIsuG8agZDI) and [road.cc](https://road.cc/content/tech-news/246373-james-hayden-wins-transcontinental-race-second-year-running-fairlight)]
 
 It was proof enough that the Strael steel frame had more to it than cycling folklore.
 
@@ -120,7 +121,7 @@ Electronic shifting has become faster, more accurate, and more comfortable than 
 ### Electronic shifting
 
 - **SRAM's eTap AXS** shifting is wireless. The bike will only need brake hoses and no wires for shifting. It's quick to set up, and the gearing range is interesting, with smaller chainrings front and a small 10 teeth sprocket on the cassette, which creates a broader gearing range. The smaller chainrings will lead to riding more often on the big chainring, which leads to less changing gears on the front. SRAM has been a huge innovator in the bike industry, and when they bring something new, it's always interesting to look at it. I like almost everything about their groupsets, except you have to take care of the charging status of four(!) batteries. Each derailleur has its own battery, which should last for 400 km of riding. A battery can be charged within 60 minutes. Charging requires the battery to be removed from the bike and put into a charging cradle. Keep in mind each derailleur has its own battery, and because they are both the same, they can be swapped for each other, but the two of them require charging. In addition, each brake lever has a CR2032 battery to send the wireless shifting signals to the derailleurs. The shifter batteries should last for two years. Four batteries with each one a different charging status scares me off. On the other hand, replacing a battery is super quick, and because they are small and of low weight, carrying a replacement part on longer rides is doable. Another point I do not like too much about SRAM, is that their hydraulic brakes use the more aggressive DOT fluid and not mineral oil, like Shimano. Theoretically, because DOT is hygroscopic, it should be replaced once a year, and because the fluid is aggressive on bike surfaces, you have to be careful when doing that. I admit, I never replaced the DOT fluid on my bike in the past, and my SRAM brakes are working fine.
-- **Shimano´s Di2 ([Digital Integrated Intelligence](https://bike.shimano.com/en-US/technologies/component/details/di2.html))** shifting approach is still mostly wired. A central battery will be placed inside the seat post, which protects the battery and hides it away. Both derailleurs are wired to the battery. A fully charged system would allow for around 1000 km of riding. Even if it's less or more than 1000 km, the Di2 battery will allow riding at least double as far as the eTap AXS batteries before charging is required. The rear derailleur needs to get wired to a power supply to charge the battery, which means the entire bike needs to be near a power supply. There is the option to wire the brake levers with the central battery, which I prefer because then there's only one battery in the entire system, which will provide a clear charging status. This option is claimed to prolong battery life by 50% and speed up the shifting. The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which adds two more batteries, shortens the life of the central battery, and makes shifting slower. Shifting of SRAM is good, but the shifting of Shimano is better, no matter if wireless or wired. While each system is a joy to use, and I have a lot of respect for the hard work and achievements of the engineers in either company, Shimano is the fastest and most accurate on the road.
+- **Shimano's Di2 ([Digital Integrated Intelligence](https://bike.shimano.com/en-US/technologies/component/details/di2.html))** shifting approach is still mostly wired. A central battery will be placed inside the seat post, which protects the battery and hides it away. Both derailleurs are wired to the battery. A fully charged system would allow for around 1000 km of riding. Even if it's less or more than 1000 km, the Di2 battery will allow riding at least double as far as the eTap AXS batteries before charging is required. The rear derailleur needs to get wired to a power supply to charge the battery, which means the entire bike needs to be near a power supply. There is the option to wire the brake levers with the central battery, which I prefer because then there's only one battery in the entire system, which will provide a clear charging status. This option is claimed to prolong battery life by 50% and speed up the shifting. The other option is to use the brake levers with batteries for a wireless connection from the levers to the derailleurs, which adds two more batteries, shortens the life of the central battery, and makes shifting slower. Shifting of SRAM is good, but the shifting of Shimano is better, no matter if wireless or wired. While each system is a joy to use, and I have a lot of respect for the hard work and achievements of the engineers in either company, Shimano is the fastest and most accurate on the road.
 - **Campagnolo** has never been an option for me because I dislike their brake lever ergonomics.
 
 **My decision:** For choosing an electronic shifting system, I lean towards Shimano for the following reasons: Di2 can be set up to have a single central battery for the entire system, which makes it easy to have clear charging status. The battery has at least double the capacity of the SRAM batteries, and Shimano shifts faster and more accurately.
@@ -270,7 +271,6 @@ Rotor cranksets don't have bonded materials as Shimano cranksets. Instead, they 
 
 Please note that I only found the total weights of the Shimano cranksets for the below-given weight comparison without differentiating into their parts. The Rotor ALDHU carbon cranks are not included in the comparison because the carbon cranks are only available for a 30mm axle. I'm only comparing compact chainring sizes for Rotor and Shimano because they are the smallest to get from Shimano.
 
-
 <table>
   <caption>
   <strong>Weight comparison of cranksets</strong>
@@ -294,8 +294,7 @@ Please note that I only found the total weights of the Shimano cranksets for the
     <tr><td>VEGAST Spider</td><td>724.5</td><td>399</td><td>60 /assumed</td><td>30.5 + 90 </td><td>145</td></tr></tbody>
 </table>
 
-
-**My decision:** At the time of writing, during February 2022, I couldn't get anything from Rotor stating that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet, I think it is possible. For that reason, I will go for the @Rotor ALDHU 24 mm Crank Arms, 172.5 mm length{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Rotor BB1 BSA Threaded Bottom Bracket{}. A Shimano BSA Threaded Bottom Bracket (BB-R9100) doesn´t allow routing the Di2 wires through the bottom bracket shell because the plastic shell of the BB-R9100 is too large to get everything in – the Rotor BB1 works better with this regards.
+**My decision:** At the time of writing, during February 2022, I couldn't get anything from Rotor stating that the Rotor cranksets/chainrings will work on any of the new Shimano 12-speed road groupsets. Still, from searching the internet, I think it is possible. For that reason, I will go for the @Rotor ALDHU 24 mm Crank Arms, 172.5 mm length{}, a @Rotor NoQ Direct Mount 32-48 one-piece chainring combo{}, a @Rotor 24 mm Road Axle{}, and a @Rotor BB1 BSA Threaded Bottom Bracket{}. A Shimano BSA Threaded Bottom Bracket (BB-R9100) doesn't allow routing the Di2 wires through the bottom bracket shell because the plastic shell of the BB-R9100 is too large to get everything in – the Rotor BB1 works better with this regards.
 
 ## The pedals
 
@@ -314,7 +313,7 @@ Please note that I only found the total weights of the Shimano cranksets for the
 <tbody>
   <tr><td><a href="https://rovalcomponents.com/collections/road/products/alpinist-cl">Roval Alpinist CL</a></td><td>1365 g</td><td>32 mm</td><td>21 mm</td><td>24F 24R</td><td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td>Not tubeless compatible</td></tr>
   <tr><td><a href="https://rovalcomponents.com/collections/road/products/cl-50">Roval CL50</a></td><td>1515 g</td><td>50 mm</td><td>21 mm</td><td>21F 24R<td>DT Swiss 350</td><td>Yes</td><td>Yes</td><td></td></tr>
-  <tr><td><a href="https://www.mavic.com/en-gb/cosmic-slr-45-disc-rr1330.html">Mavic Cosmic SLR 45</a></td><td>1440 g</td><td>45 mm</td><td>19 mm</td><td>24F 24R<td>Mavic Infinity</td><td>Yes</td><td>Yes</td><td>ASTM category 2! Mavic Fore rims don´t require rim tape.</td></tr>
+  <tr><td><a href="https://www.mavic.com/en-gb/cosmic-slr-45-disc-rr1330.html">Mavic Cosmic SLR 45</a></td><td>1440 g</td><td>45 mm</td><td>19 mm</td><td>24F 24R<td>Mavic Infinity</td><td>Yes</td><td>Yes</td><td>ASTM category 2! Mavic Fore rims don't require rim tape.</td></tr>
   <tr><td><a href="https://www.reservewheels.com/reserve-40-44-road-wheel">Reserve Wheels 40|44</a></td><td>1450 g</td><td>40 mm front<br>44 mm rear</td><td>25.5 mm front<br>25 mm rear</td><td>24F 24R<td>DT Swiss 240</td><td>Yes</td><td>Yes</td><td>I learned these wheels are not for the German market.</td></tr>
   <tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura-Ace C36</a></td><td>1350 g</td><td>36 mm</td><td>21 mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>Cup and cone bearings</td></tr>
   <tr><td><a href="https://bike.shimano.com/en-US/product/component/dura-ace-r9200.html?filterCatId=cg4SHICWheel">Shimano Dura-Ace C50</a></td><td>1461 g</td><td>50 mm</td><td>21 mm</td><td>24F 24R<td>Shimano</td><td>Yes</td><td>Yes</td><td>Cup and cone bearings</td></tr>
@@ -389,15 +388,14 @@ It's a steel frame therefore metal cages should complement it. Ideally, titanium
     </tbody>
   </table>
 
-
 **My decision:** 2 @King Cage Ti{2}, each one weighing 28 g. The prices of the others are too steep, and I do not need the sophisticated baseplate of the Wolftooth to slide the cages up and down. Dom Thomas certainly took care to place the cage mounts on his frame so that two cages with bottles would not create issues with touching each other.
 
 ## The part list
 
 [[ingredients]]
 
-## What´s next
+## What's next
 
-End of February 2022, at the time of publishing this article, parts from my list cannot be ordered. I even don´t have the frame – which will hopefully arrive end of March. I´m not sure when I can start building but I´m happy that I´ve found my setup.
+End of February 2022, at the time of publishing this article, parts from my list cannot be ordered. I even don't have the frame – which will hopefully arrive end of March. I'm not sure when I can start building but I'm happy that I've found my setup.
 
 Update 14 April 2022: See [how the build itself goes](/2022-04-14-fairlight-strael-build-log/) 🔧.

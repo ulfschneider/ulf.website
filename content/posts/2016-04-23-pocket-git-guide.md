@@ -17,7 +17,7 @@ Git will help you doing the following things with a computer:
 <li>Keep track of file revisions when working iteratively (this is often referred to as version control).</li>
 <li>Safely experiment because you can always step back to the previous version.</li>
 <li>No need to give your files version indicating names, like essay_v1.txt, essay_v2.txt and so on.</li>
-<li>It doesn´t play a role if you want to work on a single file or a multi-file project organized in multiple folders.</li>
+<li>It doesn't play a role if you want to work on a single file or a multi-file project organized in multiple folders.</li>
 <li>Convert any file or folder structure into a project that is under version control.</li>
 <li>Have the advantage of powerful version control without the need to setup a server or creating an account somewhere.</li>
 <li>Work consistently on multiple different operating systems, like MacOS, Linux and Windows.</li>
@@ -45,8 +45,8 @@ On a Mac, after installation, fire up GitHub Desktop, open the Preferences scree
 
 Though not mandatory, for an improved Git experience in the shell, I like to have the following configured:
 
-* The credential helper to cache my username and password, so I don´t have to provide it over and over again when using the https port while connecting to Git servers. See [Caching Your Git Password](https://help.github.com/articles/caching-your-github-password-in-git/) for installation advice.
-* Bash Git Completion for an improved command prompt and command completion with the tab key. Follow [Install Bash Git Completion](https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion) to get it set up (it includes a Git installation via homebrew, but you won´t need that one if you already installed GitHub Desktop like mentioned before). In addition to the explanations given, put the following lines to your `.bash_profile` to improve your command prompt:
+- The credential helper to cache my username and password, so I don't have to provide it over and over again when using the https port while connecting to Git servers. See [Caching Your Git Password](https://help.github.com/articles/caching-your-github-password-in-git/) for installation advice.
+- Bash Git Completion for an improved command prompt and command completion with the tab key. Follow [Install Bash Git Completion](https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion) to get it set up (it includes a Git installation via homebrew, but you won't need that one if you already installed GitHub Desktop like mentioned before). In addition to the explanations given, put the following lines to your `.bash_profile` to improve your command prompt:
 
 ```shell
 export GIT_PS1_SHOWDIRTYSTATE=true
@@ -56,11 +56,11 @@ PS1='\u@\h \W$(__git_ps1 " (%s)")\$ '
 
 ### Get Git on Windows
 
-On Windows, the installation of [GitHub Desktop](https://desktop.github.com) will bring Git and the GitHub Desktop Client on your machine. This all with minimal configuration effort for yourself. I think it´s a good starting point for your Git experience on Windows.
+On Windows, the installation of [GitHub Desktop](https://desktop.github.com) will bring Git and the GitHub Desktop Client on your machine. This all with minimal configuration effort for yourself. I think it's a good starting point for your Git experience on Windows.
 
 ## The Git shell
 
-You can use a slick GUI client on top of Git, like for example [Tower](https://www.git-tower.com) on a Mac or the reduced [GitHub Desktop](https://desktop.github.com). Sometimes things go faster and easier with a GUI client. Anyway, an advantage of the command shell is, it works the same on all platforms. What you learned here can be used anywhere. I assume it´s not so bad to start at the bottom to understand the tool right.
+You can use a slick GUI client on top of Git, like for example [Tower](https://www.git-tower.com) on a Mac or the reduced [GitHub Desktop](https://desktop.github.com). Sometimes things go faster and easier with a GUI client. Anyway, an advantage of the command shell is, it works the same on all platforms. What you learned here can be used anywhere. I assume it's not so bad to start at the bottom to understand the tool right.
 
 ## Tell Git who you are
 
@@ -98,9 +98,9 @@ Figure: Git produces snapshots of your entire project
 
 While you are working, Git divides your content into three main sections. Your working directory, your staging area (often referred to as _index_) and your committed work.
 
-* Your working directory is merely the set of files and folders you operate on – your project.
-* The staging area is the set of changes which should go into the next commit.
-* Once you commit, Git will take the contents from the staging area and create a snapshot in the Git repository, which is then the committed revision of your project at the time of the commit.
+- Your working directory is merely the set of files and folders you operate on – your project.
+- The staging area is the set of changes which should go into the next commit.
+- Once you commit, Git will take the contents from the staging area and create a snapshot in the Git repository, which is then the committed revision of your project at the time of the commit.
 
 <figure>
 <img src="/img/agile/git_areas.jpg" />
@@ -113,7 +113,7 @@ To prepare a snapshot of your current work, which will be stored in the Git repo
 
 `<pathspec>` specifies the files to be put into the staging area (the index). Wildcards are allowed.
 
-If a version of a file is not staged, Git doesn´t know how to refer to that version of the file and therefore you can´t commit it later on. Staged but uncommitted content remains only on your local computer and will not be sent to a remote repository somewhere else.
+If a version of a file is not staged, Git doesn't know how to refer to that version of the file and therefore you can't commit it later on. Staged but uncommitted content remains only on your local computer and will not be sent to a remote repository somewhere else.
 
 If you omit the `<pathspec>` , use `git add --all` which will ensure all untracked files in your current project are being added to your staging area.
 
@@ -143,7 +143,7 @@ An even shorter form of committing, in that case, is `git commit -am "your commi
 
 Here the option to stage modified and deleted contents and the option to provide a commit message are combined in one option `-am`. You can combine multiple options in a single one like here, the only restriction is that only the last option can take an argument, like the commit message.
 
-If you don´t specify a commit message when firing the commit command, an editor will be opened where you have to provide the commit message. You can configure the editor of your preference with `git config --global core.editor <editor-name>`.
+If you don't specify a commit message when firing the commit command, an editor will be opened where you have to provide the commit message. You can configure the editor of your preference with `git config --global core.editor <editor-name>`.
 
 [help.github.com/articles/associating-text-editors-with-git](https://help.github.com/articles/associating-text-editors-with-git/) provides a brief guide to setting up several editors. To see the currently configured editor, type `git config [--global] core.editor`.
 
@@ -161,7 +161,7 @@ A list of available formatting options is on [git-scm.com/docs/pretty-formats](h
 
 ## The commit message
 
-A `git log` of commit messages should give an idea of how the project has evolved. Each message explains _what_ has been accomplished or changed with the commit. The message should describe a whole idea of completed work [[Westby 2014]](https://24ways.org/2014/dealing-with-emergencies-in-git/). Don´t describe _how_ the change was accomplished – that´s in the code.
+A `git log` of commit messages should give an idea of how the project has evolved. Each message explains _what_ has been accomplished or changed with the commit. The message should describe a whole idea of completed work [[Westby 2014]](https://24ways.org/2014/dealing-with-emergencies-in-git/). Don't describe _how_ the change was accomplished – that's in the code.
 
 A properly formed commit subject line should complete the following sentence:
 
@@ -173,9 +173,9 @@ Because in the output of a `git log` is not much space to display text and we do
 
 Use the imperative mood, which means "spoken or written as if giving a command or instruction." Examples:
 
-* Repair css class assignment for git_hub image
-* No underline for slide navigation
-* Increase line height by a factor of 0.1
+- Repair css class assignment for git_hub image
+- No underline for slide navigation
+- Increase line height by a factor of 0.1
 
 If more explanation is needed, let a blank line follow the subject and then write the body of the commit message, wrapped at 72 characters per line, as Git will not wrap text automatically. Explain _why_ the commit was made, again, not _how_.
 
@@ -211,9 +211,9 @@ Or, use the suitable Git command right from the start: `git mv a.txt b.txt` whic
 
 If Git should ignore some files in your project, for example, because
 
-* a process belonging to your project automatically creates the files, 
-* the files contain credentials or
-* package managers anyway download the files, 
+- a process belonging to your project automatically creates the files,
+- the files contain credentials or
+- package managers anyway download the files,
 
 you can specify patterns inside of the `.gitignore` file to exclude these from Git version control. Each pattern is one line in the `.gitignore` file. The `.gitignore` usually is in the root of your Git project.
 
@@ -229,11 +229,11 @@ doc/**/*.txt
 
 The meaning of the patterns:
 
-* `*.a` ignore files with extension `.a`
-* `build/` ignore all contents of the `build` directory
-* `doc/*.txt` ignore all files with extension `.txt` inside of the `doc` directory
-* `doc/**/*.txt` ignore all files with extension `.txt` inside of the `doc` directory and all sub-directories of `doc`
-* `!doc/todo.txt` do not ignore `todo.txt`
+- `*.a` ignore files with extension `.a`
+- `build/` ignore all contents of the `build` directory
+- `doc/*.txt` ignore all files with extension `.txt` inside of the `doc` directory
+- `doc/**/*.txt` ignore all files with extension `.txt` inside of the `doc` directory and all sub-directories of `doc`
+- `!doc/todo.txt` do not ignore `todo.txt`
 
 The `.gitignore` file itself should be under version control – so be aware of not putting `.gitignore` as a pattern into the `.gitignore` file.
 
@@ -245,7 +245,7 @@ A commit will always be done inside of a particular branch. But while commits po
 
 While you can have multiple branches in your repository, there is always exactly one working branch in your local repository, which is the one you are currently working on. This is what is in your _working directory_ or _working copy_. Any commit you make will be against the working branch.
 
-`git branch <branch-name> [<commit>]` will create a new branch for you. Choose a short descriptive branch name. The optional `<commit>` specifies a commit to start from. If you don´t give the `<commit>` , the branch will be created from the latest commit in the current branch.
+`git branch <branch-name> [<commit>]` will create a new branch for you. Choose a short descriptive branch name. The optional `<commit>` specifies a commit to start from. If you don't give the `<commit>` , the branch will be created from the latest commit in the current branch.
 
 <figure>
 <img src="/img/agile/git_new_branch.jpg" />
@@ -282,7 +282,7 @@ Your branch is ahead of 'origin/<branch-name>' by 1 commit.
 
 Git has figured out a difference between your local branch and its counterpart, the remote tracking branch.
 
-Remote tracking branches are named _origin/<branch-name>_. Don´t checkout such a branch via `git checkout origin/<branch-name>` – instead, do `git checkout <branch-name>` to make the remote tracking branch a local branch.
+Remote tracking branches are named _origin/<branch-name>_. Don't checkout such a branch via `git checkout origin/<branch-name>` – instead, do `git checkout <branch-name>` to make the remote tracking branch a local branch.
 
 To see the history of commits in a branch-oriented tree format, use `git log --graph --oneline`.
 
@@ -304,7 +304,7 @@ I find myself now and then using one of the two options `--stat` or `--color-wor
 
 ## Merge to include
 
-Sometimes the work which has been done in a branch will be thrown away. You delete the branch, and everything is as if the branch never existed. If you don´t want to throw away your work, you probably have to bring the contents of your branch into the master branch. That´s what merge is for. All commits that have been made in your source branch have to be merged into your master branch.
+Sometimes the work which has been done in a branch will be thrown away. You delete the branch, and everything is as if the branch never existed. If you don't want to throw away your work, you probably have to bring the contents of your branch into the master branch. That's what merge is for. All commits that have been made in your source branch have to be merged into your master branch.
 
 To merge any branch into your master branch, you have to
 
@@ -331,7 +331,7 @@ The simplest kind of merge is if nothing had been changed in the destination bra
 
 In this case, any changes made in the source branch will entirely be added to the destination branch, which is called _fast-forward_. The tip (last commit, or head commit) of the destination branch and the tip of the source branch will point to the same commit then, which is the last commit that was made in the source branch. After that, both branches, the source branch and the destination branch, are identical except in their branch names.
 
-A _true merge_ is something different. That´s when both, the source branch and the destination branch, have been modified before merging.
+A _true merge_ is something different. That's when both, the source branch and the destination branch, have been modified before merging.
 
 <figure>
 <img src="/img/agile/git_true_merge.jpg"/>
@@ -352,7 +352,7 @@ Each changed file in each branch is compared. When Git identifies a line that ha
 <figcaption>Figure: A true merge goes line-by-line</figcaption>
 </figure>
 
-As long as the branches don´t both contain changes to the same line, Git will merge and commit automatically with a generated commit message: `Merge branch '<source-branch-name>' into '<destination-branch-name>'.`
+As long as the branches don't both contain changes to the same line, Git will merge and commit automatically with a generated commit message: `Merge branch '<source-branch-name>' into '<destination-branch-name>'.`
 
 Unlike a regular commit, which has one parent commit, a merge commit has two parent commits.
 
@@ -420,7 +420,7 @@ Another way to use `git checkout` is to use it for files.
 
 ## Working with remotes to share with a team
 
-The Git working mode is offline by default. This is nice because you don´t need to have an account to sign in somewhere, you can start working with your repository.
+The Git working mode is offline by default. This is nice because you don't need to have an account to sign in somewhere, you can start working with your repository.
 
 A remote in the Git world is a physical copy of a repository. It may be on the same computer as the repository it was copied from (copying is named _cloning_ in Git) or on a different computer far away. The essential part is, you can exchange data between the two repositories and keep them synchronized. Usually, a remote repository is placed on a server which is accessible by your team. Any new teammate initially will clone the repository from the server to his or her local machine. The Git name for this remote repository is usually _origin_. The origin has nothing special and is not distinct from the local repositories on the machines of each team member, except only by convention it is used as a hub to which the team members connect to synchronize their work with all others. This will happen in a way that team members are working locally on their own computers and eventually sync with the remote repository on the hub server by _pulling_ and _pushing_ committed content.
 
@@ -450,7 +450,7 @@ http[s]://host.xz[:port]/path/to/repo.git
 
 The first protocol is the _local_ protocol. This is useful if the remote repository will reside on a shared filesystem to which every team member has access. The other protocols are obviously _ssh, git_ and _http_. To learn more about these, please refer to ["Git on the server – the protocols"](https://git-scm.com/book/tr/v2/Git-on-the-Server-The-Protocols).
 
-Sometimes you try to access a server via https, and the server is using a self-signed certificate. Git won´t accept this certificate but if you are sure about the server, for example, because the server is located in your local intranet, one possible solution is the following configuration in Git:
+Sometimes you try to access a server via https, and the server is using a self-signed certificate. Git won't accept this certificate but if you are sure about the server, for example, because the server is located in your local intranet, one possible solution is the following configuration in Git:
 
 ```shell
 cd /path/to/your/repo
@@ -476,13 +476,13 @@ Assuming you worked on a branch named _lazyload_ and are currently on that local
 
 As already mentioned, remote repositories do not have working copies or staging areas and no humans who will resolve merge conflicts. Therefore, if you push to a remote and Git can not merge with a simple _fast-forward_, Git will reject the push. The situation needs to be fixed by pulling down the changes from the remote and then trying to push again.
 
-The local branch names and the remote branch names are not related in Git. Even though they share the same name, Git doesn´t know that they logically represent the same piece of work. Therefore in each push, you have to tell Git to what branch on the remote you want to push. You can configure each local branch of your Git to _track_ its remote counterpart. Once you have done it for a branch, you can push and pull against the remote just by typing `git push` and `git pull` without further specifying the remote and remote branch name.
+The local branch names and the remote branch names are not related in Git. Even though they share the same name, Git doesn't know that they logically represent the same piece of work. Therefore in each push, you have to tell Git to what branch on the remote you want to push. You can configure each local branch of your Git to _track_ its remote counterpart. Once you have done it for a branch, you can push and pull against the remote just by typing `git push` and `git pull` without further specifying the remote and remote branch name.
 
 Specify the tracking with `git push -u origin lazyload` or, generally `git push -u <remote> <remote-branch-name>`.
 
 `-u` (alternatively `--set-upstream` ) is the option which will set up the tracking relationship between your current local branch and the remote branch. You only need to do it once per local branch.
 
-A particular case of pushing is to remove a branch from the remote, as the removing of the local branch doesn´t remove the branch on the remote. The command goes `git push origin --delete <remote-branch-name>`.
+A particular case of pushing is to remove a branch from the remote, as the removing of the local branch doesn't remove the branch on the remote. The command goes `git push origin --delete <remote-branch-name>`.
 
 ## Pull data from remote
 
@@ -524,15 +524,16 @@ git://host.xz[:port]/path/to/repo.git
 http[s]://host.xz[:port]/path/to/repo.git
 ```
 
-Watch out 
+Watch out
 
 ```shell
 git config [--global] http.sslVerify false
 ```
 
-as one possible solution in case Git doesn´t allow you to connect to a repo via https.
+as one possible solution in case Git doesn't allow you to connect to a repo via https.
 
 ### Status of repo
+
 ```shell
 git status
 ```
@@ -631,7 +632,7 @@ git checkout <branch-name>
 
 ### Compare changes
 
-```shell 
+```shell
 git diff [--stat] [<branch-name or commit>]
 git diff <older-commit> <newer-commit>
 ```
@@ -698,7 +699,7 @@ git config --list
 
 ### Edit your Git config file
 
-```shell 
+```shell
 git config [--global] --edit
 ```
 
@@ -718,51 +719,51 @@ git config core.editor
 
 ### Let Git accept your self-signed certificate
 
-```shell 
+```shell
 git config [--global] http.sslVerify false
 ```
 
 ## References
 
-[Atlassian Git] 
+[Atlassian Git]
 : "Getting Git Right, " Altassian Git Tutorial, [atlassian.com/git](https://www.atlassian.com/git/)
 
-[Bash Git Completion] 
+[Bash Git Completion]
 : "Install Bash Git Completion, " [github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion](https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion)
 
-[Beams 2014] 
+[Beams 2014]
 : C. Beams, "How to Write a Git Commit Message, " 2014, [chris.beams.io/posts/git-commit](http://chris.beams.io/posts/git-commit/)
 
-[Caching Your Git Password] 
+[Caching Your Git Password]
 : "Caching your GitHub password in Git, " [help.github.com/articles/caching-your-github-password-in-git/](https://help.github.com/articles/caching-your-github-password-in-git/)
 
-[Chacon, Straub 2014] 
+[Chacon, Straub 2014]
 : S. Chacon, B. Straub, "Pro Git, " 2014, [git-scm.com/book](https://git-scm.com/book)
 
-[Cheat Sheet] 
+[Cheat Sheet]
 : "Git Cheat Sheet, " [www.git-tower.com/blog/git-cheat-sheet/](https://www.git-tower.com/blog/git-cheat-sheet/)
 
-[Demaree 2016] 
+[Demaree 2016]
 : D. Demaree, “Git for Humans”, A Book Apart, 2016, [abookapart.com/products/git-for-humans](https://abookapart.com/products/git-for-humans)
 
-[GitHub] 
+[GitHub]
 : "Welcome home, developers, " [github.com](https://github.com)
 
-[GitHub Desktop] 
+[GitHub Desktop]
 : "Simple collaboration from your desktop, " [desktop.github.com](https://desktop.github.com)
 
-[GitRef] 
+[GitRef]
 : Git command reference, [git-scm.com/docs/](https://git-scm.com/docs/)
 
-[Git] 
+[Git]
 : Git downloads for different platforms, [git-scm.com/downloads](https://git-scm.com)
 
-[Learn] 
+[Learn]
 : "Learn Git & Version Control, " [www.git-tower.com/learn/](https://www.git-tower.com/learn/)
 
-[Tower] 
-: Version control with Git – made easy, 
+[Tower]
+: Version control with Git – made easy,
 In a beautiful, efficient, and powerful app, [git-tower.com](https://www.git-tower.com)
 
-[Westby 2014] 
+[Westby 2014]
 : E. J. Westby, "Dealing with Emergencies in Git, " 2014 [24ways.org/2014/dealing-with-emergencies-in-git/](https://24ways.org/2014/dealing-with-emergencies-in-git/)

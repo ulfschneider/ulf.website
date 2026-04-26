@@ -6,30 +6,31 @@ tags: [accessibility, css, code]
 [[toc]]
 
 ## Focus is important for keyboard navigation
-The currently focused element on a website, which might be a link, a form field, or a button, must visually indicate its focus state. The indication of the focus state will improve or even enable keyboard navigation. 
 
-Without seeing what interactive element has the focus it´s impossible to navigate a website with the keyboard. For a keyboard user that situation is comparable to removing the mouse cursor for mouse users. 
+The currently focused element on a website, which might be a link, a form field, or a button, must visually indicate its focus state. The indication of the focus state will improve or even enable keyboard navigation.
 
-On a page, at any given time, there is *one* element that has the focus. Directly after loading the page, it is probably the document, but once you start to click or tab, it will be one of the aforementioned interactive elements. 
+Without seeing what interactive element has the focus it's impossible to navigate a website with the keyboard. For a keyboard user that situation is comparable to removing the mouse cursor for mouse users.
+
+On a page, at any given time, there is _one_ element that has the focus. Directly after loading the page, it is probably the document, but once you start to click or tab, it will be one of the aforementioned interactive elements.
 
 ## Do not disable the focus outline
 
-By default, a browser will indicate focus with an `outline` CSS style, which can be changed. Sometimes web designers remove the outline to make the site design more elegant without *disturbing* outlines. I´m guilty of having done it many times.
+By default, a browser will indicate focus with an `outline` CSS style, which can be changed. Sometimes web designers remove the outline to make the site design more elegant without _disturbing_ outlines. I'm guilty of having done it many times.
 
 ```css
-/* DON´T DO THAT */
+/* DON'T DO THAT */
 *:focus {
   outline: none;
 }
 ```
 
 ## How to style the focus indication
-Styling the `outline` is the preferred method to indicate focus as opposed to styling `border` or `background`. `outline` [doesn´t affect the box model](https://css-tricks.com/almanac/properties/o/outline/), while `border` does, which means `outline` will not change the position of adjacent elements and  is therefore better than adjusting the border. Also, changing the `background` for focused elements wouldn´t work for images.
 
-The contrast ratio of the `outline` against the background must be at least 3:1, according to [WCAG 2.1 Non-text Contrast – Level AA](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1&showtechniques=324%2C331#non-text-contrast
-). The contrast of colors can be checked with the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/). Ideally the outline should be solid and thick enough to attract attention.
+Styling the `outline` is the preferred method to indicate focus as opposed to styling `border` or `background`. `outline` [doesn't affect the box model](https://css-tricks.com/almanac/properties/o/outline/), while `border` does, which means `outline` will not change the position of adjacent elements and is therefore better than adjusting the border. Also, changing the `background` for focused elements wouldn't work for images.
 
-Here is how I do it: I´m first resetting the style by disabling the outline.
+The contrast ratio of the `outline` against the background must be at least 3:1, according to [WCAG 2.1 Non-text Contrast – Level AA](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1&showtechniques=324%2C331#non-text-contrast). The contrast of colors can be checked with the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/). Ideally the outline should be solid and thick enough to attract attention.
+
+Here is how I do it: I'm first resetting the style by disabling the outline.
 
 ```css
 * {
@@ -37,7 +38,7 @@ Here is how I do it: I´m first resetting the style by disabling the outline.
 }
 ```
 
-Then, I´m styling the outline for any element that can gain focus.
+Then, I'm styling the outline for any element that can gain focus.
 
 ```css
 *:focus {

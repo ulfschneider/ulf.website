@@ -4,7 +4,8 @@ tags:
   - sports
   - secan
 ---
-The final event of the WWBT 2025 series took place around Iserlohn and was excellently organized by the Polizeisportverein Iserlohn. It was a sunny ride, though the morning started off quite cold (there was a point where I couldn´t feel my hands anymore).
+
+The final event of the WWBT 2025 series took place around Iserlohn and was excellently organized by the Polizeisportverein Iserlohn. It was a sunny ride, though the morning started off quite cold (there was a point where I couldn't feel my hands anymore).
 
 I chose the 56 km route instead of the 80 km to ease back into riding, and my health seems to be coming back on track now. Since I was riding without Martin once again and had an early start, I found myself ahead of the main group and mostly alone on the course. As a result, most of my photos capture the stunning landscape rather than other riders.
 
@@ -55,4 +56,3 @@ Overall, I found that taking part in the WWBT is a good way to start the new yea
 <iframe width="560" height="315" src="https://www.youtube.com/embed/17let8Q_8x0?si=8Ff8HTyh6sZYw2fS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <figcaption>Video of the final WWBT 2025 run in Iserlohn by Gravelpresso</figcaption>
 </figure>
-

@@ -9,7 +9,7 @@ tags: code
 ## Go
 
 - [<cite>gobyexample.com</cite>](https://gobyexample.com) excellent examples with short and clear explanations, by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> and <a href="https://eli.thegreenplace.net">Eli Bendersky</a>
-- [<cite>Go in one evening</cite>](https://threedots.tech/go-in-one-evening/) a practical course for experienced programmers. It´s excellent, but it took me more than one evening.
+- [<cite>Go in one evening</cite>](https://threedots.tech/go-in-one-evening/) a practical course for experienced programmers. It's excellent, but it took me more than one evening.
 - [<cite>youtube.com/@FloWoelki</cite>](https://www.youtube.com/@FloWoelki) watch and listen while Florian is coding
 - [<cite>Google Go Styleguide</cite>](https://google.github.io/styleguide/go/index) <q>The Go Style Guide and accompanying documents codify the current best approaches for writing readable and idiomatic Go</q> at Google. It has three parts: the style guide, a more verbose style decisions, and best practices.
 - [<cite>100 Go mistakes and how to avoid them</cite>](https://100go.co) a summary of the original book with the same title by Teiva Harsanyi

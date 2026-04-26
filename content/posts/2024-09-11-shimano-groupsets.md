@@ -5,7 +5,8 @@ tags:
   - strael
 draft: true
 ---
-My Strael is equipped with a mechanical GRX 820 (since I´m [no longer](/2023-11-11-electronic-shifting-does-not-work-for-me/) a fan of electronic groupsets), and there is no reason for changing this setup. It´s working flawlessly. I do not miss anything in terms of shifting speed and shifting accuracy, and I do not have to worry about the charging state of any battery before going out for a ride. I appreciate this kind of freedom very much. Replacement parts are much cheaper than for electronic groupsets. In contradict to what the bike industry is telling us, there is no need the future of shifting should be electronic.
+
+My Strael is equipped with a mechanical GRX 820 (since I'm [no longer](/2023-11-11-electronic-shifting-does-not-work-for-me/) a fan of electronic groupsets), and there is no reason for changing this setup. It's working flawlessly. I do not miss anything in terms of shifting speed and shifting accuracy, and I do not have to worry about the charging state of any battery before going out for a ride. I appreciate this kind of freedom very much. Replacement parts are much cheaper than for electronic groupsets. In contradict to what the bike industry is telling us, there is no need the future of shifting should be electronic.
 
 The current x 12 mechanical Shimano groupsets are 105, GRX 610, and GRX 820. Here are the weights and prices:
 

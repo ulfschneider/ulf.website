@@ -2,10 +2,11 @@
 title: WeTransfer
 tags: journal
 ---
+
 You can share files with up to 2 GB of data for free with [<cite>WeTransfer</cite>](https://wetransfer.com). You do not need to sign up or sign in to use the service. WeTransfer is providing the service since 2009.
 
 - Click into the settings (the three dots …)
-- Choose to create a transfer link (I do not use the option to send a mail via WeTransfer because I don´t want to share any mail address with the service)
+- Choose to create a transfer link (I do not use the option to send a mail via WeTransfer because I don't want to share any mail address with the service)
 - Upload your files
 - Copy the transfer link
 - Send the link with your own mail

@@ -3,6 +3,7 @@ title: The agile worker
 abstract: The agile worker exists because of differences between theory and reality,  and because insights can be gained through these discrepancies.
 tags: agile
 ---
+
 [[toc]]
 
 An essential part of agile work is learning. Agile workers are knowledge workers who bring their mental models in contact with reality. If the theory is not questioned by reality, if whether model nor reality play a role, then there is no learning. Then work does not require the quest for suitable solutions and work can be done by following instructions.
@@ -49,7 +50,7 @@ Identify the "what" that has a value and make it absolutely clear!
 
 The self-organizing team often makes decisions in a discourse. Possible solution spaces are being explored, and divergent opinions have to be endured because best solutions can arise by affirming heterogenous perspectives about a topic. The decision does not need to be taken democratically. We all deserve the same respect, but in a specific context, we are not all equal. Someone has more or less knowledge in the particular area of interest, is more or less experienced, can provide more or less orientation for the team to cope with the task. If real results have to be delivered and the team is committed to producing results, often a natural order of authority emerges which determines who has to or is allowed to speak the final word about a specific decision. A precondition for this is the collaboration-oriented and committed attitude of the team. This attitude requires the individual to share the consequences of a choice even if one has a different opinion. This requires to put the operating needs of the team above the individual preferences.
 
-To be against a decision is not the same as accepting and sharing a decision. In the first case, the team has to go through a clarifying conflict. Artificial harmony does not help to go further. Are all facts on the table? Assistance for team-oriented decisions can be found at the "Facilitator´s Guide to Participatory Decision-Making" by Sam Kaner [Kaner 2007].
+To be against a decision is not the same as accepting and sharing a decision. In the first case, the team has to go through a clarifying conflict. Artificial harmony does not help to go further. Are all facts on the table? Assistance for team-oriented decisions can be found at the "Facilitator's Guide to Participatory Decision-Making" by Sam Kaner [Kaner 2007].
 
 ## Roles and professions
 
@@ -79,7 +80,7 @@ Ideas change the world. Taylorism has done that and left us behind with apriori 
 : J. Appelo, "Management 3.0, Leading Agile Developers, Develop Agile Leaders," Addison Wesley 2011
 
 [Kaner 2007]
-: S. Kaner et al., "Facilitator´s Guide to Participatory Decision Making," Second Edition, Jossey-Bass 2007
+: S. Kaner et al., "Facilitator's Guide to Participatory Decision Making," Second Edition, Jossey-Bass 2007
 
 [Marquet 2012]
 : L. David Marquet, "Turn the ship around, A true story of turning followers into leaders," Penguin 2012

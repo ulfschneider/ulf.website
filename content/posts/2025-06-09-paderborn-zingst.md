@@ -9,6 +9,7 @@ tags:
 ---
 
 [[toc]]
+
 ## The route
 
 <figure>
@@ -55,7 +56,7 @@ The route starts in Paderborn and goes through Detmold, Lemgo, and Minden, endin
 </figure>
 
 <figure>
-<figcaption>In Vlotho I ride through an underpass, it´s concrete walls sprayed with graffitis. Unexpectedly a cycling path reveals itself, allowing me to ride along the Weser river.</figcaption>
+<figcaption>In Vlotho I ride through an underpass, it's concrete walls sprayed with graffitis. Unexpectedly a cycling path reveals itself, allowing me to ride along the Weser river.</figcaption>
 <figure class="md:split">
 <img src="/img/secan/IMG_7543.jpg" />
 <img src="/img/secan/IMG_7544.jpg" />
@@ -81,7 +82,7 @@ The second day takes me eastward across long stretches of the Southern Heath, be
 
 <figure>
 <img src="/img/secan/IMG_7560.jpg" />
-<figcaption>Crossing highway A7. I´m glad I´m not stuck in one of those cars.</figcaption>
+<figcaption>Crossing highway A7. I'm glad I'm not stuck in one of those cars.</figcaption>
 </figure>
 
 <figure>
@@ -158,7 +159,7 @@ The third day brings me north, through Naturpark Wendland, Dannenberg, Ludwigslu
 <figure class="md:split">
 <figure>
 <img src="/img/secan/IMG_7607.jpg">
-<figcaption>Church in Ludwigslust. The imposing presence makes me feel uneasy. The words of Otl Aicher come to my mind, who said when buildings become so monumental that a door becomes a portal, it doesn´t serve the human, because a portal is difficult to use (it is hard to open and close). It makes the individual feel small and insignificant. It serves the ones in power.</figcaption>
+<figcaption>Church in Ludwigslust. The imposing presence makes me feel uneasy. The words of Otl Aicher come to my mind, who said when buildings become so monumental that a door becomes a portal, it doesn't serve the human, because a portal is difficult to use (it is hard to open and close). It makes the individual feel small and insignificant. It serves the ones in power.</figcaption>
 </figure>
 <figure>
 <img src="/img/secan/IMG_7608.jpg">
@@ -173,7 +174,7 @@ The third day brings me north, through Naturpark Wendland, Dannenberg, Ludwigslu
 
 <figure>
 <img src="/img/secan/IMG_7609.jpg">
-<figcaption>Overpass above the railway tracks. The elevator to take me up was working fine, but the one on the other side was out of order. It´s not an unusual situation when you’re using the facilities of the Deutsche Bahn.
+<figcaption>Overpass above the railway tracks. The elevator to take me up was working fine, but the one on the other side was out of order. It's not an unusual situation when you’re using the facilities of the Deutsche Bahn.
 </figcaption>
 </figure>
 
@@ -193,7 +194,7 @@ The third day brings me north, through Naturpark Wendland, Dannenberg, Ludwigslu
 </figure>
 
 <figure>
-<figcaption>Arriving in Wismar, I stay in Fründts hotel, which  I can recommend. It´s well organized, they have a lockable bike shed and the breakfast is excellent.</figcaption>
+<figcaption>Arriving in Wismar, I stay in Fründts hotel, which  I can recommend. It's well organized, they have a lockable bike shed and the breakfast is excellent.</figcaption>
 <figure class="md:split">
 <figure>
 <img src="/img/secan/IMG_7619.jpg">
@@ -261,29 +262,27 @@ The last day of this journey starts on a chilly but sunny morning in Wismar. Fro
 
 <figure>
 <img src="/img/secan/IMG_7660.jpg">
-<figcaption>The baltic sea in Zingst. I´m sorry I didn´t take a photo of the actual arrival – I forgot it because my son Emil was already waiting there and welcoming me, asking about the journey and picking me up to show me the facilities. Therefore the journey ends with this image.</figcaption>
+<figcaption>The baltic sea in Zingst. I'm sorry I didn't take a photo of the actual arrival – I forgot it because my son Emil was already waiting there and welcoming me, asking about the journey and picking me up to show me the facilities. Therefore the journey ends with this image.</figcaption>
 </figure>
 
 <figure>
-<figcaption>P.S. June 14th: Actually there is a picture of my arrival. It´s together with Emil and my wife took it. ❤️</figcaption>
+<figcaption>P.S. June 14th: Actually there is a picture of my arrival. It's together with Emil and my wife took it. ❤️</figcaption>
 <img src="/img/secan/arrival-with-emil.jpg">
 </figure>
-
-
 
 ## Equipment
 
 A list of selected pieces of equipment that worked pretty well during the ride.
 
-- **Fairlight Secan 3.0:** You might have spotted the bike in the pictures. It’s a steel frame gravel bike that I’ve been riding since the start of this year and I find it super efficient as well as practical. I´m a Fairlight fan for several years and this is my second Secan (with a 56 R frame). The bike is especially great for these kinds of rides because it’s sturdy and has mounting points to attach mud guards or packs. I ride a mechanical Shimano GRX 820 group – no charging required, flawless functionality, always prepared.
-- **Specialized Phenom Expert saddle:** A great saddle. No seating issues whatsoever. It´s claimed to be a mountain bike saddle, but you can as well ride it on gravel and road race bikes, it´s so versatile.
-- **Ortlieb Fork-Packs:** Whenever I have to pack something on this bike, it starts with the Ortlieb Fork-Packs. I like their minimal impact on the bike handling, which is because they are so deep on the front and because the storage capacity is limited to 5.8 l and 3 kg, each. They have a quick release mechanism for attaching them to the bike as well as detaching, which is overly practical when arriving somewhere to stay for the night. Because it´s Ortlieb you know they keep your items dry when it´s raining.
+- **Fairlight Secan 3.0:** You might have spotted the bike in the pictures. It’s a steel frame gravel bike that I’ve been riding since the start of this year and I find it super efficient as well as practical. I'm a Fairlight fan for several years and this is my second Secan (with a 56 R frame). The bike is especially great for these kinds of rides because it’s sturdy and has mounting points to attach mud guards or packs. I ride a mechanical Shimano GRX 820 group – no charging required, flawless functionality, always prepared.
+- **Specialized Phenom Expert saddle:** A great saddle. No seating issues whatsoever. It's claimed to be a mountain bike saddle, but you can as well ride it on gravel and road race bikes, it's so versatile.
+- **Ortlieb Fork-Packs:** Whenever I have to pack something on this bike, it starts with the Ortlieb Fork-Packs. I like their minimal impact on the bike handling, which is because they are so deep on the front and because the storage capacity is limited to 5.8 l and 3 kg, each. They have a quick release mechanism for attaching them to the bike as well as detaching, which is overly practical when arriving somewhere to stay for the night. Because it's Ortlieb you know they keep your items dry when it's raining.
 - **Tailfin Pannier Rack + Tailfin Aero Pack Cargo:** For the current trip I had to pack more than what fits into the Fork-Packs. I ended up to solve this with the most expensive solution, a Tailfin Pannier Rack with an Aero Pack Cargo. I can assure you, when you are willing to pay the money you get an excellent rear packing system that is designed through and through. The rack is light and strong (I used the aluminium version), and it holds the attached pack without swaying by any means. The rack stands on a special thru axle so that it does not use the bike frame for taking the load. It is attached with a quick release system but I did not use that during the journey. The rolltop pack, similar to the Ortlieb Fork-Packs, can be attached and detached to the rack with another quick release system, which I used every day when arriving and when starting to ride. The rolltop closing mechanism of the pack itself is flexible and can be used with gloves. The expandable outer pockets allow to carry small or compressible items you want to have in short reach. The closing-straps are replaceable, as well as some parts of the rack. I cannot say anything about the waterproofness, because it did not rain during my journey, but I expect the pack is fine in this area too. I found this system to be very practical.
   <figure>
   <figure><img src="/img/secan/IMG_7654.jpg"><figcaption>The Tailfin Rack stands on the thru axle and is attached with a quick release mechanism</figcaption></figure>
-  <figure><img src="/img/secan/IMG_7655.jpg"><figcaption>The rolltop closure of the Aero Pack Cargo at first doesn´t look fancy, but it works exceptionally well. You can adjust the volume of the pack and fixate gear under the crossing strap.</figcaption></figure>
+  <figure><img src="/img/secan/IMG_7655.jpg"><figcaption>The rolltop closure of the Aero Pack Cargo at first doesn't look fancy, but it works exceptionally well. You can adjust the volume of the pack and fixate gear under the crossing strap.</figcaption></figure>
   </figure>
-- **aerycs GCX Terra 40 wheels:**  They are hand-built near Hamburg. I have them with the DT-Swiss 350 hubs, which I think are excellent and reliable work horse hubs. The wheels are well built and I found they ride lovely. 
+- **aerycs GCX Terra 40 wheels:** They are hand-built near Hamburg. I have them with the DT-Swiss 350 hubs, which I think are excellent and reliable work horse hubs. The wheels are well built and I found they ride lovely.
 
 ## Packing list
 
@@ -294,7 +293,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 
 ### Packing system
 
-- Tailfin Pannier Rack 
+- Tailfin Pannier Rack
 - Tailfin Aero Pack Cargo (18 l, plus 3 l pockets)
 - Ortlieb Fork-Packs (5.8 l each)
 - Foldable mini backpack for shopping food, if required. Did not use it.
@@ -307,7 +306,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 - Mobile phone (USB-C)
 - Front light Lupine SL Mono (USB-C)
 - Rear light Lupine Redlight (Micro USB)
-- Charging cables: 
+- Charging cables:
   - USB-C to USB-C for the phone and the front light
   - USB-A to Micro USB for Garmin Edge and rear light
   - Polar USB-A loading adapter for the Verity Sense heart rate sensor
@@ -316,7 +315,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 
 - 2 spare inner tubes, butyl
 - A spare shifting cable
-- A pair of nitrile gloves 
+- A pair of nitrile gloves
 - Cable ties
 - Chain oil (Oil of Rohloff)
 - Chain lock
@@ -328,6 +327,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 - Bike lock with key ([Texlock eyelet, size M](https://tex-lock.com/product/tex-lock-eyelet/))
 
 ### Eating and drinking
+
 - 2 steel water bottles (Klean Kanteen)
 - Small pocket knife (Leatherman Skeletool KB)
 - Mountain mug (Berghaferl)
@@ -338,6 +338,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 ### Clothing
 
 #### On the bike
+
 - Bike shoes
 - Helmet
 - 2 bike shorts
@@ -354,6 +355,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 - Rain shoe covers
 
 #### Off the bike
+
 - 2 pairs of underpants
 - Long-sleeved wool shirt (can be used on the bike, if required)
 - Short-sleeved wool shirt (can be used on the bike, if required)
@@ -363,6 +365,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 - Minimalist shoes
 
 ### Personal
+
 - Tooth brush
 - [Denttabs](https://denttabs.de/) instead of toothpaste
 - Dental floss
@@ -383,6 +386,7 @@ A list of selected pieces of equipment that worked pretty well during the ride.
 - Tick removal card
 
 ### ID and money
+
 - ID card
 - Health insurance card
 - Debit/credit card

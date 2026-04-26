@@ -3,9 +3,10 @@ title: Fluid type with Tailwind CSS
 tags: [font, code, css]
 draft: true
 ---
-Fluid type allows the fonts on your website to smoothly reduce size when the browser window gets smaller and to enlarge size when the browser window gets wider. The transition will not go beyond a minimum and a maximum size to avoid extreme font sizes that wouldn´t be legible.
 
-I´m using the [<cite>Fluid Type Scale Calculator</cite>](https://www.fluid-type-scale.com) by Aleksandr Hovhannisyan to define my fluid type scale and apply it for *{{site.hostname}}*. Because the website´s CSS is realized with Tailwind CSS, I had to integrate the output of Aleksandr´s type scale calculator into my Tailwind setup. This text is a short description of what I did to achieve that.
+Fluid type allows the fonts on your website to smoothly reduce size when the browser window gets smaller and to enlarge size when the browser window gets wider. The transition will not go beyond a minimum and a maximum size to avoid extreme font sizes that wouldn't be legible.
+
+I'm using the [<cite>Fluid Type Scale Calculator</cite>](https://www.fluid-type-scale.com) by Aleksandr Hovhannisyan to define my fluid type scale and apply it for _{{site.hostname}}_. Because the website's CSS is realized with Tailwind CSS, I had to integrate the output of Aleksandr's type scale calculator into my Tailwind setup. This text is a short description of what I did to achieve that.
 
 ## Type scale
 
@@ -60,9 +61,9 @@ They are added by me. */
 
 /* The link contains the exact settings
 of my type scale for the type scale calculator.
-I´m always adding this link, to have a quick
+I'm always adding this link, to have a quick
 back-reference  into the type scale calculator
-with current settings of the scale I´m using. */
+with current settings of the scale I'm using. */
 
 /* https://www.fluid-type-scale.com/calculate?minFontSize=19&minWidth=400&minRatio=1.2&maxFontSize=22&maxWidth=1560&maxRatio=1.2&steps=sm%2Cbase%2Clg%2Cxl%2C2xl%2C3xl%2C4xl%2C5xl&baseStep=base&prefix=font-size&decimals=2&includeFallbacks=on&useRems=on&remValue=16&previewFont=IBM+Plex+Mono*/
 
@@ -98,8 +99,6 @@ I have a `main.css` file, which contains all the CSS file imports necessary for 
 @import "tailwind-extend-utilities";
 @import "forms";
 ```
-
-
 
 ## Tailwind configuration
 

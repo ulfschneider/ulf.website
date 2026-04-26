@@ -5,7 +5,6 @@ tags: [journal, design]
 
 Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](https://twitter.com/michaelbierut) pointed me towards the handwritten front page designs of the New York Times.
 
-
 <figure class="split">
 <div>
 <img src="/img/journal/2020-04-08-new-york-times-handwritten.jpg" alt=""/>
@@ -19,7 +18,6 @@ Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](h
 </div>
 <figcaption>The New York Times front page of April 8th, 2020. Source of this image is <a href="https://www.printmag.com/daily-heller/covid-19-new-york-times-front-pages/">printmag</a>.</figcaption>
 </figure>
-
 
 <figure class="split">
 <div>
@@ -35,8 +33,6 @@ Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](h
 <figcaption>The New York Times front page of March 27th, 2020. Source of this image is <a href="https://www.printmag.com/daily-heller/covid-19-new-york-times-front-pages/">printmag</a>.</figcaption>
 </figure>
 
-
-
 <figure class="split">
 <div>
 <img src="/img/journal/EVKYGEBU0AIQsDg.jpeg" alt="Newspaper text in columns with big white space circles around some people"/>
@@ -46,7 +42,7 @@ Some remarkable newspaper designs I got aware of via Twitter. [Michael Bierut](h
 
 <figure class="split">
 <div>
-<img src="/img/journal/EVKyriTUUAA9QEr.jpeg" alt="An entire newspaper page with only some words spread around, forming the sentence: It´s practically this easy to stop the virus from spreading."/>
+<img src="/img/journal/EVKyriTUUAA9QEr.jpeg" alt="An entire newspaper page with only some words spread around, forming the sentence: It's practically this easy to stop the virus from spreading."/>
 </div>
 <figcaption>The Hindu, <a href="https://twitter.com/purvamichaels/status/1248256576231743489">tweeted</a> by Purva Michaels on April 9th, 2020</figcaption>
 </figure>

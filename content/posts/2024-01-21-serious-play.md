@@ -5,11 +5,11 @@ tags:
   - video
 ---
 
-Dave Rupert posted [<cite>Play at work</cite>](https://daverupert.com/2024/01/play-at-work/). The text is not about having a table soccer in the office and spending time playing during office hours. It´s about cultivating a habit of _serious play_ at work – enjoying what you do, understanding the materials you handle, finding solutions that best serve your users, exploring the tools you have, and fostering meaningful and responsible team interactions. Ultimately, it’s about growing individually and as a team.
+Dave Rupert posted [<cite>Play at work</cite>](https://daverupert.com/2024/01/play-at-work/). The text is not about having a table soccer in the office and spending time playing during office hours. It's about cultivating a habit of _serious play_ at work – enjoying what you do, understanding the materials you handle, finding solutions that best serve your users, exploring the tools you have, and fostering meaningful and responsible team interactions. Ultimately, it’s about growing individually and as a team.
 
 > I fully agree with the idea of _serious play_.
 
-One practice that has served me well in my working life is the rapid exchange of ideas between designer and developer throughout the entire product creation cycle. Dave refers to this as [<cite>The Hot Potato Process</cite>](https://danmall.com/posts/hot-potato-process/), although the name might be misleading. Passing a hot potato implies wanting to get rid of it because it´s hot. In contrast, I want to hold onto it, enjoy handling and playing with it, then pass it to someone else for enrichment before getting it back. A better metaphor might be soccer – passing the ball back and forth with teammates, enjoying the interaction while moving towards a common goal. This is the essence of serious play.
+One practice that has served me well in my working life is the rapid exchange of ideas between designer and developer throughout the entire product creation cycle. Dave refers to this as [<cite>The Hot Potato Process</cite>](https://danmall.com/posts/hot-potato-process/), although the name might be misleading. Passing a hot potato implies wanting to get rid of it because it's hot. In contrast, I want to hold onto it, enjoy handling and playing with it, then pass it to someone else for enrichment before getting it back. A better metaphor might be soccer – passing the ball back and forth with teammates, enjoying the interaction while moving towards a common goal. This is the essence of serious play.
 
 Designing and developing should not follow a waterfall process, where a designer finalizes a design in one pass and the developer merely builds it.
 
@@ -35,11 +35,11 @@ Martin isn’t advocating for abandoning agile but for practicing it as it was i
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G_y2pNj0zZg?si=tTZjETg8HjudKf-L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<figcaption><a href="https://www.youtube.com/watch?v=G_y2pNj0zZg"><cite> The State of Agile Software in 2018</cite></a>, by Martin Fowler. Martin, being one of the original signatories of the agile manifesto, is articulating the issues that come with the hype of agile, or should I say enterprise agile? Despite the talk being from 2018, the content remains relevant. Martin notes at 23:20 that Kent Beck wanted to call agile "conversational", a name I find fitting. The <a href="https://martinfowler.com/articles/agile-aus-2018.html ">transcription of the talk</a> is on Martin´s blog.  </figcaption>
+<figcaption><a href="https://www.youtube.com/watch?v=G_y2pNj0zZg"><cite> The State of Agile Software in 2018</cite></a>, by Martin Fowler. Martin, being one of the original signatories of the agile manifesto, is articulating the issues that come with the hype of agile, or should I say enterprise agile? Despite the talk being from 2018, the content remains relevant. Martin notes at 23:20 that Kent Beck wanted to call agile "conversational", a name I find fitting. The <a href="https://martinfowler.com/articles/agile-aus-2018.html ">transcription of the talk</a> is on Martin's blog.  </figcaption>
 </figure>
 
 It’s unfortunate that agile has been co-opted by corporations emphasizing processes over individuals and interactions, but perhaps this was inevitable. Once agile gained popularity, money-making opportunities emerged, and many jumped on the bandwagon. The same managers who once dismissed agile as “Kindergarten software development” began to adopt it to keep up with other corporations marketing their agile processes.
 
 If you find yourself in a context where agile is used to exert power over developers, squeezing more features from the team, I sympathize and hope you find a way to change. However, this misuse doesn’t invalidate agile values. Agile is serious play, and striving for this way of working is worthwhile – you don’t need to call it agile, and it probably won’t help to name it serious play either. Instead, focus on building something beautiful and meaningful together with your colleagues.
 
-Dave concludes with <q>Maybe we need more play at work.</q> This is not a question to me. In software development, it´s the way forward.
+Dave concludes with <q>Maybe we need more play at work.</q> This is not a question to me. In software development, it's the way forward.

@@ -2,15 +2,16 @@
 title: .gitignore an already committed folder
 tags: [code, shell]
 ---
-I accidentially committed a folder that is generated during each build automatically. It´s not necessary to have that folder under git control. To not have that folder tracked in the future anymore the following process can be applied:
 
-1. Commit the uncommitted changes in the repo 
+I accidentially committed a folder that is generated during each build automatically. It's not necessary to have that folder under git control. To not have that folder tracked in the future anymore the following process can be applied:
+
+1. Commit the uncommitted changes in the repo
 2. Edit `.gitignore` to ignore the folder
-3. Issue the following three git commands 
-    
+3. Issue the following three git commands
+
 ```shell
-git rm -r --cached .  
-git add .  
+git rm -r --cached .
+git add .
 git commit -m "Have working .gitignore"
 ```
 

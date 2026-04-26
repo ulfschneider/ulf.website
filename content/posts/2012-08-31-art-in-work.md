@@ -25,7 +25,7 @@ A software development team will establish a system of continuous integration or
 
 The software craftsmanship movement [[Bradbury et al. 2009]][craftsmanship] can be seen under that impression – although this movement goes beyond workmanship, it is about art and craft.
 
-By claiming our work as being art, the development opportunities will expand for the individual, the team and the surrounding organization. Now it´s all about purpose, autonomy, and mastery. Seth Godin explains what art in work may be:
+By claiming our work as being art, the development opportunities will expand for the individual, the team and the surrounding organization. Now it's all about purpose, autonomy, and mastery. Seth Godin explains what art in work may be:
 
 <blockquote>
 <p>There used to be two teams in every workplace: management and labor. Now there’s a third team, the linchpins. These individuals invent, lead (regardless of title), connect others, make things happen, and create order out of chaos. They figure out what to do when there’s no rule book. They delight and challenge their customers and peers. They love their work, pour their best selves into it, and turn each day into a kind of art. </p>
@@ -71,7 +71,7 @@ It is not about even more working. Instead, we need to care about a more suitabl
 
 ---
 
-This text was first published in OBJEKTspektrum, issue 5/2012, under the title ["Die Kunst in der Arbeit, eine Herausforderung des Status quo"][schneider2012]. I have enhanced and translated the initial document to publish it here on *{{site.name}}.*
+This text was first published in OBJEKTspektrum, issue 5/2012, under the title ["Die Kunst in der Arbeit, eine Herausforderung des Status quo"][schneider2012]. I have enhanced and translated the initial document to publish it here on _{{site.name}}._
 
 ## References
 

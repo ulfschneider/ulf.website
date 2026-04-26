@@ -1,9 +1,10 @@
 ---
 title: Unconventional and free stock images
-tags: 
+tags:
   - journal
 bookmark: true
 ---
+
 A list of unconventional and free stock images by Mel Choyce in her [CSS-Tricks article](https://css-tricks.com/unconventional-stock-image-sources/):
 
 - [British Library](https://unsplash.com/@britishlibrary) (unsplash)
@@ -20,12 +21,13 @@ A list of unconventional and free stock images by Mel Choyce in her [CSS-Tricks 
 - [Centers for Disease Control and Prevention](https://www.cdc.gov) (e.g. Corona virus visualizations)
 - [Open Parks Network](https://openparksnetwork.org) (nature photos)
 
-Added later (not mentioned in Mel´s article):
+Added later (not mentioned in Mel's article):
+
 - [Old Book Illustrations](https://www.oldbookillustrations.com), wich for example Robin Rendle is using in his [essay on newsletters](https://www.robinrendle.com/essays/newsletters).
 - [Stanford Libraries Data Visualization](https://exhibits.stanford.edu/dataviz/), old visualizations which date back into 18th century.
 - [openverse.org](https://openverse.org)
 - [Public Domain Image Archive](https://pdimagearchive.org/)
 
-
 Jul. 27, 2025
+
 - [Beautiful Public Data](https://www.beautifulpublicdata.com/), curated by Jon Keegan

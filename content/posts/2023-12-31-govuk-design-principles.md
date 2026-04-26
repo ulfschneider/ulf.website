@@ -2,7 +2,8 @@
 title: GOV.UK Design Principles
 tags: design
 ---
-In Paul Robert Lloyd´s [<cite> Time team: Documenting decisions & marking milestones</cite>](https://paulrobertlloyd.com/2023/174/s1/ux_london/) is a reference to the [<cite>GOV.UK Design Principles</cite>](https://www.gov.uk/guidance/government-design-principles).
+
+In Paul Robert Lloyd's [<cite> Time team: Documenting decisions & marking milestones</cite>](https://paulrobertlloyd.com/2023/174/s1/ux_london/) is a reference to the [<cite>GOV.UK Design Principles</cite>](https://www.gov.uk/guidance/government-design-principles).
 
 The GOV.UK team made [beautiful posters](https://designnotes.blog.gov.uk/2019/09/18/new-design-principles-posters/) for each principle which can be [downloaded from GitHub](https://github.com/alphagov/govdesign/blob/main/Poster_GovernmentDesignPrinciples.pdf).
 

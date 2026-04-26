@@ -2,7 +2,8 @@
 title: Coder Ipsum
 tags: code
 ---
-Lorem Ipsum for coders: [<cite>Coder Ipsum</cite>](https://coder-ipsum.tech). It´s made by [Sia Karamelegos](https://sia.codes) and she says about the tool: <q>Thought-leadership synergistic programming filler text for your next killer app.</q>
+
+Lorem Ipsum for coders: [<cite>Coder Ipsum</cite>](https://coder-ipsum.tech). It's made by [Sia Karamelegos](https://sia.codes) and she says about the tool: <q>Thought-leadership synergistic programming filler text for your next killer app.</q>
 
 Here is a sample :-):
 

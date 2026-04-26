@@ -2,7 +2,7 @@
 permalink: /
 layout: default
 title: Ulf Schneider
-abstract: Hi, I’m Ulf Schneider, a software engineer and agile coach. Welcome to my website. Here’s more [about me](/about/) if you’re interested.
+abstract: Hi, I'm Ulf Schneider, a software engineer and agile coach. Welcome to my website. Here's more [about me](/about/) if you’re interested.
 topics:
   - title: Web
     urls:
@@ -25,7 +25,7 @@ topics:
       - /2015-07-24-supersize/
       - /2017-02-26-balanced-organization/
       - /2023-06-29-the-lost-interview/
-  - title: Emil´s drawings
+  - title: Emil's drawings
     urls:
       - /2025-07-28-tosbot/
       - /2021-10-22-a-smiling-unicorn-with-a-kite/

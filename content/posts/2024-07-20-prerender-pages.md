@@ -2,9 +2,10 @@
 title: Prerender pages with the Speculation Rules API
 tags: code
 ---
+
 Chromium browsers (Firefox and Safari are not on board yet) allow prerendering of future pages that a user is likely to navigate to. Prerending will speed up navigation and can be helpful when used together with [cross-document view transitions](/2024-05-20-cross-document-transition/), because for a prerendered page the transition does not need to wait for loading and rendering.
 
-As a web developer, you can insert a JSON configuration in your web pages to define how prerendering should occur. Here is what I´m currently using within the `<head>` of all documents on {{site.name}}:
+As a web developer, you can insert a JSON configuration in your web pages to define how prerendering should occur. Here is what I'm currently using within the `<head>` of all documents on {{site.name}}:
 
 ```js
 <script type="speculationrules">
@@ -19,16 +20,18 @@ As a web developer, you can insert a JSON configuration in your web pages to def
 </script>
 ```
 
-This configuration tells Chromium browsers to prerender any page with *moderate eagerness*.
+This configuration tells Chromium browsers to prerender any page with _moderate eagerness_.
 
 > The moderate option is a middle ground, and many sites could benefit from the following speculation rule that would prerender a link when holding the pointer over the link for 200 milliseconds (or on the pointerdown event if that is sooner, and on mobile where there is no hover event) as a basic—yet powerful—implementation of speculation rules.
+>
 > <footer><a href="https://developer.chrome.com/docs/web-platform/prerender-pages"><cite>Prerender pages in Chrome for instant page navigations</cite></a>, Barry Pollard on developer.chrome.com</footer>
 
-Speculation Rules are a progressive enhancement, which means the configuration JSON is not breaking anything for the browsers not supporting it. It`s speculative in the sense that a supporting browser may not act upon it based on user settings, current memory usage, or other heuristics.
+Speculation Rules are a progressive enhancement, which means the configuration JSON is not breaking anything for the browsers not supporting it. It's speculative in the sense that a supporting browser may not act upon it based on user settings, current memory usage, or other heuristics.
 
 Because prerendering has an impact on bandwith, memory, and CPU consumption, it should not be overused. The moderate eagerness will automatically limit you to 2 prerendered pages and works First In, First Out, which means <q>after reaching the limit, a new speculation will cause the oldest speculation to be canceled and replaced by the newer one to conserve memory.</q>
 
 > Chrome will also prevent speculations being used in certain conditions including:
+>
 > - Save-Data.
 > - Energy saver when enabled and on low battery.
 > - Memory constraints.
@@ -37,7 +40,7 @@ Because prerendering has an impact on bandwith, memory, and CPU consumption, it 
 > - Chrome also does not render cross-origin iframes on prerendered pages until activation.
 > <footer><a href="https://developer.chrome.com/docs/web-platform/prerender-pages"><cite>Prerender pages in Chrome for instant page navigations</cite></a>, Barry Pollard on developer.chrome.com</footer>
 
-Speculation Rules can be analyzed in the DevTools, you will find it for Chrome under *DevTools → Application → Background Services → Speculative loads*. You can see there, for example, what page *could be* prerendered and what *has been* prerendered.
+Speculation Rules can be analyzed in the DevTools, you will find it for Chrome under _DevTools → Application → Background Services → Speculative loads_. You can see there, for example, what page _could be_ prerendered and what _has been_ prerendered.
 
 <figure>
 <div class="inline-block border border-meta">
@@ -46,7 +49,7 @@ Speculation Rules can be analyzed in the DevTools, you will find it for Chrome u
 <figcaption>Use DevTools to analyze Speculation Rules for your website</figcaption>
 </figure>
 
-You can do more with Speculation Rules, for example change eagerness to reduce the likelihood of wasted speculations, and define with lists or selectors what links *could be* prerendered (or prefetched, which is less than prerendering, because it loads the page but does not prerender it).
+You can do more with Speculation Rules, for example change eagerness to reduce the likelihood of wasted speculations, and define with lists or selectors what links _could be_ prerendered (or prefetched, which is less than prerendering, because it loads the page but does not prerender it).
 
 Eagerness has the settings:
 
@@ -76,7 +79,7 @@ To suggest certain pages for prerendering from a URL list, you can do:
 </script>
 ```
 
-To suggest pages for prerendering described by selectors, it´s possible to:
+To suggest pages for prerendering described by selectors, it's possible to:
 
 ```js
 <script type="speculationrules">
@@ -95,7 +98,6 @@ To suggest pages for prerendering described by selectors, it´s possible to:
 }
 </script>
 ```
-
 
 To dive deeper, refer to:
 

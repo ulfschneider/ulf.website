@@ -1,8 +1,9 @@
 ---
 title: Splitting User Stories
-abstract:  User Stories are short and simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. It´s called User Story because you put the user into focus. Therefore a User Story should lead to a product increment that can be seen valuable from the user- or business perspective.
+abstract: User Stories are short and simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. It's called User Story because you put the user into focus. Therefore a User Story should lead to a product increment that can be seen valuable from the user- or business perspective.
 tags: agile
 ---
+
 [[toc]]
 
 ## The advantage of splitting
@@ -23,11 +24,11 @@ Trying to break down a User Story within Jira is very time-consuming and sometim
 
 ## Layers
 
-For engineers who are new to the splitting approach, breaking down stories and still delivering end-to-end functionality within a Sprint is among the most challenging things. That´s because engineers are mostly concerned about finding a way for how to solve the given problem. Their thinking tools have to do with architectural layers, technical components, frameworks and programming languages. Naturally, engineers start splitting by layers, like UI, Business Logic, DB Access, DB, Operating System. Following this approach, they end up with stories for the different architectural layers which will be implemented separately and eventually have to be integrated, which will allow only very late feedback. None of these architecture-layer stories alone will bring value for the user, and in most cases, it´s impossible to come up with a solution during a single Sprint.
+For engineers who are new to the splitting approach, breaking down stories and still delivering end-to-end functionality within a Sprint is among the most challenging things. That's because engineers are mostly concerned about finding a way for how to solve the given problem. Their thinking tools have to do with architectural layers, technical components, frameworks and programming languages. Naturally, engineers start splitting by layers, like UI, Business Logic, DB Access, DB, Operating System. Following this approach, they end up with stories for the different architectural layers which will be implemented separately and eventually have to be integrated, which will allow only very late feedback. None of these architecture-layer stories alone will bring value for the user, and in most cases, it's impossible to come up with a solution during a single Sprint.
 
 Also, organizational structures are often formed by their corresponding architecture layers, for example, UI/UX people form an organizational unit, Java developers form a unit, technical writers form a unit, QA engineers form a unit and so on. These units sometimes are called teams. In many cases, none of these "teams" alone can deliver a valuable feature to the user. Which means, costs in terms of understanding, splitting, designing, building, testing and putting into operation are pretty high because the different "teams" need to be coordinated and are interdependent up to the level that they are blocking each other because everyone is waiting for someone else to get work done.
 
-Therefore, when talking about splitting User Stories, it´s meant to cut across all layers to come up with end-to-end solutions in each Sprint. The organizational structures have to follow to achieve a delivery-oriented organization. Which leads to small, cross-functional teams, having every skill on-board that is needed to split, design, build, describe, test and deliver an end-to-end feature. This will speed up the feedback loop drastically and thus allows to speed up learning accordingly. The organizational change, of course, is difficult and requires experience and insight. The goal is to have teams being able to operate quick, with minimal interdependencies and end-to-end.
+Therefore, when talking about splitting User Stories, it's meant to cut across all layers to come up with end-to-end solutions in each Sprint. The organizational structures have to follow to achieve a delivery-oriented organization. Which leads to small, cross-functional teams, having every skill on-board that is needed to split, design, build, describe, test and deliver an end-to-end feature. This will speed up the feedback loop drastically and thus allows to speed up learning accordingly. The organizational change, of course, is difficult and requires experience and insight. The goal is to have teams being able to operate quick, with minimal interdependencies and end-to-end.
 
 ## Patterns
 
@@ -41,7 +42,7 @@ Try the following patterns to split your User Stories:
 - **Roles:** In case a User Story describes something that has to be used by different people, groups or roles (e.g. customer, shopper, admin, editor), a split by role might be a good choice. Often you can combine this splitting strategy with the workflow step pattern below, as workflows tend to connect roles via action steps.
 - **Workflow Steps:** If a User Story describes a workflow, elaborate if you can make at first two stories, one for the start of the workflow and one for the ending. Followed by subsequent stories which fill the gaps from both endpoints up to the middle.
 - **Simple and Complex:** Sometimes you can do a pure core first and subsequently do complex enhancements in additional stories. The workflow steps pattern is some kind of simple and complex pattern, but you can apply simple/complex even without thinking in workflows.
-- **Platform:** If you have to support different devices or operating systems (more general: platforms) with a User Story, a natural split is by platform. 
+- **Platform:** If you have to support different devices or operating systems (more general: platforms) with a User Story, a natural split is by platform.
 - **Vague Terms:** Vague terms offer splitting opportunities by asking what exactly is meant, turning the vagueness into concrete and then applying the above patterns.
 
 ## Concerns

@@ -2,7 +2,8 @@
 title: Being boring
 tags: design
 ---
-iA has an interesting article about business presentations, titled [<cite>Being Boring</cite>](https://ia.net/topics/being-boring). The text is introducing their new coming product named [<cite>Presenter</cite>](https://ia.net/presenter). I´m quoting their claims – which resonate with me – below:
+
+iA has an interesting article about business presentations, titled [<cite>Being Boring</cite>](https://ia.net/topics/being-boring). The text is introducing their new coming product named [<cite>Presenter</cite>](https://ia.net/presenter). I'm quoting their claims – which resonate with me – below:
 
 - <q>PowerPoint gets us started—with a procrastination bonanza, by delaying the decision on what we want to say and how we structure it in favor of picking fonts and colors.</q>
 - <q>No matter how experienced you are as a speaker, designer and typographer, you will never quite know what you’re supposed to do with a slide. Is it a picture? Is it an index card? Is it a page? Outside of presentation apps we don’t use slides to communicate, so they feel a little awkward and unfamiliar.</q>

@@ -1,7 +1,7 @@
 ---
 layout: blank
 title: active-toc
-tags: 
+tags:
   - tool
   - code
 abstract: Highlight the entries of your table of contents while scrolling
@@ -59,7 +59,7 @@ Return to <a href="/blog/tools/" class="mrb-2">tools</a>
 <a href="#he-must">He must</a>
 <a href="#doing-business">Doing business</a>
 <a href="#he-felt">He felt</a>
-<a href="#you-ve-got">You´ve got</a>
+<a href="#you-ve-got">You've got</a>
 <a href="#if-i">If I</a>
 <a href="#well">Well</a>
 <a href="#he-could">He could</a>
@@ -128,7 +128,7 @@ quickly back because as soon as he touched it he was overcome by a cold shudder.
 former
 position. "Getting up early all the time, " he thought, "it makes you stupid.</p>
 
-<h2 id="you-ve-got">You´ve got</h2>
+<h2 id="you-ve-got">You've got</h2>
 
 <p>You've got to get enough sleep. Other travelling salesmen live a life of luxury. For instance, whenever I go
 back

@@ -3,9 +3,10 @@ title: We are building a house
 permalink: /journal/{{ page.fileSlug }}/
 tags: journal
 ---
-Our weed-covered land is starting to transform. This house project might take a time of seven years in the end. We bought the property in 2019 from the city of Paderborn. Being elegible for buying required us to be on a waiting list for five years. During 2019 we selected the builders, which are  [Knecht Fertigkeller](https://www.fertigkeller.de/de/) for the cellar and [Haas Fertigbau](https://haas-fertighaus.de) for the house. Also in 2019 we started to work on the architecture of the house. Now, in July 2020, change is coming!
 
-I´m posting a timeline of images here to document the progress.
+Our weed-covered land is starting to transform. This house project might take a time of seven years in the end. We bought the property in 2019 from the city of Paderborn. Being elegible for buying required us to be on a waiting list for five years. During 2019 we selected the builders, which are [Knecht Fertigkeller](https://www.fertigkeller.de/de/) for the cellar and [Haas Fertigbau](https://haas-fertighaus.de) for the house. Also in 2019 we started to work on the architecture of the house. Now, in July 2020, change is coming!
+
+I'm posting a timeline of images here to document the progress.
 
 [[toc]]
 
@@ -76,14 +77,14 @@ I´m posting a timeline of images here to document the progress.
 ## The cellar
 
 <figure class="rg:split">
-<figcaption>Aug 6, 2020: The cellar builders start their <i>hard</i> work. The temperature is above 30 °C. At the first day it´s formwork and bringing in the steel. Three men are drinking 15 bottles of water during that day.</figcaption>
+<figcaption>Aug 6, 2020: The cellar builders start their <i>hard</i> work. The temperature is above 30 °C. At the first day it's formwork and bringing in the steel. Three men are drinking 15 bottles of water during that day.</figcaption>
 <img src="/img/house/IMG_1574.jpg" alt="">
 <img src="/img/house/IMG_1575.jpg" alt="">
 <img class="w-100" src="/img/house/IMG_1583.jpg" alt="">
 </figure>
 
 <figure class="rg:split">
-<figcaption>Aug 7, 2020: The basement plate preparation is ready for the concreting. I have hired a construction expert to help me with the acceptance of the delivered results. Before the concreting starts, he wants to see the steel. The expert is very satisfied with the good quality of the work and of course – I´m glad too! Finally it was the right decision to go with Knecht as the cellar builder. The three men, despite the heat of 33 °C in the afternoon, seem to work without any resting. I can only help them with providing water to drink, a bit of coffee, and some food. I think they earned their weekend well. Because of the heat they are covering the new basement plate with film, so that it doesn´t build out cracks during the hardening period. Next week they are going to finalize the cellar.</figcaption>
+<figcaption>Aug 7, 2020: The basement plate preparation is ready for the concreting. I have hired a construction expert to help me with the acceptance of the delivered results. Before the concreting starts, he wants to see the steel. The expert is very satisfied with the good quality of the work and of course – I'm glad too! Finally it was the right decision to go with Knecht as the cellar builder. The three men, despite the heat of 33 °C in the afternoon, seem to work without any resting. I can only help them with providing water to drink, a bit of coffee, and some food. I think they earned their weekend well. Because of the heat they are covering the new basement plate with film, so that it doesn't build out cracks during the hardening period. Next week they are going to finalize the cellar.</figcaption>
 <img src="/img/house/IMG_1587.jpg" alt="">
 <img src="/img/house/IMG_1588.jpg" alt="">
 <img src="/img/house/IMG_1595.jpg" alt="">
@@ -160,7 +161,6 @@ I´m posting a timeline of images here to document the progress.
 </div>
 </figure>
 
-
 ## The house
 
 <figure>
@@ -195,7 +195,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure>
-<figcaption>Finally, on Friday afternoon, there is a house with a roof. Thankfully, the craftsmen didn´t leave until this part of the work was completed.</figcaption>
+<figcaption>Finally, on Friday afternoon, there is a house with a roof. Thankfully, the craftsmen didn't leave until this part of the work was completed.</figcaption>
 <img class="w-100" src="/img/house/IMG_1936.jpg" alt="">
 </figure>
 
@@ -219,7 +219,7 @@ I´m posting a timeline of images here to document the progress.
 </figure>
 
 <figure class="rg:split">
-<figcaption>Nov 9, 2020: Screed on the floors. It´s now looking more and more like a future home.</figcaption>
+<figcaption>Nov 9, 2020: Screed on the floors. It's now looking more and more like a future home.</figcaption>
 <img src="/img/house/IMG_2021.jpg" alt="">
 <img src="/img/house/IMG_2020.jpg" alt="">
 <img src="/img/house/IMG_0050.jpg" alt="">
@@ -300,7 +300,7 @@ I´m posting a timeline of images here to document the progress.
 ## The last parts of the scaffolding have been removed
 
 <figure>
-<figcaption>Jul 29, 2021: It´s the first time I see the house without any scaffolding. The pictures are made at dusk.</figcaption>
+<figcaption>Jul 29, 2021: It's the first time I see the house without any scaffolding. The pictures are made at dusk.</figcaption>
 <img src="/img/house/IMG_0959D.jpg">
 <img src="/img/house/IMG_0960D.jpg">
 </figure>
@@ -313,4 +313,3 @@ I´m posting a timeline of images here to document the progress.
 <img src="/img/house/IMG_2968X.jpg">
 <img src="/img/house/IMG_2969X.jpg">
 </figure>
-

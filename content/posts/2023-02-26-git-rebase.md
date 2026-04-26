@@ -2,6 +2,7 @@
 title: Git rebase on main without switching branches
 tags: [shell, til]
 ---
+
 Updating a feature branch with changes from main without switching between branches. While you are in the feature branch:
 
 ```shell
@@ -16,13 +17,13 @@ git rebase main
 ```shell
 # you are in your feature branch
 # the alternate short form to update your feature branch
-git fetch origin 
-git rebase origin main 
+git fetch origin
+git rebase origin main
 ```
 
-Notice that `git fetch origin` in the above example will not apply changes to your local main branch – it´s just fetching the origin. Still the `git rebase origin main` will apply the changes from origin´s main to your local feature branch.
+Notice that `git fetch origin` in the above example will not apply changes to your local main branch – it's just fetching the origin. Still the `git rebase origin main` will apply the changes from origin's main to your local feature branch.
 
-The above hints are from Geoff Rich: [<cite>How to git rebase on main without switching branches</cite>](https://geoffrich.net/posts/git-rebase-with-latest-changes/).  
+The above hints are from Geoff Rich: [<cite>How to git rebase on main without switching branches</cite>](https://geoffrich.net/posts/git-rebase-with-latest-changes/).
 
 ```shell
 # the long form to update your feature branch
