@@ -1,7 +1,7 @@
 {
   "name": "ulfschneider.io",
   "version": "0.1.0",
-  "description": "Ulf Schneider´s personal blog",
+  "description": "Ulf Schneider's personal blog",
   "main": "index.js",
   "type": "module",
   "scripts": {
