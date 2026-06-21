@@ -55,15 +55,8 @@ export default {
     ignore: undefined,
     offlineUrl: "/offline/",
     noCacheUrls: ["/feed.xml"],
-    preCacheUrls: [
-      "/",
-      "/offline/",
-      "/navigate/",
-      "/about/",
-      "/colophon/",
-      "/blog/"
-    ],
-    cacheFirstUrls: ["/navigate/", "/offline/"],
+    preCacheUrls: [],
+    cacheFirstUrls: [],
     ignoreCacheRegex: ""
   },
   ownership: {
