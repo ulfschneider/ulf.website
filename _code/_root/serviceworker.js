@@ -93,7 +93,9 @@ const CACHE_SETTINGS = {
 //// helpers
 
 function isNetworkFirst(request) {
-  if (isCacheFirstUrl(request)) {
+  // If this is a URL we explicitly want cache-first (e.g. navigation menu, offline page)
+  if (isCacheFirstUrl(request) || isPreCacheUrl(request)) {
+    log(`Treating as cache-first: ${request.url}`)
     return false
   }
 
@@ -443,9 +445,13 @@ function isPreCacheUrl(request) {
   for (let p of PRE_CACHE_URLS) {
     if (p instanceof RegExp) {
       if (p.test(url.pathname + url.search)) {
+        log(
+          `isPreCacheUrl matched RegExp ${p} for ${url.pathname}${url.search}`
+        )
         return true
       }
     } else if (p == url.pathname + url.search) {
+      log(`isPreCacheUrl matched ${p} for ${url.pathname}${url.search}`)
       return true
     }
   }
@@ -458,9 +464,13 @@ function isCacheFirstUrl(request) {
   for (let p of CACHE_FIRST_URLS) {
     if (p instanceof RegExp) {
       if (p.test(url.pathname + url.search)) {
+        log(
+          `isCacheFirstUrl matched RegExp ${p} for ${url.pathname}${url.search}`
+        )
         return true
       }
     } else if (p == url.pathname + url.search) {
+      log(`isCacheFirstUrl matched ${p} for ${url.pathname}${url.search}`)
       return true
     }
   }
