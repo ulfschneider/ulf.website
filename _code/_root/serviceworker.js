@@ -69,7 +69,10 @@ const CACHE_SETTINGS = {
   [CSS_CACHE_NAME]: {
     cacheName: CSS_CACHE_NAME,
     maxAgeMinutes: 60 * 24, //expire css after one day
-    serveCacheFirst: true, //true is default
+    // Serve CSS from the network first so rebuilt styles are picked up
+    // immediately after a deploy. Falling back to cache only when the
+    // network is unavailable avoids serving stale or missing styles.
+    serveCacheFirst: false,
     revalidate: true
   },
   [JSON_CACHE_NAME]: {
@@ -280,7 +283,7 @@ async function fetchAndCache(request, options) {
     !isExpired(options.responseFromCache) &&
     !options.revalidate
   ) {
-    //we have a cache entry that´s not expired
+    //we have a cache entry that's not expired
     //and we do not enforce a revalidation
     //no need to bother the network
     return options.responseFromCache
@@ -297,7 +300,7 @@ async function fetchAndCache(request, options) {
   let url = new URL(request.url)
 
   if (options.responseFromCache) {
-    //we have a cache entry, but it´s expired
+    //we have a cache entry, but it's expired
     //or we have no expiration date for the entry
     //or we enforce a revalidation
     //therefore we have to update from the network
