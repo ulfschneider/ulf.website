@@ -40,9 +40,9 @@ function getGitCommitDates() {
 export default {
   locale: "en",
   direction: "ltr",
-  title: "Ulf Schneider – Developer and Agile Coach",
+  title: "Ulf Schneider – Maker and Agile Coach",
   description:
-    "Hi, I´m Ulf Schneider, a software developer and agile coach living in Paderborn, Germany.",
+    "Hi, I'm Ulf Schneider, a software maker and agile coach living in Paderborn, Germany.",
   name: hostname,
   hostname: hostname,
   origin: origin,
