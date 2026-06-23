@@ -1,1901 +1,1437 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1"
-    />
-    <style>
-      :root{
-      --logo: ;
-      --logo-size: ;
-      --text-scale-intensity: ;
-      --darkaccent1color: #fff;
-      --lightaccent1color: #fff;
-      --accent2: #43aa8b;
-      --accent3: #f9c74f;
-      --accent4: #90be6d;
-      --accent5: #f8961e;
-      --accent6: #577590;
-      --lighttitletextcolor: #fff;
-      --darktitletextcolor: #fff;
-      --lightbodytextcolor: #fff;
-      --darkbodytextcolor: #fff;
-      --lightbackgroundcolor: transparent;
-      --darkbackgroundcolor: transparent;
-      --bodyfont: IBM Plex Sans;
-      --titlefont: IBM Plex Sans;
-      --lightframecolor: #FFFFFF;
-      --darkframecolor: #000000;
-      } 
-    </style>
-    <link rel="stylesheet" href="engine/main.css" />
-    <link rel="stylesheet" href="theme/plex.css" />
-    <link rel="stylesheet" href="engine/katex/katex.min.css" />
-  </head>
-  <body class="responsive">
-    <div class="reveal">
-      <div class="slides">
-        <section
-          class="light has-background-image cover-container responsive"
-          data-background-image="media/jump.jpg"
-          data-state="background-filter-darken background-opacity-60"
-          data-background-color="#2e3bff"
-          style="--lightbackgroundcolor: #2e3bff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-cover slide-contents">
-            <div class="element-group">
-              <h1 id="agile">Agile</h1>
-              <h3 id="learnasyougo">Learn as you go</h3>
-              <p>Mar 2024, by Ulf Schneider</p>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#3333ff"
-          style="--lightbackgroundcolor: #3333ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="startwithplay">Start with play</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light has-background-image v-split-container responsive"
-          data-background-image="media/53271724085_cf4ffd9448_k.jpg"
-          data-state="background-filter-darken background-opacity-60"
-          data-background-color="#382cff"
-          style="--lightbackgroundcolor: #382cff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents">
-            <div class="element-group">
-              <h3 id="theballpointgame">The ball point game</h3>
-            </div>
-            <div class="element-group">
-              <h4 id="playasateamwithabucketofballs">
-                Play as a team with a bucket of balls
-              </h4>
-              <ul>
-                <li>
-                  Count the number of balls touched by everyone in the team
-                  within a single iteration (1 min)
-                </li>
-                <li>
-                  You cannot pass the ball to your left-hand or right-hand
-                  neighbour
-                </li>
-                <li>A ball dropped to the floor cannot be counted anymore</li>
-                <li>Play five iterations (each: 2 min planning, 1 min play)</li>
-              </ul>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#3d25ff"
-          style="--lightbackgroundcolor: #3d25ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="howwasitforyou">How was it for you?</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#431dff"
-          style="--lightbackgroundcolor: #431dff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="didyoufeelsaveinthegroup">
-                Did you feel save in the group?
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#4816ff"
-          style="--lightbackgroundcolor: #4816ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="wouldyouhaveexpectedtheoutcome">
-                Would you have expected the outcome?
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#4d0fff"
-          style="--lightbackgroundcolor: #4d0fff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="ifyouhadtheplanningtimeofalliterationscombined…">
-                If you had the planning time of all iterations combined …
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#5308ff"
-          style="--lightbackgroundcolor: #5308ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="…wouldyouhaveachievedthesameoutcome">
-                … would you have achieved the same outcome?
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light has-background-image section-container responsive"
-          data-background-image="media/dogs.jpg"
-          data-state="background-opacity-60 background-filter-darken"
-          data-background-color="#5800ff"
-          style="--lightbackgroundcolor: #5800ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">Agile is at home where</p>
-                <h3 id="moreisunknownthanknown">more is unknown than known</h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light default-container responsive"
-          data-background-color="#5d00ff"
-          style="--lightbackgroundcolor: #5d00ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-default slide-contents media-grid">
-            <div class="element-group has-media has-media-last">
-              <h4 id="thestaceymatrix">The Stacey matrix</h4>
-              <div class="single-image-wrapper">
-                <figure class="">
-                  <img
-                    src="media/stacey-matrix.png"
-                    class="size-contain position-center-center"
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#6200ff"
-          style="--lightbackgroundcolor: #6200ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="uncertaintyrequireslearning">
-                Uncertainty requires learning
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#6700ff"
-          style="--lightbackgroundcolor: #6700ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="transparency">Transparency</h3>
-              <h3 id="↓">↓</h3>
-              <h3 id="inspection">Inspection</h3>
-              <h3 id="↓">↓</h3>
-              <h3 id="adaptation">Adaptation</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#6d00ff"
-          style="--lightbackgroundcolor: #6d00ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="whatprocessmodelwillhelpusbestinthatsituation">
-                What process model will help us best in that situation?
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light v-split-container responsive"
-          data-background-color="#7200ff"
-          style="--lightbackgroundcolor: #7200ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents media-grid">
-            <div class="element-group">
-              <h3 id="waterfallprocess">Waterfall process</h3>
-              <p>Going through all stages might take a year</p>
-            </div>
-            <figure class="">
-              <img
-                src="media/waterfall_1.png"
-                class="size-contain position-center-center"
-              />
-            </figure>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#7700ff"
-          style="--lightbackgroundcolor: #7700ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">In the waterfall process</p>
-                <h3 id="theredoofapreviousstepisanaccident">
-                  the redo of a previous step is an accident
-                </h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#7c00ff"
-          style="--lightbackgroundcolor: #7c00ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">The waterfall process</p>
-                <h3 id="makeslearningexpensive">makes learning expensive</h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light v-split-container responsive"
-          data-background-color="#8100ff"
-          style="--lightbackgroundcolor: #8100ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents media-grid">
-            <div class="element-group">
-              <h3 id="iterativeprocess">Iterative process</h3>
-              <p>A cycle takes 2 to 6 weeks.</p>
-            </div>
-            <figure class="">
-              <img
-                src="media/iterations-4.png"
-                class="size-contain position-center-center"
-              />
-            </figure>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#8800ff"
-          style="--lightbackgroundcolor: #8800ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">The iterative process</p>
-                <h3 id="isalearningmachine">is a learning machine</h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#8f00ff"
-          style="--lightbackgroundcolor: #8f00ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">The iterative process</p>
-                <h3 id="isavehicletolimitworkinprogress">
-                  is a vehicle to limit work in progress
-                </h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#9600ff"
-          style="--lightbackgroundcolor: #9600ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">The iterative process</p>
-                <h3 id="makesplanningmoresimple">makes planning more simple</h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#9d00ff"
-          style="--lightbackgroundcolor: #9d00ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">The iterative process</p>
-                <h3 id="isacontainerforself-organization">
-                  is a container for self-organization
-                </h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#a400ff"
-          style="--lightbackgroundcolor: #a400ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">The iterative process</p>
-                <h3 id="isasafetynet">is a safety net</h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ab00ff"
-          style="--lightbackgroundcolor: #ab00ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">Within your iteration</p>
-                <h3 id="giveroomtounderstandtheproblemyouaretryingtosolve">
-                  give room to understand the problem you are trying to solve
-                </h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light default-container responsive"
-          data-background-color="#b200ff"
-          style="--lightbackgroundcolor: #b200ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-default slide-contents media-grid">
-            <div class="element-group has-media has-media-last">
-              <h4 id="thedoublediamond">The double diamond</h4>
-              <div class="single-image-wrapper">
-                <figure class="">
-                  <img
-                    src="media/double-diamond.png"
-                    class="size-contain position-center-center"
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light default-container responsive"
-          data-background-color="#b900ff"
-          style="--lightbackgroundcolor: #b900ff"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-default slide-contents media-grid">
-            <div class="element-group has-media has-media-last">
-              <h4 id="inreallifethedoublediamondmightlooklikethis">
-                In real life, the double diamond might look like this
-              </h4>
-              <div class="single-image-wrapper">
-                <figure class="">
-                  <img
-                    src="media/double-design-squiggle.png"
-                    class="size-contain position-center-center"
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#bf00fc"
-          style="--lightbackgroundcolor: #bf00fc"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">Whatever you do,</p>
-                <h3
-                  id="useshortcyclesandcompletesomethingmeaningfulineachcycle"
-                >
-                  use short cycles and complete something meaningful in each
-                  cycle
-                </h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light has-background-image section-container responsive"
-          data-background-image="media/swarm.jpg"
-          data-state="background-opacity-60 background-filter-darken"
-          data-background-color="#c400f8"
-          style="--lightbackgroundcolor: #c400f8"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="self-organization">Self-organization</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light cover-container responsive"
-          data-background-color="#c900f4"
-          style="--lightbackgroundcolor: #c900f4"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-cover slide-contents">
-            <div class="element-group">
-              <h1 id="self-organizationisaforceoflife">
-                Self-organization is a force of life
-              </h1>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ce00f0"
-          style="--lightbackgroundcolor: #ce00f0"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">
-                  We want to make use of self-organization by
-                </p>
-                <h3 id="givingitadirectionandnotmicro-manageit">
-                  giving it a direction, and not micro-manage it
-                </h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light full-image-container responsive"
-          data-background-color="#d300ec"
-          style="--lightbackgroundcolor: #d300ec"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-full-image slide-contents media-grid">
-            <figure class="">
-              <img
-                src="media/pdca.png"
-                class="size-contain position-center-center"
-              />
-            </figure>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light cover-container responsive"
-          data-background-color="#d900e8"
-          style="--lightbackgroundcolor: #d900e8"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-cover slide-contents">
-            <div class="element-group">
-              <h1 id="plan">Plan</h1>
-              <h3
-                id="haveanoverarchingobjectiveandbreakitdownintokeyresultstobeachievedwithin2or3months"
-              >
-                Have an overarching objective and break it down into key results
-                to be achieved within 2 or 3 months
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light cover-container responsive"
-          data-background-color="#de00e4"
-          style="--lightbackgroundcolor: #de00e4"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-cover slide-contents">
-            <div class="element-group">
-              <h1 id="do">Do</h1>
-              <h3 id="delivertowardsthekeyresultswithlimitedworkinprogress">
-                Deliver towards the key results with limited work in progress
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light cover-container responsive"
-          data-background-color="#e300e0"
-          style="--lightbackgroundcolor: #e300e0"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-cover slide-contents">
-            <div class="element-group">
-              <h1 id="check">Check</h1>
-              <h3 id="verifyyourresults">Verify your results</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light cover-container responsive"
-          data-background-color="#e700da"
-          style="--lightbackgroundcolor: #e700da"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-cover slide-contents">
-            <div class="element-group">
-              <h1 id="act">Act</h1>
-              <h3 id="adapttoincorporateyourlearnings">
-                Adapt to incorporate your learnings
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light cover-container responsive"
-          data-background-color="#ea01d2"
-          style="--lightbackgroundcolor: #ea01d2"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-cover slide-contents">
-            <div class="element-group">
-              <h1 id="thenrepeat">Then, repeat</h1>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light v-split-container responsive"
-          data-background-color="#ed02cb"
-          style="--lightbackgroundcolor: #ed02cb"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents media-grid">
-            <figure class="">
-              <img
-                src="media/pdca.png"
-                class="size-contain position-center-center"
-              />
-            </figure>
-            <div class="element-group">
-              <h4 id="pdcainpractice">PDCA in practice</h4>
-              <ul>
-                <li>
-                  Inspect and adapt your
-                  <strong>product and your process</strong> regularly
-                </li>
-                <li>
-                  In the simplest form, talk to each other as a team and
-                  <strong>decide about one improvement at a time</strong>
-                </li>
-                <li>
-                  You might want to give
-                  <a href="https://retromat.org/">retromat.org</a> a try
-                </li>
-                <li>Then cut through the noise by taking action</li>
-              </ul>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#f003c3"
-          style="--lightbackgroundcolor: #f003c3"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="limitworkinprogresswip">Limit work in progress (WIP)</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light has-background-image section-container responsive"
-          data-background-image="media/53177981787_0fd05aff89_b.jpg"
-          data-state="background-filter-darken background-opacity-60"
-          data-background-color="#f304bc"
-          style="--lightbackgroundcolor: #f304bc"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="thewipgame">The WIP game</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light v-split-container responsive"
-          data-background-color="#f605b4"
-          style="--lightbackgroundcolor: #f605b4"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents">
-            <div class="element-group">
-              <h3 id="writedownlinebyline">Write down line by line</h3>
-              <p>and measure your time</p>
-            </div>
-            <div class="element-group">
-              <h3 id="→">→</h3>
-              <h3 id="multitask"><code>multitask</code></h3>
-              <h3 id="abcdefghi"><code>abcdefghi</code></h3>
-              <h3 id="123456789"><code>123456789</code></h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light v-split-container responsive"
-          data-background-color="#fa06ad"
-          style="--lightbackgroundcolor: #fa06ad"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents">
-            <div class="element-group">
-              <h3 id="writedowncolumnbycolumn">Write down column by column</h3>
-              <p>and measure your time</p>
-            </div>
-            <div class="element-group">
-              <h3 id="↓">↓</h3>
-              <h3 id="multitask"><code>multitask</code></h3>
-              <h3 id="abcdefghi"><code>abcdefghi</code></h3>
-              <h3 id="123456789"><code>123456789</code></h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#fd07a5"
-          style="--lightbackgroundcolor: #fd07a5"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="whichapproachisfaster">Which approach is faster?</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff0a9d"
-          style="--lightbackgroundcolor: #ff0a9d"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="whichapproachreduceserrors">
-                Which approach reduces errors?
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff1093"
-          style="--lightbackgroundcolor: #ff1093"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">Limiting work in progress will</p>
-                <h3 id="increasequalityandspeedupyourwork">
-                  increase quality <em>and</em> speed up your work
-                </h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff1689"
-          style="--lightbackgroundcolor: #ff1689"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3
-                id="sprintsinscrumandlimitsinkanbanareawayoflimitingworkinprogress"
-              >
-                Sprints in Scrum and limits in Kanban are a way of limiting work
-                in progress
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff1b80"
-          style="--lightbackgroundcolor: #ff1b80"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="inagiletheprocessisservantnotleader">
-                In Agile, the process is servant, not leader
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light v-split-container responsive"
-          data-background-color="#ff2176"
-          style="--lightbackgroundcolor: #ff2176"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents media-grid">
-            <div class="element-group">
-              <h3 id="agileisaboutyou–defineyourworld">
-                Agile is about you – define your world!
-              </h3>
-            </div>
-            <figure class="">
-              <img
-                src="media/george-pagan-iii-2nbIfDeT4t4-unsplash.jpg"
-                class="position-center-center"
-              />
-              <figcaption>
-                Image: https://unsplash.com/de/fotos/2nbIfDeT4t4
-              </figcaption>
-            </figure>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light default-container responsive"
-          data-background-color="#ff276c"
-          style="--lightbackgroundcolor: #ff276c"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-default slide-contents media-grid">
-            <div class="element-group has-media has-media-last">
-              <h4 id="thetaylortub">The Taylor tub</h4>
-              <div class="single-image-wrapper">
-                <figure class="">
-                  <img
-                    src="media/taylortub.png"
-                    class="size-contain position-center-center"
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light v-split-container responsive"
-          data-background-color="#ff2d63"
-          style="--lightbackgroundcolor: #ff2d63"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents media-grid">
-            <div class="element-group">
-              <blockquote lang="en">
-                <h3 id="likethespiderwedefineourworldbyworking.">
-                  Like the spider, we define our world by working.
-                </h3>
-                <footer>Otl Aicher</footer>
-              </blockquote>
-            </div>
-            <figure class="">
-              <img
-                src="media/otl-aicher-1953.jpeg"
-                class="position-center-center"
-              />
-              <figcaption>Otl Aicher, 1953. HfG-Archiv / Museum Ulm</figcaption>
-            </figure>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light v-split-container responsive"
-          data-background-color="#ff3359"
-          style="--lightbackgroundcolor: #ff3359"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents media-grid">
-            <div class="element-group">
-              <blockquote lang="en">
-                <h3 id="beanartistandchallengethestatusquo.">
-                  Be an artist and challenge the status quo.
-                </h3>
-                <footer>Seth Godin</footer>
-              </blockquote>
-            </div>
-            <figure class="">
-              <img src="media/seth-godin.jpg" class="position-center-center" />
-              <figcaption>Seth Godin portrait, by Brian Bloom</figcaption>
-            </figure>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light has-background-image cover-container responsive"
-          data-background-image="media/team-rowing.jpg"
-          data-state="background-filter-darken background-opacity-60"
-          data-background-color="#ff3950"
-          style="--lightbackgroundcolor: #ff3950"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-cover slide-contents">
-            <div class="element-group">
-              <h1 id="team">Team</h1>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light has-background-image section-container responsive"
-          data-background-image="media/team-rowing.jpg"
-          data-state="background-filter-darken background-opacity-60"
-          data-background-color="#ff3d49"
-          style="--lightbackgroundcolor: #ff3d49"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="diversity">Diversity?</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff4142"
-          style="--lightbackgroundcolor: #ff4142"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="theteamdecideshowmuchworkcanbeaccomplished">
-                The team decides how much work can be accomplished
-              </h3>
-              <p>
-                Google tech talk with Ken Schwaber:
-                <a href="https://www.youtube.com/watch?v=IyNPeTn8fpo"
-                  >www.youtube.com/watch?v=IyNPeTn8fpo</a
-                >
-              </p>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light v-split-container responsive"
-          data-background-color="#ff453b"
-          style="--lightbackgroundcolor: #ff453b"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents media-grid">
-            <div class="element-group">
-              <h3 id="keeptheteamsizebelow10">Keep the team size below 10</h3>
-              <p>
-                Because communication lines grow exponentially:
-                <span class="math">\(n(n-1)/2\)</span>
-              </p>
-            </div>
-            <figure class="">
-              <img
-                src="media/lines-of-communication.png"
-                class="size-contain position-center-center"
-              />
-              <figcaption>
-                Image:
-                https://getlighthouse.com/blog/developing-leaders-team-grows-big/
-              </figcaption>
-            </figure>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light v-split-container responsive"
-          data-background-color="#ff4934"
-          style="--lightbackgroundcolor: #ff4934"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-v-split slide-contents media-grid">
-            <div class="element-group">
-              <h3 id="usefeatureself-selectioninyourteam">
-                Use feature self-selection in your team
-              </h3>
-              <p><a href="https://www.trademe.co.nz">www.trademe.co.nz</a></p>
-            </div>
-            <figure class="">
-              <img
-                src="media/creating-great-teams.jpg"
-                class="size-contain position-center-center"
-              />
-            </figure>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff4d2d"
-          style="--lightbackgroundcolor: #ff4d2d"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="whatifyouneedmorethanoneteamtodeliverathing">
-                What if you need more than one team to deliver a thing?
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff5226"
-          style="--lightbackgroundcolor: #ff5226"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="scalingagile">Scaling Agile</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff561f"
-          style="--lightbackgroundcolor: #ff561f"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="conwayslaw">Conway's law</h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light default-container responsive"
-          data-background-color="#ff5a18"
-          style="--lightbackgroundcolor: #ff5a18"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-default slide-contents">
-            <div class="element-group">
-              <blockquote class="is-single-quote" lang="en">
-                <div class="line"></div>
-                <h3
-                  id="yoursystemarchitecturewillmirroryourorganization'scommunicationstructure"
-                >
-                  Your system architecture will mirror your organization's
-                  communication structure
-                </h3>
-                <footer>Melvin Conway</footer>
-                <div class="line"></div>
-              </blockquote>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light default-container responsive"
-          data-background-color="#ff5f15"
-          style="--lightbackgroundcolor: #ff5f15"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-default slide-contents media-grid">
-            <div class="element-group has-media">
-              <h4 id="conway'slawinpractice">Conway's law in practice</h4>
-              <p>
-                Small and distributes teams lead to a modular service
-                architecture. Large co-located teams lead to a monolithic
-                architecture.
-              </p>
-              <div class="single-image-wrapper">
-                <figure class="">
-                  <img
-                    src="media/conways-law.png"
-                    class="size-contain position-center-center"
-                  />
-                </figure>
-              </div>
-              <p></p>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff6412"
-          style="--lightbackgroundcolor: #ff6412"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="seekforlooselycoupledteams">
-                Seek for loosely coupled teams
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light cover-container responsive"
-          data-background-color="#ff690f"
-          style="--lightbackgroundcolor: #ff690f"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-cover slide-contents">
-            <div class="element-group">
-              <h1 id="agilewillscaleitself">Agile will scale itself</h1>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff6e0c"
-          style="--lightbackgroundcolor: #ff6e0c"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3 id="youdonotneedascalingframework">
-                You do not need a scaling framework
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff7309"
-          style="--lightbackgroundcolor: #ff7309"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <h3
-                id="teamswillspreadwordaboutusefulpracticesandlisteningteamswilladapt"
-              >
-                Teams will spread word about useful practices and listening
-                teams will adapt
-              </h3>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light section-container responsive"
-          data-background-color="#ff7806"
-          style="--lightbackgroundcolor: #ff7806"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-section slide-contents">
-            <div class="element-group">
-              <hgroup>
-                <p class="kicker">Take this with you</p>
-                <h3
-                  id="agilemeanscompletingmeaningfulthingsinshortintervals–tofosterlearning–whilecollaboratingasateam"
-                >
-                  Agile means completing meaningful things in short intervals –
-                  to foster learning – while collaborating as a team
-                </h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light has-background-image cover-container responsive"
-          data-background-image="media/jump.jpg"
-          data-state="background-opacity-60"
-          data-background-color="#ff7d03"
-          style="--lightbackgroundcolor: #ff7d03"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-cover slide-contents">
-            <div class="element-group">
-              <h1 id="enjoy">Enjoy!</h1>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-        <section
-          class="light default-container responsive"
-          data-background-color="#ff8300"
-          style="--lightbackgroundcolor: #ff8300"
-        >
-          <div class="header">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-          <div class="layout-default slide-contents">
-            <div class="element-group">
-              <h3 id="materials">Materials</h3>
-              <ul>
-                <li>
-                  <a href="https://scrumguides.org">scrumguides.org</a>, Ken
-                  Schwaber and Jeff Sutherland
-                </li>
-                <li>
-                  <a href="https://retromat.org/">retromat.org</a>, Corinna
-                  Baldauf
-                </li>
-                <li>The People's Scrum, Tobias Mayer</li>
-                <li>Denkwerkzeuge der Höchstleister, Wohland und Wiemeyer</li>
-                <li>
-                  Agile Software Development with Scrum, Ken Schwaber and Mike
-                  Beedle
-                </li>
-                <li>Extreme Programming Explained, Kent Beck</li>
-                <li>The Enterprise And Scrum, Ken Schwaber</li>
-                <li>
-                  Scrum et al., Google tech talk with Ken Schwaber,
-                  <a href="https://www.youtube.com/watch?v=IyNPeTn8fpo"
-                    >www.youtube.com/watch?v=IyNPeTn8fpo</a
-                  >
-                </li>
-                <li>
-                  <a href="https://basecamp.com/shapeup">Shape up</a>, Stop
-                  Running in Circles and Ship Work that Matters, by Ryan Singer
-                </li>
-                <li>
-                  Double diamond design process model,
-                  <a
-                    href="https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)"
-                    >en.wikipedia.org/wiki/Double_Diamond_(design_process_model)</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://matthiasott.com/articles/saving-your-web-workflows-with-prototyping"
-                    >Saving Your Web Workflows with Prototyping</a
-                  >, Matthias Ott
-                </li>
-                <li>
-                  Creating Great Teams, How Self-Selection Lets People Excel,
-                  Sandy Mamoli and David Mole
-                </li>
-                <li>Lean from the Trenches, Hendrik Kniberg</li>
-                <li>Kanban, David J. Anderson</li>
-                <li>User Story Mapping, Jeff Patton</li>
-                <li>Turn the Ship Around, David Marquet</li>
-                <li>Linchpin, are you indispensible?, Seth Godin</li>
-                <li>Measure What Matters, John Doerr</li>
-                <li>
-                  The balanced organization, Ulf Schneider,
-                  <a
-                    href="https://ulfschneider.io/2017-02-26-balanced-organization/"
-                    >ulfschneider.io/2017–02–26-balanced-organization/</a
-                  >
-                </li>
-                <li>
-                  Scrum and architecture, Ulf Schneider,
-                  <a
-                    href="https://ulfschneider.io/2011-06-27-scrum-and-architecture/"
-                    >ulfschneider.io/2011–06–27-scrum-and-architecture/</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="footnotes"></div>
-          <div class="footer">
-            <div class="leading"></div>
-            <div class="middle"></div>
-            <div class="trailing"></div>
-          </div>
-        </section>
-      </div>
-    </div>
-    <script src="engine/index.js"></script>
-    <script src="engine/pptxgen.min.js"></script>
-    <script src="engine/pfill.js"></script>
-    <script src="engine/published.js"></script>
-    <script>
-      Reveal.configure({
-        progress: true,
-        progress: true,
-        dependencies: [
-          {
-            src: "engine/highlight.js",
-            sync: true,
-            callback: function () {
-              hljs.initHighlightingOnLoad()
-            }
-          }
-        ]
-      })
-    </script>
-  </body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<style>
+:root{
+--logo: ;
+--logo-size: ;
+--text-scale-intensity: ;
+--darkaccent1color: #fff;
+--lightaccent1color: #fff;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #fff;
+--darktitletextcolor: #fff;
+--lightbodytextcolor: #fff;
+--darkbodytextcolor: #fff;
+--lightbackgroundcolor: transparent;
+--darkbackgroundcolor: transparent;
+--bodyfont: IBM Plex Sans;
+--titlefont: IBM Plex Sans;
+--lightframecolor: #FFFFFF;
+--darkframecolor: #000000;
+} 
+
+</style>
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/plex.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+<link rel="stylesheet" href="engine/billboard.min.css">
+</head>
+<body class="responsive  ">
+<div class="reveal">
+<div class="slides">
+<section class="light has-background-image default-container responsive"  data-background-image="media/jump.jpg" data-state="background-filter-darken background-opacity-60" data-background-color="#2e3bff"style="--lightbackgroundcolor: #2e3bff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="agile">Agile</h1> 
+  <h3 id="learnasyougo">Learn as you go</h3> 
+  <p>Mar 2024, by Ulf Schneider </p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#3333ff"style="--lightbackgroundcolor: #3333ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="startwithplay">Start with play</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light has-background-image v-split-container responsive"  data-background-image="media/53271724085_cf4ffd9448_k.jpg" data-state="background-filter-darken background-opacity-60" data-background-color="#382cff"style="--lightbackgroundcolor: #382cff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h3 id="theballpointgame">The ball point game</h3>
+ </div> 
+ <div class="element-group">
+  <h4 id="playasateamwithabucketofballs">Play as a team with a bucket of balls</h4> 
+  <ul> 
+   <li>Count the number of balls touched by everyone in the team within a single iteration (1 min)</li> 
+   <li>You cannot pass the ball to your left-hand or right-hand neighbor</li> 
+   <li>A ball dropped to the floor cannot be counted anymore</li> 
+   <li>Play five iterations (each: 2 min planning, 1 min play)</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#3d25ff"style="--lightbackgroundcolor: #3d25ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="howwasitforyou">How was it for you?</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#431dff"style="--lightbackgroundcolor: #431dff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="didyoufeelsafeinthegroup">Did you feel safe in the group?</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#4816ff"style="--lightbackgroundcolor: #4816ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="wouldyouhaveexpectedtheoutcome">Would you have expected the outcome?</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#4d0fff"style="--lightbackgroundcolor: #4d0fff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="ifyouhadtheplanningtimeofalliterationscombined…">If you had the planning time of all iterations combined …</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#5308ff"style="--lightbackgroundcolor: #5308ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="…wouldyouhaveachievedthesameoutcome">… would you have achieved the same outcome?</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light has-background-image default-container responsive"  data-background-image="media/dogs.jpg" data-state="background-filter-darken background-opacity-60" data-background-color="#5800ff"style="--lightbackgroundcolor: #5800ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <hgroup>
+   <p class="kicker">Agile is at home where</p> 
+   <h3 id="moreisunknownthanknown">more is unknown than known</h3>
+  </hgroup>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light grid-container responsive"  data-background-color="#5d00ff"style="--lightbackgroundcolor: #5d00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h4 id="thestaceymatrix">The Stacey matrix</h4> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/stacey-matrix.png" class=" size-contain position-center-center" />
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#6200ff"style="--lightbackgroundcolor: #6200ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="uncertaintyrequireslearning">Uncertainty requires learning</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#6700ff"style="--lightbackgroundcolor: #6700ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="transparency">Transparency</h3> 
+  <h3 id="↓">↓</h3> 
+  <h3 id="inspection">Inspection</h3> 
+  <h3 id="↓">↓</h3> 
+  <h3 id="adaptation">Adaptation</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#6d00ff"style="--lightbackgroundcolor: #6d00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="whatprocessmodelwillhelpusbestinthatsituation">What process model will help us best in that situation?</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light v-split-container responsive"  data-background-color="#7200ff"style="--lightbackgroundcolor: #7200ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h3 id="waterfallprocess">Waterfall process</h3> 
+  <p>Going through all stages might take a year </p>
+ </div> 
+ <figure class="">
+  <img src="media/waterfall_1.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#7700ff"style="--lightbackgroundcolor: #7700ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">In the waterfall process</p> 
+   <h3 id="theredoofapreviousstepisanaccident">the redo of a previous step is an accident</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#7c00ff"style="--lightbackgroundcolor: #7c00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">The waterfall process </p> 
+   <h3 id="makeslearningexpensive">makes learning expensive</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light v-split-container responsive"  data-background-color="#8100ff"style="--lightbackgroundcolor: #8100ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h3 id="iterativeprocess">Iterative process</h3> 
+  <p>A cycle takes 2 to 6 weeks. </p>
+ </div> 
+ <figure class="">
+  <img src="media/iterations-4.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#8800ff"style="--lightbackgroundcolor: #8800ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">The iterative process</p> 
+   <h3 id="isalearningmachine">is a learning machine</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#8f00ff"style="--lightbackgroundcolor: #8f00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">The iterative process</p> 
+   <h3 id="isavehicletolimitworkinprogress">is a vehicle to limit work in progress</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#9600ff"style="--lightbackgroundcolor: #9600ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">The iterative process</p> 
+   <h3 id="makesplanningmoresimple">makes planning more simple</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#9d00ff"style="--lightbackgroundcolor: #9d00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">The iterative process</p> 
+   <h3 id="isacontainerforself-organization">is a container for self-organization</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#a400ff"style="--lightbackgroundcolor: #a400ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">The iterative process</p> 
+   <h3 id="isasafetynet">is a safety net</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ab00ff"style="--lightbackgroundcolor: #ab00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">Within your iteration</p> 
+   <h3 id="giveroomtounderstandtheproblemyouaretryingtosolve">give room to understand the problem you are trying to solve</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light grid-container responsive"  data-background-color="#b200ff"style="--lightbackgroundcolor: #b200ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h4 id="thedoublediamond">The double diamond</h4> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/double-diamond.png" class=" size-contain position-center-center" />
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light grid-container responsive"  data-background-color="#b900ff"style="--lightbackgroundcolor: #b900ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h4 id="inreallifethedoublediamondmightlooklikethis">In real life, the double diamond might look like this</h4> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/double-design-squiggle.png" class=" size-contain position-center-center" />
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#bf00fc"style="--lightbackgroundcolor: #bf00fc;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">Whatever you do,</p> 
+   <h3 id="useshortcyclesandcompletesomethingmeaningfulineachcycle">use short cycles and complete something meaningful in each cycle</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light has-background-image default-container responsive"  data-background-image="media/swarm.jpg" data-state="background-filter-darken background-opacity-60" data-background-color="#c400f8"style="--lightbackgroundcolor: #c400f8;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h3 id="self-organization">Self-organization</h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light cover-container responsive"  data-background-color="#c900f4"style="--lightbackgroundcolor: #c900f4;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="self-organizationisaforceoflife">Self-organization is a force of life</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ce00f0"style="--lightbackgroundcolor: #ce00f0;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">We want to make use of self-organization by</p> 
+   <h3 id="givingitadirectionandnotmicro-manageit">giving it a direction, and not micro-manage it</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light grid-container responsive"  data-background-color="#d300ec"style="--lightbackgroundcolor: #d300ec;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/pdca.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light cover-container responsive"  data-background-color="#d900e8"style="--lightbackgroundcolor: #d900e8;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="plan">Plan</h1> 
+  <h3 id="haveanoverarchingobjectiveandbreakitdownintokeyresultstobeachievedwithin2or3months">Have an overarching objective and break it down into key results to be achieved within 2 or 3 months</h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light cover-container responsive"  data-background-color="#de00e4"style="--lightbackgroundcolor: #de00e4;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="do">Do</h1> 
+  <h3 id="delivertowardsthekeyresultswithlimitedworkinprogress">Deliver towards the key results with limited work in progress</h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light cover-container responsive"  data-background-color="#e300e0"style="--lightbackgroundcolor: #e300e0;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="check">Check</h1> 
+  <h3 id="verifyyourresults">Verify your results</h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light cover-container responsive"  data-background-color="#e700da"style="--lightbackgroundcolor: #e700da;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="act">Act</h1> 
+  <h3 id="adapttoincorporateyourlearnings">Adapt to incorporate your learnings</h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light cover-container responsive"  data-background-color="#ea01d2"style="--lightbackgroundcolor: #ea01d2;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="thenrepeat">Then, repeat</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light v-split-container responsive"  data-background-color="#ed02cb"style="--lightbackgroundcolor: #ed02cb;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <figure class="">
+  <img src="media/pdca.png" class=" size-contain position-center-center" />
+ </figure> 
+ <div class="element-group">
+  <h4 id="pdcainpractice">PDCA in practice</h4> 
+  <ul> 
+   <li>Inspect and adapt your <strong>product and your process</strong> regularly</li> 
+   <li>In the simplest form, talk to each other as a team and <strong>decide about one improvement at a time</strong></li> 
+   <li>You might want to give <a href="https://retromat.org/">retromat.org</a> a try</li> 
+   <li>Then cut through the noise by taking action</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#f003c3"style="--lightbackgroundcolor: #f003c3;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="limitworkinprogresswip">Limit work in progress (WIP)</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light has-background-image default-container responsive"  data-background-image="media/53177981787_0fd05aff89_b.jpg" data-state="background-filter-darken background-opacity-60" data-background-color="#f304bc"style="--lightbackgroundcolor: #f304bc;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h3 id="thewipgame">The WIP game</h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light v-split-container responsive"  data-background-color="#f605b4"style="--lightbackgroundcolor: #f605b4;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h3 id="writedownlinebyline">Write down line by line</h3> 
+  <p>and measure your time</p>
+ </div> 
+ <div class="element-group">
+  <h3 id="→">→</h3> 
+  <h3 id="multitask"><code>multitask</code></h3> 
+  <h3 id="abcdefghi"><code>abcdefghi</code></h3> 
+  <h3 id="123456789"><code>123456789</code></h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light v-split-container responsive"  data-background-color="#fa06ad"style="--lightbackgroundcolor: #fa06ad;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h3 id="writedowncolumnbycolumn">Write down column by column</h3> 
+  <p>and measure your time</p>
+ </div> 
+ <div class="element-group">
+  <h3 id="↓">↓</h3> 
+  <h3 id="multitask"><code>multitask</code></h3> 
+  <h3 id="abcdefghi"><code>abcdefghi</code></h3> 
+  <h3 id="123456789"><code>123456789</code></h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#fd07a5"style="--lightbackgroundcolor: #fd07a5;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="whichapproachisfaster">Which approach is faster?</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff0a9d"style="--lightbackgroundcolor: #ff0a9d;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="whichapproachreduceserrors">Which approach reduces errors?</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff1093"style="--lightbackgroundcolor: #ff1093;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">Limiting work in progress will</p> 
+   <h3 id="increasequalityandspeedupyourwork">increase quality <em>and</em> speed up your work</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff1689"style="--lightbackgroundcolor: #ff1689;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="sprintsinscrumandlimitsinkanbanareawayoflimitingworkinprogress">Sprints in Scrum and limits in Kanban are a way of limiting work in progress</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff1b80"style="--lightbackgroundcolor: #ff1b80;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="inagiletheprocessisservantnotleader">In Agile, the process is servant, not leader</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light v-split-container responsive"  data-background-color="#ff2176"style="--lightbackgroundcolor: #ff2176;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h3 id="agileisaboutyou–defineyourworld">Agile is about you – define your world!</h3>
+ </div> 
+ <figure class="">
+  <img src="media/george-pagan-iii-2nbIfDeT4t4-unsplash.jpg" class=" position-center-center" />
+  <figcaption>
+   Image: https://unsplash.com/de/fotos/2nbIfDeT4t4
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light grid-container responsive"  data-background-color="#ff276c"style="--lightbackgroundcolor: #ff276c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h4 id="thetaylortub">The Taylor tub</h4> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/taylortub.png" class=" size-contain position-center-center" />
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light v-split-container responsive"  data-background-color="#ff2d63"style="--lightbackgroundcolor: #ff2d63;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <blockquote> 
+   <h3 id="likethespiderwedefineourworldbyworking.">Like the spider, we define our world by working.</h3> 
+   <footer>
+    Otl Aicher
+   </footer> 
+  </blockquote>
+ </div> 
+ <figure class="">
+  <img src="media/otl-aicher-1953.jpeg" class=" position-center-center" />
+  <figcaption>
+   Otl Aicher, 1953. HfG-Archiv / Museum Ulm
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light v-split-container responsive"  data-background-color="#ff3359"style="--lightbackgroundcolor: #ff3359;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <blockquote> 
+   <h3 id="beanartistandchallengethestatusquo.">Be an artist and challenge the status quo.</h3> 
+   <footer>
+    Seth Godin
+   </footer> 
+  </blockquote>
+ </div> 
+ <figure class="">
+  <img src="media/seth-godin.jpg" class=" position-center-center" />
+  <figcaption>
+   Seth Godin portrait, by Brian Bloom
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light has-background-image default-container responsive"  data-background-image="media/team-rowing.jpg" data-state="background-filter-darken background-opacity-60" data-background-color="#ff3950"style="--lightbackgroundcolor: #ff3950;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="team">Team</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light has-background-image default-container responsive"  data-background-image="media/team-rowing.jpg" data-state="background-opacity-60 background-filter-darken" data-background-color="#ff3d49"style="--lightbackgroundcolor: #ff3d49;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h3 id="diversity">Diversity?</h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff4142"style="--lightbackgroundcolor: #ff4142;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="theteamdecideshowmuchworkcanbeaccomplished">The team decides how much work can be accomplished</h3> 
+  <p>Google tech talk with Ken Schwaber: <a href="https://www.youtube.com/watch?v=IyNPeTn8fpo">www.youtube.com/watch?v=IyNPeTn8fpo</a></p> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light v-split-container responsive"  data-background-color="#ff453b"style="--lightbackgroundcolor: #ff453b;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h3 id="keeptheteamsizebelow10">Keep the team size below 10</h3> 
+  <p>Because communication lines grow exponentially: <span class="math">\(n(n-1)/2\)</span></p>
+ </div> 
+ <figure class="">
+  <img src="media/lines-of-communication.png" class=" size-contain position-center-center" />
+  <figcaption>
+   Image: https://getlighthouse.com/blog/developing-leaders-team-grows-big/
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light v-split-container responsive"  data-background-color="#ff4934"style="--lightbackgroundcolor: #ff4934;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h3 id="usefeatureself-selectioninyourteam">Use feature self-selection in your team</h3> 
+  <p><a href="https://www.trademe.co.nz">www.trademe.co.nz</a></p>
+ </div> 
+ <figure class="">
+  <img src="media/creating-great-teams.jpg" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff4d2d"style="--lightbackgroundcolor: #ff4d2d;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="whatifyouneedmorethanoneteamtodeliverathing">What if you need more than one team to deliver a thing?</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff5226"style="--lightbackgroundcolor: #ff5226;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="scalingagile">Scaling Agile</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff561f"style="--lightbackgroundcolor: #ff561f;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="conway´slaw">Conway´s law</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light default-container responsive"  data-background-color="#ff5a18"style="--lightbackgroundcolor: #ff5a18;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <blockquote class="is-single-quote" lang="en"> 
+   <div class="line"></div> 
+   <h3 id="yoursystemarchitecturewillmirroryourorganization´scommunicationstructure">Your system architecture will mirror your organization´s communication structure</h3> 
+   <footer>
+     Melvin Conway 
+   </footer> 
+   <div class="line"></div> 
+  </blockquote>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light grid-container responsive"  data-background-color="#ff5f15"style="--lightbackgroundcolor: #ff5f15;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media">
+  <h4 id="conway´slawinpractice">Conway´s law in practice</h4> 
+  <p>Small and distributes teams lead to a modular service architecture. Large co-located teams lead to a monolithic architecture. </p>
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/conways-law.png" class=" size-contain position-center-center" />
+   </figure>
+  </div>
+  <p></p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff6412"style="--lightbackgroundcolor: #ff6412;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="seekforlooselycoupledteams">Seek for loosely coupled teams</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light cover-container responsive"  data-background-color="#ff690f"style="--lightbackgroundcolor: #ff690f;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="agilewillscaleitself">Agile will scale itself</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff6e0c"style="--lightbackgroundcolor: #ff6e0c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="youdonotneedascalingframework">You do not need a scaling framework</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff7309"style="--lightbackgroundcolor: #ff7309;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 id="teamswillspreadwordaboutusefulpracticesandlisteningteamswilladapt">Teams will spread word about useful practices and listening teams will adapt</h3> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light section-container responsive"  data-background-color="#ff7806"style="--lightbackgroundcolor: #ff7806;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <hgroup>
+   <p class="kicker">Take this with you</p> 
+   <h3 id="agilemeanscompletingmeaningfulthingsinshortintervals–tofosterlearning–whilecollaboratingasateam">Agile means completing meaningful things in short intervals – to foster learning – while collaborating as a team</h3>
+  </hgroup> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light has-background-image default-container responsive"  data-background-image="media/jump.jpg" data-state="background-opacity-60" data-background-color="#ff7d03"style="--lightbackgroundcolor: #ff7d03;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="enjoy">Enjoy!</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="light default-container responsive"  data-background-color="#ff8300"style="--lightbackgroundcolor: #ff8300;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h3 id="materials">Materials</h3> 
+  <ul> 
+   <li><a href="https://scrumguides.org">scrumguides.org</a>, Ken Schwaber and Jeff Sutherland</li> 
+   <li><a href="https://retromat.org/">retromat.org</a>, Corinna Baldauf</li> 
+   <li>The People´s Scrum, Tobias Mayer</li> 
+   <li>Denkwerkzeuge der Höchstleister, Wohland und Wiemeyer</li> 
+   <li>Agile Software Development with Scrum, Ken Schwaber and Mike Beedle</li> 
+   <li>Extreme Programming Explained, Kent Beck</li> 
+   <li>The Enterprise And Scrum, Ken Schwaber</li> 
+   <li>Scrum et al., Google tech talk with Ken Schwaber, <a href="https://www.youtube.com/watch?v=IyNPeTn8fpo">www.youtube.com/watch?v=IyNPeTn8fpo</a></li> 
+   <li><a href="https://basecamp.com/shapeup">Shape up</a>, Stop Running in Circles and Ship Work that Matters, by Ryan Singer</li> 
+   <li>Double diamond design process model, <a href="https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)">en.wikipedia.org/wiki/Double_Diamond_(design_process_model)</a></li> 
+   <li><a href="https://matthiasott.com/articles/saving-your-web-workflows-with-prototyping">Saving Your Web Workflows with Prototyping</a>, Matthias Ott</li> 
+   <li>Creating Great Teams, How Self-Selection Lets People Excel, Sandy Mamoli and David Mole</li> 
+   <li>Lean from the Trenches, Hendrik Kniberg</li> 
+   <li>Kanban, David J. Anderson</li> 
+   <li>User Story Mapping, Jeff Patton</li> 
+   <li>Turn the Ship Around, David Marquet</li> 
+   <li>Linchpin, are you indispensible?, Seth Godin</li> 
+   <li>Measure What Matters, John Doerr</li> 
+   <li>The balanced organization, Ulf Schneider, <a href="https://ulfschneider.io/2017-02-26-balanced-organization/">ulfschneider.io/2017–02–26-balanced-organization/</a></li> 
+   <li>Scrum and architecture, Ulf Schneider, <a href="https://ulfschneider.io/2011-06-27-scrum-and-architecture/">ulfschneider.io/2011–06–27-scrum-and-architecture/</a></li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+</div>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/d3v4.min.js"></script>
+<script src="engine/billboard.min.js"></script>
+<script src="engine/infographics.js"></script>
+<script src="engine/highlight.min.js"></script>
+<script src="engine/katex/katex.min.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
 </html>
