@@ -19,6 +19,7 @@ topics:
       - /2023-01-02-size-images/
   - title: Agile
     urls:
+      - /2026-06-23-why-agile-works/
       - /2023-05-17-agile-ia-presenter/
       - /2023-12-23-half-arsed-agile/
       - /2024-01-21-serious-play/
