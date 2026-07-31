@@ -59,6 +59,9 @@ export default async function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(["md", "html", "njk"])
   eleventyConfig.addPassthroughCopy({ "content/assets": "assets" })
 
+  // ignore the assets folder for templating
+  eleventyConfig.ignores.add("content/assets/**")
+
   eleventyConfig.addPassthroughCopy(
     { "_code/_fonts": "fonts" },
     {
