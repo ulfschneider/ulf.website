@@ -1,32 +1,42 @@
-const wrapperMap = new WeakMap()
+const stateMap = new WeakMap()
+
+function getState(element) {
+  return stateMap.get(element)
+}
 
 function getSuggestionWrapper(element) {
-  return wrapperMap.get(element) || null
+  return getState(element)?.wrapper || null
 }
 
 function hasVisibleSuggestionWrapper(element) {
   const wrapper = getSuggestionWrapper(element)
+
   return !!wrapper && wrapper.style.display !== "none"
 }
 
 function ensureSuggestionWrapper(element) {
-  let wrapper = getSuggestionWrapper(element)
+  const state = getState(element)
 
-  if (!wrapper) {
-    wrapper = document.createElement("ul")
-    wrapper.className = "auto-complete-suggestion"
-    element.insertAdjacentElement("afterend", wrapper)
-    wrapperMap.set(element, wrapper)
+  if (!state) {
+    throw new Error("Autocomplete element is not initialized")
   }
 
+  const wrapper = state.wrapper
+
+  wrapper.classList.add("auto-complete-suggestion")
   wrapper.style.display = "unset"
+
   return wrapper
 }
 
 function hideSuggestionWrapper(element) {
-  const wrapper = getSuggestionWrapper(element)
+  const state = getState(element)
 
-  if (!wrapper) return
+  if (!state) return
+
+  state.selectedIndex = -1
+
+  const wrapper = state.wrapper
 
   wrapper.style.display = "none"
   wrapper.replaceChildren()
@@ -54,6 +64,7 @@ function getSuggestionWrapperTopPosition(element, wrapper) {
 
 function trimSuggestionWrapperPosition(element) {
   const wrapper = getSuggestionWrapper(element)
+
   if (!wrapper) return
 
   const style = getComputedStyle(element)
@@ -77,15 +88,49 @@ function extractSuggestTitle(suggest) {
   )
 }
 
+/*
+ * aria-selected is only a reflection of state.selectedIndex.
+ *
+ * It is never used to determine which suggestion is selected.
+ */
+function updateSelection(element) {
+  const state = getState(element)
+
+  if (!state) return
+
+  const children = state.wrapper.children
+
+  for (let index = 0; index < children.length; index++) {
+    const item = children[index]
+
+    if (index === state.selectedIndex) {
+      item.setAttribute("aria-selected", "true")
+    } else {
+      item.removeAttribute("aria-selected")
+    }
+  }
+}
+
 function renderSuggestions({ element, suggestions = [], onSelect }) {
+  const state = getState(element)
+
+  if (!state) return
+
+  /*
+   * A completely new result set is being installed.
+   *
+   * Therefore an old selected index MUST NOT survive.
+   */
+  state.suggestions = suggestions
+  state.selectedIndex = -1
+  state.resultVersion++
+
   if (suggestions.length === 0) {
     hideSuggestionWrapper(element)
     return
   }
 
   const wrapper = ensureSuggestionWrapper(element)
-
-  // Build everything first. Don't force layout during the loop.
   const fragment = document.createDocumentFragment()
 
   for (const suggestion of suggestions) {
@@ -96,105 +141,96 @@ function renderSuggestions({ element, suggestions = [], onSelect }) {
 
     item.textContent = extractSuggestTitle(suggestion)
 
-    if (key) {
-      item.dataset.key = key
+    if (key != null) {
+      item.dataset.key = String(key)
     }
 
+    /*
+     * Keep the input focused while selecting with a mouse.
+     */
     item.addEventListener("mousedown", (event) => {
-      // Prevent input blur when selecting a suggestion.
       event.preventDefault()
     })
 
     item.addEventListener("click", () => {
       element.value = item.textContent
-      element.focus()
       hideSuggestionWrapper(element)
-
+      element.focus()
       onSelect?.(suggestion)
     })
 
     fragment.appendChild(item)
   }
 
+  /*
+   * Replace the entire list at once.
+   */
   wrapper.replaceChildren(fragment)
 
-  // Do this ONCE, after all DOM has been added.
+  /*
+   * selectedIndex is -1, so this explicitly guarantees
+   * that nothing in the new list is selected.
+   */
+  updateSelection(element)
   trimSuggestionWrapperPosition(element)
 }
 
-function getSelectedSuggestion(element, data) {
-  const wrapper = getSuggestionWrapper(element)
+function getSelectedSuggestion(element) {
+  const state = getState(element)
 
-  if (!wrapper || wrapper.style.display === "none") {
+  if (!state) {
     return undefined
   }
 
-  const selected = wrapper.querySelector("[aria-selected]")
-  if (!selected) {
+  if (
+    state.selectedIndex < 0 ||
+    state.selectedIndex >= state.suggestions.length
+  ) {
     return undefined
   }
 
-  if (!data) {
-    return selected.textContent
-  }
-
-  const key = selected.dataset.key
-
-  if (key) {
-    for (const entry of data) {
-      if (key === extractSuggestKey(entry)) {
-        return entry
-      }
-    }
-  }
-
-  return selected.textContent
+  return state.suggestions[state.selectedIndex]
 }
 
-function indicateSuggestion(event) {
-  if (event.key !== "ArrowDown" && event.key !== "ArrowUp") {
+function moveSelection(element, direction) {
+  const state = getState(element)
+
+  if (!state) return
+
+  if (!hasVisibleSuggestionWrapper(element)) {
     return
   }
 
-  const element = event.target
-  const wrapper = getSuggestionWrapper(element)
+  const count = state.wrapper.children.length
 
-  if (!wrapper || wrapper.style.display === "none") {
+  if (count === 0) {
+    state.selectedIndex = -1
     return
   }
 
-  const suggestions = [...wrapper.children]
-
-  if (suggestions.length === 0) {
-    return
-  }
-
-  let selectedIndex = suggestions.findIndex((suggestion) =>
-    suggestion.hasAttribute("aria-selected")
-  )
-
-  if (selectedIndex >= 0) {
-    suggestions[selectedIndex].removeAttribute("aria-selected")
-  }
-
-  if (event.key === "ArrowUp") {
-    selectedIndex--
+  /*
+   * Nothing is selected yet.
+   */
+  if (state.selectedIndex === -1) {
+    state.selectedIndex = direction === "down" ? 0 : count - 1
+  } else if (direction === "down") {
+    state.selectedIndex = (state.selectedIndex + 1) % count
   } else {
-    selectedIndex++
+    state.selectedIndex = (state.selectedIndex - 1 + count) % count
   }
 
-  selectedIndex = (selectedIndex + suggestions.length) % suggestions.length
-
-  suggestions[selectedIndex].setAttribute("aria-selected", "true")
+  updateSelection(element)
 }
 
 function throttle(func, wait = 100) {
   let timeout = null
   let trailingArgs = null
+  let trailingThis = null
 
   return function (...args) {
     if (timeout) {
       trailingArgs = args
+      trailingThis = this
       return
     }
 
@@ -205,151 +241,382 @@ function throttle(func, wait = 100) {
 
       if (trailingArgs) {
         const args = trailingArgs
+        const context = trailingThis
+
         trailingArgs = null
-        func.apply(this, args)
+        trailingThis = null
+
+        func.apply(context, args)
       }
     }, wait)
   }
 }
 
-function debounce(func, wait = 100) {
-  let timeout = null
+/*
+ * Debounced query manager.
+ *
+ * queryData must have this API:
+ *
+ *   async function queryData(value, signal) {
+ *     return suggestions
+ *   }
+ *
+ * It returns:
+ *
+ *   Promise<Array>
+ */
+function createSuggestionFetcher(queryData, wait = 100) {
+  let timer = null
+  let controller = null
+  let requestVersion = 0
+  let lastQuery = null
 
-  return function (...args) {
-    clearTimeout(timeout)
+  function cancel() {
+    clearTimeout(timer)
+    timer = null
 
-    timeout = setTimeout(() => {
-      func.apply(this, args)
-    }, wait)
+    controller?.abort()
+    controller = null
+
+    /*
+     * Invalidate all outstanding requests.
+     */
+    requestVersion++
+
+    /*
+     * Important:
+     * after cancelling, the same query must be allowed
+     * to run again.
+     */
+    lastQuery = null
   }
-}
 
-function suggest({ element, event, queryData, data, threshold, onSelect }) {
-  const key = event.key
+  function query(value, callback) {
+    value = value.trim()
 
-  const queryDataCallback = (err, suggestions = []) => {
-    data.length = 0
-    data.push(...suggestions)
-
-    if (err) {
-      renderSuggestions({ element })
-      console.error(err)
+    if (!value) {
+      cancel()
       return
     }
 
+    /*
+     * Don't issue the same query twice.
+     */
+    if (value === lastQuery) {
+      return
+    }
+
+    lastQuery = value
+
+    clearTimeout(timer)
+
+    timer = setTimeout(async () => {
+      timer = null
+
+      /*
+       * Abort the previous request.
+       */
+      controller?.abort()
+
+      controller = new AbortController()
+
+      const currentVersion = ++requestVersion
+      const signal = controller.signal
+
+      try {
+        const suggestions = await queryData(value, signal)
+
+        /*
+         * A newer request has already started.
+         * Ignore this result completely.
+         */
+        if (currentVersion !== requestVersion) {
+          return
+        }
+
+        callback(null, suggestions ?? [])
+      } catch (error) {
+        /*
+         * Abort is expected.
+         */
+        if (error?.name === "AbortError") {
+          return
+        }
+
+        /*
+         * Ignore errors from stale requests too.
+         */
+        if (currentVersion !== requestVersion) {
+          return
+        }
+
+        callback(error, [])
+      }
+    }, wait)
+  }
+
+  return {
+    query,
+    cancel
+  }
+}
+
+function querySuggestions(element) {
+  const state = getState(element)
+
+  if (!state) return
+
+  state.fetcher.query(element.value, (error, suggestions) => {
+    const currentState = getState(element)
+
+    if (!currentState) return
+
+    if (error) {
+      console.error(error)
+
+      /*
+       * Installing an empty result set also resets
+       * selectedIndex.
+       */
+      renderSuggestions({
+        element
+      })
+
+      return
+    }
+
+    /*
+     * renderSuggestions() replaces both the data and
+     * selection state atomically from our perspective.
+     */
     renderSuggestions({
       element,
       suggestions,
-      onSelect
+      onSelect: currentState.onSelect
     })
+  })
+}
 
-    indicateSuggestion(event)
+function handleKeyEvent({ element, event, threshold }) {
+  const state = getState(element)
+
+  if (!state) return
+
+  const key = event.key
+
+  /*
+   * Escape:
+   *
+   * Close autocomplete if it is open.
+   *
+   * Do NOT call preventDefault().
+   * Do NOT call stopPropagation().
+   *
+   * This allows a surrounding <dialog> to process Escape.
+   */
+  if (key === "Escape") {
+    if (hasVisibleSuggestionWrapper(element)) {
+      hideSuggestionWrapper(element)
+    } else {
+      state.fetcher.cancel()
+    }
+
+    return
+  }
+
+  /*
+   * Arrow navigation is handled only during keydown.
+   */
+  if (event.type === "keydown" && (key === "ArrowDown" || key === "ArrowUp")) {
+    if (hasVisibleSuggestionWrapper(element)) {
+      moveSelection(element, key === "ArrowDown" ? "down" : "up")
+    } else {
+      querySuggestions(element)
+    }
+
+    return
+  }
+
+  /*
+   * Enter selects the currently selected suggestion.
+   */
+  if (event.type === "keydown" && key === "Enter") {
+    const selection = getSelectedSuggestion(element)
+
+    if (selection !== undefined) {
+      element.value = extractSuggestTitle(selection)
+
+      hideSuggestionWrapper(element)
+
+      element.focus()
+
+      if (state.onSelect) {
+        event.preventDefault()
+        event.stopImmediatePropagation()
+
+        state.onSelect(selection)
+      }
+    }
+
+    return
+  }
+
+  /*
+   * Everything below this point is for normal typing,
+   * which is processed on keyup.
+   */
+  if (event.type !== "keyup") {
+    return
+  }
+
+  /*
+   * Don't search for navigation/control keys.
+   */
+  if (
+    key === "ArrowDown" ||
+    key === "ArrowUp" ||
+    key === "ArrowLeft" ||
+    key === "ArrowRight" ||
+    key === "Enter" ||
+    key === "Escape" ||
+    key === "Tab"
+  ) {
+    return
   }
 
   const value = element.value.trim()
 
-  // Escape should only deal with the autocomplete.
-  // Don't preventDefault(), so a surrounding <dialog> can
-  // still handle Escape.
-  if (key === "Escape") {
-    if (hasVisibleSuggestionWrapper(element)) {
-      hideSuggestionWrapper(element)
-    }
-    return
-  }
-
   const meetsThreshold = !threshold || value.length >= threshold
 
   if (!meetsThreshold) {
-    if (event.type === "keyup") {
-      renderSuggestions({ element })
-    }
+    state.fetcher.cancel()
+
+    renderSuggestions({
+      element
+    })
+
     return
   }
 
-  if (event.type === "keydown") {
-    if (key === "ArrowDown" || key === "ArrowUp") {
-      if (hasVisibleSuggestionWrapper(element)) {
-        indicateSuggestion(event)
-      } else {
-        queryData(element.value, queryDataCallback)
-      }
-
-      return
-    }
-
-    if (key === "Enter") {
-      const selection = getSelectedSuggestion(element, data)
-
-      if (selection !== undefined) {
-        element.value = extractSuggestTitle(selection)
-        hideSuggestionWrapper(element)
-        element.focus()
-
-        if (onSelect) {
-          event.preventDefault()
-          event.stopImmediatePropagation()
-          onSelect(selection)
-        }
-      }
-
-      return
-    }
-  }
-
-  if (event.type === "keyup") {
-    queryData(element.value, queryDataCallback)
-  }
+  querySuggestions(element)
 }
 
-function prepareElement({ element, queryData, data, threshold, onSelect }) {
-  const query = debounce(queryData, 200)
+function findSuggestionWrapper(element) {
+  /*
+   * First use the explicitly specified wrapper ID.
+   */
+  const wrapperId = element.getAttribute("suggestion-wrapper-id")
 
-  const wrapper = document.createElement("ul")
-  wrapper.className = "auto-complete-suggestion"
+  if (wrapperId) {
+    const wrapper = document.getElementById(wrapperId)
+
+    if (wrapper) {
+      return wrapper
+    }
+  }
+
+  /*
+   * Fall back to an adjacent UL.
+   */
+  const next = element.nextElementSibling
+
+  if (next && next.tagName === "UL") {
+    return next
+  }
+
+  return null
+}
+
+function prepareElement({ element, queryData, threshold, onSelect }) {
+  /*
+   * Don't initialize the same input twice.
+   */
+  if (stateMap.has(element)) {
+    return
+  }
+
+  let wrapper = findSuggestionWrapper(element)
+
+  /*
+   * Only create the UL if there isn't already one.
+   */
+  if (!wrapper) {
+    wrapper = document.createElement("ul")
+
+    element.insertAdjacentElement("afterend", wrapper)
+  }
+
+  wrapper.classList.add("auto-complete-suggestion")
+
   wrapper.style.display = "none"
 
-  element.insertAdjacentElement("afterend", wrapper)
-  wrapperMap.set(element, wrapper)
+  const state = {
+    wrapper,
+
+    /*
+     * The suggestions currently represented by the DOM.
+     */
+    suggestions: [],
+
+    /*
+     * -1 = nothing selected.
+     *
+     * This is the ONLY source of truth for selection.
+     */
+    selectedIndex: -1,
+
+    /*
+     * Incremented whenever a new result set is installed.
+     */
+    resultVersion: 0,
+
+    fetcher: null,
+
+    onSelect,
+
+    reposition: null
+  }
+
+  state.fetcher = createSuggestionFetcher(queryData, 100)
+
+  stateMap.set(element, state)
 
   element.addEventListener("blur", () => {
+    state.fetcher.cancel()
+
+    state.suggestions = []
+    state.selectedIndex = -1
+
     hideSuggestionWrapper(element)
   })
 
   element.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" && getSelectedSuggestion(element)) {
-      event.preventDefault()
-    }
-
-    suggest({
+    handleKeyEvent({
       element,
       event,
-      queryData: query,
-      data,
-      threshold,
-      onSelect
+      threshold
     })
   })
 
   element.addEventListener("keyup", (event) => {
-    suggest({
+    handleKeyEvent({
       element,
       event,
-      queryData: query,
-      data,
-      threshold,
-      onSelect
+      threshold
     })
   })
 
-  const reposition = throttle(() => {
+  state.reposition = throttle(() => {
     if (hasVisibleSuggestionWrapper(element)) {
       trimSuggestionWrapperPosition(element)
     }
   })
 
-  window.addEventListener("resize", reposition)
-  window.addEventListener("scroll", reposition, { passive: true })
+  window.addEventListener("resize", state.reposition)
+
+  window.addEventListener("scroll", state.reposition, {
+    passive: true
+  })
 }
 
 export function AutoComplete({ selector, queryData, threshold, onSelect }) {
@@ -357,7 +624,6 @@ export function AutoComplete({ selector, queryData, threshold, onSelect }) {
     prepareElement({
       element,
       queryData,
-      data: [],
       threshold,
       onSelect
     })
