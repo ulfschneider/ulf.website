@@ -1,0 +1,82 @@
+<nav
+  data-pagefind-ignore
+  class="fixed z-50 top-0 left-0 right-0 p-base md:px-xl lg:px-2xl bg-canvas flex flex-row gap-md"
+>
+  <button id="navigate">
+    <span>Navigate</span>{% include "key.html" key: site.nav.navigate
+    actionSelector: "#navigate" %}
+  </button>
+  <a
+    id="back-to-top"
+    href="{{site.nav.top.path}}"
+    class="button hidden !no-underline"
+  >
+    <span class="flex' flex-row gap-sm">
+      <span>Back to Top</span>{% include "key.html" key: site.nav.top %}
+    </span>
+  </a>
+</nav>
+<dialog
+  class="w-auto h-auto max-w-none max-h-none fixed inset-0 px-base md:px-xl lg:px-2xl pb-xl bg-canvas text-write"
+  id="navigate-dialog"
+>
+  <div class="max-w-screen-xl mx-auto flex flex-col gap-md">
+    <div class="py-base">
+      <button id="close-navigation">Close navigation <kbd>ESC</kbd></button>
+    </div>
+    <div class="flex-1 flex flex-col gap-lg">
+      <div>{%- include "search-field.html" id: "navigate-search" -%}</div>
+      <div>
+        <div class="label">Navigate {{site.name}}</div>
+        <nav class="mt-md">
+          <ul class="reset flex flex-col flex-wrap gap-y-md w-2xl">
+            <li class="flex flex-row gap-sm">
+              <a href="{{site.nav.home.path}}" class="grow">Home</a>
+              {% include "key.html" key: site.nav.home %}
+            </li>
+            <li class="flex flex-row gap-sm">
+              <a href="{{site.nav.blog.path}}" class="grow">Blog</a> {% include
+              "key.html" key: site.nav.blog %}
+            </li>
+            <li class="flex flex-row gap-sm">
+              <a href="{{site.nav.about.path}}" class="grow">About</a> {%
+              include "key.html" key: site.nav.about %}
+            </li>
+            <li class="flex flex-row gap-sm">
+              <a href="{{site.nav.colophon.path}}" class="grow">Colophon</a>
+              {% include "key.html" key: site.nav.colophon %}
+            </li>
+            <li class="flex flex-row gap-sm">
+              <a href="{{site.rss.url}}" class="grow" type="application/rss+xml"
+                >RSS</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    // register the search key,
+    // the other keys are registered inside of the dialog already.
+    // script is executed even if the dialog is not open!
+    registerKeyNav("{{site.nav.search.key}}", "{{site.nav.search.path}}")
+
+    const navigateButton = document.getElementById("navigate")
+    const closeButton = document.getElementById("close-navigation")
+    const navigateDialog = document.getElementById("navigate-dialog")
+
+    navigateDialog.addEventListener("close", () => {
+      document.documentElement.classList.remove("overflow-hidden")
+    })
+
+    closeButton.addEventListener("click", () => {
+      navigateDialog.close()
+    })
+
+    navigateButton.addEventListener("click", () => {
+      document.documentElement.classList.add("overflow-hidden")
+      navigateDialog.showModal()
+    })
+  </script>
+</dialog>

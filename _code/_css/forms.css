@@ -19,6 +19,7 @@
   textarea,
   fieldset,
   label,
+  .label,
   legend {
     @apply font-body placeholder-meta caret-write appearance-none rounded-none font-normal text-inherit;
   }
@@ -64,11 +65,13 @@
     @apply cursor-pointer;
   }
 
-  label > * {
-    @apply my-xs;
+  label > *,
+  .label > * {
+    @apply my-sm;
   }
 
   label,
+  .label,
   legend {
     @apply block align-baseline font-bold;
   }

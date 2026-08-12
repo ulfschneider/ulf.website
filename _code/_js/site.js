@@ -60,6 +60,11 @@ addEventListener("scroll", throttle(maintainBackToTop))
 addEventListener("resize", throttle(maintainBackToTop))
 
 //keyboard navigation
+
+function registerKeyAction(key, callback) {
+  registerKeyNav(key, "", callback)
+}
+
 function registerKeyNav(key, path, callback) {
   if (key && (path || callback)) {
     addEventListener("keydown", (event) => {
@@ -82,8 +87,6 @@ function registerKeyNav(key, path, callback) {
         if (
           !(event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
         ) {
-          const url = new URL(location.href)
-
           if (callback) {
             event.preventDefault()
             event.stopPropagation()
@@ -91,7 +94,8 @@ function registerKeyNav(key, path, callback) {
               return
             }
           }
-          if (path && url.pathname != path) {
+
+          if (path) {
             event.preventDefault()
             event.stopPropagation()
             location.href = path

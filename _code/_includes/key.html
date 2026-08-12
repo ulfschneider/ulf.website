@@ -9,9 +9,14 @@ assign path = nav %}{% endif %}
 </span>
 <script>
   if ("{{focusSelector}}") {
-    registerKeyNav("{{key.key}}", "{{path}}", () => {
+    registerKeyAction("{{key.key}}", () => {
       const element = document.querySelector("{{focusSelector}}")
       element?.focus()
+    })
+  } else if ("{{actionSelector}}") {
+    registerKeyAction("{{key.key}}", () => {
+      const element = document.querySelector("{{actionSelector}}")
+      element?.click()
     })
   } else if ("{{path}}") {
     registerKeyNav("{{key.key}}", "{{path}}")

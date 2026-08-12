@@ -105,6 +105,10 @@ export default {
       key: "c",
       path: "/colophon/"
     },
+    escape: {
+      key: "Escape",
+      keyLabel: "ESC"
+    },
     top: {
       key: "t",
       path: "#top"

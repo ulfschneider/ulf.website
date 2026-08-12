@@ -1,372 +1,365 @@
+const wrapperMap = new WeakMap()
+
 function getSuggestionWrapper(element) {
-  let suggestionWrapperId = element.getAttribute("suggestion-wrapper-id")
-  return document.querySelector("#" + suggestionWrapperId)
+  return wrapperMap.get(element) || null
 }
 
 function hasVisibleSuggestionWrapper(element) {
-  let suggestionWrapper = getSuggestionWrapper(element)
-  return suggestionWrapper && suggestionWrapper.style.display != "none"
+  const wrapper = getSuggestionWrapper(element)
+  return !!wrapper && wrapper.style.display !== "none"
 }
 
 function ensureSuggestionWrapper(element) {
-  let suggestionWrapper = getSuggestionWrapper(element)
-  if (!suggestionWrapper) {
-    suggestionWrapper = document.createElement("ul")
-    element.insertAdjacentElement("afterend", suggestionWrapper)
-  }
-  suggestionWrapper.classList.add("auto-complete-suggestion")
-  suggestionWrapper.style.display = "unset"
-  return suggestionWrapper
-}
+  let wrapper = getSuggestionWrapper(element)
 
-function isMarkedHidden(element) {
-  let suggestionWrapper = getSuggestionWrapper(element)
-  return (
-    suggestionWrapper && suggestionWrapper.getAttribute("mark-hidden") == "true"
-  )
-}
-
-function unmarkHidden(element) {
-  let suggestionWrapper = getSuggestionWrapper(element)
-  if (suggestionWrapper) {
-    suggestionWrapper.removeAttribute("mark-hidden")
+  if (!wrapper) {
+    wrapper = document.createElement("ul")
+    wrapper.className = "auto-complete-suggestion"
+    element.insertAdjacentElement("afterend", wrapper)
+    wrapperMap.set(element, wrapper)
   }
-}
 
-function markHidden(element) {
-  let suggestionWrapper = getSuggestionWrapper(element)
-  if (suggestionWrapper) {
-    suggestionWrapper.setAttribute("mark-hidden", true)
-  }
+  wrapper.style.display = "unset"
+  return wrapper
 }
 
 function hideSuggestionWrapper(element) {
-  let suggestionWrapper = getSuggestionWrapper(element)
-  if (suggestionWrapper) {
-    markHidden(element)
-    suggestionWrapper.style.display = "none"
-    suggestionWrapper.innerHTML = ""
-  }
+  const wrapper = getSuggestionWrapper(element)
+
+  if (!wrapper) return
+
+  wrapper.style.display = "none"
+  wrapper.replaceChildren()
 }
 
-function getSuggestionWrapperTopPosition(element, suggestionWrapper) {
-  let elementStyle = getComputedStyle(element)
-  let elementRect = element.getBoundingClientRect()
-  let suggestRect = suggestionWrapper.getBoundingClientRect()
-  let outlineTrim =
-    parseInt(elementStyle.outlineOffset) + parseInt(elementStyle.outlineWidth)
+function getSuggestionWrapperTopPosition(element, wrapper) {
+  const style = getComputedStyle(element)
+  const elementRect = element.getBoundingClientRect()
+  const suggestRect = wrapper.getBoundingClientRect()
+
+  const outlineTrim =
+    (parseInt(style.outlineOffset, 10) || 0) +
+    (parseInt(style.outlineWidth, 10) || 0)
 
   if (element.offsetTop < suggestRect.height) {
-    //there is not enough space at the top anyway
-    //attach suggestions to the bottom of the input field
-    return element.offsetTop + elementRect.height + outlineTrim + "px"
-  } else if (elementRect.bottom + suggestRect.height > window.innerHeight) {
-    //there is not enough space to the bottom of the viewport
-    //but there is enough space to the top of the document
-    //attach suggestions to the top of the input field
-    return element.offsetTop - suggestRect.height - outlineTrim + "px"
-  } else {
-    //in any other case
-    //attach suggestions to the bottom of the input field
-    return element.offsetTop + elementRect.height + outlineTrim + "px"
+    return element.offsetTop + elementRect.height + outlineTrim
   }
+
+  if (elementRect.bottom + suggestRect.height > window.innerHeight) {
+    return element.offsetTop - suggestRect.height - outlineTrim
+  }
+
+  return element.offsetTop + elementRect.height + outlineTrim
 }
 
 function trimSuggestionWrapperPosition(element) {
-  let suggestionWrapper = getSuggestionWrapper(element)
-  if (suggestionWrapper) {
-    let elementStyle = getComputedStyle(element)
+  const wrapper = getSuggestionWrapper(element)
+  if (!wrapper) return
 
-    suggestionWrapper.style.marginLeft = elementStyle.marginLeft
-    suggestionWrapper.style.marginRight = elementStyle.marginRight
-    suggestionWrapper.style.width = element.offsetWidth + "px"
+  const style = getComputedStyle(element)
 
-    suggestionWrapper.style.top = getSuggestionWrapperTopPosition(
-      element,
-      suggestionWrapper
-    )
-  }
-}
-
-function extractSuggestTitle(suggest) {
-  const key = extractSuggestKey(suggest)
-
-  if (suggest.title) {
-    return suggest.title
-  } else if (suggest.meta && suggest.meta.title) {
-    return suggest.meta.title
-  } else if (key) {
-    return key
-  }
-
-  return suggest
+  wrapper.style.marginLeft = style.marginLeft
+  wrapper.style.marginRight = style.marginRight
+  wrapper.style.width = `${element.offsetWidth}px`
+  wrapper.style.top = `${getSuggestionWrapperTopPosition(element, wrapper)}px`
 }
 
 function extractSuggestKey(suggest) {
-  return suggest.key || suggest.id || suggest.url
+  return suggest?.key || suggest?.id || suggest?.url
 }
 
-function renderSuggestions({ element, keyEvent, suggestions = [], onSelect }) {
-  if (isMarkedHidden(element)) {
-    //this can only happen by callbacks returning after
-    //the autosuggestion has been hidden
-    return
-  } else if (suggestions.length == 0) {
+function extractSuggestTitle(suggest) {
+  return (
+    suggest?.title ||
+    suggest?.meta?.title ||
+    extractSuggestKey(suggest) ||
+    suggest
+  )
+}
+
+function renderSuggestions({ element, suggestions = [], onSelect }) {
+  if (suggestions.length === 0) {
     hideSuggestionWrapper(element)
-  } else {
-    let suggestionWrapper = ensureSuggestionWrapper(element)
-    suggestionWrapper.innerHTML = ""
-    trimSuggestionWrapperPosition(element)
-
-    for (let suggest of suggestions) {
-      if (suggest) {
-        let suggestElement = document.createElement("li")
-        suggestElement.innerText = extractSuggestTitle(suggest)
-        const key = extractSuggestKey(suggest)
-        if (key) {
-          suggestElement.setAttribute("key", key)
-        }
-
-        suggestElement.addEventListener("mousedown", (event) => {
-          //stop onblur for the element from firing when selecting
-          //a suggestion with a pointing device
-          event.preventDefault()
-        })
-        suggestElement.addEventListener("click", (event) => {
-          element.value = event.target.innerText
-          element.focus()
-          hideSuggestionWrapper(element)
-
-          if (onSelect) {
-            onSelect(suggest)
-          }
-        })
-        suggestionWrapper.appendChild(suggestElement)
-        trimSuggestionWrapperPosition(element)
-      }
-    }
+    return
   }
+
+  const wrapper = ensureSuggestionWrapper(element)
+
+  // Build everything first. Don't force layout during the loop.
+  const fragment = document.createDocumentFragment()
+
+  for (const suggestion of suggestions) {
+    if (!suggestion) continue
+
+    const item = document.createElement("li")
+    const key = extractSuggestKey(suggestion)
+
+    item.textContent = extractSuggestTitle(suggestion)
+
+    if (key) {
+      item.dataset.key = key
+    }
+
+    item.addEventListener("mousedown", (event) => {
+      // Prevent input blur when selecting a suggestion.
+      event.preventDefault()
+    })
+
+    item.addEventListener("click", () => {
+      element.value = item.textContent
+      element.focus()
+      hideSuggestionWrapper(element)
+
+      onSelect?.(suggestion)
+    })
+
+    fragment.appendChild(item)
+  }
+
+  wrapper.replaceChildren(fragment)
+
+  // Do this ONCE, after all DOM has been added.
+  trimSuggestionWrapperPosition(element)
 }
 
 function getSelectedSuggestion(element, data) {
-  if (hasVisibleSuggestionWrapper(element)) {
-    let suggestionWrapper = getSuggestionWrapper(element)
-    let suggestions = [...suggestionWrapper.childNodes]
-    for (let i = 0; i < suggestions.length; i++) {
-      if (suggestions[i].getAttribute("aria-selected")) {
-        if (data) {
-          //if the autocomplete data is more than just an array of
-          //strings, try to return the original data entries
-          const key = suggestions[i].getAttribute("key")
-          if (key) {
-            for (const entry of data) {
-              if (key == extractSuggestKey(entry)) {
-                return entry
-              }
-            }
-          }
-        }
-        return suggestions[i].innerText
+  const wrapper = getSuggestionWrapper(element)
+
+  if (!wrapper || wrapper.style.display === "none") {
+    return undefined
+  }
+
+  const selected = wrapper.querySelector("[aria-selected]")
+  if (!selected) {
+    return undefined
+  }
+
+  if (!data) {
+    return selected.textContent
+  }
+
+  const key = selected.dataset.key
+
+  if (key) {
+    for (const entry of data) {
+      if (key === extractSuggestKey(entry)) {
+        return entry
       }
     }
   }
+
+  return selected.textContent
 }
 
-function indicateSuggestion(keyEvent) {
-  if (
-    (keyEvent.key == "ArrowDown" || keyEvent.key == "ArrowUp") &&
-    hasVisibleSuggestionWrapper(keyEvent.target)
-  ) {
-    let suggestionWrapper = getSuggestionWrapper(keyEvent.target)
-    let suggestions = [...suggestionWrapper.childNodes]
-
-    if (keyEvent.key == "ArrowUp") {
-      suggestions = suggestions.reverse()
-    }
-
-    let selectedIndex = -1
-    for (let i = 0; i < suggestions.length; i++) {
-      if (suggestions[i].getAttribute("aria-selected")) {
-        selectedIndex = i
-      }
-    }
-
-    if (selectedIndex >= 0) {
-      suggestions[selectedIndex].removeAttribute("aria-selected")
-    }
-    selectedIndex = ++selectedIndex % suggestions.length
-    suggestions[selectedIndex].setAttribute("aria-selected", true)
+function indicateSuggestion(event) {
+  if (event.key !== "ArrowDown" && event.key !== "ArrowUp") {
+    return
   }
+
+  const element = event.target
+  const wrapper = getSuggestionWrapper(element)
+
+  if (!wrapper || wrapper.style.display === "none") {
+    return
+  }
+
+  const suggestions = [...wrapper.children]
+
+  if (suggestions.length === 0) {
+    return
+  }
+
+  let selectedIndex = suggestions.findIndex((suggestion) =>
+    suggestion.hasAttribute("aria-selected")
+  )
+
+  if (selectedIndex >= 0) {
+    suggestions[selectedIndex].removeAttribute("aria-selected")
+  }
+
+  if (event.key === "ArrowUp") {
+    selectedIndex--
+  } else {
+    selectedIndex++
+  }
+
+  selectedIndex = (selectedIndex + suggestions.length) % suggestions.length
+
+  suggestions[selectedIndex].setAttribute("aria-selected", "true")
 }
 
 function throttle(func, wait = 100) {
-  let timeout
-  let trailing
-  return function () {
-    let context = this,
-      args = arguments
+  let timeout = null
+  let trailingArgs = null
 
+  return function (...args) {
     if (timeout) {
-      trailing = true
+      trailingArgs = args
       return
     }
-    trailing = false
-    func.apply(context, args)
 
-    let later = function () {
+    func.apply(this, args)
+
+    timeout = setTimeout(() => {
       timeout = null
-      if (trailing) {
-        func.apply(context, args)
-      }
-    }
 
-    timeout = setTimeout(later, wait)
+      if (trailingArgs) {
+        const args = trailingArgs
+        trailingArgs = null
+        func.apply(this, args)
+      }
+    }, wait)
   }
 }
 
-function debounce(func, wait = 100, immediate) {
-  var timeout
-  return function () {
-    var context = this,
-      args = arguments
-    var later = function () {
-      timeout = null
-      if (!immediate) func.apply(context, args)
-    }
-    var callNow = immediate && !timeout
+function debounce(func, wait = 100) {
+  let timeout = null
+
+  return function (...args) {
     clearTimeout(timeout)
-    timeout = setTimeout(later, wait)
-    if (callNow) func.apply(context, args)
+
+    timeout = setTimeout(() => {
+      func.apply(this, args)
+    }, wait)
   }
 }
 
-function suggest({ element, keyEvent, queryData, data, threshold, onSelect }) {
-  const queryDataCallback = function (err, suggestions) {
-    data.length = 0 //this will clear the contents of the array, but keep the array!
+function suggest({ element, event, queryData, data, threshold, onSelect }) {
+  const key = event.key
+
+  const queryDataCallback = (err, suggestions = []) => {
+    data.length = 0
     data.push(...suggestions)
-    if (!err) {
-      renderSuggestions({
-        element: element,
-        keyEvent: keyEvent,
-        suggestions: suggestions,
-        onSelect: onSelect
-      })
-      indicateSuggestion(keyEvent)
-    } else {
-      renderSuggestions({ element: element })
-      console.log(err)
+
+    if (err) {
+      renderSuggestions({ element })
+      console.error(err)
+      return
     }
+
+    renderSuggestions({
+      element,
+      suggestions,
+      onSelect
+    })
+
+    indicateSuggestion(event)
   }
 
-  unmarkHidden(element)
-  if (
-    !threshold ||
-    (threshold > 0 && element.value.trim().length >= threshold)
-  ) {
-    if (
-      keyEvent.key == "ArrowUp" ||
-      keyEvent.key == "ArrowDown" ||
-      keyEvent.key == "ArrowLeft" ||
-      keyEvent.key == "ArrowRight"
-    ) {
-      if (keyEvent.type == "keydown") {
-        //use keydown event for arrow keys
-        if (!hasVisibleSuggestionWrapper(element)) {
-          queryData(element.value, queryDataCallback)
-        } else {
-          indicateSuggestion(keyEvent)
-        }
+  const value = element.value.trim()
+
+  // Escape should only deal with the autocomplete.
+  // Don't preventDefault(), so a surrounding <dialog> can
+  // still handle Escape.
+  if (key === "Escape") {
+    if (hasVisibleSuggestionWrapper(element)) {
+      hideSuggestionWrapper(element)
+    }
+    return
+  }
+
+  const meetsThreshold = !threshold || value.length >= threshold
+
+  if (!meetsThreshold) {
+    if (event.type === "keyup") {
+      renderSuggestions({ element })
+    }
+    return
+  }
+
+  if (event.type === "keydown") {
+    if (key === "ArrowDown" || key === "ArrowUp") {
+      if (hasVisibleSuggestionWrapper(element)) {
+        indicateSuggestion(event)
+      } else {
+        queryData(element.value, queryDataCallback)
       }
-    } else if (keyEvent.key == "Enter" && getSelectedSuggestion(element)) {
-      if (keyEvent.type == "keydown") {
-        //use keydown event for Enter key
-        const selection = getSelectedSuggestion(element, data)
+
+      return
+    }
+
+    if (key === "Enter") {
+      const selection = getSelectedSuggestion(element, data)
+
+      if (selection !== undefined) {
         element.value = extractSuggestTitle(selection)
         hideSuggestionWrapper(element)
         element.focus()
 
         if (onSelect) {
-          keyEvent.preventDefault()
-          keyEvent.stopImmediatePropagation()
+          event.preventDefault()
+          event.stopImmediatePropagation()
           onSelect(selection)
         }
       }
-    } else if (keyEvent.key == "Enter" || keyEvent.key == "Escape") {
-      if (keyEvent.type == "keydown") {
-        //use keydown event for Enter and Escape keys
-        if (keyEvent.key == "Escape") {
-          keyEvent.preventDefault()
-          keyEvent.stopImmediatePropagation()
-        }
-        hideSuggestionWrapper(element)
-      }
-    } else if (keyEvent.type == "keyup") {
-      //use keyup event for everything else
-      queryData(element.value, queryDataCallback)
+
+      return
     }
-  } else if (keyEvent.type == "keyup") {
-    queryDataCallback(null, [])
+  }
+
+  if (event.type === "keyup") {
+    queryData(element.value, queryDataCallback)
   }
 }
 
 function prepareElement({ element, queryData, data, threshold, onSelect }) {
-  let suggestionWrapperId = element.getAttribute("suggestion-wrapper-id")
+  const query = debounce(queryData, 200)
 
-  if (!suggestionWrapperId) {
-    do {
-      suggestionWrapperId =
-        "autocomplete-" + Date.now() + Math.floor(Math.random() * 1000)
-    } while (document.querySelector("#" + suggestionWrapperId))
-    element.setAttribute("suggestion-wrapper-id", suggestionWrapperId)
-  }
-  hideSuggestionWrapper(element)
+  const wrapper = document.createElement("ul")
+  wrapper.className = "auto-complete-suggestion"
+  wrapper.style.display = "none"
 
-  element.addEventListener("blur", (event) => {
+  element.insertAdjacentElement("afterend", wrapper)
+  wrapperMap.set(element, wrapper)
+
+  element.addEventListener("blur", () => {
     hideSuggestionWrapper(element)
   })
+
   element.addEventListener("keydown", (event) => {
-    if (event.key == "Enter" && getSelectedSuggestion(element)) {
-      //do not submit a potentially existing form
-      //if we first have to use the selected suggestion
+    if (event.key === "Enter" && getSelectedSuggestion(element)) {
       event.preventDefault()
     }
-  })
-  ;["keyup", "keydown"].forEach((eventName) =>
-    element.addEventListener(eventName, (event) => {
-      suggest({
-        element: element,
-        keyEvent: event,
-        queryData: queryData,
-        data: data,
-        threshold: threshold,
-        onSelect: onSelect
-      })
-    })
-  )
 
-  addEventListener(
-    "resize",
-    throttle(() => {
-      trimSuggestionWrapperPosition(element)
+    suggest({
+      element,
+      event,
+      queryData: query,
+      data,
+      threshold,
+      onSelect
     })
-  )
-  addEventListener(
-    "scroll",
-    throttle(() => {
-      trimSuggestionWrapperPosition(element)
+  })
+
+  element.addEventListener("keyup", (event) => {
+    suggest({
+      element,
+      event,
+      queryData: query,
+      data,
+      threshold,
+      onSelect
     })
-  )
+  })
+
+  const reposition = throttle(() => {
+    if (hasVisibleSuggestionWrapper(element)) {
+      trimSuggestionWrapperPosition(element)
+    }
+  })
+
+  window.addEventListener("resize", reposition)
+  window.addEventListener("scroll", reposition, { passive: true })
 }
 
 export function AutoComplete({ selector, queryData, threshold, onSelect }) {
-  let elements = document.querySelectorAll(selector)
-  for (const element of elements) {
+  for (const element of document.querySelectorAll(selector)) {
     prepareElement({
-      element: element,
-      queryData: debounce(queryData, 200),
+      element,
+      queryData,
       data: [],
-      threshold: threshold,
-      onSelect: onSelect
+      threshold,
+      onSelect
     })
   }
 }

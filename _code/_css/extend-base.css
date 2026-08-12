@@ -317,7 +317,11 @@
   }
 
   kbd {
-    @apply meta text-inherit border border-current shadow-sm rounded-sm leading-none px-[0.2em] font-normal;
+    @apply meta text-smaller border border-current shadow-sm rounded-sm leading-none px-[0.2em] font-normal font-mono;
+  }
+
+  .text-smaller {
+    font-size: 0.875em;
   }
 
   mark,
