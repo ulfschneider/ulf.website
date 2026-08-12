@@ -17,12 +17,16 @@
   </a>
 </nav>
 <dialog
-  class="w-auto h-auto max-w-none max-h-none fixed inset-0 px-base md:px-xl lg:px-2xl pb-xl bg-canvas text-write"
+  data-pagefind-ignore
+  class="w-auto h-auto max-w-none max-h-none px-base md:px-xl lg:px-2xl pb-xl bg-canvas text-write"
   id="navigate-dialog"
 >
   <div class="max-w-screen-xl mx-auto flex flex-col gap-md">
     <div class="py-base">
-      <button id="close-navigation">Close navigation <kbd>ESC</kbd></button>
+      <button id="close-navigation">
+        <span>Close navigation</span>
+        <kbd class="pointer-coarse:hidden">esc</kbd></span>
+      </button>
     </div>
     <div class="flex-1 flex flex-col gap-lg">
       <div>{%- include "search-field.html" id: "navigate-search" -%}</div>
