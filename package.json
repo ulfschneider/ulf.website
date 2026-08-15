@@ -41,7 +41,7 @@
     "markdown-it-scrolltable": "^0.1.10",
     "markdown-it-table-of-contents": "^0.9.0",
     "markdown-it-trimmer": "^0.1.5",
-    "pagefind": "^1.4.0",
+    "pagefind": "^1.5.2",
     "path": "^0.12.7",
     "playwright": "^1.54.2",
     "prettier-plugin-organize-imports": "^4.3.0",

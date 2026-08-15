@@ -36,12 +36,14 @@
     <script type="module">
       import { AutoComplete } from "/js/autocomplete{{site.buildTimestamp}}.mjs"
       let pagefind
+      let debouncedSearch
 
       async function initPagefind() {
         try {
           if (!pagefind) {
             pagefind = await import("{{site.pagefind.path}}")
             pagefind.init()
+            debouncedSearch = debounce(pagefind.search, 100)
           }
           return pagefind
         } catch (err) {
@@ -72,7 +74,7 @@
           throw new DOMException("Aborted", "AbortError")
         }
 
-        const search = await pagefind.search(query)
+        const search = await debouncedSearch(query)
 
         if (signal?.aborted) {
           throw new DOMException("Aborted", "AbortError")

@@ -8,7 +8,6 @@
     {%- include "head.html" -%}
   </head>
   <body
-    {{searchControl}}
     class="px-base md:px-xl lg:px-2xl pt-md pb-xl prose-flow text-base break-long-words"
   >
     <a id="top" class="scroll-mt-md"></a>
@@ -28,7 +27,7 @@
         </span>
       </aside>
       {%- endif -%} {%- endif -%}
-      <div class="content">{{content}}</div>
+      <div class="content" {{searchControl}}>{{content}}</div>
       {%- if postNav != false -%} {%- include "post-nav.html" -%} {%- endif -%}
     </main>
   </body>

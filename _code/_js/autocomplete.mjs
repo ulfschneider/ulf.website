@@ -1,3 +1,4 @@
+const WAIT_MILLIS = 100
 const stateMap = new WeakMap()
 
 function getState(element) {
@@ -222,7 +223,7 @@ function moveSelection(element, direction) {
   updateSelection(element)
 }
 
-function throttle(func, wait = 100) {
+function throttle(func, waitMillis = WAIT_MILLIS) {
   let timeout = null
   let trailingArgs = null
   let trailingThis = null
@@ -248,7 +249,7 @@ function throttle(func, wait = 100) {
 
         func.apply(context, args)
       }
-    }, wait)
+    }, waitMillis)
   }
 }
 
@@ -265,7 +266,7 @@ function throttle(func, wait = 100) {
  *
  *   Promise<Array>
  */
-function createSuggestionFetcher(queryData, wait = 100) {
+function createSuggestionFetcher(queryData, debounceMillis = WAIT_MILLIS) {
   let timer = null
   let controller = null
   let requestVersion = 0
@@ -352,7 +353,7 @@ function createSuggestionFetcher(queryData, wait = 100) {
 
         callback(error, [])
       }
-    }, wait)
+    }, debounceMillis)
   }
 
   return {
@@ -527,7 +528,13 @@ function findSuggestionWrapper(element) {
   return null
 }
 
-function prepareElement({ element, queryData, threshold, onSelect }) {
+function prepareElement({
+  element,
+  queryData,
+  threshold,
+  debounceMillis,
+  onSelect
+}) {
   /*
    * Don't initialize the same input twice.
    */
@@ -577,7 +584,7 @@ function prepareElement({ element, queryData, threshold, onSelect }) {
     reposition: null
   }
 
-  state.fetcher = createSuggestionFetcher(queryData, 100)
+  state.fetcher = createSuggestionFetcher(queryData, debounceMillis)
 
   stateMap.set(element, state)
 
@@ -619,12 +626,19 @@ function prepareElement({ element, queryData, threshold, onSelect }) {
   })
 }
 
-export function AutoComplete({ selector, queryData, threshold, onSelect }) {
+export function AutoComplete({
+  selector,
+  queryData,
+  threshold,
+  debounceMillis,
+  onSelect
+}) {
   for (const element of document.querySelectorAll(selector)) {
     prepareElement({
       element,
       queryData,
       threshold,
+      debounceMillis,
       onSelect
     })
   }

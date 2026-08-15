@@ -1,41 +1,83 @@
-function debounce(func, wait = 100, immediate) {
+function debounce(func, wait = 100, immediate = false) {
   let timeout
-  return function () {
-    let context = this,
-      args = arguments
-    let later = function () {
-      timeout = null
-      if (!immediate) func.apply(context, args)
-    }
-    let callNow = immediate && !timeout
-    clearTimeout(timeout)
-    timeout = setTimeout(later, wait)
-    if (callNow) func.apply(context, args)
+
+  return function (...args) {
+    const context = this
+
+    return new Promise((resolve, reject) => {
+      const later = async () => {
+        timeout = null
+
+        if (!immediate) {
+          try {
+            resolve(await func.apply(context, args))
+          } catch (error) {
+            reject(error)
+          }
+        }
+      }
+
+      const callNow = immediate && !timeout
+
+      clearTimeout(timeout)
+      timeout = setTimeout(later, wait)
+
+      if (callNow) {
+        Promise.resolve()
+          .then(() => func.apply(context, args))
+          .then(resolve, reject)
+      }
+    })
   }
 }
 
 function throttle(func, wait = 100) {
-  let timeout
-  let trailing
-  return function () {
-    let context = this,
-      args = arguments
+  let timeout = null
+  let lastArgs
+  let lastThis
+  let pending = []
+
+  return function (...args) {
+    lastArgs = args
+    lastThis = this
+
+    const promise = new Promise((resolve, reject) => {
+      pending.push({ resolve, reject })
+    })
 
     if (timeout) {
-      trailing = true
-      return
+      return promise
     }
-    trailing = false
-    func.apply(context, args)
 
-    let later = function () {
+    execute()
+
+    return promise
+  }
+
+  async function execute() {
+    const args = lastArgs
+    const context = lastThis
+    const calls = pending
+
+    lastArgs = null
+    lastThis = null
+    pending = []
+
+    try {
+      const result = await func.apply(context, args)
+
+      calls.forEach(({ resolve }) => resolve(result))
+    } catch (error) {
+      calls.forEach(({ reject }) => reject(error))
+    }
+
+    timeout = setTimeout(() => {
       timeout = null
-      if (trailing) {
-        func.apply(context, args)
-      }
-    }
 
-    timeout = setTimeout(later, wait)
+      if (lastArgs) {
+        execute()
+      }
+    }, wait)
   }
 }
 
