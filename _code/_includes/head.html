@@ -9,6 +9,9 @@
 <title>{{site.title}}</title>
 {%- endif -%}
 <script>
+  /* import the site data */
+  window.site = {{ site | jsonify }}
+
   const html = document.querySelector("html")
   html.classList.remove("no-js")
   html.classList.add("js")

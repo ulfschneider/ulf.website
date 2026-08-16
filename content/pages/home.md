@@ -2,6 +2,7 @@
 permalink: /
 layout: default
 title: Ulf Schneider
+search: false
 abstract: Hi, I'm Ulf Schneider, a software engineer and agile coach. Welcome to my website. Here's more [about me](/about/) if you’re interested.
 topics:
   - title: Web

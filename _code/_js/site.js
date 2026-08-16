@@ -138,6 +138,9 @@ function registerKeyNav(key, path, callback) {
           }
 
           if (path) {
+            if (path == location.pathname && path == site.nav.search.path) {
+              return
+            }
             event.preventDefault()
             event.stopPropagation()
             location.href = path
