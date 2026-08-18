@@ -3,7 +3,7 @@ title: How AI text watermarking works
 tags: journal
 bookmark: true
 ---
-[<cite>How AI text watermarking works</cite>](https://declaude.org/watermarking/) by James Padolsey is an exceptionally readable explanation. Only the holder of the key that was used to place the watermark can detect it! James also makes the [<cite>declaude.org</cite>](https://declaude.org) tool, where you can paste in AI flavoured text and get back the same content as plain prose.
+[<cite>How AI text watermarking works</cite>](https://declaude.org/watermarking/) by James Padolsey is an exceptionally readable explanation. Only the holder of the key that was used to place the watermark can detect it! 
 
 > [Watermark] detection is private, probabilistic, and about processing, not authorship.
 > - Only the key-holder can check. Your teacher, editor, or favourite "AI detector" website cannot run this test; a genuine check needs the provider's secret key, or a checking service the provider runs. Google runs an early-access detector portal for SynthID; Anthropic says detection tooling is forthcoming.
