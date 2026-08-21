@@ -3,7 +3,7 @@ only when the browser supports the light-dark() function. light-dark() is an exc
 method to keep any knowledge about the color scheme away from subsequent CSS. */
 
 :root {
-  --canvas: #f7f7f7;
+  --canvas: #f3f8f5;
   --write: #262626;
   --code-canvas: #ddd;
   --code-write: #262626;
@@ -17,7 +17,7 @@ method to keep any knowledge about the color scheme away from subsequent CSS. */
   --field-write: var(--write);
   --select-canvas: var(--primary);
   --select-write: white;
-  --mermaid-canvas: #f7f7f7;
+  --mermaid-canvas: #f3f8f5;
   --primary: #007aff;
   --meta: #777;
   --orange: orange;
@@ -30,7 +30,7 @@ method to keep any knowledge about the color scheme away from subsequent CSS. */
   /* light-dark() is supported by 87% of browsers (2025-02-13)*/
   @supports (color: light-dark(black, white)) {
     color-scheme: light dark;
-    --canvas: light-dark(#f7f7f7, #171717);
+    --canvas: light-dark(#f3f8f5, #171717);
     --write: light-dark(#262626, #c3c3c3);
     --code-canvas: light-dark(#ddd, #333);
     --code-write: light-dark(#262626, #c3c3c3);
