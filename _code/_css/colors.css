@@ -7,7 +7,7 @@ method to keep any knowledge about the color scheme away from subsequent CSS. */
   --write: #262626;
   --code-canvas: #ddd;
   --code-write: #262626;
-  --mark-canvas: #ffdd41;
+  --mark-canvas: #f7f7f7;
   --mark-write: #262626;
   --button-canvas: #262626;
   --button-write: white;
@@ -30,7 +30,7 @@ method to keep any knowledge about the color scheme away from subsequent CSS. */
   /* light-dark() is supported by 87% of browsers (2025-02-13)*/
   @supports (color: light-dark(black, white)) {
     color-scheme: light dark;
-    --canvas: light-dark(#f3f8f5, #171717);
+    --canvas: light-dark(#f7f7f7, #171717);
     --write: light-dark(#262626, #c3c3c3);
     --code-canvas: light-dark(#ddd, #333);
     --code-write: light-dark(#262626, #c3c3c3);
