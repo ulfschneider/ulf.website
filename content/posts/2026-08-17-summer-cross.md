@@ -4,6 +4,7 @@ tags:
   - sports
   - secan
   - strael
+pinned: true
 ---
 <figure>
 <img src="/img/secan/2026-08-17-sommer-cross.jpeg">
