@@ -67,7 +67,7 @@
       window.getQueryParameterByName = getQueryParameterByName
 
       async function suggestPages(query, signal) {
-        const LIMIT_ENTRIES = 7
+        const LIMIT_ENTRIES = 10
         const pagefind = await initPagefind()
 
         if (signal?.aborted) {
