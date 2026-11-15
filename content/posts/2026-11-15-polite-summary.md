@@ -47,9 +47,9 @@ details > summary {
   display: block;
   cursor: pointer;
   list-style: none;
-  padding-inline-start: 2em;
+  padding-inline-start: var(--outdent-indent-space);
 }
-/* Hide the default disclosure marker. */
+/* Hide the browser's default disclosure marker. */
 details > summary::marker {
   content: "";
 }
@@ -57,9 +57,17 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 /*
- * Draw the horizontal stroke of the plus/minus marker.
- * Absolute positioning keeps it out of the text flow; 0.5lh centers it
- * on the first line even when the summary wraps.
+ * Draw the horizontal stroke of the marker. The pseudo-elements are
+ * absolutely positioned, so they don't take up space in the text flow.
+ *
+ * inset-inline-start: 0 places the strokes at the summary's start edge:
+ * left in left-to-right layouts, right in right-to-left layouts.
+ *
+ * border-block-start draws a thin line along the block-start edge, usually
+ * the top. currentColor makes the line match the summary text.
+ *
+ * top: 0.5lh places the line halfway down the first line of text.
+ * translateY(-50%) shifts it up by half its own height, centering it there.
  */
 details > summary::before,
 details > summary::after {
@@ -71,15 +79,21 @@ details > summary::after {
   border-block-start: 0.1em solid currentColor;
   transform: translateY(-50%);
 }
-/* Rotate the second stroke to make a plus sign when collapsed. */
+/*
+ * Keep the first stroke horizontal. Rotate the second by 90 degrees so
+ * it crosses the first stroke to form a plus sign.
+ */
 details > summary::after {
   transform: translateY(-50%) rotate(90deg);
 }
-/* Remove the vertical stroke when expanded, leaving a minus sign. */
+/*
+ * When the details element is open, rotate the second stroke back to
+ * horizontal. Both strokes now overlap to form a minus sign.
+ */
 details[open] > summary::after {
   transform: translateY(-50%) rotate(0deg);
 }
-/* Animate the vertical stroke only when motion is allowed. */
+/* Animate the rotating stroke only when the user allows motion. */
 @media (prefers-reduced-motion: no-preference) {
   details > summary::after {
     transition: transform 150ms ease;
