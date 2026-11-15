@@ -191,7 +191,7 @@ details[open] > summary::after {
     transition: transform 150ms ease;
   }
 }
-* Add marker-end to the summary to move both strokes to the inline end.
+/* Add marker-end to the summary to move both strokes to the inline end.
  */
 details > summary.marker-end {
   padding-inline-start: 0;
