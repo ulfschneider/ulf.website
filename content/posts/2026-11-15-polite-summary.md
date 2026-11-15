@@ -22,7 +22,7 @@ I came across this little trick to animate the expand/collapse marker of a `<det
 
 <div class="my-base">
 <details>
-<summary class="text-xl">A larger font size for summary text.</summary>
+<summary class="text-xl">A larger font size for summary text</summary>
 <p>The indicator will grow with the font size used for the summary element!</p>
 </details>
 </div>
