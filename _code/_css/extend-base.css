@@ -153,23 +153,42 @@
 
   /* details summary */
 
-  details {
-    > summary {
-      @apply cursor-pointer list-none;
-      &::before {
-        @apply inline-block !pe-[0.5em] min-w-[var(--outdent-indent-space)] content-[">"] text-smaller;
-      }
-      &::-webkit-details-marker {
-        @apply hidden;
-      }
-      > * {
-        @apply inline;
-      }
+  details > summary {
+    /* Keep the existing indentation width; wrapped text aligns after the sign. */
+    @apply relative block cursor-pointer list-none ps-[var(--outdent-indent-space)];
+
+    &::marker {
+      content: "";
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset-inline-start: 0;
+      top: 0.5lh;
+      width: 0.75em;
+      border-block-start: 0.1em solid currentColor;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      transform: translateY(-50%) rotate(90deg);
     }
   }
 
-  details[open] > summary::before {
-    @apply content-["▼"];
+  details[open] > summary::after {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    details > summary::after {
+      transition: transform 150ms ease;
+    }
   }
 
   /* ul, ol */
@@ -197,7 +216,7 @@
   }
 
   ul > li::before {
-    content: "–"; /*•●*/
+    content: "●"; /*•●*/
   }
 
   li > p:first-child {
