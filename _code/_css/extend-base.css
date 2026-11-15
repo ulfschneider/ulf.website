@@ -191,6 +191,17 @@
     }
   }
 
+  details > summary.marker-end {
+    padding-inline-start: 0;
+    padding-inline-end: var(--outdent-indent-space);
+  }
+
+  details > summary.marker-end::before,
+  details > summary.marker-end::after {
+    inset-inline-start: auto;
+    inset-inline-end: 0;
+  }
+
   /* ul, ol */
   ol,
   ul {
